@@ -60,3 +60,7 @@ test('Phase 2 honestly distinguishes functional borders from unimplemented regis
   assert.match(app, /statistical geometry are not published yet/);
   assert.match(app, /Module planned for a later development phase/);
 });
+
+test('MapLibre container has explicit full height',()=>{
+  assert.match(read('src/styles.css'),/\.map-area > \.map-canvas\{position:absolute;inset:0;width:100%;height:100%\}/);
+});
