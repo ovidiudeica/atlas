@@ -71,6 +71,33 @@ Prefer a calm map-first visual language over bright dashboards. Buttons must be 
 - Brețcu and Ojdula use the same ordinary public card design as other communes. Source provenance remains in technical lineage without a public correction badge.
 - Administrative and statistical roles are separately stored. Statistical grouping in the tree must not be interpreted as a statutory parent.
 
+### Republic of Moldova statistical hierarchy (2017 nomenclature)
+
+**Required in the navigation tree, as well as Romania's statistical regions.** The Phase 1 prototype initially omitted these MD nodes; this is a corrected design requirement.
+
+| Statistical level | Official code | Tree label (short) | Official entity/card name | Record handling |
+| --- | --- | --- | --- | --- |
+| 1 | `MD1` | Republica Moldova | Republica Moldova | Existing state entity; no duplicate |
+| 2 | `MD11` | Vest | Partea de Vest (partea dreaptă a Nistrului) | Statistical grouping |
+| 3 | `MD111` | Nord | Regiunea Nord | Statistical grouping |
+| 3 | `MD112` | Centru | Regiunea Centru | Statistical grouping |
+| 3 | `MD113` | Sud | Regiunea Sud | Statistical grouping |
+| 3 | `MD114` | Găgăuzia | Unitatea Teritorială Autonomă Găgăuzia | Existing administrative entity with statistical role |
+| 3 | `MD115` | Chișinău | Municipiul Chișinău | Existing administrative entity with statistical role |
+| 2 | `MD12` | Est | Partea de Est (partea stângă a Nistrului) | Statistical grouping |
+| 3 | `MD120` | Unitățile din stânga Nistrului | Unitățile administrativ-teritoriale din stânga Nistrului | Distinct statistical entity |
+
+**Navigation:** `MD1 → MD11 → {MD111, MD112, MD113, MD114, MD115}` and `MD1 → MD12 → MD120`. The OSM administrative Nistrenia node remains an independent child of Moldova's root, not an alias of `MD120`. This is a **navigation/statistical grouping only**: administrative parent links for Chișinău and Găgăuzia remain Moldova, and no legal administrative parent is inferred from statistical membership.
+
+Original Moldovan NUTS-style statistical classification was approved by Government Decision 570/2017 (effective 2018). The 2017 version is still listed by the National Bureau of Statistics as of 2026-11-05. A new version underwent a public consultation in 2026; the data phase must re-check the adopted, effective classification before committing a canonical statistical release. The former Reforma Teritorială baseline `data/p2/actual-statistical-md.json` is a **reference for identity bridging**, not an automatic source import. It records an `MD120` official identity despite an OSM `MD121` tag conflict; the official code remains `MD120`.
+
+References:
+- https://statistica.gov.md/index.php/ro/clasificari-si-nomenclatoare-9881_3814.html
+- https://statistica.gov.md/ro/guvernul-a-aprobat-nomenclatorul-nuts-12_927.html
+- https://particip.gov.md/ro/document/stages/proiectul-hotararii-guvernului-privind-aprobarea-modificarilor-la-nomenclatorul-unitatilor-teritoriale-pentru-statistica-nuts-al-republicii-moldova/15374
+
+**Prototype limitation:** all nine roles are present in the interactive tree and cards, with search by code; individual statistical geometry previews are intentionally unavailable in Phase 1 and their checkboxes are disabled until the geometry release. This does not imply a completed GIS data integration.
+
 ### Shared map
 
 - **Home** resets only viewport; it preserves selection, visibility, filters, basemap, and language.
