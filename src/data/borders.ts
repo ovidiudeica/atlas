@@ -1,3 +1,4 @@
+import type { FeatureCollection } from 'geojson';
 // Phase 2 render-only outlines derived from the 2026-10-05 OSM-Boundaries archives.
 // These are reduced polygon previews, NOT the complete original polygons.
 // Phase 3 will publish immutable full-resolution geometry data and provenance manifests.
@@ -31,7 +32,7 @@ function decode(encoded: string): [number, number][] {
 }
 export type CountryId = 'ro'|'md';
 export type DisplayDetail = 'detailed'|'simplified';
-export function getCountryGeoJSON(detail:DisplayDetail): GeoJSON.FeatureCollection {
+export function getCountryGeoJSON(detail:DisplayDetail): FeatureCollection {
   return {type:'FeatureCollection',features: (['ro','md'] as CountryId[]).map(id=>({
     type:'Feature',
     id,
