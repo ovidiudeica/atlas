@@ -64,3 +64,10 @@ test('Phase 2 honestly distinguishes functional borders from unimplemented regis
 test('MapLibre container has explicit full height',()=>{
   assert.match(read('src/styles.css'),/\.map-area > \.map-canvas\{position:absolute;inset:0;width:100%;height:100%\}/);
 });
+
+test('Territory SVG outlines are synchronized with the MapLibre camera',()=>{
+  assert.match(read('src/App.tsx'),/territorySvgPaths/);
+  assert.match(read('src/App.tsx'),/instance.on\('move',syncOutline\)/);
+  assert.match(read('src/App.tsx'),/className="territory-overlay"/);
+  assert.match(read('src/styles.css'),/\.territory-overlay/);
+});

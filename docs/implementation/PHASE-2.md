@@ -46,3 +46,7 @@ This design prevents accidentally representing incomplete Phase 2 country-only d
 ## Follow-up
 
 Phase 3: source-verified catalogue and source-lineage data including full OSMB polygons, official SIRUTA/CUATM, selected statistical layers, and the approved Brețcu/Ojdula geometry policy.
+
+## Rendering resilience
+
+A small SVG territory outline overlay is synchronized to MapLibre camera movements and simplified/detailed display state. It ensures that the national boundaries remain visible when a browser or screenshot pipeline cannot composite WebGL framebuffer content. The shared MapLibre canvas still owns navigation, tile rendering, and interaction. Original archived geometries remain unchanged.
