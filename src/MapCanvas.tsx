@@ -120,6 +120,7 @@ export default function MapCanvas({locale,basemap,simplified,visible,selected,on
 
   useEffect(()=>{
     const map=mapRef.current;
+    if(!map)return;
     const update=()=>{
       if(!map.getLayer('country-border'))return;
       const filter:['in',['get','id'],['literal',string[]]]=['in',['get','id'],['literal',visible]];
