@@ -62,6 +62,20 @@ const style: maplibregl.StyleSpecification = {
 };
 const INITIAL_VISIBLE: CountryId[] = ['ro','md'];
 
+function territorySvgPaths(instance:MapLibreMap,detail:'detailed'|'simplified'):Record<CountryId,string> {
+  const result:Record<CountryId,string>={ro:'',md:''};
+  for(const feature of getCountryGeoJSON(detail).features) {
+    const id=feature.properties?.id as CountryId | undefined;
+    if(!id || feature.geometry.type!=='Polygon')continue;
+    result[id]=feature.geometry.coordinates.map(ring=>ring.map((coord,i)=>{
+      const p=instance.project([coord[0],coord[1]]);
+      return (i===0?'M':'L')+p.x.toFixed(1)+','+p.y.toFixed(1);
+    }).join(' ')+' Z').join(' ');
+  }
+  return result;
+}
+
+
 export default function App() {
   const mapEl=useRef<HTMLDivElement>(null);
   const map=useRef<MapLibreMap|null>(null);
@@ -75,6 +89,8 @@ export default function App() {
   const [expanded,setExpanded]=useState<Record<CountryId,boolean>>({ro:false,md:false});
   const [drawer,setDrawer]=useState<'tree'|'detail'|null>(null);
   const [ready,setReady]=useState(false);
+  const modeRef=useRef<'detailed'|'simplified'>(localStorage.getItem('atlas-simple')==='true'?'simplified':'detailed');
+  const [projected,setProjected]=useState<Record<CountryId,string>>({ro:'',md:''});
   const t=LANG[lang];
 
   useEffect(()=>{localStorage.setItem('atlas-lang',lang);document.documentElement.lang=lang;document.title=t.title;},[lang,t.title]);
@@ -96,7 +112,12 @@ export default function App() {
       });
       instance.on('mouseenter','country-fill',()=>{instance.getCanvas().style.cursor='pointer';});
       instance.on('mouseleave','country-fill',()=>{instance.getCanvas().style.cursor='';});
+      const syncOutline=()=>setProjected(territorySvgPaths(instance,modeRef.current));
+      instance.on('move',syncOutline);
+      instance.on('resize',syncOutline);
+      instance.on('idle',syncOutline);
       instance.fitBounds(BOUNDS,{padding:45,duration:0});
+      syncOutline();
       setReady(true);
     });
     return ()=>{map.current=null;instance.remove();};
@@ -117,7 +138,9 @@ export default function App() {
   useEffect(()=>{
     if(!ready||!map.current)return;
     const source=map.current.getSource('borders') as GeoJSONSource;
-    source.setData(getCountryGeoJSON(simplified?'simplified':'detailed'));
+    modeRef.current=simplified?'simplified':'detailed';
+    source.setData(getCountryGeoJSON(modeRef.current));
+    setProjected(territorySvgPaths(map.current,modeRef.current));
   },[simplified,ready]);
 
   useEffect(()=>{
@@ -187,6 +210,9 @@ export default function App() {
       <aside className="tree-sidebar">{tree}</aside>
       <main className="map-area">
         <div ref={mapEl} className="map-canvas" aria-label="Territorial map"/>
+        <svg className="territory-overlay" aria-hidden="true">
+          {(["ro","md"] as CountryId[]).filter(id=>visible.includes(id)).map(id=><path key={id} d={projected[id]} fill={selected===id?"#f3d6a0":"#dceade"} fillOpacity="0.29" stroke={selected===id?"#dca237":"#185440"} strokeWidth={selected===id?4:2.5} strokeLinejoin="round" />)}
+        </svg>
         <div className="map-controls">
           <label className="basemap-select"><span>▧</span><span className="control-caption">{t.basemap}</span>
             <select value={basemap} onChange={e=>setBasemap(e.target.value as Basemap)} aria-label={t.basemap}>
