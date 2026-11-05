@@ -23,7 +23,7 @@ Establish a single coherent, responsive, bilingual (EN/RO) user experience for t
 
 - Header keeps the product title and EN/RO control.
 - The map occupies the available screen.
-- Six modules are accessed through a compact labeled-by-accessibility bottom navigation; icon buttons have at least a 44px target.
+- Six modules are accessed through compact bottom navigation with **visible short labels** and full accessible names; icon buttons have at least a 44px target.
 - Tree and entity card become independent slide-in panels, opened with **Tree** and **Details** controls. Opening one closes the other.
 - Basemap and simplification remain available without opening an administrative module.
 - Dialog-like panels must ultimately manage focus and support Escape dismissal, tested with keyboard and screen readers.
