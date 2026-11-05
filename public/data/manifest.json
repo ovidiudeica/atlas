@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "source": "OSM-Boundaries",
+  "snapshotDate": "2026-10-05",
+  "sourceRecords": {
+    "ro": {
+      "archive": "OSMB-Romania-2026-10-05.geojson.gz",
+      "sha256": "cc4fd15940550054d90fcadf907ed98352b68882735680093f77a624e3e04897",
+      "osmRelationId": 90689,
+      "featureCount": 1
+    },
+    "md": {
+      "archive": "OSMB-Moldova-2026-10-05.geojson.gz",
+      "sha256": "d29b600daa2857bacf8ec7d13369db8fc95353e89f62fe1c762dbc692c216dad",
+      "osmRelationId": 58974,
+      "featureCount": 1
+    }
+  },
+  "renderingOnly": true,
+  "original": {
+    "file": "countries-original.geojson",
+    "sha256": "87dec20573827ea28e3af2e850bbfb2d9ea1ab287e323e9f71c3cdf948c08a95"
+  },
+  "simplified": {
+    "file": "countries-simplified.geojson",
+    "toleranceDegrees": 0.02,
+    "topologyPreservedIfCoverageValid": true,
+    "sha256": "1d0f3076289f3746569cba67dfbbd4655b34fdc41423ad66740349f12d45fd2a"
+  },
+  "caveat": "National outlines only; no legal-boundary equivalence asserted. All source OSM tags remain in source archives."
+}
