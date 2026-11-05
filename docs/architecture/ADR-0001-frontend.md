@@ -147,3 +147,10 @@ Provide Standard, Grayscale, Dark and No-basemap choices as interface modes. Sel
 This approach is well suited to GitHub Pages and future modules, but it adds a preprocessing step and requires careful, independently verified data provenance and topology handling. It also avoids making a design prototype look like an authoritative administrative release.
 
 **Decision still requiring acceptance:** use the proposed TypeScript/React/MapLibre stack for Phase 2. The Phase 1 prototype is standalone HTML/JS and intentionally does not pre-empt the production framework.
+
+## Vendor documentation consulted (2026-11-05)
+
+- [MapLibre GL JS documentation](https://maplibre.org/maplibre-gl-js/docs/) — browser rendering, styles and Vite support.
+- [MapLibre GeoJSONSource documentation](https://maplibre.org/maplibre-gl-js/docs/API/classes/GeoJSONSource/) — warns that arbitrary GeoJSON members are not retained in vector-tile features; the source catalogue must remain separate.
+- [PMTiles with MapLibre](https://docs.protomaps.com/pmtiles/maplibre) — PMTiles protocol integration for MapLibre vector sources.
+- [OpenStreetMap tile usage policy](https://operations.osmfoundation.org/policies/tiles/) — attribution, caching and no bulk-download requirements for community-funded raster tiles.
