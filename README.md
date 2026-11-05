@@ -2,11 +2,13 @@
 
 **Geography · History · Communities**
 
+**Website:** [Territorial Atlas](https://ovidiudeica.github.io/atlas/)
+
 Territorial Atlas (Romanian: *Atlas Teritorial*) is a planned bilingual geographic atlas for exploring administrative territories, statistical regions, historical geography, and communities through an interactive map.
 
 ## Project status
 
-**Planning and initial design.** This repository begins with documentation only. The website, data catalogue, and interactive modules have not yet been implemented or published.
+**Planning and initial design.** This repository currently contains documentation only. A project information page is published via GitHub Pages; the interactive map, data catalogue, and modules have not yet been implemented.
 
 ## Planned modules
 
