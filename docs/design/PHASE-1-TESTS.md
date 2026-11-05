@@ -23,10 +23,15 @@
 | UX-16 | Complete keyboard and screen-reader UX | ARIA tree semantics, focus management, touch targets, contrast | Deferred for implementation/QA |
 | UX-17 | Real basemap tiles and provider policy | Valid style URLs, attribution, usage rights | Deferred to Phase 2 |
 | UX-18 | Original data provenance and export | Full source manifest + original geometries | Deferred to Phase 3/5 |
+| UX-19 | Expand Moldova's statistical hierarchy | All official 2017 codes `MD1, MD11, MD12, MD111–115, MD120` appear exactly once | Demonstrated |
+| UX-20 | Search by MD statistical code | Searching `MD120` finds the official left-bank statistical entity | Demonstrated |
+| UX-21 | Select Chișinău from the statistical branch | One existing entity has `MD115`, administrative parent Moldova and statistical parent MD11 | Demonstrated |
+| UX-22 | Compare MD120 and Nistrenia | Distinct nodes; no equivalence claim, no geometry inferred | Demonstrated |
+| UX-23 | Unavailable Phase 1 regional geometry | Regional checkboxes disabled rather than silently toggling missing shapes | Demonstrated |
 
 ## Preview test notes
 
-The standalone prototype was rendered with a headless Chromium browser on desktop (1440×900), tablet (820×900), and mobile (390×844). No page-level JavaScript exceptions were observed in the tested paths. The desktop test switched geometry mode and opened the Brețcu card. The mobile test opened the tree panel in Romanian.
+The standalone prototype was rendered with a headless Chromium browser on desktop (1440×900), tablet (820×900), and mobile (390×844). No page-level JavaScript exceptions were observed in the tested paths. The desktop test switched geometry mode and opened the Brețcu card. The mobile test opened the tree panel in Romanian. Additional desktop and mobile tests verified all nine Moldova statistical roles, their parentage, code-based search, shared Chișinău/Găgăuzia identity, the distinct Nistrenia/MD120 nodes, and disabled unavailable geometries.
 
 This is a **visual and interaction smoke test**, not a completed accessibility or production GIS certification. The test does not establish that the future data integration, historical modules, or topology pipeline passes.
 
