@@ -547,6 +547,19 @@ export default function App() {
         <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
         <div><h3>{currentNode.officialName}</h3><small>{roleLabel(currentNode)}</small></div>
       </div>
+      {breadcrumbs.length>0&&<nav className="entity-breadcrumbs" aria-label={t.path}>
+        {breadcrumbs.map((crumb,index)=><span className="breadcrumb-part" key={crumb.id}>
+          {index>0&&<span aria-hidden="true">›</span>}
+          <button type="button" aria-current={crumb.id===currentNode.id?'location':undefined}
+            onClick={()=>choose(crumb.id)}>{labelOf(crumb,lang)}</button>
+        </span>)}
+      </nav>}
+      <div className="sibling-navigation">
+        <button type="button" disabled={siblingIndex<=0}
+          onClick={()=>{const n=siblings[siblingIndex-1];if(n)choose(n.id);}}>‹ {t.previous}</button>
+        <button type="button" disabled={siblingIndex<0||siblingIndex>=siblings.length-1}
+          onClick={()=>{const n=siblings[siblingIndex+1];if(n)choose(n.id);}}>{t.next} ›</button>
+      </div>
       <div className="entity-actions">
         <button onClick={()=>toggleVisible(currentNode.id)}>{visibleSet.has(currentNode.id)?t.hide:t.view}</button>
         <button className="secondary" onClick={()=>void locate(currentNode.id)}>{t.locate}</button>
@@ -615,6 +628,38 @@ export default function App() {
             <span className="toggle-track"/><span className="control-caption">{t.simplified}</span>
           </label>
         </div>
+        <div className="map-quick-actions">
+          <button type="button" disabled={!visible.length||navBusy} onClick={()=>void fitVisible()}>
+            {navBusy?t.navigationLoading:t.fitVisible}</button>
+          <button type="button" disabled={!currentNode} onClick={()=>currentNode&&void locate(currentNode.id)}>
+            {t.fitSelected}</button>
+          <button type="button" aria-expanded={exportOpen} aria-controls="phase5-export-panel"
+            onClick={()=>{setExportOpen(old=>!old);setExportProgress('');}}>
+            {t.exportAction}</button>
+        </div>
+        {exportOpen&&<section id="phase5-export-panel" className="export-panel" aria-label={t.exportTitle}>
+          <div className="export-heading"><h3>{t.exportTitle}</h3>
+            <button type="button" aria-label={t.close} onClick={()=>setExportOpen(false)}>×</button></div>
+          <label className="export-scope">{t.exportScope}
+            <select value={exportScope} onChange={e=>setExportScope(e.target.value as ExportScope)}>
+              <option value="visible">{t.exportVisible} ({visible.filter(id=>nodes.has(id)).length})</option>
+              <option value="selected" disabled={!currentNode}>{t.exportSelected}</option>
+            </select>
+          </label>
+          <div className="export-buttons">
+            <button disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
+              onClick={()=>void performExport('geojson')}>{t.exportGeoJSON}</button>
+            <button disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
+              onClick={()=>void performExport('csv')}>{t.exportCSV}</button>
+            <button className="secondary" onClick={()=>void copyPermalink()}>{t.copyLink}</button>
+          </div>
+          <p className="export-help">{t.exportHelp}</p>
+          {exportProgress&&<p className="export-status" role="status">{exportProgress}</p>}
+          {shareNotice&&<p className="export-status" role="status">{shareNotice}</p>}
+          {shareFallback&&<input className="share-url" aria-label={t.copyLink} readOnly
+            value={shareFallback} onFocus={e=>e.currentTarget.select()} />}
+          {!nodes.size&&<p className="export-help">{t.exportEmpty}</p>}
+        </section>}
         <div className="zoom-controls">
           <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>mapRef.current?.zoomIn()}>+</button>
           <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>
