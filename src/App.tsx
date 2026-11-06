@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibre-gl';
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
+import { availableOsmLevels, buildOsmLevelIndex, matchingOsmLevelIds, updateOsmLevelVisibility } from './data/osmLevelFilter.mjs';
 import { buildPermalink, clearGeometryPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
   type ExportScope } from './data/phase5.mjs';
 import {
@@ -40,6 +41,9 @@ const WORDS = {
     raw: 'Original OSM tags', officialRecord: 'Full official registry record',
     view: 'Show on map', hide: 'Hide on map', locate: 'Zoom to territory',
     childrenShow: 'Show children', childrenHide: 'Hide children',
+    levelFilter: 'Geometries by OSM level', levelScope: 'Territorial sets',
+    levelChoose: 'OSM administrative levels', levelShow: 'Show', levelHide: 'Hide',
+    levelMatch: 'matching geometries', levelShown: 'geometries shown', levelHidden: 'geometries hidden',
     about: 'About', description: 'The atlas uses official reference codes and OSM-Boundaries contours. Source discrepancies are documented, not presented as legally certified borders.',
     planned: 'This module is planned for a later phase.', noResults: 'No matching entities.',
     loading: 'Loading the certified catalogue…', loadingGeom: 'Loading selected geometries…',
@@ -78,6 +82,9 @@ const WORDS = {
     raw: 'Tag-uri OSM originale', officialRecord: 'Fișa integrală din registrul oficial',
     view: 'Afișează pe hartă', hide: 'Ascunde de pe hartă', locate: 'Încadrează teritoriul',
     childrenShow: 'Afișează copiii', childrenHide: 'Ascunde copiii',
+    levelFilter: 'Geometrii după nivel OSM', levelScope: 'Seturi teritoriale',
+    levelChoose: 'Niveluri administrative OSM', levelShow: 'Afișează', levelHide: 'Ascunde',
+    levelMatch: 'geometrii corespunzătoare', levelShown: 'geometrii afișate', levelHidden: 'geometrii ascunse',
     about: 'Despre Atlas', description: 'Atlasul folosește coduri oficiale și contururi OSM-Boundaries. Neconcordanțele sursei sunt documentate, fără a prezenta limitele ca fiind certificate juridic.',
     planned: 'Acest modul va fi dezvoltat într-o etapă ulterioară.', noResults: 'Nicio entitate găsită.',
     loading: 'Se încarcă catalogul certificat…', loadingGeom: 'Se încarcă geometriile selectate…',
@@ -189,11 +196,26 @@ export default function App() {
   const [shareNotice,setShareNotice] = useState('');
   const [shareFallback,setShareFallback] = useState('');
   const [navBusy,setNavBusy] = useState(false);
+  const [levelScopeSelection,setLevelScopeSelection] = useState<string[] | null>(null);
+  const [levelSelection,setLevelSelection] = useState<number[]>([8]);
+  const [levelActionMessage,setLevelActionMessage] = useState('');
   const navigationEpoch = useRef(0);
 
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
   const nodes = useMemo(()=>new Map(catalog.map(n=>[n.id,n])),[catalog]);
+  // Filter scopes and available levels come from catalog metadata, not RO/MD
+  // constants. Future independent territorial sets can register their own root.
+  const osmLevelIndex = useMemo(()=>buildOsmLevelIndex(catalog),[catalog]);
+  const selectedLevelScopes = useMemo(()=>
+    levelScopeSelection ?? osmLevelIndex.scopes.map(scope=>scope.id),
+    [levelScopeSelection,osmLevelIndex]);
+  const levelOptions = useMemo(()=>
+    availableOsmLevels(osmLevelIndex,selectedLevelScopes),
+    [osmLevelIndex,selectedLevelScopes]);
+  const matchingLevelIds = useMemo(()=>
+    matchingOsmLevelIds(osmLevelIndex,selectedLevelScopes,levelSelection),
+    [osmLevelIndex,selectedLevelScopes,levelSelection]);
   const hierarchy = useMemo(()=>createHierarchy(catalog,treeView),[catalog,treeView]);
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
@@ -385,6 +407,24 @@ export default function App() {
     m.setPaintProperty('backdrop','background-color',basemap==='dark'?'#14241e':'#f1f5ef');
   },[basemap,ready]);
 
+  function toggleLevelScope(id:string, checked:boolean){
+    setLevelScopeSelection(old=>{
+      const current=old ?? osmLevelIndex.scopes.map(scope=>scope.id);
+      return checked?[...new Set([...current,id])]:current.filter(value=>value!==id);
+    });
+    setLevelActionMessage('');
+  }
+  function toggleLevel(level:number, checked:boolean){
+    setLevelSelection(old=>checked?[...new Set([...old,level])]:old.filter(value=>value!==level));
+    setLevelActionMessage('');
+  }
+  function applyOsmLevelSelection(show:boolean){
+    const affected = matchingLevelIds.filter(id=>visible.includes(id)).length;
+    const changed = show ? matchingLevelIds.length-affected : affected;
+    setVisible(old=>updateOsmLevelVisibility(old,matchingLevelIds,show));
+    setLevelActionMessage(changed.toLocaleString(lang==='ro'?'ro-RO':'en-US')+' '+
+      (show?t.levelShown:t.levelHidden));
+  }
   const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
     const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
@@ -550,6 +590,36 @@ export default function App() {
         aria-pressed={treeView===key} className={treeView===key?'active':''} onClick={()=>setTreeView(key)}>
         {key==='all'?t.all:key==='administrative'?t.adminView:t.statView}</button>)}
     </div>
+    <details className="osm-level-filter">
+      <summary>{t.levelFilter}</summary>
+      <div className="osm-level-filter-body">
+        <fieldset className="osm-level-scopes">
+          <legend>{t.levelScope}</legend>
+          {osmLevelIndex.scopes.map(scope=><label key={scope.id}>
+            <input type="checkbox" checked={selectedLevelScopes.includes(scope.id)}
+              aria-label={scope.names[lang]} onChange={event=>toggleLevelScope(scope.id,event.target.checked)} />
+            <span>{scope.names[lang]}</span>
+          </label>)}
+        </fieldset>
+        <fieldset className="osm-level-choices">
+          <legend>{t.levelChoose}</legend>
+          {levelOptions.map(option=><label key={option.level}>
+            <input type="checkbox" checked={levelSelection.includes(option.level)}
+              aria-label={'OSM '+option.level} onChange={event=>toggleLevel(option.level,event.target.checked)} />
+            <span>ADM {option.level}</span>
+            <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
+          </label>)}
+        </fieldset>
+        <p className="osm-level-count">{matchingLevelIds.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.levelMatch}</p>
+        <div className="osm-level-actions">
+          <button type="button" disabled={!matchingLevelIds.length}
+            onClick={()=>applyOsmLevelSelection(true)}>{t.levelShow}</button>
+          <button type="button" disabled={!matchingLevelIds.length}
+            onClick={()=>applyOsmLevelSelection(false)}>{t.levelHide}</button>
+        </div>
+        {levelActionMessage&&<p className="osm-level-feedback" role="status">{levelActionMessage}</p>}
+      </div>
+    </details>
     {catalogError?<div className="loading-msg" role="alert">{t.loadFailed}<button onClick={()=>window.location.reload()}>{t.retry}</button></div>:
       catalog.length===0?<p className="loading-msg" role="status">{t.loading}</p>:
       <div className="tree-list" role="tree" aria-label={t.tree}>
