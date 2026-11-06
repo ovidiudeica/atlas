@@ -207,3 +207,8 @@
  .header-entity-action{height:44px;width:44px;flex-basis:44px}
  .drawer-close{width:44px;height:44px}
 }
+
+/* Avoid relying on circled-info glyph support in platform/mobile fonts. */
+.detail-info-glyph{display:inline-flex;align-items:center;justify-content:center;
+ width:21px;height:21px;border:1.5px solid currentColor;border-radius:50%;
+ font-size:14px;font-family:Arial,sans-serif;font-weight:800;line-height:1}
