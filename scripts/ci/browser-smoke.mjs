@@ -229,8 +229,9 @@ async function mobile(cdp){
   assert(await p.eval("document.querySelector('.drawer[role=dialog]')?.getAttribute('aria-modal')==='true'"));
   await p.snap('mobile-tree-drawer.png');
   await p.eval("document.querySelector('.drawer .osm-level-filter>summary').click()");
-  assert.equal(await p.eval("document.querySelector('.drawer .osm-level-filter>summary').textContent.trim()"),'Filters',
-    'Mobile unified filter title');
+  const mobileFilterTitle=await p.eval("({title:document.querySelector('.drawer .osm-level-filter>summary').textContent.trim(),lang:document.documentElement.lang})");
+  assert.equal(mobileFilterTitle.title,mobileFilterTitle.lang==='ro'?'Filtre':'Filters',
+    'Mobile unified filter title follows saved locale');
   assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-level-scopes input').length"),2,
     'Mobile exposes both catalog-derived territorial scopes');
   assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-level-choices label[data-level-kind=\"statistical\"]').length"),6,
