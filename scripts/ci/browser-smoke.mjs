@@ -108,7 +108,17 @@ async function desktop(cdp){
   assert.equal(await p.eval("document.querySelectorAll('.map-area .zoom-controls button').length"),3,'Only zoom/−/Home permanent');
   assert.equal(await p.eval("!!document.querySelector('.map-area .map-quick-actions,.map-area .map-controls,.map-area .map-legend,.map-area .map-note,.map-area .mobile-controls')"),false,
     'Secondary commands, legend, source note and mobile buttons absent from map');
+  const accessibleMap=await p.eval("({attribution:!!document.querySelector('.maplibregl-ctrl-attrib'),scale:!!document.querySelector('.maplibregl-ctrl-scale'),zoom:[...document.querySelectorAll('.zoom-controls button')].map(b=>({label:b.getAttribute('aria-label'),w:b.getBoundingClientRect().width,h:b.getBoundingClientRect().height}))})");
+  assert(accessibleMap.attribution&&accessibleMap.scale,'Attribution and scale stay available');
+  assert(accessibleMap.zoom.every(b=>b.label&&b.w>=44&&b.h>=44),'Map buttons accessible and 44px minimum');
   await p.snap('desktop-initial.png');
+  // Real Escape-key regression for the module without resetting geometry.
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar')",'keyboard module opened');
+  await p.eval("document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}))");
+  await p.wait("!document.querySelector('.tree-sidebar')",'Escape closes module panel');
+  await p.wait("document.activeElement===document.querySelector('.module-rail button:first-child')",
+    'Escape returns focus to module trigger');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4,283')",'desktop catalog after opening module');
   assert.equal(await p.eval("document.querySelector('.atlas-map-tools')?.open"),false,
@@ -134,6 +144,12 @@ async function desktop(cdp){
     'Header detail button available when entity remains selected');
   await p.eval("document.querySelector('.header-entity-action').click()");
   await p.wait("!!document.querySelector('.detail-sidebar .entity-card')",'Header button reopens selected entity details');
+  await p.eval("document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}))");
+  await p.wait("!document.querySelector('.detail-sidebar')",'Escape closes Details');
+  await p.wait("document.activeElement===document.querySelector('.header-entity-action')",
+    'Focus returned to Detail opener');
+  await p.eval("document.querySelector('.header-entity-action').click()");
+  await p.wait("!!document.querySelector('.detail-sidebar .entity-card')",'Details reopen again');
   await p.eval("document.querySelector('.detail-sidebar .atlas-detail-export>summary').click()");
   assert.equal(await p.eval("document.querySelectorAll('.detail-sidebar .atlas-detail-export button').length"),3,
     'Entity details support GeoJSON/CSV/permalink');
@@ -358,6 +374,50 @@ async function mobile(cdp){
   await p.snap('mobile-reset-geometries.png');
   await p.close();
 }
+async function narrowMobile(cdp){
+  const p=await cdp.page(360,780,true);
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    '360px source geometry loaded');
+  await pause(700);
+  const metrics=await p.eval("(()=>{const z=document.querySelector('.zoom-controls').getBoundingClientRect();const rail=document.querySelector('.module-rail').getBoundingClientRect();const map=document.querySelector('.map-area').getBoundingClientRect();return {width:innerWidth,scroll:document.documentElement.scrollWidth,zoomTop:z.top,zoomBottom:z.bottom,zoomRight:z.right,railTop:rail.top,mapTop:map.top,mapWidth:map.width,zoomButtons:document.querySelectorAll('.zoom-controls button').length}})()");
+  assert(metrics.scroll<=metrics.width+1,'360px viewport has no horizontal scrolling');
+  assert(metrics.mapWidth>=350&&metrics.zoomButtons===3,'360px map is full width with only three controls');
+  assert(metrics.zoomTop>=metrics.mapTop&&metrics.zoomBottom<metrics.railTop,
+    'Zoom/Home toolbar does not overlap the header or module bar');
+  assert(metrics.zoomRight<=metrics.width,'Zoom toolbar stays inside viewport');
+  await p.snap('mobile-360-initial.png');
+
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.drawer-screen .drawer')",'360px module drawer');
+  assert.equal(await p.eval("document.activeElement===document.querySelector('.drawer .drawer-close')"),true,
+    'Modal drawer focuses Close on open');
+  assert.equal(await p.eval("document.querySelector('.drawer').getAttribute('aria-modal')"),'true');
+  const trap=await p.eval("(()=>{const root=document.querySelector('.drawer');const a=[...root.querySelectorAll('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),summary,[tabindex]:not([tabindex=\"-1\"])')].filter(e=>e.getClientRects().length>0&&!e.closest('[inert]'));a.at(-1).focus();const e=new KeyboardEvent('keydown',{key:'Tab',bubbles:true,cancelable:true});document.dispatchEvent(e);return {trapped:e.defaultPrevented,wrapped:document.activeElement===a[0],count:a.length}})()");
+  assert(trap.count>=3&&trap.trapped&&trap.wrapped,
+    'Tab at final drawer element wraps to first element');
+  await p.snap('mobile-360-drawer-open.png');
+  await p.eval("document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}))");
+  await p.wait("!document.querySelector('.drawer-screen')",'Escape closes narrow drawer');
+  await p.wait("document.activeElement===document.querySelector('.module-rail button:first-child')",
+    'Escape returns keyboard focus to module icon');
+
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.drawer .tree-line .tree-label')",'360px tree');
+  await p.eval("document.querySelector('.drawer .tree-line .tree-label').click()");
+  await p.wait("!!document.querySelector('.drawer-detail .entity-card')",'360px selected details');
+  const detailMetrics=await p.eval("({header:document.querySelector('.header-entity-action')?.getBoundingClientRect().width,scroll:document.documentElement.scrollWidth,dialog:document.querySelector('.drawer-detail').getBoundingClientRect().width})");
+  assert(detailMetrics.header>=44&&detailMetrics.scroll<=361&&detailMetrics.dialog<=360,
+    '360px detail opener has safe touch target and drawer does not overflow');
+  await p.eval("document.querySelector('.drawer-detail .atlas-detail-export>summary').click()");
+  assert.equal(await p.eval("document.querySelectorAll('.drawer-detail .atlas-detail-export button').length"),3,
+    'Full-geometry export, CSV and permalink retained inside mobile details');
+  await p.snap('mobile-360-detail-open.png');
+  await p.eval("document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}))");
+  await p.wait("!document.querySelector('.drawer-screen')",'Escape closes mobile details');
+  await p.wait("document.activeElement===document.querySelector('.header-entity-action')",
+    'Mobile detail Escape returns focus to header entity icon');
+  await p.close();
+}
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
@@ -386,8 +446,9 @@ try{
   await desktop(client);
   await tablet(client);
   await mobile(client);
+  await narrowMobile(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
-  console.log('Browser smoke: WEB-R3.2 map controls compact, export/settings/reset/legend relocated, desktop/tablet/mobile, filters, permalink OK.');
+  console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
   console.error('Browser smoke failure:',err);
   process.exitCode=1;
