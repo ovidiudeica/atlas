@@ -95,6 +95,7 @@ async function downloaded(ext){
 async function desktop(cdp){
   const p=await cdp.page(1440,900,false);
   await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4,283')",'desktop catalog');
+  await p.wait("!document.querySelector('.map-boot-status')",'certified national contours');
   const frame=await p.eval("({screen:innerWidth,scroll:document.documentElement.scrollWidth,map:document.querySelector('.map-area').getBoundingClientRect().width,phase:document.querySelector('.version')?.textContent})");
   assert(frame.scroll<=frame.screen+1,'Desktop horizontal overflow');
   assert(frame.map>400,'Desktop map missing');
@@ -129,6 +130,7 @@ async function desktop(cdp){
 async function mobile(cdp){
   const p=await cdp.page(390,844,true);
   await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4,283')",'mobile catalog');
+  await p.wait("!document.querySelector('.map-boot-status')",'mobile national contours');
   const geometry=await p.eval("({width:innerWidth,scroll:document.documentElement.scrollWidth,height:document.querySelector('.map-area').getBoundingClientRect().height,buttons:getComputedStyle(document.querySelector('.mobile-controls')).display})");
   assert(geometry.scroll<=geometry.width+1,'Mobile horizontal overflow');
   assert(geometry.height>300,'Map is hidden on mobile');
