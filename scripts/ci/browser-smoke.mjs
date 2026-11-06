@@ -94,18 +94,35 @@ async function downloaded(ext){
 }
 async function desktop(cdp){
   const p=await cdp.page(1440,900,false);
-  await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4,283')",'desktop catalog');
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Initial module panel absent');
+  assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Initial detail panel absent');
   await p.wait("!document.querySelector('.map-boot-status')",'certified national contours');
   const frame=await p.eval("({screen:innerWidth,scroll:document.documentElement.scrollWidth,map:document.querySelector('.map-area').getBoundingClientRect().width,phase:document.querySelector('.version')?.textContent})");
   assert(frame.scroll<=frame.screen+1,'Desktop horizontal overflow');
-  assert(frame.map>400,'Desktop map missing');
+  assert(frame.map>1300,'Map-first desktop must use available width');
   assert.match(frame.phase,/Phase 5/);
   await p.snap('desktop-initial.png');
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4,283')",'desktop catalog after opening module');
+  await p.snap('desktop-module-open.png');
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Repeated module click closes panel');
+  await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar .planned-module-description')",'Other module panel opens');
+  assert.equal(await p.eval("!!document.querySelector('.module-notice')"),false,'No planned-module notice over map');
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar input[type=search]')",'Returning to administrative module');
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
   await p.call('Input.insertText',{text:'Brețcu'});
   await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-label')).some(b=>b.textContent.includes('Brețcu'))",'Brețcu search results');
   await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-label')).find(b=>b.textContent.includes('Brețcu')).click()");
   await p.wait("document.querySelector('.detail-sidebar .entity-title h3')?.textContent.includes('Brețcu')",'Brețcu entity details');
+  await p.eval("document.querySelector('.detail-sidebar .pane-close').click()");
+  assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Details × hides panel');
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar .tree-line[aria-selected=true]')"),true,
+    'Details close preserves selection');
+  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-label')).find(b=>b.textContent.includes('Brețcu')).click()");
+  await p.wait("!!document.querySelector('.detail-sidebar .entity-title h3')",'Same entity selection reopens details');
   const osm=await p.eval("Array.from(document.querySelectorAll('.detail-sidebar .metadata dt')).find(x=>x.textContent.trim()==='OSM ID')?.nextElementSibling?.textContent.trim()");
   assert.equal(osm,'','Brețcu must retain blank authentic OSM ID');
   await p.eval("document.querySelector('.map-quick-actions button[aria-controls=phase5-export-panel]').click()");
@@ -209,6 +226,7 @@ async function desktop(cdp){
   await p.snap('desktop-reset-geometries.png');
 
   await p.call('Page.reload',{ignoreCache:true});
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4.283')",'catalog after geometry-reset reload');
   await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'persisted reset roots after reload');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar .entity-card')"),false,
@@ -219,15 +237,16 @@ async function desktop(cdp){
 }
 async function mobile(cdp){
   const p=await cdp.page(390,844,true);
-  await p.wait("document.querySelector('.tree-footnote strong')?.textContent.replace(/\\D/g,'').includes('4283')",'mobile catalog (locale-independent)');
+  assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Mobile starts without empty detail panel');
   await p.wait("!document.querySelector('.map-boot-status')",'mobile national contours');
   const geometry=await p.eval("({width:innerWidth,scroll:document.documentElement.scrollWidth,height:document.querySelector('.map-area').getBoundingClientRect().height,buttons:getComputedStyle(document.querySelector('.mobile-controls')).display})");
   assert(geometry.scroll<=geometry.width+1,'Mobile horizontal overflow');
   assert(geometry.height>300,'Map is hidden on mobile');
   assert.notEqual(geometry.buttons,'none','Mobile controls hidden');
   await p.snap('mobile-initial.png');
-  await p.eval("document.querySelector('.mobile-controls button:first-child').click()");
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("!!document.querySelector('.drawer[role=dialog] .tree-content')",'mobile tree drawer');
+  await p.wait("!!document.querySelector('.drawer .tree-footnote strong')",'mobile catalog shown in drawer');
   assert(await p.eval("document.querySelector('.drawer[role=dialog]')?.getAttribute('aria-modal')==='true'"));
   await p.snap('mobile-tree-drawer.png');
   await p.eval("document.querySelector('.drawer .osm-level-filter>summary').click()");
@@ -253,12 +272,13 @@ async function mobile(cdp){
   await p.eval("document.querySelector('.drawer .osm-level-actions button:last-child').click()");
   await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===2",
     'Mobile unified action hides NUTS 1 without modifying roots');
-  await p.eval("document.querySelector('.drawer-close').click()");
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!document.querySelector('.drawer-screen')",'Repeated mobile module click closes drawer');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
   await p.wait("document.documentElement.lang==='ro'",'Romanian language');
   await p.snap('mobile-ro.png');
   assert((await p.eval('document.documentElement.scrollWidth'))<=391,'Mobile overflow in Romanian');
-  await p.eval("document.querySelector('.mobile-controls button:first-child').click()");
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("!!document.querySelector('.drawer[role=dialog] .tree-content')",'mobile tree for geometry reset');
   await p.eval("document.querySelector('.drawer .tree-line input[type=checkbox]').click()");
   await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===1",'mobile country outline deselected');
@@ -298,7 +318,7 @@ try{
   await desktop(client);
   await mobile(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
-  console.log('Browser smoke: desktop/mobile, unified Filters with ADM/NUTS/NTS, geometry reset, Brețcu, GeoJSON, CSV and screenshots OK.');
+  console.log('Browser smoke: WEB-R3.1 map-first panels, desktop/mobile toggle, details, Filters, reset, geojson, csv OK.');
 }catch(err){
   console.error('Browser smoke failure:',err);
   process.exitCode=1;
