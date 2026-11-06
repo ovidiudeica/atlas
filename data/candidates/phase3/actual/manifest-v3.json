@@ -1,0 +1,112 @@
+{
+    "schema":  "atlas-actual-cartographic-certificate-v3",
+    "status":  "CERTIFIED_CARTOGRAPHIC_SOURCE_WITH_ACCEPTED_EXCEPTIONS",
+    "certifiedOn":  "2026-11-06",
+    "releaseScope":  "source-faithful OSMB-derived cartographic snapshot, not a legal land-registry certification",
+    "legallyCertified":  false,
+    "readyForProtectedIntegration":  true,
+    "sourceSnapshot":  "2026-10-05",
+    "baseline":  {
+                     "v2ManifestSha256":  "122b2176162c7eeb94f5584626d2a201514b0f261fce606f44385d01b7295fb3",
+                     "snapshotArchives":  {
+                                              "RO":  "cc4fd15940550054d90fcadf907ed98352b68882735680093f77a624e3e04897",
+                                              "MD":  "d29b600daa2857bacf8ec7d13369db8fc95353e89f62fe1c762dbc692c216dad"
+                                          },
+                     "originalGeometryFiles":  {
+                                                   "actual/ro-administrative-v2.geojson.gz":  {
+                                                                                                  "bytes":  12575973,
+                                                                                                  "sha256":  "9b52cb8f6187440c2b613726c578b49885d2f0e7f67635b0782678afb4a6e120"
+                                                                                              },
+                                                   "actual/md-administrative-v2.geojson.gz":  {
+                                                                                                  "bytes":  2686670,
+                                                                                                  "sha256":  "8d5ed9f140af07bac8e5babc4ee33de53474e77f75be1f6a22512c7432a929b2"
+                                                                                              },
+                                                   "actual/ro-statistical-v2.geojson.gz":  {
+                                                                                               "bytes":  1245533,
+                                                                                               "sha256":  "e970bdf9abcee4725a4d49e429ccfcc0b730a92721ddd169d94781e676579b2e"
+                                                                                           },
+                                                   "actual/md-statistical-v2.geojson.gz":  {
+                                                                                               "bytes":  366565,
+                                                                                               "sha256":  "444f4e47b9d21abfb440a132a9a8e12897b299b046f92fa0cbfafe4c3349bf93"
+                                                                                           }
+                                               }
+                 },
+    "exceptions":  {
+                       "disposition":  "source_cartographic_exceptions_accepted_and_disclosed_without_editing_raw_shapes",
+                       "topologicalCases":  5,
+                       "cuatmCases":  6,
+                       "decisionRegisterSha256":  "c25ab60f45a1fd3d8b8affe10d5f3afb1325b23139f84356124a6045da1ad8ee",
+                       "legalIdentityAmbiguityRemaining":  4
+                   },
+    "simplifiedGeometry":  {
+                               "method":  "Mapshaper 0.7.101 weighted Visvalingam 50% keep-shapes; combine-files per country across administrative and statistical layers",
+                               "originalGeometryPreserved":  true,
+                               "zeroInvalidPolygons":  true,
+                               "zeroNewSameLevelOverlapsAbove1SqM":  true,
+                               "exhaustivePairsChecked":  15643,
+                               "parentCoverageTests":  79,
+                               "parentCoverageIncreaseLimitKm2":  0.01,
+                               "noParentCoverageIncreaseBeyondLimit":  true,
+                               "maxAreaDriftIndividualPercent":  0.604402393964062,
+                               "sourceVerticesRO":  1763447,
+                               "simplifiedVerticesRO":  889997,
+                               "sourceVerticesMD":  362889,
+                               "simplifiedVerticesMD":  189526,
+                               "mapshaperUnrepairedArcIntersectionsMD":  3,
+                               "engineWarningDisposition":  "Known MD source arc warning; zero invalid polygons, zero new material same-level overlaps, no new material parent coverage gaps. Not a legal certification."
+                           },
+    "inventory":  {
+                      "administrativeRO":  3229,
+                      "administrativeMD":  1036,
+                      "standaloneStatisticalRO":  12,
+                      "standaloneStatisticalMD":  6,
+                      "statisticalRolesRO":  54,
+                      "statisticalRolesMD":  9,
+                      "cuatm180":  {
+                                       "matched":  178,
+                                       "distinctCodeNotApplicable":  2
+                                   },
+                      "sourceEdgeChecks":  31,
+                      "sourceTagChecks":  31
+                  },
+    "newArtifacts":  {
+                         "ro-administrative-simplified-v1.geojson.gz":  {
+                                                                            "bytes":  6317638,
+                                                                            "sha256":  "97958728eb457ac25dff44a3a6e31becc0589b3724f724169fc9d77f5276ae23",
+                                                                            "featureCount":  3229
+                                                                        },
+                         "md-administrative-simplified-v1.geojson.gz":  {
+                                                                            "bytes":  1396510,
+                                                                            "sha256":  "30dbaca4bf2b26c49bc8bbbdf17d05f8ab964fd831d48540205260a2d6c82b7c",
+                                                                            "featureCount":  1036
+                                                                        },
+                         "ro-statistical-simplified-v1.geojson.gz":  {
+                                                                         "bytes":  615948,
+                                                                         "sha256":  "c1f0e41ce05aa20e80618c427883c15425496b9d17cc4b97d41e2cc527de6197",
+                                                                         "featureCount":  12
+                                                                     },
+                         "md-statistical-simplified-v1.geojson.gz":  {
+                                                                         "bytes":  245875,
+                                                                         "sha256":  "58c18bada84fa0db2aa226369775c3d92d56997a4542cc83a9eee7d7e1d73473",
+                                                                         "featureCount":  6
+                                                                     },
+                         "simplification-qa-v1.json":  {
+                                                           "bytes":  3303,
+                                                           "sha256":  "dc4d2cc250b3032b749306a3bca7c01af9d1d735dba96036ec4bdec12dc57e2e"
+                                                       },
+                         "simplification-overlaps-v1.json":  {
+                                                                 "bytes":  3093,
+                                                                 "sha256":  "b331db036999d3be37a82bbf069fa64bee6243308b462ecd987a46b18b8bcb8c"
+                                                             },
+                         "simplification-parent-cover-v1.json":  {
+                                                                     "bytes":  41352,
+                                                                     "sha256":  "f3c4107368fb5b3a8efd9061d16e47eec2489df8036ae171c056db54df73921c"
+                                                                 }
+                     },
+    "restrictions":  [
+                         "No user-interface claim that OSMB boundaries are legal truth",
+                         "Four multipart or repeated-CUATM OSM source reference groups retain uncertain legal mapping",
+                         "The public website does not consume the Phase 3 data until a separately tested UI integration",
+                         "Simplified geometry is for map display only; preserve source geometry for provenance and export"
+                     ]
+}
