@@ -378,6 +378,68 @@ export default function App() {
   }),[]);
   const choose = useCallback((id:string)=>{setSelected(id);setDrawer('detail');},[]);
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
+  async function fitVisible(){
+    const groups=new Map<string,string[]>();
+    for(const id of visible){
+      const node=nodes.get(id);if(!node)continue;
+      const list=groups.get(node.geometryShard)||[];list.push(id);groups.set(node.geometryShard,list);
+    }
+    if(!groups.size || !mapRef.current)return;
+    setNavBusy(true);setGeomError(false);
+    try{
+      let left=Infinity,bottom=Infinity,right=-Infinity,top=-Infinity;
+      for(const [shard,ids] of groups){
+        const shapes=await loadGeometryShard(shard,mode);
+        for(const id of ids){
+          const shape=shapes.get(id);
+          if(!shape)throw Error('Missing visible polygon: '+id);
+          const [[w,s],[e,n]]=bboxOfGeometry(shape.geometry);
+          left=Math.min(left,w);bottom=Math.min(bottom,s);right=Math.max(right,e);top=Math.max(top,n);
+        }
+      }
+      if(Number.isFinite(left))mapRef.current?.fitBounds([[left,bottom],[right,top]],{
+        padding:window.innerWidth<700?38:85,duration:650,maxZoom:11
+      });
+    }catch{setGeomError(true);}
+    finally{setNavBusy(false);}
+  }
+  function downloadText(content:string,filename:string,mime:string){
+    const blob=new Blob([content],{type:mime});
+    const url=URL.createObjectURL(blob);
+    const anchor=document.createElement('a');
+    anchor.href=url;anchor.download=filename;
+    document.body.appendChild(anchor);anchor.click();anchor.remove();
+    window.setTimeout(()=>URL.revokeObjectURL(url),3000);
+  }
+  async function performExport(format:'geojson'|'csv'){
+    if(exportBusy)return;
+    const ids=idsForScope(exportScope,selected,visible,new Set(nodes.keys()));
+    if(!ids.length)return;
+    setExportBusy(true);setExportProgress(t.exportBusy);
+    try{
+      const content=format==='csv'?
+        metadataCsv(ids,nodes):
+        JSON.stringify(await makeDetailedCollection(ids,nodes,loadGeometryShard,
+          (done,total)=>setExportProgress(done+' / '+total)),null,2);
+      const filename='territorial-atlas-2026-10-05-'+exportScope+'.'+format;
+      downloadText(content,filename,format==='csv'?'text/csv;charset=utf-8':'application/geo+json;charset=utf-8');
+      setExportProgress(t.exportDone);
+    }catch{setExportProgress(t.exportFailed);}
+    finally{setExportBusy(false);}
+  }
+  async function copyPermalink(){
+    const map=mapRef.current,center=map?.getCenter();
+    const url=buildPermalink(window.location.href,{
+      entity:selected,view:treeView,lang,simple:simplified,basemap,
+      lng:center?.lng??25.4,lat:center?.lat??46.05,zoom:map?.getZoom()??5.5
+    });
+    setShareFallback('');setShareNotice('');
+    try{
+      if(!navigator.clipboard?.writeText)throw Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(url);
+      setShareNotice(t.linkCopied);
+    }catch{setShareFallback(url);setShareNotice(t.linkManual);}
+  }
   async function locate(id:string){
     const node=nodes.get(id);
     if(!node||!mapRef.current)return;
@@ -392,7 +454,11 @@ export default function App() {
     choose(id);setSearch('');
     let cursor=nodes.get(id),depth=0;
     const ancestry:string[]=[];
-    while(cursor?.treeParentId&&depth++<24){ancestry.push(cursor.treeParentId);cursor=nodes.get(cursor.treeParentId);}
+    while(cursor&&depth++<24){
+      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      if(!parent)break;
+      ancestry.push(parent);cursor=nodes.get(parent);
+    }
     setExpanded(old=>[...new Set([...old,...ancestry])]);
   }
 
