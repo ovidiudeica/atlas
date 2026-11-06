@@ -19,7 +19,7 @@ OSMB relation `10624200` Vlăhița (SIRUTA 83749) is a **six-component multipoly
 
 The 2025 independent reference and OSMB October 2026 can differ in coordinates/version. Do **not** patch historical OSM relations or imply that GIS agreement alone confers legal title. A separately versioned derived noncanonical geometry, if later authorized, could exclude these components from neighboring map fills while leaving source geometry downloadable unchanged.
 
-## B. Moldova — the five recorded topology findings have four spatial footprints
+## B. Moldova — three recorded topology findings correspond to two distinct affected land fragments
 
 ### Cealîc / Svetlîi / Cortenul Nou: one correlated geometry problem
 
