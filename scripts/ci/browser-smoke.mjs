@@ -213,6 +213,10 @@ async function desktop(cdp){
   await p.eval("history.replaceState(history.state,'','?utm=preserved&entity=siruta-u64096&lng=26.4&lat=45.9&zoom=9')");
   await p.eval("document.querySelector('.map-quick-actions .reset-geometries').click()");
   await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'default national preview restored');
+  assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,
+    'Geometry reset closes the entity detail panel');
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar input[type=search]')",'reopen tree after geometry reset');
   const resetState=await p.eval("({selected:!!document.querySelector('.detail-sidebar .entity-card'),rows:[...document.querySelectorAll('.tree-sidebar .tree-line input[type=checkbox]')].map(x=>x.checked),language:document.documentElement.lang,simplified:document.querySelector('.simplify-control input').checked,basemap:document.querySelector('.basemap-select select').value,search:document.querySelector('.tree-sidebar input[type=search]').value,query:location.search})");
   assert.equal(resetState.selected,false,'Entity selection/detail must clear on geometry reset');
   assert.deepEqual(resetState.rows,[true,true],'Only two national root geometries must remain selected');
