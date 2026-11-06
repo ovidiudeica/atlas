@@ -1,0 +1,204 @@
+{
+  "schema": "atlas-official-boundary-acquisition-audit-v1",
+  "auditedAt": "2026-11-06",
+  "snapshotCompared": "OSM-Boundaries 2026-10-05",
+  "repo": "ovidiudeica/atlas",
+  "repoBaselineSha": "de6416f911ee3a603e79261afb353759f25667d0",
+  "operation": "read-only acquisition and publication verification; no orders, fees, emails sent or source edits",
+  "geometries": {
+    "Moldova": {
+      "requestedUATCount": 5,
+      "officialGeometryFilesAcquired": 0,
+      "sourceAuthority": "IP Cadastrul Bunurilor Imobile (IP CBI) / Agenția Geodezie, Cartografie și Cadastru",
+      "accessFindings": [
+        {
+          "source": "INDS 2025 semester II official monitoring",
+          "status": "WMS_AVAILABLE_WFS_AND_FILE_DOWNLOAD_MARKED_UNAVAILABLE_FOR_ADMINISTRATIVE_LEVELS_1_AND_2",
+          "sha256": "6d86b33219e58098b1c2547513500d471b387639b2a44dc385b0712831fcad8f",
+          "bytes": 286716,
+          "uri": "https://inds.gov.md/wp-content/uploads/sites/6/2026/02/Monitorizare_INDS2025_2S.signed.pdf"
+        },
+        {
+          "source": "map.cadastru.md GeoServer official listed URL",
+          "status": "HTTP_403_OR_BOT_BLOCK_ON_PUBLIC_CAPABILITIES_READ_ATTEMPTS",
+          "uri": "https://map.cadastru.md/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities"
+        },
+        {
+          "source": "IP CBI official digital graphics issuance",
+          "status": "PUBLISHED_APPLICATION_BASED_SERVICE_NOT_FREE_PUBLIC_VECTOR",
+          "price": "80 MDL (published for persons/entities)",
+          "delivery": "3 working days (published)",
+          "requestPlaced": false,
+          "uri": "https://www.ipcbi.gov.md/ro/eliberarea-informatiei-grafice-cu-privire-la-hotarele-unitatilor-administrativ-teritoriale"
+        },
+        {
+          "source": "Agenția Proprietății Publice",
+          "status": "FIRLADENI_COMMISSION_ORDER_ONLY_NOT_OFFICIAL_BOUNDARY_VECTOR",
+          "sha256": "47c40d6036f2cc6bc73263a7c05e69212ce8536f4680030f6e03526e0a4a97e5",
+          "bytes": 529776,
+          "uri": "https://app.gov.md/wp-content/uploads/2024/11/O-R-D-I-N-Causeni-nr.-107-com.-Firladeni.semnat.pdf"
+        }
+      ],
+      "cases": [
+        {
+          "name": "Țînțăreni",
+          "county": "Anenii Noi",
+          "cuatm": "1050",
+          "osmRelations": [
+            12496850,
+            19090932
+          ],
+          "relatedSettlement": "Crețoaia",
+          "requestedGeometry": [
+            "entire officially registered commune, including detached extravilan",
+            "settlement boundary of Țînțăreni",
+            "settlement boundary of Crețoaia"
+          ],
+          "status": "OFFICIAL_VECTOR_NOT_ACQUIRED",
+          "officialBoundaryCoordinatesVerified": false,
+          "legalComponentEquivalenceEstablished": false
+        },
+        {
+          "name": "Văratic",
+          "county": "Rîșcani",
+          "cuatm": "7160",
+          "osmRelations": [
+            19045240,
+            19045254
+          ],
+          "requestedGeometry": [
+            "registered unit boundary, including detached components",
+            "neighboring UAT boundaries for gap interpretation"
+          ],
+          "status": "OFFICIAL_VECTOR_NOT_ACQUIRED",
+          "officialBoundaryCoordinatesVerified": false,
+          "legalComponentEquivalenceEstablished": false
+        },
+        {
+          "name": "Dondușeni (sat)",
+          "county": "Dondușeni",
+          "cuatm": "3417",
+          "osmRelations": [
+            19055800,
+            19055814
+          ],
+          "requestedGeometry": [
+            "registered village UAT boundary, including detached components",
+            "separate registered town Dondușeni CUATM 3401"
+          ],
+          "status": "OFFICIAL_VECTOR_NOT_ACQUIRED",
+          "officialBoundaryCoordinatesVerified": false,
+          "legalComponentEquivalenceEstablished": false
+        },
+        {
+          "name": "Recea",
+          "county": "Strășeni",
+          "cuatm": "8034",
+          "osmRelations": [
+            19100165,
+            19100169,
+            19100182
+          ],
+          "requestedGeometry": [
+            "registered three-part or contiguous UAT boundary, as official",
+            "neighboring UAT boundaries"
+          ],
+          "status": "OFFICIAL_VECTOR_NOT_ACQUIRED",
+          "officialBoundaryCoordinatesVerified": false,
+          "legalComponentEquivalenceEstablished": false
+        },
+        {
+          "name": "Fîrlădeni",
+          "county": "Căușeni",
+          "cuatm": "2714",
+          "osmRelations": [
+            12463200
+          ],
+          "requestedGeometry": [
+            "commune UAT boundary",
+            "district boundary of Căușeni and Anenii Noi",
+            "status of the 0.565217 km² isolated OSMB polygon"
+          ],
+          "status": "OFFICIAL_VECTOR_NOT_ACQUIRED",
+          "officialBoundaryCoordinatesVerified": false,
+          "legalComponentEquivalenceEstablished": false
+        }
+      ]
+    },
+    "Romania": {
+      "requestedUATCount": 3,
+      "official2026GeometryFilesAcquired": 0,
+      "requestedEdition": "ANCPI administrative limits updated 2026-05-05",
+      "accessFindings": [
+        {
+          "source": "ANCPI download portal",
+          "status": "APP_METADATA_INDEXED_2026_05_05_BUT_PORTAL_HOST_NOT_RESOLVED_OR_502_ON_TEST",
+          "uri": "https://geoportal.ancpi.ro/portal/apps/webappviewer/index.html?id=faeba2d173374445b1f13512bd477bb2"
+        },
+        {
+          "source": "ANCPI official operations notice 2026",
+          "status": "PORTAL_RESTART_DESCRIBED_AS_PHASED_AFTER_2026_08_INTERRUPTION",
+          "uri": "https://www.ancpi.ro/"
+        },
+        {
+          "source": "geo-spatial.org ANCPI-derived WFS",
+          "status": "OLDER_2025_03_26_DATA_AVAILABLE_NOT_SUBSTITUTE_FOR_2026",
+          "uri": "https://www.geo-spatial.org/descarcare/date/administrative-boundaries/",
+          "previousSubset": {
+            "siruta": [
+              "83749",
+              "83963",
+              "84629"
+            ],
+            "bytes": 63059,
+            "sha256": "ed5e98e33bf0c1a4ef7acdaaace8e4b24732d466ed6513e167f47688c87e094"
+          }
+        }
+      ],
+      "cases": [
+        {
+          "name": "Vlăhița",
+          "siruta": "83749",
+          "osmRelation": 10624200,
+          "status": "2026_OFFICIAL_VECTOR_NOT_ACQUIRED",
+          "ancpi2026ShapeVerified": false
+        },
+        {
+          "name": "Căpâlnița",
+          "siruta": "83963",
+          "osmRelation": 14879493,
+          "status": "2026_OFFICIAL_VECTOR_NOT_ACQUIRED",
+          "ancpi2026ShapeVerified": false
+        },
+        {
+          "name": "Lueta",
+          "siruta": "84629",
+          "osmRelation": 14879461,
+          "status": "2026_OFFICIAL_VECTOR_NOT_ACQUIRED",
+          "ancpi2026ShapeVerified": false
+        }
+      ]
+    }
+  },
+  "requiredForClosure": [
+    "authenticated source provenance or published official source endpoint",
+    "original vector bytes with SHA-256 and retrieval timestamp",
+    "edition/effective-date and CRS/geometry metadata",
+    "explicit data rights or permissions",
+    "independent overlays, intersections and symmetric differences computed on same CRS",
+    "accepted per-case legal/source interpretation before any canonical adjustment"
+  ],
+  "releaseDecision": "BLOCKED_ON_OFFICIAL_VECTOR_ACQUISITION; preserve original certified Atlas geometries unchanged",
+  "contactsOnlyNoOutbound": [
+    {
+      "organization": "IP CBI Moldova",
+      "address": "info@ipcbi.gov.md",
+      "purpose": "Ask whether open-data access or inter-institutional non-paid research access to registered UAT boundaries is available; do not place an order"
+    },
+    {
+      "organization": "ANCPI Romania",
+      "address": "inspire@ancpi.ro",
+      "purpose": "Request access to the 2026-05-05 official administrative shapefile extract for three Harghita UATs, service availability and licensing"
+    }
+  ]
+}
