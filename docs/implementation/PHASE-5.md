@@ -52,6 +52,42 @@ A collapsible **Geometrii după nivel OSM / Geometries by OSM level** section ap
 - **Future extensibility:** the filter does not hardcode a Romania/Moldova list, Ukraine region names, or OSM admin_level inventory. Sets and counts are derived from the live catalog's administrative ancestry. A future independent set can optionally declare `geometrySetRootId` (pointing to an existing catalog root entity); its descendants are scoped separately from a shared country ancestor. This allows Cernăuți, Odesa and Transcarpatica to be independently selectable, even with the same country code. Future data ingestion must still extend the wider Atlas root/geometry-shard infrastructure separately.
 - The filter is bilingual, accessible through native checkboxes and buttons, and operates inside the existing desktop sidebar or mobile tree drawer. It never downloads or rewrites OSMB geometry, source tags, SIRUTA/CUATM codes or the certified 4,283-entity catalog.
 
+## Phase 5 addendum — statistical regions in the level filter (2026-11-06)
+
+The existing **Geometrii după nivel / Geometries by level** filter now exposes two
+independent sets of bulk controls under the same dynamic territorial scopes:
+
+1. **Administrative OSM levels:** unchanged, with level 8 selected by default
+   and separate **Show / Hide** buttons.
+2. **Statistical regions:** official statistical-role levels from the certified
+   catalog, grouped by `classification` and `level` and shown as **NUTS**
+   (Romania) and **NTS** (Republic of Moldova). No statistical levels are
+   preselected; they have **separate Show / Hide buttons**, so selecting NUTS 2
+   never also toggles administrative OSM level 8.
+
+The current certified catalogue has 63 entities with one statistical role each:
+54 Romanian (NUTS 1: 4; NUTS 2: 8; NUTS 3: 42) and 9 Moldovan
+(NTS 1: 1; NTS 2: 2; NTS 3: 6). Forty-five have an existing administrative
+polygon as their geometry source, while 18 have statistical-only source
+representations. These 45 entities must not be duplicated or reinterpreted as
+different statutory boundaries: an ID's visibility belongs to the single
+source geometry, regardless of whether its role is administrative, statistical
+or both.
+
+Options, counts and geography scope membership derive dynamically from each
+catalog entity's `statisticalRoles`, and from the same optional
+`geometrySetRootId` scope mechanism used by the administrative filter.
+Independent future sets (Cernăuți, Odesa, Transcarpatica) can add different
+statistical classifications and levels without code lists, provided their
+catalogs and geospatial assets are onboarded in a separate reviewed release.
+
+The source geometry, official registry codes, role assignments, simplified
+and detailed files, initial two-country preview, export semantics and
+Reset geometries function remain unchanged. New filter controls have unit
+regressions for shared polygons, separate show/hide commands, statistical-only
+geography sets and the current RO/MD catalog, plus desktop/mobile Chromium
+smoke verification.
+
 ## Validation and merge gate
 
 1. Run npm test and npm run build on the exact PR SHA, including Phase 3/4 regression tests and new Phase 5 helper tests.
