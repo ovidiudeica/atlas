@@ -2,6 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibre-gl';
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
+import { buildPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
+  type ExportScope } from './data/phase5.mjs';
 import {
   asDisplayFeatures, bboxOfGeometry, codeOf, EMPTY_FEATURES, labelOf, loadCatalog,
   loadGeometryShard, lookupKeys, normalize, ROOT_IDS,
@@ -24,7 +26,7 @@ const MODULES: { id: ModuleId; symbol: string; en: string; ro: string }[] = [
 const WORDS = {
   en: {
     title: 'Territorial Atlas', tagline: 'Geography · History · Communities',
-    version: 'Administrative & statistical atlas · Phase 4', tree: 'Territorial tree',
+    version: 'Administrative & statistical atlas · Phase 5', tree: 'Territorial tree',
     search: 'Search names, OSM IDs, SIRUTA, CUATM or NUTS codes',
     all: 'All', adminView: 'Administrative', statView: 'Statistical',
     visible: 'Display geometry', details: 'Entity details', select: 'Select a territory on the map or in the tree.',
@@ -49,11 +51,20 @@ const WORDS = {
     sourceBoundary: 'OSM-Boundaries', detailNote: 'Source records are preserved unchanged. Spatial correspondence with OpenStreetMap does not establish legal boundary status.',
     relationshipNote: 'This OSM geometry shares a CUATM reference with another source representation; it does not imply a second independent legal unit.',
     dataError: 'Geometry loading failed. Retry by toggling the entity.',
-    expand: 'Expand', collapse: 'Collapse'
+    expand: 'Expand', collapse: 'Collapse',
+    path: 'Territorial path', previous: 'Previous sibling', next: 'Next sibling',
+    fitVisible: 'Fit visible territories', fitSelected: 'Fit selected territory', navigationLoading: 'Fitting…',
+    exportAction: 'Export & share', exportTitle: 'Export territory data', exportScope: 'Export scope',
+    exportSelected: 'Selected entity', exportVisible: 'Visible entities', exportGeoJSON: 'GeoJSON · full geometry',
+    exportCSV: 'CSV · metadata', exportHelp: 'GeoJSON always contains original detailed source geometry even when the map is simplified. CSV contains metadata only. Source limitations and licensing apply.',
+    exportEmpty: 'Select or display an entity to export.', exportBusy: 'Preparing export…',
+    exportDone: 'Download prepared.', exportFailed: 'Unable to prepare export. Check your connection and retry.',
+    copyLink: 'Copy map link', linkCopied: 'Link copied.', linkManual: 'Copy this link manually:',
+    searchShortcut: 'Press / to search. Enter selects the first match.'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
-    version: 'Atlas administrativ și statistic · Etapa 4', tree: 'Arbore teritorial',
+    version: 'Atlas administrativ și statistic · Etapa 5', tree: 'Arbore teritorial',
     search: 'Caută nume, ID OSM, coduri SIRUTA, CUATM sau NUTS',
     all: 'Toate', adminView: 'Administrativ', statView: 'Statistic',
     visible: 'Afișează geometria', details: 'Detaliile entității', select: 'Selectează un teritoriu pe hartă sau în arbore.',
@@ -78,11 +89,21 @@ const WORDS = {
     sourceBoundary: 'OSM-Boundaries', detailNote: 'Înregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.',
     relationshipNote: 'Această geometrie OSM reutilizează un cod CUATM asociat altei reprezentări. Nu rezultă că există două unități juridice independente.',
     dataError: 'Încărcarea geometriei a eșuat. Reîncearcă schimbând vizibilitatea entității.',
-    expand: 'Extinde', collapse: 'Restrânge'
+    expand: 'Extinde', collapse: 'Restrânge',
+    path: 'Traseu teritorial', previous: 'Entitatea precedentă', next: 'Entitatea următoare',
+    fitVisible: 'Încadrează teritoriile vizibile', fitSelected: 'Încadrează entitatea selectată', navigationLoading: 'Se încadrează…',
+    exportAction: 'Export și partajare', exportTitle: 'Export de date teritoriale', exportScope: 'Ce exportăm',
+    exportSelected: 'Entitatea selectată', exportVisible: 'Entitățile vizibile', exportGeoJSON: 'GeoJSON · geometrie completă',
+    exportCSV: 'CSV · metadate', exportHelp: 'GeoJSON conține întotdeauna geometria detaliată a sursei, chiar dacă harta este simplificată. CSV conține doar metadate. Se aplică limitările sursei și condițiile de licențiere.',
+    exportEmpty: 'Selectează sau afișează o entitate pentru export.', exportBusy: 'Se pregătește exportul…',
+    exportDone: 'Fișier pregătit pentru descărcare.', exportFailed: 'Exportul nu a reușit. Verifică conexiunea și reîncearcă.',
+    copyLink: 'Copiază linkul hărții', linkCopied: 'Link copiat.', linkManual: 'Copiază manual acest link:',
+    searchShortcut: 'Apasă / pentru căutare. Enter selectează primul rezultat.'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
 const DEFAULT_VISIBLE = [...ROOT_IDS];
+const SHARED_STATE = readPermalink(window.location.search);
 const style: maplibregl.StyleSpecification = {
   version:8,
   sources:{osm:{type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256,attribution:'© OpenStreetMap contributors'}},
@@ -142,24 +163,32 @@ function roleLabel(node: Territory): string {
 
 export default function App() {
   const mapEl = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const loadedRef = useRef<Map<string,TerritoryFeature>>(new Map());
-  const [lang,setLang] = useState<Locale>(() => localStorage.getItem('atlas-lang') === 'ro'?'ro':'en');
+  const [lang,setLang] = useState<Locale>(() => SHARED_STATE.lang || (localStorage.getItem('atlas-lang') === 'ro'?'ro':'en'));
   const [module,setModule] = useState<ModuleId>('administrative');
   const [catalog,setCatalog] = useState<Territory[]>([]);
   const [catalogError,setCatalogError] = useState<string | null>(null);
-  const [selected,setSelected] = useState<string | null>(null);
+  const [selected,setSelected] = useState<string | null>(SHARED_STATE.entity);
   const [visible,setVisible] = useState<string[]>(restoreVisible);
   const [expanded,setExpanded] = useState<string[]>([]);
   const [search,setSearch] = useState('');
-  const [treeView,setTreeView] = useState<TreeView>('all');
-  const [simplified,setSimplified] = useState<boolean>(()=>localStorage.getItem('atlas-simple')==='true');
-  const [basemap,setBasemap] = useState<Basemap>('standard');
+  const [treeView,setTreeView] = useState<TreeView>(SHARED_STATE.view || 'all');
+  const [simplified,setSimplified] = useState<boolean>(()=>SHARED_STATE.simple ?? (localStorage.getItem('atlas-simple')==='true'));
+  const [basemap,setBasemap] = useState<Basemap>(SHARED_STATE.basemap || 'standard');
   const [ready,setReady] = useState(false);
   const [rootsLoaded,setRootsLoaded] = useState(false);
   const [geomLoading,setGeomLoading] = useState(false);
   const [geomError,setGeomError] = useState(false);
   const [drawer,setDrawer] = useState<Drawer>(null);
+  const [exportOpen,setExportOpen] = useState(false);
+  const [exportScope,setExportScope] = useState<ExportScope>('visible');
+  const [exportBusy,setExportBusy] = useState(false);
+  const [exportProgress,setExportProgress] = useState('');
+  const [shareNotice,setShareNotice] = useState('');
+  const [shareFallback,setShareFallback] = useState('');
+  const [navBusy,setNavBusy] = useState(false);
 
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
@@ -168,6 +197,23 @@ export default function App() {
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
+  const breadcrumbs = useMemo(()=>{
+    const path:Territory[]=[];
+    let cursor=selected?nodes.get(selected):undefined;
+    const visited=new Set<string>();
+    while(cursor && !visited.has(cursor.id) && path.length<32){
+      path.unshift(cursor);visited.add(cursor.id);
+      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      cursor=parent?nodes.get(parent):undefined;
+    }
+    return path;
+  },[nodes,selected,treeView]);
+  const siblings=useMemo(()=>{
+    if(!currentNode)return [];
+    const parent=treeView==='administrative'?currentNode.administrativeParentId:currentNode.treeParentId;
+    return parent?(hierarchy.get(parent)||[]):ROOT_IDS.map(id=>nodes.get(id)).filter((n):n is Territory=>Boolean(n));
+  },[currentNode,hierarchy,nodes,treeView]);
+  const siblingIndex=siblings.findIndex(n=>n.id===selected);
   const searchIndex = useMemo(()=>catalog.map(node=>({node,text:lookupKeys(node)})),[catalog]);
   const matches = useMemo(()=>{
     if(!search.trim())return [];
@@ -186,7 +232,33 @@ export default function App() {
   },[]);
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
   useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
+  useEffect(()=>{
+    const onShortcut=(event:KeyboardEvent)=>{
+      const target=event.target;
+      if(event.key!=='/' || event.ctrlKey || event.metaKey || event.altKey || event.defaultPrevented ||
+        (target instanceof HTMLElement && (target.isContentEditable || ['INPUT','TEXTAREA','SELECT'].includes(target.tagName))))return;
+      event.preventDefault();
+      if(window.matchMedia('(max-width:700px)').matches)setDrawer('tree');
+      window.setTimeout(()=>searchRef.current?.focus(),0);
+    };
+    window.addEventListener('keydown',onShortcut);
+    return ()=>window.removeEventListener('keydown',onShortcut);
+  },[]);
   useEffect(()=>{localStorage.setItem('atlas-visible-phase4',JSON.stringify(visible));},[visible]);
+  useEffect(()=>{
+    if(catalog.length && selected && !nodes.has(selected))setSelected(null);
+  },[catalog.length,nodes,selected]);
+  useEffect(()=>{
+    if(!catalog.length || !SHARED_STATE.entity || !nodes.has(SHARED_STATE.entity))return;
+    const path:string[]=[];
+    let cursor=nodes.get(SHARED_STATE.entity),depth=0;
+    while(cursor && depth++<32){
+      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      if(!parent)break;
+      path.push(parent);cursor=nodes.get(parent);
+    }
+    setExpanded(old=>[...new Set([...old,...path])]);
+  },[catalog.length,nodes]);
 
   useEffect(()=>{
     if(!catalog.length)return;
@@ -196,9 +268,15 @@ export default function App() {
 
   useEffect(()=>{
     if(!mapEl.current || mapRef.current)return;
-    const instance=new maplibregl.Map({container:mapEl.current,style,center:[25.4,46.05],zoom:5.5,attributionControl:false,dragRotate:false,pitchWithRotate:false});
+    const instance=new maplibregl.Map({
+      container:mapEl.current,style,
+      center:SHARED_STATE.lng!==null && SHARED_STATE.lat!==null?[SHARED_STATE.lng,SHARED_STATE.lat]:[25.4,46.05],
+      zoom:SHARED_STATE.zoom ?? 5.5,
+      attributionControl:false,dragRotate:false,pitchWithRotate:false
+    });
     mapRef.current=instance;
     instance.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
+    instance.addControl(new maplibregl.ScaleControl({maxWidth:100,unit:'metric'}),'bottom-left');
     instance.on('load',()=>{
       instance.addSource('borders',{type:'geojson',data:getCountryGeoJSON('simplified')});
       instance.addLayer({id:'country-fill',type:'fill',source:'borders',paint:{'fill-color':'#dce9dd','fill-opacity':0.31},filter:['in',['get','id'],['literal',['ro','md']]]});
@@ -214,7 +292,15 @@ export default function App() {
         'line-width':['case',['==',['get','roleKind'],'statistical'],1.8,1.6],
         'line-opacity':0.94
       }});
+      instance.addLayer({id:'entity-hover',type:'line',source:'entities',paint:{'line-color':'#1d7e65','line-width':3},filter:['==',['get','atlasId'],'__none__']});
       instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
+      instance.on('mousemove','entity-fill',event=>{
+        const id=event.features?.[0]?.properties?.atlasId;
+        instance.setFilter('entity-hover',['==',['get','atlasId'],typeof id==='string'?id:'__none__']);
+      });
+      instance.on('mouseleave','entity-fill',()=>{
+        instance.setFilter('entity-hover',['==',['get','atlasId'],'__none__']);
+      });
       instance.on('click','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){setSelected(id);setDrawer('detail');}
@@ -231,7 +317,7 @@ export default function App() {
         instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
         instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
       }
-      instance.fitBounds(BOUNDS,{padding:45,duration:0});
+      if(SHARED_STATE.zoom===null)instance.fitBounds(BOUNDS,{padding:45,duration:0});
       setReady(true);
     });
     return ()=>{mapRef.current=null;instance.remove();};
@@ -304,6 +390,68 @@ export default function App() {
   }),[]);
   const choose = useCallback((id:string)=>{setSelected(id);setDrawer('detail');},[]);
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
+  async function fitVisible(){
+    const groups=new Map<string,string[]>();
+    for(const id of visible){
+      const node=nodes.get(id);if(!node)continue;
+      const list=groups.get(node.geometryShard)||[];list.push(id);groups.set(node.geometryShard,list);
+    }
+    if(!groups.size || !mapRef.current)return;
+    setNavBusy(true);setGeomError(false);
+    try{
+      let left=Infinity,bottom=Infinity,right=-Infinity,top=-Infinity;
+      for(const [shard,ids] of groups){
+        const shapes=await loadGeometryShard(shard,mode);
+        for(const id of ids){
+          const shape=shapes.get(id);
+          if(!shape)throw Error('Missing visible polygon: '+id);
+          const [[w,s],[e,n]]=bboxOfGeometry(shape.geometry);
+          left=Math.min(left,w);bottom=Math.min(bottom,s);right=Math.max(right,e);top=Math.max(top,n);
+        }
+      }
+      if(Number.isFinite(left))mapRef.current?.fitBounds([[left,bottom],[right,top]],{
+        padding:window.innerWidth<700?38:85,duration:650,maxZoom:11
+      });
+    }catch{setGeomError(true);}
+    finally{setNavBusy(false);}
+  }
+  function downloadText(content:string,filename:string,mime:string){
+    const blob=new Blob([content],{type:mime});
+    const url=URL.createObjectURL(blob);
+    const anchor=document.createElement('a');
+    anchor.href=url;anchor.download=filename;
+    document.body.appendChild(anchor);anchor.click();anchor.remove();
+    window.setTimeout(()=>URL.revokeObjectURL(url),3000);
+  }
+  async function performExport(format:'geojson'|'csv'){
+    if(exportBusy)return;
+    const ids=idsForScope(exportScope,selected,visible,new Set(nodes.keys()));
+    if(!ids.length)return;
+    setExportBusy(true);setExportProgress(t.exportBusy);
+    try{
+      const content=format==='csv'?
+        metadataCsv(ids,nodes):
+        JSON.stringify(await makeDetailedCollection(ids,nodes,loadGeometryShard,
+          (done,total)=>setExportProgress(done+' / '+total)),null,2);
+      const filename='territorial-atlas-2026-10-05-'+exportScope+'.'+format;
+      downloadText(content,filename,format==='csv'?'text/csv;charset=utf-8':'application/geo+json;charset=utf-8');
+      setExportProgress(t.exportDone);
+    }catch{setExportProgress(t.exportFailed);}
+    finally{setExportBusy(false);}
+  }
+  async function copyPermalink(){
+    const map=mapRef.current,center=map?.getCenter();
+    const url=buildPermalink(window.location.href,{
+      entity:selected,view:treeView,lang,simple:simplified,basemap,
+      lng:center?.lng??25.4,lat:center?.lat??46.05,zoom:map?.getZoom()??5.5
+    });
+    setShareFallback('');setShareNotice('');
+    try{
+      if(!navigator.clipboard?.writeText)throw Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(url);
+      setShareNotice(t.linkCopied);
+    }catch{setShareFallback(url);setShareNotice(t.linkManual);}
+  }
   async function locate(id:string){
     const node=nodes.get(id);
     if(!node||!mapRef.current)return;
@@ -318,7 +466,11 @@ export default function App() {
     choose(id);setSearch('');
     let cursor=nodes.get(id),depth=0;
     const ancestry:string[]=[];
-    while(cursor?.treeParentId&&depth++<24){ancestry.push(cursor.treeParentId);cursor=nodes.get(cursor.treeParentId);}
+    while(cursor&&depth++<24){
+      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      if(!parent)break;
+      ancestry.push(parent);cursor=nodes.get(parent);
+    }
     setExpanded(old=>[...new Set([...old,...ancestry])]);
   }
 
@@ -360,8 +512,14 @@ export default function App() {
   const treePanel=<section className="tree-content">
     <div className="panel-heading"><span className="eyebrow">{t.sourceSnapshot}</span><h2>{t.tree}</h2></div>
     <label className="search"><span aria-hidden="true">⌕</span>
-      <input type="search" placeholder={t.search} aria-label={t.search} value={search} onChange={e=>setSearch(e.target.value)} />
+      <input ref={searchRef} type="search" placeholder={t.search} aria-label={t.search} value={search}
+        onChange={e=>setSearch(e.target.value)}
+        onKeyDown={e=>{
+          if(e.key==='Enter' && matches.length){e.preventDefault();chooseSearch(matches[0].id);}
+          if(e.key==='Escape')setSearch('');
+        }} />
     </label>
+    <p className="search-tip">{t.searchShortcut}</p>
     <div className="tree-filters" role="group" aria-label={t.dataRole}>
       {(['all','administrative','statistical'] as TreeView[]).map(key=><button key={key}
         aria-pressed={treeView===key} className={treeView===key?'active':''} onClick={()=>setTreeView(key)}>
@@ -388,6 +546,19 @@ export default function App() {
       <div className="entity-title">
         <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
         <div><h3>{currentNode.officialName}</h3><small>{roleLabel(currentNode)}</small></div>
+      </div>
+      {breadcrumbs.length>0&&<nav className="entity-breadcrumbs" aria-label={t.path}>
+        {breadcrumbs.map((crumb,index)=><span className="breadcrumb-part" key={crumb.id}>
+          {index>0&&<span aria-hidden="true">›</span>}
+          <button type="button" aria-current={crumb.id===currentNode.id?'location':undefined}
+            onClick={()=>choose(crumb.id)}>{labelOf(crumb,lang)}</button>
+        </span>)}
+      </nav>}
+      <div className="sibling-navigation">
+        <button type="button" disabled={siblingIndex<=0}
+          onClick={()=>{const n=siblings[siblingIndex-1];if(n)choose(n.id);}}>‹ {t.previous}</button>
+        <button type="button" disabled={siblingIndex<0||siblingIndex>=siblings.length-1}
+          onClick={()=>{const n=siblings[siblingIndex+1];if(n)choose(n.id);}}>{t.next} ›</button>
       </div>
       <div className="entity-actions">
         <button onClick={()=>toggleVisible(currentNode.id)}>{visibleSet.has(currentNode.id)?t.hide:t.view}</button>
@@ -457,6 +628,38 @@ export default function App() {
             <span className="toggle-track"/><span className="control-caption">{t.simplified}</span>
           </label>
         </div>
+        <div className="map-quick-actions">
+          <button type="button" disabled={!visible.length||navBusy} onClick={()=>void fitVisible()}>
+            {navBusy?t.navigationLoading:t.fitVisible}</button>
+          <button type="button" disabled={!currentNode} onClick={()=>currentNode&&void locate(currentNode.id)}>
+            {t.fitSelected}</button>
+          <button type="button" aria-expanded={exportOpen} aria-controls="phase5-export-panel"
+            onClick={()=>{setExportOpen(old=>!old);setExportProgress('');}}>
+            {t.exportAction}</button>
+        </div>
+        {exportOpen&&<section id="phase5-export-panel" className="export-panel" aria-label={t.exportTitle}>
+          <div className="export-heading"><h3>{t.exportTitle}</h3>
+            <button type="button" aria-label={t.close} onClick={()=>setExportOpen(false)}>×</button></div>
+          <label className="export-scope">{t.exportScope}
+            <select value={exportScope} onChange={e=>setExportScope(e.target.value as ExportScope)}>
+              <option value="visible">{t.exportVisible} ({visible.filter(id=>nodes.has(id)).length})</option>
+              <option value="selected" disabled={!currentNode}>{t.exportSelected}</option>
+            </select>
+          </label>
+          <div className="export-buttons">
+            <button disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
+              onClick={()=>void performExport('geojson')}>{t.exportGeoJSON}</button>
+            <button disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
+              onClick={()=>void performExport('csv')}>{t.exportCSV}</button>
+            <button className="secondary" onClick={()=>void copyPermalink()}>{t.copyLink}</button>
+          </div>
+          <p className="export-help">{t.exportHelp}</p>
+          {exportProgress&&<p className="export-status" role="status">{exportProgress}</p>}
+          {shareNotice&&<p className="export-status" role="status">{shareNotice}</p>}
+          {shareFallback&&<input className="share-url" aria-label={t.copyLink} readOnly
+            value={shareFallback} onFocus={e=>e.currentTarget.select()} />}
+          {!nodes.size&&<p className="export-help">{t.exportEmpty}</p>}
+        </section>}
         <div className="zoom-controls">
           <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>mapRef.current?.zoomIn()}>+</button>
           <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>

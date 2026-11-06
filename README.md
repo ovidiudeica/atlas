@@ -8,7 +8,7 @@ Territorial Atlas (Romanian: *Atlas Teritorial*) is a planned bilingual geograph
 
 ## Project status
 
-**Phase 4 — interactive administrative and statistical atlas.** The bilingual website is active on GitHub Pages. Romania and the Republic of Moldova now have a certified-for-cartographic-use OSM-Boundaries snapshot dated 5 October 2026, with **4,283 searchable and navigable administrative/statistical entities**, original source metadata, official SIRUTA/CUATM codes, and detailed or topology-consistently simplified display geometry. Other modules remain planned. Source-exception acceptance does not constitute legal certification of borders.
+**Phase 5 — refined interactive administrative and statistical atlas.** The bilingual website is active on GitHub Pages. Romania and the Republic of Moldova now have a certified-for-cartographic-use OSM-Boundaries snapshot dated 5 October 2026, with **4,283 searchable and navigable administrative/statistical entities**, original source metadata, official SIRUTA/CUATM codes, and detailed or topology-consistently simplified display geometry. Phase 5 adds ancestry breadcrumbs, sibling navigation, map fitting for selected/visible entities, keyboard search, shareable map links and browser-side GeoJSON/CSV exports. GeoJSON always uses the original detailed geometry independently of the simplified map display. Other modules remain planned. Source-exception acceptance does not constitute legal certification of borders.
 
 ## Planned modules
 
@@ -40,7 +40,7 @@ Administrative identities and metadata are reconciled with **SIRUTA** (Romania) 
 
 ## Documentation
 
-See [PROJECT.md](PROJECT.md) for the initial scope, data policies, and approved design decisions. The accepted data certificate is documented in [Phase 3 certification](docs/data/PHASE-3-CERTIFICATION.md), and the navigable application in [Phase 4 implementation](docs/implementation/PHASE-4.md). Repository documentation and technical contributions are written in English; the website will be bilingual.
+See [PROJECT.md](PROJECT.md) for the initial scope, data policies, and approved design decisions. The accepted data certificate is documented in [Phase 3 certification](docs/data/PHASE-3-CERTIFICATION.md), the navigable application in [Phase 4 implementation](docs/implementation/PHASE-4.md), and interaction/export features in [Phase 5 implementation](docs/implementation/PHASE-5.md). Repository documentation and technical contributions are written in English; the website will be bilingual.
 
 ## Licensing and attribution
 
