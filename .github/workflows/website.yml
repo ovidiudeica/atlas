@@ -25,6 +25,15 @@ jobs:
         run: npm test
       - name: Type-check and build
         run: npm run build
+      - name: Chromium desktop/mobile smoke
+        run: node scripts/ci/browser-smoke.mjs
+      - name: Store browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-smoke-${{ github.sha }}
+          path: artifacts/browser-smoke/*.png
+          if-no-files-found: warn
       - name: Store build
         uses: actions/upload-artifact@v4
         with:
