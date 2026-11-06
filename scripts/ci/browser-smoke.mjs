@@ -95,6 +95,9 @@ async function downloaded(ext){
 async function desktop(cdp){
   const p=await cdp.page(1440,900,false);
   await p.wait("!!document.querySelector('.map-area .zoom-controls')",'desktop app mounted');
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'source polygons and map ready on desktop');
+  await pause(850);
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Initial module panel absent');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Initial detail panel absent');
   await p.wait("!document.querySelector('.map-boot-status')",'certified national contours');
@@ -244,6 +247,9 @@ async function desktop(cdp){
 async function tablet(cdp){
   const p=await cdp.page(900,780,false);
   await p.wait("!!document.querySelector('.zoom-controls')",'tablet map');
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'source polygons and map ready on tablet');
+  await pause(850);
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Tablet module starts closed');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Tablet details start closed');
   assert((await p.eval("document.querySelector('.map-area').getBoundingClientRect().width"))>820,
@@ -270,6 +276,9 @@ async function tablet(cdp){
 async function mobile(cdp){
   const p=await cdp.page(390,844,true);
   await p.wait("!!document.querySelector('.map-area .zoom-controls')",'mobile app mounted');
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'source polygons and map ready on mobile');
+  await pause(850);
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Mobile starts without empty detail panel');
   await p.wait("!document.querySelector('.map-boot-status')",'mobile national contours');
   const geometry=await p.eval("({width:innerWidth,scroll:document.documentElement.scrollWidth,height:document.querySelector('.map-area').getBoundingClientRect().height,buttons:getComputedStyle(document.querySelector('.mobile-controls')).display})");
