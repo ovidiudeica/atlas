@@ -43,7 +43,8 @@ const WORDS = {
     childrenShow: 'Show children', childrenHide: 'Hide children',
     levelFilter: 'Geometries by OSM level', levelScope: 'Territorial sets',
     levelChoose: 'OSM administrative levels', levelShow: 'Show', levelHide: 'Hide',
-    levelMatch: 'matching geometries', levelShown: 'geometries shown', levelHidden: 'geometries hidden',
+    levelMatch: 'matching geometries', levelShownOne: 'geometry shown', levelShownMany: 'geometries shown',
+    levelHiddenOne: 'geometry hidden', levelHiddenMany: 'geometries hidden',
     about: 'About', description: 'The atlas uses official reference codes and OSM-Boundaries contours. Source discrepancies are documented, not presented as legally certified borders.',
     planned: 'This module is planned for a later phase.', noResults: 'No matching entities.',
     loading: 'Loading the certified catalogue…', loadingGeom: 'Loading selected geometries…',
@@ -84,7 +85,8 @@ const WORDS = {
     childrenShow: 'Afișează copiii', childrenHide: 'Ascunde copiii',
     levelFilter: 'Geometrii după nivel OSM', levelScope: 'Seturi teritoriale',
     levelChoose: 'Niveluri administrative OSM', levelShow: 'Afișează', levelHide: 'Ascunde',
-    levelMatch: 'geometrii corespunzătoare', levelShown: 'geometrii afișate', levelHidden: 'geometrii ascunse',
+    levelMatch: 'geometrii corespunzătoare', levelShownOne: 'geometrie afișată', levelShownMany: 'geometrii afișate',
+    levelHiddenOne: 'geometrie ascunsă', levelHiddenMany: 'geometrii ascunse',
     about: 'Despre Atlas', description: 'Atlasul folosește coduri oficiale și contururi OSM-Boundaries. Neconcordanțele sursei sunt documentate, fără a prezenta limitele ca fiind certificate juridic.',
     planned: 'Acest modul va fi dezvoltat într-o etapă ulterioară.', noResults: 'Nicio entitate găsită.',
     loading: 'Se încarcă catalogul certificat…', loadingGeom: 'Se încarcă geometriile selectate…',
@@ -423,7 +425,8 @@ export default function App() {
     const changed = show ? matchingLevelIds.length-affected : affected;
     setVisible(old=>updateOsmLevelVisibility(old,matchingLevelIds,show));
     setLevelActionMessage(changed.toLocaleString(lang==='ro'?'ro-RO':'en-US')+' '+
-      (show?t.levelShown:t.levelHidden));
+      (show?(changed===1?t.levelShownOne:t.levelShownMany):
+        (changed===1?t.levelHiddenOne:t.levelHiddenMany)));
   }
   const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
@@ -597,8 +600,9 @@ export default function App() {
           <legend>{t.levelScope}</legend>
           {osmLevelIndex.scopes.map(scope=><label key={scope.id}>
             <input type="checkbox" checked={selectedLevelScopes.includes(scope.id)}
-              aria-label={scope.names[lang]} onChange={event=>toggleLevelScope(scope.id,event.target.checked)} />
-            <span>{scope.names[lang]}</span>
+              aria-label={nodes.has(scope.id)?labelOf(nodes.get(scope.id)!,lang):scope.names[lang]}
+              onChange={event=>toggleLevelScope(scope.id,event.target.checked)} />
+            <span>{nodes.has(scope.id)?labelOf(nodes.get(scope.id)!,lang):scope.names[lang]}</span>
           </label>)}
         </fieldset>
         <fieldset className="osm-level-choices">
