@@ -68,7 +68,11 @@ const WORDS = {
     exportEmpty: 'Select or display an entity to export.', exportBusy: 'Preparing export…',
     exportDone: 'Download prepared.', exportFailed: 'Unable to prepare export. Check your connection and retry.',
     copyLink: 'Copy map link', linkCopied: 'Link copied.', linkManual: 'Copy this link manually:',
-    searchShortcut: 'Press / to search. Enter selects the first match.'
+    searchShortcut: 'Press / to search. Enter selects the first match.',
+    mapTools: 'Map tools', mapSettings: 'Map display settings',
+    geometryActions: 'Geometry actions', mapInformation: 'Information & legend',
+    entityExport: 'Export this entity', displaySource: 'Source and legal status',
+    mapLoading: 'Loading map geometry…'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -112,7 +116,11 @@ const WORDS = {
     exportEmpty: 'Selectează sau afișează o entitate pentru export.', exportBusy: 'Se pregătește exportul…',
     exportDone: 'Fișier pregătit pentru descărcare.', exportFailed: 'Exportul nu a reușit. Verifică conexiunea și reîncearcă.',
     copyLink: 'Copiază linkul hărții', linkCopied: 'Link copiat.', linkManual: 'Copiază manual acest link:',
-    searchShortcut: 'Apasă / pentru căutare. Enter selectează primul rezultat.'
+    searchShortcut: 'Apasă / pentru căutare. Enter selectează primul rezultat.',
+    mapTools: 'Instrumente hartă', mapSettings: 'Setări hartă',
+    geometryActions: 'Acțiuni geometrii', mapInformation: 'Informații și legendă',
+    entityExport: 'Exportă entitatea', displaySource: 'Sursa și statutul juridic',
+    mapLoading: 'Se încarcă geometriile hărții…'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -561,9 +569,9 @@ export default function App() {
     document.body.appendChild(anchor);anchor.click();anchor.remove();
     window.setTimeout(()=>URL.revokeObjectURL(url),3000);
   }
-  async function performExport(format:'geojson'|'csv'){
+  async function performExport(format:'geojson'|'csv',scope:ExportScope=exportScope){
     if(exportBusy)return;
-    const ids=idsForScope(exportScope,selected,visible,new Set(nodes.keys()));
+    const ids=idsForScope(scope,selected,visible,new Set(nodes.keys()));
     if(!ids.length)return;
     setExportBusy(true);setExportProgress(t.exportBusy);
     try{
@@ -571,7 +579,7 @@ export default function App() {
         metadataCsv(ids,nodes):
         JSON.stringify(await makeDetailedCollection(ids,nodes,loadGeometryShard,
           (done,total)=>setExportProgress(done+' / '+total)),null,2);
-      const filename='territorial-atlas-2026-10-05-'+exportScope+'.'+format;
+      const filename='territorial-atlas-2026-10-05-'+scope+'.'+format;
       downloadText(content,filename,format==='csv'?'text/csv;charset=utf-8':'application/geo+json;charset=utf-8');
       setExportProgress(t.exportDone);
     }catch{setExportProgress(t.exportFailed);}
@@ -716,6 +724,75 @@ export default function App() {
           {matches.length>80&&<p className="tree-hint">{t.searchLimit}</p>}
         </>:ROOT_IDS.map(id=>{const n=nodes.get(id);return n?treeItem(n,0):null;})}
       </div>}
+    <details className="atlas-map-tools">
+      <summary>{t.mapTools}</summary>
+      <div className="atlas-map-tool-groups">
+        <details className="atlas-tool-section atlas-map-settings">
+          <summary>{t.mapSettings}</summary>
+          <div className="atlas-tool-body">
+            <label className="basemap-select"><span aria-hidden="true">▧</span><span className="control-caption">{t.basemap}</span>
+              <select value={basemap} onChange={e=>setBasemap(e.target.value as Basemap)} aria-label={t.basemap}>
+                {(['standard','grayscale','dark','none'] as Basemap[]).map(key=>
+                  <option key={key} value={key}>{t[key]}</option>)}
+              </select>
+            </label>
+            <label className="simplify-control"><input type="checkbox" checked={simplified}
+              onChange={e=>setSimplified(e.target.checked)}/>
+              <span className="toggle-track"/><span className="control-caption">{t.simplified}</span>
+            </label>
+          </div>
+        </details>
+        <details className="atlas-tool-section atlas-geometry-actions">
+          <summary>{t.geometryActions}</summary>
+          <div className="atlas-tool-body">
+            <button type="button" disabled={!visible.length||navBusy}
+              onClick={()=>void fitVisible()}>{navBusy?t.navigationLoading:t.fitVisible}</button>
+            <button type="button" className="reset-geometries" onClick={resetGeometries}
+              aria-label={t.resetGeometries} title={t.resetGeometries}>{t.resetGeometries}</button>
+          </div>
+        </details>
+        <details className="atlas-tool-section atlas-export-tools" open={exportOpen}>
+          <summary aria-expanded={exportOpen} aria-controls="phase5-export-panel"
+            onClick={e=>{e.preventDefault();setExportOpen(old=>!old);setExportProgress('');}}>
+            {t.exportAction}
+          </summary>
+          {exportOpen&&<section id="phase5-export-panel" className="export-panel" aria-label={t.exportTitle}>
+            <label className="export-scope">{t.exportScope}
+              <select value={exportScope} onChange={e=>setExportScope(e.target.value as ExportScope)}>
+                <option value="visible">{t.exportVisible} ({visible.filter(id=>nodes.has(id)).length})</option>
+                <option value="selected" disabled={!currentNode}>{t.exportSelected}</option>
+              </select>
+            </label>
+            <div className="export-buttons">
+              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
+                onClick={()=>void performExport('geojson')}>{t.exportGeoJSON}</button>
+              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
+                onClick={()=>void performExport('csv')}>{t.exportCSV}</button>
+              <button type="button" className="secondary" onClick={()=>void copyPermalink()}>{t.copyLink}</button>
+            </div>
+            <p className="export-help">{t.exportHelp}</p>
+            {exportProgress&&<p className="export-status" role="status">{exportProgress}</p>}
+            {shareNotice&&<p className="export-status" role="status">{shareNotice}</p>}
+            {shareFallback&&<input className="share-url" aria-label={t.copyLink} readOnly
+              value={shareFallback} onFocus={e=>e.currentTarget.select()} />}
+            {!nodes.size&&<p className="export-help">{t.exportEmpty}</p>}
+          </section>}
+        </details>
+        <details className="atlas-tool-section atlas-map-information">
+          <summary>{t.mapInformation}</summary>
+          <div className="atlas-tool-body">
+            <div className="map-legend" aria-label={t.dataRole}>
+              <span className="legend-admin"/> {t.adminView}
+              <span className="legend-stat"/> {t.statView}
+            </div>
+            <h3>{t.displaySource}</h3>
+            <p>{t.sourceNote}</p>
+            <p>{t.description}</p>
+            <p>{t.detailNote}</p>
+          </div>
+        </details>
+      </div>
+    </details>
     <div className="tree-footnote"><strong>{catalog.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.entityCount}</strong>
       <span> · {visible.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.selectedCount}</span>
       <p>{t.description}</p>
@@ -746,6 +823,20 @@ export default function App() {
         <button onClick={()=>toggleVisible(currentNode.id)}>{visibleSet.has(currentNode.id)?t.hide:t.view}</button>
         <button className="secondary" onClick={()=>void locate(currentNode.id)}>{t.locate}</button>
       </div>
+      <details className="atlas-detail-export">
+        <summary>{t.entityExport}</summary>
+        <div className="atlas-detail-export-actions">
+          <button type="button" disabled={exportBusy}
+            onClick={()=>void performExport('geojson','selected')}>{t.exportGeoJSON}</button>
+          <button type="button" disabled={exportBusy}
+            onClick={()=>void performExport('csv','selected')}>{t.exportCSV}</button>
+          <button type="button" onClick={()=>void copyPermalink()}>{t.copyLink}</button>
+          {exportProgress&&<p role="status">{exportProgress}</p>}
+          {shareNotice&&<p role="status">{shareNotice}</p>}
+          {shareFallback&&<input aria-label={t.copyLink} readOnly value={shareFallback}
+            onFocus={e=>e.currentTarget.select()} />}
+        </div>
+      </details>
       <div className="detail-section">{t.details}</div>
       <dl className="metadata">
         <dt>{t.official}</dt><dd>{currentNode.officialName}</dd>
@@ -783,6 +874,14 @@ export default function App() {
       <div className="brand-symbol" aria-hidden="true">◎</div>
       <div className="brand"><strong>{t.title}</strong><small>{t.tagline}</small></div>
       <span className="version">{t.version}</span>
+      {currentNode&&<button type="button" className="header-entity-action" aria-label={t.openDetail}
+        title={t.openDetail} aria-expanded={detailPanelOpen}
+        onClick={()=>{
+          if(detailPanelOpen){closeDetailPanel();return;}
+          setDetailPanelOpen(true);
+          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+          else if(window.innerWidth<1100)setModulePanelOpen(false);
+        }}>ⓘ</button>}
       <div className="language" aria-label="Language">
         <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
         <button className={lang==='ro'?'active':''} aria-pressed={lang==='ro'} onClick={()=>setLang('ro')}>RO</button>
@@ -811,63 +910,14 @@ export default function App() {
       }}>
         <div className="map-canvas" ref={mapEl} aria-label="Territorial map" />
         {!rootsLoaded&&catalog.length>0&&<span className="map-boot-status" role="status">{t.loadingGeom}</span>}
-        <div className="map-controls">
-          <label className="basemap-select"><span aria-hidden="true">▧</span><span className="control-caption">{t.basemap}</span>
-            <select value={basemap} onChange={e=>setBasemap(e.target.value as Basemap)} aria-label={t.basemap}>
-              {(['standard','grayscale','dark','none'] as Basemap[]).map(key=>
-                <option key={key} value={key}>{t[key]}</option>)}
-            </select>
-          </label>
-          <label className="simplify-control"><input type="checkbox" checked={simplified} onChange={e=>setSimplified(e.target.checked)} />
-            <span className="toggle-track"/><span className="control-caption">{t.simplified}</span>
-          </label>
-        </div>
-        <div className="map-quick-actions">
-          <button type="button" disabled={!visible.length||navBusy} onClick={()=>void fitVisible()}>
-            {navBusy?t.navigationLoading:t.fitVisible}</button>
-          <button type="button" disabled={!currentNode} onClick={()=>currentNode&&void locate(currentNode.id)}>
-            {t.fitSelected}</button>
-          <button type="button" className="reset-geometries" onClick={resetGeometries}
-            aria-label={t.resetGeometries} title={t.resetGeometries}>↺ {t.resetGeometries}</button>
-          <button type="button" aria-expanded={exportOpen} aria-controls="phase5-export-panel"
-            onClick={()=>{setExportOpen(old=>!old);setExportProgress('');}}>
-            {t.exportAction}</button>
-        </div>
-        {exportOpen&&<section id="phase5-export-panel" className="export-panel" aria-label={t.exportTitle}>
-          <div className="export-heading"><h3>{t.exportTitle}</h3>
-            <button type="button" aria-label={t.close} onClick={()=>setExportOpen(false)}>×</button></div>
-          <label className="export-scope">{t.exportScope}
-            <select value={exportScope} onChange={e=>setExportScope(e.target.value as ExportScope)}>
-              <option value="visible">{t.exportVisible} ({visible.filter(id=>nodes.has(id)).length})</option>
-              <option value="selected" disabled={!currentNode}>{t.exportSelected}</option>
-            </select>
-          </label>
-          <div className="export-buttons">
-            <button disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
-              onClick={()=>void performExport('geojson')}>{t.exportGeoJSON}</button>
-            <button disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
-              onClick={()=>void performExport('csv')}>{t.exportCSV}</button>
-            <button className="secondary" onClick={()=>void copyPermalink()}>{t.copyLink}</button>
-          </div>
-          <p className="export-help">{t.exportHelp}</p>
-          {exportProgress&&<p className="export-status" role="status">{exportProgress}</p>}
-          {shareNotice&&<p className="export-status" role="status">{shareNotice}</p>}
-          {shareFallback&&<input className="share-url" aria-label={t.copyLink} readOnly
-            value={shareFallback} onFocus={e=>e.currentTarget.select()} />}
-          {!nodes.size&&<p className="export-help">{t.exportEmpty}</p>}
-        </section>}
         <div className="zoom-controls">
           <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>mapRef.current?.zoomIn()}>+</button>
           <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>
           <button aria-label={t.home} title={t.home} onClick={reset}>⌂</button>
         </div>
-        <div className="map-note">{geomLoading?t.loadingGeom:geomError?t.dataError:t.sourceNote}</div>
-        <div className="map-legend" aria-label={t.dataRole}><span className="legend-admin"/> {t.adminView}
-          <span className="legend-stat"/> {t.statView}</div>
-        <div className="mobile-controls">
-          <button type="button" onClick={()=>{setModule('administrative');setModulePanelOpen(true);setDrawer('tree');}}>☷ {t.openTree}</button>
-          {currentNode&&<button type="button" onClick={()=>{setDetailPanelOpen(true);setDrawer('detail');setModulePanelOpen(false);}}>▤ {t.openDetail}</button>}
-        </div>
+        {(geomLoading||geomError)&&<div className="atlas-map-status" role={geomError?'alert':'status'}>
+          {geomError?t.dataError:t.mapLoading}
+        </div>}
       </main>
       {currentNode&&detailPanelOpen&&<aside className="detail-sidebar" aria-label={t.details}>
         <button type="button" className="pane-close" aria-label={t.close} title={t.close}

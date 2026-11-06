@@ -132,3 +132,11 @@ Aceasta este o **specificație UX pentru discuție și acceptare**, nu o modific
 ## Jurnal implementare
 
 - **WEB-R3.1**: panouri retractabile și spațiu maxim de hartă; comenzile care suprapun harta vor fi relocate separat în WEB-R3.2.
+
+## WEB-R3.2 — relocarea comenzilor (2026-11-06)
+
+- Bara laterală Administrativ include **Instrumente hartă** închise implicit, cu secțiunile retractabile **Setări hartă**, **Acțiuni geometrii**, **Export și partajare**, **Informații și legendă**. Lista combinată ADM/NUTS/NTS și arborele nu sunt modificate.
+- În suprafața hărții rămân doar trei butoane de navigare (zoom +/− și Acasă), plus atribuirea OSM și scara. Indicatoarele temporare de încărcare/eroare rămân condiționale.
+- Comanda de încadrare a entității rămâne în Detalii. Exportul GeoJSON/CSV pentru o entitate și permalinkul sunt accesibile și într-un bloc retractabil din Detalii. Când este selectată o entitate, iconul din antet permite redeschiderea panoului Detalii, inclusiv pe mobil.
+- Comenzile de resetare a geometriilor, alegerea fundalului, simplificarea, încadrarea geometriilor vizibile, exportul în lot, legenda, proveniența și avertismentul juridic sunt păstrate funcțional în panoul retractabil.
+- Nicio schimbare a fișierelor `data/`, `public/data/` sau identității entităților.
