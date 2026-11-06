@@ -151,3 +151,48 @@
 @media(max-width:700px){
   .drawer-screen{bottom:64px}
 }
+
+/* WEB-R3.2 — secondary controls belong to collapsible panel sections. */
+.atlas-map-tools{margin:12px 14px;border:1px solid #d5e5d9;background:#f8fbf9;border-radius:10px;color:#204a35;font-size:12px}
+.atlas-map-tools>summary{font-weight:750;padding:12px;cursor:pointer;min-height:44px}
+.atlas-map-tool-groups{padding:0 8px 9px;border-top:1px solid #dfeae1}
+.atlas-tool-section{border-bottom:1px solid #e1ebe3;min-width:0}
+.atlas-tool-section:last-child{border-bottom:0}
+.atlas-tool-section>summary{font-weight:700;padding:11px 7px;cursor:pointer;min-height:40px}
+.atlas-map-tools summary:focus-visible,.atlas-detail-export summary:focus-visible{outline:3px solid #e6a73d;outline-offset:2px;border-radius:6px}
+.atlas-tool-body{display:flex;flex-direction:column;gap:9px;padding:8px 6px 13px}
+.atlas-tool-body>.basemap-select,.atlas-tool-body>.simplify-control{
+ position:relative;box-shadow:none;width:100%;min-width:0;justify-content:flex-start;min-height:44px;height:auto;padding:9px 11px}
+.atlas-tool-body>.basemap-select select{margin-left:auto;max-width:115px}
+.atlas-tool-body>.simplify-control .control-caption{font-size:12px}
+.atlas-tool-body>button,.atlas-detail-export-actions>button{border:1px solid #c9ded0;background:#fff;
+ color:#19583e;border-radius:8px;font-size:11px;font-weight:750;min-height:44px;padding:9px;cursor:pointer}
+.atlas-tool-body>button:hover,.atlas-detail-export-actions>button:hover{background:#edf5ee}
+.atlas-tool-body button.reset-geometries{border-color:#b8d3c2}
+.atlas-map-information .map-legend{position:static;display:flex;box-shadow:none;padding:8px;
+ width:100%;flex-wrap:wrap;background:#fff;margin:0}
+.atlas-map-information h3{font-size:11px;margin:5px 0 0}
+.atlas-map-information p{font-size:11px;line-height:1.55;margin:0;color:#597464}
+.atlas-export-tools .export-panel{position:static;left:auto;top:auto;z-index:auto;width:100%;
+ max-height:none;overflow:visible;box-shadow:none;border:none;background:transparent;padding:7px 5px 13px}
+.atlas-export-tools .export-buttons{display:flex;flex-wrap:wrap}
+.atlas-export-tools .export-buttons button{min-height:44px}
+.atlas-detail-export{margin:9px 14px;border:1px solid #d7e5dc;border-radius:8px}
+.atlas-detail-export>summary{padding:12px;font-size:11px;color:#1b5d42;font-weight:750;cursor:pointer;min-height:44px}
+.atlas-detail-export-actions{padding:0 10px 10px;display:grid;gap:7px}
+.atlas-detail-export-actions>p{font-size:11px;color:#456b54;margin:4px}
+.atlas-detail-export-actions>input{min-width:0;width:100%;font-size:11px}
+.header-entity-action{height:35px;width:35px;flex:0 0 35px;background:transparent;
+ color:#e6f0e8;border:1px solid #47715d;border-radius:8px;font-size:22px;line-height:1}
+.header-entity-action:hover{background:#205443}
+.atlas-map-status{position:absolute;z-index:3;bottom:20px;left:16px;
+ max-width:min(310px,70%);padding:8px 10px;font-size:11px;border-radius:8px;
+ box-shadow:0 2px 10px #1d49331a;background:#fff;color:#496b53}
+.atlas-map-status[role=alert]{color:#8d3933;border:1px solid #e7cbc6}
+@media(max-width:700px){
+ .site-header .brand{min-width:0;flex:1}
+ .site-header .brand strong,.site-header .brand small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .header-entity-action{height:34px;width:34px;flex-basis:34px}
+ .language{flex-shrink:0}
+ .atlas-map-status{bottom:19px;left:9px;max-width:calc(100% - 65px)}
+}
