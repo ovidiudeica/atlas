@@ -91,6 +91,7 @@ export default function App() {
   const [ready,setReady]=useState(false);
   const modeRef=useRef<'detailed'|'simplified'>(localStorage.getItem('atlas-simple')==='true'?'simplified':'detailed');
   const [projected,setProjected]=useState<Record<CountryId,string>>({ro:'',md:''});
+  const [projectionSize,setProjectionSize]=useState({width:1,height:1});
   const t=LANG[lang];
 
   useEffect(()=>{localStorage.setItem('atlas-lang',lang);document.documentElement.lang=lang;document.title=t.title;},[lang,t.title]);
@@ -112,7 +113,12 @@ export default function App() {
       });
       instance.on('mouseenter','country-fill',()=>{instance.getCanvas().style.cursor='pointer';});
       instance.on('mouseleave','country-fill',()=>{instance.getCanvas().style.cursor='';});
-      const syncOutline=()=>setProjected(territorySvgPaths(instance,modeRef.current));
+      const syncOutline=()=>{
+        const bounds=instance.getContainer().getBoundingClientRect();
+        if(bounds.width<=0||bounds.height<=0)return;
+        setProjectionSize({width:bounds.width,height:bounds.height});
+        setProjected(territorySvgPaths(instance,modeRef.current));
+      };
       instance.on('move',syncOutline);
       instance.on('resize',syncOutline);
       instance.on('idle',syncOutline);
@@ -210,7 +216,7 @@ export default function App() {
       <aside className="tree-sidebar">{tree}</aside>
       <main className="map-area">
         <div ref={mapEl} className="map-canvas" aria-label="Territorial map"/>
-        <svg className="territory-overlay" aria-hidden="true">
+        <svg className="territory-overlay" aria-hidden="true" viewBox={`0 0 ${projectionSize.width} ${projectionSize.height}`} preserveAspectRatio="none">
           {(["ro","md"] as CountryId[]).filter(id=>visible.includes(id)).map(id=><path key={id} d={projected[id]} fill={selected===id?"#f3d6a0":"#dceade"} fillOpacity="0.29" stroke={selected===id?"#dca237":"#185440"} strokeWidth={selected===id?4:2.5} strokeLinejoin="round" />)}
         </svg>
         <div className="map-controls">
