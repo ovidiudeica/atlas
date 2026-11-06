@@ -70,6 +70,10 @@ Basemap choices include an OpenStreetMap-based map and the ability to hide the b
 
 Data sources can have distinct rights and attribution requirements. Document the source, dataset version, retrieval date, identifiers, licensing basis, and transformations. Do not claim that cartographic boundaries automatically have legal authority.
 
+### Permanent source-exception acceptance (2026-11-06)
+
+The accepted OSMB 2026-10-05 cartographic baseline, including all documented geometry and CUATM-source exceptions, is preserved without artificial corrections. These cases do **not** block continued website/module development or the present cartographic release; legal boundary certification and four uncertain CUATM multipart mappings remain expressly unproven. Any later adjustment requires independently verifiable official evidence, versioned data, topology and regression checks, and an explicit separate release decision. See [ADR-0002](docs/architecture/ADR-0002-osmb-source-exceptions.md).
+
 The repository still has no repository-wide `LICENSE` file. The code/documentation licence and the data-rights policy require a separate explicit decision; public access does not grant unrestricted reuse. GitHub Pages is active at https://ovidiudeica.github.io/atlas/ and retains OpenStreetMap/OSMB attribution and source caveats.
 
 ## 6. Implemented scope and boundaries
