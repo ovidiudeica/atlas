@@ -4,7 +4,7 @@
 
 **Website:** [Territorial Atlas](https://ovidiudeica.github.io/atlas/)
 
-Territorial Atlas (Romanian: *Atlas Teritorial*) is a planned bilingual geographic atlas for exploring administrative territories, statistical regions, historical geography, and communities through an interactive map.
+Territorial Atlas (Romanian: *Atlas Teritorial*) is a live bilingual cartographic website for Romanian and Moldovan administrative and statistical territories. Historical geography, ethnographic areas and communities are planned for later modules.
 
 ## Project status
 
@@ -19,7 +19,7 @@ Territorial Atlas (Romanian: *Atlas Teritorial*) is a planned bilingual geograph
 - **Ethnographic Areas** — documented ethnographic territories.
 - **Administrative-Territorial Reform** — exploration of territorial reorganization proposals.
 
-The modules will share one map. The website will support English and Romanian, with English as the initial interface language.
+The modules will share one map. The active Administrative module supports English and Romanian, with English as the initial interface language.
 
 ## Initial administrative scope
 
@@ -40,7 +40,7 @@ Administrative identities and metadata are reconciled with **SIRUTA** (Romania) 
 
 ## Documentation
 
-See [PROJECT.md](PROJECT.md) for the initial scope, data policies, and approved design decisions. The accepted data certificate is documented in [Phase 3 certification](docs/data/PHASE-3-CERTIFICATION.md), the navigable application in [Phase 4 implementation](docs/implementation/PHASE-4.md), and interaction/export features in [Phase 5 implementation](docs/implementation/PHASE-5.md). Repository documentation and technical contributions are written in English; the website will be bilingual.
+See [PROJECT.md](PROJECT.md) for the initial scope, data policies, and approved design decisions. The accepted data certificate is documented in [Phase 3 certification](docs/data/PHASE-3-CERTIFICATION.md), the navigable application in [Phase 4 implementation](docs/implementation/PHASE-4.md), and interaction/export features in [Phase 5 implementation](docs/implementation/PHASE-5.md). Repository documentation and technical contributions are written in English; the website is bilingual.
 
 ## Licensing and attribution
 

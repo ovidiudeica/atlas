@@ -1,6 +1,6 @@
 # Territorial Atlas — Project Definition
 
-**Status:** Approved initial product scope; implementation has not started.
+**Status:** Live bilingual website through Phase 5 (6 November 2026); Administrative module implemented, other five modules planned. This file retains the approved product scope and records subsequent implementation status.
 
 ## 1. Purpose and identity
 
@@ -64,16 +64,16 @@ The initial map shows only the national outlines of Romania and the Republic of 
 
 A global **Simplified geometries** control is placed in the map toolbar next to the basemap control. The default is **off** (original geometry). When enabled, all modules use simplified display representations where available. Simplification must preserve shared-border topology; it does not alter source geometries or exports. Changing this setting does not alter tree selection, displayed layers, or map extent.
 
-Basemap choices include an OpenStreetMap-based map and the ability to hide the basemap, subject to applicable provider terms and attribution. A compact module toolbar is planned for desktop, with an accessible mobile equivalent. Final UI details and implementation technology remain to be selected and tested.
+Basemap choices include an OpenStreetMap-based map and the ability to hide the basemap, subject to applicable provider terms and attribution. A compact module toolbar is planned for desktop, with an accessible mobile equivalent. The Phase 2–5 implementation uses React, MapLibre GL and static certified cartographic assets; interface decisions and testing are documented in `docs/implementation/`.
 
 ## 5. Data handling and licensing
 
 Data sources can have distinct rights and attribution requirements. Document the source, dataset version, retrieval date, identifiers, licensing basis, and transformations. Do not claim that cartographic boundaries automatically have legal authority.
 
-The repository begins without a `LICENSE` file. A code/documentation license and the data-rights policy will be chosen separately before distribution requiring those permissions. GitHub Pages will remain inactive until a first working website is reviewed and accepted.
+The repository still has no repository-wide `LICENSE` file. The code/documentation licence and the data-rights policy require a separate explicit decision; public access does not grant unrestricted reuse. GitHub Pages is active at https://ovidiudeica.github.io/atlas/ and retains OpenStreetMap/OSMB attribution and source caveats.
 
-## 6. Current implementation boundary
+## 6. Implemented scope and boundaries
 
 This is a **new project**, not a wholesale migration of the previous Reforma Teritorială repository. Previously reviewed Covasna geometries, source mappings, and relevant technical approaches may be adopted individually with validation; unrelated code, data, and workflow infrastructure are not imported automatically.
 
-The initial repository contains only `README.md` and `PROJECT.md`. No website implementation, dataset import, or publication is implied by these documents.
+The live Administrative module now serves the certified-for-cartographic-use Phase 3 RO/MD source snapshot via the Phase 4 4,283-entity tree and Phase 5 navigation, share links and source-faithful exports. Phase 3/4 files, original geometries and evidence remain immutable during UI maintenance. See `docs/implementation/PHASE-4.md`, `docs/implementation/PHASE-5.md` and the Phase 3 certification. The other five modules remain future work.

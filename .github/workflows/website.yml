@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '22'
       - name: Install
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Static regression tests
         run: npm test
       - name: Type-check and build
