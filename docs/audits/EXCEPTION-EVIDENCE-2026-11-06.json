@@ -1,0 +1,205 @@
+{
+  "schema": "atlas-exception-investigation-v1",
+  "verifiedAt": "2026-11-06",
+  "sourceSnapshot": "2026-10-05",
+  "legalCertification": false,
+  "sourceArchiveSha256": {
+    "RO": "cc4fd15940550054d90fcadf907ed98352b68882735680093f77a624e3e04897",
+    "MD": "d29b600daa2857bacf8ec7d13369db8fc95353e89f62fe1c762dbc692c216dad"
+  },
+  "sourceFeatureCounts": {
+    "RO": 3395,
+    "MD": 2734
+  },
+  "method": {
+    "geometries": "Shapely 2.1.2 EPSG:3035 using pyproj 3.7.2",
+    "ancpiComparison": "Node.js polygon-clipping@0.15.7 zero positive-area overlap; 2025 official-data-derived polygons"
+  },
+  "independentRomania": {
+    "source": "geo-spatial.org, processed from ANCPI public administrative boundaries",
+    "sourceGeometryVersion": "2025-03-26",
+    "fetched2026": "2026-11-06",
+    "fetchedFeatureCount": 3,
+    "sourceDownloadedBytes": 63059,
+    "sourceSha256": "ed5e98e33bf0c1a4ef7acdaaace8e4b24732d466ed6513e167f47688c87e094",
+    "sirutaCodes": [
+      83749,
+      83963,
+      84629
+    ],
+    "vlahitaComponents": 6,
+    "overlapsWithCapalnitaKm2": 0,
+    "overlapsWithLuetaKm2": 0,
+    "limitations": "2025 geometry, independent source-data derivative; not legal certification for 2026"
+  },
+  "sources": [
+    "https://geo-spatial.org/descarcare/date/administrative-boundaries/",
+    "https://raiontaraclia.md/ro/primariile-raionului/",
+    "https://tintareni.md/",
+    "https://statistica.gov.md/index.php/ro/clasificatorul-unitatilor-administrativ-teritoriale-al-republicii-moldova-cuatm--12_62048.html"
+  ],
+  "topology": {
+    "RO": {
+      "vlăhița": {
+        "osmRelationId": 10624200,
+        "siruta": "83749",
+        "parts": 6
+      },
+      "overlaps": [
+        {
+          "id": "RO_OVERLAP_14879493_10624200",
+          "relations": [
+            14879493,
+            10624200
+          ],
+          "areaKm2": 0.896542,
+          "vlahitaDetachedComponentsFullyCovered": 4,
+          "officialReferenceOverlapKm2": 0,
+          "interpretation": "unexcluded source neighbor coverage"
+        },
+        {
+          "id": "RO_OVERLAP_14879461_10624200",
+          "relations": [
+            14879461,
+            10624200
+          ],
+          "areaKm2": 0.161219,
+          "vlahitaDetachedComponentsFullyCovered": 1,
+          "officialReferenceOverlapKm2": 0,
+          "interpretation": "unexcluded source neighbor coverage"
+        }
+      ]
+    },
+    "MD": {
+      "cealicSvetliiCortenulNou": {
+        "cealic": 19118040,
+        "svetlii": 19118596,
+        "comrat": 1706978,
+        "cortenulNouLevel9": 18967006,
+        "areaKm2": 0.239120280525258,
+        "symmetricDifferenceSquareMetres": 0,
+        "twoRecordedCasesSameFootprint": true,
+        "independentAdministrativeEvidence": "Taraclia district council lists Cortenul Nou within Cealic",
+        "legalBoundaryAdjudicated": false
+      },
+      "firladeni": {
+        "child": 12463200,
+        "sourceParentCauseni": 65343,
+        "otherDistrictAneniiNoi": 1692078,
+        "mainPartKm2": 51.6098433947103,
+        "detachedPartKm2": 0.5652170711751402,
+        "detachedInsideOtherDistrict": true,
+        "legalExclaveUnverified": true
+      }
+    }
+  },
+  "CUATM": {
+    "groupedReferences": [
+      {
+        "code": "0100",
+        "name": "Chișinău",
+        "relations": [
+          1691801,
+          1748490
+        ],
+        "areasKm2": [
+          575.6904,
+          122.1344
+        ],
+        "nested": true,
+        "officialIdentityCount": 1,
+        "status": "nested_source_scopes_explained"
+      },
+      {
+        "code": "0500",
+        "name": "Bender",
+        "relations": [
+          9581354,
+          12463379
+        ],
+        "areasKm2": [
+          38.0072,
+          21.2051
+        ],
+        "nested": true,
+        "officialIdentityCount": 1,
+        "status": "nested_source_scopes_explained"
+      },
+      {
+        "code": "1050",
+        "name": "Țînțăreni",
+        "relations": [
+          12496850,
+          19090932
+        ],
+        "areasKm2": [
+          39.2974,
+          17.7207
+        ],
+        "gapKm": 6.059,
+        "level9BothVillagesInsideRelation": 12496850,
+        "level9VillageRelations": [
+          18967632,
+          18966900
+        ],
+        "detachedHasNeitherVillage": true,
+        "officialChildCodeCretoaia": "1025",
+        "status": "unresolved_outlying_component_high_priority"
+      },
+      {
+        "code": "7160",
+        "name": "Văratic",
+        "relations": [
+          19045240,
+          19045254
+        ],
+        "areasKm2": [
+          5.7706,
+          19.0149
+        ],
+        "gapKm": 0.0478,
+        "level9VillageRelation": 18966798,
+        "villageIn": 19045254,
+        "status": "unverified_multipart"
+      },
+      {
+        "code": "3417",
+        "name": "Dondușeni",
+        "relations": [
+          19055800,
+          19055814
+        ],
+        "areasKm2": [
+          27.501,
+          0.6749
+        ],
+        "gapKm": 0.4102,
+        "level9VillageRelation": 18967876,
+        "villageIn": 19055800,
+        "separateTownCUATMCode": "3401",
+        "status": "unverified_multipart"
+      },
+      {
+        "code": "8034",
+        "name": "Recea",
+        "relations": [
+          19100165,
+          19100169,
+          19100182
+        ],
+        "areasKm2": [
+          0.66,
+          1.2071,
+          24.9746
+        ],
+        "smallPairGapKm": 0.0474,
+        "nearSmallToLargeGapKm": 1.1812,
+        "status": "unverified_three_part"
+      }
+    ],
+    "officialRecordsPerGroup": 1,
+    "noInventedCodes": true,
+    "noMergedGeometries": true
+  },
+  "releasePolicy": "Read-only evidence; preserve official registry source records, original OSMB geometry, original OSM IDs and 4,283-node production catalog."
+}
