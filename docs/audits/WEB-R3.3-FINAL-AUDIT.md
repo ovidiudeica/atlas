@@ -1,6 +1,6 @@
 # WEB-R3.3 — Auditul final al interfeței „Harta în prim-plan”
 
-**Stadiu:** verificări pre-merge satisfăcute; integrarea protejată și auditul GitHub Pages rămân condițiile finale de închidere.  
+**Stadiu:** **CERTIFICAT ȘI ÎNCHIS — WEB-R3.3** (2026-11-06); codul de interfață este integrat și publicat, iar verificările de după integrare sunt reușite.  
 **Data:** 2026-11-06  
 **Repository:** `ovidiudeica/atlas`  
 **Bază:** `main` după WEB-R3.2, commit `410f380ba32f1b46ac6c549f5867d6d09f5da724`.
@@ -27,7 +27,7 @@ Auditul final verifică implementarea acceptată în WEB-R3.0, introdusă în WE
 | Tastatură | Escape închide și întoarce focusul, drawer modal captează Tab | **REUȘIT** — Chromium 85c1cb3f |
 | Zone tactile | minimum 44×44 px pentru zoom, X, Detalii, acțiuni principale | CI + captură |
 | Date canonice intacte | PR-ul conține exclusiv `src/`, `scripts/ci/`, `docs/` | **REUȘIT** — PR #22 |
-| Integrare și publicare | SHA exact, protecție main, GitHub Pages SUCCESS, HTTP 200 asset | **În așteptare** — post-merge |
+| Integrare și publicare | SHA exact, protecție main, GitHub Pages SUCCESS, HTTP 200 asset | **REUȘIT** — SHA `ad3ecb54` |
 
 ## Neconformități identificate și tratate
 
@@ -49,5 +49,19 @@ Nu se relaxează niciun test și nu se modifică rezultatele anterioare pentru a
 
 **ADMIS PENTRU INTEGRARE PROTEJATĂ**, condiționat de rerularea obligatorie a CI după actualizarea prezentului registru, verificarea exactă a SHA-ului PR și integrarea numai dacă toate verificările sunt reușite.
 
-**Închiderea definitivă se face numai după confirmarea explicită a GitHub Pages pe commitul integrat**, verificarea HTTP a website-ului și arhivarea branch-ului de audit. Raportul post-merge va documenta separat aceste dovezi, fără a modifica această concluzie pre-merge.
+## Închiderea post-merge și verdictul definitiv
+
+- **PR integrat:** [#22](https://github.com/ovidiudeica/atlas/pull/22) cu `squash` și protecție SHA exact asupra sursei `d5afa7811e0e00dc900548c5944a46c3ec6013c4`.
+- **Commit integrat pe `main`:** `ad3ecb543120ac44e4c9ace7ad7edce54962ed67`. Branch-ul `main` a rămas protejat.
+- **CI post-merge:** [rularea 42311740037](https://github.com/ovidiudeica/atlas/actions/runs/42311740037), `Build and verify website = SUCCESS`, `Deploy GitHub Pages = SUCCESS`, pe SHA-ul integrat.
+- **Website public:** `https://ovidiudeica.github.io/atlas/` — HTML HTTP 200. Bundle JavaScript `assets/index-khcHqypU.js` și foaia CSS `assets/index-Bz1K9Neh.css` au răspuns HTTP 200.
+- **Inspecția artefactelor publice:** prezente textele `Instrumente hartă`, `Niveluri administrative și statistice`, `Geometrii din sursa originală`, marcajul accesibil `detail-info-glyph` în JavaScript/CSS; vechea clasă de acțiuni suprapuse `map-quick-actions` nu mai apare în bundle.
+- **Capturi finale inspectate:** `desktop-initial.png` demonstrează harta fără benzi de butoane secundare, `mobile-360-initial.png` arată toolbarul cu numai trei iconițe, `mobile-360-drawer-open.png` arată accesul la Filtre și Instrumente hartă, `mobile-360-detail-open.png` arată panoul Detalii și exportul GeoJSON/CSV/link, cu iconul de informație corect randat.
+- **Arhivare:** branch-ul de implementare/audit `audit/web-r3-3-final-ux-acceptance` a fost păstrat sub tagul `archive/2026-11-06/web-r3-3-final-ux-acceptance` (SHA sursă original verificat) și eliminat după integrare.
+- **Integritatea datelor:** nu au fost modificate cele 4.283 de înregistrări certificate, geometria detaliată/simplificată, codurile SIRUTA/CUATM, clasificările statistice, proveniența OSMB sau deciziile privind excepțiile.
+
+**Verdict definitiv: WEB-R3.3 ACCEPTAT / ÎNCHIS.** Nu există blocante de interfață identificate de matricea de acceptare. Auditul este unul de funcționalitate, randare și accesibilitate testată, nu o certificare juridică a contururilor ori un audit complet WCAG realizat de un terț.
+
+**Notă de arhivă:** acest commit de închidere modifică numai registrul documentar. Integrarea lui nu schimbă codul certificat de la `ad3ecb54`; propriile controale CI și Pages sunt urmărite separat pe commitul ulterior de documentație.
+
 
