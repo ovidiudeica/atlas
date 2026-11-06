@@ -18,6 +18,7 @@ test('candidate is explicitly blocked and never misrepresented as a release', ()
   assert.equal(validation.originalOSMBArchivesNotInBuilder, true);
   assert.equal(validation.missingApprovedAdministrativeGeometry.length, 11);
   assert.equal(validation.statisticalOnlyWithoutGeometry.length, 18);
+  assert.equal(validation.missingOfficialRegistryAssociation.length, 181);
 });
 
 test('candidate files have correct hashes and byte counts', () => {
@@ -38,6 +39,8 @@ test('all official registries and statistical nomenclatures remain intact', () =
   assert.equal(json('sources/nuts-md-2017.json').units.length, 9);
   assert.equal(manifest.counts.unmatchedRORegistry, 0);
   assert.equal(manifest.counts.unmatchedMDRegistry, 0);
+  assert.equal(manifest.counts.missingRORegistryAssociation, 0);
+  assert.equal(manifest.counts.missingMDRegistryAssociation, 181);
 });
 
 test('administrative levels, counts and geometry subsets match candidate scope', () => {
@@ -104,4 +107,12 @@ test('county SIRUTA codes are true registry codes, not county ordinal codes', ()
   const bucharest = byId.get('osm-r377733');
   assert.equal(bucharest.registry.code, '403');
   assert.equal(bucharest.registry.record.name, 'MUNICIPIUL BUCUREȘTI');
+});
+
+test('Bucharest sectors have authentic SIRUTA 2026 identities', () => {
+  const codes = ['179141','179150','179169','179178','179187','179196'];
+  const rows = entries.filter((e) => e.country === 'RO' && e.adminLevel === 9);
+  assert.equal(rows.length, 6);
+  assert.deepEqual(rows.map((e) => e.registry?.code).sort(), [...codes].sort());
+  assert(rows.every((e) => e.officialName.startsWith('București Sectorul ')));
 });
