@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibre-gl';
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
-import { buildPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
+import { buildPermalink, clearGeometryPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
   type ExportScope } from './data/phase5.mjs';
 import {
   asDisplayFeatures, bboxOfGeometry, codeOf, EMPTY_FEATURES, labelOf, loadCatalog,
@@ -33,7 +33,7 @@ const WORDS = {
     searchResults: 'Search results', searchLimit: 'Showing the first 80 matches. Refine the search for more.',
     sourceSnapshot: 'OSM-Boundaries · 5 October 2026', sourceNote: 'Original-source geometry; documented OSMB exceptions are retained.',
     basemap: 'Basemap', standard: 'Standard', grayscale: 'Grayscale', dark: 'Dark', none: 'None',
-    simplified: 'Simplified geometries', home: 'Reset map extent', zoomIn: 'Zoom in', zoomOut: 'Zoom out',
+    simplified: 'Simplified geometries', home: 'Reset map extent', resetGeometries: 'Reset geometries', zoomIn: 'Zoom in', zoomOut: 'Zoom out',
     official: 'Official name', osmId: 'OSM ID', adminLevel: 'OSM administrative level',
     statisticalRole: 'Statistical codes', parentAdmin: 'Administrative parent', parentTree: 'Tree parent',
     source: 'Source', registry: 'Official registry', origin: 'Country',
@@ -71,7 +71,7 @@ const WORDS = {
     searchResults: 'Rezultatele căutării', searchLimit: 'Sunt afișate primele 80 de rezultate. Rafinează căutarea pentru restul.',
     sourceSnapshot: 'OSM-Boundaries · 5 octombrie 2026', sourceNote: 'Geometrii din sursa originală; excepțiile OSMB documentate sunt păstrate.',
     basemap: 'Hartă de fundal', standard: 'Standard', grayscale: 'Tonuri de gri', dark: 'Întunecată', none: 'Fără fundal',
-    simplified: 'Geometrii simplificate', home: 'Resetează încadrarea hărții', zoomIn: 'Mărește', zoomOut: 'Micșorează',
+    simplified: 'Geometrii simplificate', home: 'Resetează încadrarea hărții', resetGeometries: 'Resetează geometriile', zoomIn: 'Mărește', zoomOut: 'Micșorează',
     official: 'Denumire oficială', osmId: 'ID OSM', adminLevel: 'Nivel administrativ OSM',
     statisticalRole: 'Coduri statistice', parentAdmin: 'Părinte administrativ', parentTree: 'Părinte în arbore',
     source: 'Sursă', registry: 'Registru oficial', origin: 'Țară',
@@ -189,6 +189,7 @@ export default function App() {
   const [shareNotice,setShareNotice] = useState('');
   const [shareFallback,setShareFallback] = useState('');
   const [navBusy,setNavBusy] = useState(false);
+  const navigationEpoch = useRef(0);
 
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
@@ -389,7 +390,26 @@ export default function App() {
     const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
   }),[]);
   const choose = useCallback((id:string)=>{setSelected(id);setDrawer('detail');},[]);
+  // Home restores only the camera. Reset geometries returns to the initial
+  // RO/MD outline preview without changing map language, basemap or simplification.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
+  const resetGeometries=()=>{
+    navigationEpoch.current++; // Cancel stale asynchronous camera movements.
+    setNavBusy(false);
+    setVisible([...DEFAULT_VISIBLE]);
+    setSelected(null);
+    setExpanded([]);
+    setSearch('');
+    setDrawer(null);
+    setExportOpen(false);
+    setExportScope('visible');
+    setExportProgress('');
+    setShareNotice('');
+    setShareFallback('');
+    setGeomError(false);
+    window.history.replaceState(window.history.state,'',clearGeometryPermalink(window.location.href));
+    reset();
+  };
   async function fitVisible(){
     const groups=new Map<string,string[]>();
     for(const id of visible){
@@ -397,6 +417,7 @@ export default function App() {
       const list=groups.get(node.geometryShard)||[];list.push(id);groups.set(node.geometryShard,list);
     }
     if(!groups.size || !mapRef.current)return;
+    const request=++navigationEpoch.current;
     setNavBusy(true);setGeomError(false);
     try{
       let left=Infinity,bottom=Infinity,right=-Infinity,top=-Infinity;
@@ -409,11 +430,12 @@ export default function App() {
           left=Math.min(left,w);bottom=Math.min(bottom,s);right=Math.max(right,e);top=Math.max(top,n);
         }
       }
+      if(request!==navigationEpoch.current)return;
       if(Number.isFinite(left))mapRef.current?.fitBounds([[left,bottom],[right,top]],{
         padding:window.innerWidth<700?38:85,duration:650,maxZoom:11
       });
-    }catch{setGeomError(true);}
-    finally{setNavBusy(false);}
+    }catch{if(request===navigationEpoch.current)setGeomError(true);}
+    finally{if(request===navigationEpoch.current)setNavBusy(false);}
   }
   function downloadText(content:string,filename:string,mime:string){
     const blob=new Blob([content],{type:mime});
@@ -455,12 +477,15 @@ export default function App() {
   async function locate(id:string){
     const node=nodes.get(id);
     if(!node||!mapRef.current)return;
+    const request=++navigationEpoch.current;
+    setNavBusy(false);
     try{
       const features=await loadGeometryShard(node.geometryShard,mode);
+      if(request!==navigationEpoch.current)return;
       const feature=features.get(id);
       if(!feature)throw Error('Missing Atlas geometry for '+id);
       mapRef.current.fitBounds(bboxOfGeometry(feature.geometry),{padding:window.innerWidth<700?36:85,duration:650,maxZoom:10});
-    }catch{setGeomError(true);}
+    }catch{if(request===navigationEpoch.current)setGeomError(true);}
   }
   function chooseSearch(id:string){
     choose(id);setSearch('');
@@ -633,6 +658,8 @@ export default function App() {
             {navBusy?t.navigationLoading:t.fitVisible}</button>
           <button type="button" disabled={!currentNode} onClick={()=>currentNode&&void locate(currentNode.id)}>
             {t.fitSelected}</button>
+          <button type="button" className="reset-geometries" onClick={resetGeometries}
+            aria-label={t.resetGeometries} title={t.resetGeometries}>↺ {t.resetGeometries}</button>
           <button type="button" aria-expanded={exportOpen} aria-controls="phase5-export-panel"
             onClick={()=>{setExportOpen(old=>!old);setExportProgress('');}}>
             {t.exportAction}</button>
