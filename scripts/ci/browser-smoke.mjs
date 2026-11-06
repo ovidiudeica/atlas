@@ -231,6 +231,7 @@ async function desktop(cdp){
   await p.snap('desktop-reset-geometries.png');
 
   await p.call('Page.reload',{ignoreCache:true});
+  await p.wait("!!document.querySelector('.module-rail button:first-child')",'module rail after page reload');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4.283')",'catalog after geometry-reset reload');
   await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'persisted reset roots after reload');
