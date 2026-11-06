@@ -1,6 +1,6 @@
 # Phase 3 — Six repeated CUATM references: per-relation geometric diagnosis
 
-**Status:** Read-only source assessment; no geometry, canonical identity, or production website was modified.  
+**Status (2026-11-06):** The six repeated-reference groups are accepted as **preserved original OSMB source representations** for the cartographic candidate v3; no legal equivalence or new independent CUATM identity is certified. The four separate-component groups retain legally unverified source claims, as recorded in the per-ID decisions. No geometry or canonical identity was silently changed, and Phase 4 must not present these as adjudicated legal multipart units.  
 **Dataset:** `OSMB-Moldova-2026-10-05.geojson.gz` (SHA-256 `d29b600daa2857bacf8ec7d13369db8fc95353e89f62fe1c762dbc692c216dad`).  
 **CUATM baseline:** 2025 registry snapshot as staged in `data/candidates/phase3/sources/cuatm-2025.json.gz`.
 
