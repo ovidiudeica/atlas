@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildOsmLevelIndex, availableOsmLevels, matchingOsmLevelIds, updateOsmLevelVisibility }
+import { buildOsmLevelIndex, availableOsmLevels, matchingOsmLevelIds, updateOsmLevelVisibility,
+  availableStatisticalLevels, matchingStatisticalLevelIds, statisticalLevelKey }
   from '../src/data/osmLevelFilter.mjs';
 
 function node(id,country,level,parent=null,setRoot=null,role=['administrative']){
@@ -57,4 +58,57 @@ test('selection is additive, scoped, idempotent, and does not assume an OSM leve
   assert.deepEqual(matchingOsmLevelIds(index,['zakarpattia'],[8]),[]);
   assert.deepEqual(updateOsmLevelVisibility(['ro','ro-8'],['ro-8'],true),['ro','ro-8']);
   assert.deepEqual(updateOsmLevelVisibility(['ro','ro-8'],[],false),['ro','ro-8']);
+});
+
+const roles=(classification,level,code)=>[{classification,level,code,version:'2026',parentCode:null}];
+const sample=[
+  {...node('ro','RO',2),statisticalRoles:[]},
+  {...node('md','MD',2),statisticalRoles:roles('NUTS_MOLDOVA',1,'MD1')},
+  {...node('ro-nuts1','RO',null,'ro',null,['statistical']),statisticalRoles:roles('NUTS',1,'RO1')},
+  {...node('ro-nuts2','RO',null,'ro',null,['statistical']),statisticalRoles:roles('NUTS',2,'RO11')},
+  {...node('ro-county','RO',4,'ro'),statisticalRoles:roles('NUTS',3,'RO111')},
+  {...node('md-region','MD',null,'md',null,['statistical']),statisticalRoles:roles('NUTS_MOLDOVA',2,'MD11')},
+  {...node('md-shared','MD',4,'md'),statisticalRoles:roles('NUTS_MOLDOVA',3,'MD111')},
+  {...node('ua','UA',2),statisticalRoles:[]},
+  {...node('chernivtsi','UA',4,'ua','chernivtsi'),statisticalRoles:[]},
+  {...node('chernivtsi-nuts','UA',null,'chernivtsi',null,['statistical']),statisticalRoles:roles('NUTS_UA',2,'UA01')},
+  {...node('odesa','UA',4,'ua','odesa'),statisticalRoles:[]},
+  {...node('odesa-nuts','UA',null,'odesa',null,['statistical']),statisticalRoles:roles('NUTS_UA',2,'UA02')}
+];
+
+test('statistical region levels are discovered from statisticalRoles, including shared admin geometry',()=>{
+  const idx=buildOsmLevelIndex(sample);
+  const all=availableStatisticalLevels(idx,['ro','md']);
+  assert.deepEqual(all.map(({classification,level,count})=>[classification,level,count]),[
+    ['NUTS',1,1],['NUTS',2,1],['NUTS',3,1],
+    ['NUTS_MOLDOVA',1,1],['NUTS_MOLDOVA',2,1],['NUTS_MOLDOVA',3,1]
+  ]);
+  assert.deepEqual(matchingStatisticalLevelIds(idx,['ro'],[statisticalLevelKey('NUTS',3)]),['ro-county']);
+  assert.deepEqual(matchingStatisticalLevelIds(idx,['md'],[statisticalLevelKey('NUTS_MOLDOVA',1)]),['md']);
+  assert(!matchingStatisticalLevelIds(idx,['ro'],[statisticalLevelKey('NUTS',2)]).includes('ro-county'));
+});
+
+test('show/hide statistical regions does not execute the default administrative level 8 selection',()=>{
+  const idx=buildOsmLevelIndex(sample);
+  const selected=[statisticalLevelKey('NUTS',1),statisticalLevelKey('NUTS_MOLDOVA',2)];
+  const targets=matchingStatisticalLevelIds(idx,['ro','md'],selected);
+  assert.deepEqual(targets,['ro-nuts1','md-region']);
+  const initial=['ro','md','ro-county','md-shared','chernivtsi-nuts'];
+  const shown=updateOsmLevelVisibility(initial,targets,true);
+  assert.deepEqual(shown,['ro','md','ro-county','md-shared','chernivtsi-nuts','ro-nuts1','md-region']);
+  assert.deepEqual(updateOsmLevelVisibility(shown,targets,false),initial);
+  assert.deepEqual(matchingStatisticalLevelIds(idx,['chernivtsi'],selected),[]);
+  assert.deepEqual(matchingStatisticalLevelIds(idx,['odesa'],[statisticalLevelKey('NUTS_UA',2)]),['odesa-nuts']);
+});
+
+test('statistical-only future geography remains available even if it has no admin level entries',()=>{
+  const cases=[
+    {...node('root','UA',null),roles:['statistical'],statisticalRoles:roles('STAT_REGIONS',1,'X')},
+    {...node('child','UA',null,'root',null,['statistical']),statisticalRoles:roles('STAT_REGIONS',2,'XX')}
+  ];
+  const idx=buildOsmLevelIndex(cases);
+  assert.deepEqual(idx.scopes.map(x=>x.id),['root']);
+  assert.deepEqual(availableOsmLevels(idx,['root']),[]);
+  assert.deepEqual(availableStatisticalLevels(idx,['root']).map(x=>x.level),[1,2]);
+  assert.deepEqual(matchingStatisticalLevelIds(idx,['root'],[statisticalLevelKey('STAT_REGIONS',2)]),['child']);
 });
