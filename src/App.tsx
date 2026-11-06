@@ -928,7 +928,7 @@ export default function App() {
           setDetailPanelOpen(true);
           if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
           else if(window.innerWidth<1100)setModulePanelOpen(false);
-        }}>ⓘ</button>}
+        }}><span className="detail-info-glyph" aria-hidden="true">i</span></button>}
       <div className="language" aria-label="Language">
         <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
         <button className={lang==='ro'?'active':''} aria-pressed={lang==='ro'} onClick={()=>setLang('ro')}>RO</button>
