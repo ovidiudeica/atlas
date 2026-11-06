@@ -94,6 +94,7 @@ async function downloaded(ext){
 }
 async function desktop(cdp){
   const p=await cdp.page(1440,900,false);
+  await p.wait("!!document.querySelector('.map-area .zoom-controls')",'desktop app mounted');
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Initial module panel absent');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Initial detail panel absent');
   await p.wait("!document.querySelector('.map-boot-status')",'certified national contours');
@@ -263,6 +264,7 @@ async function tablet(cdp){
 }
 async function mobile(cdp){
   const p=await cdp.page(390,844,true);
+  await p.wait("!!document.querySelector('.map-area .zoom-controls')",'mobile app mounted');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Mobile starts without empty detail panel');
   await p.wait("!document.querySelector('.map-boot-status')",'mobile national contours');
   const geometry=await p.eval("({width:innerWidth,scroll:document.documentElement.scrollWidth,height:document.querySelector('.map-area').getBoundingClientRect().height,buttons:getComputedStyle(document.querySelector('.mobile-controls')).display})");
