@@ -146,3 +146,8 @@
  .module-rail button{width:auto;max-width:70px;min-height:52px}
  .tree-sidebar,.detail-sidebar{display:none}
 }
+
+/* Mobile module buttons stay tappable while their drawer is open. */
+@media(max-width:700px){
+  .drawer-screen{bottom:64px}
+}
