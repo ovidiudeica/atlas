@@ -1,54 +1,75 @@
 # Phase 3 — Administrative and Statistical Data Integration
 
-**Status: CANDIDATE / BLOCKED — NOT AUTHORIZED FOR PRODUCTION.**
+**Current status: GEOMETRY_COMPLETE_NOT_PROMOTABLE (candidate v2).**  
+**Repository:** `ovidiudeica/atlas` • **PR:** #7 (Draft, not integrated)  
+**Reference snapshot:** OSM-Boundaries, **2026-10-05**
 
-This branch stores a tangible candidate with preserved source attributes and provenance, plus explicit blockers. It is deliberately not merged into `main` and must not replace the website's functioning Phase 2 national-boundary layers before the full data gate succeeds.
+Phase 3 now contains a **complete selected administrative and statistical geometry inventory** for Romania and Moldova, reconciled source metadata, and individually registered source topology/identity exceptions. It must not replace the public Phase 2 website or claim that all geometry is legally certified.
 
-## Input and output design
+## Coverage
 
-- Initial OSMB scope: snapshot **2026-10-05** (Romania and Republic of Moldova), retaining source relation IDs and raw OSM tag dictionaries. The exact user-supplied OSMB archives are the canonical baseline for reconciliation; the legacy `reforma-teritoriala` repository is **not** an independent substitute for that archive.
-- Reviewed administrative shapes currently staged from the legacy ACTUAL release: 3,229 RO units (including Brețcu) and 1,025 MD units.
-- SIRUTA 2026 snapshot: **16,978** official records, retained without discarding nonselected registry rows.
-- CUATM 2025 snapshot: **1,721** official records, retained without discarding nonselected registry rows.
-- Statistical roles: **54** RO NUTS 2024 (4 level 1, 8 level 2, and 42 shared county/Bucharest level 3), **9** MD NUTS-style 2017 (2 level 2, 6 level 3 and the shared state-level role).
-- All original OSM relation IDs remain authentic; Brețcu's `osmRelationId` is `null` and its public "OSM ID" card row must remain blank. Ojdula remains `14735731`; the reviewed Brețcu–Ojdula hybrid geometry and evidence lineage are preserved in the working reviewed set without a public correction badge.
+| Dataset | Phase 3 v2 | Description |
+| --- | ---: | --- |
+| Romania administrative entities | **3,229** | 3,228 selected original OSMB shapes plus Brețcu's separately reviewed polygon; Ojdula uses approved reviewed geometry |
+| Moldova administrative entities | **1,036** | All OSMB levels 2, 3, 4, 5, 7 and 8, including all eleven formerly missing level3/5 entities |
+| Romanian statistical roles | **54** | NUTS 2024: 4 NUTS1, 8 NUTS2, and 42 shared county/Bucharest NUTS3 roles |
+| Moldovan statistical roles | **9** | 2017 nomenclature: MD1, MD11/12, MD111–115, MD120 |
+| Standalone statistical geometries | **18** | RO 12 NUTS1/2 + MD 6 statistical-only geometries |
+| Full SIRUTA 2026 registry | **16,978** records | Preserved unchanged in source snapshot |
+| Full CUATM 2025 registry | **1,721** records | Preserved unchanged in source snapshot |
 
-## Candidate files
+The source polygons and original OSMB tags for 11 missing Moldovan administrative relations, 12 RO standalone statistical relations, six MD standalone statistical relations and two Moldovan shared administrative/statistical relations were reconstructed and compared with the actual supplied archives. **All 31 exact edge fingerprints and all 31 original source tag fingerprints match.** The raw compressed archive SHA-256 values, coordinate comparison evidence and hash checks are tracked separately.
 
-Files are stored under `data/candidates/phase3/` rather than `public/` so a Draft pull request cannot accidentally publish incomplete map layers:
+## Candidate artefacts and generator
 
-| File | Purpose |
-| --- | --- |
-| `actual/catalog-v1.json` | Stable entity IDs, separate administrative and tree parents, short/official names, all preserved source OSM tags, registry record when matched, administrative/statistical roles, geometry reference |
-| `actual/ro-administrative-v1.geojson.gz` | Selected reviewed RO geometry, including separately identified Brețcu and Ojdula |
-| `actual/md-administrative-v1.geojson.gz` | Selected reviewed MD geometry, **excluding** not-yet-integrated level 3/5 units |
-| `sources/siruta-2026.json.gz` | Complete official source register snapshot |
-| `sources/cuatm-2025.json.gz` | Complete official source register snapshot |
-| `sources/nuts-ro-2024.json` | RO NUTS source classification |
-| `sources/nuts-md-2017.json` | MD statistical nomenclature |
-| `actual/validation-v1.json` | Explicit incomplete elements and hierarchy checks |
-| `actual/manifest-v1.json` | Input/output SHA-256 hashes, counts, classification versions and release status |
+The original incomplete `v1` candidate is **retained for traceability only**. The current data is `v2`, under `data/candidates/phase3/`:
 
-The code used to generate this candidate is `scripts/data/build-phase3-candidate.mjs`. It expects the documented source paths in an external source directory and outputs to an external target directory; never implicitly downloads or modifies private source data.
+- `actual/catalog-v2.json` — stable identity, independent legal and navigational parent fields, official registry records, locale-friendly names, complete raw OSM tags and statistical roles.
+- `actual/ro-administrative-v2.geojson.gz` — 3,229 polygons including reviewed Brețcu/Ojdula.
+- `actual/md-administrative-v2.geojson.gz` — all 1,036 approved MD polygons.
+- `actual/ro-statistical-v2.geojson.gz` — 12 distinct RO statistical regions.
+- `actual/md-statistical-v2.geojson.gz` — six distinct MD statistical regions.
+- `actual/md-cuatm-180-reconciliation.json` — decision per-ID for the 180 formerly unmatched references.
+- `actual/md-cuatm-source-collisions.json` — six independent original-source ambiguity groups.
+- `actual/validation-v2.json` and `actual/manifest-v2.json` — release state, exact counts, SHA-256 output bytes and blockers.
+- `sources/md-admin-additional.geojson.gz`, `rostat-additional.geojson.gz`, `mdstat-additional.geojson.gz` — exact geometric source extracts, preserving original OSMB tags.
+- `sources/edge-match-evidence.json`, `tag-match-evidence.json` — independent per-relation evidence (31 each).
 
-## Exact blockers
+**Rebuild from the repository:** Run `scripts/data/build-phase3-v2.mjs` with the following environment variables:
 
-1. **11 missing Moldovan administrative outlines** in the reviewed legacy administrative export: one level 3 (Nistrenia, relation `65335`) and ten level 5, including subdivisions of Nistrenia and Găgăuzia. These are present in the supplied October 5 OSMB Moldova archive and must be carried across with their original OSMB source tags, not invented.
-2. **18 statistical-only regional outline geometries not yet staged:** 12 RO NUTS1/2 and 6 MD level2/3. Reuse existing polygons for RO NUTS3 and MD1/MD114/MD115, without geometry duplication.
-3. **Exact archive cross-check:** compare the reviewed legacy geometry representation and original OSMB snapshot before release, and document source geometry transformations explicitly.
-4. **Full geometry and topological QA:** verify polygon validity, shared boundaries, parent linkage, overlaps and coverage; generate an acceptable simplified display representation preserving common edges.
+```bash
+PHASE3_BASE_DIR=data/candidates/phase3 \
+PHASE3_EXTRACTS_DIR=data/candidates/phase3/sources \
+PHASE3_OUTPUT_V2=/tmp/atlas-phase3-v2 \
+node scripts/data/build-phase3-v2.mjs
+```
 
-The current manifest must remain `BLOCKED_INCOMPLETE` until the above checks pass. **Qualified coverage:** All attached registry codes resolve to an official record, but 180 MD subnational entities have no attached CUATM ID in this candidate. All selected RO subnational entities have matched SIRUTA codes, including the six Bucharest sectors. Never conflate county ordinal codes with SIRUTA IDs, and never infer missing CUATM codes from names alone.
+The generator does not fetch network resources or rewrite raw sources. It reads staged v1 data and exactly verified source extracts, then writes deterministic v2 output. Compare the regenerated bytes with `actual/manifest-v2.json`.
 
-## Identity/semantics safeguards
+## Official identity policy
 
-- Country roots RO `90689` and MD `58974` retain OSM boundary role and MD1's shared statistical role.
-- The administrative parent is never inferred from statistical membership. The UI tree may group by statistical roles without changing statutory relationships.
-- Găgăuzia (`MD114`) and Chișinău (`MD115`) are *one* administrative entity each with statistical role; `MD120` does not replace or imply equivalence with Nistrenia.
-- Official MD statistical code `MD120` wins over an inconsistent OSM tag `MD121` for identity; both source codes are retained with provenance.
-- Short names are display only; original names and original source tags remain untouched.
-- Public data reuse must include OSM/OSMB and SIRUTA/ANCPI source licenses and attribution.
+- For Romania, SIRUTA codes for counties are the **actual SIRUTA unit record IDs**, not the old ordinal county numbers. All six Bucharest sectors are matched to their true SIRUTA entries.
+- **Brețcu** (SIRUTA `64096`) has authentic approved geometry and `osmRelationId: null`. The public OSM ID field remains present **but blank**, never zero or manufactured. **Ojdula** keeps SIRUTA `64602`, OSM `14735731`. No correction badge appears in the ordinary public card.
+- MD114 (Găgăuzia) and MD115 (Chișinău) reuse one administrative entity and geometry each; MD1 reuses the Moldovan state. Distinct Nistrenia and statistical MD120 semantics remain intact despite overlap or coincident source representations. MD120 is official even though the original OSM reference can contain `MD121`.
+- All original OSMB tags, official legal names, and full registry source records are retained. Display capitalization and short tree labels are derived values, never overwrites.
+- For 180 previously unresolved MD references: **178** were matched by name, official parent chain and status; **two** do not have separately demonstrated CUATM identities: `osm-r58512` (sector Centru) and `osm-r12207955` (Bălți component). Both are left with no code, explicitly flagged as not applicable in the current CUATM source. No code was fabricated.
+- The source also has **six groups of duplicated CUATM references** (codes `0500`, `1050`, `0100`, `7160`, `3417`, `8034`). All relation IDs, polygons and source tags remain available and are flagged for individual semantic resolution. These are not grounds to delete source geometries automatically.
 
-## Acceptance gate
+## Full-snapshot topology audit
 
-Release is permitted **only** when `manifest.status === "ready_for_release"`, every selected administrative/statistical geometry is present and verified, registry references remain valid, and UI regression tests and GitHub Pages CI succeed on the candidate's exact SHA. No merge of this Draft PR is authorized while the status is blocked.
+See [PHASE-3-TOPOLOGY.md](../data/PHASE-3-TOPOLOGY.md).
+
+- All selected original OSMB administrative source polygons were individually valid: **3,228 RO and 1,036 MD**.
+- **Two** RO level-8 overlapping pairs: **1.057760 km²** total.
+- **One** MD level-8 overlapping pair: **0.239120 km²**.
+- **Two** MD child polygons extend outside selected parent polygons: **0.804337 km²** total.
+- RO level4/9 and MD level3/4/5/7 have no same-level positive-area overlap above 1 m² under the tested grouping.
+- The reviewed RO Brețcu/Ojdula partition retains its previously approved provenance. Its hybrid geometry must not be replaced silently by raw OSMB Ojdula.
+
+Same-level overlap, outside-parent differences, gaps, statutory hierarchy and statistical identity are reported as distinct types of evidence; they are not silently "fixed" by snapping or reclassifying entities.
+
+## Release gate
+
+**No integration of this PR until source-scoped decisions resolve or formally accept the recorded topology and CUATM collision exceptions, followed by topology-safe creation and QA of the simplified display layers.** Individual polygons being valid and reconstruction being exact does **not** certify that all higher-level boundaries and administrative relationships are correct.
+
+Maintain the current published Phase 2 website and leave PR #7 **Draft** while candidate v2 is `GEOMETRY_COMPLETE_NOT_PROMOTABLE`. Re-run all CI and production map regression checks on an approved exact commit before any merge.
