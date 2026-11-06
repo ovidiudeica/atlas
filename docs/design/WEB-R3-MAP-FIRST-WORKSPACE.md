@@ -1,6 +1,6 @@
 # WEB-R3.0 — Spațiul hărții și panouri retractabile
 
-**Stadiu:** specificație UX propusă, numai pentru revizuire — **nu este implementată**  
+**Stadiu:** arhitectură acceptată; implementare etapizată WEB-R3.1–WEB-R3.3  
 **Data:** 2026-11-06  
 **Bază verificată:** `main` la `b26356a11342e50a3926683ef4515bb07da0c29e`  
 **Sursă de audit:** codul `src/App.tsx`, `src/styles.css` și capturile desktop/mobil generate de GitHub Actions, rularea [42296564871](https://github.com/ovidiudeica/atlas/actions/runs/42296564871).
@@ -128,3 +128,7 @@ Această schemă reprezintă intenția de interacțiune, **nu o captură a unei 
 ## Limită de autorizare
 
 Aceasta este o **specificație UX pentru discuție și acceptare**, nu o modificare a site-ului publicat. Implementarea se face în PR-uri separate, fără intervenții asupra `data/`, `public/data/`, snapshotului OSMB 2026-10-05, celor 4.283 entități, codurilor SIRUTA/CUATM sau ADR-0002 privind excepțiile cartografice.
+
+## Jurnal implementare
+
+- **WEB-R3.1**: panouri retractabile și spațiu maxim de hartă; comenzile care suprapun harta vor fi relocate separat în WEB-R3.2.

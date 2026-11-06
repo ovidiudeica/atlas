@@ -126,3 +126,23 @@
    All visible levels share one action pair while IDs are deduplicated. */
 .osm-level-choices label[data-level-kind="statistical"] span{color:#615ba5}
 .osm-stat-hint{font-size:10px;line-height:1.5;color:#688271;margin:9px 2px 0}
+
+/* WEB-R3.1 map-first retractable workspace; secondary controls move in R3.2 */
+.workspace{position:relative}
+.module-rail{width:56px;flex:0 0 56px;padding:12px 4px;gap:5px}
+.module-rail button{width:47px;min-height:47px;gap:0}
+.module-rail .module-short{display:none}
+.module-rail button:hover,.module-rail button:focus-visible{background:#e5f1e8;color:#144932}
+.tree-sidebar,.detail-sidebar{position:absolute;top:0;bottom:0;z-index:8;min-height:0;box-shadow:0 8px 24px #123c312b}
+.tree-sidebar{left:56px;width:320px;flex:none;border-right:1px solid #d9e6dc}
+.detail-sidebar{right:0;width:340px;flex:none;border-left:1px solid #d9e6dc}
+.pane-close{position:sticky;float:right;top:12px;margin:12px 12px 0 0;z-index:10;
+ height:36px;width:36px;border-radius:8px;border:1px solid #cddfd2;background:white;color:#1c503a;font-size:23px;line-height:1}
+.pane-close:hover{background:#ecf5ef}
+.planned-module-description{padding:10px 20px;color:#567663;font-size:13px;line-height:1.6}
+@media(max-width:1100px){.tree-sidebar{width:300px;flex:none}.detail-sidebar{display:block;width:min(340px,calc(100% - 56px))}}
+@media(max-width:700px){
+ .module-rail{width:100%;height:64px;flex:0 0 64px;gap:0;padding:5px 2px}
+ .module-rail button{width:auto;max-width:70px;min-height:52px}
+ .tree-sidebar,.detail-sidebar{display:none}
+}
