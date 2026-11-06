@@ -104,6 +104,29 @@ test('all 31 reconstructed source outlines match the exact audited edge hashes',
   assert.equal(seen, 31);
 });
 
+test('all 31 reconstructed source tag dictionaries match original OSMB tag fingerprints', () => {
+  const proof = json('sources/tag-match-evidence.json');
+  assert.equal(proof.length, 31);
+  const fingerprints = new Map(proof.map(x => [x.key, x]));
+  let total = 0;
+  for (const [kind, features] of extraSources) {
+    for (const f of features) {
+      const key = kind + ':' + f.properties.source_relation_id;
+      const item = fingerprints.get(key);
+      assert(item?.matched, key);
+      const tags = f.properties.tags ?? {};
+      const sorted = Object.fromEntries(
+        Object.keys(tags).filter(k => k !== 'type').sort().map(k => [k, tags[k]])
+      );
+      const actual = createHash('sha256').update(JSON.stringify(sorted)).digest('hex').slice(0, 16);
+      assert.equal(item.expected, actual, key + ' tag fingerprint');
+      assert.equal(item.tagCount, Object.keys(sorted).length, key + ' tag count');
+      total++;
+    }
+  }
+  assert.equal(total, 31);
+});
+
 test('every newly selected administrative and statistical source is in the candidate', () => {
   for (const [kind, sourceFeatures] of extraSources) {
     for (const feature of sourceFeatures) {
