@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 
 const read = (name) => readFileSync(new URL('../' + name, import.meta.url), 'utf8');
 const app = read('src/App.tsx');
+const territory = read('src/data/territories.ts');
 const borders = read('src/data/borders.ts');
 
 function decode(encoded) {
@@ -28,46 +29,46 @@ function decode(encoded) {
   return points;
 }
 
-test('Phase 2 source exposes two national polygons in two render resolutions', () => {
+test('Phase 2 root previews remain valid as interim outlines before Phase 3 polygons load', () => {
   const matches = [...borders.matchAll(/(?:detailed|simplified):\s*\[("(?:\\.|[^"\\])*")\]/g)];
-  assert.equal(matches.length, 4, 'two borders × two modes');
+  assert.equal(matches.length, 4);
   for (const [, raw] of matches) {
     const points = decode(JSON.parse(raw));
-    assert.ok(points.length >= 12, 'outline has sufficient vertices');
-    assert.ok(points.every(([lon, lat]) => lon >= 19 && lon <= 32 && lat >= 42 && lat <= 49), 'points stay within known geographic region');
-    const [start, finish] = [points[0], points.at(-1)];
-    assert.ok(Math.abs(start[0] - finish[0]) < 0.00002 && Math.abs(start[1] - finish[1]) < 0.00002, 'polygon ring is closed');
+    assert(points.length >= 12);
+    assert(points.every(([lon,lat])=>lon>=19&&lon<=32&&lat>=42&&lat<=49));
+    const [a,b]=[points[0],points.at(-1)];
+    assert(Math.abs(a[0]-b[0])<.00002 && Math.abs(a[1]-b[1])<.00002);
   }
 });
 
-test('The two root OSM identifiers and intentional source resolution limits are documented', () => {
-  assert.match(borders, /90689/);
-  assert.match(borders, /58974/);
-  assert.match(borders, /NOT the complete original polygons/);
+test('Two verified root OSM identities are preserved and replaced with certified polygons', () => {
+  assert.match(borders,/90689/);
+  assert.match(borders,/58974/);
+  assert.match(territory,/osm-r90689/);
+  assert.match(territory,/osm-r58974/);
+  assert.match(app,/loadGeometryShard\('roots',mode\)/);
+  assert.match(app,/source\?\.setData\(mapCountryFeatures\(shapes\)\)/);
 });
 
-test('The six agreed modules, languages, global controls and map tools exist', () => {
-  for (const label of ['administrative','historical','communities','regions','ethnographic','reform']) {
-    assert.ok(app.includes("id: '" + label + "'"), label);
-  }
-  for (const key of ["Simplified geometries", "Geometrii simplificate", "Reset map extent", "Resetează încadrarea hărții", "const INITIAL_VISIBLE: CountryId[] = ['ro','md']", 'setFilter', 'setData']) {
-    assert.ok(app.includes(key), key);
-  }
-  assert.match(read('vite.config.ts'), /base: '\/atlas\/'/);
+test('Six modules, EN/RO languages, global controls and zoom tools are available', () => {
+  for(const id of ['administrative','historical','communities','regions','ethnographic','reform'])
+    assert(app.includes("id: '"+id+"'"));
+  for(const label of ['Simplified geometries','Geometrii simplificate','Reset map extent',
+    'Resetează încadrarea hărții','loadCatalog()', 'loadGeometryShard(', 'setFilter', 'setData'])
+    assert(app.includes(label),label);
+  assert.match(read('vite.config.ts'),/base: '\/atlas\/'/);
 });
 
-test('Phase 2 honestly distinguishes functional borders from unimplemented registries and modules', () => {
-  assert.match(app, /statistical geometry are not published yet/);
-  assert.match(app, /Module planned for a later development phase/);
+test('Production UI shows actual administrative/statistical records and distinguishes later modules', () => {
+  assert.match(app,/4,283|catalog\.length/);
+  assert.match(app,/officialName/);
+  assert.match(app,/statisticalRoles/);
+  assert.match(app,/currentNode\.osmRelationId!==null/);
+  assert.match(app,/t\.planned/);
+  assert.match(app,/treeView===/);
+  assert.match(territory,/raw|sourceTags/);
 });
 
-test('MapLibre container has explicit full height',()=>{
+test('Map container retains explicit full height across browsers',()=>{
   assert.match(read('src/styles.css'),/\.map-area > \.map-canvas\{position:absolute;inset:0;width:100%;height:100%\}/);
-});
-
-test('Territory SVG outlines are synchronized with the MapLibre camera',()=>{
-  assert.match(read('src/App.tsx'),/territorySvgPaths/);
-  assert.match(read('src/App.tsx'),/instance.on\('move',syncOutline\)/);
-  assert.match(read('src/App.tsx'),/className="territory-overlay"/);
-  assert.match(read('src/styles.css'),/\.territory-overlay/);
 });

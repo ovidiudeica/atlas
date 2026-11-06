@@ -4,16 +4,21 @@ import { readFileSync } from 'node:fs';
 
 const app = readFileSync(new URL('../src/App.tsx', import.meta.url), 'utf8');
 
-test('SVG overlay coordinates are in the same viewport as MapLibre project()', () => {
-  assert.match(app, /const\s+\[projectionSize,setProjectionSize\]/);
-  assert.match(app, /instance\.getContainer\(\)\.getBoundingClientRect\(\)/);
-  assert.match(app, /setProjectionSize\(\{width:bounds\.width,height:bounds\.height\}\)/);
-  assert.match(app, /viewBox=\{\x60?[^\n]*projectionSize\.width[^\n]*projectionSize\.height/);
-  assert.match(app, /preserveAspectRatio="none"/);
+test('Phase 4 draws certified polygons in MapLibre-native GeoJSON sources, not projected DOM paths', () => {
+  assert.match(app,/instance\.addSource\('borders'/);
+  assert.match(app,/instance\.addSource\('entities'/);
+  assert.match(app,/instance\.addLayer\(\{id:'entity-fill'/);
+  assert.match(app,/instance\.addLayer\(\{id:'entity-outline'/);
+  assert.match(app,/instance\.addLayer\(\{id:'entity-highlight'/);
+  assert.doesNotMatch(app,/territorySvgPaths/);
+  assert.doesNotMatch(app,/syncOutline/);
 });
 
-test('projected territories are synchronized after map movement and resize', () => {
-  assert.match(app, /instance\.on\('move',syncOutline\)/);
-  assert.match(app, /instance\.on\('resize',syncOutline\)/);
-  assert.match(app, /instance\.on\('idle',syncOutline\)/);
+test('MapLibre camera automatically reprojects GeoJSON boundaries when moved/resized', () => {
+  assert.match(app,/mapRef\.current/);
+  assert.match(app,/getSource\('borders'\)/);
+  assert.match(app,/getSource\('entities'\)/);
+  assert.match(app,/source\?\.setData\(asDisplayFeatures/);
+  assert.match(app,/fitBounds/);
+  assert.match(app,/getCanvas\(\)\.style\.cursor/);
 });
