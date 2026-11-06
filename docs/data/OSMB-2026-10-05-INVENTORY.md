@@ -20,13 +20,13 @@ Romania's **Brețcu** adds one separate reviewed entity absent from raw OSMB. To
 
 The two original OSMB archives additionally contain **13 RO** and **8 MD** features tagged as statistical. These are **raw counts**, not the official statistical entity counts: RO has 12 standalone NUTS1/NUTS2 entities and MD has 6 standalone level2/level3 statistical entities. Official identities follow NUTS/MD nomenclature, not an unverified OSM statistical tag. MD114 and MD115 reuse existing administrative entities and geometries; RO NUTS3 reuses the 42 county/Bucharest entities.
 
-## Unintegrated geometry confirmed present in MD source archive
+## Moldova level3/5 geometry: integrated and source-verified in v2
 
-The reviewed legacy MD administrative export does **not** contain OSMB relation IDs:
+The old v1 legacy administrative export did **not** contain the following OSMB relation IDs, now present in the **v2 candidate**:
 `65335` (level 3), and level 5 relations
 `1702216`, `944727`, `1702215`, `1706978`, `1706979`, `7103068`, `1702219`, `1702218`, `1702217`, `1702214`.
 
-These eleven are present in the supplied original Moldova archive, and must be extracted and validated *with original tags* in the next candidate. They are **not** optional exclusions. Some belong to the special Nistrenia tree, others to Găgăuzia; preserve administrative and statistical boundaries as distinct objects.
+These **eleven have been integrated into candidate v2** with original OSMB tags and individually compared geometric edges (11/11 exact), as recorded in `data/candidates/phase3/sources/md-admin-additional.geojson.gz`. Some belong to the special Nistrenia tree, others to Găgăuzia. The candidate also contains all 12 standalone RO and six standalone MD statistical polygons, while preserving statistical vs administrative semantics. Source geometries were not invented.
 
 ## Source-only extracted archive
 
@@ -44,4 +44,4 @@ Its products have these compressed SHA-256 digests:
 | RO raw statistical | `46c0924847b97014a2f5951e1b4986c26d65e72e92e75452fedc074c457484e2` |
 | MD raw statistical | `c3683ef2443db598acd9f7fd22d4b81bed5608ad1f06f3ff0425680799e1399c` |
 
-These files are **source evidence only**, not imported to the branch's production data catalogue and not authorized as a map release. Exact source-to-geometry reconciliation and topology certification remain mandatory.
+The complete extracted source products are **provenance evidence**. Their approved subsets are now staged separately in the v2 candidate (not the public website) and have exact source edge/tag evidence for all 31 cross-checked relations. The unresolved topology and CUATM collision cases still prevent merge and public release; see `docs/data/PHASE-3-TOPOLOGY.md`.
