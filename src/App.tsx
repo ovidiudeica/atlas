@@ -232,6 +232,18 @@ export default function App() {
   },[]);
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
   useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
+  useEffect(()=>{
+    const onShortcut=(event:KeyboardEvent)=>{
+      const target=event.target;
+      if(event.key!=='/' || event.ctrlKey || event.metaKey || event.altKey || event.defaultPrevented ||
+        (target instanceof HTMLElement && (target.isContentEditable || ['INPUT','TEXTAREA','SELECT'].includes(target.tagName))))return;
+      event.preventDefault();
+      if(window.matchMedia('(max-width:700px)').matches)setDrawer('tree');
+      window.setTimeout(()=>searchRef.current?.focus(),0);
+    };
+    window.addEventListener('keydown',onShortcut);
+    return ()=>window.removeEventListener('keydown',onShortcut);
+  },[]);
   useEffect(()=>{localStorage.setItem('atlas-visible-phase4',JSON.stringify(visible));},[visible]);
   useEffect(()=>{
     if(catalog.length && selected && !nodes.has(selected))setSelected(null);
@@ -500,8 +512,14 @@ export default function App() {
   const treePanel=<section className="tree-content">
     <div className="panel-heading"><span className="eyebrow">{t.sourceSnapshot}</span><h2>{t.tree}</h2></div>
     <label className="search"><span aria-hidden="true">⌕</span>
-      <input type="search" placeholder={t.search} aria-label={t.search} value={search} onChange={e=>setSearch(e.target.value)} />
+      <input ref={searchRef} type="search" placeholder={t.search} aria-label={t.search} value={search}
+        onChange={e=>setSearch(e.target.value)}
+        onKeyDown={e=>{
+          if(e.key==='Enter' && matches.length){e.preventDefault();chooseSearch(matches[0].id);}
+          if(e.key==='Escape')setSearch('');
+        }} />
     </label>
+    <p className="search-tip">{t.searchShortcut}</p>
     <div className="tree-filters" role="group" aria-label={t.dataRole}>
       {(['all','administrative','statistical'] as TreeView[]).map(key=><button key={key}
         aria-pressed={treeView===key} className={treeView===key?'active':''} onClick={()=>setTreeView(key)}>
