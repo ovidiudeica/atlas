@@ -126,6 +126,24 @@ async function desktop(cdp){
   assert(csv.includes('"Comuna Brețcu","",'),'CSV must preserve blank OSM ID');
   await p.snap('desktop-export-bretcu.png');
 
+  // Administrative OSM-level filter: initially selected level 8 in the two
+  // catalog-derived country scopes must remove Brețcu without altering other
+  // levels, the selected detail card, or the tree.
+  await p.eval("document.querySelector('.detail-sidebar .entity-actions button:first-child').click()");
+  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).includes('siruta-u64096')",'Brețcu visible for level 8 filter');
+  await p.eval("document.querySelector('.tree-sidebar .osm-level-filter>summary').click()");
+  const filterState=await p.eval("({scopes:[...document.querySelectorAll('.tree-sidebar .osm-level-scopes label')].map(x=>({name:x.textContent.trim(),checked:x.querySelector('input').checked})),levels:[...document.querySelectorAll('.tree-sidebar .osm-level-choices label')].map(x=>({name:x.textContent.trim(),checked:x.querySelector('input').checked}))})");
+  assert.equal(filterState.scopes.length,2,'Two current geography sets are derived from the catalog');
+  assert(filterState.scopes.every(x=>x.checked),'Both current geography sets are checked by default');
+  assert(filterState.levels.some(x=>x.name.startsWith('ADM 8')&&x.checked),'Level 8 must be preselected');
+  await p.eval("document.querySelector('.tree-sidebar .osm-level-actions button:last-child').click()");
+  await p.wait("!JSON.parse(localStorage.getItem('atlas-visible-phase4')).includes('siruta-u64096')",'all selected level 8 geometry hidden');
+  assert.equal(await p.eval("document.querySelector('.detail-sidebar .entity-title h3')?.textContent.includes('Brețcu')"),true,
+    'Bulk visibility must not clear the active entity');
+  assert.equal(await p.eval("(()=>{const a=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return a.length===2&&a.includes('osm-r90689')&&a.includes('osm-r58974')})()"),true,
+    'Bulk level 8 hide preserves both country outlines');
+  await p.snap('desktop-level8-hidden.png');
+
   // Reset selected polygons (not merely the camera), with storage, permalink and
   // user-preference persistence. Home must remain a camera-only operation.
   await p.eval("document.querySelector('.detail-sidebar .entity-actions button:first-child').click()");
@@ -177,6 +195,12 @@ async function mobile(cdp){
   await p.wait("!!document.querySelector('.drawer[role=dialog] .tree-content')",'mobile tree drawer');
   assert(await p.eval("document.querySelector('.drawer[role=dialog]')?.getAttribute('aria-modal')==='true'"));
   await p.snap('mobile-tree-drawer.png');
+  await p.eval("document.querySelector('.drawer .osm-level-filter>summary').click()");
+  assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-level-scopes input').length"),2,
+    'Mobile filter must expose catalog-derived scopes');
+  assert.equal(await p.eval("[...document.querySelectorAll('.drawer .osm-level-choices label')].some(x=>x.textContent.includes('ADM 8'))"),true,
+    'Mobile filter must expose level 8');
+  await p.snap('mobile-osm-level-filter.png');
   await p.eval("document.querySelector('.drawer-close').click()");
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
   await p.wait("document.documentElement.lang==='ro'",'Romanian language');
@@ -222,7 +246,7 @@ try{
   await desktop(client);
   await mobile(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
-  console.log('Browser smoke: desktop/mobile, geometry reset and persistence, Brețcu, detailed GeoJSON, CSV and screenshots OK.');
+  console.log('Browser smoke: desktop/mobile, catalog OSM level 8 filter, geometry reset, Brețcu, GeoJSON, CSV and screenshots OK.');
 }catch(err){
   console.error('Browser smoke failure:',err);
   process.exitCode=1;

@@ -34,6 +34,8 @@ export interface Territory {
   sourceTags: Record<string, string>;
   atlasDerivedTags?: Record<string, string>;
   geometryShard: string;
+  /** Optional root entity for an independent geographical dataset (future UA regions). */
+  geometrySetRootId?: string;
   geometrySource?: string;
   officialNameAuthority?: string;
   statisticalSourceTags?: Record<string, string>;

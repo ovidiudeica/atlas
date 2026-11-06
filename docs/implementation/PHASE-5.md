@@ -42,6 +42,16 @@ An explicit, bilingual **Reset geometries / Resetează geometriile** button in t
 - In-flight asynchronous fit/locate actions are guarded, so a delayed response cannot overwrite the reset camera. Previously loaded entity layers are cleared when the visible ID set returns to roots only.
 - The original **Home** button remains camera-only; the new action resets visibility **and** camera. This distinction is validated in desktop/mobile Chromium tests, alongside persistence after refresh.
 
+
+## Phase 5 addendum — catalog-driven administrative OSM level filter (2026-11-06)
+
+A collapsible **Geometrii după nivel OSM / Geometries by OSM level** section appears immediately above the administrative tree. It provides independently selectable **territorial geometry sets** and the administrative OSM levels actually present in the currently selected sets, with source-entity counts and separate **Show / Hide** commands. By default, OSM level 8 is preselected, but no bulk action runs automatically.
+
+- For the current snapshot, the selected sets are Romania and Republic of Moldova; clicking **Hide** for level 8 deselects every currently visible administrative `adminLevel=8` entity from both territories, independently of the selected tree-view filter and without moving the camera or changing entity detail selection. The operation persists through the existing `atlas-visible-phase4` preference. **Show** restores those exact source entity IDs.
+- Both operations are additive/subtractive against the existing visible set: all other levels, statistical-only entities, national roots, current tree expansion and the global geometry-mode preference remain untouched. The overall **Reset geometries** action continues to restore only the two national outlines of the current snapshot.
+- **Future extensibility:** the filter does not hardcode a Romania/Moldova list, Ukraine region names, or OSM admin_level inventory. Sets and counts are derived from the live catalog's administrative ancestry. A future independent set can optionally declare `geometrySetRootId` (pointing to an existing catalog root entity); its descendants are scoped separately from a shared country ancestor. This allows Cernăuți, Odesa and Transcarpatica to be independently selectable, even with the same country code. Future data ingestion must still extend the wider Atlas root/geometry-shard infrastructure separately.
+- The filter is bilingual, accessible through native checkboxes and buttons, and operates inside the existing desktop sidebar or mobile tree drawer. It never downloads or rewrites OSMB geometry, source tags, SIRUTA/CUATM codes or the certified 4,283-entity catalog.
+
 ## Validation and merge gate
 
 1. Run npm test and npm run build on the exact PR SHA, including Phase 3/4 regression tests and new Phase 5 helper tests.
