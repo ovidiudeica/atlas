@@ -1,0 +1,219 @@
+[
+  {
+    "key": "MD:65335",
+    "expected": "2b38061b37fa51a3",
+    "actual": "2b38061b37fa51a3",
+    "matched": true,
+    "tagCount": 113
+  },
+  {
+    "key": "MD:1702216",
+    "expected": "b2ca664af4465570",
+    "actual": "b2ca664af4465570",
+    "matched": true,
+    "tagCount": 11
+  },
+  {
+    "key": "MD:944727",
+    "expected": "10796b2df917947f",
+    "actual": "10796b2df917947f",
+    "matched": true,
+    "tagCount": 23
+  },
+  {
+    "key": "MD:1702215",
+    "expected": "96290c116945eef6",
+    "actual": "96290c116945eef6",
+    "matched": true,
+    "tagCount": 12
+  },
+  {
+    "key": "MD:1706978",
+    "expected": "b8dca8513a0714b7",
+    "actual": "b8dca8513a0714b7",
+    "matched": true,
+    "tagCount": 14
+  },
+  {
+    "key": "MD:1706979",
+    "expected": "96f5d3e83dd07d7c",
+    "actual": "96f5d3e83dd07d7c",
+    "matched": true,
+    "tagCount": 12
+  },
+  {
+    "key": "MD:7103068",
+    "expected": "637722a3cf502d5d",
+    "actual": "637722a3cf502d5d",
+    "matched": true,
+    "tagCount": 12
+  },
+  {
+    "key": "MD:1702219",
+    "expected": "deac742226bcb625",
+    "actual": "deac742226bcb625",
+    "matched": true,
+    "tagCount": 25
+  },
+  {
+    "key": "MD:1702218",
+    "expected": "829388b920d46693",
+    "actual": "829388b920d46693",
+    "matched": true,
+    "tagCount": 13
+  },
+  {
+    "key": "MD:1702217",
+    "expected": "cf9ed7ed4fff4a11",
+    "actual": "cf9ed7ed4fff4a11",
+    "matched": true,
+    "tagCount": 16
+  },
+  {
+    "key": "MD:1702214",
+    "expected": "70123cd0a38de096",
+    "actual": "70123cd0a38de096",
+    "matched": true,
+    "tagCount": 18
+  },
+  {
+    "key": "ROSTAT:7958143",
+    "expected": "1eca2d628db1693c",
+    "actual": "1eca2d628db1693c",
+    "matched": true,
+    "tagCount": 6
+  },
+  {
+    "key": "ROSTAT:7958146",
+    "expected": "9412510c9c167fd0",
+    "actual": "9412510c9c167fd0",
+    "matched": true,
+    "tagCount": 7
+  },
+  {
+    "key": "ROSTAT:1427500",
+    "expected": "2c98e8a4de9f537b",
+    "actual": "2c98e8a4de9f537b",
+    "matched": true,
+    "tagCount": 10
+  },
+  {
+    "key": "ROSTAT:7958144",
+    "expected": "1f7508af953ea2b7",
+    "actual": "1f7508af953ea2b7",
+    "matched": true,
+    "tagCount": 7
+  },
+  {
+    "key": "ROSTAT:1426803",
+    "expected": "60ed4b4347c9e6b4",
+    "actual": "60ed4b4347c9e6b4",
+    "matched": true,
+    "tagCount": 8
+  },
+  {
+    "key": "ROSTAT:7957817",
+    "expected": "b4d20477dda84459",
+    "actual": "b4d20477dda84459",
+    "matched": true,
+    "tagCount": 9
+  },
+  {
+    "key": "ROSTAT:1426985",
+    "expected": "c8660d316297c067",
+    "actual": "c8660d316297c067",
+    "matched": true,
+    "tagCount": 12
+  },
+  {
+    "key": "ROSTAT:7958145",
+    "expected": "8bacd73f99c652c3",
+    "actual": "8bacd73f99c652c3",
+    "matched": true,
+    "tagCount": 9
+  },
+  {
+    "key": "ROSTAT:7957893",
+    "expected": "5f0a72e66e9d611f",
+    "actual": "5f0a72e66e9d611f",
+    "matched": true,
+    "tagCount": 11
+  },
+  {
+    "key": "ROSTAT:1426984",
+    "expected": "6f0c35a924f45fab",
+    "actual": "6f0c35a924f45fab",
+    "matched": true,
+    "tagCount": 11
+  },
+  {
+    "key": "ROSTAT:1427499",
+    "expected": "0a314da08381c541",
+    "actual": "0a314da08381c541",
+    "matched": true,
+    "tagCount": 13
+  },
+  {
+    "key": "ROSTAT:7957892",
+    "expected": "710214b8c9e2770f",
+    "actual": "710214b8c9e2770f",
+    "matched": true,
+    "tagCount": 9
+  },
+  {
+    "key": "MDSTAT:18988801",
+    "expected": "9e6650af2d876b21",
+    "actual": "9e6650af2d876b21",
+    "matched": true,
+    "tagCount": 13
+  },
+  {
+    "key": "MDSTAT:11092080",
+    "expected": "1f64b0ead0060fdf",
+    "actual": "1f64b0ead0060fdf",
+    "matched": true,
+    "tagCount": 20
+  },
+  {
+    "key": "MDSTAT:10052719",
+    "expected": "1d5cbc03577ad9e0",
+    "actual": "1d5cbc03577ad9e0",
+    "matched": true,
+    "tagCount": 19
+  },
+  {
+    "key": "MDSTAT:18994563",
+    "expected": "0f2dcfe824b4c608",
+    "actual": "0f2dcfe824b4c608",
+    "matched": true,
+    "tagCount": 13
+  },
+  {
+    "key": "MDSTAT:18976350",
+    "expected": "f64f8e9f1b17a410",
+    "actual": "f64f8e9f1b17a410",
+    "matched": true,
+    "tagCount": 13
+  },
+  {
+    "key": "MDSTAT:11091865",
+    "expected": "210d6d8ea0972ad5",
+    "actual": "210d6d8ea0972ad5",
+    "matched": true,
+    "tagCount": 19
+  },
+  {
+    "key": "MDSTAT:18972669",
+    "expected": "5be9b7be8756ed20",
+    "actual": "5be9b7be8756ed20",
+    "matched": true,
+    "tagCount": 13
+  },
+  {
+    "key": "MDSTAT:18965597",
+    "expected": "8961b8fe2a23561e",
+    "actual": "8961b8fe2a23561e",
+    "matched": true,
+    "tagCount": 13
+  }
+]
