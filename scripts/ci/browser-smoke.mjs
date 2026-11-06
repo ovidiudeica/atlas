@@ -235,6 +235,32 @@ async function desktop(cdp){
     'Simplification preference survives reset and page reload');
   await p.close();
 }
+async function tablet(cdp){
+  const p=await cdp.page(900,780,false);
+  await p.wait("!!document.querySelector('.zoom-controls')",'tablet map');
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Tablet module starts closed');
+  assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Tablet details start closed');
+  assert((await p.eval("document.querySelector('.map-area').getBoundingClientRect().width"))>820,
+    'Tablet map uses the available width');
+  await p.snap('tablet-initial.png');
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar .tree-line')",'tablet module opened');
+  await p.snap('tablet-module-open.png');
+  await p.eval("document.querySelector('.tree-sidebar .tree-line .tree-label').click()");
+  await p.wait("!!document.querySelector('.detail-sidebar .entity-card')",'tablet entity details opened');
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,
+    'Tablet details replace module panel to keep one overlay');
+  await p.snap('tablet-detail-open.png');
+  await p.eval("document.querySelector('.detail-sidebar .pane-close').click()");
+  assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Tablet detail closed');
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar .tree-line[aria-selected=true]')",
+    'Tablet closing detail must preserve entity selection');
+  await p.eval("document.querySelector('.tree-sidebar .pane-close').click()");
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,
+    'Tablet module close button restores map');
+  await p.close();
+}
 async function mobile(cdp){
   const p=await cdp.page(390,844,true);
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Mobile starts without empty detail panel');
@@ -316,6 +342,7 @@ try{
     behavior:'allow',downloadPath:screenshots,eventsEnabled:true
   });
   await desktop(client);
+  await tablet(client);
   await mobile(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.1 map-first panels, desktop/mobile toggle, details, Filters, reset, geojson, csv OK.');
