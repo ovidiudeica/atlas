@@ -39,5 +39,6 @@ export function makeDetailedCollection(
     legalBoundaryCertification: boolean; count: number; note: string;
   };
 }>;
+export function clearGeometryPermalink(href: string): string;
 export function buildPermalink(href: string, state: ShareState): string;
 export function readPermalink(search: string): LoadedShareState;
