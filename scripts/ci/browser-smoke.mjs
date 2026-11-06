@@ -142,10 +142,10 @@ async function desktop(cdp){
   assert(filterState.levels.every(x=>!x.checked),'Unified filter begins without any prechecked level');
   assert.equal(await p.eval("document.querySelector('.tree-sidebar .osm-level-actions button:first-child').disabled"),true,
     'No level selected disables shared bulk actions');
-  const statisticalChoices=filterState.levels.filter(x=>/^(NUTS|NTS)/.test(x.name));
-  assert.deepEqual(statisticalChoices.map(x=>x.name.split(' ')[0]+' '+x.name.split(' ')[1]),
+  const statisticalChoices=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .osm-level-choices label[data-level-kind=statistical]')).map(x=>({label:x.querySelector('span').textContent.trim(),count:Number(x.querySelector('small').textContent.trim()),checked:x.querySelector('input').checked}))");
+  assert.deepEqual(statisticalChoices.map(x=>x.label),
     ['NUTS 1','NUTS 2','NUTS 3','NTS 1','NTS 2','NTS 3']);
-  assert.deepEqual(statisticalChoices.map(x=>Number(x.name.replace(/[^0-9]+/g,' ').trim().split(' ').at(-1))),[4,8,42,1,2,6],
+  assert.deepEqual(statisticalChoices.map(x=>x.count),[4,8,42,1,2,6],
     'Statistical counts remain the certified catalogue inventory');
 
   // Mixed administrative + statistical selection, in one action.
