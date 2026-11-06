@@ -134,6 +134,8 @@ async function desktop(cdp){
   const filterState=await p.eval("({heading:document.querySelector('.tree-sidebar .osm-level-filter>summary').textContent.trim(),scopes:[...document.querySelectorAll('.tree-sidebar .osm-level-scopes label')].map(x=>({name:x.textContent.trim(),checked:x.querySelector('input').checked})),levels:[...document.querySelectorAll('.tree-sidebar .osm-level-choices label')].map(x=>({name:x.textContent.trim(),checked:x.querySelector('input').checked})),actions:document.querySelectorAll('.tree-sidebar .osm-level-actions button').length})");
   assert.equal(filterState.heading,'Filters','English filter must be titled Filters');
   assert.equal(filterState.scopes.length,2,'Two current geography sets are derived from the catalog');
+  assert.match(filterState.scopes[0].name,/^(Romania|România)$/,'Romania must be first in desktop Filters');
+  assert.match(filterState.scopes[1].name,/Moldova/,'Moldova must follow Romania in desktop Filters');
   assert(filterState.scopes.every(x=>x.checked),'Both current geography sets selected');
   assert.equal(filterState.actions,2,'Exactly one pair of visibility controls');
   assert(filterState.levels.some(x=>x.name.startsWith('ADM 8')),'Administrative level 8 must be available');
@@ -232,8 +234,10 @@ async function mobile(cdp){
   const mobileFilterTitle=await p.eval("({title:document.querySelector('.drawer .osm-level-filter>summary').textContent.trim(),lang:document.documentElement.lang})");
   assert.equal(mobileFilterTitle.title,mobileFilterTitle.lang==='ro'?'Filtre':'Filters',
     'Mobile unified filter title follows saved locale');
-  assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-level-scopes input').length"),2,
-    'Mobile exposes both catalog-derived territorial scopes');
+  const mobileScopes=await p.eval("Array.from(document.querySelectorAll('.drawer .osm-level-scopes label')).map(x=>x.textContent.trim())");
+  assert.equal(mobileScopes.length,2,'Mobile exposes both catalog-derived territorial scopes');
+  assert.match(mobileScopes[0],/^(Romania|România)$/,'Romania must be first in mobile Filters');
+  assert.match(mobileScopes[1],/Moldova/,'Moldova must follow Romania in mobile Filters');
   assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-level-choices label[data-level-kind=\"statistical\"]').length"),6,
     'Mobile shows NUTS/NTS levels in unified checklist');
   assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-level-actions button').length"),2,

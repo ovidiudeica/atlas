@@ -3,7 +3,7 @@ import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibr
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
-  matchingCombinedLevelIds, updateOsmLevelVisibility } from './data/osmLevelFilter.mjs';
+  matchingCombinedLevelIds, orderTerritorialScopes, updateOsmLevelVisibility } from './data/osmLevelFilter.mjs';
 import { buildPermalink, clearGeometryPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
   type ExportScope } from './data/phase5.mjs';
 import {
@@ -215,9 +215,13 @@ export default function App() {
   // Filter scopes and available levels come from catalog metadata, not RO/MD
   // constants. Future independent territorial sets can register their own root.
   const osmLevelIndex = useMemo(()=>buildOsmLevelIndex(catalog),[catalog]);
+  // Keep the accepted RO -> MD root order, without freezing the list of future
+  // regional or statistical-only territorial sets.
+  const orderedLevelScopes = useMemo(()=>
+    orderTerritorialScopes(osmLevelIndex.scopes,ROOT_IDS),[osmLevelIndex]);
   const selectedLevelScopes = useMemo(()=>
-    levelScopeSelection ?? osmLevelIndex.scopes.map(scope=>scope.id),
-    [levelScopeSelection,osmLevelIndex]);
+    levelScopeSelection ?? orderedLevelScopes.map(scope=>scope.id),
+    [levelScopeSelection,orderedLevelScopes]);
   const levelOptions = useMemo(()=>
     availableOsmLevels(osmLevelIndex,selectedLevelScopes),
     [osmLevelIndex,selectedLevelScopes]);
@@ -420,7 +424,7 @@ export default function App() {
 
   function toggleLevelScope(id:string, checked:boolean){
     setLevelScopeSelection(old=>{
-      const current=old ?? osmLevelIndex.scopes.map(scope=>scope.id);
+      const current=old ?? orderedLevelScopes.map(scope=>scope.id);
       return checked?[...new Set([...current,id])]:current.filter(value=>value!==id);
     });
     setLevelActionMessage('');
@@ -613,7 +617,7 @@ export default function App() {
       <div className="osm-level-filter-body">
         <fieldset className="osm-level-scopes">
           <legend>{t.levelScope}</legend>
-          {osmLevelIndex.scopes.map(scope=><label key={scope.id}>
+          {orderedLevelScopes.map(scope=><label key={scope.id}>
             <input type="checkbox" checked={selectedLevelScopes.includes(scope.id)}
               aria-label={nodes.has(scope.id)?labelOf(nodes.get(scope.id)!,lang):scope.names[lang]}
               onChange={event=>toggleLevelScope(scope.id,event.target.checked)} />

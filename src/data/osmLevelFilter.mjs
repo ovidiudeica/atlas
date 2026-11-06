@@ -141,6 +141,17 @@ export function matchingStatisticalLevelIds(index, scopeIds, levelKeys) {
   return [...ids];
 }
 
+// Respect the existing, approved map/tree root order (RO before MD) while
+// keeping newly added territorial scopes in their source-catalog order.
+export function orderTerritorialScopes(scopes, preferredRootIds) {
+  const order = new Map(preferredRootIds.map((id, i) => [id, i]));
+  return [...scopes].sort((a, b) => {
+    const aOrder = order.get(a.id) ?? Infinity;
+    const bOrder = order.get(b.id) ?? Infinity;
+    return aOrder - bOrder;
+  });
+}
+
 // A single list may select both OSM and statistical levels at once. Each Atlas
 // entity is displayed just once, even if its geometry has multiple roles.
 export function matchingCombinedLevelIds(index, scopeIds, administrativeLevels, statisticalKeys) {

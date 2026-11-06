@@ -29,3 +29,4 @@ export function statisticalLevelKey(classification: string, level: number): stri
 export function availableStatisticalLevels(index: OsmLevelIndex, scopeIds: readonly string[]): StatisticalLevelOption[];
 export function matchingStatisticalLevelIds(index: OsmLevelIndex, scopeIds: readonly string[], levelKeys: readonly string[]): string[];
 export function matchingCombinedLevelIds(index: OsmLevelIndex, scopeIds: readonly string[], administrativeLevels: readonly number[], statisticalKeys: readonly string[]): string[];
+export function orderTerritorialScopes(scopes: readonly OsmLevelScope[], preferredRootIds: readonly string[]): OsmLevelScope[];
