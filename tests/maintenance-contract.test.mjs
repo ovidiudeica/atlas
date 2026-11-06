@@ -22,6 +22,7 @@ test('Project scope is updated to live Phase 5 while source certification remain
 test('Locked CI builds and browser smoke are part of both PR and main verification', () => {
   const workflow=read('.github/workflows/website.yml');
   assert.match(workflow,/pull_request:/);
+  assert.match(workflow,/github\.event\.pull_request\.head\.sha \|\| github\.sha/);
   assert.match(workflow,/push:/);
   assert.match(workflow,/npm ci --no-audit --no-fund/);
   assert.match(workflow,/node scripts\/ci\/browser-smoke\.mjs/);
