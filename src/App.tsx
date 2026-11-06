@@ -163,24 +163,32 @@ function roleLabel(node: Territory): string {
 
 export default function App() {
   const mapEl = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const loadedRef = useRef<Map<string,TerritoryFeature>>(new Map());
-  const [lang,setLang] = useState<Locale>(() => localStorage.getItem('atlas-lang') === 'ro'?'ro':'en');
+  const [lang,setLang] = useState<Locale>(() => SHARED_STATE.lang || (localStorage.getItem('atlas-lang') === 'ro'?'ro':'en'));
   const [module,setModule] = useState<ModuleId>('administrative');
   const [catalog,setCatalog] = useState<Territory[]>([]);
   const [catalogError,setCatalogError] = useState<string | null>(null);
-  const [selected,setSelected] = useState<string | null>(null);
+  const [selected,setSelected] = useState<string | null>(SHARED_STATE.entity);
   const [visible,setVisible] = useState<string[]>(restoreVisible);
   const [expanded,setExpanded] = useState<string[]>([]);
   const [search,setSearch] = useState('');
-  const [treeView,setTreeView] = useState<TreeView>('all');
-  const [simplified,setSimplified] = useState<boolean>(()=>localStorage.getItem('atlas-simple')==='true');
-  const [basemap,setBasemap] = useState<Basemap>('standard');
+  const [treeView,setTreeView] = useState<TreeView>(SHARED_STATE.view || 'all');
+  const [simplified,setSimplified] = useState<boolean>(()=>SHARED_STATE.simple ?? (localStorage.getItem('atlas-simple')==='true'));
+  const [basemap,setBasemap] = useState<Basemap>(SHARED_STATE.basemap || 'standard');
   const [ready,setReady] = useState(false);
   const [rootsLoaded,setRootsLoaded] = useState(false);
   const [geomLoading,setGeomLoading] = useState(false);
   const [geomError,setGeomError] = useState(false);
   const [drawer,setDrawer] = useState<Drawer>(null);
+  const [exportOpen,setExportOpen] = useState(false);
+  const [exportScope,setExportScope] = useState<ExportScope>('visible');
+  const [exportBusy,setExportBusy] = useState(false);
+  const [exportProgress,setExportProgress] = useState('');
+  const [shareNotice,setShareNotice] = useState('');
+  const [shareFallback,setShareFallback] = useState('');
+  const [navBusy,setNavBusy] = useState(false);
 
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
@@ -189,6 +197,23 @@ export default function App() {
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
+  const breadcrumbs = useMemo(()=>{
+    const path:Territory[]=[];
+    let cursor=selected?nodes.get(selected):undefined;
+    const visited=new Set<string>();
+    while(cursor && !visited.has(cursor.id) && path.length<32){
+      path.unshift(cursor);visited.add(cursor.id);
+      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      cursor=parent?nodes.get(parent):undefined;
+    }
+    return path;
+  },[nodes,selected,treeView]);
+  const siblings=useMemo(()=>{
+    if(!currentNode)return [];
+    const parent=treeView==='administrative'?currentNode.administrativeParentId:currentNode.treeParentId;
+    return parent?(hierarchy.get(parent)||[]):ROOT_IDS.map(id=>nodes.get(id)).filter((n):n is Territory=>Boolean(n));
+  },[currentNode,hierarchy,nodes,treeView]);
+  const siblingIndex=siblings.findIndex(n=>n.id===selected);
   const searchIndex = useMemo(()=>catalog.map(node=>({node,text:lookupKeys(node)})),[catalog]);
   const matches = useMemo(()=>{
     if(!search.trim())return [];
@@ -208,6 +233,20 @@ export default function App() {
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
   useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
   useEffect(()=>{localStorage.setItem('atlas-visible-phase4',JSON.stringify(visible));},[visible]);
+  useEffect(()=>{
+    if(catalog.length && selected && !nodes.has(selected))setSelected(null);
+  },[catalog.length,nodes,selected]);
+  useEffect(()=>{
+    if(!catalog.length || !SHARED_STATE.entity || !nodes.has(SHARED_STATE.entity))return;
+    const path:string[]=[];
+    let cursor=nodes.get(SHARED_STATE.entity),depth=0;
+    while(cursor && depth++<32){
+      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      if(!parent)break;
+      path.push(parent);cursor=nodes.get(parent);
+    }
+    setExpanded(old=>[...new Set([...old,...path])]);
+  },[catalog.length,nodes]);
 
   useEffect(()=>{
     if(!catalog.length)return;
@@ -217,9 +256,15 @@ export default function App() {
 
   useEffect(()=>{
     if(!mapEl.current || mapRef.current)return;
-    const instance=new maplibregl.Map({container:mapEl.current,style,center:[25.4,46.05],zoom:5.5,attributionControl:false,dragRotate:false,pitchWithRotate:false});
+    const instance=new maplibregl.Map({
+      container:mapEl.current,style,
+      center:SHARED_STATE.lng!==null && SHARED_STATE.lat!==null?[SHARED_STATE.lng,SHARED_STATE.lat]:[25.4,46.05],
+      zoom:SHARED_STATE.zoom ?? 5.5,
+      attributionControl:false,dragRotate:false,pitchWithRotate:false
+    });
     mapRef.current=instance;
     instance.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
+    instance.addControl(new maplibregl.ScaleControl({maxWidth:100,unit:'metric'}),'bottom-left');
     instance.on('load',()=>{
       instance.addSource('borders',{type:'geojson',data:getCountryGeoJSON('simplified')});
       instance.addLayer({id:'country-fill',type:'fill',source:'borders',paint:{'fill-color':'#dce9dd','fill-opacity':0.31},filter:['in',['get','id'],['literal',['ro','md']]]});
@@ -235,7 +280,15 @@ export default function App() {
         'line-width':['case',['==',['get','roleKind'],'statistical'],1.8,1.6],
         'line-opacity':0.94
       }});
+      instance.addLayer({id:'entity-hover',type:'line',source:'entities',paint:{'line-color':'#1d7e65','line-width':3},filter:['==',['get','atlasId'],'__none__']});
       instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
+      instance.on('mousemove','entity-fill',event=>{
+        const id=event.features?.[0]?.properties?.atlasId;
+        instance.setFilter('entity-hover',['==',['get','atlasId'],typeof id==='string'?id:'__none__']);
+      });
+      instance.on('mouseleave','entity-fill',()=>{
+        instance.setFilter('entity-hover',['==',['get','atlasId'],'__none__']);
+      });
       instance.on('click','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){setSelected(id);setDrawer('detail');}
@@ -252,7 +305,7 @@ export default function App() {
         instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
         instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
       }
-      instance.fitBounds(BOUNDS,{padding:45,duration:0});
+      if(SHARED_STATE.zoom===null)instance.fitBounds(BOUNDS,{padding:45,duration:0});
       setReady(true);
     });
     return ()=>{mapRef.current=null;instance.remove();};
