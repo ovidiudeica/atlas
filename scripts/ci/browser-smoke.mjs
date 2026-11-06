@@ -166,7 +166,7 @@ async function desktop(cdp){
 }
 async function mobile(cdp){
   const p=await cdp.page(390,844,true);
-  await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4,283')",'mobile catalog');
+  await p.wait("document.querySelector('.tree-footnote strong')?.textContent.replace(/\\D/g,'').includes('4283')",'mobile catalog (locale-independent)');
   await p.wait("!document.querySelector('.map-boot-status')",'mobile national contours');
   const geometry=await p.eval("({width:innerWidth,scroll:document.documentElement.scrollWidth,height:document.querySelector('.map-area').getBoundingClientRect().height,buttons:getComputedStyle(document.querySelector('.mobile-controls')).display})");
   assert(geometry.scroll<=geometry.width+1,'Mobile horizontal overflow');
