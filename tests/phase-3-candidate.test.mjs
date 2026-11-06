@@ -18,7 +18,7 @@ test('candidate is explicitly blocked and never misrepresented as a release', ()
   assert.equal(validation.originalOSMBArchivesNotInBuilder, true);
   assert.equal(validation.missingApprovedAdministrativeGeometry.length, 11);
   assert.equal(validation.statisticalOnlyWithoutGeometry.length, 18);
-  assert.equal(validation.missingOfficialRegistryAssociation.length, 181);
+  assert.equal(validation.missingOfficialRegistryAssociation.length, 180);
 });
 
 test('candidate files have correct hashes and byte counts', () => {
@@ -40,7 +40,7 @@ test('all official registries and statistical nomenclatures remain intact', () =
   assert.equal(manifest.counts.unmatchedRORegistry, 0);
   assert.equal(manifest.counts.unmatchedMDRegistry, 0);
   assert.equal(manifest.counts.missingRORegistryAssociation, 0);
-  assert.equal(manifest.counts.missingMDRegistryAssociation, 181);
+  assert.equal(manifest.counts.missingMDRegistryAssociation, 180);
 });
 
 test('administrative levels, counts and geometry subsets match candidate scope', () => {
