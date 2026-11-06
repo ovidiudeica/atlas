@@ -806,7 +806,7 @@ export default function App() {
             <p className="planned-module-description">{t.planned}</p>
           </section>}
       </aside>}
-      <main className="map-area" onPointerDown={event=>{
+      <main className="map-area" data-map-ready={ready&&rootsLoaded?'true':'false'} onPointerDown={event=>{
         if(event.target instanceof Element && event.target.closest('.maplibregl-canvas-container'))closeModulePanel();
       }}>
         <div className="map-canvas" ref={mapEl} aria-label="Territorial map" />
