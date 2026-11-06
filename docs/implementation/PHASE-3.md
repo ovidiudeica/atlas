@@ -38,7 +38,7 @@ The code used to generate this candidate is `scripts/data/build-phase3-candidate
 3. **Exact archive cross-check:** compare the reviewed legacy geometry representation and original OSMB snapshot before release, and document source geometry transformations explicitly.
 4. **Full geometry and topological QA:** verify polygon validity, shared boundaries, parent linkage, overlaps and coverage; generate an acceptable simplified display representation preserving common edges.
 
-The current manifest must remain `BLOCKED_INCOMPLETE` until the above checks pass. Registry lookups for currently selected entities have been reconciled after converting the legacy RO county ordinal code to the actual 2026 SIRUTA county record ID; never conflate these two identifiers.
+The current manifest must remain `BLOCKED_INCOMPLETE` until the above checks pass. **Qualified coverage:** All attached registry codes resolve to an official record, but 180 MD subnational entities have no attached CUATM ID in this candidate. All selected RO subnational entities have matched SIRUTA codes, including the six Bucharest sectors. Never conflate county ordinal codes with SIRUTA IDs, and never infer missing CUATM codes from names alone.
 
 ## Identity/semantics safeguards
 
