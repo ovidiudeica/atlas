@@ -1,0 +1,219 @@
+[
+  {
+    "key": "MD:65335",
+    "matched": true,
+    "expected": "5341b07056fa0cb98691bfc34e46f99e5a105b421c7ad4e385f11e6e2cc2ba65",
+    "actual": "5341b07056fa0cb98691bfc34e46f99e5a105b421c7ad4e385f11e6e2cc2ba65",
+    "edges": 4823
+  },
+  {
+    "key": "MD:1702216",
+    "matched": true,
+    "expected": "5dff0d1c7f389a5299c4677aac996c00cb79c189e5bc1824d1c396501856623b",
+    "actual": "5dff0d1c7f389a5299c4677aac996c00cb79c189e5bc1824d1c396501856623b",
+    "edges": 674
+  },
+  {
+    "key": "MD:944727",
+    "matched": true,
+    "expected": "404015ca4030226144e05275e6a53898d42d46458c6dba10d70283b5e0d360b8",
+    "actual": "404015ca4030226144e05275e6a53898d42d46458c6dba10d70283b5e0d360b8",
+    "edges": 633
+  },
+  {
+    "key": "MD:1702215",
+    "matched": true,
+    "expected": "43065f60af9a89d418317a14d122f3111c37caf3d0c43facd64966c9e9ef4af6",
+    "actual": "43065f60af9a89d418317a14d122f3111c37caf3d0c43facd64966c9e9ef4af6",
+    "edges": 708
+  },
+  {
+    "key": "MD:1706978",
+    "matched": true,
+    "expected": "8dba6a8a1191b8def6c85007a71e4e31bb0b2a6ed6d008155f3c2488cbb57188",
+    "actual": "8dba6a8a1191b8def6c85007a71e4e31bb0b2a6ed6d008155f3c2488cbb57188",
+    "edges": 2466
+  },
+  {
+    "key": "MD:1706979",
+    "matched": true,
+    "expected": "c86e3822306047d563792cfec4f954abd5df347d374c7eb5c60fa160c7c015c5",
+    "actual": "c86e3822306047d563792cfec4f954abd5df347d374c7eb5c60fa160c7c015c5",
+    "edges": 1509
+  },
+  {
+    "key": "MD:7103068",
+    "matched": true,
+    "expected": "390af908e732b6c1b00ac72496d9037d518df1587628bf71780f65fc511eaed0",
+    "actual": "390af908e732b6c1b00ac72496d9037d518df1587628bf71780f65fc511eaed0",
+    "edges": 1023
+  },
+  {
+    "key": "MD:1702219",
+    "matched": true,
+    "expected": "971a9756ed8ec5ef7b3175d2d2b8169ac66be58978b3df0108859374f8c42902",
+    "actual": "971a9756ed8ec5ef7b3175d2d2b8169ac66be58978b3df0108859374f8c42902",
+    "edges": 231
+  },
+  {
+    "key": "MD:1702218",
+    "matched": true,
+    "expected": "edd36997213bef51c31068498f59289cf04e2595fe0095e0af2752d2efeb4025",
+    "actual": "edd36997213bef51c31068498f59289cf04e2595fe0095e0af2752d2efeb4025",
+    "edges": 1824
+  },
+  {
+    "key": "MD:1702217",
+    "matched": true,
+    "expected": "5bc512d725f8089866a451f75122963e26944ef6deeb46c374669620024db3e3",
+    "actual": "5bc512d725f8089866a451f75122963e26944ef6deeb46c374669620024db3e3",
+    "edges": 835
+  },
+  {
+    "key": "MD:1702214",
+    "matched": true,
+    "expected": "dd4a9d4bdc9e03d11f2ad3c0828a26bd27068543140f6259cd4c0e01f6ee7e58",
+    "actual": "dd4a9d4bdc9e03d11f2ad3c0828a26bd27068543140f6259cd4c0e01f6ee7e58",
+    "edges": 827
+  },
+  {
+    "key": "ROSTAT:7958143",
+    "matched": true,
+    "expected": "7fe8e2ce75b58b6e6f00f84307188336fa78b9a22dd7f793699f2fd96e590819",
+    "actual": "7fe8e2ce75b58b6e6f00f84307188336fa78b9a22dd7f793699f2fd96e590819",
+    "edges": 3315
+  },
+  {
+    "key": "ROSTAT:7958146",
+    "matched": true,
+    "expected": "cea9af86f254ce3ecaa418aeb0bcdf7fb7eedcf24a55624afa0454e34c94d79c",
+    "actual": "cea9af86f254ce3ecaa418aeb0bcdf7fb7eedcf24a55624afa0454e34c94d79c",
+    "edges": 10048
+  },
+  {
+    "key": "ROSTAT:1427500",
+    "matched": true,
+    "expected": "748172fb6dccc3a0087924c0b1113162c694951a0906335bcd0dbe160753bf35",
+    "actual": "748172fb6dccc3a0087924c0b1113162c694951a0906335bcd0dbe160753bf35",
+    "edges": 19759
+  },
+  {
+    "key": "ROSTAT:7958144",
+    "matched": true,
+    "expected": "ae11bb3e6779972ad772554d541dd3e9c9cad8b018dbbce2b02939783cbc6f1f",
+    "actual": "ae11bb3e6779972ad772554d541dd3e9c9cad8b018dbbce2b02939783cbc6f1f",
+    "edges": 15468
+  },
+  {
+    "key": "ROSTAT:1426803",
+    "matched": true,
+    "expected": "7670c7764bc87096393569edecbe3f2fdb8acef00d43fc18253ae1020c7a96d8",
+    "actual": "7670c7764bc87096393569edecbe3f2fdb8acef00d43fc18253ae1020c7a96d8",
+    "edges": 13363
+  },
+  {
+    "key": "ROSTAT:7957817",
+    "matched": true,
+    "expected": "7f0b7e7cd7746306653f879cc633a97f1c9d4561742ce17579ad0e4bfa3afb62",
+    "actual": "7f0b7e7cd7746306653f879cc633a97f1c9d4561742ce17579ad0e4bfa3afb62",
+    "edges": 16702
+  },
+  {
+    "key": "ROSTAT:1426985",
+    "matched": true,
+    "expected": "58205908a487bbeffa7593c919602cb2c8615727ec5c8c9f0c3cc0bbb69ab104",
+    "actual": "58205908a487bbeffa7593c919602cb2c8615727ec5c8c9f0c3cc0bbb69ab104",
+    "edges": 11716
+  },
+  {
+    "key": "ROSTAT:7958145",
+    "matched": true,
+    "expected": "5fca6ba92305647ab24c6056577991db472de0349b7041f65a171dbedb1e0605",
+    "actual": "5fca6ba92305647ab24c6056577991db472de0349b7041f65a171dbedb1e0605",
+    "edges": 17877
+  },
+  {
+    "key": "ROSTAT:7957893",
+    "matched": true,
+    "expected": "929c4d5d55d70ef565fc2956982e6fd7e4b7633df649c494505f876afa61cb0f",
+    "actual": "929c4d5d55d70ef565fc2956982e6fd7e4b7633df649c494505f876afa61cb0f",
+    "edges": 13812
+  },
+  {
+    "key": "ROSTAT:1426984",
+    "matched": true,
+    "expected": "77ee72057faf3b930ebfe7f54771584d1a520a2b547135cbe512cfb3e7ecb75d",
+    "actual": "77ee72057faf3b930ebfe7f54771584d1a520a2b547135cbe512cfb3e7ecb75d",
+    "edges": 12058
+  },
+  {
+    "key": "ROSTAT:1427499",
+    "matched": true,
+    "expected": "1fd9079f11e4b8d29d2b5c1e650067a941ac22e9bf102ddcdab4dceed67bc5dc",
+    "actual": "1fd9079f11e4b8d29d2b5c1e650067a941ac22e9bf102ddcdab4dceed67bc5dc",
+    "edges": 17024
+  },
+  {
+    "key": "ROSTAT:7957892",
+    "matched": true,
+    "expected": "3ab0ced2044c4a2b4ec2db605f2fb9e720dff5b9d56eef658e2ddce5bde2c43e",
+    "actual": "3ab0ced2044c4a2b4ec2db605f2fb9e720dff5b9d56eef658e2ddce5bde2c43e",
+    "edges": 6610
+  },
+  {
+    "key": "MDSTAT:18988801",
+    "matched": true,
+    "expected": "c036a8a16dc148a5f4deec120686643c687ad559a1b9ae34068bee334a1fa79e",
+    "actual": "c036a8a16dc148a5f4deec120686643c687ad559a1b9ae34068bee334a1fa79e",
+    "edges": 4442
+  },
+  {
+    "key": "MDSTAT:11092080",
+    "matched": true,
+    "expected": "49a09c64a929e73e4a23076371d4e66e2d1f09540aff0a427a60a8a7e8d36599",
+    "actual": "49a09c64a929e73e4a23076371d4e66e2d1f09540aff0a427a60a8a7e8d36599",
+    "edges": 9227
+  },
+  {
+    "key": "MDSTAT:10052719",
+    "matched": true,
+    "expected": "58ed7f4fa0afaa447afb2c869d1e2467af54d99f64c6bfe86cf499178630443f",
+    "actual": "58ed7f4fa0afaa447afb2c869d1e2467af54d99f64c6bfe86cf499178630443f",
+    "edges": 5081
+  },
+  {
+    "key": "MDSTAT:18994563",
+    "matched": true,
+    "expected": "9b4c06fe14c65ce8c0e21218f111d5c97fd281fcaa83e1139ba562a3e75fc18c",
+    "actual": "9b4c06fe14c65ce8c0e21218f111d5c97fd281fcaa83e1139ba562a3e75fc18c",
+    "edges": 12537
+  },
+  {
+    "key": "MDSTAT:18976350",
+    "matched": true,
+    "expected": "c036a8a16dc148a5f4deec120686643c687ad559a1b9ae34068bee334a1fa79e",
+    "actual": "c036a8a16dc148a5f4deec120686643c687ad559a1b9ae34068bee334a1fa79e",
+    "edges": 4442
+  },
+  {
+    "key": "MDSTAT:11091865",
+    "matched": true,
+    "expected": "f2a382cb00c4c005bbe4b5da58db5fc7b6f50d6a2893536df82641aade68c2e1",
+    "actual": "f2a382cb00c4c005bbe4b5da58db5fc7b6f50d6a2893536df82641aade68c2e1",
+    "edges": 9729
+  },
+  {
+    "key": "MDSTAT:18972669",
+    "matched": true,
+    "expected": "c3897deceb54b940e7001026464af455d75588f41915bcfd4163f4b90619c372",
+    "actual": "c3897deceb54b940e7001026464af455d75588f41915bcfd4163f4b90619c372",
+    "edges": 3706
+  },
+  {
+    "key": "MDSTAT:18965597",
+    "matched": true,
+    "expected": "35a0c6e72700964fd997d0c8799cd137f6b9a2a2b477edafcc3be83a6bfb0d8e",
+    "actual": "35a0c6e72700964fd997d0c8799cd137f6b9a2a2b477edafcc3be83a6bfb0d8e",
+    "edges": 3102
+  }
+]
