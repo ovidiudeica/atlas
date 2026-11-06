@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { idsForScope, metadataCsv, makeDetailedCollection, buildPermalink, readPermalink } from '../src/data/phase5.mjs';
+import { idsForScope, metadataCsv, makeDetailedCollection, buildPermalink, clearGeometryPermalink, readPermalink } from '../src/data/phase5.mjs';
 
 const territory = (id, shard, name = 'Test', osm = null) => ({
   id, country: 'RO', officialName: name, osmRelationId: osm, adminLevel: 8,
@@ -64,6 +64,23 @@ test('permalink roundtrip validates camera, IDs, enum values, keeps site base pa
   });
   assert.equal(readPermalink('?entity=%3Cscript%3E&lng=999&lat=23&zoom=3').entity, null);
   assert.equal(readPermalink('?lng=999&lat=23&zoom=3').zoom, null);
+});
+
+
+test('geometry reset removes only permalink camera/selection; unrelated filters and URL survive reload', () => {
+  const url = new URL(clearGeometryPermalink(
+    'https://example.org/atlas/?utm=keep&entity=siruta-u64096&view=statistical&lang=ro&simple=1&basemap=dark&lng=26.4&lat=46.2&zoom=9#map'
+  ));
+  assert.equal(url.pathname, '/atlas/');
+  assert.equal(url.hash, '#map');
+  assert.equal(url.searchParams.get('utm'), 'keep');
+  for (const key of ['entity', 'lng', 'lat', 'zoom']) assert.equal(url.searchParams.has(key), false);
+  assert.equal(url.searchParams.get('view'), 'statistical');
+  assert.equal(url.searchParams.get('lang'), 'ro');
+  assert.equal(url.searchParams.get('simple'), '1');
+  assert.equal(url.searchParams.get('basemap'), 'dark');
+  assert.equal(readPermalink(url.search).entity, null);
+  assert.equal(readPermalink(url.search).zoom, null);
 });
 
 test('Phase 5 integrates map navigation/export without modifying certified Phase 4 assets', () => {
