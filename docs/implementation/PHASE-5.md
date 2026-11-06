@@ -31,6 +31,17 @@ Export occurs entirely in the browser on explicit request, with progress feedbac
 - The new exports do not grant a code/data license or supersede OSM/OSMB reuse and attribution obligations.
 - Other five modules remain explicitly planned rather than populated with synthetic content.
 
+
+## Phase 5 addendum — reset selected geometry (2026-11-06)
+
+An explicit, bilingual **Reset geometries / Resetează geometriile** button in the map quick actions is independent of the existing map-toolbar **Home** control.
+
+- The reset action restores precisely the initial **Romania and Republic of Moldova national outlines** (no selected child polygons), resets the camera to the two-country overview, clears the selected entity highlight, search query, expanded branches and open detail/export drawers. It also restores the visible-geometry export scope to its initial value.
+- The reset is **persistent**: it writes the two root IDs to the existing visibility preference. An active shared-URL entity and camera coordinates are removed from the browser history without a page reload, so a subsequent reload cannot revive the old selection.
+- It **preserves** interface language, administrative/statistical tree mode, active module, map basemap and the global detailed/simplified display preference. It does not touch catalog, original or simplified geometry assets, source records, or exports.
+- In-flight asynchronous fit/locate actions are guarded, so a delayed response cannot overwrite the reset camera. Previously loaded entity layers are cleared when the visible ID set returns to roots only.
+- The original **Home** button remains camera-only; the new action resets visibility **and** camera. This distinction is validated in desktop/mobile Chromium tests, alongside persistence after refresh.
+
 ## Validation and merge gate
 
 1. Run npm test and npm run build on the exact PR SHA, including Phase 3/4 regression tests and new Phase 5 helper tests.
