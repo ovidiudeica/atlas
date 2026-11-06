@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildOsmLevelIndex, availableOsmLevels, matchingOsmLevelIds, updateOsmLevelVisibility,
-  availableStatisticalLevels, matchingStatisticalLevelIds, matchingCombinedLevelIds, statisticalLevelKey }
+  availableStatisticalLevels, matchingStatisticalLevelIds, matchingCombinedLevelIds, statisticalLevelKey,
+  orderTerritorialScopes }
   from '../src/data/osmLevelFilter.mjs';
 
 function node(id,country,level,parent=null,setRoot=null,role=['administrative']){
@@ -134,4 +135,19 @@ test('unified levels support independent future geographic scopes and empty sele
   ]);
   assert.deepEqual(matchingCombinedLevelIds(idx,['odesa'],[],[stat]),['odesa-nuts']);
   assert.deepEqual(matchingCombinedLevelIds(idx,['ro','md'],[],[]),[]);
+});
+
+test('Filtre follows the existing national root order: Romania before Moldova',()=>{
+  const idx=buildOsmLevelIndex(catalog);
+  const incoming=[...idx.scopes].reverse();
+  const result=orderTerritorialScopes(incoming,['ro','md']);
+  assert.deepEqual(result.slice(0,2).map(x=>x.id),['ro','md']);
+  assert.deepEqual(result.slice(2).map(x=>x.id),
+    incoming.filter(x=>!['ro','md'].includes(x.id)).map(x=>x.id),
+    'Newly on-boarded regional geometry sets retain their relative catalog order');
+  assert.deepEqual(incoming.map(x=>x.id),[...idx.scopes].reverse().map(x=>x.id),
+    'The input scope index must not be mutated');
+  assert.deepEqual(orderTerritorialScopes(idx.scopes,[]).map(x=>x.id),
+    idx.scopes.map(x=>x.id),
+    'An empty preference list retains dynamically discovered order');
 });
