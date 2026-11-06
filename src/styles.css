@@ -2,3 +2,62 @@
 
 /* DOM-rendered outlines remain visible when WebGL canvas composition is unavailable. */
 .map-area > .territory-overlay{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+
+
+/* Phase 4 — certified administrative + statistical territory browser */
+.tree-filters{display:flex;margin:0 14px 13px;padding:3px;border:1px solid #dbe8de;border-radius:9px;background:#f4f8f5;gap:2px}
+.tree-filters button{flex:1;min-width:0;padding:8px 3px;font-size:10px;letter-spacing:.1px;font-weight:700;color:#527060;background:transparent;border:0;border-radius:7px}
+.tree-filters button.active{background:#fff;color:#164d38;box-shadow:0 1px 5px #174b3520}
+.tree-list{padding-bottom:8px}
+.territory-branch{min-width:0}
+.tree-line{padding-right:4px;min-height:43px;gap:4px}
+.tree-line:hover{background:#edf4ef}
+.tree-line .tree-label{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;min-width:0;padding:4px 2px;text-align:left}
+.node-name{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.node-level{font-size:9px;font-weight:700;letter-spacing:.3px;color:#618272}
+.node-level.is-stat{color:#6d65a6}
+.tree-spacer{width:25px;flex:0 0 25px;text-align:center;color:#a2baaa}
+.tree-line .expand-button{width:25px;flex:0 0 25px}
+.tree-line input[type=checkbox]{margin:0;cursor:pointer}
+.tree-list .tree-line.is-selected{background:#dcebe1}
+.tree-list .tree-line.is-selected .tree-label{color:#154a34}
+.children-actions{display:flex;gap:7px;padding:4px 7px 6px}
+.children-actions button{border:0;background:transparent;color:#277354;font-size:10px;font-weight:700;text-align:left;padding:3px}
+.children-actions button:hover{text-decoration:underline}
+.results-heading{font-size:10px;font-weight:800;color:#5c7f69;letter-spacing:.5px;text-transform:uppercase;margin:6px 9px 10px}
+.search-country{flex:none;font-size:9px;color:#708c78}
+.tree-hint,.tree-empty{font-size:12px;color:#789080;margin:14px 8px}
+.tree-footnote p{margin:8px 0 0}
+.loading-msg{padding:16px 21px;line-height:1.5;color:#6b8573;font-size:12px}
+.loading-msg button{display:block;margin-top:12px;padding:9px 12px;border-radius:7px;border:1px solid #b8d0c0;background:#fff;color:#1a5b42;font-weight:700}
+.entity-title{align-items:flex-start}
+.entity-title h3{font-size:20px;line-height:1.2}
+.entity-title small{font-size:10px;color:#658273;font-weight:700}
+.entity-actions{display:flex;gap:8px;margin:0 0 12px}
+.entity-actions button{border:1px solid #196344;background:#196344;color:#fff;border-radius:8px;padding:10px 11px;font-size:11px;font-weight:700;flex:1;line-height:1.25}
+.entity-actions button.secondary{background:#fff;color:#18513c;border-color:#c8dfcf}
+.entity-actions button:hover{filter:brightness(.95)}
+.raw-details{border-top:1px solid #dbe8df;margin-top:14px;padding:4px 0}
+.raw-details summary{padding:11px 2px;cursor:pointer;color:#225f47;font-size:12px;font-weight:750}
+.raw-tags{margin:0 0 12px}
+.raw-tags>div{display:grid;grid-template-columns:40% 60%;border-bottom:1px solid #e4eee6;gap:8px;padding:7px 2px}
+.raw-tags dt,.raw-tags dd{margin:0;overflow-wrap:anywhere;font-size:10px;line-height:1.5}
+.raw-tags dt{color:#6b8073;font-family:ui-monospace,Consolas,monospace}
+.raw-tags dd{color:#294b39}
+.source-caveat{border-left:2px solid #a1b3d4;background:#f4f5fc;padding:9px 11px;color:#626788;font-size:11px;line-height:1.5}
+.map-legend{position:absolute;z-index:2;right:16px;bottom:29px;display:flex;align-items:center;gap:6px;background:#ffffffec;border-radius:8px;border:1px solid #dbe7de;padding:8px 10px;font-size:10px;font-weight:650;color:#4e7460;box-shadow:0 3px 16px #20483012}
+.legend-admin,.legend-stat{height:12px;width:12px;border-radius:3px;display:inline-block;border:1.5px solid #16533d;background:#acd6b5}
+.legend-stat{margin-left:8px;background:#c9c3ef;border-color:#7066b3}
+.map-note{max-width:min(390px,calc(100% - 90px))}
+@media(max-width:1100px){.detail-sidebar{display:none}.tree-sidebar{width:286px;flex-basis:286px}}
+@media(max-width:700px){
+  .map-legend{bottom:67px;right:9px;font-size:9px;padding:6px 7px}
+  .map-note{left:9px;bottom:99px;max-width:calc(100% - 18px);font-size:9px}
+  .tree-filters{margin:0 14px 12px}
+  .drawer .tree-line{min-height:46px}
+  .drawer .tree-label{font-size:13px}
+  .drawer-close{background:#fff}
+  .entity-card{padding-left:19px;padding-right:19px}
+}
+
+.map-boot-status{position:absolute;z-index:2;left:18px;top:73px;border:1px solid #d8e5dd;border-radius:7px;background:#fffffff0;padding:8px 10px;color:#527363;font-size:11px;box-shadow:0 2px 10px #123c3118}

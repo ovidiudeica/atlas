@@ -8,7 +8,7 @@ Territorial Atlas (Romanian: *Atlas Teritorial*) is a planned bilingual geograph
 
 ## Project status
 
-**Planning and initial design.** This repository currently contains documentation only. A project information page is published via GitHub Pages; the interactive map, data catalogue, and modules have not yet been implemented.
+**Phase 4 — interactive administrative and statistical atlas.** The bilingual website is active on GitHub Pages. Romania and the Republic of Moldova now have a certified-for-cartographic-use OSM-Boundaries snapshot dated 5 October 2026, with **4,283 searchable and navigable administrative/statistical entities**, original source metadata, official SIRUTA/CUATM codes, and detailed or topology-consistently simplified display geometry. Other modules remain planned. Source-exception acceptance does not constitute legal certification of borders.
 
 ## Planned modules
 
@@ -23,11 +23,11 @@ The modules will share one map. The website will support English and Romanian, w
 
 ## Initial administrative scope
 
-The Administrative module will initially cover Romania and the Republic of Moldova. OpenStreetMap boundary data distributed through **OSM-Boundaries** is the main geometry source. The initial reference archives are dated **5 October 2026**.
+The Administrative module covers Romania and the Republic of Moldova. OpenStreetMap boundary data distributed through **OSM-Boundaries** is the main geometry source. The initial reference archives are dated **5 October 2026**.
 
-Romania uses OSM administrative levels **2, 4, 8**, and **9 only for Bucharest's six sectors**. The Republic of Moldova uses levels **2, 3, 4, 5, 7, and 8**. All selected statistical levels are planned for inclusion, without duplicating entities that have both administrative and statistical roles.
+Romania uses OSM administrative levels **2, 4, 8**, and **9 only for Bucharest's six sectors**. The Republic of Moldova uses levels **2, 3, 4, 5, 7, and 8**. All approved statistical levels are included without duplicating entities that have both administrative and statistical roles.
 
-Administrative identities and metadata will be reconciled with **SIRUTA** (Romania) and **CUATM** (Republic of Moldova). Original OSM tags and identifiers will be retained when available. The communes of **Brețcu** and **Ojdula** will use separately reviewed geometries; Brețcu will not be assigned a fictitious OSM identifier.
+Administrative identities and metadata are reconciled with **SIRUTA** (Romania) and **CUATM** (Republic of Moldova) wherever supported by the source. Complete original OSM tags and matched official register records are preserved. The communes of **Brețcu** and **Ojdula** use separately reviewed geometries; Brețcu does not have an OSM relation ID and its public OSM ID field remains blank. Four source-level CUATM multipart identity mappings remain marked as not legally established.
 
 ## Product principles
 
@@ -40,7 +40,7 @@ Administrative identities and metadata will be reconciled with **SIRUTA** (Roman
 
 ## Documentation
 
-See [PROJECT.md](PROJECT.md) for the initial scope, data policies, and approved design decisions. Repository documentation and technical contributions are written in English; the website will be bilingual.
+See [PROJECT.md](PROJECT.md) for the initial scope, data policies, and approved design decisions. The accepted data certificate is documented in [Phase 3 certification](docs/data/PHASE-3-CERTIFICATION.md), and the navigable application in [Phase 4 implementation](docs/implementation/PHASE-4.md). Repository documentation and technical contributions are written in English; the website will be bilingual.
 
 ## Licensing and attribution
 

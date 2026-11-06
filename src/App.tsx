@@ -1,10 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
-import maplibregl, { type Map as MapLibreMap, type GeoJSONSource } from 'maplibre-gl';
-import { getCountryGeoJSON, type CountryId } from './data/borders';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibre-gl';
+import type { FeatureCollection } from 'geojson';
+import { getCountryGeoJSON } from './data/borders';
+import {
+  asDisplayFeatures, bboxOfGeometry, codeOf, EMPTY_FEATURES, labelOf, loadCatalog,
+  loadGeometryShard, lookupKeys, normalize, ROOT_IDS,
+  type GeometryMode, type Locale, type Territory, type TerritoryFeature
+} from './data/territories';
 
-type Lang = 'en' | 'ro';
 type Basemap = 'standard' | 'grayscale' | 'dark' | 'none';
 type ModuleId = 'administrative' | 'historical' | 'communities' | 'regions' | 'ethnographic' | 'reform';
+type TreeView = 'all' | 'administrative' | 'statistical';
+type Drawer = 'tree' | 'detail' | null;
 
 const MODULES: { id: ModuleId; symbol: string; en: string; ro: string }[] = [
   { id: 'administrative', symbol: '▤', en: 'Administrative', ro: 'Administrativ' },
@@ -14,234 +21,464 @@ const MODULES: { id: ModuleId; symbol: string; en: string; ro: string }[] = [
   { id: 'ethnographic', symbol: '✦', en: 'Ethnographic Areas', ro: 'Zone etnografice' },
   { id: 'reform', symbol: '⇄', en: 'Administrative-Territorial Reform', ro: 'Reformă administrativ-teritorială' }
 ];
-
-const LANG = {
+const WORDS = {
   en: {
-    title: 'Territorial Atlas', tagline: 'Geography · History · Communities', tree: 'Territorial tree',
-    find: 'Search the territory tree', visible: 'Show geometry', detail: 'Entity details', select: 'Select a country on the map or in the tree.',
-    scope: 'Initial geographic scope', planned: 'Administrative and statistical subdivisions will be integrated in Phase 3.',
-    original: 'Detailed preview', simplified: 'Simplified geometries', basemap: 'Basemap', originalNote: 'Display-only outlines from OSMB snapshot 2026-10-05. Full source geometry follows in Phase 3.',
-    standard: 'Standard', grayscale: 'Grayscale', dark: 'Dark', none: 'None',
-    home: 'Reset map extent', zoomIn: 'Zoom in', zoomOut: 'Zoom out', info: 'Information',
-    official: 'Official name', admin: 'OSMB level', country: 'Country', osmId: 'OSM ID', boundary: 'Boundary',
-    geometry: 'Geometric data', source: 'Source', date: 'Snapshot', state: 'Administrative unit', role: 'Role',
-    boundaryValue: 'Administrative', openTree: 'Open tree', openDetail: 'Open details', close: 'Close',
-    comingSoon: 'Module planned for a later development phase.', preview: 'Phase 2 · first functional version',
-    dataStatus: 'National outlines are functional. The full hierarchy, SIRUTA/CUATM registers and statistical geometry are not published yet.',
-    choose: 'Choose an entity', about: 'About the atlas', screenreader: 'Select module',
-    attribution: '© OpenStreetMap contributors · boundary data from OSM-Boundaries'
+    title: 'Territorial Atlas', tagline: 'Geography · History · Communities',
+    version: 'Administrative & statistical atlas · Phase 4', tree: 'Territorial tree',
+    search: 'Search names, OSM IDs, SIRUTA, CUATM or NUTS codes',
+    all: 'All', adminView: 'Administrative', statView: 'Statistical',
+    visible: 'Display geometry', details: 'Entity details', select: 'Select a territory on the map or in the tree.',
+    searchResults: 'Search results', searchLimit: 'Showing the first 80 matches. Refine the search for more.',
+    sourceSnapshot: 'OSM-Boundaries · 5 October 2026', sourceNote: 'Original-source geometry; documented OSMB exceptions are retained.',
+    basemap: 'Basemap', standard: 'Standard', grayscale: 'Grayscale', dark: 'Dark', none: 'None',
+    simplified: 'Simplified geometries', home: 'Reset map extent', zoomIn: 'Zoom in', zoomOut: 'Zoom out',
+    official: 'Official name', osmId: 'OSM ID', adminLevel: 'OSM administrative level',
+    statisticalRole: 'Statistical codes', parentAdmin: 'Administrative parent', parentTree: 'Tree parent',
+    source: 'Source', registry: 'Official registry', origin: 'Country',
+    raw: 'Original OSM tags', officialRecord: 'Full official registry record',
+    view: 'Show on map', hide: 'Hide on map', locate: 'Zoom to territory',
+    childrenShow: 'Show children', childrenHide: 'Hide children',
+    about: 'About', description: 'The atlas uses official reference codes and OSM-Boundaries contours. Source discrepancies are documented, not presented as legally certified borders.',
+    planned: 'This module is planned for a later phase.', noResults: 'No matching entities.',
+    loading: 'Loading the certified catalogue…', loadingGeom: 'Loading selected geometries…',
+    loadFailed: 'Unable to load the territorial data. Check your connection and reload the page.',
+    retry: 'Reload', selectEntity: 'Choose an entity', close: 'Close',
+    openTree: 'Territories', openDetail: 'Details', country: 'Country',
+    original: 'Original', selectedCount: 'visible outlines', entityCount: 'entities',
+    dataRole: 'Administrative and statistical roles', noCode: 'Not available in the verified source',
+    sourceBoundary: 'OSM-Boundaries', detailNote: 'Source records are preserved unchanged. Spatial correspondence with OpenStreetMap does not establish legal boundary status.',
+    relationshipNote: 'This OSM geometry shares a CUATM reference with another source representation; it does not imply a second independent legal unit.',
+    dataError: 'Geometry loading failed. Retry by toggling the entity.',
+    expand: 'Expand', collapse: 'Collapse'
   },
   ro: {
-    title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități', tree: 'Arbore teritorial',
-    find: 'Caută în arborele teritorial', visible: 'Afișează geometria', detail: 'Detaliile entității', select: 'Selectează o țară pe hartă sau în arbore.',
-    scope: 'Acoperire geografică inițială', planned: 'Subdiviziunile administrative și statistice vor fi integrate în Etapa 3.',
-    original: 'Previzualizare detaliată', simplified: 'Geometrii simplificate', basemap: 'Hartă de fundal', originalNote: 'Contururi reduse din snapshotul OSMB 2026-10-05. Geometriile integrale vor fi introduse în Etapa 3.',
-    standard: 'Standard', grayscale: 'Tonuri de gri', dark: 'Întunecată', none: 'Fără fundal',
-    home: 'Resetează încadrarea hărții', zoomIn: 'Mărește', zoomOut: 'Micșorează', info: 'Informații',
-    official: 'Denumire oficială', admin: 'Nivel OSMB', country: 'Țară', osmId: 'ID OSM', boundary: 'Limită',
-    geometry: 'Date geometrice', source: 'Sursă', date: 'Snapshot', state: 'Unitate administrativă', role: 'Rol',
-    boundaryValue: 'Administrativă', openTree: 'Deschide arborele', openDetail: 'Deschide detaliile', close: 'Închide',
-    comingSoon: 'Modul planificat pentru o etapă ulterioară.', preview: 'Etapa 2 · prima versiune funcțională',
-    dataStatus: 'Contururile naționale sunt funcționale. Ierarhia completă, registrele SIRUTA/CUATM și geometriile statistice nu sunt încă publicate.',
-    choose: 'Alege o entitate', about: 'Despre atlas', screenreader: 'Selectează modulul',
-    attribution: '© contribuabilii OpenStreetMap · limite din OSM-Boundaries'
+    title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
+    version: 'Atlas administrativ și statistic · Etapa 4', tree: 'Arbore teritorial',
+    search: 'Caută nume, ID OSM, coduri SIRUTA, CUATM sau NUTS',
+    all: 'Toate', adminView: 'Administrativ', statView: 'Statistic',
+    visible: 'Afișează geometria', details: 'Detaliile entității', select: 'Selectează un teritoriu pe hartă sau în arbore.',
+    searchResults: 'Rezultatele căutării', searchLimit: 'Sunt afișate primele 80 de rezultate. Rafinează căutarea pentru restul.',
+    sourceSnapshot: 'OSM-Boundaries · 5 octombrie 2026', sourceNote: 'Geometrii din sursa originală; excepțiile OSMB documentate sunt păstrate.',
+    basemap: 'Hartă de fundal', standard: 'Standard', grayscale: 'Tonuri de gri', dark: 'Întunecată', none: 'Fără fundal',
+    simplified: 'Geometrii simplificate', home: 'Resetează încadrarea hărții', zoomIn: 'Mărește', zoomOut: 'Micșorează',
+    official: 'Denumire oficială', osmId: 'ID OSM', adminLevel: 'Nivel administrativ OSM',
+    statisticalRole: 'Coduri statistice', parentAdmin: 'Părinte administrativ', parentTree: 'Părinte în arbore',
+    source: 'Sursă', registry: 'Registru oficial', origin: 'Țară',
+    raw: 'Tag-uri OSM originale', officialRecord: 'Fișa integrală din registrul oficial',
+    view: 'Afișează pe hartă', hide: 'Ascunde de pe hartă', locate: 'Încadrează teritoriul',
+    childrenShow: 'Afișează copiii', childrenHide: 'Ascunde copiii',
+    about: 'Despre Atlas', description: 'Atlasul folosește coduri oficiale și contururi OSM-Boundaries. Neconcordanțele sursei sunt documentate, fără a prezenta limitele ca fiind certificate juridic.',
+    planned: 'Acest modul va fi dezvoltat într-o etapă ulterioară.', noResults: 'Nicio entitate găsită.',
+    loading: 'Se încarcă catalogul certificat…', loadingGeom: 'Se încarcă geometriile selectate…',
+    loadFailed: 'Nu s-au putut încărca datele teritoriale. Verifică conexiunea și reîncarcă pagina.',
+    retry: 'Reîncarcă', selectEntity: 'Alege o entitate', close: 'Închide',
+    openTree: 'Teritorii', openDetail: 'Detalii', country: 'Țară',
+    original: 'Original', selectedCount: 'contururi vizibile', entityCount: 'entități',
+    dataRole: 'Roluri administrative și statistice', noCode: 'Nedisponibil în sursa verificată',
+    sourceBoundary: 'OSM-Boundaries', detailNote: 'Înregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.',
+    relationshipNote: 'Această geometrie OSM reutilizează un cod CUATM asociat altei reprezentări. Nu rezultă că există două unități juridice independente.',
+    dataError: 'Încărcarea geometriei a eșuat. Reîncearcă schimbând vizibilitatea entității.',
+    expand: 'Extinde', collapse: 'Restrânge'
   }
 } as const;
-const COUNTRY: Record<CountryId, {short: string; official: Record<Lang,string>; osm: string; flag:string}> = {
-  ro: { short: 'România', official: {en:'Romania',ro:'România'}, osm:'90689', flag:'🇷🇴'},
-  md: { short: 'Republica Moldova', official: {en:'Republic of Moldova',ro:'Republica Moldova'}, osm:'58974', flag:'🇲🇩'}
-};
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
+const DEFAULT_VISIBLE = [...ROOT_IDS];
 const style: maplibregl.StyleSpecification = {
   version:8,
-  sources: { osm: { type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256,attribution:'© OpenStreetMap contributors' } },
+  sources:{osm:{type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256,attribution:'© OpenStreetMap contributors'}},
   layers:[
     {id:'backdrop',type:'background',paint:{'background-color':'#f1f5ef'}},
     {id:'basemap',type:'raster',source:'osm',paint:{'raster-opacity':0.85}}
   ]
 };
-const INITIAL_VISIBLE: CountryId[] = ['ro','md'];
 
-function territorySvgPaths(instance:MapLibreMap,detail:'detailed'|'simplified'):Record<CountryId,string> {
-  const result:Record<CountryId,string>={ro:'',md:''};
-  for(const feature of getCountryGeoJSON(detail).features) {
-    const id=feature.properties?.id as CountryId | undefined;
-    if(!id || feature.geometry.type!=='Polygon')continue;
-    result[id]=feature.geometry.coordinates.map(ring=>ring.map((coord,i)=>{
-      const p=instance.project([coord[0],coord[1]]);
-      return (i===0?'M':'L')+p.x.toFixed(1)+','+p.y.toFixed(1);
-    }).join(' ')+' Z').join(' ');
+function restoreVisible(): string[] {
+  try {
+    const saved = JSON.parse(localStorage.getItem('atlas-visible-phase4') || 'null');
+    if(Array.isArray(saved) && saved.every(s => typeof s === 'string')) return [...new Set(saved)];
+  } catch { /* Use safe defaults if an older preference cannot be read. */ }
+  return DEFAULT_VISIBLE;
+}
+function createHierarchy(nodes: Territory[], view: TreeView): Map<string, Territory[]> {
+  const map = new Map<string, Territory[]>();
+  for (const node of nodes) {
+    if(view === 'administrative' && !node.roles.includes('administrative')) continue;
+    if(view === 'statistical' && !node.statisticalRoles.length && !ROOT_IDS.includes(node.id as typeof ROOT_IDS[number])) continue;
+    const parent = view === 'administrative' ? node.administrativeParentId : node.treeParentId;
+    if(!parent) continue;
+    const arr=map.get(parent) || [];
+    arr.push(node); map.set(parent, arr);
   }
-  return result;
+  for(const arr of map.values())arr.sort((a,b) => {
+    const aStat=a.roles.includes('statistical')&&!a.roles.includes('administrative')?0:1;
+    const bStat=b.roles.includes('statistical')&&!b.roles.includes('administrative')?0:1;
+    if(aStat!==bStat)return aStat-bStat;
+    const aCode=a.statisticalRoles[0]?.code,bCode=b.statisticalRoles[0]?.code;
+    if(view!=='administrative' && aCode && bCode)return aCode.localeCompare(bCode,'en',{numeric:true});
+    if((a.adminLevel??0)!==(b.adminLevel??0) && view==='administrative')return (a.adminLevel??0)-(b.adminLevel??0);
+    return a.name.localeCompare(b.name,'ro');
+  });
+  return map;
+}
+function featureCountryCode(id: string): string {
+  return id === 'osm-r90689' ? 'ro' : id === 'osm-r58974' ? 'md' : '';
+}
+function mapCountryFeatures(features: Map<string, TerritoryFeature>): FeatureCollection {
+  return {
+    type:'FeatureCollection',
+    features:ROOT_IDS.map(id => features.get(id)).filter((x): x is TerritoryFeature => Boolean(x))
+      .map(feature => ({
+        type:'Feature', id:featureCountryCode(feature.properties.atlasId),
+        properties:{...feature.properties,id:featureCountryCode(feature.properties.atlasId)},
+        geometry:feature.geometry
+      }))
+  };
+}
+function roleLabel(node: Territory): string {
+  const admin=node.adminLevel===null?'':('ADM ' + node.adminLevel);
+  const stat=node.statisticalRoles.map(r=> (r.classification==='NUTS'?'NUTS ': 'NTS ') + r.level).join(' · ');
+  return [admin,stat].filter(Boolean).join(' · ');
 }
 
-
 export default function App() {
-  const mapEl=useRef<HTMLDivElement>(null);
-  const map=useRef<MapLibreMap|null>(null);
-  const [lang,setLang]=useState<Lang>(()=>localStorage.getItem('atlas-lang')==='ro'?'ro':'en');
-  const [module,setModule]=useState<ModuleId>('administrative');
-  const [selected,setSelected]=useState<CountryId|null>(null);
-  const [visible,setVisible]=useState<CountryId[]>(INITIAL_VISIBLE);
-  const [simplified,setSimplified]=useState<boolean>(()=>localStorage.getItem('atlas-simple')==='true');
-  const [basemap,setBasemap]=useState<Basemap>('standard');
-  const [search,setSearch]=useState('');
-  const [expanded,setExpanded]=useState<Record<CountryId,boolean>>({ro:false,md:false});
-  const [drawer,setDrawer]=useState<'tree'|'detail'|null>(null);
-  const [ready,setReady]=useState(false);
-  const modeRef=useRef<'detailed'|'simplified'>(localStorage.getItem('atlas-simple')==='true'?'simplified':'detailed');
-  const [projected,setProjected]=useState<Record<CountryId,string>>({ro:'',md:''});
-  const [projectionSize,setProjectionSize]=useState({width:1,height:1});
-  const t=LANG[lang];
+  const mapEl = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<MapLibreMap | null>(null);
+  const loadedRef = useRef<Map<string,TerritoryFeature>>(new Map());
+  const [lang,setLang] = useState<Locale>(() => localStorage.getItem('atlas-lang') === 'ro'?'ro':'en');
+  const [module,setModule] = useState<ModuleId>('administrative');
+  const [catalog,setCatalog] = useState<Territory[]>([]);
+  const [catalogError,setCatalogError] = useState<string | null>(null);
+  const [selected,setSelected] = useState<string | null>(null);
+  const [visible,setVisible] = useState<string[]>(restoreVisible);
+  const [expanded,setExpanded] = useState<string[]>([]);
+  const [search,setSearch] = useState('');
+  const [treeView,setTreeView] = useState<TreeView>('all');
+  const [simplified,setSimplified] = useState<boolean>(()=>localStorage.getItem('atlas-simple')==='true');
+  const [basemap,setBasemap] = useState<Basemap>('standard');
+  const [ready,setReady] = useState(false);
+  const [rootsLoaded,setRootsLoaded] = useState(false);
+  const [geomLoading,setGeomLoading] = useState(false);
+  const [geomError,setGeomError] = useState(false);
+  const [drawer,setDrawer] = useState<Drawer>(null);
 
-  useEffect(()=>{localStorage.setItem('atlas-lang',lang);document.documentElement.lang=lang;document.title=t.title;},[lang,t.title]);
-  useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
+  const t=WORDS[lang];
+  const mode:GeometryMode=simplified?'simplified':'detailed';
+  const nodes = useMemo(()=>new Map(catalog.map(n=>[n.id,n])),[catalog]);
+  const hierarchy = useMemo(()=>createHierarchy(catalog,treeView),[catalog,treeView]);
+  const visibleSet = useMemo(()=>new Set(visible),[visible]);
+  const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
+  const currentNode=selected?nodes.get(selected) || null:null;
+  const searchIndex = useMemo(()=>catalog.map(node=>({node,text:lookupKeys(node)})),[catalog]);
+  const matches = useMemo(()=>{
+    if(!search.trim())return [];
+    const query=normalize(search);
+    return searchIndex.filter(x=>x.text.includes(query) && (
+      treeView==='all' || (treeView==='administrative' && x.node.roles.includes('administrative')) ||
+      (treeView==='statistical' && x.node.statisticalRoles.length>0)
+    )).slice(0,81).map(x=>x.node);
+  },[search,searchIndex,treeView]);
 
   useEffect(()=>{
-    if(!mapEl.current||map.current)return;
+    let active=true;
+    loadCatalog().then(d => {if(active)setCatalog(d.entities);})
+      .catch(e=>{if(active)setCatalogError(String(e));});
+    return ()=>{active=false;};
+  },[]);
+  useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
+  useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
+  useEffect(()=>{localStorage.setItem('atlas-visible-phase4',JSON.stringify(visible));},[visible]);
+
+  useEffect(()=>{
+    if(!catalog.length)return;
+    const set=new Set(catalog.map(x=>x.id));
+    setVisible(old=>old.filter(id=>set.has(id)));
+  },[catalog]);
+
+  useEffect(()=>{
+    if(!mapEl.current || mapRef.current)return;
     const instance=new maplibregl.Map({container:mapEl.current,style,center:[25.4,46.05],zoom:5.5,attributionControl:false,dragRotate:false,pitchWithRotate:false});
-    map.current=instance;
+    mapRef.current=instance;
     instance.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
     instance.on('load',()=>{
-      instance.addSource('borders',{type:'geojson',data:getCountryGeoJSON(localStorage.getItem('atlas-simple')==='true'?'simplified':'detailed')});
-      instance.addLayer({id:'country-fill',type:'fill',source:'borders',paint:{'fill-color':'#e2ece5','fill-opacity':0.31},filter:['in',['get','id'],['literal',INITIAL_VISIBLE]]});
-      instance.addLayer({id:'country-outline',type:'line',source:'borders',paint:{'line-color':'#185440','line-width':2.4,'line-opacity':0.95},filter:['in',['get','id'],['literal',INITIAL_VISIBLE]]});
-      instance.addLayer({id:'country-highlight',type:'line',source:'borders',paint:{'line-color':'#dca237','line-width':4},filter:['==',['get','id'],'__none__']});
-      instance.on('click','country-fill',(event)=>{
-        const id=event.features?.[0]?.properties?.id;
-        if(id==='ro'||id==='md'){setSelected(id);setDrawer('detail');}
+      instance.addSource('borders',{type:'geojson',data:getCountryGeoJSON('simplified')});
+      instance.addLayer({id:'country-fill',type:'fill',source:'borders',paint:{'fill-color':'#dce9dd','fill-opacity':0.31},filter:['in',['get','id'],['literal',['ro','md']]]});
+      instance.addLayer({id:'country-outline',type:'line',source:'borders',paint:{'line-color':'#185440','line-width':2.3},filter:['in',['get','id'],['literal',['ro','md']]]});
+      instance.addLayer({id:'country-highlight',type:'line',source:'borders',paint:{'line-color':'#e6a636','line-width':3.8},filter:['==',['get','id'],'__none__']});
+      instance.addSource('entities',{type:'geojson',data:EMPTY_FEATURES});
+      instance.addLayer({id:'entity-fill',type:'fill',source:'entities',paint:{
+        'fill-color':['case',['==',['get','roleKind'],'statistical'],'#a6a6e6','#6ea983'],
+        'fill-opacity':['case',['==',['get','roleKind'],'statistical'],0.32,0.25]
+      }});
+      instance.addLayer({id:'entity-outline',type:'line',source:'entities',paint:{
+        'line-color':['case',['==',['get','roleKind'],'statistical'],'#7066b3','#15533e'],
+        'line-width':['case',['==',['get','roleKind'],'statistical'],1.8,1.6],
+        'line-opacity':0.94
+      }});
+      instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
+      instance.on('click','entity-fill',event=>{
+        const id=event.features?.[0]?.properties?.atlasId;
+        if(typeof id==='string'){setSelected(id);setDrawer('detail');}
       });
-      instance.on('mouseenter','country-fill',()=>{instance.getCanvas().style.cursor='pointer';});
-      instance.on('mouseleave','country-fill',()=>{instance.getCanvas().style.cursor='';});
-      const syncOutline=()=>{
-        const bounds=instance.getContainer().getBoundingClientRect();
-        if(bounds.width<=0||bounds.height<=0)return;
-        setProjectionSize({width:bounds.width,height:bounds.height});
-        setProjected(territorySvgPaths(instance,modeRef.current));
-      };
-      instance.on('move',syncOutline);
-      instance.on('resize',syncOutline);
-      instance.on('idle',syncOutline);
+      instance.on('click','entity-outline',event=>{
+        const id=event.features?.[0]?.properties?.atlasId;
+        if(typeof id==='string'){setSelected(id);setDrawer('detail');}
+      });
+      instance.on('click','country-fill',event=>{
+        const country=event.features?.[0]?.properties?.id;
+        if(country==='ro'||country==='md'){setSelected(country==='ro'?'osm-r90689':'osm-r58974');setDrawer('detail');}
+      });
+      for(const layer of ['country-fill','entity-fill','entity-outline']) {
+        instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
+        instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
+      }
       instance.fitBounds(BOUNDS,{padding:45,duration:0});
-      syncOutline();
       setReady(true);
     });
-    return ()=>{map.current=null;instance.remove();};
+    return ()=>{mapRef.current=null;instance.remove();};
   },[]);
 
   useEffect(()=>{
-    if(!ready||!map.current)return;
-    const filter: any=['in',['get','id'],['literal',visible]];
-    map.current.setFilter('country-fill',filter);
-    map.current.setFilter('country-outline',filter);
+    if(!ready||!mapRef.current)return;
+    const map=mapRef.current;
+    const roots=visible.filter(id=>ROOT_IDS.includes(id as typeof ROOT_IDS[number])).map(featureCountryCode);
+    const filter: maplibregl.FilterSpecification=['in',['get','id'],['literal',roots]];
+    map.setFilter('country-fill',filter);
+    map.setFilter('country-outline',filter);
   },[visible,ready]);
-
   useEffect(()=>{
-    if(!ready||!map.current)return;
-    map.current.setFilter('country-highlight',['==',['get','id'],selected??'__none__']);
+    if(!ready||!mapRef.current)return;
+    const map=mapRef.current;
+    map.setFilter('country-highlight',['==',['get','id'],featureCountryCode(selected||'') || '__none__']);
+    map.setFilter('entity-highlight',['==',['get','atlasId'],selected || '__none__']);
   },[selected,ready]);
 
   useEffect(()=>{
-    if(!ready||!map.current)return;
-    const source=map.current.getSource('borders') as GeoJSONSource;
-    modeRef.current=simplified?'simplified':'detailed';
-    source.setData(getCountryGeoJSON(modeRef.current));
-    setProjected(territorySvgPaths(map.current,modeRef.current));
-  },[simplified,ready]);
+    if(!ready||!catalog.length||!mapRef.current)return;
+    let active=true;
+    setRootsLoaded(false);
+    loadGeometryShard('roots',mode).then(shapes=>{
+      if(!active||!mapRef.current)return;
+      const source=mapRef.current.getSource('borders') as GeoJSONSource | undefined;
+      source?.setData(mapCountryFeatures(shapes));
+      setRootsLoaded(true);
+    }).catch(()=>{if(active)setGeomError(true);});
+    return ()=>{active=false;};
+  },[catalog.length,mode,ready]);
 
   useEffect(()=>{
-    if(!ready||!map.current)return;
-    const m=map.current;
+    if(!ready||!catalog.length||!mapRef.current)return;
+    let active=true;
+    const ids=visible.filter(id=>nodes.has(id) && !ROOT_IDS.includes(id as typeof ROOT_IDS[number]));
+    const shards=[...new Set(ids.map(id=>nodes.get(id)!.geometryShard))];
+    if(!shards.length){
+      const source=mapRef.current.getSource('entities') as GeoJSONSource | undefined;
+      source?.setData(EMPTY_FEATURES);
+      setGeomLoading(false);return;
+    }
+    setGeomLoading(true);setGeomError(false);
+    Promise.all(shards.map(shard=>loadGeometryShard(shard,mode))).then(collections=>{
+      if(!active||!mapRef.current)return;
+      const features=new Map<string,TerritoryFeature>();
+      for(const collection of collections)for(const [id,feature] of collection)features.set(id,feature);
+      loadedRef.current=features;
+      const source=mapRef.current.getSource('entities') as GeoJSONSource | undefined;
+      source?.setData(asDisplayFeatures(ids,nodes,features));
+      setGeomLoading(false);
+    }).catch(()=>{if(active){setGeomLoading(false);setGeomError(true);}});
+    return ()=>{active=false;};
+  },[catalog.length,mode,nodes,ready,visible]);
+
+  useEffect(()=>{
+    if(!ready||!mapRef.current)return;
+    const m=mapRef.current;
     m.setLayoutProperty('basemap','visibility',basemap==='none'?'none':'visible');
-    m.setPaintProperty('basemap','raster-saturation',basemap==='grayscale'?-1:basemap==='dark'?-1:0);
-    m.setPaintProperty('basemap','raster-brightness-max',basemap==='dark'?0.40:1);
+    m.setPaintProperty('basemap','raster-saturation',basemap==='grayscale'||basemap==='dark'?-1:0);
+    m.setPaintProperty('basemap','raster-brightness-max',basemap==='dark'?0.4:1);
     m.setPaintProperty('basemap','raster-opacity',basemap==='none'?0:0.85);
     m.setPaintProperty('backdrop','background-color',basemap==='dark'?'#14241e':'#f1f5ef');
   },[basemap,ready]);
 
-  const toggle=(id:CountryId)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]);
-  const select=(id:CountryId)=>{setSelected(id);setDrawer('detail');};
-  const reset=()=>map.current?.fitBounds(BOUNDS,{padding:45,duration:700});
-  const tree=<section className="tree-content">
-    <div className="panel-heading"><span className="eyebrow">{t.scope}</span><h2>{t.tree}</h2></div>
-    <label className="search">
-      <span aria-hidden="true">⌕</span>
-      <input type="search" placeholder={t.find} aria-label={t.find} value={search} onChange={e=>setSearch(e.target.value)}/>
+  const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
+  const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
+    const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
+  }),[]);
+  const choose = useCallback((id:string)=>{setSelected(id);setDrawer('detail');},[]);
+  const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
+  async function locate(id:string){
+    const node=nodes.get(id);
+    if(!node||!mapRef.current)return;
+    try{
+      const features=await loadGeometryShard(node.geometryShard,mode);
+      const feature=features.get(id);
+      if(!feature)throw Error('Missing Atlas geometry for '+id);
+      mapRef.current.fitBounds(bboxOfGeometry(feature.geometry),{padding:window.innerWidth<700?36:85,duration:650,maxZoom:10});
+    }catch{setGeomError(true);}
+  }
+  function chooseSearch(id:string){
+    choose(id);setSearch('');
+    let cursor=nodes.get(id),depth=0;
+    const ancestry:string[]=[];
+    while(cursor?.treeParentId&&depth++<24){ancestry.push(cursor.treeParentId);cursor=nodes.get(cursor.treeParentId);}
+    setExpanded(old=>[...new Set([...old,...ancestry])]);
+  }
+
+  const treeItem=(node:Territory,depth:number,searchMatch=false):React.ReactNode=>{
+    const childNodes=hierarchy.get(node.id)||[];
+    const isExpanded=expandedSet.has(node.id);
+    const isChecked=visibleSet.has(node.id);
+    const rowLabel=labelOf(node,lang);
+    const stat=node.statisticalRoles.length>0;
+    return <div className="territory-branch" key={node.id} role={searchMatch?'none':'none'}>
+      <div className={'tree-line'+(selected===node.id?' is-selected':'')} role="treeitem"
+           aria-level={searchMatch?1:depth+1} aria-selected={selected===node.id}
+           aria-expanded={!searchMatch&&childNodes.length?isExpanded:undefined}
+           style={{paddingLeft: Math.min(depth,7)*14+3}}>
+        {childNodes.length&&!searchMatch?
+          <button className="expand-button" aria-label={(isExpanded?t.collapse:t.expand)+' '+rowLabel}
+            onClick={()=>setExpanded(old=>isExpanded?old.filter(id=>id!==node.id):[...old,node.id])}>
+            {isExpanded?'⌄':'›'}</button>:
+          <span className="tree-spacer" aria-hidden="true">·</span>}
+        <input type="checkbox" checked={isChecked} aria-label={t.visible+': '+rowLabel}
+          onChange={()=>toggleVisible(node.id)} />
+        <button className="tree-label" aria-label={rowLabel} title={node.officialName}
+          onClick={()=>searchMatch?chooseSearch(node.id):choose(node.id)}>
+          <span className="node-name">{rowLabel}</span>
+          <span className={'node-level'+(stat?' is-stat':'')}>{roleLabel(node)}</span>
+        </button>
+        {searchMatch&&<span className="search-country">{node.country}</span>}
+      </div>
+      {!searchMatch&&isExpanded&&childNodes.length>0&&<div className="tree-children" role="group">
+        {childNodes.length>1&&<div className="children-actions" style={{paddingLeft:Math.min(depth,7)*14+31}}>
+          <button onClick={()=>toggleChildren(childNodes.map(n=>n.id),true)}>{t.childrenShow}</button>
+          <button onClick={()=>toggleChildren(childNodes.map(n=>n.id),false)}>{t.childrenHide}</button>
+        </div>}
+        {childNodes.map(child=>treeItem(child,depth+1))}
+      </div>}
+    </div>;
+  };
+
+  const treePanel=<section className="tree-content">
+    <div className="panel-heading"><span className="eyebrow">{t.sourceSnapshot}</span><h2>{t.tree}</h2></div>
+    <label className="search"><span aria-hidden="true">⌕</span>
+      <input type="search" placeholder={t.search} aria-label={t.search} value={search} onChange={e=>setSearch(e.target.value)} />
     </label>
-    <div className="tree-list" role="tree" aria-label={t.tree}>
-      {(['ro','md'] as CountryId[]).filter(id=>(COUNTRY[id].official[lang]+' '+COUNTRY[id].osm).toLowerCase().includes(search.toLowerCase())||!search.trim()).map(id=><div key={id} className="tree-group">
-        <div className={'tree-line'+(selected===id?' is-selected':'')} role="treeitem" aria-selected={selected===id} aria-expanded={expanded[id]}>
-          <button className="expand-button" aria-label={(expanded[id]?'Collapse ':'Expand ')+COUNTRY[id].official[lang]} onClick={()=>setExpanded(x=>({...x,[id]:!x[id]}))}>{expanded[id]?'⌄':'›'}</button>
-          <input type="checkbox" checked={visible.includes(id)} aria-label={t.visible+': '+COUNTRY[id].official[lang]} onChange={()=>toggle(id)}/>
-          <button className="tree-label" onClick={()=>select(id)}>{COUNTRY[id].flag} {COUNTRY[id].official[lang]}</button>
-        </div>
-        {expanded[id]&&<p className="tree-placeholder">{t.planned}</p>}
-      </div>)}
+    <div className="tree-filters" role="group" aria-label={t.dataRole}>
+      {(['all','administrative','statistical'] as TreeView[]).map(key=><button key={key}
+        aria-pressed={treeView===key} className={treeView===key?'active':''} onClick={()=>setTreeView(key)}>
+        {key==='all'?t.all:key==='administrative'?t.adminView:t.statView}</button>)}
     </div>
-    <div className="tree-footnote">{t.dataStatus}</div>
+    {catalogError?<div className="loading-msg" role="alert">{t.loadFailed}<button onClick={()=>window.location.reload()}>{t.retry}</button></div>:
+      catalog.length===0?<p className="loading-msg" role="status">{t.loading}</p>:
+      <div className="tree-list" role="tree" aria-label={t.tree}>
+        {search.trim()?<>
+          <div className="results-heading">{t.searchResults} · {Math.min(matches.length,80)}</div>
+          {matches.length?matches.slice(0,80).map(n=>treeItem(n,0,true)):<p className="tree-empty">{t.noResults}</p>}
+          {matches.length>80&&<p className="tree-hint">{t.searchLimit}</p>}
+        </>:ROOT_IDS.map(id=>{const n=nodes.get(id);return n?treeItem(n,0):null;})}
+      </div>}
+    <div className="tree-footnote"><strong>{catalog.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.entityCount}</strong>
+      <span> · {visible.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.selectedCount}</span>
+      <p>{t.description}</p>
+    </div>
   </section>;
 
   const details=<section className="detail-content">
-    <div className="panel-heading"><span className="eyebrow">{t.info}</span><h2>{t.detail}</h2></div>
-    {selected ? <div className="entity-card">
-      <div className="entity-title"><span className="flag" aria-hidden="true">{COUNTRY[selected].flag}</span><div><h3>{COUNTRY[selected].official[lang]}</h3><span>{t.state}</span></div></div>
-      <div className="detail-section">{t.info}</div>
+    <div className="panel-heading"><span className="eyebrow">{t.sourceSnapshot}</span><h2>{t.details}</h2></div>
+    {currentNode?<div className="entity-card">
+      <div className="entity-title">
+        <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
+        <div><h3>{currentNode.officialName}</h3><small>{roleLabel(currentNode)}</small></div>
+      </div>
+      <div className="entity-actions">
+        <button onClick={()=>toggleVisible(currentNode.id)}>{visibleSet.has(currentNode.id)?t.hide:t.view}</button>
+        <button className="secondary" onClick={()=>void locate(currentNode.id)}>{t.locate}</button>
+      </div>
+      <div className="detail-section">{t.details}</div>
       <dl className="metadata">
-        <dt>{t.official}</dt><dd>{COUNTRY[selected].official[lang]}</dd>
-        <dt>{t.admin}</dt><dd>2</dd>
-        <dt>{t.osmId}</dt><dd><a href={'https://www.openstreetmap.org/relation/'+COUNTRY[selected].osm} target="_blank" rel="noreferrer">{COUNTRY[selected].osm} ↗</a></dd>
-        <dt>{t.boundary}</dt><dd>{t.boundaryValue}</dd>
-        <dt>{t.role}</dt><dd>{t.state}</dd>
+        <dt>{t.official}</dt><dd>{currentNode.officialName}</dd>
+        <dt>{t.country}</dt><dd>{currentNode.country==='RO'?'România':'Republica Moldova'}</dd>
+        <dt>{t.adminLevel}</dt><dd>{currentNode.adminLevel===null?'':currentNode.adminLevel}</dd>
+        <dt>{t.osmId}</dt><dd>{currentNode.osmRelationId!==null?
+          <a href={'https://www.openstreetmap.org/relation/'+currentNode.osmRelationId} target="_blank" rel="noreferrer">{currentNode.osmRelationId} ↗</a>:null}</dd>
+        <dt>{t.registry}</dt><dd>{currentNode.registry?currentNode.registry.system+' '+currentNode.registry.code:null}</dd>
+        <dt>{t.statisticalRole}</dt><dd>{codeOf(currentNode)||null}</dd>
+        <dt>{t.parentAdmin}</dt><dd>{currentNode.administrativeParentId?nodes.get(currentNode.administrativeParentId)?.officialName:null}</dd>
+        <dt>{t.parentTree}</dt><dd>{currentNode.treeParentId?labelOf(nodes.get(currentNode.treeParentId)!,lang):null}</dd>
       </dl>
-      <div className="detail-section">{t.geometry}</div>
+      {currentNode.registryIdentityReviewStatus&&<p className="source-caveat">{t.relationshipNote}</p>}
+      {currentNode.registry?.record&&<details className="raw-details">
+        <summary>{t.officialRecord}</summary>
+        <dl className="raw-tags">{Object.entries(currentNode.registry.record).map(([key,value])=>
+          <div key={key}><dt>{key}</dt><dd>{value===null?'':String(value)}</dd></div>)}</dl>
+      </details>}
+      <details className="raw-details">
+        <summary>{t.raw} ({Object.keys(currentNode.sourceTags||{}).length})</summary>
+        <dl className="raw-tags">{Object.entries(currentNode.sourceTags||{}).sort(([a],[b])=>a.localeCompare(b)).map(([key,value])=>
+          <div key={key}><dt>{key}</dt><dd>{value}</dd></div>)}</dl>
+      </details>
+      <div className="detail-section">{t.source}</div>
       <dl className="metadata">
-        <dt>{t.source}</dt><dd>OSM-Boundaries</dd>
-        <dt>{t.date}</dt><dd>2026-10-05</dd>
+        <dt>{t.source}</dt><dd>{t.sourceBoundary}</dd>
+        <dt>{t.original}</dt><dd>2026-10-05</dd>
       </dl>
-      <p className="note">{t.originalNote}</p>
-    </div>:<div className="empty-detail"><span>◇</span><h3>{t.choose}</h3><p>{t.select}</p></div>}
+      <p className="note">{t.detailNote}</p>
+    </div>:<div className="empty-detail"><span>◇</span><h3>{t.selectEntity}</h3><p>{t.select}</p></div>}
   </section>;
 
   return <div className="app">
     <header className="site-header">
       <div className="brand-symbol" aria-hidden="true">◎</div>
       <div className="brand"><strong>{t.title}</strong><small>{t.tagline}</small></div>
-      <span className="version">{t.preview}</span>
-      <div className="language" aria-label="Language"><button className={lang==='en'?'active':''} onClick={()=>setLang('en')} aria-pressed={lang==='en'}>EN</button><button className={lang==='ro'?'active':''} onClick={()=>setLang('ro')} aria-pressed={lang==='ro'}>RO</button></div>
+      <span className="version">{t.version}</span>
+      <div className="language" aria-label="Language">
+        <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
+        <button className={lang==='ro'?'active':''} aria-pressed={lang==='ro'} onClick={()=>setLang('ro')}>RO</button>
+      </div>
     </header>
     <div className="workspace">
-      <nav className="module-rail" aria-label={t.screenreader}>
-        {MODULES.map(item=><button key={item.id} className={module===item.id?'active':''} onClick={()=>setModule(item.id)} title={item[lang]} aria-label={item[lang]} aria-current={module===item.id?'page':undefined}><span className="module-symbol">{item.symbol}</span><span className="module-short">{item[lang].split(' ')[0].slice(0,8)}</span></button>)}
-      </nav>
-      <aside className="tree-sidebar">{tree}</aside>
+      <nav className="module-rail" aria-label="Modules">{MODULES.map(item=>
+        <button key={item.id} title={item[lang]} aria-label={item[lang]} aria-current={module===item.id?'page':undefined}
+          className={module===item.id?'active':''} onClick={()=>setModule(item.id)}>
+          <span className="module-symbol">{item.symbol}</span>
+          <span className="module-short">{item[lang].split(' ')[0].slice(0,8)}</span>
+        </button>)}</nav>
+      <aside className="tree-sidebar">{treePanel}</aside>
       <main className="map-area">
-        <div ref={mapEl} className="map-canvas" aria-label="Territorial map"/>
-        <svg className="territory-overlay" aria-hidden="true" viewBox={`0 0 ${projectionSize.width} ${projectionSize.height}`} preserveAspectRatio="none">
-          {(["ro","md"] as CountryId[]).filter(id=>visible.includes(id)).map(id=><path key={id} d={projected[id]} fill={selected===id?"#f3d6a0":"#dceade"} fillOpacity="0.29" stroke={selected===id?"#dca237":"#185440"} strokeWidth={selected===id?4:2.5} strokeLinejoin="round" />)}
-        </svg>
+        <div className="map-canvas" ref={mapEl} aria-label="Territorial map" />
+        {!rootsLoaded&&catalog.length>0&&<span className="map-boot-status" role="status">{t.loadingGeom}</span>}
         <div className="map-controls">
-          <label className="basemap-select"><span>▧</span><span className="control-caption">{t.basemap}</span>
+          <label className="basemap-select"><span aria-hidden="true">▧</span><span className="control-caption">{t.basemap}</span>
             <select value={basemap} onChange={e=>setBasemap(e.target.value as Basemap)} aria-label={t.basemap}>
-              {(['standard','grayscale','dark','none'] as Basemap[]).map(key=><option key={key} value={key}>{t[key]}</option>)}
+              {(['standard','grayscale','dark','none'] as Basemap[]).map(key=>
+                <option key={key} value={key}>{t[key]}</option>)}
             </select>
           </label>
-          <label className="simplify-control"><input type="checkbox" checked={simplified} onChange={e=>setSimplified(e.target.checked)} /><span className="toggle-track"/><span className="control-caption">{t.simplified}</span></label>
+          <label className="simplify-control"><input type="checkbox" checked={simplified} onChange={e=>setSimplified(e.target.checked)} />
+            <span className="toggle-track"/><span className="control-caption">{t.simplified}</span>
+          </label>
         </div>
         <div className="zoom-controls">
-          <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>map.current?.zoomIn()}>+</button>
-          <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>map.current?.zoomOut()}>−</button>
+          <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>mapRef.current?.zoomIn()}>+</button>
+          <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>
           <button aria-label={t.home} title={t.home} onClick={reset}>⌂</button>
         </div>
-        {module!=='administrative'&&<div className="module-notice" role="status"><strong>{MODULES.find(item=>item.id===module)?.[lang]}</strong><span>{t.comingSoon}</span></div>}
-        <div className="map-note">{t.originalNote}</div>
-        <div className="mobile-controls"><button onClick={()=>setDrawer('tree')}>☷ {t.openTree}</button><button onClick={()=>setDrawer('detail')}>▤ {t.openDetail}</button></div>
+        {module!=='administrative'&&<div className="module-notice" role="status">
+          <strong>{MODULES.find(x=>x.id===module)?.[lang]}</strong><span>{t.planned}</span></div>}
+        <div className="map-note">{geomLoading?t.loadingGeom:geomError?t.dataError:t.sourceNote}</div>
+        <div className="map-legend" aria-label={t.dataRole}><span className="legend-admin"/> {t.adminView}
+          <span className="legend-stat"/> {t.statView}</div>
+        <div className="mobile-controls">
+          <button onClick={()=>setDrawer('tree')}>☷ {t.openTree}</button>
+          <button onClick={()=>setDrawer('detail')}>▤ {t.openDetail}</button>
+        </div>
       </main>
       <aside className="detail-sidebar">{details}</aside>
     </div>
     {drawer&&<div className="drawer-screen" role="presentation" onClick={()=>setDrawer(null)}>
-      <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true" aria-label={drawer==='tree'?t.tree:t.detail} onClick={e=>e.stopPropagation()}>
+      <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true"
+        aria-label={drawer==='tree'?t.tree:t.details} onClick={e=>e.stopPropagation()}>
         <button className="drawer-close" aria-label={t.close} onClick={()=>setDrawer(null)}>×</button>
-        {drawer==='tree'?tree:details}
+        {drawer==='tree'?treePanel:details}
       </div>
     </div>}
   </div>;

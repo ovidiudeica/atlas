@@ -1,7 +1,7 @@
 import type { FeatureCollection } from 'geojson';
-// Phase 2 render-only outlines derived from the 2026-10-05 OSM-Boundaries archives.
-// These are reduced polygon previews, NOT the complete original polygons.
-// Phase 3 will publish immutable full-resolution geometry data and provenance manifests.
+// Legacy Phase 2 lightweight country-border previews for the map's initial frame.
+// Phase 4 replaces them with immutable, certified Phase 3 full-resolution borders
+// as soon as the on-demand static root shard is available. These are not exports.
 // Standard Google polyline encoding, precision 1e5, ring coordinates lat/lon.
 const outlines = {
   ro: {
