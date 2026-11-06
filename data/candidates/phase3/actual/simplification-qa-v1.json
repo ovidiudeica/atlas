@@ -1,0 +1,106 @@
+{
+  "schema": "atlas-topological-simplification-qa-v1",
+  "source": "candidate v2",
+  "method": "Mapshaper weighted Visvalingam 50% keep-shapes; shared-topology per country across administrative and statistical layers; JSTS valid polygon test and Turf spherical area drift",
+  "groups": {
+    "ro-admin": {
+      "features": 3229,
+      "originalPoints": 1763447,
+      "simplifiedPoints": 889997,
+      "reductionPercent": 49.53083364569505,
+      "invalidSimplified": 0,
+      "medianAreaDriftPercent": 0.006731210214619679,
+      "p95AreaDriftPercent": 0.03338941287543565,
+      "maxAreaDriftPercent": 0.604402393964062,
+      "countOver1Pct": 0
+    },
+    "ro-stat": {
+      "features": 12,
+      "originalPoints": 157765,
+      "simplifiedPoints": 74035,
+      "reductionPercent": 53.072607992900835,
+      "invalidSimplified": 0,
+      "medianAreaDriftPercent": 0.000038915074982803254,
+      "p95AreaDriftPercent": 0.000750227427947455,
+      "maxAreaDriftPercent": 0.000750227427947455,
+      "countOver1Pct": 0
+    },
+    "md-admin": {
+      "features": 1036,
+      "originalPoints": 362889,
+      "simplifiedPoints": 189526,
+      "reductionPercent": 47.77301047978858,
+      "invalidSimplified": 0,
+      "medianAreaDriftPercent": 0.0032965514535397483,
+      "p95AreaDriftPercent": 0.018633788629067335,
+      "maxAreaDriftPercent": 0.1333847854556412,
+      "countOver1Pct": 0
+    },
+    "md-stat": {
+      "features": 6,
+      "originalPoints": 45472,
+      "simplifiedPoints": 29639,
+      "reductionPercent": 34.819229415904296,
+      "invalidSimplified": 0,
+      "medianAreaDriftPercent": 0.00010614291395710741,
+      "p95AreaDriftPercent": 0.00011494072558725237,
+      "maxAreaDriftPercent": 0.00011494072558725237,
+      "countOver1Pct": 0
+    }
+  },
+  "originalSourceExceptionComparison": [
+    {
+      "group": "ro-admin",
+      "a": "osm-r14879493",
+      "b": "osm-r10624200",
+      "type": "overlap",
+      "originalKm2": 0.8942631627458073,
+      "simplifiedKm2": 0.8872948595070548,
+      "deltaKm2": -0.006968303238752531,
+      "deltaPct": -0.7792228875174252
+    },
+    {
+      "group": "ro-admin",
+      "a": "osm-r14879461",
+      "b": "osm-r10624200",
+      "type": "overlap",
+      "originalKm2": 0.16081106118187508,
+      "simplifiedKm2": 0.15800566514802022,
+      "deltaKm2": -0.002805396033854835,
+      "deltaPct": -1.7445292713303915
+    },
+    {
+      "group": "md-admin",
+      "a": "osm-r19118040",
+      "b": "osm-r19118596",
+      "type": "overlap",
+      "originalKm2": 0.238532475369946,
+      "simplifiedKm2": 0.23874246724994355,
+      "deltaKm2": 0.00020999187999754212,
+      "deltaPct": 0.08803492257054744
+    },
+    {
+      "group": "md-admin",
+      "a": "osm-r12463200",
+      "b": "osm-r65343",
+      "type": "outside",
+      "originalKm2": 0.5637273322215445,
+      "simplifiedKm2": 0.5640372989791904,
+      "deltaKm2": 0.0003099667576459469,
+      "deltaPct": 0.05498522777393561
+    },
+    {
+      "group": "md-admin",
+      "a": "osm-r19118596",
+      "b": "osm-r1706978",
+      "type": "outside",
+      "originalKm2": 0.238532475369946,
+      "simplifiedKm2": 0.23874246724994355,
+      "deltaKm2": 0.00020999187999754212,
+      "deltaPct": 0.08803492257054744
+    }
+  ],
+  "newInvalidCount": 0,
+  "invalidList": [],
+  "areaLarge": []
+}

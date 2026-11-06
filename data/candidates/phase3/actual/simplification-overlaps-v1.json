@@ -1,0 +1,121 @@
+{
+  "schema": "atlas-simplified-overlap-exhaustive-v1",
+  "method": "Full sweep of same-admin-level bbox pairs; JSTS OverlayOp geometric intersection; Turf spherical area; material threshold 1m2",
+  "groups": {
+    "ro-2": {
+      "features": 1,
+      "bboxCandidates": 0,
+      "checkedPairs": 0,
+      "baselineOverlapPairs": 0,
+      "simplifiedOverlapPairs": 0,
+      "deltaAreaKm2": 0,
+      "material": []
+    },
+    "ro-4": {
+      "features": 42,
+      "bboxCandidates": 120,
+      "checkedPairs": 120,
+      "baselineOverlapPairs": 0,
+      "simplifiedOverlapPairs": 0,
+      "deltaAreaKm2": 0,
+      "material": []
+    },
+    "ro-8": {
+      "features": 3180,
+      "bboxCandidates": 11795,
+      "checkedPairs": 11795,
+      "baselineOverlapPairs": 2,
+      "simplifiedOverlapPairs": 2,
+      "deltaAreaKm2": -0.009773699272607366,
+      "material": [
+        {
+          "a": "osm-r10624200",
+          "b": "osm-r14879493",
+          "originalKm2": 0.8942631627458073,
+          "simplifiedKm2": 0.8872948595070548,
+          "deltaKm2": -0.006968303238752531
+        },
+        {
+          "a": "osm-r10624200",
+          "b": "osm-r14879461",
+          "originalKm2": 0.16081106118187508,
+          "simplifiedKm2": 0.15800566514802022,
+          "deltaKm2": -0.002805396033854835
+        }
+      ]
+    },
+    "ro-9": {
+      "features": 6,
+      "bboxCandidates": 9,
+      "checkedPairs": 9,
+      "baselineOverlapPairs": 0,
+      "simplifiedOverlapPairs": 0,
+      "deltaAreaKm2": 0,
+      "material": []
+    },
+    "md-2": {
+      "features": 1,
+      "bboxCandidates": 0,
+      "checkedPairs": 0,
+      "baselineOverlapPairs": 0,
+      "simplifiedOverlapPairs": 0,
+      "deltaAreaKm2": 0,
+      "material": []
+    },
+    "md-3": {
+      "features": 1,
+      "bboxCandidates": 0,
+      "checkedPairs": 0,
+      "baselineOverlapPairs": 0,
+      "simplifiedOverlapPairs": 0,
+      "deltaAreaKm2": 0,
+      "material": []
+    },
+    "md-4": {
+      "features": 37,
+      "bboxCandidates": 118,
+      "checkedPairs": 118,
+      "baselineOverlapPairs": 0,
+      "simplifiedOverlapPairs": 0,
+      "deltaAreaKm2": 0,
+      "material": []
+    },
+    "md-5": {
+      "features": 10,
+      "bboxCandidates": 8,
+      "checkedPairs": 8,
+      "baselineOverlapPairs": 0,
+      "simplifiedOverlapPairs": 0,
+      "deltaAreaKm2": 0,
+      "material": []
+    },
+    "md-7": {
+      "features": 5,
+      "bboxCandidates": 7,
+      "checkedPairs": 7,
+      "baselineOverlapPairs": 0,
+      "simplifiedOverlapPairs": 0,
+      "deltaAreaKm2": 0,
+      "material": []
+    },
+    "md-8": {
+      "features": 982,
+      "bboxCandidates": 3586,
+      "checkedPairs": 3586,
+      "baselineOverlapPairs": 1,
+      "simplifiedOverlapPairs": 1,
+      "deltaAreaKm2": 0.00020999187999754212,
+      "material": [
+        {
+          "a": "osm-r19118040",
+          "b": "osm-r19118596",
+          "originalKm2": 0.238532475369946,
+          "simplifiedKm2": 0.23874246724994355,
+          "deltaKm2": 0.00020999187999754212
+        }
+      ]
+    }
+  },
+  "allNewMaterial": [],
+  "changedMaterial": []
+}

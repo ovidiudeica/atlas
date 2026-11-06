@@ -1,0 +1,1680 @@
+{
+  "schema": "atlas-simplification-parent-child-coverage-v1",
+  "unit": "km2",
+  "parents": [
+    {
+      "country": "ro",
+      "parent": "osm-r2367044",
+      "adminLevel": 4,
+      "name": "Tulcea",
+      "childCount": 51,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 8463.94675324253,
+        "areaUnionKm2": 8463.946753242448
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 8463.935346657194,
+        "areaUnionKm2": 8463.935346658809
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248612",
+      "adminLevel": 4,
+      "name": "Brașov",
+      "childCount": 58,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5350.622285484169,
+        "areaUnionKm2": 5350.622285483857
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5350.6323643181495,
+        "areaUnionKm2": 5350.63236431835
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2355507",
+      "adminLevel": 4,
+      "name": "Prahova",
+      "childCount": 104,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4705.637622056187,
+        "areaUnionKm2": 4705.637622056707
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4705.603133544751,
+        "areaUnionKm2": 4705.603133544965
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2260192",
+      "adminLevel": 4,
+      "name": "Galați",
+      "childCount": 65,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4453.749602928802,
+        "areaUnionKm2": 4453.7496029293425
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4453.745013851673,
+        "areaUnionKm2": 4453.745013851543
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2355512",
+      "adminLevel": 4,
+      "name": "Brăila",
+      "childCount": 44,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4754.0736687215995,
+        "areaUnionKm2": 4754.073668721015
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4754.074418510269,
+        "areaUnionKm2": 4754.07441851001
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2367022",
+      "adminLevel": 4,
+      "name": "Constanța",
+      "childCount": 70,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7075.773696499529,
+        "areaUnionKm2": 7075.773696498137
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7075.609911919094,
+        "areaUnionKm2": 7075.609911919365
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r91733",
+      "adminLevel": 4,
+      "name": "Cluj",
+      "childCount": 81,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6649.366832671954,
+        "areaUnionKm2": 6649.366832672424
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6649.393627669803,
+        "areaUnionKm2": 6649.39362766638
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2366863",
+      "adminLevel": 4,
+      "name": "Timiș",
+      "childCount": 99,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 8665.916553377117,
+        "areaUnionKm2": 8665.91655337523
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 8665.884700127835,
+        "areaUnionKm2": 8665.884700123506
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248721",
+      "adminLevel": 4,
+      "name": "Arad",
+      "childCount": 78,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7724.506685295766,
+        "areaUnionKm2": 7724.506685296279
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7724.540035861261,
+        "areaUnionKm2": 7724.540035862465
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248737",
+      "adminLevel": 4,
+      "name": "Hunedoara",
+      "childCount": 69,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7056.865338697967,
+        "areaUnionKm2": 7056.865338697994
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7056.891439518337,
+        "areaUnionKm2": 7056.891439517845
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248660",
+      "adminLevel": 4,
+      "name": "Harghita",
+      "childCount": 67,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6622.481869284965,
+        "areaUnionKm2": 6622.481869280691
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6622.496742305561,
+        "areaUnionKm2": 6622.496742305847
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2077868",
+      "adminLevel": 4,
+      "name": "Suceava",
+      "childCount": 114,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 8528.663441699551,
+        "areaUnionKm2": 8528.663441699893
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 8528.677798894134,
+        "areaUnionKm2": 8528.677798894012
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2366873",
+      "adminLevel": 4,
+      "name": "Caraș-Severin",
+      "childCount": 77,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 8510.53945741951,
+        "areaUnionKm2": 8510.53945742279
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 8510.524295702957,
+        "areaUnionKm2": 8510.524295701996
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248586",
+      "adminLevel": 4,
+      "name": "Sibiu",
+      "childCount": 64,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5421.296919767037,
+        "areaUnionKm2": 5421.29691977191
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5421.251998912708,
+        "areaUnionKm2": 5421.2519989125785
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248621",
+      "adminLevel": 4,
+      "name": "Covasna",
+      "childCount": 45,
+      "source": {
+        "gapKm2": 8.324821299985331e-8,
+        "excessKm2": 0,
+        "areaParentKm2": 3699.3607847587205,
+        "areaUnionKm2": 3699.36078467453
+      },
+      "simplified": {
+        "gapKm2": 8.324821299985331e-8,
+        "excessKm2": 0,
+        "areaParentKm2": 3699.363933152783,
+        "areaUnionKm2": 3699.3639330699375
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r194271",
+      "adminLevel": 4,
+      "name": "Alba",
+      "childCount": 78,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6240.859860649064,
+        "areaUnionKm2": 6240.859860649812
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6240.859120741787,
+        "areaUnionKm2": 6240.85912074424
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2256729",
+      "adminLevel": 4,
+      "name": "Botoșani",
+      "childCount": 78,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4968.0441141362335,
+        "areaUnionKm2": 4968.0441141362735
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4968.032885949196,
+        "areaUnionKm2": 4968.032885948645
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2355511",
+      "adminLevel": 4,
+      "name": "Buzău",
+      "childCount": 87,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6087.67215876215,
+        "areaUnionKm2": 6087.6721587621705
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6087.670270822144,
+        "areaUnionKm2": 6087.670270822489
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248573",
+      "adminLevel": 4,
+      "name": "Mureș",
+      "childCount": 102,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6690.870321159359,
+        "areaUnionKm2": 6690.870321161026
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6690.870042249773,
+        "areaUnionKm2": 6690.870042250067
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r72482",
+      "adminLevel": 4,
+      "name": "Satu Mare",
+      "childCount": 65,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4405.97783598178,
+        "areaUnionKm2": 4405.97783598063
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4405.969859920597,
+        "areaUnionKm2": 4405.969859920764
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2366986",
+      "adminLevel": 4,
+      "name": "Teleorman",
+      "childCount": 97,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5785.808717945574,
+        "areaUnionKm2": 5785.808717946001
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5785.824428912759,
+        "areaUnionKm2": 5785.824428913011
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2261315",
+      "adminLevel": 4,
+      "name": "Argeș",
+      "childCount": 102,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6808.885871375607,
+        "areaUnionKm2": 6808.8858713754835
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6808.883836983412,
+        "areaUnionKm2": 6808.8838369830655
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2355471",
+      "adminLevel": 4,
+      "name": "Dâmbovița",
+      "childCount": 89,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4037.888112480752,
+        "areaUnionKm2": 4037.888112480821
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4037.8785658622696,
+        "areaUnionKm2": 4037.87856586283
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2366987",
+      "adminLevel": 4,
+      "name": "Giurgiu",
+      "childCount": 54,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 3538.945528018906,
+        "areaUnionKm2": 3538.945528019376
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 3538.9345208882596,
+        "areaUnionKm2": 3538.934520887894
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2367015",
+      "adminLevel": 4,
+      "name": "Călărași",
+      "childCount": 55,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5072.914627022656,
+        "areaUnionKm2": 5072.914627022656
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5072.931190141124,
+        "areaUnionKm2": 5072.931190141124
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2355517",
+      "adminLevel": 4,
+      "name": "Ialomița",
+      "childCount": 66,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4441.431244033975,
+        "areaUnionKm2": 4441.431244033399
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4441.432031603822,
+        "areaUnionKm2": 4441.432031603143
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2260187",
+      "adminLevel": 4,
+      "name": "Vrancea",
+      "childCount": 73,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4843.30050873698,
+        "areaUnionKm2": 4843.300508738157
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4843.281869164953,
+        "areaUnionKm2": 4843.281869165082
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2256753",
+      "adminLevel": 4,
+      "name": "Vaslui",
+      "childCount": 86,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5302.512238388509,
+        "areaUnionKm2": 5302.512238388334
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5302.542534535586,
+        "areaUnionKm2": 5302.54253453548
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248681",
+      "adminLevel": 4,
+      "name": "Bacău",
+      "childCount": 93,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6606.648028668023,
+        "areaUnionKm2": 6606.648028668239
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6606.643026884035,
+        "areaUnionKm2": 6606.643026884129
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r91731",
+      "adminLevel": 4,
+      "name": "Bihor",
+      "childCount": 101,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7517.861883713194,
+        "areaUnionKm2": 7517.861883713469
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7517.872485430549,
+        "areaUnionKm2": 7517.8724854295915
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r91685",
+      "adminLevel": 4,
+      "name": "Sălaj",
+      "childCount": 61,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 3856.9806542264364,
+        "areaUnionKm2": 3856.9806542257666
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 3856.9455626399695,
+        "areaUnionKm2": 3856.945562639612
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r72481",
+      "adminLevel": 4,
+      "name": "Maramureș",
+      "childCount": 76,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6286.433496078994,
+        "areaUnionKm2": 6286.433496075792
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 6286.452758514233,
+        "areaUnionKm2": 6286.452758510631
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r55466",
+      "adminLevel": 4,
+      "name": "Bistrița-Năsăud",
+      "childCount": 62,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5345.039807872326,
+        "areaUnionKm2": 5345.039807873089
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5345.020254683093,
+        "areaUnionKm2": 5345.020254683079
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2248675",
+      "adminLevel": 4,
+      "name": "Neamț",
+      "childCount": 83,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5882.606520678219,
+        "areaUnionKm2": 5882.606520677838
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5882.627142557843,
+        "areaUnionKm2": 5882.627142558605
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2256747",
+      "adminLevel": 4,
+      "name": "Iași",
+      "childCount": 98,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5461.159010235268,
+        "areaUnionKm2": 5461.159010230535
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5461.1472889574125,
+        "areaUnionKm2": 5461.1472889580755
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2366970",
+      "adminLevel": 4,
+      "name": "Dolj",
+      "childCount": 111,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7399.389349548415,
+        "areaUnionKm2": 7399.3893495483035
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 7399.358993818278,
+        "areaUnionKm2": 7399.358993819115
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2366962",
+      "adminLevel": 4,
+      "name": "Mehedinți",
+      "childCount": 66,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4935.561580640215,
+        "areaUnionKm2": 4935.561580644343
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 4935.531734557054,
+        "areaUnionKm2": 4935.5317345563135
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r377733",
+      "adminLevel": 4,
+      "name": "București",
+      "childCount": 6,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 238.54687043503426,
+        "areaUnionKm2": 238.54687043487735
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 238.53692159349174,
+        "areaUnionKm2": 238.53692159361097
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2261289",
+      "adminLevel": 4,
+      "name": "Vâlcea",
+      "childCount": 89,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5753.479221005558,
+        "areaUnionKm2": 5753.479221004265
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5753.5149655003615,
+        "areaUnionKm2": 5753.514965500419
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2261275",
+      "adminLevel": 4,
+      "name": "Gorj",
+      "childCount": 70,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5560.063814973095,
+        "areaUnionKm2": 5560.063814973095
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5560.075635474296,
+        "areaUnionKm2": 5560.075635474296
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2366978",
+      "adminLevel": 4,
+      "name": "Olt",
+      "childCount": 112,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5490.14697730289,
+        "areaUnionKm2": 5490.1469773032
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 5490.159976632915,
+        "areaUnionKm2": 5490.159976632972
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "ro",
+      "parent": "osm-r2366996",
+      "adminLevel": 4,
+      "name": "Ilfov",
+      "childCount": 40,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1560.6242202279816,
+        "areaUnionKm2": 1560.624220228653
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1560.6476669442388,
+        "areaUnionKm2": 1560.6476669440328
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r58985",
+      "adminLevel": 4,
+      "name": "Ungheni",
+      "childCount": 33,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1080.785687391847,
+        "areaUnionKm2": 1080.7856873921853
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1080.7869781288903,
+        "areaUnionKm2": 1080.7869781292206
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r58984",
+      "adminLevel": 4,
+      "name": "Fălești",
+      "childCount": 31,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1069.5178544779187,
+        "areaUnionKm2": 1069.5178544774462
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1069.5189566048596,
+        "areaUnionKm2": 1069.5189566047607
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r58983",
+      "adminLevel": 4,
+      "name": "Bălți",
+      "childCount": 3,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 77.394978615834,
+        "areaUnionKm2": 77.39497861594339
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 77.39516831926503,
+        "areaUnionKm2": 77.39516831923449
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1693874",
+      "adminLevel": 4,
+      "name": "Glodeni",
+      "childCount": 19,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 753.8388178731225,
+        "areaUnionKm2": 753.8388178733366
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 753.8383047093574,
+        "areaUnionKm2": 753.8383047092395
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r65343",
+      "adminLevel": 4,
+      "name": "Căușeni",
+      "childCount": 30,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0.5637273322208225,
+        "areaParentKm2": 1311.0897498185398,
+        "areaUnionKm2": 1311.6534771510462
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0.5640372989789153,
+        "areaParentKm2": 1311.0883581923333,
+        "areaUnionKm2": 1311.652395491585
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0.0003099667580928056
+    },
+    {
+      "country": "md",
+      "parent": "osm-r9581354",
+      "adminLevel": 4,
+      "name": "Bender",
+      "childCount": 2,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 37.90652113983175,
+        "areaUnionKm2": 37.90652113986568
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 37.90630817597466,
+        "areaUnionKm2": 37.906308175988336
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1692078",
+      "adminLevel": 4,
+      "name": "Anenii Noi",
+      "childCount": 27,
+      "source": {
+        "gapKm2": 0.5637273322208225,
+        "excessKm2": 0,
+        "areaParentKm2": 886.2137730883276,
+        "areaUnionKm2": 885.6500457557866
+      },
+      "simplified": {
+        "gapKm2": 0.5640372989789153,
+        "excessKm2": 0,
+        "areaParentKm2": 886.2095034033058,
+        "areaUnionKm2": 885.6454661042596
+      },
+      "gapDeltaKm2": 0.0003099667580928056,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r65344",
+      "adminLevel": 4,
+      "name": "Ștefan Vodă",
+      "childCount": 23,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 996.605646041948,
+        "areaUnionKm2": 996.605646041948
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 996.6141366613733,
+        "areaUnionKm2": 996.6141366613733
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1691800",
+      "adminLevel": 4,
+      "name": "Ialoveni",
+      "childCount": 25,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 781.1933867018129,
+        "areaUnionKm2": 781.1933867025355
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 781.1938858735974,
+        "areaUnionKm2": 781.1938858739085
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r58996",
+      "adminLevel": 4,
+      "name": "Sîngerei",
+      "childCount": 26,
+      "source": {
+        "gapKm2": 0.00003190055901814454,
+        "excessKm2": 0,
+        "areaParentKm2": 1030.5497489928528,
+        "areaUnionKm2": 1030.5497170917745
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1030.54503133239,
+        "areaUnionKm2": 1030.5450313323865
+      },
+      "gapDeltaKm2": -0.00003190055901814454,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1699032",
+      "adminLevel": 4,
+      "name": "Găgăuzia",
+      "childCount": 29,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0.2385324753719653,
+        "areaParentKm2": 1843.0206254559441,
+        "areaUnionKm2": 1843.2591579338082
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0.2387424672497566,
+        "areaParentKm2": 1843.0339829177624,
+        "areaUnionKm2": 1843.2727253850667
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0.00020999187779127682
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1691801",
+      "adminLevel": 4,
+      "name": "Chișinău",
+      "childCount": 24,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0.0030131886077883942,
+        "areaParentKm2": 574.1393239045931,
+        "areaUnionKm2": 574.1423370935297
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0.003208802080107428,
+        "areaParentKm2": 574.1362365528662,
+        "areaUnionKm2": 574.1394453550843
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0.00019561347231903357
+    },
+    {
+      "country": "md",
+      "parent": "osm-r58991",
+      "adminLevel": 4,
+      "name": "Hîncești",
+      "childCount": 39,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1468.4665725667473,
+        "areaUnionKm2": 1468.4665725667496
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1468.4631451472185,
+        "areaUnionKm2": 1468.4631451474297
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r2607033",
+      "adminLevel": 4,
+      "name": "Unitățile administrativ-teritoriale din stînga Nistrului",
+      "childCount": 79,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 3338.731879500932,
+        "areaUnionKm2": 3338.7318795006718
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 3338.7285084031155,
+        "areaUnionKm2": 3338.728508402559
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1692123",
+      "adminLevel": 4,
+      "name": "Dubăsari",
+      "childCount": 11,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 326.2097974136563,
+        "areaUnionKm2": 326.20979741376357
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 326.20845183924655,
+        "areaUnionKm2": 326.20845183940554
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r59002",
+      "adminLevel": 4,
+      "name": "Briceni",
+      "childCount": 28,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 814.0785639104563,
+        "areaUnionKm2": 814.0785639098108
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 814.0824113619262,
+        "areaUnionKm2": 814.082411361661
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r59005",
+      "adminLevel": 4,
+      "name": "Ocnița",
+      "childCount": 21,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 597.3067201665762,
+        "areaUnionKm2": 597.306720166382
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 597.3113084448647,
+        "areaUnionKm2": 597.3113084446619
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r59000",
+      "adminLevel": 4,
+      "name": "Edineț",
+      "childCount": 32,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 930.6995208029285,
+        "areaUnionKm2": 930.6995208027589
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 930.707134513537,
+        "areaUnionKm2": 930.7071345133731
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1693908",
+      "adminLevel": 4,
+      "name": "Rîșcani",
+      "childCount": 29,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 936.5085683438923,
+        "areaUnionKm2": 936.5085683444345
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 936.4938128969284,
+        "areaUnionKm2": 936.4938128968043
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r59007",
+      "adminLevel": 4,
+      "name": "Dondușeni",
+      "childCount": 23,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 643.085395945298,
+        "areaUnionKm2": 643.0853959452827
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 643.0811818093042,
+        "areaUnionKm2": 643.0811818092039
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1693907",
+      "adminLevel": 4,
+      "name": "Drochia",
+      "childCount": 28,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 997.4951511857996,
+        "areaUnionKm2": 997.4951511855412
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 997.4999485407576,
+        "areaUnionKm2": 997.4999485404469
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1693523",
+      "adminLevel": 4,
+      "name": "Soroca",
+      "childCount": 35,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1037.5641824473478,
+        "areaUnionKm2": 1037.5641824476031
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1037.564725400834,
+        "areaUnionKm2": 1037.5647254012567
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1693560",
+      "adminLevel": 4,
+      "name": "Florești",
+      "childCount": 40,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1104.8359417875342,
+        "areaUnionKm2": 1104.8359417878662
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1104.8372658905778,
+        "areaUnionKm2": 1104.837265890622
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1693561",
+      "adminLevel": 4,
+      "name": "Șoldănești",
+      "childCount": 23,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 594.7473448133793,
+        "areaUnionKm2": 594.7473448128814
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 594.7430468206733,
+        "areaUnionKm2": 594.7430468207713
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1435790",
+      "adminLevel": 4,
+      "name": "Rezina",
+      "childCount": 25,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 619.1211240656154,
+        "areaUnionKm2": 619.1211240660444
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 619.1297566960419,
+        "areaUnionKm2": 619.1297566958881
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1692172",
+      "adminLevel": 4,
+      "name": "Orhei",
+      "childCount": 38,
+      "source": {
+        "gapKm2": 0.00005106796896592058,
+        "excessKm2": 0,
+        "areaParentKm2": 1223.3484607799128,
+        "areaUnionKm2": 1223.3484097126504
+      },
+      "simplified": {
+        "gapKm2": 0.000050368361086232674,
+        "excessKm2": 0,
+        "areaParentKm2": 1223.3473772977554,
+        "areaUnionKm2": 1223.3473269289266
+      },
+      "gapDeltaKm2": -6.996078796879055e-7,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r58993",
+      "adminLevel": 4,
+      "name": "Telenești",
+      "childCount": 31,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 845.9409044181662,
+        "areaUnionKm2": 845.9409044181822
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 845.9405526966891,
+        "areaUnionKm2": 845.9405526962254
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1692126",
+      "adminLevel": 4,
+      "name": "Criuleni",
+      "childCount": 25,
+      "source": {
+        "gapKm2": 8.367636695970429e-7,
+        "excessKm2": 0,
+        "areaParentKm2": 682.6830523889034,
+        "areaUnionKm2": 682.6830515524363
+      },
+      "simplified": {
+        "gapKm2": 8.367636695970429e-7,
+        "excessKm2": 0,
+        "areaParentKm2": 682.6890919648406,
+        "areaUnionKm2": 682.6890911281369
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r58988",
+      "adminLevel": 4,
+      "name": "Călărași",
+      "childCount": 28,
+      "source": {
+        "gapKm2": 0.0003799876597417931,
+        "excessKm2": 0,
+        "areaParentKm2": 751.3072427649238,
+        "areaUnionKm2": 751.3068627774805
+      },
+      "simplified": {
+        "gapKm2": 0.0003799876597417931,
+        "excessKm2": 0,
+        "areaParentKm2": 751.3033831744148,
+        "areaUnionKm2": 751.3030031867453
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r85827",
+      "adminLevel": 4,
+      "name": "Strășeni",
+      "childCount": 29,
+      "source": {
+        "gapKm2": 0.0000033164685230521003,
+        "excessKm2": 0,
+        "areaParentKm2": 727.5751662840837,
+        "areaUnionKm2": 727.5751629682966
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 727.5809136084077,
+        "areaUnionKm2": 727.580913608854
+      },
+      "gapDeltaKm2": -0.0000033164685230521003,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r58990",
+      "adminLevel": 4,
+      "name": "Nisporeni",
+      "childCount": 23,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 626.8623662605672,
+        "areaUnionKm2": 626.8623662607745
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 626.8625404771971,
+        "areaUnionKm2": 626.8625404772952
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1211126",
+      "adminLevel": 4,
+      "name": "Cimișlia",
+      "childCount": 23,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 921.4073216126081,
+        "areaUnionKm2": 921.4073216123968
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 921.4017294645134,
+        "areaUnionKm2": 921.4017294646909
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1699023",
+      "adminLevel": 4,
+      "name": "Leova",
+      "childCount": 22,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 762.7031078736467,
+        "areaUnionKm2": 762.7031078739128
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 762.7025428170388,
+        "areaUnionKm2": 762.7025428168528
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1104136",
+      "adminLevel": 4,
+      "name": "Basarabeasca",
+      "childCount": 7,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 294.10509405665135,
+        "areaUnionKm2": 294.10509405669814
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 294.10216610779,
+        "areaUnionKm2": 294.1021661077955
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1699022",
+      "adminLevel": 4,
+      "name": "Cantemir",
+      "childCount": 27,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 866.6957442900087,
+        "areaUnionKm2": 866.6957442904744
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 866.7001072985478,
+        "areaUnionKm2": 866.7001072984366
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1699034",
+      "adminLevel": 4,
+      "name": "Cahul",
+      "childCount": 37,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1541.7742239688018,
+        "areaUnionKm2": 1541.7742239670285
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 1541.7714538575665,
+        "areaUnionKm2": 1541.7714538574799
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    },
+    {
+      "country": "md",
+      "parent": "osm-r1699033",
+      "adminLevel": 4,
+      "name": "Taraclia",
+      "childCount": 15,
+      "source": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 672.3816811570033,
+        "areaUnionKm2": 672.3816811565962
+      },
+      "simplified": {
+        "gapKm2": 0,
+        "excessKm2": 0,
+        "areaParentKm2": 672.373607006476,
+        "areaUnionKm2": 672.3736070064471
+      },
+      "gapDeltaKm2": 0,
+      "excessDeltaKm2": 0
+    }
+  ],
+  "issues": [],
+  "countrySummary": {
+    "ro": {
+      "parentsChecked": 42,
+      "flags": 0,
+      "maximumGapIncreaseKm2": 0,
+      "maximumOutsideIncreaseKm2": 0
+    },
+    "md": {
+      "parentsChecked": 37,
+      "flags": 0,
+      "maximumGapIncreaseKm2": 0.0003099667580928056,
+      "maximumOutsideIncreaseKm2": 0.0003099667580928056
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "schema": "atlas-actual-source-exception-decisions-v1",
+  "snapshot": "OSM-Boundaries 2026-10-05",
+  "acceptedOn": "2026-11-06",
+  "releaseScope": "cartographic-source-fidelity",
+  "legalCertification": false,
+  "sourceInterpretation": "The OSM Standard basemap is not an independent legal or geometric authority; source consistency does not confer legal correctness.",
+  "geometryPolicy": "Retain authentic source coordinates, identities and tags. Document source defects without automatic fixes.",
+  "topologicalCases": [
+    {
+      "id": "RO_OVERLAP_14879493_10624200",
+      "type": "same-level-overlap",
+      "country": "RO",
+      "level": 8,
+      "relations": [
+        14879493,
+        10624200
+      ],
+      "sourceOverlapKm2": 0.896542,
+      "decision": "accepted_as_OSMB_source_exception",
+      "changeToOriginal": "none",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "RO_OVERLAP_14879461_10624200",
+      "type": "same-level-overlap",
+      "country": "RO",
+      "level": 8,
+      "relations": [
+        14879461,
+        10624200
+      ],
+      "sourceOverlapKm2": 0.161219,
+      "decision": "accepted_as_OSMB_source_exception",
+      "changeToOriginal": "none",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "MD_OVERLAP_19118040_19118596",
+      "type": "same-level-overlap",
+      "country": "MD",
+      "level": 8,
+      "relations": [
+        19118040,
+        19118596
+      ],
+      "sourceOverlapKm2": 0.23912,
+      "decision": "accepted_as_OSMB_source_exception",
+      "changeToOriginal": "none",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "MD_PARENT_12463200_65343",
+      "type": "child-outside-parent",
+      "country": "MD",
+      "child": 12463200,
+      "parent": 65343,
+      "sourceOutsideSqM": 565217.071,
+      "decision": "accepted_as_OSMB_source_exception",
+      "changeToOriginal": "none",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "MD_PARENT_19118596_1706978",
+      "type": "child-outside-parent",
+      "country": "MD",
+      "child": 19118596,
+      "parent": 1706978,
+      "sourceOutsideSqM": 239120.281,
+      "decision": "accepted_as_OSMB_source_exception",
+      "changeToOriginal": "none",
+      "legalStatus": "unverified"
+    }
+  ],
+  "cuatmCases": [
+    {
+      "code": "0500",
+      "name": "Bender",
+      "relationIds": [
+        9581354,
+        12463379
+      ],
+      "levels": [
+        4,
+        8
+      ],
+      "finding": "urban_polygon_nested_within_municipal_polygon",
+      "decision": "accept_both_source_scopes",
+      "officialCUATMIdentity": "one",
+      "legalStatus": "boundary_scopes_not_two_independent_legal_entities"
+    },
+    {
+      "code": "0100",
+      "name": "Chișinău",
+      "relationIds": [
+        1691801,
+        1748490
+      ],
+      "levels": [
+        4,
+        8
+      ],
+      "finding": "urban_polygon_nested_within_municipal_polygon",
+      "decision": "accept_both_source_scopes",
+      "officialCUATMIdentity": "one",
+      "legalStatus": "boundary_scopes_not_two_independent_legal_entities"
+    },
+    {
+      "code": "1050",
+      "name": "Țînțăreni",
+      "relationIds": [
+        12496850,
+        19090932
+      ],
+      "levels": [
+        8,
+        8
+      ],
+      "finding": "separate_non_overlapping_polygons_approx_6.06km_apart",
+      "decision": "retain_distinct_source_geometries_preserve_OSM_CUATM_claim",
+      "officialCUATMIdentity": "unverified_source_component_mapping",
+      "legalStatus": "no_automatic_legal_unification"
+    },
+    {
+      "code": "7160",
+      "name": "Văratic",
+      "relationIds": [
+        19045240,
+        19045254
+      ],
+      "levels": [
+        8,
+        8
+      ],
+      "finding": "two_non_overlapping_polygons_approx_48m_apart",
+      "decision": "retain_distinct_source_geometries_preserve_OSM_CUATM_claim",
+      "officialCUATMIdentity": "unverified_source_component_mapping",
+      "legalStatus": "no_automatic_legal_unification"
+    },
+    {
+      "code": "3417",
+      "name": "Dondușeni",
+      "relationIds": [
+        19055800,
+        19055814
+      ],
+      "levels": [
+        8,
+        8
+      ],
+      "finding": "two_non_overlapping_polygons_approx_410m_apart",
+      "decision": "retain_distinct_source_geometries_preserve_OSM_CUATM_claim",
+      "officialCUATMIdentity": "unverified_source_component_mapping",
+      "legalStatus": "no_automatic_legal_unification"
+    },
+    {
+      "code": "8034",
+      "name": "Recea",
+      "relationIds": [
+        19100165,
+        19100169,
+        19100182
+      ],
+      "levels": [
+        8,
+        8,
+        8
+      ],
+      "finding": "three_non_overlapping_polygons",
+      "decision": "retain_distinct_source_geometries_preserve_OSM_CUATM_claim",
+      "officialCUATMIdentity": "unverified_source_component_mapping",
+      "legalStatus": "no_automatic_legal_unification"
+    }
+  ],
+  "releaseDecision": "accepted_known_source_exceptions_for_cartographic_release_subject_to_independent_simplification_and_CI_gates",
+  "pendingFutureWork": "Do not claim legal resolution of four multipart/ambiguous CUATM groups or correct OSM geometry silently; display raw OSMB provenance where source data is surfaced."
+}
