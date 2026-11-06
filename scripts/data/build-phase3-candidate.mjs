@@ -84,13 +84,16 @@ for(const country of ['RO','MD']){
       ?siruta.records.find(rec=>Number(rec.level)===1&&String(rec.county_code)===priorLegalId)
       :null;
     if(country==='RO'&&level===4&&!countyRecord)throw new Error('Unresolved county code '+priorLegalId+' for '+id);
-    const legalId=countyRecord?String(countyRecord.siruta):priorLegalId;
+    const sectorNumber=(country==='RO'&&level===9)?String(tags.name||'').match(/^Sector ([1-6])$/)?.[1]:null;
+    const sectorRecord=sectorNumber?siruta.records.find(rec=>String(rec.name).toLocaleUpperCase('ro-RO')==='BUCUREȘTI SECTORUL '+sectorNumber&&Number(rec.level)===3):null;
+    if(sectorNumber&&!sectorRecord)throw new Error('Unresolved sector SIRUTA '+sectorNumber);
+    const legalId=countyRecord?String(countyRecord.siruta):sectorRecord?String(sectorRecord.siruta):priorLegalId;
     const record=country==='RO'?sirutaById.get(legalId):cuatmById.get(legalId);
     const rawShort=synthetic?'Brețcu':
       (country==='MD'?(legacy?.name||tags['short_name']||tags['name:ro']||tags.name):
       (legacy?.name||tags['short_name']||tags.name));
     const sh=shortName(rawShort);
-    const official=synthetic?'Comuna Brețcu':fullName(legacy,tags,sh,country,level);
+    const official=synthetic?'Comuna Brețcu':sectorRecord?titleCase(sectorRecord.name):fullName(legacy,tags,sh,country,level);
     const parentFromOld=legacy?.parent_id;
     let parentId=(parentFromOld==='RO'?'osm-r90689':parentFromOld==='MD'?'osm-r58974':parentFromOld)||null;
     if(!parentId&&level!==2){
@@ -183,6 +186,7 @@ emit('sources/cuatm-2025.json.gz',zlib.gzipSync(fs.readFileSync(filename('data/s
 emit('sources/nuts-ro-2024.json',roNuts);
 emit('sources/nuts-md-2017.json',mdNuts);
 const issues={
+  missingOfficialRegistryAssociation:nodes.filter(x=>x.roles.includes('administrative')&&x.adminLevel!==2&&!x.registry).map(x=>({id:x.id,country:x.country,adminLevel:x.adminLevel,name:x.name})),
   missingApprovedAdministrativeGeometry:requiredMissingMD.filter(x=>!all.has('osm-r'+x.osmRelationId)),
   missingTreeParent:missingParents,
   missingAdministrativeParent:administrativeMissingParent,
@@ -198,9 +202,11 @@ const counts={
   brețcuOSMId:all.get('siruta-u64096')?.osmRelationId,
   ojdulaOSMId:all.get('osm-r14735731')?.osmRelationId,
   unmatchedRORegistry:admin.RO.filter(x=>x.registry&&!x.registry.matchedSourceRecord).length,
-  unmatchedMDRegistry:admin.MD.filter(x=>x.registry&&!x.registry.matchedSourceRecord).length
+  unmatchedMDRegistry:admin.MD.filter(x=>x.registry&&!x.registry.matchedSourceRecord).length,
+  missingRORegistryAssociation:issues.missingOfficialRegistryAssociation.filter(x=>x.country==='RO').length,
+  missingMDRegistryAssociation:issues.missingOfficialRegistryAssociation.filter(x=>x.country==='MD').length
 };
 const sources=Object.fromEntries(sourcePaths.map(p=>[p,{sha256:sha(fs.readFileSync(filename(p))),bytes:fs.statSync(filename(p)).size}]));
-const ready=issues.missingApprovedAdministrativeGeometry.length===0&&issues.missingTreeParent.length===0&&issues.hierarchyCycles.length===0&&issues.statisticalOnlyWithoutGeometry.length===0&&!issues.originalOSMBArchivesNotInBuilder;
+const ready=issues.missingOfficialRegistryAssociation.length===0&&issues.missingApprovedAdministrativeGeometry.length===0&&issues.missingTreeParent.length===0&&issues.hierarchyCycles.length===0&&issues.statisticalOnlyWithoutGeometry.length===0&&!issues.originalOSMBArchivesNotInBuilder;
 emit('actual/manifest-v1.json',{schema:'atlas-actual-candidate-manifest-v1',status:ready?'ready_for_release':'BLOCKED_INCOMPLETE',sourceSnapshotDate:'2026-10-05',geometrySource:'reviewed legacy ACTUAL from reforma-teritoriala; separate exact OSMB archive cross-check still required',officialSources:{siruta:'2026',cuatm:'2025',nutsRO:'2024',nutsMD:'2017'},counts,inputs:sources,outputs:shaFile,blockingIssues:issues});
 console.log(JSON.stringify({status:ready?'ready_for_release':'BLOCKED_INCOMPLETE',counts,issues:{missingApprovedAdministrativeGeometry:issues.missingApprovedAdministrativeGeometry,missingTreeParentCount:issues.missingTreeParent.length,missingAdministrativeParentCount:issues.missingAdministrativeParent.length,hierarchyCycleCount:issues.hierarchyCycles.length,statsMissingGeometryCount:issues.statisticalOnlyWithoutGeometry.length},outputs:shaFile},null,2));
