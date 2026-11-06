@@ -182,6 +182,8 @@ export default function App() {
   const loadedRef = useRef<Map<string,TerritoryFeature>>(new Map());
   const [lang,setLang] = useState<Locale>(() => SHARED_STATE.lang || (localStorage.getItem('atlas-lang') === 'ro'?'ro':'en'));
   const [module,setModule] = useState<ModuleId>('administrative');
+  const [modulePanelOpen,setModulePanelOpen] = useState(false);
+  const [detailPanelOpen,setDetailPanelOpen] = useState(Boolean(SHARED_STATE.entity));
   const [catalog,setCatalog] = useState<Territory[]>([]);
   const [catalogError,setCatalogError] = useState<string | null>(null);
   const [selected,setSelected] = useState<string | null>(SHARED_STATE.entity);
@@ -276,12 +278,30 @@ export default function App() {
       if(event.key!=='/' || event.ctrlKey || event.metaKey || event.altKey || event.defaultPrevented ||
         (target instanceof HTMLElement && (target.isContentEditable || ['INPUT','TEXTAREA','SELECT'].includes(target.tagName))))return;
       event.preventDefault();
+      setModule('administrative');
+      setModulePanelOpen(true);
       if(window.matchMedia('(max-width:700px)').matches)setDrawer('tree');
       window.setTimeout(()=>searchRef.current?.focus(),0);
     };
     window.addEventListener('keydown',onShortcut);
     return ()=>window.removeEventListener('keydown',onShortcut);
   },[]);
+  useEffect(()=>{
+    const onEscape=(event:KeyboardEvent)=>{
+      if(event.key!=='Escape'||event.defaultPrevented)return;
+      if(drawer){
+        setDrawer(null);
+        if(drawer==='tree')setModulePanelOpen(false);
+        else setDetailPanelOpen(false);
+      }else if(detailPanelOpen)setDetailPanelOpen(false);
+      else if(modulePanelOpen)setModulePanelOpen(false);
+      else return;
+      event.preventDefault();
+      document.querySelector<HTMLButtonElement>('.module-rail button[aria-expanded=true]')?.focus();
+    };
+    window.addEventListener('keydown',onEscape);
+    return ()=>window.removeEventListener('keydown',onEscape);
+  },[drawer,detailPanelOpen,modulePanelOpen]);
   useEffect(()=>{localStorage.setItem('atlas-visible-phase4',JSON.stringify(visible));},[visible]);
   useEffect(()=>{
     if(catalog.length && selected && !nodes.has(selected))setSelected(null);
@@ -341,15 +361,28 @@ export default function App() {
       });
       instance.on('click','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
-        if(typeof id==='string'){setSelected(id);setDrawer('detail');}
+        if(typeof id==='string'){
+          setSelected(id);setDetailPanelOpen(true);
+          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+          else if(window.innerWidth<1100)setModulePanelOpen(false);
+        }
       });
       instance.on('click','entity-outline',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
-        if(typeof id==='string'){setSelected(id);setDrawer('detail');}
+        if(typeof id==='string'){
+          setSelected(id);setDetailPanelOpen(true);
+          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+          else if(window.innerWidth<1100)setModulePanelOpen(false);
+        }
       });
       instance.on('click','country-fill',event=>{
         const country=event.features?.[0]?.properties?.id;
-        if(country==='ro'||country==='md'){setSelected(country==='ro'?'osm-r90689':'osm-r58974');setDrawer('detail');}
+        if(country==='ro'||country==='md'){
+          setSelected(country==='ro'?'osm-r90689':'osm-r58974');
+          setDetailPanelOpen(true);
+          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+          else if(window.innerWidth<1100)setModulePanelOpen(false);
+        }
       });
       for(const layer of ['country-fill','entity-fill','entity-outline']) {
         instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
@@ -451,7 +484,26 @@ export default function App() {
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
     const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
   }),[]);
-  const choose = useCallback((id:string)=>{setSelected(id);setDrawer('detail');},[]);
+  const choose = useCallback((id:string)=>{
+    setSelected(id);setDetailPanelOpen(true);
+    if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+    else if(window.innerWidth<1100)setModulePanelOpen(false);
+  },[]);
+  function toggleModulePanel(id:ModuleId){
+    const shouldOpen=id!==module||!modulePanelOpen;
+    setModule(id);setModulePanelOpen(shouldOpen);
+    if(window.innerWidth<1100&&shouldOpen)setDetailPanelOpen(false);
+    if(window.innerWidth<=700)setDrawer(shouldOpen?'tree':null);
+    else setDrawer(null);
+  }
+  function closeModulePanel(){
+    setModulePanelOpen(false);
+    if(drawer==='tree')setDrawer(null);
+  }
+  function closeDetailPanel(){
+    setDetailPanelOpen(false);
+    if(drawer==='detail')setDrawer(null);
+  }
   // Home restores only the camera. Reset geometries returns to the initial
   // RO/MD outline preview without changing map language, basemap or simplification.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
@@ -460,9 +512,11 @@ export default function App() {
     setNavBusy(false);
     setVisible([...DEFAULT_VISIBLE]);
     setSelected(null);
+    setDetailPanelOpen(false);
     setExpanded([]);
     setSearch('');
     setDrawer(null);
+    setModulePanelOpen(false);
     setExportOpen(false);
     setExportScope('visible');
     setExportProgress('');
@@ -736,13 +790,25 @@ export default function App() {
     </header>
     <div className="workspace">
       <nav className="module-rail" aria-label="Modules">{MODULES.map(item=>
-        <button key={item.id} title={item[lang]} aria-label={item[lang]} aria-current={module===item.id?'page':undefined}
-          className={module===item.id?'active':''} onClick={()=>setModule(item.id)}>
-          <span className="module-symbol">{item.symbol}</span>
+        <button key={item.id} type="button" title={item[lang]} aria-label={item[lang]}
+          aria-expanded={module===item.id&&modulePanelOpen} aria-controls="atlas-module-panel"
+          className={module===item.id&&modulePanelOpen?'active':''}
+          onClick={()=>toggleModulePanel(item.id)}>
+          <span className="module-symbol" aria-hidden="true">{item.symbol}</span>
           <span className="module-short">{item[lang].split(' ')[0].slice(0,8)}</span>
         </button>)}</nav>
-      <aside className="tree-sidebar">{treePanel}</aside>
-      <main className="map-area">
+      {modulePanelOpen&&<aside id="atlas-module-panel" className="tree-sidebar" aria-label={MODULES.find(x=>x.id===module)?.[lang]}>
+        <button type="button" className="pane-close" aria-label={t.close} title={t.close}
+          onClick={closeModulePanel}>×</button>
+        {module==='administrative'?treePanel:
+          <section className="tree-content">
+            <div className="panel-heading"><h2>{MODULES.find(x=>x.id===module)?.[lang]}</h2></div>
+            <p className="planned-module-description">{t.planned}</p>
+          </section>}
+      </aside>}
+      <main className="map-area" data-map-ready={ready&&rootsLoaded?'true':'false'} onPointerDown={event=>{
+        if(event.target instanceof Element && event.target.closest('.maplibregl-canvas-container'))closeModulePanel();
+      }}>
         <div className="map-canvas" ref={mapEl} aria-label="Territorial map" />
         {!rootsLoaded&&catalog.length>0&&<span className="map-boot-status" role="status">{t.loadingGeom}</span>}
         <div className="map-controls">
@@ -795,23 +861,34 @@ export default function App() {
           <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>
           <button aria-label={t.home} title={t.home} onClick={reset}>⌂</button>
         </div>
-        {module!=='administrative'&&<div className="module-notice" role="status">
-          <strong>{MODULES.find(x=>x.id===module)?.[lang]}</strong><span>{t.planned}</span></div>}
         <div className="map-note">{geomLoading?t.loadingGeom:geomError?t.dataError:t.sourceNote}</div>
         <div className="map-legend" aria-label={t.dataRole}><span className="legend-admin"/> {t.adminView}
           <span className="legend-stat"/> {t.statView}</div>
         <div className="mobile-controls">
-          <button onClick={()=>setDrawer('tree')}>☷ {t.openTree}</button>
-          <button onClick={()=>setDrawer('detail')}>▤ {t.openDetail}</button>
+          <button type="button" onClick={()=>{setModule('administrative');setModulePanelOpen(true);setDrawer('tree');}}>☷ {t.openTree}</button>
+          {currentNode&&<button type="button" onClick={()=>{setDetailPanelOpen(true);setDrawer('detail');setModulePanelOpen(false);}}>▤ {t.openDetail}</button>}
         </div>
       </main>
-      <aside className="detail-sidebar">{details}</aside>
+      {currentNode&&detailPanelOpen&&<aside className="detail-sidebar" aria-label={t.details}>
+        <button type="button" className="pane-close" aria-label={t.close} title={t.close}
+          onClick={closeDetailPanel}>×</button>
+        {details}
+      </aside>}
     </div>
-    {drawer&&<div className="drawer-screen" role="presentation" onClick={()=>setDrawer(null)}>
+    {drawer&&<div className="drawer-screen" role="presentation" onClick={()=>{
+      if(drawer==='tree')closeModulePanel();else closeDetailPanel();
+    }}>
       <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true"
-        aria-label={drawer==='tree'?t.tree:t.details} onClick={e=>e.stopPropagation()}>
-        <button className="drawer-close" aria-label={t.close} onClick={()=>setDrawer(null)}>×</button>
-        {drawer==='tree'?treePanel:details}
+        aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):t.details}
+        onClick={e=>e.stopPropagation()}>
+        <button className="drawer-close" aria-label={t.close} onClick={()=>{
+          if(drawer==='tree')closeModulePanel();else closeDetailPanel();
+        }}>×</button>
+        {drawer==='tree'?(module==='administrative'?treePanel:
+          <section className="tree-content">
+            <div className="panel-heading"><h2>{MODULES.find(x=>x.id===module)?.[lang]}</h2></div>
+            <p className="planned-module-description">{t.planned}</p>
+          </section>):details}
       </div>
     </div>}
   </div>;
