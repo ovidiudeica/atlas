@@ -72,6 +72,14 @@ export async function makeDetailedCollection(ids, nodes, load, onProgress = () =
   };
 }
 
+// Remove only stale geometry selection and camera state after returning to the
+// initial national preview. Keep unrelated query parameters and user preferences.
+export function clearGeometryPermalink(href) {
+  const url = new URL(href);
+  for (const key of ['entity', 'lng', 'lat', 'zoom']) url.searchParams.delete(key);
+  return url.toString();
+}
+
 export function buildPermalink(href, state) {
   const url = new URL(href);
   for (const key of ['entity', 'view', 'lang', 'simple', 'basemap', 'lng', 'lat', 'zoom'])

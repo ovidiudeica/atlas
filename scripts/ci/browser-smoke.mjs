@@ -125,11 +125,48 @@ async function desktop(cdp){
   assert(csv.includes('siruta-u64096'));
   assert(csv.includes('"Comuna Brețcu","",'),'CSV must preserve blank OSM ID');
   await p.snap('desktop-export-bretcu.png');
+
+  // Reset selected polygons (not merely the camera), with storage, permalink and
+  // user-preference persistence. Home must remain a camera-only operation.
+  await p.eval("document.querySelector('.detail-sidebar .entity-actions button:first-child').click()");
+  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===3",'Brețcu displayed with national roots');
+  await p.eval("document.querySelector('.zoom-controls button:last-child').click()");
+  assert.equal(await p.eval("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length"),3,
+    'Home must not reset selected geometries');
+  await p.eval("document.querySelector('.simplify-control input').click()");
+  await p.wait("document.querySelector('.simplify-control input').checked",'simplified display preference');
+  await p.eval("(()=>{const s=document.querySelector('.basemap-select select');s.value='grayscale';s.dispatchEvent(new Event('change',{bubbles:true}));})()");
+  await p.wait("document.querySelector('.basemap-select select').value==='grayscale'",'grayscale basemap');
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
+  await p.wait("document.documentElement.lang==='ro'",'Romanian reset label');
+  await p.eval("history.replaceState(history.state,'','?utm=preserved&entity=siruta-u64096&lng=26.4&lat=45.9&zoom=9')");
+  await p.eval("document.querySelector('.map-quick-actions .reset-geometries').click()");
+  await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'default national preview restored');
+  const resetState=await p.eval("({selected:!!document.querySelector('.detail-sidebar .entity-card'),rows:[...document.querySelectorAll('.tree-sidebar .tree-line input[type=checkbox]')].map(x=>x.checked),language:document.documentElement.lang,simplified:document.querySelector('.simplify-control input').checked,basemap:document.querySelector('.basemap-select select').value,search:document.querySelector('.tree-sidebar input[type=search]').value,query:location.search})");
+  assert.equal(resetState.selected,false,'Entity selection/detail must clear on geometry reset');
+  assert.deepEqual(resetState.rows,[true,true],'Only two national root geometries must remain selected');
+  assert.equal(resetState.search,'','Reset should restore unfiltered tree overview');
+  assert.equal(resetState.language,'ro','Language must survive geometry reset');
+  assert.equal(resetState.simplified,true,'Simplification choice must survive geometry reset');
+  assert.equal(resetState.basemap,'grayscale','Basemap must survive geometry reset');
+  assert(resetState.query.includes('utm=preserved'),'Unrelated permalink arguments must survive reset');
+  for(const key of ['entity','lng','lat','zoom'])assert(!new URLSearchParams(resetState.query).has(key),
+    'Reset must remove stale shared-URL '+key);
+  await p.wait("!document.querySelector('.map-boot-status')",'original national preview reloaded');
+  await p.snap('desktop-reset-geometries.png');
+
+  await p.call('Page.reload',{ignoreCache:true});
+  await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4.283')",'catalog after geometry-reset reload');
+  await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'persisted reset roots after reload');
+  assert.equal(await p.eval("!!document.querySelector('.detail-sidebar .entity-card')"),false,
+    'Reset permalink cannot revive the old selected entity on reload');
+  assert.equal(await p.eval("document.querySelector('.simplify-control input').checked"),true,
+    'Simplification preference survives reset and page reload');
   await p.close();
 }
 async function mobile(cdp){
   const p=await cdp.page(390,844,true);
-  await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4,283')",'mobile catalog');
+  await p.wait("document.querySelector('.tree-footnote strong')?.textContent.replace(/\\D/g,'').includes('4283')",'mobile catalog (locale-independent)');
   await p.wait("!document.querySelector('.map-boot-status')",'mobile national contours');
   const geometry=await p.eval("({width:innerWidth,scroll:document.documentElement.scrollWidth,height:document.querySelector('.map-area').getBoundingClientRect().height,buttons:getComputedStyle(document.querySelector('.mobile-controls')).display})");
   assert(geometry.scroll<=geometry.width+1,'Mobile horizontal overflow');
@@ -145,6 +182,16 @@ async function mobile(cdp){
   await p.wait("document.documentElement.lang==='ro'",'Romanian language');
   await p.snap('mobile-ro.png');
   assert((await p.eval('document.documentElement.scrollWidth'))<=391,'Mobile overflow in Romanian');
+  await p.eval("document.querySelector('.mobile-controls button:first-child').click()");
+  await p.wait("!!document.querySelector('.drawer[role=dialog] .tree-content')",'mobile tree for geometry reset');
+  await p.eval("document.querySelector('.drawer .tree-line input[type=checkbox]').click()");
+  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===1",'mobile country outline deselected');
+  await p.eval("document.querySelector('.drawer-close').click()");
+  assert.equal(await p.eval("document.querySelector('.map-quick-actions .reset-geometries').textContent.includes('Resetează geometriile')"),true);
+  await p.eval("document.querySelector('.map-quick-actions .reset-geometries').click()");
+  await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'mobile default national preview');
+  assert((await p.eval('document.documentElement.scrollWidth'))<=391,'Mobile reset action must not introduce overflow');
+  await p.snap('mobile-reset-geometries.png');
   await p.close();
 }
 try{
@@ -175,7 +222,7 @@ try{
   await desktop(client);
   await mobile(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
-  console.log('Browser smoke: desktop/mobile, Brețcu, detailed GeoJSON, CSV and screenshots OK.');
+  console.log('Browser smoke: desktop/mobile, geometry reset and persistence, Brețcu, detailed GeoJSON, CSV and screenshots OK.');
 }catch(err){
   console.error('Browser smoke failure:',err);
   process.exitCode=1;
