@@ -105,9 +105,14 @@ async function desktop(cdp){
   assert(frame.scroll<=frame.screen+1,'Desktop horizontal overflow');
   assert(frame.map>1300,'Map-first desktop must use available width');
   assert.match(frame.phase,/Phase 5/);
+  assert.equal(await p.eval("document.querySelectorAll('.map-area .zoom-controls button').length"),3,'Only zoom/−/Home permanent');
+  assert.equal(await p.eval("!!document.querySelector('.map-area .map-quick-actions,.map-area .map-controls,.map-area .map-legend,.map-area .map-note,.map-area .mobile-controls')"),false,
+    'Secondary commands, legend, source note and mobile buttons absent from map');
   await p.snap('desktop-initial.png');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("document.querySelector('.tree-footnote')?.textContent.includes('4,283')",'desktop catalog after opening module');
+  assert.equal(await p.eval("document.querySelector('.atlas-map-tools')?.open"),false,
+    'Map tools default to collapsed');
   await p.snap('desktop-module-open.png');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Repeated module click closes panel');
@@ -125,11 +130,17 @@ async function desktop(cdp){
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Details × hides panel');
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar .tree-line[aria-selected=true]')"),true,
     'Details close preserves selection');
-  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-label')).find(b=>b.textContent.includes('Brețcu')).click()");
-  await p.wait("!!document.querySelector('.detail-sidebar .entity-title h3')",'Same entity selection reopens details');
+  assert.equal(await p.eval("!!document.querySelector('.header-entity-action')"),true,
+    'Header detail button available when entity remains selected');
+  await p.eval("document.querySelector('.header-entity-action').click()");
+  await p.wait("!!document.querySelector('.detail-sidebar .entity-card')",'Header button reopens selected entity details');
+  await p.eval("document.querySelector('.detail-sidebar .atlas-detail-export>summary').click()");
+  assert.equal(await p.eval("document.querySelectorAll('.detail-sidebar .atlas-detail-export button').length"),3,
+    'Entity details support GeoJSON/CSV/permalink');
   const osm=await p.eval("Array.from(document.querySelectorAll('.detail-sidebar .metadata dt')).find(x=>x.textContent.trim()==='OSM ID')?.nextElementSibling?.textContent.trim()");
   assert.equal(osm,'','Brețcu must retain blank authentic OSM ID');
-  await p.eval("document.querySelector('.map-quick-actions button[aria-controls=phase5-export-panel]').click()");
+  await p.eval("document.querySelector('.tree-sidebar .atlas-map-tools>summary').click()");
+  await p.eval("document.querySelector('.tree-sidebar .atlas-export-tools>summary').click()");
   await p.wait("!!document.querySelector('#phase5-export-panel select')",'export controls');
   await p.eval("(()=>{const s=document.querySelector('#phase5-export-panel select');s.value='selected';s.dispatchEvent(new Event('change',{bubbles:true}));})()");
   await p.wait("document.querySelector('#phase5-export-panel select')?.value==='selected'",'export scope');
@@ -189,10 +200,10 @@ async function desktop(cdp){
   await p.eval("document.querySelector('.tree-sidebar .osm-level-actions button:first-child').click()");
   await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===8&&ids.includes('stat-RO1')&&ids.includes('stat-MD11')&&ids.includes('stat-MD12')&&!ids.includes('siruta-u64096')})()",
     'shared show action displays NUTS 1 and NTS 2 only');
-  await p.eval("document.querySelector('.export-heading button').click()");
+  await p.eval("document.querySelector('.tree-sidebar .atlas-export-tools>summary').click()");
   await p.wait("!document.querySelector('#phase5-export-panel')",'close export overlay for statistical evidence');
-  await p.wait("document.querySelector('.map-note')?.textContent.includes('Original-source')",
-    'statistical source geometry finished loading');
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'statistical map geometry ready');
   await pause(1600);
   await p.snap('desktop-statistical-regions-shown.png');
   await p.eval("document.querySelector('.tree-sidebar .osm-level-actions button:last-child').click()");
@@ -207,14 +218,16 @@ async function desktop(cdp){
   await p.eval("document.querySelector('.zoom-controls button:last-child').click()");
   assert.equal(await p.eval("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length"),3,
     'Home must not reset selected geometries');
-  await p.eval("document.querySelector('.simplify-control input').click()");
-  await p.wait("document.querySelector('.simplify-control input').checked",'simplified display preference');
-  await p.eval("(()=>{const s=document.querySelector('.basemap-select select');s.value='grayscale';s.dispatchEvent(new Event('change',{bubbles:true}));})()");
+  await p.eval("document.querySelector('.tree-sidebar .atlas-map-settings>summary').click()");
+  await p.eval("document.querySelector('.tree-sidebar .atlas-map-settings .simplify-control input').click()");
+  await p.wait("document.querySelector('.tree-sidebar .atlas-map-settings .simplify-control input').checked",'simplified display preference');
+  await p.eval("(()=>{const s=document.querySelector('.tree-sidebar .atlas-map-settings .basemap-select select');s.value='grayscale';s.dispatchEvent(new Event('change',{bubbles:true}));})()");
   await p.wait("document.querySelector('.basemap-select select').value==='grayscale'",'grayscale basemap');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
   await p.wait("document.documentElement.lang==='ro'",'Romanian reset label');
   await p.eval("history.replaceState(history.state,'','?utm=preserved&entity=siruta-u64096&lng=26.4&lat=45.9&zoom=9')");
-  await p.eval("document.querySelector('.map-quick-actions .reset-geometries').click()");
+  await p.eval("document.querySelector('.tree-sidebar .atlas-geometry-actions>summary').click()");
+  await p.eval("document.querySelector('.tree-sidebar .atlas-geometry-actions .reset-geometries').click()");
   await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'default national preview restored');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,
     'Geometry reset closes the entity detail panel');
@@ -281,16 +294,28 @@ async function mobile(cdp){
   await pause(850);
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Mobile starts without empty detail panel');
   await p.wait("!document.querySelector('.map-boot-status')",'mobile national contours');
-  const geometry=await p.eval("({width:innerWidth,scroll:document.documentElement.scrollWidth,height:document.querySelector('.map-area').getBoundingClientRect().height,buttons:getComputedStyle(document.querySelector('.mobile-controls')).display})");
+  const geometry=await p.eval("({width:innerWidth,scroll:document.documentElement.scrollWidth,height:document.querySelector('.map-area').getBoundingClientRect().height,zoomButtons:document.querySelectorAll('.map-area .zoom-controls button').length})");
   assert(geometry.scroll<=geometry.width+1,'Mobile horizontal overflow');
   assert(geometry.height>300,'Map is hidden on mobile');
-  assert.notEqual(geometry.buttons,'none','Mobile controls hidden');
+  assert.equal(geometry.zoomButtons,3,'Mobile map contains only zoom and Home');
+  assert.equal(await p.eval("!!document.querySelector('.map-area .mobile-controls')"),false,
+    'Duplicate mobile floating buttons removed');
   await p.snap('mobile-initial.png');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("!!document.querySelector('.drawer[role=dialog] .tree-content')",'mobile tree drawer');
   await p.wait("!!document.querySelector('.drawer .tree-footnote strong')",'mobile catalog shown in drawer');
   assert(await p.eval("document.querySelector('.drawer[role=dialog]')?.getAttribute('aria-modal')==='true'"));
   await p.snap('mobile-tree-drawer.png');
+  await p.eval("document.querySelector('.drawer .tree-line .tree-label').click()");
+  await p.wait("!!document.querySelector('.drawer-detail .entity-card')",'Mobile selection opens details');
+  await p.eval("document.querySelector('.drawer-close').click()");
+  await p.wait("!document.querySelector('.drawer-screen')",'Mobile detail close');
+  assert.equal(await p.eval("!!document.querySelector('.header-entity-action')"),true,'Header entity opener exists');
+  await p.eval("document.querySelector('.header-entity-action').click()");
+  await p.wait("!!document.querySelector('.drawer-detail .entity-card')",'Mobile detail reopened');
+  await p.eval("document.querySelector('.drawer-close').click()");
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.drawer .osm-level-filter')",'Tree drawer reopened');
   await p.eval("document.querySelector('.drawer .osm-level-filter>summary').click()");
   const mobileFilterTitle=await p.eval("({title:document.querySelector('.drawer .osm-level-filter>summary').textContent.trim(),lang:document.documentElement.lang})");
   assert.equal(mobileFilterTitle.title,mobileFilterTitle.lang==='ro'?'Filtre':'Filters',
@@ -324,9 +349,10 @@ async function mobile(cdp){
   await p.wait("!!document.querySelector('.drawer[role=dialog] .tree-content')",'mobile tree for geometry reset');
   await p.eval("document.querySelector('.drawer .tree-line input[type=checkbox]').click()");
   await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===1",'mobile country outline deselected');
-  await p.eval("document.querySelector('.drawer-close').click()");
-  assert.equal(await p.eval("document.querySelector('.map-quick-actions .reset-geometries').textContent.includes('Resetează geometriile')"),true);
-  await p.eval("document.querySelector('.map-quick-actions .reset-geometries').click()");
+  await p.eval("document.querySelector('.drawer .atlas-map-tools>summary').click()");
+  await p.eval("document.querySelector('.drawer .atlas-geometry-actions>summary').click()");
+  assert.equal(await p.eval("document.querySelector('.drawer .atlas-geometry-actions .reset-geometries').textContent.includes('Resetează geometriile')"),true);
+  await p.eval("document.querySelector('.drawer .atlas-geometry-actions .reset-geometries').click()");
   await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'mobile default national preview');
   assert((await p.eval('document.documentElement.scrollWidth'))<=391,'Mobile reset action must not introduce overflow');
   await p.snap('mobile-reset-geometries.png');
@@ -361,7 +387,7 @@ try{
   await tablet(client);
   await mobile(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
-  console.log('Browser smoke: WEB-R3.1 map-first panels, desktop/mobile toggle, details, Filters, reset, geojson, csv OK.');
+  console.log('Browser smoke: WEB-R3.2 map controls compact, export/settings/reset/legend relocated, desktop/tablet/mobile, filters, permalink OK.');
 }catch(err){
   console.error('Browser smoke failure:',err);
   process.exitCode=1;
