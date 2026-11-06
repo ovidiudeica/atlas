@@ -339,7 +339,12 @@ export default function App() {
       if(event.key!=='Tab'||event.defaultPrevented)return;
       const focusables=Array.from(dialog.querySelectorAll<HTMLElement>(
         'button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),summary,[tabindex]:not([tabindex="-1"])'
-      )).filter(el=>el.getClientRects().length>0&&!el.closest('[inert]'));
+      )).filter(el=>{
+        const closed=el.closest('details:not([open])');
+        return el.getClientRects().length>0&&!el.closest('[inert]')&&
+          (!closed||(el.tagName==='SUMMARY'&&el.parentElement===closed&&
+            !closed.parentElement?.closest('details:not([open])')));
+      });
       if(!focusables.length)return;
       const first=focusables[0],last=focusables[focusables.length-1];
       const active=document.activeElement;
