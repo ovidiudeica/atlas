@@ -162,7 +162,10 @@ async function desktop(cdp){
   await p.wait("!document.querySelector('#phase5-export-panel')",'close export overlay for statistical map evidence');
   await pause(350);
   await p.wait("document.querySelector('.map-note')?.textContent.includes('Original-source')",
-    'statistical polygons loaded into map');
+    'statistical source geometry finished loading');
+  // MapLibre GeoJSON worker parsing and WebGL repaint are asynchronous even
+  // after React has marked the source update complete.
+  await pause(1600);
   await p.snap('desktop-statistical-regions-shown.png');
   await p.eval("document.querySelector('.tree-sidebar .osm-stat-actions button:last-child').click()");
   await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===2&&ids.includes('osm-r90689')&&ids.includes('osm-r58974')})()",
