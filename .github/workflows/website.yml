@@ -16,15 +16,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Install
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Static regression tests
         run: npm test
       - name: Type-check and build
         run: npm run build
+      - name: Chromium desktop/mobile smoke
+        run: node scripts/ci/browser-smoke.mjs
+      - name: Store browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-smoke-${{ github.event.pull_request.head.sha || github.sha }}
+          path: artifacts/browser-smoke/*.png
+          if-no-files-found: warn
       - name: Store build
         uses: actions/upload-artifact@v4
         with:
