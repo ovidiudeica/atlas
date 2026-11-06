@@ -158,6 +158,11 @@ async function desktop(cdp){
   await p.eval("document.querySelector('.tree-sidebar .osm-stat-actions button:first-child').click()");
   await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===8&&ids.includes('stat-RO1')&&ids.includes('stat-MD11')&&ids.includes('stat-MD12')&&!ids.includes('siruta-u64096')})()",
     'NUTS 1 and NTS 2 regions shown without changing ADM 8');
+  await p.eval("document.querySelector('.export-heading button').click()");
+  await p.wait("!document.querySelector('#phase5-export-panel')",'close export overlay for statistical map evidence');
+  await pause(350);
+  await p.wait("document.querySelector('.map-note')?.textContent.includes('Original-source')",
+    'statistical polygons loaded into map');
   await p.snap('desktop-statistical-regions-shown.png');
   await p.eval("document.querySelector('.tree-sidebar .osm-stat-actions button:last-child').click()");
   await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===2&&ids.includes('osm-r90689')&&ids.includes('osm-r58974')})()",
