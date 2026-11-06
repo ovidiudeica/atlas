@@ -2,6 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibre-gl';
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
+import { buildPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
+  type ExportScope } from './data/phase5.mjs';
 import {
   asDisplayFeatures, bboxOfGeometry, codeOf, EMPTY_FEATURES, labelOf, loadCatalog,
   loadGeometryShard, lookupKeys, normalize, ROOT_IDS,
@@ -24,7 +26,7 @@ const MODULES: { id: ModuleId; symbol: string; en: string; ro: string }[] = [
 const WORDS = {
   en: {
     title: 'Territorial Atlas', tagline: 'Geography · History · Communities',
-    version: 'Administrative & statistical atlas · Phase 4', tree: 'Territorial tree',
+    version: 'Administrative & statistical atlas · Phase 5', tree: 'Territorial tree',
     search: 'Search names, OSM IDs, SIRUTA, CUATM or NUTS codes',
     all: 'All', adminView: 'Administrative', statView: 'Statistical',
     visible: 'Display geometry', details: 'Entity details', select: 'Select a territory on the map or in the tree.',
@@ -49,11 +51,20 @@ const WORDS = {
     sourceBoundary: 'OSM-Boundaries', detailNote: 'Source records are preserved unchanged. Spatial correspondence with OpenStreetMap does not establish legal boundary status.',
     relationshipNote: 'This OSM geometry shares a CUATM reference with another source representation; it does not imply a second independent legal unit.',
     dataError: 'Geometry loading failed. Retry by toggling the entity.',
-    expand: 'Expand', collapse: 'Collapse'
+    expand: 'Expand', collapse: 'Collapse',
+    path: 'Territorial path', previous: 'Previous sibling', next: 'Next sibling',
+    fitVisible: 'Fit visible territories', fitSelected: 'Fit selected territory', navigationLoading: 'Fitting…',
+    exportAction: 'Export & share', exportTitle: 'Export territory data', exportScope: 'Export scope',
+    exportSelected: 'Selected entity', exportVisible: 'Visible entities', exportGeoJSON: 'GeoJSON · full geometry',
+    exportCSV: 'CSV · metadata', exportHelp: 'GeoJSON always contains original detailed source geometry even when the map is simplified. CSV contains metadata only. Source limitations and licensing apply.',
+    exportEmpty: 'Select or display an entity to export.', exportBusy: 'Preparing export…',
+    exportDone: 'Download prepared.', exportFailed: 'Unable to prepare export. Check your connection and retry.',
+    copyLink: 'Copy map link', linkCopied: 'Link copied.', linkManual: 'Copy this link manually:',
+    searchShortcut: 'Press / to search. Enter selects the first match.'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
-    version: 'Atlas administrativ și statistic · Etapa 4', tree: 'Arbore teritorial',
+    version: 'Atlas administrativ și statistic · Etapa 5', tree: 'Arbore teritorial',
     search: 'Caută nume, ID OSM, coduri SIRUTA, CUATM sau NUTS',
     all: 'Toate', adminView: 'Administrativ', statView: 'Statistic',
     visible: 'Afișează geometria', details: 'Detaliile entității', select: 'Selectează un teritoriu pe hartă sau în arbore.',
@@ -78,11 +89,21 @@ const WORDS = {
     sourceBoundary: 'OSM-Boundaries', detailNote: 'Înregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.',
     relationshipNote: 'Această geometrie OSM reutilizează un cod CUATM asociat altei reprezentări. Nu rezultă că există două unități juridice independente.',
     dataError: 'Încărcarea geometriei a eșuat. Reîncearcă schimbând vizibilitatea entității.',
-    expand: 'Extinde', collapse: 'Restrânge'
+    expand: 'Extinde', collapse: 'Restrânge',
+    path: 'Traseu teritorial', previous: 'Entitatea precedentă', next: 'Entitatea următoare',
+    fitVisible: 'Încadrează teritoriile vizibile', fitSelected: 'Încadrează entitatea selectată', navigationLoading: 'Se încadrează…',
+    exportAction: 'Export și partajare', exportTitle: 'Export de date teritoriale', exportScope: 'Ce exportăm',
+    exportSelected: 'Entitatea selectată', exportVisible: 'Entitățile vizibile', exportGeoJSON: 'GeoJSON · geometrie completă',
+    exportCSV: 'CSV · metadate', exportHelp: 'GeoJSON conține întotdeauna geometria detaliată a sursei, chiar dacă harta este simplificată. CSV conține doar metadate. Se aplică limitările sursei și condițiile de licențiere.',
+    exportEmpty: 'Selectează sau afișează o entitate pentru export.', exportBusy: 'Se pregătește exportul…',
+    exportDone: 'Fișier pregătit pentru descărcare.', exportFailed: 'Exportul nu a reușit. Verifică conexiunea și reîncearcă.',
+    copyLink: 'Copiază linkul hărții', linkCopied: 'Link copiat.', linkManual: 'Copiază manual acest link:',
+    searchShortcut: 'Apasă / pentru căutare. Enter selectează primul rezultat.'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
 const DEFAULT_VISIBLE = [...ROOT_IDS];
+const SHARED_STATE = readPermalink(window.location.search);
 const style: maplibregl.StyleSpecification = {
   version:8,
   sources:{osm:{type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256,attribution:'© OpenStreetMap contributors'}},
