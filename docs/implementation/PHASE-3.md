@@ -1,6 +1,6 @@
 # Phase 3 — Administrative and Statistical Data Integration
 
-**Current status: GEOMETRY_COMPLETE_NOT_PROMOTABLE (candidate v2).**  
+**Current release status (2026-11-06): Phase 3 cartographic candidate v3 certified for source-fidelity integration with known source exceptions accepted, not legal certification.** See [PHASE-3-CERTIFICATION.md](../data/PHASE-3-CERTIFICATION.md) and `data/candidates/phase3/actual/manifest-v3.json` for the controlling current verdict. This document also retains the historical v2 `GEOMETRY_COMPLETE_NOT_PROMOTABLE` gate and its unresolved legal mapping issues; its original v2 manifest was not rewritten.  
 **Repository:** `ovidiudeica/atlas` • **PR:** #7 (Draft, not integrated)  
 **Reference snapshot:** OSM-Boundaries, **2026-10-05**
 
