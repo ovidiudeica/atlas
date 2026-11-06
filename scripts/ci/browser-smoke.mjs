@@ -144,6 +144,28 @@ async function desktop(cdp){
     'Bulk level 8 hide preserves both country outlines');
   await p.snap('desktop-level8-hidden.png');
 
+  // Statistical regions use the same territory scopes but distinct controls.
+  // This must not accidentally execute the preselected ADM 8 hide action.
+  const statisticalChoices=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .osm-stat-choices label')).map(x=>({label:x.querySelector('span').textContent.trim(),count:x.querySelector('small').textContent.trim(),checked:x.querySelector('input').checked}))");
+  assert.deepEqual(statisticalChoices.map(x=>x.label),['NUTS 1','NUTS 2','NUTS 3','NTS 1','NTS 2','NTS 3']);
+  assert.deepEqual(statisticalChoices.map(x=>Number(x.count)),[4,8,42,1,2,6],
+    'Statistical options and counts must reflect certified RO/MD catalogue');
+  assert(statisticalChoices.every(x=>!x.checked),'Statistical groups must not be selected implicitly');
+  await p.eval("document.querySelector('.tree-sidebar .osm-stat-choices input[aria-label=\"NUTS 1\"]').click()");
+  await p.eval("document.querySelector('.tree-sidebar .osm-stat-choices input[aria-label=\"NTS 2\"]').click()");
+  assert.equal(await p.eval("document.querySelector('.tree-sidebar .osm-stat-actions button:first-child').disabled"),false,
+    'Statistical bulk show should enable when at least one level is selected');
+  await p.eval("document.querySelector('.tree-sidebar .osm-stat-actions button:first-child').click()");
+  await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===8&&ids.includes('stat-RO1')&&ids.includes('stat-MD11')&&ids.includes('stat-MD12')&&!ids.includes('siruta-u64096')})()",
+    'NUTS 1 and NTS 2 regions shown without changing ADM 8');
+  await p.snap('desktop-statistical-regions-shown.png');
+  await p.eval("document.querySelector('.tree-sidebar .osm-stat-actions button:last-child').click()");
+  await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===2&&ids.includes('osm-r90689')&&ids.includes('osm-r58974')})()",
+    'Statistical bulk hide restores two roots and does not affect other admin levels');
+  assert.equal(await p.eval("document.querySelector('.detail-sidebar .entity-title h3')?.textContent.includes('Brețcu')"),true,
+    'Statistical bulk actions must preserve selected administrative detail');
+  await p.snap('desktop-statistical-regions-hidden.png');
+
   // Reset selected polygons (not merely the camera), with storage, permalink and
   // user-preference persistence. Home must remain a camera-only operation.
   await p.eval("document.querySelector('.detail-sidebar .entity-actions button:first-child').click()");
@@ -200,7 +222,19 @@ async function mobile(cdp){
     'Mobile filter must expose catalog-derived scopes');
   assert.equal(await p.eval("[...document.querySelectorAll('.drawer .osm-level-choices label')].some(x=>x.textContent.includes('ADM 8'))"),true,
     'Mobile filter must expose level 8');
+  assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-stat-choices input').length"),6,
+    'Mobile filter must expose both NUTS and NTS statistical levels');
+  assert.equal(await p.eval("document.querySelector('.drawer .osm-stat-actions button:first-child').disabled"),true,
+    'Statistical controls must be disabled without a selected level');
   await p.snap('mobile-osm-level-filter.png');
+  await p.eval("document.querySelector('.drawer .osm-stat-choices input[aria-label=\"NUTS 1\"]').click()");
+  await p.eval("document.querySelector('.drawer .osm-stat-actions button:first-child').click()");
+  await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===6&&ids.includes('stat-RO1')})()",
+    'Mobile statistical NUTS 1 display');
+  await p.snap('mobile-statistical-regions-shown.png');
+  await p.eval("document.querySelector('.drawer .osm-stat-actions button:last-child').click()");
+  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===2",
+    'Mobile statistical NUTS 1 hide without changing roots');
   await p.eval("document.querySelector('.drawer-close').click()");
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
   await p.wait("document.documentElement.lang==='ro'",'Romanian language');
@@ -246,7 +280,7 @@ try{
   await desktop(client);
   await mobile(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
-  console.log('Browser smoke: desktop/mobile, catalog OSM level 8 filter, geometry reset, Brețcu, GeoJSON, CSV and screenshots OK.');
+  console.log('Browser smoke: desktop/mobile, NUTS/NTS statistical levels, OSM level 8, geometry reset, Brețcu, GeoJSON, CSV and screenshots OK.');
 }catch(err){
   console.error('Browser smoke failure:',err);
   process.exitCode=1;
