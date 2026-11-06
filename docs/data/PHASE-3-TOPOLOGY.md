@@ -1,6 +1,6 @@
 # Phase 3 — Full-Snapshot Topological Audit
 
-**Status:** Source geometry inventory complete; topology exceptions remain under review.  
+**Status (2026-11-06):** The original source topology discrepancies below are accepted as explicitly documented **cartographic source exceptions** for candidate v3, with original shapes unchanged and no claim of legal correctness. Independent legal identity adjudication (especially four CUATM multipart/ambiguous reference groups) is still open. See [PHASE-3-CERTIFICATION.md](PHASE-3-CERTIFICATION.md) and the per-ID decision register. The tables below remain the original, non-erased source evidence.  
 **Reference:** OSM-Boundaries GeoJSON archives dated **2026-10-05**.  
 **Release:** Draft PR #7, not deployed or merged.
 
