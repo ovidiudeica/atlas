@@ -141,6 +141,15 @@ export function matchingStatisticalLevelIds(index, scopeIds, levelKeys) {
   return [...ids];
 }
 
+// A single list may select both OSM and statistical levels at once. Each Atlas
+// entity is displayed just once, even if its geometry has multiple roles.
+export function matchingCombinedLevelIds(index, scopeIds, administrativeLevels, statisticalKeys) {
+  return [...new Set([
+    ...matchingOsmLevelIds(index, scopeIds, administrativeLevels),
+    ...matchingStatisticalLevelIds(index, scopeIds, statisticalKeys)
+  ])];
+}
+
 // Never mutate the previous state; actions preserve all non-target entities,
 // including administrative levels outside the current statistical selection.
 export function updateOsmLevelVisibility(visible, targets, show) {

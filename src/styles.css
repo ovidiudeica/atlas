@@ -122,11 +122,7 @@
 .osm-level-actions button:disabled{opacity:.4;cursor:default}
 .osm-level-feedback{font-size:11px;color:#1f684a;margin:10px 2px 0}
 
-/* Separate statistical region selection in the existing level filter.
-   Actions cannot accidentally modify prechecked administrative level 8. */
-.osm-statistics{margin-top:14px;border-top:1px solid #dce8df;padding-top:12px}
-.osm-stat-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:7px;row-gap:7px}
-.osm-stat-choices legend{grid-column:1/-1}
-.osm-stat-choices label{display:flex;align-items:center;gap:5px;min-width:0;font-size:11px;cursor:pointer}
-.osm-stat-choices small{font-size:10px;color:#718a7b;margin-left:auto}
+/* Unified OSM administrative + NUTS/NTS statistical checklist.
+   All visible levels share one action pair while IDs are deduplicated. */
+.osm-level-choices label[data-level-kind="statistical"] span{color:#615ba5}
 .osm-stat-hint{font-size:10px;line-height:1.5;color:#688271;margin:9px 2px 0}

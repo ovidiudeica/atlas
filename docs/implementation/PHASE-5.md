@@ -88,6 +88,14 @@ regressions for shared polygons, separate show/hide commands, statistical-only
 geography sets and the current RO/MD catalog, plus desktop/mobile Chromium
 smoke verification.
 
+## Phase 5 addendum — single list and “Filtre” title (2026-11-06)
+
+The user-approved design **replaces the two separate administrative/statistical level sections** with one collapsible **Filtre / Filters** panel, one combined list labelled **Niveluri administrative și statistice / Administrative and statistical levels**, one cross-territory scope selection, and **exactly one** `Afișează / Show` and `Ascunde / Hide` action pair.
+
+Rows retain their meaningful source classifications (`ADM n`, `NUTS n`, `NTS n`) and catalogue-derived counts. All categories may be selected together; a single action takes the *union* of the selected territory-scoped source IDs, **deduplicating any geometry shared by administrative and statistical roles**. This prevents double counting and avoids deleting or creating geometry. No level is prechecked by default in the unified UI, to prevent accidentally selecting the 4,162 ADM-8 geometries when a visitor only wants NUTS/NTS. The original separate-section design documented above is historical and superseded by this addendum.
+
+The selected territory sets remain catalog-driven, with independent scope-root support for future Cernăuți, Odesa and Transcarpatica sets. Reset, original/detailed/simplified geometry, permanent source-exception policy, parent links, exported data, multilingual UI and initial national preview are unchanged. Both control states and inherited visibility are verified in responsive Chromium and unit tests.
+
 ## Validation and merge gate
 
 1. Run npm test and npm run build on the exact PR SHA, including Phase 3/4 regression tests and new Phase 5 helper tests.

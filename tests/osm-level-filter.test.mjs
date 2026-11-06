@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildOsmLevelIndex, availableOsmLevels, matchingOsmLevelIds, updateOsmLevelVisibility,
-  availableStatisticalLevels, matchingStatisticalLevelIds, statisticalLevelKey }
+  availableStatisticalLevels, matchingStatisticalLevelIds, matchingCombinedLevelIds, statisticalLevelKey }
   from '../src/data/osmLevelFilter.mjs';
 
 function node(id,country,level,parent=null,setRoot=null,role=['administrative']){
@@ -111,4 +111,27 @@ test('statistical-only future geography remains available even if it has no admi
   assert.deepEqual(availableOsmLevels(idx,['root']),[]);
   assert.deepEqual(availableStatisticalLevels(idx,['root']).map(x=>x.level),[1,2]);
   assert.deepEqual(matchingStatisticalLevelIds(idx,['root'],[statisticalLevelKey('STAT_REGIONS',2)]),['child']);
+});
+
+test('unified levels deduplicate a shared administrative/statistical geometry',()=>{
+  const idx=buildOsmLevelIndex(sample);
+  const targets=matchingCombinedLevelIds(idx,['ro','md'],[4],[
+    statisticalLevelKey('NUTS',1),statisticalLevelKey('NUTS',3),
+    statisticalLevelKey('NUTS_MOLDOVA',3)
+  ]);
+  assert.deepEqual(targets,['ro-county','md-shared','ro-nuts1']);
+  assert.equal(new Set(targets).size,targets.length);
+  const shown=updateOsmLevelVisibility(['ro','md'],targets,true);
+  assert.equal(shown.length,5);
+  assert.deepEqual(updateOsmLevelVisibility(shown,targets,false),['ro','md']);
+});
+
+test('unified levels support independent future geographic scopes and empty selection',()=>{
+  const idx=buildOsmLevelIndex(sample);
+  const stat=statisticalLevelKey('NUTS_UA',2);
+  assert.deepEqual(matchingCombinedLevelIds(idx,['chernivtsi'],[4],[stat]),[
+    'chernivtsi','chernivtsi-nuts'
+  ]);
+  assert.deepEqual(matchingCombinedLevelIds(idx,['odesa'],[],[stat]),['odesa-nuts']);
+  assert.deepEqual(matchingCombinedLevelIds(idx,['ro','md'],[],[]),[]);
 });

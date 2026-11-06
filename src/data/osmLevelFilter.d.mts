@@ -28,3 +28,4 @@ export function updateOsmLevelVisibility(visible: readonly string[], targets: re
 export function statisticalLevelKey(classification: string, level: number): string;
 export function availableStatisticalLevels(index: OsmLevelIndex, scopeIds: readonly string[]): StatisticalLevelOption[];
 export function matchingStatisticalLevelIds(index: OsmLevelIndex, scopeIds: readonly string[], levelKeys: readonly string[]): string[];
+export function matchingCombinedLevelIds(index: OsmLevelIndex, scopeIds: readonly string[], administrativeLevels: readonly number[], statisticalKeys: readonly string[]): string[];

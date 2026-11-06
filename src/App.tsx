@@ -3,7 +3,7 @@ import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibr
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
-  matchingOsmLevelIds, matchingStatisticalLevelIds, updateOsmLevelVisibility } from './data/osmLevelFilter.mjs';
+  matchingCombinedLevelIds, updateOsmLevelVisibility } from './data/osmLevelFilter.mjs';
 import { buildPermalink, clearGeometryPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
   type ExportScope } from './data/phase5.mjs';
 import {
@@ -42,8 +42,8 @@ const WORDS = {
     raw: 'Original OSM tags', officialRecord: 'Full official registry record',
     view: 'Show on map', hide: 'Hide on map', locate: 'Zoom to territory',
     childrenShow: 'Show children', childrenHide: 'Hide children',
-    levelFilter: 'Geometries by level', levelScope: 'Territorial sets',
-    levelChoose: 'OSM administrative levels', statChoose: 'Statistical regions (NUTS / NTS)',
+    levelFilter: 'Filters', levelScope: 'Territorial sets',
+    levelChoose: 'Administrative and statistical levels', statChoose: 'Statistical regions (NUTS / NTS)',
     statRoleNote: 'A shared administrative/statistical boundary is one geometry.',
     levelShow: 'Show', levelHide: 'Hide',
     levelMatch: 'matching geometries', levelShownOne: 'geometry shown', levelShownMany: 'geometries shown',
@@ -86,8 +86,8 @@ const WORDS = {
     raw: 'Tag-uri OSM originale', officialRecord: 'Fișa integrală din registrul oficial',
     view: 'Afișează pe hartă', hide: 'Ascunde de pe hartă', locate: 'Încadrează teritoriul',
     childrenShow: 'Afișează copiii', childrenHide: 'Ascunde copiii',
-    levelFilter: 'Geometrii după nivel', levelScope: 'Seturi teritoriale',
-    levelChoose: 'Niveluri administrative OSM', statChoose: 'Regiuni statistice (NUTS / NTS)',
+    levelFilter: 'Filtre', levelScope: 'Seturi teritoriale',
+    levelChoose: 'Niveluri administrative și statistice', statChoose: 'Regiuni statistice (NUTS / NTS)',
     statRoleNote: 'Un contur administrativ și statistic comun reprezintă o singură geometrie.',
     levelShow: 'Afișează', levelHide: 'Ascunde',
     levelMatch: 'geometrii corespunzătoare', levelShownOne: 'geometrie afișată', levelShownMany: 'geometrii afișate',
@@ -204,10 +204,9 @@ export default function App() {
   const [shareFallback,setShareFallback] = useState('');
   const [navBusy,setNavBusy] = useState(false);
   const [levelScopeSelection,setLevelScopeSelection] = useState<string[] | null>(null);
-  const [levelSelection,setLevelSelection] = useState<number[]>([8]);
+  const [levelSelection,setLevelSelection] = useState<number[]>([]);
   const [statLevelSelection,setStatLevelSelection] = useState<string[]>([]);
   const [levelActionMessage,setLevelActionMessage] = useState('');
-  const [statActionMessage,setStatActionMessage] = useState('');
   const navigationEpoch = useRef(0);
 
   const t=WORDS[lang];
@@ -222,15 +221,12 @@ export default function App() {
   const levelOptions = useMemo(()=>
     availableOsmLevels(osmLevelIndex,selectedLevelScopes),
     [osmLevelIndex,selectedLevelScopes]);
-  const matchingLevelIds = useMemo(()=>
-    matchingOsmLevelIds(osmLevelIndex,selectedLevelScopes,levelSelection),
-    [osmLevelIndex,selectedLevelScopes,levelSelection]);
   const statisticalLevelOptions = useMemo(()=>
     availableStatisticalLevels(osmLevelIndex,selectedLevelScopes),
     [osmLevelIndex,selectedLevelScopes]);
-  const matchingStatisticalIds = useMemo(()=>
-    matchingStatisticalLevelIds(osmLevelIndex,selectedLevelScopes,statLevelSelection),
-    [osmLevelIndex,selectedLevelScopes,statLevelSelection]);
+  const matchingLevelIds = useMemo(()=>
+    matchingCombinedLevelIds(osmLevelIndex,selectedLevelScopes,levelSelection,statLevelSelection),
+    [osmLevelIndex,selectedLevelScopes,levelSelection,statLevelSelection]);
   const hierarchy = useMemo(()=>createHierarchy(catalog,treeView),[catalog,treeView]);
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
@@ -428,7 +424,6 @@ export default function App() {
       return checked?[...new Set([...current,id])]:current.filter(value=>value!==id);
     });
     setLevelActionMessage('');
-    setStatActionMessage('');
   }
   function toggleLevel(level:number, checked:boolean){
     setLevelSelection(old=>checked?[...new Set([...old,level])]:old.filter(value=>value!==level));
@@ -436,20 +431,14 @@ export default function App() {
   }
   function toggleStatisticalLevel(key:string, checked:boolean){
     setStatLevelSelection(old=>checked?[...new Set([...old,key])]:old.filter(value=>value!==key));
-    setStatActionMessage('');
+    setLevelActionMessage('');
   }
-  function applyStatisticalSelection(show:boolean){
-    const affected = matchingStatisticalIds.filter(id=>visibleSet.has(id)).length;
-    const changed = show ? matchingStatisticalIds.length-affected : affected;
-    setVisible(old=>updateOsmLevelVisibility(old,matchingStatisticalIds,show));
-    setStatActionMessage(changed.toLocaleString(lang==='ro'?'ro-RO':'en-US')+' '+
-      (show?(changed===1?t.levelShownOne:t.levelShownMany):
-        (changed===1?t.levelHiddenOne:t.levelHiddenMany)));
-  }
-  function applyOsmLevelSelection(show:boolean){
-    const affected = matchingLevelIds.filter(id=>visible.includes(id)).length;
-    const changed = show ? matchingLevelIds.length-affected : affected;
-    setVisible(old=>updateOsmLevelVisibility(old,matchingLevelIds,show));
+  function applyCombinedLevelSelection(show:boolean){
+    const selectedIds=matchingLevelIds;
+    const selectedSet=new Set(visible);
+    const affected=selectedIds.filter(id=>selectedSet.has(id)).length;
+    const changed=show?selectedIds.length-affected:affected;
+    setVisible(old=>updateOsmLevelVisibility(old,selectedIds,show));
     setLevelActionMessage(changed.toLocaleString(lang==='ro'?'ro-RO':'en-US')+' '+
       (show?(changed===1?t.levelShownOne:t.levelShownMany):
         (changed===1?t.levelHiddenOne:t.levelHiddenMany)));
@@ -633,10 +622,17 @@ export default function App() {
         </fieldset>
         <fieldset className="osm-level-choices">
           <legend>{t.levelChoose}</legend>
-          {levelOptions.map(option=><label key={option.level}>
+          {levelOptions.map(option=><label key={'adm-'+option.level} data-level-kind="administrative">
             <input type="checkbox" checked={levelSelection.includes(option.level)}
               aria-label={'OSM '+option.level} onChange={event=>toggleLevel(option.level,event.target.checked)} />
             <span>ADM {option.level}</span>
+            <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
+          </label>)}
+          {statisticalLevelOptions.map(option=><label key={option.key} data-level-kind="statistical">
+            <input type="checkbox" checked={statLevelSelection.includes(option.key)}
+              aria-label={(option.classification==='NUTS_MOLDOVA'?'NTS':option.classification)+' '+option.level}
+              onChange={event=>toggleStatisticalLevel(option.key,event.target.checked)} />
+            <span>{option.classification==='NUTS_MOLDOVA'?'NTS':option.classification} {option.level}</span>
             <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
           </label>)}
         </fieldset>
@@ -644,35 +640,13 @@ export default function App() {
         <div className="osm-level-actions">
           <button type="button" disabled={!matchingLevelIds.length}
             aria-label={t.levelShow+' · '+t.levelChoose}
-            onClick={()=>applyOsmLevelSelection(true)}>{t.levelShow}</button>
+            onClick={()=>applyCombinedLevelSelection(true)}>{t.levelShow}</button>
           <button type="button" disabled={!matchingLevelIds.length}
             aria-label={t.levelHide+' · '+t.levelChoose}
-            onClick={()=>applyOsmLevelSelection(false)}>{t.levelHide}</button>
+            onClick={()=>applyCombinedLevelSelection(false)}>{t.levelHide}</button>
         </div>
         {levelActionMessage&&<p className="osm-level-feedback" role="status">{levelActionMessage}</p>}
-        <div className="osm-statistics">
-          <fieldset className="osm-stat-choices">
-            <legend>{t.statChoose}</legend>
-            {statisticalLevelOptions.map(option=><label key={option.key}>
-              <input type="checkbox" checked={statLevelSelection.includes(option.key)}
-                aria-label={(option.classification==='NUTS_MOLDOVA'?'NTS':option.classification)+' '+option.level}
-                onChange={event=>toggleStatisticalLevel(option.key,event.target.checked)} />
-              <span>{option.classification==='NUTS_MOLDOVA'?'NTS':option.classification} {option.level}</span>
-              <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
-            </label>)}
-          </fieldset>
-          <p className="osm-level-count">{matchingStatisticalIds.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.levelMatch}</p>
-          <div className="osm-level-actions osm-stat-actions">
-            <button type="button" disabled={!matchingStatisticalIds.length}
-              aria-label={t.levelShow+' · '+t.statChoose}
-              onClick={()=>applyStatisticalSelection(true)}>{t.levelShow}</button>
-            <button type="button" disabled={!matchingStatisticalIds.length}
-              aria-label={t.levelHide+' · '+t.statChoose}
-              onClick={()=>applyStatisticalSelection(false)}>{t.levelHide}</button>
-          </div>
-          {statActionMessage&&<p className="osm-level-feedback" role="status">{statActionMessage}</p>}
-          <p className="osm-stat-hint">{t.statRoleNote}</p>
-        </div>
+        <p className="osm-stat-hint">{t.statRoleNote}</p>
       </div>
     </details>
     {catalogError?<div className="loading-msg" role="alert">{t.loadFailed}<button onClick={()=>window.location.reload()}>{t.retry}</button></div>:
