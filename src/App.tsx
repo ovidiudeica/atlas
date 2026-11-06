@@ -218,6 +218,7 @@ export default function App() {
   const [statLevelSelection,setStatLevelSelection] = useState<string[]>([]);
   const [levelActionMessage,setLevelActionMessage] = useState('');
   const navigationEpoch = useRef(0);
+  const lastDrawerRef = useRef<Drawer>(null);
 
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
@@ -294,6 +295,8 @@ export default function App() {
     window.addEventListener('keydown',onShortcut);
     return ()=>window.removeEventListener('keydown',onShortcut);
   },[]);
+  // WEB-R3.3: Escape closes the foremost panel and restores keyboard focus
+  // without clearing selected or visible entities.
   useEffect(()=>{
     const onEscape=(event:KeyboardEvent)=>{
       if(event.key!=='Escape'||event.defaultPrevented)return;
@@ -301,15 +304,59 @@ export default function App() {
         setDrawer(null);
         if(drawer==='tree')setModulePanelOpen(false);
         else setDetailPanelOpen(false);
-      }else if(detailPanelOpen)setDetailPanelOpen(false);
-      else if(modulePanelOpen)setModulePanelOpen(false);
-      else return;
+      }else if(detailPanelOpen){
+        setDetailPanelOpen(false);
+        window.requestAnimationFrame(()=>
+          document.querySelector<HTMLButtonElement>('.header-entity-action')?.focus());
+      }else if(modulePanelOpen){
+        const opener=document.querySelector<HTMLButtonElement>('.module-rail button[aria-expanded=true]');
+        setModulePanelOpen(false);
+        window.requestAnimationFrame(()=>opener?.focus());
+      }else return;
       event.preventDefault();
-      document.querySelector<HTMLButtonElement>('.module-rail button[aria-expanded=true]')?.focus();
     };
     window.addEventListener('keydown',onEscape);
     return ()=>window.removeEventListener('keydown',onEscape);
   },[drawer,detailPanelOpen,modulePanelOpen]);
+
+  // The mobile drawer is a modal dialog: focus its Close control on entry,
+  // contain keyboard Tab navigation, and return focus to the correct opener.
+  // This does not block pointer/touch interactions with the module bar below.
+  useEffect(()=>{
+    const previous=lastDrawerRef.current;
+    lastDrawerRef.current=drawer;
+    if(!drawer){
+      if(previous==='detail')
+        document.querySelector<HTMLButtonElement>('.header-entity-action')?.focus();
+      else if(previous==='tree')
+        document.querySelector<HTMLButtonElement>('.module-rail button:first-child')?.focus();
+      return;
+    }
+    const dialog=document.querySelector<HTMLElement>('.drawer-screen .drawer');
+    if(!dialog)return;
+    dialog.querySelector<HTMLButtonElement>('.drawer-close')?.focus();
+    const onTab=(event:KeyboardEvent)=>{
+      if(event.key!=='Tab'||event.defaultPrevented)return;
+      const focusables=Array.from(dialog.querySelectorAll<HTMLElement>(
+        'button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),summary,[tabindex]:not([tabindex="-1"])'
+      )).filter(el=>{
+        const closed=el.closest('details:not([open])');
+        return el.getClientRects().length>0&&!el.closest('[inert]')&&
+          (!closed||(el.tagName==='SUMMARY'&&el.parentElement===closed&&
+            !closed.parentElement?.closest('details:not([open])')));
+      });
+      if(!focusables.length)return;
+      const first=focusables[0],last=focusables[focusables.length-1];
+      const active=document.activeElement;
+      if(event.shiftKey&&(active===first||!dialog.contains(active))){
+        event.preventDefault();last.focus();
+      }else if(!event.shiftKey&&(active===last||!dialog.contains(active))){
+        event.preventDefault();first.focus();
+      }
+    };
+    document.addEventListener('keydown',onTab);
+    return ()=>document.removeEventListener('keydown',onTab);
+  },[drawer]);
   useEffect(()=>{localStorage.setItem('atlas-visible-phase4',JSON.stringify(visible));},[visible]);
   useEffect(()=>{
     if(catalog.length && selected && !nodes.has(selected))setSelected(null);
@@ -881,7 +928,7 @@ export default function App() {
           setDetailPanelOpen(true);
           if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
           else if(window.innerWidth<1100)setModulePanelOpen(false);
-        }}>ⓘ</button>}
+        }}><span className="detail-info-glyph" aria-hidden="true">i</span></button>}
       <div className="language" aria-label="Language">
         <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
         <button className={lang==='ro'?'active':''} aria-pressed={lang==='ro'} onClick={()=>setLang('ro')}>RO</button>

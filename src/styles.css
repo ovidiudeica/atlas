@@ -196,3 +196,19 @@
  .language{flex-shrink:0}
  .atlas-map-status{bottom:19px;left:9px;max-width:calc(100% - 65px)}
 }
+
+/* WEB-R3.3 accessibility: all compact controls remain minimum 44px touch targets */
+.zoom-controls button{min-width:44px;min-height:44px}
+.pane-close{height:44px;width:44px;min-height:44px}
+.atlas-tool-section>summary{min-height:44px}
+.header-entity-action{height:44px;width:44px;flex-basis:44px}
+@media(max-width:700px){
+ .zoom-controls button{width:44px;height:44px}
+ .header-entity-action{height:44px;width:44px;flex-basis:44px}
+ .drawer-close{width:44px;height:44px}
+}
+
+/* Avoid relying on circled-info glyph support in platform/mobile fonts. */
+.detail-info-glyph{display:inline-flex;align-items:center;justify-content:center;
+ width:21px;height:21px;border:1.5px solid currentColor;border-radius:50%;
+ font-size:14px;font-family:Arial,sans-serif;font-weight:800;line-height:1}
