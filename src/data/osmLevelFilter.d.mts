@@ -30,3 +30,4 @@ export function availableStatisticalLevels(index: OsmLevelIndex, scopeIds: reado
 export function matchingStatisticalLevelIds(index: OsmLevelIndex, scopeIds: readonly string[], levelKeys: readonly string[]): string[];
 export function matchingCombinedLevelIds(index: OsmLevelIndex, scopeIds: readonly string[], administrativeLevels: readonly number[], statisticalKeys: readonly string[]): string[];
 export function orderTerritorialScopes(scopes: readonly OsmLevelScope[], preferredRootIds: readonly string[]): OsmLevelScope[];
+export function levelVisibilityState(visible: ReadonlySet<string> | readonly string[], targets: readonly string[]): {checked:boolean; mixed:boolean};
