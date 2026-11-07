@@ -18,7 +18,12 @@ test('MapLibre camera automatically reprojects GeoJSON boundaries when moved/res
   assert.match(app,/mapRef\.current/);
   assert.match(app,/getSource\('borders'\)/);
   assert.match(app,/getSource\('entities'\)/);
-  assert.match(app,/source\?\.setData\(asDisplayFeatures/);
+  // Presentation metadata is attached after canonical geometry is loaded.
+  // The MapLibre source still receives the geometry produced by asDisplayFeatures.
+  assert.match(app,/asDisplayFeatures\(ids,nodes,features\)/);
+  assert.match(app,/source\?\.setData\(displayed\)/);
+  assert.match(app,/styleForEntity\(node,adminFilters,statFilters\)/);
+  assert.match(app,/feature\.properties=\{\.\.\.feature\.properties/);
   assert.match(app,/fitBounds/);
   assert.match(app,/getCanvas\(\)\.style\.cursor/);
 });
