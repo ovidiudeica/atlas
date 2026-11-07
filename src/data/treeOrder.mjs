@@ -1,10 +1,11 @@
 // Stable, presentation-only order of sibling territorial entities.
 // WEB-R3.17: Moldova siblings use statistical code first (including dual-role
 // units), then CUATM code for administrative entities. No cross-parent moves.
-// Uncoded Nistrenia ADM5 units retain the approved geographical fallback;
-// Romania's ordering is untouched.
+// WEB-R3.18: Nistrenia's seven uncoded ADM5 children follow published PMR
+// cadastral codes associated with their seats. Romania is untouched.
 import {shortTreeName} from './treeNames.mjs';
 import {comparePresentationSiblings} from './treeOverlay.mjs';
+import {PMR_CADASTRAL_ORDER,pmrCadastralSeatCode} from './pmrCadastral.mjs';
 export const NISTRIAN_PARENT_ID='osm-r65335';
 export const GAGAUZIA_PARENT_ID='osm-r1699032';
 export const CHISINAU_PARENT_ID='osm-r1691801';
@@ -14,19 +15,11 @@ export const EAST_BENDER_ADM4_ID='osm-r9581354'; // CUATM 0500
 export const EAST_UATSN_ADM4_ID='osm-r2607033'; // CUATM 9800
 export const EAST_BENDER_ADM8_CITY_ID='osm-r12463379';
 
-export const NISTRIAN_CITY_COUNCILS=Object.freeze(['osm-r1702219','osm-r944727']);
-// The seven actual ADM5 child IDs of osm-r65335, verified against OSMB 2026-10-05.
-// Order: Tiraspol, Bender; Slobozia, Grigoriopol, Dubăsari, Rîbnița, Camenca.
-export const NISTRIAN_CHILD_ORDER=Object.freeze([
-  'osm-r1702219', // Tiraspol city council — de-facto administrative seat
-  'osm-r944727',  // Bender city council
-  'osm-r1702218', // Slobozia raion — south
-  'osm-r1702214', // Grigoriopol raion
-  'osm-r1702215', // Dubăsari raion
-  'osm-r1702217', // Rîbnița raion
-  'osm-r1702216'  // Camenca raion — north
-]);
-const nistrianChildRank=new Map(NISTRIAN_CHILD_ORDER.map((id,index)=>[id,index]));
+export const NISTRIAN_CITY_COUNCILS=Object.freeze(['osm-r944727','osm-r1702219']);
+// The exact seven ADM5 child IDs, ordered by their associated cadastral
+// seat-code (32,33,40,45,55,57,66), not by technical OSM relation ID.
+// Source and matching limitations live in pmrCadastral.mjs.
+export const NISTRIAN_CHILD_ORDER=PMR_CADASTRAL_ORDER;
 
 // WEB-R3.10 — only display ordering; the three NTS3 regions are NOT
 // administrative superiors. Their first item is the seat of the regional
@@ -122,12 +115,11 @@ export function compareTreeSiblings(a,b,view,parentId,lang='ro'){
   const presented=comparePresentationSiblings(a,b,view,parentId,lang);
   if(presented!==null)return presented;
   if(parentId===NISTRIAN_PARENT_ID&&view!=='statistical'){
-    const aRank=nistrianChildRank.get(a.id);
-    const bRank=nistrianChildRank.get(b.id);
-    if(aRank!==undefined&&bRank!==undefined)return aRank-bRank;
-    if(aRank!==undefined)return -1;
-    if(bRank!==undefined)return 1;
-    // Graceful fallback for unexpected future children without changing IDs.
+    const aCode=pmrCadastralSeatCode(a.id);
+    const bCode=pmrCadastralSeatCode(b.id);
+    if(aCode&&bCode)return aCode.localeCompare(bCode,'en')||a.id.localeCompare(b.id,'en');
+    if(aCode||bCode)return aCode?-1:1;
+    // No invented codes for unexpected future Nistrenia children.
     return sortedByLocalizedShortName(a,b,lang);
   }
   // Fallback only for uncoded siblings: prior seat/raion presentation rules
