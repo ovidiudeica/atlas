@@ -32,7 +32,7 @@ test('Settings, fit, legend, export and sources remain complete and independent'
   assert.match(app,/makeDetailedCollection\(/);
   assert.match(app,/metadataCsv\(/);
   assert.match(app,/mapVisible\.filter/);
-  assert.match(app,/className="atlas-tools-legend"/);
+  assert.match(app,/className="atlas-tools-item atlas-tools-legend"/);
   assert.match(app,/t\.sourceNote/);
   assert.match(app,/t\.detailNote/);
 });
