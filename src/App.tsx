@@ -379,13 +379,13 @@ export default function App() {
         if(drawer==='tree')setModulePanelOpen(false);
         else setDetailPanelOpen(false);
       }else if(detailPanelOpen){
+        // Focus the stable opener before unmounting the panel: no delayed race.
+        document.querySelector<HTMLButtonElement>('.header-entity-action')?.focus();
         setDetailPanelOpen(false);
-        window.requestAnimationFrame(()=>
-          document.querySelector<HTMLButtonElement>('.header-entity-action')?.focus());
       }else if(modulePanelOpen){
         const opener=document.querySelector<HTMLButtonElement>('.module-rail button[aria-expanded=true]');
+        opener?.focus();
         setModulePanelOpen(false);
-        window.requestAnimationFrame(()=>opener?.focus());
       }else return;
       event.preventDefault();
     };
@@ -738,10 +738,13 @@ export default function App() {
       (toolsDialogRef.current?.scrollTop||0)===0)closeTools();
   }
   function closeDetailPanel(){
+    // The opener is stable and already mounted: focus it synchronously.
+    // A deferred animation-frame callback can steal focus from a newly
+    // opened global-tools dialog during rapid panel transitions.
+    if(drawer!=='detail')
+      document.querySelector<HTMLButtonElement>('.header-entity-action')?.focus();
     setDetailPanelOpen(false);
     if(drawer==='detail')setDrawer(null);
-    else window.requestAnimationFrame(()=>
-      document.querySelector<HTMLButtonElement>('.header-entity-action')?.focus());
   }
   // Home restores only the camera. Reset geometries returns to the initial
   // RO/MD outline preview without changing map language, basemap or simplification.
