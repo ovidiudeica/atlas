@@ -6,6 +6,7 @@ import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
+import { entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent } from './data/entityCardRoles.mjs';
 import { presentationParentId } from './data/treeOverlay.mjs';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
   matchingCombinedLevelIds, matchingOsmLevelIds, matchingStatisticalLevelIds } from './data/osmLevelFilter.mjs';
@@ -97,7 +98,11 @@ const WORDS = {
     cardIdentity: 'Identity', cardAdministration: 'Administrative & registry',
     cardStatistics: 'Statistical roles', cardHierarchy: 'Territorial hierarchy',
     cardCartography: 'Geometry & provenance', cardRecords: 'Original records',
-    statVersion: 'Version', statParentCode: 'Statistical parent code'
+    statVersion: 'Version', statParentCode: 'Statistical parent code',
+    cardAdminRole: 'Administrative role', roleOsmGeometry: 'OSM administrative geometry',
+    roleRegistryOnly: 'National-register role; no separate OSM boundary',
+    roleRegistryParent: 'Register parent code', cardStatParent: 'Statistical parent',
+    cardOpenParent: 'Open parent entity'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -163,7 +168,11 @@ const WORDS = {
     cardIdentity: 'Identitate', cardAdministration: 'Administrativ și registru',
     cardStatistics: 'Roluri statistice', cardHierarchy: 'Ierarhie teritorială',
     cardCartography: 'Geometrie și proveniență', cardRecords: 'Înregistrări originale',
-    statVersion: 'Versiune', statParentCode: 'Cod părinte statistic'
+    statVersion: 'Versiune', statParentCode: 'Cod părinte statistic',
+    cardAdminRole: 'Rol administrativ', roleOsmGeometry: 'Geometrie administrativă OSM',
+    roleRegistryOnly: 'Rol din registrul național; fără contur OSM separat',
+    roleRegistryParent: 'Cod părinte din registru', cardStatParent: 'Părinte statistic',
+    cardOpenParent: 'Deschide entitatea părinte'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -243,7 +252,8 @@ export default function App() {
   const [rootsLoaded,setRootsLoaded] = useState(false);
   const [geomLoading,setGeomLoading] = useState(false);
   const [geomError,setGeomError] = useState(false);
-  const [drawer,setDrawer] = useState<Drawer>(null);
+  const [drawer,setDrawer] = useState<Drawer>(()=>
+    SHARED_STATE.entity&&window.innerWidth<=700?'detail':null);
   const [toolsOpen,setToolsOpen] = useState(false);
   const [toolSection,setToolSection] = useState<MapToolSection>(null);
   const [legendShowAll,setLegendShowAll] = useState(false);
@@ -259,6 +269,7 @@ export default function App() {
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
   const nodes = useMemo(()=>new Map(catalog.map(n=>[n.id,n])),[catalog]);
+  const statisticalIndex = useMemo(()=>statisticalCodeIndex(catalog),[catalog]);
   // One visibility state shared by tree rows and filter level checkboxes.
   // Filter levels always span every certified territorial set.
   const osmLevelIndex = useMemo(()=>buildOsmLevelIndex(catalog),[catalog]);
@@ -291,6 +302,7 @@ export default function App() {
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
+  const cardRoles=currentNode?entityCardRoles(currentNode):null;
   const breadcrumbs = useMemo(()=>{
     const path:Territory[]=[];
     let cursor=selected?nodes.get(selected):undefined;
@@ -929,7 +941,7 @@ export default function App() {
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
         <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
-        <div><h3>{currentNode.officialName}</h3><small>{roleLabel(currentNode)}</small></div>
+        <div><h3>{labelOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
       </header>
       {breadcrumbs.length>0&&<nav className="entity-breadcrumbs" aria-label={t.path}>
         {breadcrumbs.map((crumb,index)=><span className="breadcrumb-part" key={crumb.id}>
@@ -968,13 +980,23 @@ export default function App() {
           <dt>{t.country}</dt><dd>{currentNode.country==='RO'?'România':'Republica Moldova'}</dd>
         </dl>
       </EntityCardSection>
-      {(currentNode.roles.includes('administrative')||currentNode.registry||
+      {(cardRoles?.administrative.length||currentNode.registry||
         pmrCadastralSeatCode(currentNode.id))&&
       <EntityCardSection title={t.cardAdministration} kind="administrative">
+        {cardRoles&&cardRoles.administrative.length>0&&
+          <ul className="entity-admin-roles" aria-label={t.cardAdminRole}>
+            {cardRoles.administrative.map((role,index)=>
+              <li key={role.basis+'-'+index}>
+                <div className="entity-admin-role-primary">
+                  <strong>{role.label||t.noCode}</strong>
+                  <small>{role.isOsmBoundary?t.roleOsmGeometry:t.roleRegistryOnly}</small>
+                </div>
+                {role.registryCode&&<span>{t.registry}: {role.registrySystem} {role.registryCode}</span>}
+                {role.parentRegistryCode&&
+                  <span>{t.roleRegistryParent}: {role.parentRegistryCode}</span>}
+              </li>)}
+          </ul>}
         <dl className="metadata">
-          {currentNode.registry&&<>
-            <dt>{t.registry}</dt><dd>{currentNode.registry.system+' '+currentNode.registry.code}</dd>
-          </>}
           {pmrCadastralSeatCode(currentNode.id)&&<>
             <dt>{t.pmrCadastralCode}</dt><dd>{pmrCadastralSeatCode(currentNode.id)}</dd>
             <dt>{t.pmrCadastralSource}</dt><dd>
@@ -991,16 +1013,16 @@ export default function App() {
         {currentNode.registryIdentityReviewStatus&&
           <p className="source-caveat">{t.relationshipNote}</p>}
       </EntityCardSection>}
-      {currentNode.statisticalRoles.length>0&&
+      {cardRoles&&cardRoles.statistical.length>0&&
       <EntityCardSection title={t.cardStatistics} kind="statistical">
         <dl className="metadata">
           <dt>{t.statisticalRole}</dt><dd>{codeOf(currentNode)||null}</dd>
         </dl>
         <ul className="entity-statistical-roles">
-          {currentNode.statisticalRoles.map((role,index)=>
+          {cardRoles.statistical.map((role,index)=>
             <li key={role.classification+'-'+role.code+'-'+index}>
               <div className="entity-statistical-primary">
-                <strong>{role.classification} {role.level}</strong>
+                <strong>{role.label}</strong>
                 <span>{role.code}</span>
               </div>
               <small>{t.statVersion}: {role.version}</small>
@@ -1008,18 +1030,37 @@ export default function App() {
             </li>)}
         </ul>
       </EntityCardSection>}
-      {(currentNode.administrativeParentId||currentNode.treeParentId)&&
+      {(currentNode.administrativeParentId||currentNode.treeParentId||
+        cardRoles?.statistical.some(role=>verifiedStatisticalParent(statisticalIndex,role)))&&
       <EntityCardSection title={t.cardHierarchy} kind="hierarchy">
         <dl className="metadata">
           {currentNode.administrativeParentId&&<>
             <dt>{t.parentAdmin}</dt>
-            <dd>{nodes.get(currentNode.administrativeParentId)?.officialName||null}</dd>
+            <dd>{nodes.get(currentNode.administrativeParentId)?
+              <button type="button" className="entity-parent-link"
+                aria-label={t.cardOpenParent+': '+nodes.get(currentNode.administrativeParentId)!.officialName}
+                onClick={()=>choose(currentNode.administrativeParentId!)}>
+                {nodes.get(currentNode.administrativeParentId)!.officialName}
+              </button>:null}</dd>
           </>}
           {currentNode.treeParentId&&<>
             <dt>{t.parentTree}</dt>
             <dd>{nodes.get(currentNode.treeParentId)?
-              labelOf(nodes.get(currentNode.treeParentId)!,lang):null}</dd>
+              <button type="button" className="entity-parent-link"
+                aria-label={t.cardOpenParent+': '+labelOf(nodes.get(currentNode.treeParentId)!,lang)}
+                onClick={()=>choose(currentNode.treeParentId!)}>
+                {labelOf(nodes.get(currentNode.treeParentId)!,lang)}
+              </button>:null}</dd>
           </>}
+          {cardRoles?.statistical.map(role=>{
+            const parent=verifiedStatisticalParent(statisticalIndex,role);
+            return parent?<div className="entity-hierarchy-stat" key={role.classification+'-'+role.code}>
+              <dt>{t.cardStatParent} ({role.parentCode})</dt>
+              <dd><button type="button" className="entity-parent-link"
+                aria-label={t.cardOpenParent+': '+labelOf(parent,lang)}
+                onClick={()=>choose(parent.id)}>{labelOf(parent,lang)}</button></dd>
+            </div>:null;
+          })}
         </dl>
       </EntityCardSection>}
       <EntityCardSection title={t.cardCartography} kind="cartographic">

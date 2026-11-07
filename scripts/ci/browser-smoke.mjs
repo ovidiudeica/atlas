@@ -55,7 +55,7 @@ class CDP{
       this.socket.send(JSON.stringify({id,method,params,...(sessionId?{sessionId}:{})}));
     });
   }
-  async page(width,height,mobile){
+  async page(width,height,mobile,url=site){
     const {targetId}=await this.send('Target.createTarget',{url:'about:blank'});
     const {sessionId}=await this.send('Target.attachToTarget',{targetId,flatten:true});
     await this.send('Page.enable',{},sessionId);
@@ -63,7 +63,7 @@ class CDP{
     await this.send('Emulation.setDeviceMetricsOverride',{
       width,height,mobile,deviceScaleFactor:1,screenWidth:width,screenHeight:height
     },sessionId);
-    await this.send('Page.navigate',{url:site},sessionId);
+    await this.send('Page.navigate',{url},sessionId);
     return new BrowserPage(this,sessionId,targetId);
   }
   close(){this.socket.close();}
@@ -987,6 +987,90 @@ async function mobile(cdp){
   await p.snap('mobile-east-distinct-stat-admin-en.png');
   await p.close();
 }
+
+/* WEB-R4.1 — direct-permalink cards for all territorial role classes,
+ * proven against the same built artifact on desktop and mobile.
+ */
+async function roleAwareCards(cdp){
+  const cases=[
+    {id:'osm-r90689',tag:'ro',admin:['ADM 2'],stat:[]},
+    {id:'osm-r58974',tag:'md',admin:['ADM 2'],stat:['NTS 1']},
+    {id:'osm-r377733',tag:'bucharest',admin:['ADM 4','ADM 8'],stat:['NUTS 3'],must:['179132','SIRUTA 403']},
+    {id:'osm-r1691801',tag:'chisinau-municipality',admin:['ADM 4'],stat:['NTS 3'],must:['CUATM 0100']},
+    {id:'osm-r1748490',tag:'chisinau-city',admin:['ADM 8'],stat:[],must:['CUATM 0100']},
+    {id:'osm-r1699032',tag:'gagauzia',admin:['ADM 4'],stat:['NTS 3'],must:['CUATM 9600','MD114']},
+    {id:'osm-r944727',tag:'bender',admin:['ADM 5'],stat:[],must:['32']},
+    {id:'stat-MD120',tag:'transnistria-nts',admin:[],stat:['NTS 3']},
+    {id:'siruta-u64096',tag:'bretcu-no-osm',admin:['ADM 8'],stat:[]}
+  ];
+  async function inspect(p,c,selector,label){
+    await p.wait('!!document.querySelector('+JSON.stringify(selector)+')',label+' card available');
+    const info=await p.eval(`(()=>{
+      const card=document.querySelector(${JSON.stringify(selector)});
+      if(!card)return null;
+      const entries=sel=>[...card.querySelectorAll(sel)].map(x=>x.textContent.trim());
+      return {
+        title:card.querySelector('.entity-title h3')?.textContent.trim(),
+        admin:entries('.entity-admin-role-primary strong'),
+        stat:entries('.entity-statistical-primary strong'),
+        text:card.innerText,
+        width:document.documentElement.scrollWidth,
+        viewport:innerWidth,
+        osmLinks:card.querySelectorAll('a[href*="openstreetmap.org/relation/"]').length,
+        sections:entries('.entity-card-section>h4'),
+        parentButtons:card.querySelectorAll('.entity-parent-link').length
+      };
+    })()`);
+    assert(info&&info.sections.includes('Identitate'),'Identity missing: '+label);
+    assert(info.sections.includes('Geometrie și proveniență'),'Provenance missing: '+label);
+    assert.deepEqual(info.admin,c.admin,'Administrative roles: '+label);
+    assert.deepEqual(info.stat,c.stat,'Statistical roles: '+label);
+    assert(!info.text.includes('NUTS_MOLDOVA'),'Do not leak classification internals: '+label);
+    assert(info.width<=info.viewport+1,'No horizontal overflow: '+label+' '+JSON.stringify(info));
+    for(const token of c.must||[])assert(info.text.includes(token),'Missing '+token+' on '+label);
+    if(c.tag==='bucharest'){
+      assert(info.text.includes('Geometrie administrativă OSM'),'Bucharest ADM4 is OSM geometry');
+      assert(info.text.includes('fără contur OSM separat'),'SIRUTA ADM8 not a duplicate geometry');
+      assert(info.parentButtons>=2,'Bucharest links to verified territorial parents');
+    }
+    if(c.tag==='bender'){
+      assert.equal(info.title,'Bender','Concise heading, official name remains in identity');
+      assert(info.text.includes('Sovetul orășenesc Bender'),'Official original name preserved');
+      assert(!info.text.includes('CUATM 32'),'PMR 32 is not CUATM');
+    }
+    if(c.tag==='bretcu-no-osm')assert.equal(info.osmLinks,0,'No fabricated OSM ID for Brețcu');
+    if(c.tag==='transnistria-nts')assert(!info.text.includes('ADM 3'),'statistical area is not administrative');
+    return info;
+  }
+  for(const c of cases){
+    const p=await cdp.page(1440,900,false,site+'?lang=ro&entity='+c.id);
+    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+      'WEB-R4.1 '+c.tag+' desktop geometry loaded');
+    await inspect(p,c,'.detail-sidebar .entity-card',c.tag+' desktop');
+    await p.snap('desktop-web-r41-card-'+c.tag+'.png');
+    await p.close();
+  }
+  for(const tag of ['bucharest','bender','transnistria-nts']){
+    const c=cases.find(x=>x.tag===tag);
+    const p=await cdp.page(360,780,true,site+'?lang=ro&entity='+c.id);
+    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+      'WEB-R4.1 '+tag+' mobile geometry loaded');
+    await inspect(p,c,'.drawer-detail .entity-card',tag+' mobile');
+    const metrics=await p.eval(`(()=>{
+      const drawer=document.querySelector('.drawer-detail').getBoundingClientRect();
+      const rail=document.querySelector('.module-rail').getBoundingClientRect();
+      return {drawerRight:drawer.right,drawerBottom:drawer.bottom,railTop:rail.top};
+    })()`);
+    assert(metrics.drawerRight<=361&&metrics.drawerBottom<=metrics.railTop+1,
+      'Mobile entity details must not overlap module rail: '+tag);
+    await p.snap('mobile-web-r41-card-'+tag+'.png');
+    await p.eval("(()=>{const el=document.querySelector('.drawer-detail');el.scrollTop=el.scrollHeight;return true})()");
+    await pause(180);
+    await p.snap('mobile-web-r41-card-'+tag+'-end.png');
+    await p.close();
+  }
+}
+
 async function narrowMobile(cdp){
   const p=await cdp.page(360,780,true);
   await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
@@ -1073,6 +1157,7 @@ try{
   await tablet(client);
   await mobile(client);
   await narrowMobile(client);
+  await roleAwareCards(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
