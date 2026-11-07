@@ -1217,7 +1217,7 @@ async function finalCardAcceptance(cdp){
     const statistics=card.querySelector('.entity-statistical-roles small');
     const h=card.querySelector('.entity-title h3');
     h.focus();
-    const cs=getComputedStyle;
+    const cs=e=>getComputedStyle(e);
     const fg=e=>cs(e).color,bg=e=>cs(e).backgroundColor;
     const textRatio1=colors(fg(child),bg(child.closest('.entity-child-link')));
     const textRatio2=colors(fg(statistics),bg(statistics.closest('li')));
