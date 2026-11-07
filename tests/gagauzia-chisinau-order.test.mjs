@@ -125,7 +125,7 @@ test('canonical details and parent IDs remain unchanged; accepted Nistrenia orde
   const nistrenia=all.filter(x=>x.treeParentId==='osm-r65335');
   assert.deepEqual([...nistrenia].sort((a,b)=>
     compareTreeSiblings(a,b,'all','osm-r65335','ro')).map(x=>shortTreeName(x,'ro')),
-    ['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca']);
+    ['Bender','Tiraspol','Grigoriopol','Dubăsari','Rîbnița','Slobozia','Camenca']);
 });
 test('visible breadcrumbs, search expansion and sibling navigation use presentation hierarchy',()=>{
   const app=readFileSync(new URL('../src/App.tsx',import.meta.url),'utf8');

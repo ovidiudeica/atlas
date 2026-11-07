@@ -12,8 +12,8 @@ const parent=byId.get(NISTRIAN_PARENT_ID);
 const children=entries.filter(e=>e.treeParentId===NISTRIAN_PARENT_ID);
 const ids=children.map(e=>e.id);
 const expectedIds=[
-  'osm-r1702219','osm-r944727','osm-r1702218','osm-r1702214',
-  'osm-r1702215','osm-r1702217','osm-r1702216'
+  'osm-r944727','osm-r1702219','osm-r1702214','osm-r1702215',
+  'osm-r1702217','osm-r1702218','osm-r1702216'
 ];
 test('Nistrenia is the PMR source parent with exactly five raions and two city councils',()=>{
   assert.equal(entries.length,4283);
@@ -30,21 +30,21 @@ test('Nistrenia is the PMR source parent with exactly five raions and two city c
   assert(children.filter(e=>!NISTRIAN_CITY_COUNCILS.includes(e.id))
     .every(e=>/^Raionul /.test(e.officialName)));
 });
-test('Romanian: Tiraspol and Bender first, then raions south-to-north',()=>{
+test('Romanian: Bender 32, Tiraspol 33, raion seat codes 40–66 ascending',()=>{
   for(const view of ['administrative','all']){
     const sorted=[...children].sort((a,b)=>compareTreeSiblings(a,b,view,parent.id,'ro'));
     assert.deepEqual(sorted.map(e=>shortTreeName(e,'ro')),
-      ['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca']);
+      ['Bender','Tiraspol','Grigoriopol','Dubăsari','Rîbnița','Slobozia','Camenca']);
     assert.deepEqual(sorted.map(e=>e.id),expectedIds);
   }
 });
-test('English: same fixed geographical order despite translated raion exonyms',()=>{
+test('English: same published cadastral code order despite translated exonyms',()=>{
   for(const view of ['administrative','all']){
     const sorted=[...children].sort((a,b)=>compareTreeSiblings(a,b,view,parent.id,'en'));
     assert.deepEqual(sorted.map(e=>shortTreeName(e,'en')),
-      ['Tiraspol','Bender','Slobdzeya','Grigoriopol','Dubossary','Rybnitsa','Kamenka']);
+      ['Bender','Tiraspol','Grigoriopol','Dubossary','Rybnitsa','Slobdzeya','Kamenka']);
     assert.deepEqual(sorted.slice(0,2).map(e=>e.id),
-      ['osm-r1702219','osm-r944727']);
+      ['osm-r944727','osm-r1702219']);
     assert.deepEqual(sorted.map(e=>e.id),expectedIds);
   }
 });
@@ -58,7 +58,7 @@ test('sort changes neither identities nor other hierarchy behavior',()=>{
   assert.equal(tiraspol.officialName,'Sovetul orășenesc Tiraspol');
   assert.equal(shortTreeName(bender,'en'),'Bender');
   assert.equal(shortTreeName(tiraspol,'en'),'Tiraspol');
-  // Nistrenia's seven un-coded ADM5 children keep their fixed order,
+  // Nistrenia's seven ADM5 without CUATM use PMR cadastral seat codes,
   // while Moldova's coded direct ADM4 children now use statistical-code
   // precedence where a node has both roles, then CUATM for other children.
   const other=entries.filter(e=>e.administrativeParentId==='osm-r58974'

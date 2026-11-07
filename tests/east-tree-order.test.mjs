@@ -81,7 +81,7 @@ test('WEB-R3.13: statistical view and existing Nistrenia, Găgăuzia, Chișinău
  assert.equal(children(EAST_STAT_PARENT_ID,'statistical').length,0);
  assert.deepEqual([...children('osm-r65335','all')].sort((a,b)=>
    compareTreeSiblings(a,b,'all','osm-r65335','ro')).map(x=>shortTreeName(x,'ro')),
-   ['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca']);
+   ['Bender','Tiraspol','Grigoriopol','Dubăsari','Rîbnița','Slobozia','Camenca']);
  for(const [id,first] of Object.entries({
   'stat-MD111':'osm-r58983','stat-MD112':'osm-r1692078','stat-MD113':'osm-r1104136'
  }))assert.equal(sorted(id,'all','ro')[0].id,first);

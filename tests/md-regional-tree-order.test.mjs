@@ -141,7 +141,7 @@ test('Statistical view, source parents, and accepted Găgăuzia/WEB-R3.15 Nistre
    assert.equal(children(id,'statistical').length,0);
  assert.deepEqual([...children('osm-r65335','all')].sort((a,b)=>
      compareTreeSiblings(a,b,'all','osm-r65335','ro')).map(x=>shortTreeName(x,'ro')),
-   ['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca']);
+   ['Bender','Tiraspol','Grigoriopol','Dubăsari','Rîbnița','Slobozia','Camenca']);
  assert.equal(sorted('osm-r1699032','ro','all')[0].id,'osm-r1706978');
  assert.equal(sorted('osm-r1691801','ro','all')[0].id,'osm-r1748490');
  for(const regionId of Object.keys(REGIONAL_SEATS)){
