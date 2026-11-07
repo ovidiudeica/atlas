@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type SetStateAction } from 'react';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibre-gl';
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
@@ -7,6 +7,8 @@ import { territorialRoleLabel as roleLabel, municipalRoleClarification } from '.
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
 import { cardNameOf } from './data/treeNames.mjs';
+import { makeModuleVisibility, setModuleGeometry, resetModuleGeometry,
+  displayedModuleGeometry, moduleHasSelections } from './data/moduleReset.mjs';
 import { entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent } from './data/entityCardRoles.mjs';
 import { presentationParentId } from './data/treeOverlay.mjs';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
@@ -44,7 +46,10 @@ const WORDS = {
     searchResults: 'Search results', searchLimit: 'Showing the first 80 matches. Refine the search for more.',
     sourceNote: 'Original-source geometry; documented OSMB exceptions are retained.',
     basemap: 'Basemap', standard: 'Standard', grayscale: 'Grayscale', dark: 'Dark', none: 'None',
-    simplified: 'Simplified geometries', home: 'Reset map extent', resetGeometries: 'Reset geometries', zoomIn: 'Zoom in', zoomOut: 'Zoom out',
+    simplified: 'Simplified geometries', home: 'Reset map extent',
+    resetAll: 'Reset all module selections · Romania + Moldova',
+    resetModule: 'Reset selections in this module',
+    zoomIn: 'Zoom in', zoomOut: 'Zoom out',
     official: 'Official name', osmId: 'OSM ID', adminLevel: 'OSM administrative level',
     statisticalRole: 'Statistical codes', parentAdmin: 'Administrative parent', parentTree: 'Tree parent',
     source: 'Source', registry: 'Official registry', origin: 'Country',
@@ -85,7 +90,6 @@ const WORDS = {
     entityExport: 'Export this entity', displaySource: 'Source and legal status',
     mapLoading: 'Loading map geometry…', referenceOutline: 'Reference outlines',
     referenceCountries: 'Romania, Moldova',
-    resetDisplay: 'Restore initial geometry display',
     mapToolMenu: 'Map tools', mapFit: 'Fit map', mapLegend: 'Legend',
     mapAbout: 'About Atlas', mapToolTip: 'Secondary map actions',
     mapToolFitHint: 'Frame all visible territories',
@@ -116,7 +120,10 @@ const WORDS = {
     searchResults: 'Rezultatele căutării', searchLimit: 'Sunt afișate primele 80 de rezultate. Rafinează căutarea pentru restul.',
     sourceNote: 'Geometrii din sursa originală; excepțiile OSMB documentate sunt păstrate.',
     basemap: 'Hartă de fundal', standard: 'Standard', grayscale: 'Tonuri de gri', dark: 'Întunecată', none: 'Fără fundal',
-    simplified: 'Geometrii simplificate', home: 'Resetează încadrarea hărții', resetGeometries: 'Resetează geometriile', zoomIn: 'Mărește', zoomOut: 'Micșorează',
+    simplified: 'Geometrii simplificate', home: 'Resetează încadrarea hărții',
+    resetAll: 'Resetează selecțiile tuturor modulelor · România + Moldova',
+    resetModule: 'Resetează selecțiile acestui modul',
+    zoomIn: 'Mărește', zoomOut: 'Micșorează',
     official: 'Denumire oficială', osmId: 'ID OSM', adminLevel: 'Nivel administrativ OSM',
     statisticalRole: 'Coduri statistice', parentAdmin: 'Părinte administrativ', parentTree: 'Părinte în arbore',
     source: 'Sursă', registry: 'Registru oficial', origin: 'Țară',
@@ -157,7 +164,6 @@ const WORDS = {
     entityExport: 'Exportă entitatea', displaySource: 'Sursa și statutul juridic',
     mapLoading: 'Se încarcă geometriile hărții…', referenceOutline: 'Contururi de referință',
     referenceCountries: 'România, Moldova',
-    resetDisplay: 'Restabilește afișarea inițială',
     mapToolMenu: 'Instrumente hartă', mapFit: 'Încadrare', mapLegend: 'Legendă',
     mapAbout: 'Despre Atlas', mapToolTip: 'Comenzi secundare ale hărții',
     mapToolFitHint: 'Încadrează toate teritoriile vizibile',
@@ -244,8 +250,18 @@ export default function App() {
   const [catalog,setCatalog] = useState<Territory[]>([]);
   const [catalogError,setCatalogError] = useState<string | null>(null);
   const [selected,setSelected] = useState<string | null>(SHARED_STATE.entity);
-  // Tree checks are independent from additional level-filter selections.
-  const [visible,setVisible] = useState<string[]>(restoreVisible);
+  // A card selection belongs to the module that opened it. The only active
+  // selection source in this release is Administrative.
+  const [selectedModule,setSelectedModule] = useState<ModuleId|null>(
+    SHARED_STATE.entity?'administrative':null);
+  // Independent module geometry selections share one map without owning
+  // each other's selections; the Administrative array retains persistence.
+  const [moduleVisible,setModuleVisible] = useState(()=>makeModuleVisibility(restoreVisible()));
+  const visible=moduleVisible.administrative;
+  const setVisible=useCallback((update:SetStateAction<string[]>)=>{
+    setModuleVisible(old=>setModuleGeometry(old,'administrative',
+      typeof update==='function'?update(old.administrative):update));
+  },[]);
   const [adminFilters,setAdminFilters] = useState<number[]>([]);
   const [statFilters,setStatFilters] = useState<string[]>([]);
   const [expanded,setExpanded] = useState<string[]>([]);
@@ -290,8 +306,9 @@ export default function App() {
   const filterIds=useMemo(()=>matchingCombinedLevelIds(
     osmLevelIndex,allLevelScopes,adminFilters,statFilters),
     [osmLevelIndex,allLevelScopes,adminFilters,statFilters]);
-  // Deduplicate geometries displayed by both the tree and active filters.
-  const mapVisible=useMemo(()=>[...new Set([...visible,...filterIds])],[visible,filterIds]);
+  // Independent module selections render as a deduplicated geometry union.
+  const mapVisible=useMemo(()=>displayedModuleGeometry(moduleVisible,filterIds),
+    [moduleVisible,filterIds]);
   const mapVisibleSet=useMemo(()=>new Set(mapVisible),[mapVisible]);
   const rootStyles=useMemo(()=>new Map(ROOT_IDS.map(id=>([
     id,nodes.has(id)?styleForEntity(nodes.get(id)!,adminFilters,statFilters,true):REFERENCE_STYLE
@@ -530,7 +547,7 @@ export default function App() {
       instance.on('click','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
-          setSelected(id);setDetailPanelOpen(true);
+          setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
           if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
           else if(window.innerWidth<1100)setModulePanelOpen(false);
         }
@@ -539,7 +556,7 @@ export default function App() {
         instance.on('click',boundaryLayer,event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
-          setSelected(id);setDetailPanelOpen(true);
+          setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
           if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
           else if(window.innerWidth<1100)setModulePanelOpen(false);
         }
@@ -548,7 +565,7 @@ export default function App() {
         const country=event.features?.[0]?.properties?.id;
         if(country==='ro'||country==='md'){
           setSelected(country==='ro'?'osm-r90689':'osm-r58974');
-          setDetailPanelOpen(true);
+          setSelectedModule('administrative');setDetailPanelOpen(true);
           if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
           else if(window.innerWidth<1100)setModulePanelOpen(false);
         }
@@ -653,7 +670,7 @@ export default function App() {
   const choose = useCallback((id:string)=>{
     setToolsOpen(false);
     setToolSection(null);
-    setSelected(id);setDetailPanelOpen(true);
+    setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
@@ -747,16 +764,43 @@ export default function App() {
     setDetailPanelOpen(false);
     if(drawer==='detail')setDrawer(null);
   }
-  // Home restores only the camera. Reset geometries returns to the initial
-  // RO/MD outline preview without changing map language, basemap or simplification.
+  // Home moves only the camera; a local reset never touches the camera or
+  // selections owned by another module. The global reset restores RO + MD.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
-  const resetGeometries=()=>{
+  const localSelectionActive=moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
+    adminFilters,statFilters,selected,selectedModule);
+  function resetLocalModule(id:ModuleId){
+    if(!moduleHasSelections(moduleVisible,id,DEFAULT_VISIBLE,
+      adminFilters,statFilters,selected,selectedModule))return;
+    // The reset control becomes disabled when complete; move focus to its
+    // stable, visible neighbour before React applies the update.
+    const toolbar=window.innerWidth<=700?'.drawer-tree .drawer-toolbar':'.tree-sidebar .pane-toolbar';
+    document.querySelector<HTMLButtonElement>(toolbar+' .module-pane-close')?.focus();
+    setModuleVisible(old=>resetModuleGeometry(old,id,DEFAULT_VISIBLE));
+    if(id==='administrative'){
+      setAdminFilters([]);
+      setStatFilters([]);
+    }
+    if(selectedModule===id){
+      setSelected(null);
+      setSelectedModule(null);
+      setDetailPanelOpen(false);
+      if(drawer==='detail')setDrawer(null);
+      // Local reset clears only the selected entity URL parameter;
+      // unlike the global reset, it preserves any camera permalink.
+      const url=new URL(window.location.href);
+      url.searchParams.delete('entity');
+      window.history.replaceState(window.history.state,'',url.toString());
+    }
+  }
+  const resetAllSelections=()=>{
     navigationEpoch.current++; // Cancel stale asynchronous camera movements.
     setNavBusy(false);
-    setVisible([...DEFAULT_VISIBLE]);
+    setModuleVisible(makeModuleVisibility(DEFAULT_VISIBLE));
     setAdminFilters([]);
     setStatFilters([]);
     setSelected(null);
+    setSelectedModule(null);
     setDetailPanelOpen(false);
     setExpanded([]);
     setSearch('');
@@ -967,12 +1011,6 @@ export default function App() {
           {matches.length>80&&<p className="tree-hint">{t.searchLimit}</p>}
         </>:ROOT_IDS.map(id=>{const n=nodes.get(id);return n?treeItem(n,0):null;})}
       </div>}
-    <div className="atlas-admin-actions">
-      <button type="button" className="reset-geometries atlas-admin-reset"
-        aria-label={t.resetGeometries} onClick={resetGeometries}>
-        <span aria-hidden="true">↺</span> {t.resetDisplay}
-      </button>
-    </div>
     <div className="tree-footnote"><strong>{catalog.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.entityCount}</strong>
       <span> · {mapVisible.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.selectedCount}</span>
     </div>
@@ -1323,8 +1361,13 @@ export default function App() {
       {modulePanelOpen&&<aside id="atlas-module-panel" className="tree-sidebar" aria-label={MODULES.find(x=>x.id===module)?.[lang]}>
         <div className="pane-toolbar">
           <span aria-hidden="true">{MODULES.find(x=>x.id===module)?.[lang]}</span>
-          <button type="button" className="pane-close" aria-label={t.close} title={t.close}
-            onClick={closeModulePanel}>×</button>
+          <div className="module-pane-actions">
+            <button type="button" className="module-reset" aria-label={t.resetModule}
+              title={t.resetModule} disabled={!localSelectionActive}
+              onClick={()=>resetLocalModule(module)}><span aria-hidden="true">↺</span></button>
+            <button type="button" className="pane-close module-pane-close"
+              aria-label={t.close} title={t.close} onClick={closeModulePanel}>×</button>
+          </div>
         </div>
         {module==='administrative'?treePanel:
           <section className="tree-content">
@@ -1345,10 +1388,16 @@ export default function App() {
           aria-controls="atlas-global-tools" aria-expanded={toolsOpen} onClick={toggleTools}>
           <span aria-hidden="true">⚙</span>
         </button>
-        <div className="zoom-controls">
-          <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>mapRef.current?.zoomIn()}>+</button>
-          <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>
-          <button aria-label={t.home} title={t.home} onClick={reset}>⌂</button>
+        <div className="map-action-stack">
+          <div className="zoom-controls">
+            <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>mapRef.current?.zoomIn()}>+</button>
+            <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>
+            <button aria-label={t.home} title={t.home} onClick={reset}>⌂</button>
+          </div>
+          <button type="button" className="map-reset-global" aria-label={t.resetAll}
+            title={t.resetAll} onClick={resetAllSelections}>
+            <span aria-hidden="true">↺</span>
+          </button>
         </div>
         {toolsOpen&&globalTools}
         {(geomLoading||geomError)&&<div className="atlas-map-status" role={geomError?'alert':'status'}>
@@ -1375,9 +1424,18 @@ export default function App() {
         <div className="drawer-toolbar">
           <span aria-hidden="true">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
             currentNode?cardNameOf(currentNode,lang):t.details}</span>
-          <button type="button" className="drawer-close" aria-label={t.close} onClick={()=>{
-            if(drawer==='tree')closeModulePanel();else closeDetailPanel();
-          }}>×</button>
+          <div className={drawer==='tree'?'module-pane-actions':'detail-pane-actions'}>
+            {drawer==='tree'&&<button type="button" className="module-reset"
+              aria-label={t.resetModule} title={t.resetModule}
+              disabled={!localSelectionActive} onClick={()=>resetLocalModule(module)}>
+              <span aria-hidden="true">↺</span>
+            </button>}
+            <button type="button"
+              className={'drawer-close'+(drawer==='tree'?' module-pane-close':'')}
+              aria-label={t.close} onClick={()=>{
+                if(drawer==='tree')closeModulePanel();else closeDetailPanel();
+              }}>×</button>
+          </div>
         </div>
         {drawer==='tree'?(module==='administrative'?treePanel:
           <section className="tree-content">
