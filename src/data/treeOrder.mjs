@@ -82,13 +82,13 @@ export function compareTreeSiblings(a,b,view,parentId,lang='ro'){
     const byShortName=shortTreeName(a,lang).localeCompare(shortTreeName(b,lang),lang);
     return byShortName||a.id.localeCompare(b.id,'en');
   }
-  // WEB-R3.13 — EAST: the MD120 statistical node only groups the existing
-  // Bender (0500) and UATSN (9800) ADM4 entities in the All view. Their
+  // WEB-R3.14 — EAST: the MD120 statistical node groups the existing
+  // UATSN (9800) first, Bender (0500) second in the All view. Their
   // canonical parents under Moldova are untouched in Administrative view.
   if(view!=='statistical'){
     if(parentId===EAST_STAT_PARENT_ID){
-      const aRank=a.id===EAST_BENDER_ADM4_ID?0:1;
-      const bRank=b.id===EAST_BENDER_ADM4_ID?0:1;
+      const aRank=a.id===EAST_UATSN_ADM4_ID?0:1;
+      const bRank=b.id===EAST_UATSN_ADM4_ID?0:1;
       return aRank-bRank||sortedByLocalizedShortName(a,b,lang);
     }
     if(parentId===EAST_BENDER_ADM4_ID)
