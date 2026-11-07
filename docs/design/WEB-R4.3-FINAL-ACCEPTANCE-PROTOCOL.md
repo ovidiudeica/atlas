@@ -23,3 +23,5 @@ Testarea vizuală este realizată cu capturile reale Chromium și verificarea ma
 - Documentația finală a certificării se consemnează în conversația PR împreună cu head SHA, merge SHA, job IDs, capturi și verdictul Pages.
 
 **Modificările de date, extinderile teritoriale, noile module și cleanup-ul branchurilor sunt în afara WEB-R4.3.**
+
+**Remediere suplimentară rezultată din capturi:** contextul `Chișinău city` / `Orașul Chișinău` trebuie afișat integral în card și dialog, deși în arborele imbricat eticheta scurtă `City` / `Oraș` se păstrează; acest caz este protejat prin teste RO/EN. Nu este modificat inventarul sau reordonarea copiilor.
