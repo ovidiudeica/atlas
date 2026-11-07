@@ -32,3 +32,7 @@
 Nu se modifică niciun fișier `public/data/` sau `data/`; catalogul rămâne la **4.283 de entități**, SHA-256 gzip `1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482`. Nu se modifică geometriile, ID-urile OSM, clasficatoarele/codurile, relațiile canonice sau ierarhia de prezentare. Corecții exclusiv în CSS și testele/dovezile de acceptare. Nu efectuăm plăți, nu cerem Codex, nu curățăm branchurile.
 
 **Verdict inițial:** WEB-R4.3 *deschis*; remediem contrastele P1, apoi certificăm automat și vizual buildul și Pages. Un eventual `FAILURE` CI sau Pages blochează închiderea.
+
+## Extindere a auditului după inspectarea capturilor PR #54
+
+Inspecția vizuală manuală a capturii `tablet-web-r43-final-chisinau-city-en.png` generate de primul CI al PR #54 a descoperit un defect **P1 de identificare contextuală**: fișa și dialogul orașului Chișinău erau etichetate doar `City` în engleză (respectiv `Oraș` în română). Abrevierea este intenționată exclusiv în **arbore**, unde orașul se află sub municipiul Chișinău, însă este insuficientă în fișe/permalinkuri și pentru cititoarele de ecran. Remedierea este un helper pur `cardNameOf`: `Orașul Chișinău` / `Chișinău city` numai în fișe, breadcrumbs și eticheta dialogului. `shortTreeName` rămâne neschimbat, iar datele originale, identitatea administrativă și geometriile nu sunt alterate. Se adaugă teste explicite RO/EN și se rerulează complet CI pe noul SHA.
