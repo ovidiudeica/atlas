@@ -51,9 +51,11 @@ test('WEB-R3.21: Chișinău dual role belongs only to municipality, not ADM8 cit
 });
 test('WEB-R3.21: OSM geometric filters remain bound to real adminLevel, not presentation roles',()=>{
  const app=readFileSync(new URL('../src/App.tsx',import.meta.url),'utf8');
+ const osmFilter=readFileSync(new URL('../src/data/osmLevelFilter.mjs',import.meta.url),'utf8');
  assert.match(app,/territorialRoleLabel as roleLabel/);
  assert.match(app,/municipalRoleClarification\(node,lang\)/);
  assert.match(app,/adminFilters/);
- assert.match(app,/node\.adminLevel/);
+ assert.match(osmFilter,/Number\.isInteger\(node\.adminLevel\)/);
+ assert.match(osmFilter,/levels\.get\(node\.adminLevel\)\.push\(node\.id\)/);
  assert(!app.includes("const admin=node.adminLevel===null?'':('ADM ' + node.adminLevel)"));
 });
