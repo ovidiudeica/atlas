@@ -84,7 +84,7 @@ test('WEB-R4.1: Găgăuzia, Nistrenia and missing OSM IDs retain their source se
 });
 
 test('WEB-R4.1: UI shows short heading, typed roles, verified hierarchy, legal caveat and mobile permalinks',()=>{
-  assert.match(app,/<h3 tabIndex=\{-1\}>\{labelOf\(currentNode,lang\)\}<\/h3>/);
+  assert.match(app,/<h3 tabIndex=\{-1\}>\{cardNameOf\(currentNode,lang\)\}<\/h3>/);
   assert.match(app,/<dt>\{t\.official\}<\/dt><dd>\{currentNode\.officialName\}<\/dd>/);
   assert.match(app,/entityCardRoles\(currentNode\)/);
   assert.match(app,/cardRoles\.administrative\.map/);
