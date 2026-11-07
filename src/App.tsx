@@ -3,6 +3,7 @@ import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibr
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
 import { compareTreeSiblings } from './data/treeOrder.mjs';
+import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { presentationParentId } from './data/treeOverlay.mjs';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
@@ -202,11 +203,6 @@ function mapCountryFeatures(features: Map<string, TerritoryFeature>): FeatureCol
         geometry:feature.geometry
       }))
   };
-}
-function roleLabel(node: Territory): string {
-  const admin=node.adminLevel===null?'':('ADM ' + node.adminLevel);
-  const stat=node.statisticalRoles.map(r=> (r.classification==='NUTS'?'NUTS ': 'NTS ') + r.level).join(' · ');
-  return [admin,stat].filter(Boolean).join(' · ');
 }
 
 export default function App() {
@@ -830,7 +826,7 @@ export default function App() {
         <button className="tree-label" aria-label={accessibleRowLabel} title={node.officialName}
           onClick={()=>searchMatch?chooseSearch(node.id):choose(node.id)}>
           <span className="node-name">{rowLabel}</span>
-          <span className={'node-level'+(stat?' is-stat':'')}>{roleLabel(node)}{eastHlinaiaCode?' · CUATM '+eastHlinaiaCode:''}</span>
+          <span className={'node-level'+(stat?' is-stat':'')} title={municipalRoleClarification(node,lang)||undefined}>{roleLabel(node)}{eastHlinaiaCode?' · CUATM '+eastHlinaiaCode:''}</span>
         </button>
         {searchMatch&&<span className="search-country">{node.country}</span>}
       </div>
