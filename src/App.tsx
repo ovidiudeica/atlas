@@ -17,6 +17,7 @@ type Basemap = 'standard' | 'grayscale' | 'dark' | 'none';
 type ModuleId = 'administrative' | 'historical' | 'communities' | 'regions' | 'ethnographic' | 'reform';
 type TreeView = 'all' | 'administrative' | 'statistical';
 type Drawer = 'tree' | 'detail' | null;
+type MapToolSection = 'settings' | 'legend' | 'export' | 'about' | null;
 
 const MODULES: { id: ModuleId; symbol: string; en: string; ro: string }[] = [
   { id: 'administrative', symbol: '▤', en: 'Administrative', ro: 'Administrativ' },
@@ -74,7 +75,15 @@ const WORDS = {
     geometryActions: 'Geometry actions', mapInformation: 'Information & legend',
     entityExport: 'Export this entity', displaySource: 'Source and legal status',
     mapLoading: 'Loading map geometry…', referenceOutline: 'Reference outlines',
-    referenceCountries: 'Romania and Republic of Moldova'
+    referenceCountries: 'Romania and Republic of Moldova',
+    resetDisplay: 'Restore initial geometry display',
+    mapToolMenu: 'Map tools', mapFit: 'Fit map', mapLegend: 'Legend',
+    mapAbout: 'About Atlas', mapToolTip: 'Secondary map actions',
+    mapToolFitHint: 'Frame all visible territories',
+    mapToolSettingsHint: 'Basemap and simplified geometries',
+    mapToolLegendHint: 'Reference, administrative and statistical borders',
+    mapToolExportHint: 'GeoJSON, CSV and map link',
+    mapToolAboutHint: 'Sources, methodology and legal status'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -123,7 +132,15 @@ const WORDS = {
     geometryActions: 'Acțiuni geometrii', mapInformation: 'Informații și legendă',
     entityExport: 'Exportă entitatea', displaySource: 'Sursa și statutul juridic',
     mapLoading: 'Se încarcă geometriile hărții…', referenceOutline: 'Contururi de referință',
-    referenceCountries: 'România și Republica Moldova'
+    referenceCountries: 'România și Republica Moldova',
+    resetDisplay: 'Restabilește afișarea inițială',
+    mapToolMenu: 'Instrumente hartă', mapFit: 'Încadrare', mapLegend: 'Legendă',
+    mapAbout: 'Despre Atlas', mapToolTip: 'Comenzi secundare ale hărții',
+    mapToolFitHint: 'Încadrează toate teritoriile vizibile',
+    mapToolSettingsHint: 'Fundal cartografic și geometrii simplificate',
+    mapToolLegendHint: 'Limite de referință, administrative și statistice',
+    mapToolExportHint: 'GeoJSON, CSV și linkul hărții',
+    mapToolAboutHint: 'Surse, metodologie și statut juridic'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -190,6 +207,9 @@ export default function App() {
   const mapEl = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
+  const toolsOpenerRef = useRef<HTMLButtonElement>(null);
+  const toolsDialogRef = useRef<HTMLElement>(null);
+  const hadToolsOpenRef = useRef(false);
   const loadedRef = useRef<Map<string,TerritoryFeature>>(new Map());
   const [lang,setLang] = useState<Locale>(() => SHARED_STATE.lang || (localStorage.getItem('atlas-lang') === 'ro'?'ro':'en'));
   const [module,setModule] = useState<ModuleId>('administrative');
@@ -212,7 +232,8 @@ export default function App() {
   const [geomLoading,setGeomLoading] = useState(false);
   const [geomError,setGeomError] = useState(false);
   const [drawer,setDrawer] = useState<Drawer>(null);
-  const [exportOpen,setExportOpen] = useState(false);
+  const [toolsOpen,setToolsOpen] = useState(false);
+  const [toolSection,setToolSection] = useState<MapToolSection>(null);
   const [exportScope,setExportScope] = useState<ExportScope>('visible');
   const [exportBusy,setExportBusy] = useState(false);
   const [exportProgress,setExportProgress] = useState('');
@@ -287,6 +308,8 @@ export default function App() {
       if(event.key!=='/' || event.ctrlKey || event.metaKey || event.altKey || event.defaultPrevented ||
         (target instanceof HTMLElement && (target.isContentEditable || ['INPUT','TEXTAREA','SELECT'].includes(target.tagName))))return;
       event.preventDefault();
+      setToolsOpen(false);
+      setToolSection(null);
       setModule('administrative');
       setModulePanelOpen(true);
       if(window.matchMedia('(max-width:700px)').matches)setDrawer('tree');
@@ -300,7 +323,10 @@ export default function App() {
   useEffect(()=>{
     const onEscape=(event:KeyboardEvent)=>{
       if(event.key!=='Escape'||event.defaultPrevented)return;
-      if(drawer){
+      if(toolsOpen){
+        setToolsOpen(false);
+        setToolSection(null);
+      }else if(drawer){
         setDrawer(null);
         if(drawer==='tree')setModulePanelOpen(false);
         else setDetailPanelOpen(false);
@@ -317,7 +343,7 @@ export default function App() {
     };
     window.addEventListener('keydown',onEscape);
     return ()=>window.removeEventListener('keydown',onEscape);
-  },[drawer,detailPanelOpen,modulePanelOpen]);
+  },[toolsOpen,drawer,detailPanelOpen,modulePanelOpen]);
 
   // The mobile drawer is a modal dialog: focus its Close control on entry,
   // contain keyboard Tab navigation, and return focus to the correct opener.
@@ -357,6 +383,34 @@ export default function App() {
     document.addEventListener('keydown',onTab);
     return ()=>document.removeEventListener('keydown',onTab);
   },[drawer]);
+
+  // The global tools dialog has its own opener and focus lifecycle, separate
+  // from the Administrative module and entity-detail drawers.
+  useEffect(()=>{
+    const wasOpen=hadToolsOpenRef.current;
+    hadToolsOpenRef.current=toolsOpen;
+    if(!toolsOpen){
+      if(wasOpen)toolsOpenerRef.current?.focus();
+      return;
+    }
+    const dialog=toolsDialogRef.current;
+    dialog?.querySelector<HTMLButtonElement>('.atlas-tools-close')?.focus();
+    const onTab=(event:KeyboardEvent)=>{
+      if(event.key!=='Tab'||event.defaultPrevented||window.innerWidth>700||!dialog)return;
+      const controls=Array.from(dialog.querySelectorAll<HTMLElement>(
+        'button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'
+      )).filter(el=>el.getClientRects().length>0);
+      if(!controls.length)return;
+      const first=controls[0],last=controls[controls.length-1],active=document.activeElement;
+      if(event.shiftKey&&(active===first||!dialog.contains(active))){
+        event.preventDefault();last.focus();
+      }else if(!event.shiftKey&&(active===last||!dialog.contains(active))){
+        event.preventDefault();first.focus();
+      }
+    };
+    document.addEventListener('keydown',onTab);
+    return ()=>document.removeEventListener('keydown',onTab);
+  },[toolsOpen]);
   useEffect(()=>{localStorage.setItem('atlas-visible-phase4',JSON.stringify(visible));},[visible]);
   useEffect(()=>{
     if(catalog.length && selected && !nodes.has(selected))setSelected(null);
@@ -548,11 +602,15 @@ export default function App() {
     const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
   }),[]);
   const choose = useCallback((id:string)=>{
+    setToolsOpen(false);
+    setToolSection(null);
     setSelected(id);setDetailPanelOpen(true);
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
   function toggleModulePanel(id:ModuleId){
+    setToolsOpen(false);
+    setToolSection(null);
     const shouldOpen=id!==module||!modulePanelOpen;
     setModule(id);setModulePanelOpen(shouldOpen);
     if(window.innerWidth<1100&&shouldOpen)setDetailPanelOpen(false);
@@ -562,6 +620,22 @@ export default function App() {
   function closeModulePanel(){
     setModulePanelOpen(false);
     if(drawer==='tree')setDrawer(null);
+  }
+  function closeTools(){
+    setToolsOpen(false);
+    setToolSection(null);
+  }
+  function toggleTools(){
+    if(toolsOpen){closeTools();return;}
+    setModulePanelOpen(false);
+    setDetailPanelOpen(false);
+    setDrawer(null);
+    setToolSection(null);
+    setToolsOpen(true);
+  }
+  function toggleToolSection(section:Exclude<MapToolSection,null>){
+    setToolSection(previous=>previous===section?null:section);
+    setExportProgress('');
   }
   function closeDetailPanel(){
     setDetailPanelOpen(false);
@@ -582,7 +656,7 @@ export default function App() {
     setSearch('');
     setDrawer(null);
     setModulePanelOpen(false);
-    setExportOpen(false);
+    setToolSection(null);
     setExportScope('visible');
     setExportProgress('');
     setShareNotice('');
@@ -777,105 +851,14 @@ export default function App() {
           {matches.length>80&&<p className="tree-hint">{t.searchLimit}</p>}
         </>:ROOT_IDS.map(id=>{const n=nodes.get(id);return n?treeItem(n,0):null;})}
       </div>}
-    <details className="atlas-map-tools">
-      <summary>{t.mapTools}</summary>
-      <div className="atlas-map-tool-groups">
-        <details className="atlas-tool-section atlas-map-settings">
-          <summary>{t.mapSettings}</summary>
-          <div className="atlas-tool-body">
-            <label className="basemap-select"><span aria-hidden="true">▧</span><span className="control-caption">{t.basemap}</span>
-              <select value={basemap} onChange={e=>setBasemap(e.target.value as Basemap)} aria-label={t.basemap}>
-                {(['standard','grayscale','dark','none'] as Basemap[]).map(key=>
-                  <option key={key} value={key}>{t[key]}</option>)}
-              </select>
-            </label>
-            <label className="simplify-control"><input type="checkbox" checked={simplified}
-              onChange={e=>setSimplified(e.target.checked)}/>
-              <span className="toggle-track"/><span className="control-caption">{t.simplified}</span>
-            </label>
-          </div>
-        </details>
-        <details className="atlas-tool-section atlas-geometry-actions">
-          <summary>{t.geometryActions}</summary>
-          <div className="atlas-tool-body">
-            <button type="button" disabled={!mapVisible.length||navBusy}
-              onClick={()=>void fitVisible()}>{navBusy?t.navigationLoading:t.fitVisible}</button>
-            <button type="button" className="reset-geometries" onClick={resetGeometries}
-              aria-label={t.resetGeometries} title={t.resetGeometries}>{t.resetGeometries}</button>
-          </div>
-        </details>
-        <details className="atlas-tool-section atlas-export-tools" open={exportOpen}>
-          <summary aria-expanded={exportOpen} aria-controls="phase5-export-panel"
-            onClick={e=>{e.preventDefault();setExportOpen(old=>!old);setExportProgress('');}}>
-            {t.exportAction}
-          </summary>
-          {exportOpen&&<section id="phase5-export-panel" className="export-panel" aria-label={t.exportTitle}>
-            <label className="export-scope">{t.exportScope}
-              <select value={exportScope} onChange={e=>setExportScope(e.target.value as ExportScope)}>
-                <option value="visible">{t.exportVisible} ({mapVisible.filter(id=>nodes.has(id)).length})</option>
-                <option value="selected" disabled={!currentNode}>{t.exportSelected}</option>
-              </select>
-            </label>
-            <div className="export-buttons">
-              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,mapVisible,new Set(nodes.keys())).length}
-                onClick={()=>void performExport('geojson')}>{t.exportGeoJSON}</button>
-              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,mapVisible,new Set(nodes.keys())).length}
-                onClick={()=>void performExport('csv')}>{t.exportCSV}</button>
-              <button type="button" className="secondary" onClick={()=>void copyPermalink()}>{t.copyLink}</button>
-            </div>
-            <p className="export-help">{t.exportHelp}</p>
-            {exportProgress&&<p className="export-status" role="status">{exportProgress}</p>}
-            {shareNotice&&<p className="export-status" role="status">{shareNotice}</p>}
-            {shareFallback&&<input className="share-url" aria-label={t.copyLink} readOnly
-              value={shareFallback} onFocus={e=>e.currentTarget.select()} />}
-            {!nodes.size&&<p className="export-help">{t.exportEmpty}</p>}
-          </section>}
-        </details>
-        <details className="atlas-tool-section atlas-map-information">
-          <summary>{t.mapInformation}</summary>
-          <div className="atlas-tool-body">
-            <div className="map-legend" aria-label={t.dataRole}>
-              <div className="legend-section">
-                <strong>{t.referenceOutline}</strong>
-                <div className="legend-row" data-style-key="reference">
-                  <span className="legend-line" style={{borderTopColor:REFERENCE_STYLE.color,
-                    borderTopWidth:REFERENCE_STYLE.width}}/>
-                  <span>{t.referenceCountries}</span>
-                </div>
-              </div>
-              <div className="legend-section">
-                <strong>{t.adminView}</strong>
-                {levelOptions.map(option=>{
-                  const chart=administrativeStyle(option.level);
-                  return <div className="legend-row" key={chart.key} data-style-key={chart.key}>
-                    <span className="legend-line" style={{borderTopColor:chart.color,borderTopWidth:chart.width}}/>
-                    <span>{chart.key}</span>
-                  </div>;
-                })}
-              </div>
-              <div className="legend-section">
-                <strong>{t.statView}</strong>
-                {statisticalLevelOptions.map(option=>{
-                  const chart=statisticalStyle(option.classification,option.level);
-                  return <div className="legend-row" key={chart.key} data-style-key={chart.key}>
-                    <span className="legend-line is-statistical" style={{
-                      borderTopColor:chart.color,borderTopWidth:chart.width}}/>
-                    <span>{chart.key}</span>
-                  </div>;
-                })}
-              </div>
-            </div>
-            <h3>{t.displaySource}</h3>
-            <p>{t.sourceNote}</p>
-            <p>{t.description}</p>
-            <p>{t.detailNote}</p>
-          </div>
-        </details>
-      </div>
-    </details>
+    <div className="atlas-admin-actions">
+      <button type="button" className="reset-geometries atlas-admin-reset"
+        aria-label={t.resetGeometries} onClick={resetGeometries}>
+        <span aria-hidden="true">↺</span> {t.resetDisplay}
+      </button>
+    </div>
     <div className="tree-footnote"><strong>{catalog.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.entityCount}</strong>
       <span> · {mapVisible.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.selectedCount}</span>
-      <p>{t.description}</p>
     </div>
   </section>;
 
@@ -949,6 +932,142 @@ export default function App() {
     </div>:<div className="empty-detail"><span>◇</span><h3>{t.selectEntity}</h3><p>{t.select}</p></div>}
   </section>;
 
+
+  // Global map tools are independent of modules and never occupy map space
+  // permanently. Only one expandable tool section is visible at a time.
+  const globalTools=<div className="atlas-tools-overlay" onClick={closeTools}>
+    <section id="atlas-global-tools" ref={toolsDialogRef} className="atlas-global-tools-panel" role="dialog"
+      aria-label={t.mapToolMenu} aria-modal={window.innerWidth<=700?'true':undefined}
+      onClick={e=>e.stopPropagation()}>
+      <div className="atlas-tools-heading">
+        <h2>{t.mapToolMenu}</h2>
+        <button type="button" className="atlas-tools-close" aria-label={t.close}
+          onClick={closeTools}>×</button>
+      </div>
+      <div className="atlas-tools-list">
+        <div className="atlas-tools-item atlas-map-settings">
+          <button type="button" className="atlas-tools-entry" aria-expanded={toolSection==='settings'}
+            aria-controls="atlas-section-settings" onClick={()=>toggleToolSection('settings')}>
+            <span className="atlas-tools-icon" aria-hidden="true">⚙</span>
+            <span className="atlas-tools-entry-copy"><strong>{t.mapSettings}</strong>
+              <small>{t.mapToolSettingsHint}</small></span>
+            <span aria-hidden="true">{toolSection==='settings'?'⌄':'›'}</span>
+          </button>
+          {toolSection==='settings'&&<div id="atlas-section-settings" className="atlas-tools-content">
+            <label className="basemap-select"><span aria-hidden="true">▧</span>
+              <span className="control-caption">{t.basemap}</span>
+              <select value={basemap} onChange={e=>setBasemap(e.target.value as Basemap)}
+                aria-label={t.basemap}>
+                {(['standard','grayscale','dark','none'] as Basemap[]).map(key=>
+                  <option key={key} value={key}>{t[key]}</option>)}
+              </select>
+            </label>
+            <label className="simplify-control">
+              <input type="checkbox" checked={simplified} onChange={e=>setSimplified(e.target.checked)}/>
+              <span className="toggle-track"/><span className="control-caption">{t.simplified}</span>
+            </label>
+          </div>}
+        </div>
+        <div className="atlas-tools-item atlas-map-fit">
+          <button type="button" className="atlas-tools-entry" disabled={!mapVisible.length||navBusy}
+            onClick={()=>{closeTools();void fitVisible();}}>
+            <span className="atlas-tools-icon" aria-hidden="true">⤢</span>
+            <span className="atlas-tools-entry-copy"><strong>{navBusy?t.navigationLoading:t.mapFit}</strong>
+              <small>{t.mapToolFitHint}</small></span>
+          </button>
+        </div>
+        <div className="atlas-tools-item atlas-tools-legend">
+          <button type="button" className="atlas-tools-entry" aria-expanded={toolSection==='legend'}
+            aria-controls="atlas-section-legend" onClick={()=>toggleToolSection('legend')}>
+            <span className="atlas-tools-icon" aria-hidden="true">☷</span>
+            <span className="atlas-tools-entry-copy"><strong>{t.mapLegend}</strong>
+              <small>{t.mapToolLegendHint}</small></span>
+            <span aria-hidden="true">{toolSection==='legend'?'⌄':'›'}</span>
+          </button>
+          {toolSection==='legend'&&<div id="atlas-section-legend" className="atlas-tools-content">
+            <div className="map-legend" aria-label={t.dataRole}>
+              <div className="legend-section">
+                <strong>{t.referenceOutline}</strong>
+                <div className="legend-row" data-style-key="reference">
+                  <span className="legend-line" style={{borderTopColor:REFERENCE_STYLE.color,
+                    borderTopWidth:REFERENCE_STYLE.width}}/>
+                  <span>{t.referenceCountries}</span>
+                </div>
+              </div>
+              <div className="legend-section">
+                <strong>{t.adminView}</strong>
+                {levelOptions.map(option=>{
+                  const chart=administrativeStyle(option.level);
+                  return <div className="legend-row" key={chart.key} data-style-key={chart.key}>
+                    <span className="legend-line" style={{borderTopColor:chart.color,borderTopWidth:chart.width}}/>
+                    <span>{chart.key}</span>
+                  </div>;
+                })}
+              </div>
+              <div className="legend-section">
+                <strong>{t.statView}</strong>
+                {statisticalLevelOptions.map(option=>{
+                  const chart=statisticalStyle(option.classification,option.level);
+                  return <div className="legend-row" key={chart.key} data-style-key={chart.key}>
+                    <span className="legend-line is-statistical" style={{
+                      borderTopColor:chart.color,borderTopWidth:chart.width}}/>
+                    <span>{chart.key}</span>
+                  </div>;
+                })}
+              </div>
+            </div>
+          </div>}
+        </div>
+        <div className="atlas-tools-item atlas-tools-export">
+          <button type="button" className="atlas-tools-entry" aria-expanded={toolSection==='export'}
+            aria-controls="phase5-export-panel" onClick={()=>toggleToolSection('export')}>
+            <span className="atlas-tools-icon" aria-hidden="true">⇧</span>
+            <span className="atlas-tools-entry-copy"><strong>{t.exportAction}</strong>
+              <small>{t.mapToolExportHint}</small></span>
+            <span aria-hidden="true">{toolSection==='export'?'⌄':'›'}</span>
+          </button>
+          {toolSection==='export'&&<section id="phase5-export-panel" className="export-panel atlas-tools-content"
+            aria-label={t.exportTitle}>
+            <label className="export-scope">{t.exportScope}
+              <select value={exportScope} onChange={e=>setExportScope(e.target.value as ExportScope)}>
+                <option value="visible">{t.exportVisible} ({mapVisible.filter(id=>nodes.has(id)).length})</option>
+                <option value="selected" disabled={!currentNode}>{t.exportSelected}</option>
+              </select>
+            </label>
+            <div className="export-buttons">
+              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,mapVisible,new Set(nodes.keys())).length}
+                onClick={()=>void performExport('geojson')}>{t.exportGeoJSON}</button>
+              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,mapVisible,new Set(nodes.keys())).length}
+                onClick={()=>void performExport('csv')}>{t.exportCSV}</button>
+              <button type="button" className="secondary" onClick={()=>void copyPermalink()}>{t.copyLink}</button>
+            </div>
+            <p className="export-help">{t.exportHelp}</p>
+            {exportProgress&&<p className="export-status" role="status">{exportProgress}</p>}
+            {shareNotice&&<p className="export-status" role="status">{shareNotice}</p>}
+            {shareFallback&&<input className="share-url" aria-label={t.copyLink} readOnly
+              value={shareFallback} onFocus={e=>e.currentTarget.select()} />}
+            {!nodes.size&&<p className="export-help">{t.exportEmpty}</p>}
+          </section>}
+        </div>
+        <div className="atlas-tools-item atlas-tools-about">
+          <button type="button" className="atlas-tools-entry" aria-expanded={toolSection==='about'}
+            aria-controls="atlas-section-about" onClick={()=>toggleToolSection('about')}>
+            <span className="atlas-tools-icon atlas-tools-info" aria-hidden="true">i</span>
+            <span className="atlas-tools-entry-copy"><strong>{t.mapAbout}</strong>
+              <small>{t.mapToolAboutHint}</small></span>
+            <span aria-hidden="true">{toolSection==='about'?'⌄':'›'}</span>
+          </button>
+          {toolSection==='about'&&<div id="atlas-section-about" className="atlas-tools-content atlas-tools-about-content">
+            <h3>{t.displaySource}</h3>
+            <p>{t.sourceNote}</p>
+            <p>{t.description}</p>
+            <p>{t.detailNote}</p>
+          </div>}
+        </div>
+      </div>
+    </section>
+  </div>;
+
   return <div className="app">
     <header className="site-header">
       <div className="brand-symbol" aria-hidden="true">◎</div>
@@ -993,11 +1112,17 @@ export default function App() {
       }}>
         <div className="map-canvas" ref={mapEl} aria-label="Territorial map" />
         {!rootsLoaded&&catalog.length>0&&<span className="map-boot-status" role="status">{t.loadingGeom}</span>}
+        <button ref={toolsOpenerRef} type="button" className="atlas-tools-toggle"
+          title={t.mapToolTip} aria-label={t.mapToolMenu} aria-haspopup="dialog"
+          aria-controls="atlas-global-tools" aria-expanded={toolsOpen} onClick={toggleTools}>
+          <span aria-hidden="true">⚙</span>
+        </button>
         <div className="zoom-controls">
           <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>mapRef.current?.zoomIn()}>+</button>
           <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>
           <button aria-label={t.home} title={t.home} onClick={reset}>⌂</button>
         </div>
+        {toolsOpen&&globalTools}
         {(geomLoading||geomError)&&<div className="atlas-map-status" role={geomError?'alert':'status'}>
           {geomError?t.dataError:t.mapLoading}
         </div>}
