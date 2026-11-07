@@ -415,7 +415,7 @@
 .drawer,.detail-sidebar,.tree-sidebar{scroll-padding-top:66px}
 .detail-content .panel-heading{padding:12px 20px 10px}
 .detail-content .panel-heading h2{font-size:20px;margin-top:6px}
-.entity-card .entity-title h3:focus{outline:0}
+.entity-card .entity-title h3:focus{outline:3px solid #e6a73d;outline-offset:4px;border-radius:3px}
 .entity-card .entity-title h3:focus-visible{
   outline:3px solid #e6a73d;outline-offset:4px;border-radius:3px
 }
