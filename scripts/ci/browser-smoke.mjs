@@ -1284,7 +1284,7 @@ async function finalCardAcceptance(cdp){
         lang:document.documentElement.lang,
         stat:[...e.querySelectorAll('.entity-statistical-primary strong')].map(x=>x.textContent.trim()),
         admin:[...e.querySelectorAll('.entity-admin-role-primary strong')].map(x=>x.textContent.trim()),
-        source:e.textContent.includes('NUTS_MOLDOVA'),
+        source:e.innerText.includes('NUTS_MOLDOVA'),
         overflow:document.documentElement.scrollWidth>innerWidth+1,
         name:e.querySelector('.entity-title h3')?.textContent.trim()
       };
