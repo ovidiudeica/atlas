@@ -7,6 +7,11 @@ import {comparePresentationSiblings} from './treeOverlay.mjs';
 export const NISTRIAN_PARENT_ID='osm-r65335';
 export const GAGAUZIA_PARENT_ID='osm-r1699032';
 export const CHISINAU_PARENT_ID='osm-r1691801';
+export const EAST_STAT_PARENT_ID='stat-MD120'; // Statistical, not administrative
+export const EAST_BENDER_ADM4_ID='osm-r9581354'; // CUATM 0500
+export const EAST_UATSN_ADM4_ID='osm-r2607033'; // CUATM 9800
+export const EAST_BENDER_ADM8_CITY_ID='osm-r12463379';
+
 export const NISTRIAN_CITY_COUNCILS=Object.freeze(['osm-r944727','osm-r1702219']);
 const cityCouncilIds=new Set(NISTRIAN_CITY_COUNCILS);
 
@@ -76,6 +81,20 @@ export function compareTreeSiblings(a,b,view,parentId,lang='ro'){
     if(aRank!==bRank)return aRank-bRank;
     const byShortName=shortTreeName(a,lang).localeCompare(shortTreeName(b,lang),lang);
     return byShortName||a.id.localeCompare(b.id,'en');
+  }
+  // WEB-R3.13 — EAST: the MD120 statistical node only groups the existing
+  // Bender (0500) and UATSN (9800) ADM4 entities in the All view. Their
+  // canonical parents under Moldova are untouched in Administrative view.
+  if(view!=='statistical'){
+    if(parentId===EAST_STAT_PARENT_ID){
+      const aRank=a.id===EAST_BENDER_ADM4_ID?0:1;
+      const bRank=b.id===EAST_BENDER_ADM4_ID?0:1;
+      return aRank-bRank||sortedByLocalizedShortName(a,b,lang);
+    }
+    if(parentId===EAST_BENDER_ADM4_ID)
+      return seatFirst(a,b,EAST_BENDER_ADM8_CITY_ID,lang);
+    if(parentId===EAST_UATSN_ADM4_ID)
+      return sortedByLocalizedShortName(a,b,lang);
   }
   // No statistical-mode changes: geography displayed under a statistical NTS3
   // region in "all", or under canonical ADM4 in "administrative".
