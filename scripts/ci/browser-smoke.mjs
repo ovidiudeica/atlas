@@ -130,7 +130,7 @@ async function desktop(cdp){
   const englishRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
   assert.deepEqual(englishRoots,['Romania','Moldova'],'English tree uses concise national names');
   await p.snap('desktop-module-open.png');
-  // Nistrenia/Pridnestrovie: five districts first, two city councils last.
+  // WEB-R3.15 Nistrenia/Pridnestrovie: Tiraspol, Bender, then five raions south-to-north.
   // Both mixed and administrative tree views must expose the same 7 identities.
   for(const view of ['all','administrative']){
     if(view==='administrative')
@@ -140,10 +140,10 @@ async function desktop(cdp){
       'Nistrenia appears under Moldova');
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').querySelector('.expand-button').click()");
     const order=await p.eval("(()=>{const line=Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie');return Array.from(line.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim());})()");
-    assert.deepEqual(order,['Dubossary','Grigoriopol','Kamenka','Rybnitsa','Slobdzeya','Bender','Tiraspol'],
-      'English Nistrenia children: alphabetic raions then concise city councils, '+view);
+    assert.deepEqual(order,['Tiraspol','Bender','Slobdzeya','Grigoriopol','Dubossary','Rybnitsa','Kamenka'],
+      'English Nistrenia children: Tiraspol/Bender followed by five raions south-to-north, '+view);
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').scrollIntoView({block:'center'})");
-    await p.snap('desktop-nistrenia-children-en-'+view+'.png');
+    await p.snap('desktop-nistrenia-web-r315-fixed-order-en-'+view+'.png');
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').querySelector('.expand-button').click()");
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   }
@@ -836,10 +836,10 @@ async function mobile(cdp){
     'Romanian Nistrenia appears beneath Moldova on mobile');
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').querySelector('.expand-button').click()");
   const pmrRomanian=await p.eval("(()=>{const line=Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia');return Array.from(line.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim());})()");
-  assert.deepEqual(pmrRomanian,['Camenca','Dubăsari','Grigoriopol','Rîbnița','Slobozia','Bender','Tiraspol'],
-    'Romanian mobile Nistrenia: five alphabetic raions, then Bender and Tiraspol');
+  assert.deepEqual(pmrRomanian,['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca'],
+    'Romanian mobile Nistrenia: Tiraspol, Bender then raions south-to-north');
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').scrollIntoView({block:'start'})");
-  await p.snap('mobile-nistrenia-children-ro.png');
+  await p.snap('mobile-nistrenia-web-r315-fixed-order-ro.png');
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').querySelector('.expand-button').click()");
   // Mobile, Romanian Administrative view: Găgăuzia and Chișinău are
   // direct administrative children of Moldova (the mixed tree is verified

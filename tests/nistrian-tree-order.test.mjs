@@ -12,8 +12,8 @@ const parent=byId.get(NISTRIAN_PARENT_ID);
 const children=entries.filter(e=>e.treeParentId===NISTRIAN_PARENT_ID);
 const ids=children.map(e=>e.id);
 const expectedIds=[
-  'osm-r1702216','osm-r1702215','osm-r1702214','osm-r1702217',
-  'osm-r1702218','osm-r944727','osm-r1702219'
+  'osm-r1702219','osm-r944727','osm-r1702218','osm-r1702214',
+  'osm-r1702215','osm-r1702217','osm-r1702216'
 ];
 test('Nistrenia is the PMR source parent with exactly five raions and two city councils',()=>{
   assert.equal(entries.length,4283);
@@ -30,21 +30,22 @@ test('Nistrenia is the PMR source parent with exactly five raions and two city c
   assert(children.filter(e=>!NISTRIAN_CITY_COUNCILS.includes(e.id))
     .every(e=>/^Raionul /.test(e.officialName)));
 });
-test('Romanian: alphabetic raions first, then Bender and Tiraspol',()=>{
+test('Romanian: Tiraspol and Bender first, then raions south-to-north',()=>{
   for(const view of ['administrative','all']){
     const sorted=[...children].sort((a,b)=>compareTreeSiblings(a,b,view,parent.id,'ro'));
     assert.deepEqual(sorted.map(e=>shortTreeName(e,'ro')),
-      ['Camenca','Dubăsari','Grigoriopol','Rîbnița','Slobozia','Bender','Tiraspol']);
+      ['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca']);
     assert.deepEqual(sorted.map(e=>e.id),expectedIds);
   }
 });
-test('English: alphabetic short exonyms within raions, councils last',()=>{
+test('English: same fixed geographical order despite translated raion exonyms',()=>{
   for(const view of ['administrative','all']){
     const sorted=[...children].sort((a,b)=>compareTreeSiblings(a,b,view,parent.id,'en'));
     assert.deepEqual(sorted.map(e=>shortTreeName(e,'en')),
-      ['Dubossary','Grigoriopol','Kamenka','Rybnitsa','Slobdzeya','Bender','Tiraspol']);
-    assert.deepEqual(sorted.slice(-2).map(e=>e.id),
-      ['osm-r944727','osm-r1702219']);
+      ['Tiraspol','Bender','Slobdzeya','Grigoriopol','Dubossary','Rybnitsa','Kamenka']);
+    assert.deepEqual(sorted.slice(0,2).map(e=>e.id),
+      ['osm-r1702219','osm-r944727']);
+    assert.deepEqual(sorted.map(e=>e.id),expectedIds);
   }
 });
 test('sort changes neither identities nor other hierarchy behavior',()=>{

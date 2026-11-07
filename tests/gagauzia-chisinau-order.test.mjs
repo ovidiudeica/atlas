@@ -109,7 +109,7 @@ test('hierarchical presentation retains all 53 source children and has no cycles
     }
   }
 });
-test('canonical details, parent IDs, statistical tree and Nistrenia remain unchanged',()=>{
+test('canonical details and parent IDs remain unchanged; accepted Nistrenia order applies',()=>{
   assert.equal(byId.get(CHISINAU_CITY_ID).administrativeParentId,CHISINAU_ID);
   assert.equal(byId.get('osm-r1813297').officialName,'Sectorul Buiucani');
   assert.equal(presentationParentId(byId.get('osm-r1813297'),'statistical'),CHISINAU_ID);
@@ -121,7 +121,7 @@ test('canonical details, parent IDs, statistical tree and Nistrenia remain uncha
   const nistrenia=all.filter(x=>x.treeParentId==='osm-r65335');
   assert.deepEqual([...nistrenia].sort((a,b)=>
     compareTreeSiblings(a,b,'all','osm-r65335','ro')).map(x=>shortTreeName(x,'ro')),
-    ['Camenca','Dubăsari','Grigoriopol','Rîbnița','Slobozia','Bender','Tiraspol']);
+    ['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca']);
 });
 test('visible breadcrumbs, search expansion and sibling navigation use presentation hierarchy',()=>{
   const app=readFileSync(new URL('../src/App.tsx',import.meta.url),'utf8');
