@@ -161,6 +161,17 @@ export function matchingCombinedLevelIds(index, scopeIds, administrativeLevels, 
   ])];
 }
 
+// A checkbox is derived from the actual map/tree visibility state, never from a
+// second independent level-selection array. Mixed indicates a partially visible level.
+export function levelVisibilityState(visible, targets) {
+  const current = visible instanceof Set ? visible : new Set(visible);
+  const shown = targets.reduce((count, id) => count + Number(current.has(id)), 0);
+  return {
+    checked:targets.length > 0 && shown === targets.length,
+    mixed:shown > 0 && shown < targets.length
+  };
+}
+
 // Never mutate the previous state; actions preserve all non-target entities,
 // including administrative levels outside the current statistical selection.
 export function updateOsmLevelVisibility(visible, targets, show) {

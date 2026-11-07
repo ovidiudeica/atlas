@@ -174,58 +174,77 @@ async function desktop(cdp){
   assert(csv.includes('"Comuna Brețcu","",'),'CSV must preserve blank OSM ID');
   await p.snap('desktop-export-bretcu.png');
 
-  // Unified Filters: one list and one pair of actions for ADM/NUTS/NTS.
-  // Country scopes and levels come from the live catalog, not hardcoded enums.
+  // Filters have two independent level columns, but one canonical map visibility
+  // state shared with the checkboxes in the tree. Tree-view mode sits beside the tree.
   await p.eval("document.querySelector('.detail-sidebar .entity-actions button:first-child').click()");
-  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).includes('siruta-u64096')",'Brețcu visible before unified filter');
+  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).includes('siruta-u64096')",
+    'Brețcu visible before level-filter synchronization');
   await p.eval("document.querySelector('.tree-sidebar .osm-level-filter>summary').click()");
-  const filterState=await p.eval("({heading:document.querySelector('.tree-sidebar .osm-level-filter>summary').textContent.trim(),scopes:[...document.querySelectorAll('.tree-sidebar .osm-level-scopes label')].map(x=>({name:x.textContent.trim(),checked:x.querySelector('input').checked})),levels:[...document.querySelectorAll('.tree-sidebar .osm-level-choices label')].map(x=>({name:x.textContent.trim(),checked:x.querySelector('input').checked})),actions:document.querySelectorAll('.tree-sidebar .osm-level-actions button').length})");
-  assert.equal(filterState.heading,'Filters','English filter must be titled Filters');
-  assert.equal(filterState.scopes.length,2,'Two current geography sets are derived from the catalog');
-  assert.match(filterState.scopes[0].name,/^(Romania|România)$/,'Romania must be first in desktop Filters');
-  assert.match(filterState.scopes[1].name,/Moldova/,'Moldova must follow Romania in desktop Filters');
-  assert(filterState.scopes.every(x=>x.checked),'Both current geography sets selected');
-  assert.equal(filterState.actions,2,'Exactly one pair of visibility controls');
-  assert(filterState.levels.some(x=>x.name.startsWith('ADM 8')),'Administrative level 8 must be available');
-  assert(filterState.levels.some(x=>x.name.startsWith('NUTS 1')),'NUTS must be in same list');
-  assert(filterState.levels.some(x=>x.name.startsWith('NTS 2')),'NTS must be in same list');
-  assert(filterState.levels.every(x=>!x.checked),'Unified filter begins without any prechecked level');
-  assert.equal(await p.eval("document.querySelector('.tree-sidebar .osm-level-actions button:first-child').disabled"),true,
-    'No level selected disables shared bulk actions');
+  const filterState=await p.eval("(()=>{const panel=document.querySelector('.tree-sidebar .tree-content');const children=[...panel.children];const order=x=>children.findIndex(el=>el.matches(x));const levels=[...panel.querySelectorAll('.osm-level-choices label')];return {heading:panel.querySelector('.osm-level-filter>summary').textContent.trim(),columns:[...panel.querySelectorAll('.osm-level-columns>fieldset')].map(el=>el.getAttribute('data-column')),scopes:panel.querySelectorAll('.osm-level-scopes input').length,actions:panel.querySelectorAll('.osm-level-actions button').length,ordering:[order('.osm-level-filter'),order('.tree-filters'),order('.tree-list')],levels:levels.map(el=>({name:el.querySelector('span').textContent.trim(),checked:el.querySelector('input').checked,mixed:el.querySelector('input').indeterminate}))};})()");
+  assert.equal(filterState.heading,'Filters');
+  assert.deepEqual(filterState.columns,['administrative','statistical']);
+  assert.equal(filterState.scopes,0,'No duplicated country selectors in Filters');
+  assert.equal(filterState.actions,0,'No Show/Hide buttons in Filters');
+  assert(filterState.ordering[0]>=0&&filterState.ordering[0]<filterState.ordering[1]&&filterState.ordering[1]<filterState.ordering[2],
+    'The tree-view selector must be immediately before the tree, not before Filters');
+  assert(filterState.levels.some(x=>x.name==='ADM 2'&&x.checked),
+    'ADM 2 reflects the already visible national root geometries');
+  assert(filterState.levels.some(x=>x.name==='ADM 8'&&x.mixed),
+    'ADM 8 is mixed because only Brețcu is visible at that level');
+  assert(filterState.levels.some(x=>x.name==='NUTS 1'&&!x.checked));
   const statisticalChoices=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .osm-level-choices label[data-level-kind=statistical]')).map(x=>({label:x.querySelector('span').textContent.trim(),count:Number(x.querySelector('small').textContent.trim()),checked:x.querySelector('input').checked}))");
-  assert.deepEqual(statisticalChoices.map(x=>x.label),
-    ['NUTS 1','NUTS 2','NUTS 3','NTS 1','NTS 2','NTS 3']);
-  assert.deepEqual(statisticalChoices.map(x=>x.count),[4,8,42,1,2,6],
-    'Statistical counts remain the certified catalogue inventory');
+  assert.deepEqual(statisticalChoices.map(x=>x.label),['NUTS 1','NUTS 2','NUTS 3','NTS 1','NTS 2','NTS 3']);
+  assert.deepEqual(statisticalChoices.map(x=>x.count),[4,8,42,1,2,6]);
+  await p.snap('desktop-levels-two-columns.png');
 
-  // Mixed administrative + statistical selection, in one action.
-  await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"OSM 8\"]').click()");
-  await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"NUTS 1\"]').click()");
-  await p.eval("document.querySelector('.tree-sidebar .osm-level-actions button:last-child').click()");
+  // Hide a single ADM 8 geometry from the tree; the filter must update itself.
+  // Choosing a search result clears the search field, so find Brețcu again
+  // rather than toggling the first root checkbox (Romania).
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
+  await p.call('Input.insertText',{text:'Brețcu'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .tree-label')).some(x=>x.textContent.includes('Brețcu'))",
+    'Brețcu tree result for individual visibility toggle');
+  await p.eval("document.querySelector('.tree-sidebar .tree-line input[type=checkbox]').click()");
   await p.wait("!JSON.parse(localStorage.getItem('atlas-visible-phase4')).includes('siruta-u64096')",
-    'combined ADM8 and NUTS1 hide must clear Brețcu');
+    'Tree checkbox hides Brețcu immediately');
+  assert.equal(await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"OSM 8\"]').indeterminate"),false,
+    'ADM 8 returns to unchecked after individual tree toggle');
   assert.equal(await p.eval("document.querySelector('.detail-sidebar .entity-title h3')?.textContent.includes('Brețcu')"),true,
-    'Bulk hide does not clear selected entity details');
-  assert.equal(await p.eval("(()=>{const a=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return a.length===2&&a.includes('osm-r90689')&&a.includes('osm-r58974')})()"),true,
-    'Combined hide preserves country roots');
+    'Tree checkbox does not clear selected entity details');
   await p.snap('desktop-level8-hidden.png');
 
-  // Reusing the SAME controls with statistical selection only never enables ADM8.
-  await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"OSM 8\"]').click()");
+  // Each statistical checkbox changes the map immediately, without extra actions.
+  await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"NUTS 1\"]').click()");
+  await p.wait("(()=>{const a=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return a.length===6&&a.includes('stat-RO1')})()",
+    'NUTS 1 automatically displays its four region geometries');
   await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"NTS 2\"]').click()");
-  await p.eval("document.querySelector('.tree-sidebar .osm-level-actions button:first-child').click()");
-  await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===8&&ids.includes('stat-RO1')&&ids.includes('stat-MD11')&&ids.includes('stat-MD12')&&!ids.includes('siruta-u64096')})()",
-    'shared show action displays NUTS 1 and NTS 2 only');
+  await p.wait("(()=>{const a=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return a.length===8&&a.includes('stat-MD11')&&a.includes('stat-MD12')})()",
+    'NTS 2 immediately combines with NUTS 1 without duplicating geometries');
   await p.eval("document.querySelector('.tree-sidebar .atlas-export-tools>summary').click()");
   await p.wait("!document.querySelector('#phase5-export-panel')",'close export overlay for statistical evidence');
-  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
-    'statistical map geometry ready');
-  await pause(1600);
+  await pause(1300);
   await p.snap('desktop-statistical-regions-shown.png');
-  await p.eval("document.querySelector('.tree-sidebar .osm-level-actions button:last-child').click()");
-  await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===2&&ids.includes('osm-r90689')&&ids.includes('osm-r58974')})()",
-    'combined hide restores only national roots');
+  await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"NUTS 1\"]').click()");
+  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===4",
+    'Unchecking NUTS 1 removes only its four geometries');
+  await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"NTS 2\"]').click()");
+  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===2",
+    'Unchecking NTS 2 preserves both national outlines');
   await p.snap('desktop-statistical-regions-hidden.png');
+
+  // ADM 2 is the group command for the two national root checkboxes.
+  await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"OSM 2\"]').click()");
+  await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===0",'ADM 2 hides both roots');
+  await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"OSM 2\"]').click()");
+  await p.wait("(()=>{const a=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return a.length===2&&a.includes('osm-r90689')&&a.includes('osm-r58974')})()",
+    'ADM 2 re-enables the two national outlines');
+  assert.equal(await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"OSM 2\"]').checked"),true);
+
+  const rootsBeforeTreeView=await p.eval("localStorage.getItem('atlas-visible-phase4')");
+  await p.eval("document.querySelector('.tree-sidebar .tree-filters button:nth-child(3)').click()");
+  assert.equal(await p.eval("localStorage.getItem('atlas-visible-phase4')"),rootsBeforeTreeView,
+    'Changing tree view does not change map visibility');
+  await p.eval("document.querySelector('.tree-sidebar .tree-filters button:first-child').click()");
 
   // Reset selected polygons (not merely the camera), with storage, permalink and
   // user-preference persistence. Home must remain a camera-only operation.
@@ -346,25 +365,22 @@ async function mobile(cdp){
   const mobileFilterTitle=await p.eval("({title:document.querySelector('.drawer .osm-level-filter>summary').textContent.trim(),lang:document.documentElement.lang})");
   assert.equal(mobileFilterTitle.title,mobileFilterTitle.lang==='ro'?'Filtre':'Filters',
     'Mobile unified filter title follows saved locale');
-  const mobileScopes=await p.eval("Array.from(document.querySelectorAll('.drawer .osm-level-scopes label')).map(x=>x.textContent.trim())");
-  assert.equal(mobileScopes.length,2,'Mobile exposes both catalog-derived territorial scopes');
-  assert.match(mobileScopes[0],/^(Romania|România)$/,'Romania must be first in mobile Filters');
-  assert.match(mobileScopes[1],/Moldova/,'Moldova must follow Romania in mobile Filters');
-  assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-level-choices label[data-level-kind=\"statistical\"]').length"),6,
-    'Mobile shows NUTS/NTS levels in unified checklist');
-  assert.equal(await p.eval("document.querySelectorAll('.drawer .osm-level-actions button').length"),2,
-    'Mobile must expose one pair of bulk controls');
-  assert.equal(await p.eval("document.querySelector('.drawer .osm-level-actions button:first-child').disabled"),true,
-    'Empty unified selection disables actions');
+  const mobileFilters=await p.eval("(()=>{const root=document.querySelector('.drawer .tree-content');const children=[...root.children];const order=x=>children.findIndex(el=>el.matches(x));return {columns:[...root.querySelectorAll('.osm-level-columns>fieldset')].map(x=>x.getAttribute('data-column')),scopes:root.querySelectorAll('.osm-level-scopes label').length,actions:root.querySelectorAll('.osm-level-actions button').length,statistical:root.querySelectorAll('.osm-level-choices label[data-level-kind=statistical]').length,adm2:root.querySelector('.osm-level-choices input[aria-label=\"OSM 2\"]').checked,ordering:[order('.osm-level-filter'),order('.tree-filters'),order('.tree-list')]};})()");
+  assert.deepEqual(mobileFilters.columns,['administrative','statistical']);
+  assert.equal(mobileFilters.scopes,0,'No country checkboxes in mobile Filters');
+  assert.equal(mobileFilters.actions,0,'No Show/Hide buttons on mobile');
+  assert.equal(mobileFilters.statistical,6,'All NUTS/NTS levels in right-hand column');
+  assert.equal(mobileFilters.adm2,true,'ADM 2 reflects visible national outlines on mobile');
+  assert(mobileFilters.ordering[0]<mobileFilters.ordering[1]&&mobileFilters.ordering[1]<mobileFilters.ordering[2],
+    'Mobile tree-mode selector sits with tree, after the Filters panel');
   await p.snap('mobile-osm-level-filter.png');
   await p.eval("document.querySelector('.drawer .osm-level-choices input[aria-label=\"NUTS 1\"]').click()");
-  await p.eval("document.querySelector('.drawer .osm-level-actions button:first-child').click()");
   await p.wait("(()=>{const ids=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return ids.length===6&&ids.includes('stat-RO1')})()",
-    'Mobile unified action displays NUTS 1');
+    'Mobile NUTS 1 is shown as soon as checked');
   await p.snap('mobile-statistical-regions-shown.png');
-  await p.eval("document.querySelector('.drawer .osm-level-actions button:last-child').click()");
+  await p.eval("document.querySelector('.drawer .osm-level-choices input[aria-label=\"NUTS 1\"]').click()");
   await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===2",
-    'Mobile unified action hides NUTS 1 without modifying roots');
+    'Mobile NUTS 1 is hidden as soon as unchecked');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("!document.querySelector('.drawer-screen')",'Repeated mobile module click closes drawer');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
