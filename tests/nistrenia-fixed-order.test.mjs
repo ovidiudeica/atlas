@@ -73,7 +73,7 @@ test('WEB-R3.15: local order does not reparent UATSN, Bender, Căușeni or chang
   for(const id of ['osm-r1216706','osm-r12215667','osm-r6879649'])
     assert.equal(byId.get(id).administrativeParentId,'osm-r65343');
   const east=ranked('stat-MD120','all','ro');
-  assert.deepEqual(east.map(n=>n.id),['osm-r2607033','osm-r9581354']);
+  assert.deepEqual(east.map(n=>n.id),['osm-r9581354','osm-r2607033']);
   assert.equal(byId.get('osm-r65335').treeParentId,'osm-r58974');
   assert.equal(shortTreeName(byId.get('osm-r65335'),'ro'),'Nistrenia');
   assert.equal(shortTreeName(byId.get('osm-r65335'),'en'),'Pridnestrovie');

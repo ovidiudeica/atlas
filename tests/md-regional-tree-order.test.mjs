@@ -62,27 +62,34 @@ test('WEB-R3.10 exact released scope: 33 ADM4, 856 ADM8 (including 3 preexisting
    new Set(Object.keys(regions).flatMap(id=>children(id,'all').map(x=>x.id))));
 });
 
-test('Region agency seat comes first; other 11/12/7 ADM4 sorted by compact localized name',()=>{
+const byCu=(a,b)=>{
+  const ca=a.registry?.system==='CUATM'?a.registry.code:null;
+  const cb=b.registry?.system==='CUATM'?b.registry.code:null;
+  if(ca&&cb)return ca.localeCompare(cb,'en')||a.id.localeCompare(b.id,'en');
+  return ca?-1:cb?1:a.id.localeCompare(b.id,'en');
+};
+test('WEB-R3.17: all Nord/Centru/Sud ADM4 siblings follow ascending CUATM, seats retain authentic IDs',()=>{
  for(const lang of ['ro','en'])for(const [regionId,meta] of Object.entries(regions)){
    const actual=sorted(regionId,lang,'all');
-   assert.equal(actual[0].id,meta.first,regionId+' '+lang);
-   assert.deepEqual(actual.slice(1).map(x=>x.id),
-     [...actual.slice(1)].sort((a,b)=>localizedSort(a,b,lang)).map(x=>x.id),
-     regionId+' localized order '+lang);
+   assert.equal(actual.length,meta.count);
+   assert.deepEqual(actual.map(x=>x.id),[...actual].sort(byCu).map(x=>x.id),
+     regionId+' CUATM order '+lang);
+   assert.equal(actual[0].registry.code,regionId==='stat-MD111'?'0300':
+     regionId==='stat-MD112'?'1000':'1200');
    assert.equal(children(regionId,'administrative').length,0,
      'Statistical region must NOT be an administrative parent '+regionId);
+   assert(actual.some(x=>x.id===meta.first),'Original agency seat kept, but not prioritized');
  }
 });
 
-test('Every raion ADM8 seat is first in both views and languages; remaining locals alphabetically ordered',()=>{
+test('WEB-R3.17: all 856 ADM8 siblings follow CUATM within their existing 33 raions, both views/languages',()=>{
  for(const view of ['all','administrative'])for(const lang of ['ro','en'])
    for(const [district,seat] of Object.entries(DISTRICT_SEATS)){
      const actual=sorted(district,lang,view);
      assert(actual.length>0,district+' nonempty');
-     assert.equal(actual[0].id,seat,district+' '+lang+' '+view);
-     assert.deepEqual(actual.slice(1).map(x=>x.id),
-       [...actual.slice(1)].sort((a,b)=>localizedSort(a,b,lang)).map(x=>x.id),
-       district+' '+lang+' '+view);
+     assert(actual.some(x=>x.id===seat),'Original seat remains '+district);
+     assert.deepEqual(actual.map(x=>x.id),[...actual].sort(byCu).map(x=>x.id),
+       district+' '+lang+' '+view+' CUATM sibling sort');
      assert.equal(new Set(actual.map(x=>x.id)).size,actual.length);
      assert(actual.every(x=>x.administrativeParentId===district),
        'No administrative reparenting '+district);
@@ -105,15 +112,23 @@ test('three pre-existing Căușeni catalog children have documented conflicting 
  assert.equal(causeni.length-conflictIds.length,27,'27 OSMB-direct Căușeni children');
 });
 
-test('Dubăsari Council seat Coșnița wins over Cocieri and name duplicates do not displace verified IDs',()=>{
+test('Dubăsari Council Coșnița remains in its original raion, but Cocieri CUATM 3810 precedes it',()=>{
  assert.equal(DISTRICT_SEATS['osm-r1692123'],'osm-r19013515');
  assert.equal(byId.get('osm-r19013515').name.replaceAll('ş','ș').replaceAll('ţ','ț'),'Coșnița');
- for(const lang of ['ro','en'])for(const view of ['all','administrative'])
-   assert.equal(sorted('osm-r1692123',lang,view)[0].id,'osm-r19013515');
- for(const id of ['osm-r59007','osm-r1693907','osm-r59005']){
+ assert.equal(byId.get('osm-r19013515').registry.code,'3818');
+ for(const lang of ['ro','en'])for(const view of ['all','administrative']){
+   const ordered=sorted('osm-r1692123',lang,view);
+   assert.equal(ordered[0].registry.code,'3810');
+   assert.equal(ordered[0].name,'Cocieri');
+   assert(ordered.some(n=>n.id==='osm-r19013515'));
+ }
+ // Explicit counterexample to residence-first: ADM8 Drochia 3601 is
+ // preceded by 3420/3426/3427 within the canonical Drochia parent.
+ assert.equal(sorted('osm-r1693907','ro','administrative')[0].registry.code,'3420');
+ assert.equal(byId.get(DISTRICT_SEATS['osm-r1693907']).registry.code,'3601');
+ for(const id of ['osm-r59007','osm-r59005']){
    const seat=DISTRICT_SEATS[id],local=children(id,'administrative');
    assert(local.some(x=>x.id===seat));
-   assert.equal(sorted(id,'ro','administrative')[0].id,seat);
  }
 });
 

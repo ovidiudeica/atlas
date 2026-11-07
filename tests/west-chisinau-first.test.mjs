@@ -18,14 +18,14 @@ const ordered=(id,view,lang)=>children(id,view).sort((a,b)=>
   compareTreeSiblings(a,b,view,id,lang));
 
 const WEST_IDS=[
-  'osm-r1691801', // Chișinău, NTS3 MD115, ADM4
-  'stat-MD111', // Nord
-  'stat-MD112', // Centru
-  'stat-MD113', // Sud
-  'osm-r1699032' // Găgăuzia, NTS3 MD114, ADM4
+  'stat-MD111', // Nord MD111
+  'stat-MD112', // Centru MD112
+  'stat-MD113', // Sud MD113
+  'osm-r1699032', // Găgăuzia MD114, CUATM 9600
+  'osm-r1691801' // Chișinău MD115, CUATM 0100
 ];
 
-test('WEB-R3.16 West: authentic five children, Chișinău first, existing sibling order preserved in both languages and mixed/statistical views',()=>{
+test('WEB-R3.17: West statistical MD111–MD115 order overrides previous Chișinău-first presentation in both languages and views',()=>{
  assert.equal(entities.length,4283);
  assert.equal(WEST_STAT_PARENT_ID,'stat-MD11');
  assert.equal(CHISINAU_PARENT_ID,'osm-r1691801');
@@ -36,8 +36,8 @@ test('WEB-R3.16 West: authentic five children, Chișinău first, existing siblin
   const actual=ordered(WEST_STAT_PARENT_ID,view,lang);
   assert.deepEqual(actual.map(x=>x.id),WEST_IDS,view+' / '+lang);
   assert.deepEqual(actual.map(x=>shortTreeName(x,lang)),
-    lang==='ro'?['Chișinău','Nord','Centru','Sud','Găgăuzia']:
-      ['Chișinău','North','Centre','South','Gagauzia']);
+    lang==='ro'?['Nord','Centru','Sud','Găgăuzia','Chișinău']:
+      ['North','Centre','South','Gagauzia','Chișinău']);
   assert.equal(new Set(actual.map(x=>x.id)).size,5,'no duplicates');
   assert(actual.every(x=>x.treeParentId===WEST_STAT_PARENT_ID),'original NTS2 parent');
  }
@@ -47,7 +47,7 @@ test('WEB-R3.16 West: authentic five children, Chișinău first, existing siblin
    'Chișinău stays an ADM4 child of Moldova');
 });
 
-test('WEB-R3.16 keeps Chișinău city-first and five sectors nested, and preserves Găgăuzia/Nistrenia/Transnistria',()=>{
+test('WEB-R3.17 keeps Chișinău canonical city and sector nesting, with sectors CUATM-sorted',()=>{
  for(const view of ['all','administrative']){
   const city=ordered(CHISINAU_PARENT_ID,view,'ro');
   assert.equal(city.length,19);
@@ -55,13 +55,13 @@ test('WEB-R3.16 keeps Chișinău city-first and five sectors nested, and preserv
   const sectors=ordered('osm-r1748490',view,'ro');
   assert.equal(sectors.length,5);
   assert.deepEqual(sectors.map(x=>shortTreeName(x,'ro')),
-    ['Botanica','Buiucani','Centru','Ciocana','Rîșcani']);
+    ['Botanica','Buiucani','Ciocana','Rîșcani','Centru']);
   assert.equal(ordered('osm-r1699032',view,'ro')[0].id,'osm-r1706978');
   assert.deepEqual(ordered(NISTRIAN_PARENT_ID,view,'ro').map(x=>x.id),
     NISTRIAN_CHILD_ORDER);
  }
  assert.deepEqual(ordered(EAST_STAT_PARENT_ID,'all','ro').map(x=>x.id),
-   ['osm-r2607033','osm-r9581354']);
+   ['osm-r9581354','osm-r2607033']);
  for(const id of ['stat-MD111','stat-MD112','stat-MD113','osm-r1699032']){
    assert.equal(byId.get(id).treeParentId,WEST_STAT_PARENT_ID);
  }

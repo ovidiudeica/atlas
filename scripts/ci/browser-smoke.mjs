@@ -156,17 +156,17 @@ async function desktop(cdp){
     if(view==='all'){
       await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .node-name')).some(x=>x.textContent.trim()==='West')",'West statistical node available');
       await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
-      // WEB-R3.16: verify the five direct West children without moving them
+      // WEB-R3.17: verify the five direct West children in ascending MD111–MD115
       // in the canonical tree. Chișinău comes before NTS3 regions.
       const westExpr=desktopRow('West','NTS 2');
       const westChildren=await desktopChildren(westExpr);
       assert.deepEqual(westChildren.map(x=>x.name),
-        ['Chișinău','North','Centre','South','Gagauzia'],
-        'West children: Chișinău first, all others retain their relative order');
+        ['North','Centre','South','Gagauzia','Chișinău'],
+        'West NTS3 siblings follow statistical MD111–MD115');
       assert.deepEqual(westChildren.map(x=>x.level),
-        ['ADM 4 · NTS 3','NTS 3','NTS 3','NTS 3','ADM 4 · NTS 3']);
+        ['NTS 3','NTS 3','NTS 3','ADM 4 · NTS 3','ADM 4 · NTS 3']);
       await p.eval(westExpr+".scrollIntoView({block:'center'})");
-      await p.snap('desktop-west-chisinau-first-en.png');
+      await p.snap('desktop-west-codes-md111-md115-en.png');
     }
     for(const parentName of ['Gagauzia','Chișinău']){
       const root=desktopRow(parentName,'ADM 4');
@@ -182,8 +182,9 @@ async function desktop(cdp){
           const kids=await desktopChildren(raion);
           assert.equal(kids.length,count,name+' nested ADM8 count '+view);
           assert(kids.every(x=>x.level==='ADM 8'));
-          assert.deepEqual(kids.map(x=>x.name),[...kids.map(x=>x.name)].sort((a,b)=>a.localeCompare(b,'en')),
-            name+' children alphabetically sorted '+view);
+          assert.equal(kids[0].name,name,name+' locality has smallest CUATM in its raion');
+          assert.equal(kids[1].name,({Comrat:'Avdarma','Ceadîr-Lunga':'Baurci','Vulcănești':'Carbalia'})[name],
+            name+' next ADM8 is CUATM-ordered, not alphabetical');
           await p.eval(raion+".scrollIntoView({block:'center'})");
           await p.snap('desktop-gagauzia-'+name.replace(/[^a-z]/gi,'').toLowerCase()+'-nested-en-'+view+'.png');
           await p.eval(raion+".querySelector('.expand-button').click()");
@@ -195,7 +196,7 @@ async function desktop(cdp){
         const city=desktopRow('Chișinău','ADM 8');
         await p.eval(city+".querySelector('.expand-button').click()");
         const sectors=await desktopChildren(city);
-        assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Centru','Ciocana','Rîșcani']);
+        assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Ciocana','Rîșcani','Centru']);
         assert(sectors.every(x=>x.level==='ADM 7'));
         await p.eval(city+".scrollIntoView({block:'center'})");
         await p.snap('desktop-chisinau-sectors-nested-en-'+view+'.png');
@@ -207,13 +208,17 @@ async function desktop(cdp){
       await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   }
-  // WEB-R3.10: the NTS3 regions group ADM4 only in All; each ADM4
-  // already owns its ADM8 children. Check regional seat then local seat.
+  // WEB-R3.17: NTS3 regions group ADM4 only in All. Check each region
+  // and its CUATM-minimum district/locality, not historical seat-first.
   await p.eval("document.querySelector('.tree-sidebar .tree-filters button:first-child').click()");
   await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .node-name')).some(x=>x.textContent.trim()==='West')",'NTS2 West exists');
   await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
-  for(const [region,seat,expected] of [['North','Bălți',12],['Centre','Ialoveni',13],['South','Cimișlia',8]]){
+  for(const [region,seat,expected,firstLocal] of [
+    ['North','Bălți',12,'Elizaveta'],
+    ['Centre','Anenii Noi',13,'Varnița'],
+    ['South','Basarabeasca',8,'Basarabeasca']
+  ]){
     const regionExpr=desktopRow(region,'NTS 3');
     await p.wait("!!("+regionExpr+")",'NTS3 region '+region);
     await p.eval(regionExpr+".querySelector('.expand-button').click()");
@@ -221,14 +226,14 @@ async function desktop(cdp){
       'Region '+region+' ADM4 children');
     const districts=await desktopChildren(regionExpr);
     assert.equal(districts.length,expected);
-    assert.equal(districts[0].name,seat,region+' agency seat first');
+    assert.equal(districts[0].name,seat,region+' smallest district CUATM first');
     assert(districts.every(x=>x.level.startsWith('ADM 4')),region+' children are ADM4');
     const districtExpr=desktopRow(seat,'ADM 4');
     await p.eval(districtExpr+".querySelector('.expand-button').click()");
     await p.wait("(()=>{const x="+districtExpr+";return !!x?.closest('.territory-branch')?.querySelector('.tree-children .territory-branch');})()",
       'ADM8 children shown for '+seat);
     const locals=await desktopChildren(districtExpr);
-    assert.equal(locals[0].name,seat,seat+' locality first');
+    assert.equal(locals[0].name,firstLocal,seat+' first ADM8 by CUATM, even if not seat');
     assert(locals.every(x=>x.level.startsWith('ADM 8')),seat+' children are ADM8');
     await p.eval(districtExpr+".scrollIntoView({block:'center'})");
     await p.snap('desktop-md-'+region.toLowerCase()+'-seats-en.png');
@@ -248,7 +253,7 @@ async function desktop(cdp){
   await p.eval(eastNts3+".querySelector('.expand-button').click()");
   const eastParents=await desktopChildren(eastNts3);
   assert.equal(await p.eval(eastNts3+".querySelector('.node-name').textContent.trim()"),'Transnistria');
-  assert.deepEqual(eastParents.map(x=>x.name),['ATULBD','Bender']);
+  assert.deepEqual(eastParents.map(x=>x.name),['Bender','ATULBD']);
   assert(eastParents.every(x=>x.level==='ADM 4'));
   const benderAdm4=desktopRow('Bender','ADM 4');
   await p.eval(benderAdm4+".querySelector('.expand-button').click()");
@@ -263,8 +268,9 @@ async function desktop(cdp){
   const uatsnChildren=await desktopChildren(uatsnAdm4);
   assert.equal(uatsnChildren.length,79);
   assert(uatsnChildren.every(x=>x.level.startsWith('ADM 8')),'Level tags may also show CUATM for duplicate Hlinaia');
-  const enNames=uatsnChildren.map(x=>x.name);
-  assert.deepEqual(enNames,[...enNames].sort((a,b)=>a.localeCompare(b,'en')),'English alphabetic UATSN');
+  assert.deepEqual(uatsnChildren.slice(0,3).map(x=>x.name),
+    ['Tiraspol','Dnestrovsc','Tiraspolul Nou'],
+    'English UATSN first CUATM 0700–0702');
   await p.eval(uatsnAdm4+".scrollIntoView({block:'center'})");
   await p.snap('desktop-east-uatsn-en.png');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='RO').click()");
@@ -272,16 +278,19 @@ async function desktop(cdp){
   const uatsnRo=desktopRow('UATSN','ADM 4');
   const roKids=await desktopChildren(uatsnRo);
   assert.equal(roKids.length,79);
-  assert.deepEqual(roKids.map(x=>x.name),[...roKids.map(x=>x.name)].sort((a,b)=>a.localeCompare(b,'ro')),
-    'Romanian alphabetic UATSN');
+  assert.deepEqual(roKids.slice(0,3).map(x=>x.name),
+    ['Tiraspol','Dnestrovsc','Tiraspolul Nou'],'Romanian CUATM-ordered UATSN');
   const hlinaia=await p.eval("(()=>{const node="+uatsnRo+";return [...node.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].filter(x=>x.querySelector('.node-name')?.textContent.trim()==='Hlinaia').map(x=>({level:x.querySelector('.node-level')?.textContent.trim(),accessible:x.querySelector('.tree-label')?.getAttribute('aria-label')}));})()");
-  assert.deepEqual(hlinaia.map(x=>x.level),['ADM 8 · CUATM 7625','ADM 8 · CUATM 5029']);
-  assert(hlinaia[0].accessible?.includes('7625')&&hlinaia[1].accessible?.includes('5029'));
-  await p.eval("(()=>{const parent="+uatsnRo+";const rows=[...parent.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')];const first=rows.find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM 7625'));first.scrollIntoView({block:'center'});})()");
-  const visibleHlinaia=await p.eval("(()=>{const r=[...document.querySelectorAll('.tree-sidebar .tree-line')].filter(x=>x.querySelector('.node-level')?.textContent.includes('CUATM '));return r.filter(x=>{const b=x.getBoundingClientRect(),v=document.querySelector('.tree-sidebar').getBoundingClientRect();return b.bottom>=v.top&&b.top<=v.bottom;}).map(x=>x.querySelector('.node-level')?.textContent.trim());})()");
-  assert(visibleHlinaia.includes('ADM 8 · CUATM 7625')&&visibleHlinaia.includes('ADM 8 · CUATM 5029'),
-    'Both CUATM homonym badges must be simultaneously visible in Chromium capture');
-  await p.snap('desktop-east-uatsn-ro-hlinaia.png');
+  assert.deepEqual(hlinaia.map(x=>x.level),['ADM 8 · CUATM 5029','ADM 8 · CUATM 7625']);
+  assert(hlinaia[0].accessible?.includes('5029')&&hlinaia[1].accessible?.includes('7625'));
+  // CUATM 5029 and 7625 are now far apart; capture and verify them
+  // individually rather than imposing their prior alphabetic adjacency.
+  for(const code of ['5029','7625']){
+    await p.eval("(()=>{const parent="+uatsnRo+";const rows=[...parent.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')];const target=rows.find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM "+code+"'));target.scrollIntoView({block:'center'});})()");
+    const visible=await p.eval("(()=>{const x=[...document.querySelectorAll('.tree-sidebar .tree-line')].find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM "+code+"'));const b=x.getBoundingClientRect(),v=document.querySelector('.tree-sidebar').getBoundingClientRect();return b.bottom>=v.top&&b.top<=v.bottom;})()");
+    assert(visible,'CUATM '+code+' Hlinaia is visible independently');
+    await p.snap('desktop-east-uatsn-ro-hlinaia-cuatm-'+code+'.png');
+  }
   await p.eval(uatsnRo+".querySelector('.expand-button').click()");
   const ntsRo=desktopRow('Transnistria','NTS 3');
   await p.eval(ntsRo+".querySelector('.expand-button').click()");
@@ -730,11 +739,11 @@ async function mobile(cdp){
   await p.eval(drawerLine(westernLocale)+".querySelector('.expand-button').click()");
   const westMobileChildren=await p.eval("(()=>{const x="+drawerLine(westernLocale)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>x.querySelector('.node-name')?.textContent.trim());})()");
   assert.deepEqual(westMobileChildren,await p.eval("document.documentElement.lang==='ro'")?
-    ['Chișinău','Nord','Centru','Sud','Găgăuzia']:
-    ['Chișinău','North','Centre','South','Gagauzia'],
-    'Mobile West children start with Chișinău in either locale');
+    ['Nord','Centru','Sud','Găgăuzia','Chișinău']:
+    ['North','Centre','South','Gagauzia','Chișinău'],
+    'Mobile West follows statistical MD111–MD115');
   await p.eval(drawerLine(westernLocale)+".scrollIntoView({block:'start'})");
-  await p.snap('mobile-west-chisinau-first.png');
+  await p.snap('mobile-west-codes-md111-md115.png');
   await p.wait("!!("+drawerLine(regionalLocale)+")",'mobile northern statistical region');
   await p.eval(drawerLine(regionalLocale)+".querySelector('.expand-button').click()");
   const firstNorthern=await p.eval("(()=>{const x="+drawerLine(regionalLocale)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')].map(x=>x.textContent.trim());})()");
@@ -745,7 +754,7 @@ async function mobile(cdp){
   await p.wait("(()=>{const x="+baltiDistrict+";return !!x?.closest('.territory-branch')?.querySelector('.tree-children .territory-branch');})()",
     'Mobile Bălți ADM8 expanded');
   const mobileBaltiFirst=await p.eval("(()=>{const x="+baltiDistrict+";return x.closest('.territory-branch').querySelector(':scope > .tree-children > .territory-branch > .tree-line .node-name')?.textContent.trim();})()");
-  assert.equal(mobileBaltiFirst,'Bălți','Mobile seat locality first');
+  assert.equal(mobileBaltiFirst,'Elizaveta','Mobile Bălți ADM8 code 0301 first; uncoded city follows');
   await p.eval(baltiDistrict+".scrollIntoView({block:'center'})");
   await p.snap('mobile-md-north-balti-nested.png');
   await p.eval(baltiDistrict+".querySelector('.expand-button').click()");
@@ -762,15 +771,17 @@ async function mobile(cdp){
   await p.eval(eastDrawerRow('Est','NTS 2')+".querySelector('.expand-button').click()");
   await p.eval(eastDrawerRow('Transnistria','NTS 3')+".querySelector('.expand-button').click()");
   const mobileEastOrder=await p.eval("(()=>{const x="+eastDrawerRow('Transnistria','NTS 3')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>x.querySelector('.node-name')?.textContent.trim());})()");
-  assert.deepEqual(mobileEastOrder,['UATSN','Bender']);
+  assert.deepEqual(mobileEastOrder,['Bender','UATSN']);
   await p.eval(eastDrawerRow('UATSN','ADM 4')+".querySelector('.expand-button').click()");
   const mobileEastKids=await p.eval("(()=>{const x="+eastDrawerRow('UATSN','ADM 4')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
   assert.equal(mobileEastKids.length,79);
-  assert.deepEqual(mobileEastKids.map(x=>x.name),[...mobileEastKids.map(x=>x.name)].sort((a,b)=>a.localeCompare(b,'ro')));
+  assert.deepEqual(mobileEastKids.slice(0,3).map(x=>x.name),['Tiraspol','Dnestrovsc','Tiraspolul Nou']);
   assert.deepEqual(mobileEastKids.filter(x=>x.name==='Hlinaia').map(x=>x.level),
-    ['ADM 8 · CUATM 7625','ADM 8 · CUATM 5029']);
-  await p.eval("(()=>{const x="+eastDrawerRow('UATSN','ADM 4')+";const rows=[...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')];rows.find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM 7625')).scrollIntoView({block:'center'});})()");
-  await p.snap('mobile-east-uatsn-hlinaia-ro.png');
+    ['ADM 8 · CUATM 5029','ADM 8 · CUATM 7625']);
+  for(const code of ['5029','7625']){
+    await p.eval("(()=>{const x="+eastDrawerRow('UATSN','ADM 4')+";const rows=[...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')];rows.find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM "+code+"')).scrollIntoView({block:'center'});})()");
+    await p.snap('mobile-east-uatsn-hlinaia-cuatm-'+code+'-ro.png');
+  }
   await p.eval(eastDrawerRow('UATSN','ADM 4')+".querySelector('.expand-button').click()");
   await p.eval(eastDrawerRow('Transnistria','NTS 3')+".querySelector('.expand-button').click()");
   await p.eval(eastDrawerRow('Est','NTS 2')+".querySelector('.expand-button').click()");
@@ -896,7 +907,7 @@ async function mobile(cdp){
       const city=mobileRow('Chișinău','ADM 8');
       await p.eval(city+".querySelector('.expand-button').click()");
       const sectors=await mobileChildren(city);
-      assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Centru','Ciocana','Rîșcani']);
+      assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Ciocana','Rîșcani','Centru']);
       assert(sectors.every(x=>x.level==='ADM 7'));
       await p.eval(city+".scrollIntoView({block:'start'})");
       await p.snap('mobile-chisinau-city-sectors-nested-ro.png');
