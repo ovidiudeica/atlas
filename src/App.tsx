@@ -3,8 +3,8 @@ import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibr
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
-  matchingOsmLevelIds, matchingStatisticalLevelIds, levelVisibilityState,
-  updateOsmLevelVisibility } from './data/osmLevelFilter.mjs';
+  matchingCombinedLevelIds, matchingOsmLevelIds, matchingStatisticalLevelIds } from './data/osmLevelFilter.mjs';
+import { REFERENCE_STYLE, administrativeStyle, statisticalStyle, styleForEntity } from './data/cartographicStyle.mjs';
 import { buildPermalink, clearGeometryPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
   type ExportScope } from './data/phase5.mjs';
 import {
@@ -73,7 +73,8 @@ const WORDS = {
     mapTools: 'Map tools', mapSettings: 'Map display settings',
     geometryActions: 'Geometry actions', mapInformation: 'Information & legend',
     entityExport: 'Export this entity', displaySource: 'Source and legal status',
-    mapLoading: 'Loading map geometry…'
+    mapLoading: 'Loading map geometry…', referenceOutline: 'Reference outlines',
+    referenceCountries: 'Romania and Republic of Moldova'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -121,7 +122,8 @@ const WORDS = {
     mapTools: 'Instrumente hartă', mapSettings: 'Setări hartă',
     geometryActions: 'Acțiuni geometrii', mapInformation: 'Informații și legendă',
     entityExport: 'Exportă entitatea', displaySource: 'Sursa și statutul juridic',
-    mapLoading: 'Se încarcă geometriile hărții…'
+    mapLoading: 'Se încarcă geometriile hărții…', referenceOutline: 'Contururi de referință',
+    referenceCountries: 'România și Republica Moldova'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -196,7 +198,10 @@ export default function App() {
   const [catalog,setCatalog] = useState<Territory[]>([]);
   const [catalogError,setCatalogError] = useState<string | null>(null);
   const [selected,setSelected] = useState<string | null>(SHARED_STATE.entity);
+  // Tree checks are independent from additional level-filter selections.
   const [visible,setVisible] = useState<string[]>(restoreVisible);
+  const [adminFilters,setAdminFilters] = useState<number[]>([]);
+  const [statFilters,setStatFilters] = useState<string[]>([]);
   const [expanded,setExpanded] = useState<string[]>([]);
   const [search,setSearch] = useState('');
   const [treeView,setTreeView] = useState<TreeView>(SHARED_STATE.view || 'all');
@@ -228,6 +233,15 @@ export default function App() {
     availableOsmLevels(osmLevelIndex,allLevelScopes),[osmLevelIndex,allLevelScopes]);
   const statisticalLevelOptions = useMemo(()=>
     availableStatisticalLevels(osmLevelIndex,allLevelScopes),[osmLevelIndex,allLevelScopes]);
+  const filterIds=useMemo(()=>matchingCombinedLevelIds(
+    osmLevelIndex,allLevelScopes,adminFilters,statFilters),
+    [osmLevelIndex,allLevelScopes,adminFilters,statFilters]);
+  // Deduplicate geometries displayed by both the tree and active filters.
+  const mapVisible=useMemo(()=>[...new Set([...visible,...filterIds])],[visible,filterIds]);
+  const mapVisibleSet=useMemo(()=>new Set(mapVisible),[mapVisible]);
+  const rootStyles=useMemo(()=>new Map(ROOT_IDS.map(id=>[
+    id,nodes.has(id)?styleForEntity(nodes.get(id)!,adminFilters,statFilters,true):REFERENCE_STYLE
+  ])),[nodes,adminFilters,statFilters]);
   const hierarchy = useMemo(()=>createHierarchy(catalog,treeView),[catalog,treeView]);
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
@@ -378,19 +392,29 @@ export default function App() {
     instance.addControl(new maplibregl.ScaleControl({maxWidth:100,unit:'metric'}),'bottom-left');
     instance.on('load',()=>{
       instance.addSource('borders',{type:'geojson',data:getCountryGeoJSON('simplified')});
-      instance.addLayer({id:'country-fill',type:'fill',source:'borders',paint:{'fill-color':'#dce9dd','fill-opacity':0.31},filter:['in',['get','id'],['literal',['ro','md']]]});
-      instance.addLayer({id:'country-outline',type:'line',source:'borders',paint:{'line-color':'#185440','line-width':2.3},filter:['in',['get','id'],['literal',['ro','md']]]});
+      instance.addLayer({id:'country-fill',type:'fill',source:'borders',
+        paint:{'fill-color':'#ffffff','fill-opacity':0},filter:['in',['get','id'],['literal',['ro','md']]]});
+      instance.addLayer({id:'country-outline',type:'line',source:'borders',
+        paint:{'line-color':REFERENCE_STYLE.color,'line-width':REFERENCE_STYLE.width},
+        filter:['in',['get','id'],['literal',['ro','md']]]});
+      instance.addLayer({id:'country-admin-outline',type:'line',source:'borders',
+        paint:{'line-color':administrativeStyle(2).color,'line-width':administrativeStyle(2).width},
+        filter:['in',['get','id'],['literal',[]]]});
+      instance.addLayer({id:'country-stat-outline',type:'line',source:'borders',
+        paint:{'line-color':statisticalStyle('NUTS_MOLDOVA',1).color,
+          'line-width':statisticalStyle('NUTS_MOLDOVA',1).width,'line-dasharray':[3,2]},
+        filter:['in',['get','id'],['literal',[]]]});
       instance.addLayer({id:'country-highlight',type:'line',source:'borders',paint:{'line-color':'#e6a636','line-width':3.8},filter:['==',['get','id'],'__none__']});
       instance.addSource('entities',{type:'geojson',data:EMPTY_FEATURES});
-      instance.addLayer({id:'entity-fill',type:'fill',source:'entities',paint:{
-        'fill-color':['case',['==',['get','roleKind'],'statistical'],'#a6a6e6','#6ea983'],
-        'fill-opacity':['case',['==',['get','roleKind'],'statistical'],0.32,0.25]
-      }});
-      instance.addLayer({id:'entity-outline',type:'line',source:'entities',paint:{
-        'line-color':['case',['==',['get','roleKind'],'statistical'],'#7066b3','#15533e'],
-        'line-width':['case',['==',['get','roleKind'],'statistical'],1.8,1.6],
-        'line-opacity':0.94
-      }});
+      instance.addLayer({id:'entity-fill',type:'fill',source:'entities',
+        paint:{'fill-color':['get','atlasFill'],'fill-opacity':['get','atlasFillOpacity']}});
+      instance.addLayer({id:'entity-outline',type:'line',source:'entities',
+        filter:['!=',['get','atlasStyleKind'],'statistical'],
+        paint:{'line-color':['get','atlasStroke'],'line-width':['get','atlasStrokeWidth'],'line-opacity':0.94}});
+      instance.addLayer({id:'entity-stat-outline',type:'line',source:'entities',
+        filter:['==',['get','atlasStyleKind'],'statistical'],
+        paint:{'line-color':['get','atlasStroke'],'line-width':['get','atlasStrokeWidth'],
+          'line-opacity':0.94,'line-dasharray':[3,2]}});
       instance.addLayer({id:'entity-hover',type:'line',source:'entities',paint:{'line-color':'#1d7e65','line-width':3},filter:['==',['get','atlasId'],'__none__']});
       instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
       instance.on('mousemove','entity-fill',event=>{
@@ -408,7 +432,8 @@ export default function App() {
           else if(window.innerWidth<1100)setModulePanelOpen(false);
         }
       });
-      instance.on('click','entity-outline',event=>{
+      for(const boundaryLayer of ['entity-outline','entity-stat-outline'])
+        instance.on('click',boundaryLayer,event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setDetailPanelOpen(true);
@@ -425,7 +450,7 @@ export default function App() {
           else if(window.innerWidth<1100)setModulePanelOpen(false);
         }
       });
-      for(const layer of ['country-fill','entity-fill','entity-outline']) {
+      for(const layer of ['country-fill','entity-fill','entity-outline','entity-stat-outline']) {
         instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
         instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
       }
@@ -438,11 +463,25 @@ export default function App() {
   useEffect(()=>{
     if(!ready||!mapRef.current)return;
     const map=mapRef.current;
-    const roots=visible.filter(id=>ROOT_IDS.includes(id as typeof ROOT_IDS[number])).map(featureCountryCode);
-    const filter: maplibregl.FilterSpecification=['in',['get','id'],['literal',roots]];
-    map.setFilter('country-fill',filter);
-    map.setFilter('country-outline',filter);
-  },[visible,ready]);
+    const groups={reference:[] as string[],administrative:[] as string[],statistical:[] as string[]};
+    for(const id of ROOT_IDS){
+      if(!mapVisibleSet.has(id))continue;
+      const kind=rootStyles.get(id)?.kind ?? 'reference';
+      groups[kind].push(featureCountryCode(id));
+    }
+    const byCountry=(codes:string[]):maplibregl.FilterSpecification=>
+      ['in',['get','id'],['literal',codes]];
+    map.setFilter('country-fill',byCountry(ROOT_IDS.filter(id=>mapVisibleSet.has(id)).map(featureCountryCode)));
+    map.setFilter('country-outline',byCountry(groups.reference));
+    map.setFilter('country-admin-outline',byCountry(groups.administrative));
+    map.setFilter('country-stat-outline',byCountry(groups.statistical));
+    const colors=ROOT_IDS.map(id=>rootStyles.get(id)?.fill||REFERENCE_STYLE.fill);
+    const opacity=ROOT_IDS.map(id=>rootStyles.get(id)?.opacity??0);
+    map.setPaintProperty('country-fill','fill-color',
+      ['match',['get','id'],'ro',colors[0],'md',colors[1],'#ffffff']);
+    map.setPaintProperty('country-fill','fill-opacity',
+      ['match',['get','id'],'ro',opacity[0],'md',opacity[1],0]);
+  },[mapVisibleSet,rootStyles,ready]);
   useEffect(()=>{
     if(!ready||!mapRef.current)return;
     const map=mapRef.current;
@@ -466,7 +505,7 @@ export default function App() {
   useEffect(()=>{
     if(!ready||!catalog.length||!mapRef.current)return;
     let active=true;
-    const ids=visible.filter(id=>nodes.has(id) && !ROOT_IDS.includes(id as typeof ROOT_IDS[number]));
+    const ids=mapVisible.filter(id=>nodes.has(id) && !ROOT_IDS.includes(id as typeof ROOT_IDS[number]));
     const shards=[...new Set(ids.map(id=>nodes.get(id)!.geometryShard))];
     if(!shards.length){
       const source=mapRef.current.getSource('entities') as GeoJSONSource | undefined;
@@ -480,11 +519,19 @@ export default function App() {
       for(const collection of collections)for(const [id,feature] of collection)features.set(id,feature);
       loadedRef.current=features;
       const source=mapRef.current.getSource('entities') as GeoJSONSource | undefined;
-      source?.setData(asDisplayFeatures(ids,nodes,features));
+      const displayed=asDisplayFeatures(ids,nodes,features);
+      for(const feature of displayed.features){
+        const node=nodes.get(String(feature.properties?.atlasId));
+        if(!node)continue;
+        const chart=styleForEntity(node,adminFilters,statFilters);
+        feature.properties={...feature.properties,atlasStroke:chart.color,atlasFill:chart.fill,
+          atlasFillOpacity:chart.opacity,atlasStrokeWidth:chart.width,atlasStyleKind:chart.kind};
+      }
+      source?.setData(displayed);
       setGeomLoading(false);
     }).catch(()=>{if(active){setGeomLoading(false);setGeomError(true);}});
     return ()=>{active=false;};
-  },[catalog.length,mode,nodes,ready,visible]);
+  },[catalog.length,mode,nodes,ready,mapVisible,adminFilters,statFilters]);
 
   useEffect(()=>{
     if(!ready||!mapRef.current)return;
@@ -527,6 +574,8 @@ export default function App() {
     navigationEpoch.current++; // Cancel stale asynchronous camera movements.
     setNavBusy(false);
     setVisible([...DEFAULT_VISIBLE]);
+    setAdminFilters([]);
+    setStatFilters([]);
     setSelected(null);
     setDetailPanelOpen(false);
     setExpanded([]);
@@ -544,7 +593,7 @@ export default function App() {
   };
   async function fitVisible(){
     const groups=new Map<string,string[]>();
-    for(const id of visible){
+    for(const id of mapVisible){
       const node=nodes.get(id);if(!node)continue;
       const list=groups.get(node.geometryShard)||[];list.push(id);groups.set(node.geometryShard,list);
     }
@@ -579,7 +628,7 @@ export default function App() {
   }
   async function performExport(format:'geojson'|'csv',scope:ExportScope=exportScope){
     if(exportBusy)return;
-    const ids=idsForScope(scope,selected,visible,new Set(nodes.keys()));
+    const ids=idsForScope(scope,selected,mapVisible,new Set(nodes.keys()));
     if(!ids.length)return;
     setExportBusy(true);setExportProgress(t.exportBusy);
     try{
@@ -684,14 +733,14 @@ export default function App() {
           <fieldset className="osm-level-choices" data-column="administrative">
             <legend>{t.adminView}</legend>
             {levelOptions.map(option=>{
-              const ids=matchingOsmLevelIds(osmLevelIndex,allLevelScopes,[option.level]);
-              const state=levelVisibilityState(visibleSet,ids);
-              return <label key={'adm-'+option.level} data-level-kind="administrative">
-                <input type="checkbox" checked={state.checked} aria-checked={state.mixed?'mixed':state.checked}
-                  ref={el=>{if(el)el.indeterminate=state.mixed;}}
+              const chart=administrativeStyle(option.level);
+              return <label key={'adm-'+option.level} data-level-kind="administrative"
+                data-line-color={chart.color}>
+                <input type="checkbox" checked={adminFilters.includes(option.level)}
                   aria-label={'OSM '+option.level}
-                  onChange={event=>setVisible(old=>updateOsmLevelVisibility(old,ids,event.target.checked))}/>
-                <span>ADM {option.level}</span>
+                  onChange={event=>setAdminFilters(old=>event.target.checked?
+                    [...new Set([...old,option.level])]:old.filter(x=>x!==option.level))}/>
+                <span style={{color:chart.color}}>ADM {option.level}</span>
                 <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
               </label>;
             })}
@@ -699,14 +748,13 @@ export default function App() {
           <fieldset className="osm-level-choices" data-column="statistical">
             <legend>{t.statView}</legend>
             {statisticalLevelOptions.map(option=>{
-              const ids=matchingStatisticalLevelIds(osmLevelIndex,allLevelScopes,[option.key]);
-              const state=levelVisibilityState(visibleSet,ids);
-              return <label key={option.key} data-level-kind="statistical">
-                <input type="checkbox" checked={state.checked} aria-checked={state.mixed?'mixed':state.checked}
-                  ref={el=>{if(el)el.indeterminate=state.mixed;}}
+              const chart=statisticalStyle(option.classification,option.level);
+              return <label key={option.key} data-level-kind="statistical" data-line-color={chart.color}>
+                <input type="checkbox" checked={statFilters.includes(option.key)}
                   aria-label={(option.classification==='NUTS_MOLDOVA'?'NTS':option.classification)+' '+option.level}
-                  onChange={event=>setVisible(old=>updateOsmLevelVisibility(old,ids,event.target.checked))}/>
-                <span>{option.classification==='NUTS_MOLDOVA'?'NTS':option.classification} {option.level}</span>
+                  onChange={event=>setStatFilters(old=>event.target.checked?
+                    [...new Set([...old,option.key])]:old.filter(x=>x!==option.key))}/>
+                <span style={{color:chart.color}}>{chart.key}</span>
                 <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
               </label>;
             })}
@@ -750,7 +798,7 @@ export default function App() {
         <details className="atlas-tool-section atlas-geometry-actions">
           <summary>{t.geometryActions}</summary>
           <div className="atlas-tool-body">
-            <button type="button" disabled={!visible.length||navBusy}
+            <button type="button" disabled={!mapVisible.length||navBusy}
               onClick={()=>void fitVisible()}>{navBusy?t.navigationLoading:t.fitVisible}</button>
             <button type="button" className="reset-geometries" onClick={resetGeometries}
               aria-label={t.resetGeometries} title={t.resetGeometries}>{t.resetGeometries}</button>
@@ -764,14 +812,14 @@ export default function App() {
           {exportOpen&&<section id="phase5-export-panel" className="export-panel" aria-label={t.exportTitle}>
             <label className="export-scope">{t.exportScope}
               <select value={exportScope} onChange={e=>setExportScope(e.target.value as ExportScope)}>
-                <option value="visible">{t.exportVisible} ({visible.filter(id=>nodes.has(id)).length})</option>
+                <option value="visible">{t.exportVisible} ({mapVisible.filter(id=>nodes.has(id)).length})</option>
                 <option value="selected" disabled={!currentNode}>{t.exportSelected}</option>
               </select>
             </label>
             <div className="export-buttons">
-              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
+              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,mapVisible,new Set(nodes.keys())).length}
                 onClick={()=>void performExport('geojson')}>{t.exportGeoJSON}</button>
-              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,visible,new Set(nodes.keys())).length}
+              <button type="button" disabled={exportBusy||!idsForScope(exportScope,selected,mapVisible,new Set(nodes.keys())).length}
                 onClick={()=>void performExport('csv')}>{t.exportCSV}</button>
               <button type="button" className="secondary" onClick={()=>void copyPermalink()}>{t.copyLink}</button>
             </div>
@@ -799,7 +847,7 @@ export default function App() {
       </div>
     </details>
     <div className="tree-footnote"><strong>{catalog.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.entityCount}</strong>
-      <span> · {visible.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.selectedCount}</span>
+      <span> · {mapVisible.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.selectedCount}</span>
       <p>{t.description}</p>
     </div>
   </section>;
@@ -910,7 +958,10 @@ export default function App() {
             <p className="planned-module-description">{t.planned}</p>
           </section>}
       </aside>}
-      <main className="map-area" data-map-ready={ready&&rootsLoaded?'true':'false'} onPointerDown={event=>{
+      <main className="map-area" data-map-ready={ready&&rootsLoaded?'true':'false'}
+        data-map-visible-count={mapVisible.length}
+        data-ro-style={rootStyles.get(ROOT_IDS[0])?.key}
+        data-md-style={rootStyles.get(ROOT_IDS[1])?.key} onPointerDown={event=>{
         if(event.target instanceof Element && event.target.closest('.maplibregl-canvas-container'))closeModulePanel();
       }}>
         <div className="map-canvas" ref={mapEl} aria-label="Territorial map" />
