@@ -239,9 +239,9 @@ export default function App() {
   // Deduplicate geometries displayed by both the tree and active filters.
   const mapVisible=useMemo(()=>[...new Set([...visible,...filterIds])],[visible,filterIds]);
   const mapVisibleSet=useMemo(()=>new Set(mapVisible),[mapVisible]);
-  const rootStyles=useMemo(()=>new Map(ROOT_IDS.map(id=>[
+  const rootStyles=useMemo(()=>new Map(ROOT_IDS.map(id=>([
     id,nodes.has(id)?styleForEntity(nodes.get(id)!,adminFilters,statFilters,true):REFERENCE_STYLE
-  ])),[nodes,adminFilters,statFilters]);
+  ] as const))),[nodes,adminFilters,statFilters]);
   const hierarchy = useMemo(()=>createHierarchy(catalog,treeView),[catalog,treeView]);
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
