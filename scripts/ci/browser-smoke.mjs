@@ -1187,6 +1187,161 @@ async function cardUxAccessibility(cdp){
   await many.close();
 }
 
+/* WEB-R4.3 — integrated release acceptance. The prior WEB-R4.1 and WEB-R4.2
+ * suites remain mandatory; this pass verifies their shared contracts in the
+ * rendered DOM, including measured computed contrast in RO/EN and 3 viewports.
+ */
+async function finalCardAcceptance(cdp){
+  const url=(id,lang)=>site+'?lang='+lang+'&entity='+id;
+  const contrastSource=`(function(){
+    function luminance(color){
+      const values=(color.match(/[0-9.]+/g)||[]).slice(0,3).map(v=>Number(v)/255);
+      if(values.length!==3)throw Error('Unrecognized color: '+color);
+      const [r,g,b]=values.map(x=>x<=0.04045?x/12.92:((x+0.055)/1.055)**2.4);
+      return 0.2126*r+0.7152*g+0.0722*b;
+    }
+    return (a,b)=>{
+      const x=luminance(a),y=luminance(b);
+      return (Math.max(x,y)+0.05)/(Math.min(x,y)+0.05);
+    };
+  })()`;
+  const desktop=await cdp.page(1440,900,false,url('osm-r377733','ro'));
+  await desktop.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'WEB-R4.3 RO desktop ready');
+  await desktop.wait("!!document.querySelector('.detail-sidebar .entity-statistical-roles small')",
+    'WEB-R4.3 București role metadata');
+  const metrics=await desktop.eval(`(()=>{
+    const card=document.querySelector('.detail-sidebar .entity-card');
+    const colors=${contrastSource};
+    const child=card.querySelector('.entity-child-link>small');
+    const statistics=card.querySelector('.entity-statistical-roles small');
+    const h=card.querySelector('.entity-title h3');
+    h.focus();
+    const cs=getComputedStyle;
+    const fg=e=>cs(e).color,bg=e=>cs(e).backgroundColor;
+    const textRatio1=colors(fg(child),bg(child.closest('.entity-child-link')));
+    const textRatio2=colors(fg(statistics),bg(statistics.closest('li')));
+    const ringRatio=colors(cs(h).outlineColor,'rgb(255,255,255)');
+    const blankButtons=[...card.querySelectorAll('button:not([disabled])')]
+      .filter(e=>e.getClientRects().length>0 &&
+        !e.getAttribute('aria-label')&&!e.getAttribute('title')&&!e.textContent.trim())
+      .map(e=>e.outerHTML.slice(0,130));
+    return {
+      heading:h.textContent.trim(),
+      sections:[...card.querySelectorAll('.entity-card-section[aria-label]')].map(x=>x.getAttribute('aria-label')),
+      admin:[...card.querySelectorAll('.entity-admin-role-primary strong')].map(x=>x.textContent.trim()),
+      stat:[...card.querySelectorAll('.entity-statistical-primary strong')].map(x=>x.textContent.trim()),
+      childCount:card.querySelectorAll('.entity-child-link').length,
+      blankButtons, textRatio1,textRatio2,ringRatio,
+      original:card.querySelector('.entity-card-section--records')?.open,
+      sourceLink:!!card.querySelector('a[href*="openstreetmap.org/relation/377733"]'),
+      current:[...card.querySelectorAll('.entity-breadcrumbs button[aria-current=location]')].length,
+      viewport:innerWidth,scroll:document.documentElement.scrollWidth,
+      visible:document.querySelector('.map-area').dataset.mapVisibleCount
+    };
+  })()`);
+  assert.equal(metrics.heading,'București');
+  assert.deepEqual(metrics.admin,['ADM 4','ADM 8']);
+  assert.deepEqual(metrics.stat,['NUTS 3']);
+  assert.equal(metrics.childCount,6);
+  assert(metrics.sourceLink&&metrics.current===1);
+  assert.equal(metrics.original,false,'Original records collapsed by default');
+  assert.deepEqual(metrics.blankButtons,[],'Every visible card button has an accessible name');
+  assert(metrics.sections.includes('Identitate')&&metrics.sections.includes('Geometrie și proveniență'));
+  assert(metrics.textRatio1>=4.5&&metrics.textRatio2>=4.5,'WCAG AA rendered secondary-label contrast: '+JSON.stringify(metrics));
+  assert(metrics.ringRatio>=3,'Focus indicator non-text contrast: '+metrics.ringRatio);
+  assert(metrics.scroll<=metrics.viewport+1,'Desktop no horizontal overflow');
+  await desktop.snap('desktop-web-r43-final-bucharest-aa.png');
+  await desktop.eval("document.querySelector('.detail-sidebar .entity-actions button:first-child').click()");
+  await desktop.wait("Number(document.querySelector('.map-area').dataset.mapVisibleCount)==="+(Number(metrics.visible)+1),
+    'Show selected geometry from card');
+  await desktop.eval("document.querySelector('.detail-sidebar .entity-actions button:first-child').click()");
+  await desktop.wait("Number(document.querySelector('.map-area').dataset.mapVisibleCount)==="+Number(metrics.visible),
+    'Hide selected geometry without resetting card');
+  const cardAfterToggle=await desktop.eval("document.querySelector('.detail-sidebar .entity-title h3')?.textContent.trim()");
+  assert.equal(cardAfterToggle,'București','Card remains selected when geometry toggles');
+  await desktop.eval("document.querySelector('.detail-sidebar .atlas-detail-export>summary').click()");
+  assert.equal(await desktop.eval("document.querySelectorAll('.detail-sidebar .atlas-detail-export-actions button').length"),3,
+    'GeoJSON, CSV and permalink remain accessible');
+  await desktop.snap('desktop-web-r43-final-actions.png');
+  await desktop.close();
+
+  const checks=[
+    {id:'osm-r58974',lang:'en',stat:'NTS 1',admin:'ADM 2',tag:'moldova-en'},
+    {id:'osm-r1691801',lang:'en',stat:'NTS 3',admin:'ADM 4',tag:'chisinau-en'},
+    {id:'osm-r1699032',lang:'en',stat:'NTS 3',admin:'ADM 4',tag:'gagauzia-en'},
+    {id:'stat-MD120',lang:'ro',stat:'NTS 3',admin:null,tag:'transnistria-ro'}
+  ];
+  for(const c of checks){
+    const p=await cdp.page(1440,900,false,url(c.id,c.lang));
+    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+      'WEB-R4.3 '+c.tag+' geometry');
+    await p.wait("!!document.querySelector('.detail-sidebar .entity-card')",
+      'WEB-R4.3 '+c.tag+' card');
+    const v=await p.eval(`(()=>{
+      const e=document.querySelector('.detail-sidebar .entity-card');
+      return {
+        lang:document.documentElement.lang,
+        stat:[...e.querySelectorAll('.entity-statistical-primary strong')].map(x=>x.textContent.trim()),
+        admin:[...e.querySelectorAll('.entity-admin-role-primary strong')].map(x=>x.textContent.trim()),
+        source:e.textContent.includes('NUTS_MOLDOVA'),
+        overflow:document.documentElement.scrollWidth>innerWidth+1,
+        name:e.querySelector('.entity-title h3')?.textContent.trim()
+      };
+    })()`);
+    assert.equal(v.lang,c.lang,c.tag+' language');
+    assert(v.name.length>0&&!v.source&&!v.overflow,c.tag+' locale and responsive source formatting');
+    assert(v.stat.includes(c.stat),c.tag+' statistical role');
+    if(c.admin)assert(v.admin.includes(c.admin),c.tag+' administrative role');
+    else assert.equal(v.admin.length,0,c.tag+' no invented administrative role');
+    await p.snap('desktop-web-r43-final-'+c.tag+'.png');
+    await p.close();
+  }
+
+  const tablet=await cdp.page(900,800,false,url('osm-r1748490','en'));
+  await tablet.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'WEB-R4.3 tablet ready');
+  await tablet.wait("!!document.querySelector('.detail-sidebar .entity-card')",
+    'WEB-R4.3 tablet city details');
+  const t=await tablet.eval(`(()=>{
+    const panel=document.querySelector('.detail-sidebar');
+    return {width:innerWidth,scroll:document.documentElement.scrollWidth,
+      name:panel.getAttribute('aria-label'),level:panel.querySelector('.entity-admin-role-primary strong')?.textContent.trim(),
+      close:panel.querySelector('.pane-toolbar .pane-close')?.getBoundingClientRect().width};
+  })()`);
+  assert(t.name&&t.level==='ADM 8'&&t.close>=44&&t.scroll<=t.width+1,
+    'Tablet city details are accessible without horizontal overflow');
+  await tablet.snap('tablet-web-r43-final-chisinau-city-en.png');
+  await tablet.close();
+
+  const mobile=await cdp.page(390,844,true,url('osm-r944727','en'));
+  await mobile.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'WEB-R4.3 mobile Bender ready');
+  await mobile.wait("!!document.querySelector('.drawer-detail .entity-card')",
+    'WEB-R4.3 mobile detail');
+  const m=await mobile.eval(`(()=>{
+    const dialog=document.querySelector('.drawer-detail');
+    const card=dialog.querySelector('.entity-card');
+    const rail=document.querySelector('.module-rail').getBoundingClientRect();
+    const box=dialog.getBoundingClientRect();
+    return {lang:document.documentElement.lang,dialogLabel:dialog.getAttribute('aria-label'),
+      modal:dialog.getAttribute('aria-modal'),name:card.querySelector('.entity-title h3')?.textContent.trim(),
+      code:card.innerText.includes('32'),falseCuAtm:card.innerText.includes('CUATM 32'),
+      width:innerWidth,scroll:document.documentElement.scrollWidth,
+      railUncovered:box.bottom<=rail.top+1,
+      close:dialog.querySelector('.drawer-close').getBoundingClientRect().width};
+  })()`);
+  assert(m.lang==='en'&&m.name==='Bender'&&m.modal==='true'&&m.dialogLabel.includes('Bender'));
+  assert(m.code&&!m.falseCuAtm,'PMR seat code is not CUATM');
+  assert(m.railUncovered&&m.close>=44&&m.scroll<=m.width+1,
+    '390px card remains accessible alongside module rail');
+  await mobile.snap('mobile-web-r43-final-bender-en.png');
+  await mobile.eval("document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}))");
+  await mobile.wait("!document.querySelector('.drawer-screen')",'WEB-R4.3 Escape closes mobile details');
+  await mobile.wait("document.activeElement===document.querySelector('.header-entity-action')",
+    'WEB-R4.3 Escape returns keyboard focus');
+  await mobile.close();
+}
 async function narrowMobile(cdp){
   const p=await cdp.page(360,780,true);
   await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
@@ -1275,6 +1430,7 @@ try{
   await narrowMobile(client);
   await roleAwareCards(client);
   await cardUxAccessibility(client);
+  await finalCardAcceptance(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
