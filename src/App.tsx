@@ -42,7 +42,7 @@ const WORDS = {
     all: 'All', adminView: 'Administrative', statView: 'Statistical',
     visible: 'Display geometry', details: 'Entity details', select: 'Select a territory on the map or in the tree.',
     searchResults: 'Search results', searchLimit: 'Showing the first 80 matches. Refine the search for more.',
-    sourceSnapshot: 'OSM-Boundaries · 5 October 2026', sourceNote: 'Original-source geometry; documented OSMB exceptions are retained.',
+    sourceNote: 'Original-source geometry; documented OSMB exceptions are retained.',
     basemap: 'Basemap', standard: 'Standard', grayscale: 'Grayscale', dark: 'Dark', none: 'None',
     simplified: 'Simplified geometries', home: 'Reset map extent', resetGeometries: 'Reset geometries', zoomIn: 'Zoom in', zoomOut: 'Zoom out',
     official: 'Official name', osmId: 'OSM ID', adminLevel: 'OSM administrative level',
@@ -114,7 +114,7 @@ const WORDS = {
     all: 'Toate', adminView: 'Administrativ', statView: 'Statistic',
     visible: 'Afișează geometria', details: 'Detaliile entității', select: 'Selectează un teritoriu pe hartă sau în arbore.',
     searchResults: 'Rezultatele căutării', searchLimit: 'Sunt afișate primele 80 de rezultate. Rafinează căutarea pentru restul.',
-    sourceSnapshot: 'OSM-Boundaries · 5 octombrie 2026', sourceNote: 'Geometrii din sursa originală; excepțiile OSMB documentate sunt păstrate.',
+    sourceNote: 'Geometrii din sursa originală; excepțiile OSMB documentate sunt păstrate.',
     basemap: 'Hartă de fundal', standard: 'Standard', grayscale: 'Tonuri de gri', dark: 'Întunecată', none: 'Fără fundal',
     simplified: 'Geometrii simplificate', home: 'Resetează încadrarea hărții', resetGeometries: 'Resetează geometriile', zoomIn: 'Mărește', zoomOut: 'Micșorează',
     official: 'Denumire oficială', osmId: 'ID OSM', adminLevel: 'Nivel administrativ OSM',
@@ -906,7 +906,7 @@ export default function App() {
   };
 
   const treePanel=<section className="tree-content">
-    <div className="panel-heading"><span className="eyebrow">{t.sourceSnapshot}</span><h2>{t.tree}</h2></div>
+    <div className="panel-heading"><h2>{t.tree}</h2></div>
     <label className="search"><span aria-hidden="true">⌕</span>
       <input ref={searchRef} type="search" placeholder={t.search} aria-label={t.search} value={search}
         onChange={e=>setSearch(e.target.value)}
@@ -981,7 +981,7 @@ export default function App() {
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
   const details=<section className="detail-content">
-    <div className="panel-heading"><span className="eyebrow">{t.sourceSnapshot}</span><h2>{t.details}</h2></div>
+    <div className="panel-heading"><h2>{t.details}</h2></div>
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
         <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>

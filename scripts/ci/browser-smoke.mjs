@@ -1348,6 +1348,68 @@ async function finalCardAcceptance(cdp){
     'WEB-R4.3 Escape returns keyboard focus');
   await mobile.close();
 }
+/* WEB-R4.3a: the OSMB snapshot belongs only to Geometry & Provenance,
+ * never as a duplicated eyebrow above the module or entity card heading.
+ */
+async function sourceHeadingDedup(cdp){
+  for(const lang of ['ro','en']){
+    const p=await cdp.page(1440,900,false,site+'?lang='+lang+'&entity=osm-r377733');
+    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+      'Dedup desktop '+lang+' ready');
+    await p.wait("!!document.querySelector('.detail-sidebar .entity-card')",
+      'Dedup desktop '+lang+' card');
+    // A direct permalink can load with the module panel closed.
+    if(!(await p.eval("!!document.querySelector('.tree-sidebar .tree-content')")))
+      await p.eval("document.querySelector('.module-rail button:first-child').click()");
+    await p.wait("!!document.querySelector('.tree-sidebar .tree-content')",
+      'Dedup desktop '+lang+' module opened');
+    const info=await p.eval(`(()=>{
+      const tree=document.querySelector('.tree-sidebar .tree-content');
+      const card=document.querySelector('.detail-sidebar .detail-content');
+      const provenance=card.querySelector('.entity-card-section--cartographic');
+      return {
+        moduleHeading:tree.querySelector('.panel-heading')?.innerText.trim(),
+        detailHeading:card.querySelector('.panel-heading')?.innerText.trim(),
+        source:provenance?.innerText||'',
+        eyebrowTree:!!tree.querySelector('.panel-heading .eyebrow'),
+        eyebrowDetails:!!card.querySelector('.panel-heading .eyebrow')
+      };
+    })()`);
+    assert(!info.eyebrowTree&&!info.eyebrowDetails,'Snapshot removed from both desktop headings '+lang);
+    assert.equal(info.moduleHeading,lang==='ro'?'Arbore teritorial':'Territorial tree');
+    assert.equal(info.detailHeading,lang==='ro'?'Detaliile entității':'Entity details');
+    assert(info.source.includes('OSM-Boundaries')&&info.source.includes('2026-10-05'),
+      'Actual geometry provenance preserved '+lang);
+    await p.snap('desktop-web-r43a-clean-headings-'+lang+'.png');
+    await p.close();
+  }
+
+  const mobile=await cdp.page(360,780,true,site+'?lang=ro&entity=osm-r377733');
+  await mobile.wait("!!document.querySelector('.drawer-detail .entity-card')",
+    'Dedup 360px card loaded');
+  const detail=await mobile.eval(`(()=>{
+    const drawer=document.querySelector('.drawer-detail');
+    return {heading:drawer.querySelector('.detail-content .panel-heading')?.innerText.trim(),
+      source:drawer.querySelector('.entity-card-section--cartographic')?.innerText||'',
+      eyebrow:!!drawer.querySelector('.detail-content .panel-heading .eyebrow')};
+  })()`);
+  assert.equal(detail.heading,'Detaliile entității');
+  assert(!detail.eyebrow&&detail.source.includes('OSM-Boundaries')&&detail.source.includes('2026-10-05'));
+  await mobile.snap('mobile-web-r43a-clean-details-ro.png');
+  await mobile.eval("document.querySelector('.drawer-detail .drawer-close').click()");
+  await mobile.wait("!document.querySelector('.drawer-screen')",'Dedup close detail');
+  await mobile.eval("document.querySelector('.module-rail button:first-child').click()");
+  await mobile.wait("!!document.querySelector('.drawer .tree-content')",'Dedup mobile module opened');
+  const module=await mobile.eval(`(()=>{
+    const h=document.querySelector('.drawer .tree-content .panel-heading');
+    return {title:h?.innerText.trim(),eyebrow:!!h?.querySelector('.eyebrow')};
+  })()`);
+  assert.equal(module.title,'Arbore teritorial');
+  assert(!module.eyebrow,'No duplicate OSMB snapshot in mobile module');
+  await mobile.snap('mobile-web-r43a-clean-module-ro.png');
+  await mobile.close();
+}
+
 async function narrowMobile(cdp){
   const p=await cdp.page(360,780,true);
   await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
@@ -1437,6 +1499,7 @@ try{
   await roleAwareCards(client);
   await cardUxAccessibility(client);
   await finalCardAcceptance(client);
+  await sourceHeadingDedup(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
