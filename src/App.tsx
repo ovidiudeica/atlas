@@ -270,6 +270,7 @@ export default function App() {
   const navigationEpoch = useRef(0);
   const lastDrawerRef = useRef<Drawer>(null);
   const pendingCardNavigationRef = useRef<string|null>(null);
+  const pendingChildRevealRef = useRef<number|null>(null);
   // Progressive display keeps large administrative branches lightweight.
   const [cardChildrenPage,setCardChildrenPage] = useState<{id:string;count:number}|null>(null);
 
@@ -670,6 +671,17 @@ export default function App() {
     panel?.scrollTo({top:0,behavior:'auto'});
     heading.focus({preventScroll:true});
   },[selected,drawer,detailPanelOpen]);
+  useEffect(()=>{
+    const index=pendingChildRevealRef.current;
+    if(index===null)return;
+    const panel=document.querySelector<HTMLElement>(
+      window.innerWidth<=700?'.drawer-detail':'.detail-sidebar');
+    const first=panel?.querySelector<HTMLButtonElement>(
+      '.entity-child-link[data-child-index="'+index+'"]');
+    if(!first)return;
+    pendingChildRevealRef.current=null;
+    first.focus();
+  },[cardChildrenPage,selected,drawer,detailPanelOpen]);
   function toggleModulePanel(id:ModuleId){
     setToolsOpen(false);
     setToolSection(null);
@@ -1091,9 +1103,10 @@ export default function App() {
       {cardChildren.length>0&&
       <EntityCardSection title={t.cardChildren+' ('+cardChildren.length+')'} kind="children">
         <ul className="entity-child-list" aria-label={t.cardChildren}>
-          {cardChildren.slice(0,cardChildrenShown).map(child=>
+          {cardChildren.slice(0,cardChildrenShown).map((child,index)=>
             <li key={child.id}>
               <button type="button" className="entity-child-link"
+                data-child-index={index}
                 aria-label={t.cardOpenChild+': '+labelOf(child,lang)}
                 onClick={()=>chooseRelated(child.id)}>
                 <span>{labelOf(child,lang)}</span>
@@ -1103,7 +1116,8 @@ export default function App() {
         </ul>
         {cardChildren.length>cardChildrenShown&&
           <button type="button" className="entity-children-more"
-            onClick={()=>setCardChildrenPage({id:currentNode.id,count:cardChildrenShown+12})}>
+            onClick={()=>{pendingChildRevealRef.current=cardChildrenShown;
+              setCardChildrenPage({id:currentNode.id,count:cardChildrenShown+12});}}>
             {t.cardMoreChildren} · {Math.min(cardChildrenShown,cardChildren.length)} / {cardChildren.length}
           </button>}
       </EntityCardSection>}
