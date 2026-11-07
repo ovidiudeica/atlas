@@ -224,9 +224,9 @@ async function desktop(cdp){
         }
       }else{
         assert.equal(direct.length,19,'Chișinău city plus 18 ADM8 localities '+view);
-        assert.deepEqual(direct[0],{name:'Chișinău',level:'ADM 8'});
+        assert.deepEqual(direct[0],{name:'City',level:'ADM 8'});
         assert(direct.slice(1).every(x=>x.level==='ADM 8'));
-        const city=desktopRow('Chișinău','ADM 8');
+        const city=desktopRow('City','ADM 8');
         await p.eval(city+".querySelector('.expand-button').click()");
         const sectors=await desktopChildren(city);
         assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Ciocana','Rîșcani','Centru']);
@@ -949,9 +949,9 @@ async function mobile(cdp){
       await p.eval(raion+".querySelector('.expand-button').click()");
     }else{
       assert.equal(direct.length,19,'City Chișinău and 18 other ADM8 localities');
-      assert.deepEqual(direct[0],{name:'Chișinău',level:'ADM 8'});
+      assert.deepEqual(direct[0],{name:'Oraș',level:'ADM 8'});
       assert(direct.slice(1).every(x=>x.level==='ADM 8'));
-      const city=mobileRow('Chișinău','ADM 8');
+      const city=mobileRow('Oraș','ADM 8');
       await p.eval(city+".querySelector('.expand-button').click()");
       const sectors=await mobileChildren(city);
       assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Ciocana','Rîșcani','Centru']);
