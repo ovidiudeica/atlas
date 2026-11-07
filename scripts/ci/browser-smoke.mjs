@@ -998,7 +998,7 @@ async function roleAwareCards(cdp){
     {id:'osm-r377733',tag:'bucharest',admin:['ADM 4','ADM 8'],stat:['NUTS 3'],must:['179132','SIRUTA 403']},
     {id:'osm-r1691801',tag:'chisinau-municipality',admin:['ADM 4'],stat:['NTS 3'],must:['CUATM 0100']},
     {id:'osm-r1748490',tag:'chisinau-city',admin:['ADM 8'],stat:[],must:['CUATM 0100']},
-    {id:'osm-r1699032',tag:'gagauzia',admin:['ADM 4'],stat:[],must:['CUATM 9600']},
+    {id:'osm-r1699032',tag:'gagauzia',admin:['ADM 4'],stat:['NTS 3'],must:['CUATM 9600','MD114']},
     {id:'osm-r944727',tag:'bender',admin:['ADM 5'],stat:[],must:['32']},
     {id:'stat-MD120',tag:'transnistria-nts',admin:[],stat:['NTS 3']},
     {id:'siruta-u64096',tag:'bretcu-no-osm',admin:['ADM 8'],stat:[]}
