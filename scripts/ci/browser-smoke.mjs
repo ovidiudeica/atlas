@@ -140,6 +140,10 @@ async function desktop(cdp){
   const sectorsRO=await p.eval("(()=>{const x="+roRow('Bucharest')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')].map(x=>x.textContent.trim());})()");
   assert.deepEqual(sectorsRO,['Sector 1','Sector 2','Sector 3','Sector 4','Sector 5','Sector 6'],
     'Bucharest sectors are direct children ordered by SIRUTA');
+  const buchRoles=await p.eval(roRow('Bucharest')+".querySelector('.node-level').textContent.trim()");
+  assert.equal(buchRoles,'NUTS 3 · ADM 4 · ADM 8','Bucharest multirole levels are statistical first');
+  const buchHint=await p.eval(roRow('Bucharest')+".querySelector('.node-level').getAttribute('title')");
+  assert(buchHint?.includes('SIRUTA municipal role'),'Bucharest municipal role is not OSM ADM8');
   await p.eval(roRow('Bucharest')+".scrollIntoView({block:'start'})");
   await p.snap('desktop-romania-bucharest-siruta-en.png');
   for(const name of ['Bucharest','Bucureşti-Ilfov','Macroregiunea Trei','Romania'])
@@ -181,7 +185,7 @@ async function desktop(cdp){
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   }
   // WEB-R3.9: check real nested children rather than obsolete flat counts.
-  const desktopRow=(name,level)=>"Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
+  const desktopRow=(name,level)=>"Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().includes("+JSON.stringify(level)+"))";
   const desktopChildren=async expr=>await p.eval("(()=>{const l="+expr+";return Array.from(l.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')).map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
   for(const view of ['all','administrative']){
     await p.eval("document.querySelector('.tree-sidebar .tree-filters button:nth-child("+(view==='all'?'1':'2')+")').click()");
@@ -197,7 +201,7 @@ async function desktop(cdp){
         ['North','Centre','South','Gagauzia','Chișinău'],
         'West NTS3 siblings follow statistical MD111–MD115');
       assert.deepEqual(westChildren.map(x=>x.level),
-        ['NTS 3','NTS 3','NTS 3','ADM 4 · NTS 3','ADM 4 · NTS 3']);
+        ['NTS 3','NTS 3','NTS 3','NTS 3 · ADM 4','NTS 3 · ADM 4']);
       await p.eval(westExpr+".scrollIntoView({block:'center'})");
       await p.snap('desktop-west-codes-md111-md115-en.png');
     }
@@ -776,6 +780,8 @@ async function mobile(cdp){
   }
   const mobileSectorsRO=await p.eval("(()=>{const x="+drawerLine(capitalName)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')].map(x=>x.textContent.trim());})()");
   assert.deepEqual(mobileSectorsRO,['Sector 1','Sector 2','Sector 3','Sector 4','Sector 5','Sector 6']);
+  assert.equal(await p.eval(drawerLine(capitalName)+".querySelector('.node-level').textContent.trim()"),
+    'NUTS 3 · ADM 4 · ADM 8','mobile Bucharest roles use NUTS before both administrative roles');
   await p.eval(drawerLine(capitalName)+".scrollIntoView({block:'start'})");
   await p.snap('mobile-romania-bucharest-siruta.png');
   for(const name of [capitalName,'Bucureşti-Ilfov','Macroregiunea Trei',romanianName])
@@ -813,7 +819,7 @@ async function mobile(cdp){
   if(originalEastMobileLocale!=='ro')
     await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='RO').click()");
   await p.wait("document.documentElement.lang==='ro'",'Mobile Romanian East tree');
-  const eastDrawerRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
+  const eastDrawerRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().includes("+JSON.stringify(level)+"))";
   await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
   await p.eval(eastDrawerRow('Est','NTS 2')+".querySelector('.expand-button').click()");
   await p.eval(eastDrawerRow('Transnistria','NTS 3')+".querySelector('.expand-button').click()");
@@ -929,7 +935,7 @@ async function mobile(cdp){
   assert(mobileBranchDebug.visibleNames.includes('Găgăuzia')&&mobileBranchDebug.visibleNames.includes('Chișinău'),
     'Găgăuzia/Chișinău must be direct mobile Administrative children: '+JSON.stringify(mobileBranchDebug));
   // WEB-R3.9: mobile Romanian nesting. The unit identities stay intact.
-  const mobileRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
+  const mobileRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().includes("+JSON.stringify(level)+"))";
   const mobileChildren=async expr=>await p.eval("(()=>{const l="+expr+";return Array.from(l.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')).map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
   for(const parentName of ['Găgăuzia','Chișinău']){
     const root=mobileRow(parentName,'ADM 4');
