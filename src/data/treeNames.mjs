@@ -5,7 +5,7 @@ const STAT_OVERRIDES = {
   MD111:['Nord','North'], MD112:['Centru','Centre'], MD113:['Sud','South']
 };
 const LEFT_BANK = ['Stânga Nistrului','Left Bank'];
-const EN_SUFFIX = /\s+(?:District|Municipality|County|Commune|City|Town)$/iu;
+const EN_SUFFIX = /\s+(?:District|Municipality|County|Commune|City|Town|Sector)$/iu;
 const EN_PREFIX = /^(?:District|Municipality|County|Commune|City|Town)\s+of\s+/iu;
 const RO_PREFIX = /^(?:Județul|Judetul|Raionul|Municipiul|Municipalitatea|Orașul|Orasul|Comuna|Districtul)\s+(.+)$/iu;
 function comparable(value){
