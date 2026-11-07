@@ -122,7 +122,7 @@ export function compareRomaniaSiblingCodes(a,b){
   }
   if(sirA||sirB){
     if(!sirA||!sirB)return sirA?-1:1;
-    const numeric=/^\\d+$/;
+    const numeric=/^[0-9]+$/;
     const n=numeric.test(sirA)&&numeric.test(sirB)
       ?(BigInt(sirA)<BigInt(sirB)?-1:BigInt(sirA)>BigInt(sirB)?1:0)
       :sirA.localeCompare(sirB,'en',{numeric:true});
