@@ -250,7 +250,7 @@ async function desktop(cdp){
   await p.eval(uatsnAdm4+".querySelector('.expand-button').click()");
   const uatsnChildren=await desktopChildren(uatsnAdm4);
   assert.equal(uatsnChildren.length,79);
-  assert(uatsnChildren.every(x=>x.level==='ADM 8'));
+  assert(uatsnChildren.every(x=>x.level.startsWith('ADM 8')),'Level tags may also show CUATM for duplicate Hlinaia');
   const enNames=uatsnChildren.map(x=>x.name);
   assert.deepEqual(enNames,[...enNames].sort((a,b)=>a.localeCompare(b,'en')),'English alphabetic UATSN');
   await p.eval(uatsnAdm4+".scrollIntoView({block:'center'})");
