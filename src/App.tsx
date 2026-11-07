@@ -1107,7 +1107,7 @@ export default function App() {
       <div className="atlas-tools-footer">
         <button type="button" className="atlas-tools-about-link" aria-expanded={toolSection==='about'}
           aria-controls="atlas-section-about" onClick={()=>toggleToolSection('about')}>
-          <span aria-hidden="true">ⓘ</span> {t.mapAbout} · {t.mapToolAboutHint}
+          <span className="atlas-tools-about-symbol" aria-hidden="true">i</span> {t.mapAbout} · {t.mapToolAboutHint}
         </button>
         {toolSection==='about'&&<div id="atlas-section-about" className="atlas-tools-content atlas-tools-about-content">
           <h3>{t.displaySource}</h3>

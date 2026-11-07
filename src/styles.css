@@ -318,3 +318,8 @@
 @media(prefers-reduced-motion:reduce){
   .atlas-global-tools-panel{transition:none!important}
 }
+
+/* The circled Unicode info glyph was a tofu square on some Android fonts. */
+.atlas-tools-about-symbol{display:inline-flex;align-items:center;justify-content:center;
+  flex:0 0 15px;width:15px;height:15px;border:1.2px solid currentColor;border-radius:50%;
+  font:700 10px/1 Arial,sans-serif}
