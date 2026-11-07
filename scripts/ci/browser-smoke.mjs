@@ -1036,6 +1036,9 @@ async function roleAwareCards(cdp){
       assert(info.text.includes('fără contur OSM separat'),'SIRUTA ADM8 not a duplicate geometry');
       assert(info.parentButtons>=2,'Bucharest links to verified territorial parents');
     }
+    if(c.tag==='chisinau-city')
+      assert.equal(info.title,'Orașul Chișinău',
+        'City card requires a contextual name; the nested tree remains Oraș');
     if(c.tag==='bender'){
       assert.equal(info.title,'Bender','Concise heading, official name remains in identity');
       assert(info.text.includes('Sovetul orășenesc Bender'),'Official original name preserved');
@@ -1306,10 +1309,13 @@ async function finalCardAcceptance(cdp){
   const t=await tablet.eval(`(()=>{
     const panel=document.querySelector('.detail-sidebar');
     return {width:innerWidth,scroll:document.documentElement.scrollWidth,
-      name:panel.getAttribute('aria-label'),level:panel.querySelector('.entity-admin-role-primary strong')?.textContent.trim(),
+      name:panel.getAttribute('aria-label'),
+      heading:panel.querySelector('.entity-title h3')?.textContent.trim(),
+      level:panel.querySelector('.entity-admin-role-primary strong')?.textContent.trim(),
       close:panel.querySelector('.pane-toolbar .pane-close')?.getBoundingClientRect().width};
   })()`);
-  assert(t.name&&t.level==='ADM 8'&&t.close>=44&&t.scroll<=t.width+1,
+  assert(t.name.includes('Chișinău city')&&t.heading==='Chișinău city'&&
+    t.level==='ADM 8'&&t.close>=44&&t.scroll<=t.width+1,
     'Tablet city details are accessible without horizontal overflow');
   await tablet.snap('tablet-web-r43-final-chisinau-city-en.png');
   await tablet.close();
