@@ -226,6 +226,8 @@ async function desktop(cdp){
   assert.equal(new Set(legend.map(x=>x.color)).size,14,'Each released cartographic boundary color is unique');
   assert.equal(legend.find(x=>x.key==='NTS 1')?.dash,'dashed');
   assert.equal(legend.find(x=>x.key==='ADM 2')?.dash,'solid');
+  await p.eval("document.querySelector('.tree-sidebar .map-legend').scrollIntoView({block:'center'})");
+  await pause(200);
   await p.snap('desktop-cartographic-legend.png');
   await p.eval("document.querySelector('.tree-sidebar .atlas-map-information>summary').click()");
 
@@ -406,6 +408,17 @@ async function mobile(cdp){
     'Mobile NTS 1 restyles Moldova national boundary');
   assert.equal(await p.eval("document.querySelector('.map-area').dataset.mapVisibleCount"),'2');
   await p.snap('mobile-nts1-statistical-outline.png');
+  // A separate full-map capture is needed: the open mobile drawer covers the border.
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!document.querySelector('.drawer-screen')",'Mobile NTS 1 map unobstructed');
+  await pause(700);
+  await p.snap('mobile-nts1-map-visible.png');
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.drawer .osm-level-filter>summary')",
+    'Mobile filter drawer reopened after map-style capture');
+  await p.eval("document.querySelector('.drawer .osm-level-filter>summary').click()");
+  await p.wait("document.querySelector('.drawer .osm-level-choices input[aria-label=\"NTS 1\"]')?.checked",
+    'NTS 1 filter stays checked after closing and reopening the drawer');
   await p.eval("document.querySelector('.drawer .osm-level-choices input[aria-label=\"NTS 1\"]').click()");
   await p.wait("document.querySelector('.map-area')?.dataset.mdStyle==='reference'",
     'Mobile NTS 1 unchecked restores Moldova reference outline');
