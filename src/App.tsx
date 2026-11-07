@@ -803,12 +803,17 @@ export default function App() {
     const childNodes=hierarchy.get(node.id)||[];
     const isExpanded=expandedSet.has(node.id);
     const isChecked=visibleSet.has(node.id);
-    const rowLabel=labelOf(node,lang);
+    const isChisinauCity=node.id==='osm-r1748490';
+    const rowLabel=isChisinauCity&&searchMatch
+      ?(lang==='ro'?'Orașul Chișinău':'Chișinău city')
+      :labelOf(node,lang);
     // Two separate UATSN ADM8 polygons share the Romanian name Hlinaia.
     // Keep the geographical label identical; disambiguate only in UI metadata.
     const eastHlinaiaCode=(node.id==='osm-r9301463'||node.id==='osm-r8291058')
       ?node.registry?.code:null;
-    const accessibleRowLabel=eastHlinaiaCode?rowLabel+' (CUATM '+eastHlinaiaCode+')':rowLabel;
+    const accessibleRowLabel=isChisinauCity
+      ?(lang==='ro'?'Orașul Chișinău':'City of Chișinău')
+      :eastHlinaiaCode?rowLabel+' (CUATM '+eastHlinaiaCode+')':rowLabel;
     const stat=node.statisticalRoles.length>0;
     return <div className="territory-branch" key={node.id} role={searchMatch?'none':'none'}>
       <div className={'tree-line'+(selected===node.id?' is-selected':'')} role="treeitem"
