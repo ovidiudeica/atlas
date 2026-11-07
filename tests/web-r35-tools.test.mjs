@@ -31,3 +31,10 @@ test('Mobile adaptive bottom sheet reserves module rail and supports swipe / red
   assert.match(app,/dy>85/);
   assert.match(app,/toolsOpenerRef\.current\?\.focus\(\)/);
 });
+
+test('Legend reference names are concise and translated consistently',()=>{
+  assert.match(app,/referenceCountries: 'Romania, Moldova'/);
+  assert.match(app,/referenceCountries: 'România, Moldova'/);
+  assert.doesNotMatch(app,/referenceCountries: 'Romania and Republic of Moldova'/);
+  assert.doesNotMatch(app,/referenceCountries: 'România și Republica Moldova'/);
+});
