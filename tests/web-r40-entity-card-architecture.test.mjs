@@ -33,7 +33,7 @@ test('WEB-R4.0: card sections keep independent semantics and truthfully empty so
   assert.match(app,/<dt>\{t\.osmId\}<\/dt>/);
   assert.match(app,/currentNode\.adminLevel===null\?'':currentNode\.adminLevel/);
   assert.match(app,/municipalRoleClarification\(currentNode,lang\)/);
-  assert.match(app,/currentNode\.statisticalRoles\.map\(\(role,index\)=>/);
+  assert.match(app,/cardRoles\.statistical\.map\(\(role,index\)=>/);
   assert.match(app,/role\.parentCode&&<small>/);
   assert.match(app,/t\.statVersion/);
   assert.match(app,/currentNode\.administrativeParentId/);
