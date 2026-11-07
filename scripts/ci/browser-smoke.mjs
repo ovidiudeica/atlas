@@ -130,7 +130,7 @@ async function desktop(cdp){
   const englishRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
   assert.deepEqual(englishRoots,['Romania','Moldova'],'English tree uses concise national names');
   await p.snap('desktop-module-open.png');
-  // WEB-R3.15 Nistrenia/Pridnestrovie: Tiraspol, Bender, then five raions south-to-north.
+  // WEB-R3.18 Nistrenia/Pridnestrovie: cadastral seat codes 32–66 ascending.
   // Both mixed and administrative tree views must expose the same 7 identities.
   for(const view of ['all','administrative']){
     if(view==='administrative')
@@ -140,10 +140,28 @@ async function desktop(cdp){
       'Nistrenia appears under Moldova');
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').querySelector('.expand-button').click()");
     const order=await p.eval("(()=>{const line=Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie');return Array.from(line.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim());})()");
-    assert.deepEqual(order,['Tiraspol','Bender','Slobdzeya','Grigoriopol','Dubossary','Rybnitsa','Kamenka'],
-      'English Nistrenia children: Tiraspol/Bender followed by five raions south-to-north, '+view);
+    assert.deepEqual(order,['Bender','Tiraspol','Grigoriopol','Dubossary','Rybnitsa','Slobdzeya','Kamenka'],
+      'English Nistrenia children follow PMR cadastral seat-code order, '+view);
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').scrollIntoView({block:'center'})");
-    await p.snap('desktop-nistrenia-web-r315-fixed-order-en-'+view+'.png');
+    await p.snap('desktop-nistrenia-web-r318-cadastral-order-en-'+view+'.png');
+    // Verify every detail card's separate cadastral code, source link and
+    // jurisdiction caveat. The catalog's CUATM field remains empty.
+    for(const [index,code] of ['32','33','40','45','55','57','66'].entries()){
+      await p.eval("(()=>{const line=[...document.querySelectorAll('.tree-sidebar .tree-line')].find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie');const row=line.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')[${index}];row.querySelector('.tree-label').click();})()");
+      await p.wait("(()=>{const card=document.querySelector('.detail-sidebar .entity-card');if(!card)return false;const dt=[...card.querySelectorAll('.metadata dt')].find(x=>x.textContent.trim()==='PMR cadastral code');return dt?.nextElementSibling?.textContent.trim()==='${code}';})()",
+        'PMR cadastral code '+code+' visible in Nistrenia detail card');
+      const detailCheck=await p.eval("(()=>{const card=document.querySelector('.detail-sidebar .entity-card');const fields=[...card.querySelectorAll('.metadata dt')];const source=fields.find(x=>x.textContent.trim()==='PMR cadastral source');const registry=fields.find(x=>x.textContent.trim()==='Official registry');return {code:fields.find(x=>x.textContent.trim()==='PMR cadastral code')?.nextElementSibling?.textContent.trim(),source:source?.nextElementSibling?.textContent.trim(),url:source?.nextElementSibling?.querySelector('a')?.getAttribute('href'),registry:registry?.nextElementSibling?.textContent.trim(),caveat:card.querySelector('.source-caveat')?.textContent};})()");
+      assert.equal(detailCheck.code,code,'Exact PMR code for ADM5 child '+index);
+      assert(detailCheck.source?.includes('Order 361/2015, Annex 2'),'Source in card');
+      assert(detailCheck.url?.startsWith('https://ulpmr.ru/ul/show/'),'Official source URL');
+      assert(!detailCheck.registry?.includes('PMR'),'PMR code is not inserted into CUATM official registry field');
+      assert(detailCheck.caveat?.includes('not a KLADR PMR identifier'),'Cadastral and KLADR IDs distinguished');
+      if(index===0||index===6){
+        await p.eval("document.querySelector('.detail-sidebar .entity-card').scrollIntoView({block:'start'})");
+        await p.snap('desktop-nistrenia-pmr-cadastral-card-en-'+code+'-'+view+'.png');
+      }
+    }
+    await p.eval("document.querySelector('.header-entity-action').click()");
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').querySelector('.expand-button').click()");
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   }
@@ -865,10 +883,10 @@ async function mobile(cdp){
     'Romanian Nistrenia appears beneath Moldova on mobile');
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').querySelector('.expand-button').click()");
   const pmrRomanian=await p.eval("(()=>{const line=Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia');return Array.from(line.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim());})()");
-  assert.deepEqual(pmrRomanian,['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca'],
-    'Romanian mobile Nistrenia: Tiraspol, Bender then raions south-to-north');
+  assert.deepEqual(pmrRomanian,['Bender','Tiraspol','Grigoriopol','Dubăsari','Rîbnița','Slobozia','Camenca'],
+    'Romanian mobile Nistrenia: cadastral seat codes 32–66 ascending');
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').scrollIntoView({block:'start'})");
-  await p.snap('mobile-nistrenia-web-r315-fixed-order-ro.png');
+  await p.snap('mobile-nistrenia-web-r318-cadastral-order-ro.png');
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').querySelector('.expand-button').click()");
   // Mobile, Romanian Administrative view: Găgăuzia and Chișinău are
   // direct administrative children of Moldova (the mixed tree is verified
