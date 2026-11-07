@@ -1,4 +1,5 @@
 import { gunzipSync, strFromU8 } from 'fflate';
+import { shortTreeName } from './treeNames.mjs';
 import type { Feature, FeatureCollection, Geometry } from 'geojson';
 
 export type Country = 'RO' | 'MD';
@@ -115,19 +116,7 @@ export function codeOf(node: Territory): string {
   return node.statisticalRoles.map(role => role.code).join(', ');
 }
 export function labelOf(node: Territory, lang: Locale): string {
-  if (node.id === 'osm-r90689') return lang === 'en' ? 'Romania' : 'România';
-  if (node.id === 'osm-r58974') return 'Moldova';
-  const stat = node.statisticalRoles[0]?.code;
-  const overrides: Record<string, [string, string]> = {
-    MD11: ['Vest', 'West'], MD12: ['Est', 'East'],
-    MD111: ['Nord', 'North'], MD112: ['Centru', 'Centre'], MD113: ['Sud', 'South'],
-    MD120: ['Stânga Nistrului', 'Left Bank'],
-  };
-  if (stat && overrides[stat]) return overrides[stat][lang === 'ro' ? 0 : 1];
-  if (node.roles.includes('statistical') && node.sourceTags?.short_name) {
-    return node.sourceTags.short_name;
-  }
-  return node.shortName?.[lang] || node.name;
+  return shortTreeName(node,lang);
 }
 export function lookupKeys(node: Territory): string {
   const tags = node.sourceTags || {};

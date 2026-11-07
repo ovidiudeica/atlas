@@ -407,6 +407,23 @@ async function desktop(cdp){
   await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Left Bank')",
     'Same MD120 search result uses short English label');
   await p.snap('desktop-left-bank-short-name-en.png');
+  // The certified administrative left-bank relation has its own ID and must
+  // be short just like the distinct statistical MD120 entity.
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
+  await p.call('Input.insertText',{text:'Unitățile administrativ-teritoriale din stînga Nistrului'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).filter(x=>x.textContent.trim()==='Left Bank').length===2",
+    'Both independent left-bank administrative/statistical identities appear as Left Bank');
+  await p.snap('desktop-two-left-bank-entities-en.png');
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
+  await p.call('Input.insertText',{text:'Basarabeasca District'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Basarabeasca')",
+    'District can be searched by full English name but appears without District');
+  await p.snap('desktop-district-short-en.png');
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
+  await p.call('Input.insertText',{text:'Bălți Municipality'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Bălți')",
+    'Municipality can be searched by original name but appears without Municipality');
+  await p.snap('desktop-municipality-short-en.png');
   await p.close();
 }
 async function tablet(cdp){
@@ -571,6 +588,18 @@ async function mobile(cdp){
   await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'mobile default national preview');
   assert((await p.eval('document.documentElement.scrollWidth'))<=391,'Mobile reset action must not introduce overflow');
   await p.snap('mobile-reset-geometries.png');
+  await p.eval("if(!document.querySelector('.drawer .tree-content'))document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.drawer input[type=search]')",
+    'Mobile Administrative tree available for short-name verification');
+  await p.eval("document.querySelector('.drawer input[type=search]').focus()");
+  await p.call('Input.insertText',{text:'Unitățile administrativ-teritoriale din stînga Nistrului'});
+  await p.wait("Array.from(document.querySelectorAll('.drawer .tree-list .node-name')).filter(x=>x.textContent.trim()==='Stânga Nistrului').length===2",
+    'Mobile Romanian tree shortens BOTH left-bank identities');
+  await p.snap('mobile-two-left-bank-entities-ro.png');
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
+  await p.wait("Array.from(document.querySelectorAll('.drawer .tree-list .node-name')).filter(x=>x.textContent.trim()==='Left Bank').length===2",
+    'Mobile English tree uses Left Bank for both source entities');
+  await p.snap('mobile-two-left-bank-entities-en.png');
   await p.close();
 }
 async function narrowMobile(cdp){
