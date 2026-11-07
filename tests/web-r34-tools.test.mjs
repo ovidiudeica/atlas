@@ -3,14 +3,16 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 const app=readFileSync(new URL('../src/App.tsx',import.meta.url),'utf8');
 const css=readFileSync(new URL('../src/styles.css',import.meta.url),'utf8');
-test('Administrative module owns only tree, filters and geometry reset',()=>{
+test('Administrative module owns the tree and filters; reset controls live in module toolbar and map',()=>{
   const start=app.indexOf('const treePanel='),end=app.indexOf('const globalTools=',start);
   assert(start>=0&&end>start);
   const tree=app.slice(start,end);
   assert.match(tree,/className="osm-level-filter"/);
   assert.match(tree,/className="tree-filters"/);
   assert.match(tree,/className="tree-list"/);
-  assert.match(tree,/className="reset-geometries atlas-admin-reset"/);
+  assert.doesNotMatch(tree,/atlas-admin-reset/);
+  assert.match(app,/className="module-reset" aria-label=\{t\.resetModule\}/);
+  assert.match(app,/className="map-reset-global" aria-label=\{t\.resetAll\}/);
   for(const moved of ['atlas-map-tools','atlas-map-settings','atlas-tools-export','atlas-map-information','basemap-select','map-legend'])
     assert(!tree.includes('className="'+moved),'Administrative tree must not own '+moved);
   assert(!tree.includes('t.description'),'Repeated global source paragraphs do not belong in the tree');
