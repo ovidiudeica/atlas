@@ -21,7 +21,7 @@ test('all 4283 certified tree names are concise in both languages',()=>{
     assert(name.length<46,'Overlong label '+node.id+'/'+lang+': '+name);
   }
 });
-test('all 48 previously long English names and the 1 Romanian counterpart are shortened',()=>{
+test('all 48 previously long English names and 2 Romanian labels are shortened',()=>{
   const changed={en:[],ro:[]};
   function legacy(node,lang){
     if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
@@ -40,8 +40,8 @@ test('all 48 previously long English names and the 1 Romanian counterpart are sh
     if(before!==after)changed[lang].push({id:node.id,before,after});
   }
   assert.equal(changed.en.length,48,JSON.stringify(changed.en));
-  assert.equal(changed.ro.length,1,JSON.stringify(changed.ro));
-  assert.equal(changed.ro[0].id,'osm-r2607033');
+  assert.equal(changed.ro.length,2,JSON.stringify(changed.ro));
+  assert.deepEqual(new Set(changed.ro.map(x=>x.id)),new Set(['osm-r2607033','osm-r6879649']));
   assert.equal(new Set(changed.en.map(x=>x.id)).size,48);
 });
 test('both left-bank entities and district/municipality names are concise',()=>{
@@ -70,4 +70,23 @@ test('canonical catalog names and official identities remain unchanged',()=>{
   assert.equal(admin.shortName.en,'Administrative-territorial units of the left bank of Nistru');
   assert.equal(admin.shortName.ro,'Unitățile administrativ-teritoriale din stînga Nistrului');
   assert.equal(shortTreeName(admin,'ro'),'Stânga Nistrului');
+});
+
+test('Chițcani shows the short Romanian name without changing certified OSMB/CUATM records',()=>{
+  const n=byId.get('osm-r6879649');
+  assert(n,'Original OSM ID must remain present');
+  assert(n.roles.includes('administrative'));
+  assert.equal(n.adminLevel,8);
+  assert.equal(n.osmRelationId,6879649);
+  assert.equal(n.administrativeParentId,'osm-r65343');
+  assert.equal(n.treeParentId,'osm-r65343');
+  assert.equal(n.registry.system,'CUATM');
+  assert.equal(n.registry.code,'7612');
+  assert.equal(n.name,'Sovetul sătesc Chițcani');
+  assert.equal(n.officialName,'Sovetul sătesc Chițcani');
+  assert.equal(n.shortName.ro,'Sovetul sătesc Chițcani');
+  assert.equal(n.sourceTags['name:ro'],'Sovetul sătesc Chițcani');
+  assert.equal(n.shortName.en,'Kitskany');
+  assert.equal(shortTreeName(n,'ro'),'Chițcani');
+  assert.equal(shortTreeName(n,'en'),'Kitskany');
 });
