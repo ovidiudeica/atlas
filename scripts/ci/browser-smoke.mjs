@@ -130,6 +130,21 @@ async function desktop(cdp){
   const englishRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
   assert.deepEqual(englishRoots,['Romania','Moldova'],'English tree uses concise national names');
   await p.snap('desktop-module-open.png');
+  // WEB-R3.19b: browse the authentic RO3/RO32/București hierarchy in Chromium.
+  // Numeric SIRUTA places sectors 1..6 even when OSM IDs are out of order.
+  const roRow=name=>"Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+")";
+  for(const name of ['Romania','Macroregiunea Trei','Bucureşti-Ilfov','Bucharest']){
+    await p.wait("!!("+roRow(name)+")",'Romanian presentation node '+name);
+    await p.eval(roRow(name)+".querySelector('.expand-button').click()");
+  }
+  const sectorsRO=await p.eval("(()=>{const x="+roRow('Bucharest')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')].map(x=>x.textContent.trim());})()");
+  assert.deepEqual(sectorsRO,['Sector 1','Sector 2','Sector 3','Sector 4','Sector 5','Sector 6'],
+    'Bucharest sectors are direct children ordered by SIRUTA');
+  await p.eval(roRow('Bucharest')+".scrollIntoView({block:'start'})");
+  await p.snap('desktop-romania-bucharest-siruta-en.png');
+  for(const name of ['Bucharest','Bucureşti-Ilfov','Macroregiunea Trei','Romania'])
+    await p.eval(roRow(name)+".querySelector('.expand-button').click()");
+
   // WEB-R3.18 Nistrenia/Pridnestrovie: cadastral seat codes 32–66 ascending.
   // Both mixed and administrative tree views must expose the same 7 identities.
   for(const view of ['all','administrative']){
@@ -752,6 +767,20 @@ async function mobile(cdp){
   const regionalLocale=await p.eval("document.documentElement.lang==='ro'?'Nord':'North'");
   const westernLocale=await p.eval("document.documentElement.lang==='ro'?'Vest':'West'");
   const drawerLine=(name)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+")";
+  // WEB-R3.19b mobile: the same six SIRUTA-ordered Bucharest sectors.
+  const romanianName=await p.eval("document.documentElement.lang==='ro'?'România':'Romania'");
+  const capitalName=await p.eval("document.documentElement.lang==='ro'?'București':'Bucharest'");
+  for(const name of [romanianName,'Macroregiunea Trei','Bucureşti-Ilfov',capitalName]){
+    await p.wait("!!("+drawerLine(name)+")",'Romania mobile node '+name);
+    await p.eval(drawerLine(name)+".querySelector('.expand-button').click()");
+  }
+  const mobileSectorsRO=await p.eval("(()=>{const x="+drawerLine(capitalName)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')].map(x=>x.textContent.trim());})()");
+  assert.deepEqual(mobileSectorsRO,['Sector 1','Sector 2','Sector 3','Sector 4','Sector 5','Sector 6']);
+  await p.eval(drawerLine(capitalName)+".scrollIntoView({block:'start'})");
+  await p.snap('mobile-romania-bucharest-siruta.png');
+  for(const name of [capitalName,'Bucureşti-Ilfov','Macroregiunea Trei',romanianName])
+    await p.eval(drawerLine(name)+".querySelector('.expand-button').click()");
+
   await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
   await p.wait("!!("+drawerLine(westernLocale)+")",'mobile western statistical region');
   await p.eval(drawerLine(westernLocale)+".querySelector('.expand-button').click()");

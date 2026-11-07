@@ -2,7 +2,8 @@
 // WEB-R3.17: Moldova siblings use statistical code first (including dual-role
 // units), then CUATM code for administrative entities. No cross-parent moves.
 // WEB-R3.18: Nistrenia's seven uncoded ADM5 children follow published PMR
-// cadastral codes associated with their seats. Romania is untouched.
+// cadastral codes associated with their seats.
+// WEB-R3.19b: Romania siblings use NUTS1/2/3 first, then numeric SIRUTA.
 import {shortTreeName} from './treeNames.mjs';
 import {comparePresentationSiblings} from './treeOverlay.mjs';
 import {PMR_CADASTRAL_ORDER,pmrCadastralSeatCode} from './pmrCadastral.mjs';
@@ -106,8 +107,35 @@ export function compareMoldovaSiblingCodes(a,b){
   return null;
 }
 
+// Compare only within the already supplied sibling group. NUTS precedes
+// SIRUTA, including dual-role RO321 (București) and the counties. Never
+// compare the OSM relation IDs or infer a classification from OSM admin_level.
+export function compareRomaniaSiblingCodes(a,b){
+  const nutsA=a.statisticalRoles?.find(r=>r.classification==='NUTS')?.code||null;
+  const nutsB=b.statisticalRoles?.find(r=>r.classification==='NUTS')?.code||null;
+  const sirA=a.registry?.system==='SIRUTA'&&a.registry?.code?a.registry.code:null;
+  const sirB=b.registry?.system==='SIRUTA'&&b.registry?.code?b.registry.code:null;
+  if(nutsA||nutsB){
+    if(!nutsA||!nutsB)return nutsA?-1:1;
+    const n=nutsA.localeCompare(nutsB,'en',{numeric:true});
+    if(n)return n;
+  }
+  if(sirA||sirB){
+    if(!sirA||!sirB)return sirA?-1:1;
+    const numeric=/^[0-9]+$/;
+    const n=numeric.test(sirA)&&numeric.test(sirB)
+      ?(BigInt(sirA)<BigInt(sirB)?-1:BigInt(sirA)>BigInt(sirB)?1:0)
+      :sirA.localeCompare(sirB,'en',{numeric:true});
+    if(n)return n;
+  }
+  return nutsA||nutsB||sirA||sirB?a.id.localeCompare(b.id,'en'):null;
+}
+
 export function compareTreeSiblings(a,b,view,parentId,lang='ro'){
-  // Restrict the new ordering to Moldova and keep ALL of Romania unchanged.
+  if(a.country==='RO'&&b.country==='RO'){
+    const byOfficialCodes=compareRomaniaSiblingCodes(a,b);
+    if(byOfficialCodes!==null)return byOfficialCodes;
+  }
   if(a.country==='MD'&&b.country==='MD'){
     const byOfficialCodes=compareMoldovaSiblingCodes(a,b);
     if(byOfficialCodes!==null)return byOfficialCodes;
