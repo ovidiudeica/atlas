@@ -205,3 +205,16 @@
 .detail-info-glyph{display:inline-flex;align-items:center;justify-content:center;
  width:21px;height:21px;border:1.5px solid currentColor;border-radius:50%;
  font-size:14px;font-family:Arial,sans-serif;font-weight:800;line-height:1}
+
+/* MapLibre and legend use identical level palette, width and dash tokens. */
+.atlas-map-information .map-legend{
+  position:static;display:grid;grid-template-columns:1fr;gap:12px;width:100%;
+  margin:0;padding:10px;box-shadow:none;background:#fff;border:1px solid #e1e9e3;
+  font-size:11px;font-weight:400;
+}
+.legend-section{display:flex;flex-direction:column;gap:6px}
+.legend-section strong{font-size:11px;color:#254a39}
+.legend-row{display:flex;align-items:center;gap:10px;min-height:22px}
+.legend-line{display:inline-block;flex:0 0 37px;width:37px;height:0;
+  border-top-style:solid;border-top-width:2px;border-top-color:#46554f}
+.legend-line.is-statistical{border-top-style:dashed}

@@ -835,8 +835,35 @@ export default function App() {
           <summary>{t.mapInformation}</summary>
           <div className="atlas-tool-body">
             <div className="map-legend" aria-label={t.dataRole}>
-              <span className="legend-admin"/> {t.adminView}
-              <span className="legend-stat"/> {t.statView}
+              <div className="legend-section">
+                <strong>{t.referenceOutline}</strong>
+                <div className="legend-row" data-style-key="reference">
+                  <span className="legend-line" style={{borderTopColor:REFERENCE_STYLE.color,
+                    borderTopWidth:REFERENCE_STYLE.width}}/>
+                  <span>{t.referenceCountries}</span>
+                </div>
+              </div>
+              <div className="legend-section">
+                <strong>{t.adminView}</strong>
+                {levelOptions.map(option=>{
+                  const chart=administrativeStyle(option.level);
+                  return <div className="legend-row" key={chart.key} data-style-key={chart.key}>
+                    <span className="legend-line" style={{borderTopColor:chart.color,borderTopWidth:chart.width}}/>
+                    <span>{chart.key}</span>
+                  </div>;
+                })}
+              </div>
+              <div className="legend-section">
+                <strong>{t.statView}</strong>
+                {statisticalLevelOptions.map(option=>{
+                  const chart=statisticalStyle(option.classification,option.level);
+                  return <div className="legend-row" key={chart.key} data-style-key={chart.key}>
+                    <span className="legend-line is-statistical" style={{
+                      borderTopColor:chart.color,borderTopWidth:chart.width}}/>
+                    <span>{chart.key}</span>
+                  </div>;
+                })}
+              </div>
             </div>
             <h3>{t.displaySource}</h3>
             <p>{t.sourceNote}</p>
