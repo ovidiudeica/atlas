@@ -15,6 +15,9 @@ function comparable(value){
 export function shortTreeName(node,lang){
   if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
   if(node.id==='osm-r58974')return 'Moldova';
+  // Căușeni ADM8: show the Romanian geographical name, not the OSMB
+  // de-facto council descriptor. English 'Kitskany' and source fields stay intact.
+  if(node.id==='osm-r6879649'&&lang==='ro')return 'Chițcani';
   // Two separate city-council relations under Nistrenia have descriptive
   // administrative qualifiers in English; the geographical tree names do not.
   if(node.id==='osm-r1702219'||node.id==='osm-r944727')
