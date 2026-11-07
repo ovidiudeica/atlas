@@ -58,9 +58,21 @@ test('sort changes neither identities nor other hierarchy behavior',()=>{
   assert.equal(tiraspol.officialName,'Sovetul orășenesc Tiraspol');
   assert.equal(shortTreeName(bender,'en'),'Bender');
   assert.equal(shortTreeName(tiraspol,'en'),'Tiraspol');
+  // Nistrenia's seven un-coded ADM5 children keep their fixed order,
+  // while Moldova's coded direct ADM4 children now use statistical-code
+  // precedence where a node has both roles, then CUATM for other children.
   const other=entries.filter(e=>e.administrativeParentId==='osm-r58974'
-    &&e.id!=='osm-r65335').slice(0,8);
-  const reference=[...other].sort((a,b)=>a.name.localeCompare(b.name,'ro'));
+    &&e.id!=='osm-r65335');
+  const reference=[...other].sort((a,b)=>{
+    const sa=a.statisticalRoles?.[0]?.code,sb=b.statisticalRoles?.[0]?.code;
+    if(sa||sb){
+      if(!sa||!sb)return sa?-1:1;
+      return sa.localeCompare(sb,'en');
+    }
+    const ca=a.registry?.code,cb=b.registry?.code;
+    if(!ca||!cb)return ca?-1:cb?1:a.id.localeCompare(b.id,'en');
+    return ca.localeCompare(cb,'en')||a.id.localeCompare(b.id,'en');
+  });
   const actual=[...other].sort((a,b)=>
     compareTreeSiblings(a,b,'administrative','osm-r58974','ro'));
   assert.deepEqual(actual.map(e=>e.id),reference.map(e=>e.id));
