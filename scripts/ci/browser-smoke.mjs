@@ -1176,7 +1176,7 @@ async function cardUxAccessibility(cdp){
     true,'Progressive child navigation offers an explicit More button');
   await many.snap('desktop-web-r42-chisinau-before-more.png');
   await many.eval("document.querySelector('.detail-sidebar .entity-children-more').click()");
-  await many.wait("(()=>{const b=document.querySelector('.detail-sidebar .entity-child-link[data-child-index=\\\"12\\\"]');return b&&document.activeElement===b})()",
+  await many.wait("(()=>{const b=[...document.querySelectorAll('.detail-sidebar .entity-child-link')].find(x=>x.dataset.childIndex==='12');return b&&document.activeElement===b})()",
     'More children moves focus to first newly revealed child');
   const revealed=await many.eval("document.querySelectorAll('.detail-sidebar .entity-child-link').length");
   assert(revealed>12&&revealed<=24,'Progressive pagination reveals at most twelve new children');
