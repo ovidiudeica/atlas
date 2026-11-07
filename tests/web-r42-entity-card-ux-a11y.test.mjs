@@ -25,7 +25,7 @@ test('WEB-R4.2: child links are based on presentation tree ordering, not inferre
   const children=entities.filter(x=>presentationParentId(x,'all')===bucharest.id)
     .sort((a,b)=>compareTreeSiblings(a,b,'all',bucharest.id,'ro'));
   assert.equal(children.length,6);
-  assert.deepEqual(children.map(x=>x.id).length,6);
+  assert.equal(new Set(children.map(x=>x.id)).size,6);
   assert(children.every(x=>x.adminLevel===9));
   assert.equal(JSON.stringify(entities),sourceBefore);
   assert.match(app,/const cardChildren=currentNode\?\(hierarchy\.get\(currentNode\.id\)\|\|\[\]\):\[\]/);
@@ -57,8 +57,8 @@ test('WEB-R4.2: card-local navigation transfers focus and resets its own scroll 
 test('WEB-R4.2: closing controls occupy a sticky toolbar and name the selected dialog',()=>{
   assert.match(app,/className="pane-toolbar"/);
   assert.match(app,/className="drawer-toolbar"/);
-  assert.match(app,/aria-label=\{t\.details\+'?: '?/); // verified contextual label on desktop
-  assert.match(app,/currentNode\?': '\+labelOf\(currentNode,lang\):''/);
+  assert(app.includes("aria-label={t.details+': '+labelOf(currentNode,lang)}"));
+  assert(app.includes("t.details+(currentNode?': '+labelOf(currentNode,lang):'')"));
   assert.match(app,/document\.querySelector<HTMLButtonElement>\('\.header-entity-action'\)\?\.focus\(\)/);
   assert.match(styles,/\.pane-toolbar,\.drawer-toolbar\{/);
   assert.match(styles,/\.pane-toolbar \.pane-close,\.drawer-toolbar \.drawer-close\{/);
