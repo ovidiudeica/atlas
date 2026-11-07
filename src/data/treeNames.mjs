@@ -5,6 +5,61 @@ const STAT_OVERRIDES = {
   MD111:['Nord','North'], MD112:['Centru','Centre'], MD113:['Sud','South']
 };
 const LEFT_BANK = ['Stânga Nistrului','Left Bank'];
+// WEB-R3.12: 44 individually verified UATSN ADM8 council names.
+// Key by authentic OSM ID; never rewrite the certified OSMB or CUATM fields.
+// One city council (Dubăsari), forty-three village councils. The strings
+// were matched to CUATM official records in the frozen 2026-10-05 catalogue.
+export const UATSN_RO_SHORT_LABELS=Object.freeze({
+  'osm-r7427669':'Vladimirovca', // CUATM 7631
+  'osm-r7427680':'Frunză', // 7618
+  'osm-r7431238':'Bîcioc', // 5011
+  'osm-r7431263':'Parcani', // 7627
+  'osm-r7432661':'Crasnogorca', // 5022
+  'osm-r7432662':'Teiu', // 5036
+  'osm-r7468724':'Blijnii Hutor', // 7610
+  'osm-r7468791':'Sucleia', // 7629
+  'osm-r8289594':'Caragaș', // 7611
+  'osm-r8289727':'Cioburciu', // 7615
+  'osm-r8290934':'Nezavertailovca', // 7626
+  'osm-r8291057':'Corotna', // 7617
+  'osm-r8291058':'Hlinaia', // 7625; homonym of CUATM 5029
+  'osm-r8292878':'Tîrnauca', // 7630
+  'osm-r8292891':'Mălăiești', // 5030
+  'osm-r8292898':'Hruşca', // 1925
+  'osm-r8292909':'Ocnița', // 1931
+  'osm-r8348605':'Tașlîc', // 5035
+  'osm-r8348625':'Butor', // 5013
+  'osm-r8348646':'Speia', // 5032
+  'osm-r8348909':'Mihailovca', // 6931
+  'osm-r8348920':'Harmațca', // 3834
+  'osm-r8349002':'Dubău', // 3829
+  'osm-r8349059':'Lenin', // 6927
+  'osm-r8349093':'Butuceni', // 6915
+  'osm-r8349094':'Jura', // 6926
+  'osm-r8349307':'Mocra', // 6932
+  'osm-r8349338':'Popencu', // 6940
+  'osm-r8539525':'Colosova', // 5019
+  'osm-r8688504':'Broșteni', // 6914
+  'osm-r8710724':'Slobozia-Rașcov', // 1941
+  'osm-r8726395':'Șipca', // 5033
+  'osm-r9288026':'Carmanova', // 5015
+  'osm-r9288110':'Hîrtop', // 5025
+  'osm-r9288158':'Dzerjinscoe', // 3831
+  'osm-r9288287':'Dubăsari', // 3801; city council
+  'osm-r9288722':'Comisarovca Nouă', // 3812
+  'osm-r9288756':'Crasnîi Vinogradari', // 3820
+  'osm-r9294122':'Ghidirim', // 6921
+  'osm-r9656364':'Crasnencoe', // 6918
+  'osm-r9656413':'Molochișul Mare', // 6936
+  'osm-r9659709':'Cobasna', // 6916
+  'osm-r9659794':'Hîrjău', // 6923
+  'osm-r9660049':'Ofatinți' // 6937
+});
+// The Pervomaisc CUATM 7628 source contains the inconsistent "Slobozia"
+// name:ro, but official_name and short_name:ro agree on Pervomaisc.
+const PERVOMAISC_ID='osm-r8290877';
+const POPENCU_ID='osm-r8349338';
+
 const EN_SUFFIX = /\s+(?:District|Municipality|County|Commune|City|Town|Sector)$/iu;
 const EN_PREFIX = /^(?:District|Municipality|County|Commune|City|Town)\s+of\s+/iu;
 const RO_PREFIX = /^(?:Județul|Judetul|Raionul|Municipiul|Municipalitatea|Orașul|Orasul|Comuna|Districtul)\s+(.+)$/iu;
@@ -15,6 +70,10 @@ function comparable(value){
 export function shortTreeName(node,lang){
   if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
   if(node.id==='osm-r58974')return 'Moldova';
+  if(node.id===PERVOMAISC_ID)return 'Pervomaisc';
+  if(lang==='ro'&&Object.hasOwn(UATSN_RO_SHORT_LABELS,node.id))
+    return UATSN_RO_SHORT_LABELS[node.id];
+  if(lang==='en'&&node.id===POPENCU_ID)return 'Popencu';
   // Căușeni ADM8: show the Romanian geographical name, not the OSMB
   // de-facto council descriptor. English 'Kitskany' and source fields stay intact.
   if(node.id==='osm-r6879649'&&lang==='ro')return 'Chițcani';
