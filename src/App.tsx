@@ -252,7 +252,8 @@ export default function App() {
   const [rootsLoaded,setRootsLoaded] = useState(false);
   const [geomLoading,setGeomLoading] = useState(false);
   const [geomError,setGeomError] = useState(false);
-  const [drawer,setDrawer] = useState<Drawer>(null);
+  const [drawer,setDrawer] = useState<Drawer>(()=>
+    SHARED_STATE.entity&&window.innerWidth<=700?'detail':null);
   const [toolsOpen,setToolsOpen] = useState(false);
   const [toolSection,setToolSection] = useState<MapToolSection>(null);
   const [legendShowAll,setLegendShowAll] = useState(false);
