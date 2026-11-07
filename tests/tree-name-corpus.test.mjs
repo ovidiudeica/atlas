@@ -49,10 +49,10 @@ test('50 English and 47 Romanian presentation-only names are shortened',()=>{
 });
 test('both left-bank entities and district/municipality names are concise',()=>{
   const get=(id,lang)=>shortTreeName(byId.get(id),lang);
-  for(const id of ['osm-r2607033','stat-MD120']){
-    assert.equal(get(id,'ro'),'Stânga Nistrului');
-    assert.equal(get(id,'en'),'Left Bank');
-  }
+  assert.equal(get('osm-r2607033','ro'),'UATSN');
+  assert.equal(get('osm-r2607033','en'),'ATULBD');
+  assert.equal(get('stat-MD120','ro'),'Transnistria');
+  assert.equal(get('stat-MD120','en'),'Transnistria');
   assert.equal(get('osm-r1691801','en'),'Chișinău');
   assert.equal(get('osm-r58983','en'),'Bălți');
   assert.equal(get('osm-r1104136','en'),'Basarabeasca');
@@ -72,7 +72,15 @@ test('canonical catalog names and official identities remain unchanged',()=>{
   assert.equal(admin.officialName,'Unitățile administrativ-teritoriale din stînga Nistrului');
   assert.equal(admin.shortName.en,'Administrative-territorial units of the left bank of Nistru');
   assert.equal(admin.shortName.ro,'Unitățile administrativ-teritoriale din stînga Nistrului');
-  assert.equal(shortTreeName(admin,'ro'),'Stânga Nistrului');
+  assert.equal(shortTreeName(admin,'ro'),'UATSN');
+  assert.equal(shortTreeName(admin,'en'),'ATULBD');
+  const statistical=byId.get('stat-MD120');
+  assert.equal(statistical.statisticalRoles[0].code,'MD120');
+  assert.equal(statistical.sourceTags['ref:nuts'],'MD121','Conflicting OSMB provenance retained');
+  assert.equal(statistical.sourceTags.alt_name,'Regiunea Transnistria');
+  assert.equal(statistical.officialName,'Unitățile administrativ-teritoriale din stînga Nistrului');
+  assert.equal(shortTreeName(statistical,'ro'),'Transnistria');
+  assert.equal(shortTreeName(statistical,'en'),'Transnistria');
 });
 
 test('Chițcani shows the short Romanian name without changing certified OSMB/CUATM records',()=>{
