@@ -102,7 +102,9 @@ const WORDS = {
     cardAdminRole: 'Administrative role', roleOsmGeometry: 'OSM administrative geometry',
     roleRegistryOnly: 'National-register role; no separate OSM boundary',
     roleRegistryParent: 'Register parent code', cardStatParent: 'Statistical parent',
-    cardOpenParent: 'Open parent entity'
+    cardOpenParent: 'Open parent entity',
+    cardChildren: 'Subterritories in this tree view', cardChildrenCount: 'subterritories',
+    cardMoreChildren: 'Show next 12', cardOpenChild: 'Open child entity'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -172,7 +174,9 @@ const WORDS = {
     cardAdminRole: 'Rol administrativ', roleOsmGeometry: 'Geometrie administrativă OSM',
     roleRegistryOnly: 'Rol din registrul național; fără contur OSM separat',
     roleRegistryParent: 'Cod părinte din registru', cardStatParent: 'Părinte statistic',
-    cardOpenParent: 'Deschide entitatea părinte'
+    cardOpenParent: 'Deschide entitatea părinte',
+    cardChildren: 'Subunități în acest arbore', cardChildrenCount: 'subunități',
+    cardMoreChildren: 'Afișează încă 12', cardOpenChild: 'Deschide subunitatea'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -265,6 +269,9 @@ export default function App() {
   const [navBusy,setNavBusy] = useState(false);
   const navigationEpoch = useRef(0);
   const lastDrawerRef = useRef<Drawer>(null);
+  const pendingCardNavigationRef = useRef<string|null>(null);
+  // Progressive display keeps large administrative branches lightweight.
+  const [cardChildrenPage,setCardChildrenPage] = useState<{id:string;count:number}|null>(null);
 
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
@@ -303,6 +310,10 @@ export default function App() {
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
   const cardRoles=currentNode?entityCardRoles(currentNode):null;
+  // These are presentation-tree children for the ACTIVE tree view, never
+  // mutations to the canonical administrative/legal parent identifiers.
+  const cardChildren=currentNode?(hierarchy.get(currentNode.id)||[]):[];
+  const cardChildrenShown=cardChildrenPage?.id===selected?cardChildrenPage.count:12;
   const breadcrumbs = useMemo(()=>{
     const path:Territory[]=[];
     let cursor=selected?nodes.get(selected):undefined;
@@ -644,6 +655,21 @@ export default function App() {
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
+  function chooseRelated(id:string){
+    // Only card-internal navigation moves focus to a new card's heading.
+    pendingCardNavigationRef.current=id;
+    choose(id); // Never toggles visibility or moves the camera.
+  }
+  useEffect(()=>{
+    if(!selected||pendingCardNavigationRef.current!==selected)return;
+    const panel=document.querySelector<HTMLElement>(
+      window.innerWidth<=700?'.drawer-detail':'.detail-sidebar');
+    const heading=panel?.querySelector<HTMLHeadingElement>('.entity-title h3');
+    if(!heading)return;
+    pendingCardNavigationRef.current=null;
+    panel?.scrollTo({top:0,behavior:'auto'});
+    heading.focus({preventScroll:true});
+  },[selected,drawer,detailPanelOpen]);
   function toggleModulePanel(id:ModuleId){
     setToolsOpen(false);
     setToolSection(null);
@@ -702,6 +728,8 @@ export default function App() {
   function closeDetailPanel(){
     setDetailPanelOpen(false);
     if(drawer==='detail')setDrawer(null);
+    else window.requestAnimationFrame(()=>
+      document.querySelector<HTMLButtonElement>('.header-entity-action')?.focus());
   }
   // Home restores only the camera. Reset geometries returns to the initial
   // RO/MD outline preview without changing map language, basemap or simplification.
@@ -941,20 +969,20 @@ export default function App() {
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
         <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
-        <div><h3>{labelOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
+        <div><h3 tabIndex={-1}>{labelOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
       </header>
       {breadcrumbs.length>0&&<nav className="entity-breadcrumbs" aria-label={t.path}>
         {breadcrumbs.map((crumb,index)=><span className="breadcrumb-part" key={crumb.id}>
           {index>0&&<span aria-hidden="true">›</span>}
           <button type="button" aria-current={crumb.id===currentNode.id?'location':undefined}
-            onClick={()=>choose(crumb.id)}>{labelOf(crumb,lang)}</button>
+            onClick={()=>chooseRelated(crumb.id)}>{labelOf(crumb,lang)}</button>
         </span>)}
       </nav>}
       <div className="sibling-navigation">
         <button type="button" disabled={siblingIndex<=0}
-          onClick={()=>{const n=siblings[siblingIndex-1];if(n)choose(n.id);}}>‹ {t.previous}</button>
+          onClick={()=>{const n=siblings[siblingIndex-1];if(n)chooseRelated(n.id);}}>‹ {t.previous}</button>
         <button type="button" disabled={siblingIndex<0||siblingIndex>=siblings.length-1}
-          onClick={()=>{const n=siblings[siblingIndex+1];if(n)choose(n.id);}}>{t.next} ›</button>
+          onClick={()=>{const n=siblings[siblingIndex+1];if(n)chooseRelated(n.id);}}>{t.next} ›</button>
       </div>
       <div className="entity-actions">
         <button type="button" onClick={()=>toggleVisible(currentNode.id)}>{visibleSet.has(currentNode.id)?t.hide:t.view}</button>
@@ -1015,10 +1043,7 @@ export default function App() {
       </EntityCardSection>}
       {cardRoles&&cardRoles.statistical.length>0&&
       <EntityCardSection title={t.cardStatistics} kind="statistical">
-        <dl className="metadata">
-          <dt>{t.statisticalRole}</dt><dd>{codeOf(currentNode)||null}</dd>
-        </dl>
-        <ul className="entity-statistical-roles">
+        <ul className="entity-statistical-roles" aria-label={t.statisticalRole}>
           {cardRoles.statistical.map((role,index)=>
             <li key={role.classification+'-'+role.code+'-'+index}>
               <div className="entity-statistical-primary">
@@ -1039,7 +1064,7 @@ export default function App() {
             <dd>{nodes.get(currentNode.administrativeParentId)?
               <button type="button" className="entity-parent-link"
                 aria-label={t.cardOpenParent+': '+nodes.get(currentNode.administrativeParentId)!.officialName}
-                onClick={()=>choose(currentNode.administrativeParentId!)}>
+                onClick={()=>chooseRelated(currentNode.administrativeParentId!)}>
                 {nodes.get(currentNode.administrativeParentId)!.officialName}
               </button>:null}</dd>
           </>}
@@ -1048,7 +1073,7 @@ export default function App() {
             <dd>{nodes.get(currentNode.treeParentId)?
               <button type="button" className="entity-parent-link"
                 aria-label={t.cardOpenParent+': '+labelOf(nodes.get(currentNode.treeParentId)!,lang)}
-                onClick={()=>choose(currentNode.treeParentId!)}>
+                onClick={()=>chooseRelated(currentNode.treeParentId!)}>
                 {labelOf(nodes.get(currentNode.treeParentId)!,lang)}
               </button>:null}</dd>
           </>}
@@ -1058,10 +1083,29 @@ export default function App() {
               <dt>{t.cardStatParent} ({role.parentCode})</dt>
               <dd><button type="button" className="entity-parent-link"
                 aria-label={t.cardOpenParent+': '+labelOf(parent,lang)}
-                onClick={()=>choose(parent.id)}>{labelOf(parent,lang)}</button></dd>
+                onClick={()=>chooseRelated(parent.id)}>{labelOf(parent,lang)}</button></dd>
             </div>:null;
           })}
         </dl>
+      </EntityCardSection>}
+      {cardChildren.length>0&&
+      <EntityCardSection title={t.cardChildren+' ('+cardChildren.length+')'} kind="children">
+        <ul className="entity-child-list" aria-label={t.cardChildren}>
+          {cardChildren.slice(0,cardChildrenShown).map(child=>
+            <li key={child.id}>
+              <button type="button" className="entity-child-link"
+                aria-label={t.cardOpenChild+': '+labelOf(child,lang)}
+                onClick={()=>chooseRelated(child.id)}>
+                <span>{labelOf(child,lang)}</span>
+                <small>{roleLabel(child)}</small>
+              </button>
+            </li>)}
+        </ul>
+        {cardChildren.length>cardChildrenShown&&
+          <button type="button" className="entity-children-more"
+            onClick={()=>setCardChildrenPage({id:currentNode.id,count:cardChildrenShown+12})}>
+            {t.cardMoreChildren} · {Math.min(cardChildrenShown,cardChildren.length)} / {cardChildren.length}
+          </button>}
       </EntityCardSection>}
       <EntityCardSection title={t.cardCartography} kind="cartographic">
         <dl className="metadata">
@@ -1259,8 +1303,11 @@ export default function App() {
           <span className="module-short">{item[lang].split(' ')[0].slice(0,8)}</span>
         </button>)}</nav>
       {modulePanelOpen&&<aside id="atlas-module-panel" className="tree-sidebar" aria-label={MODULES.find(x=>x.id===module)?.[lang]}>
-        <button type="button" className="pane-close" aria-label={t.close} title={t.close}
-          onClick={closeModulePanel}>×</button>
+        <div className="pane-toolbar">
+          <span aria-hidden="true">{MODULES.find(x=>x.id===module)?.[lang]}</span>
+          <button type="button" className="pane-close" aria-label={t.close} title={t.close}
+            onClick={closeModulePanel}>×</button>
+        </div>
         {module==='administrative'?treePanel:
           <section className="tree-content">
             <div className="panel-heading"><h2>{MODULES.find(x=>x.id===module)?.[lang]}</h2></div>
@@ -1290,9 +1337,13 @@ export default function App() {
           {geomError?t.dataError:t.mapLoading}
         </div>}
       </main>
-      {currentNode&&detailPanelOpen&&<aside className="detail-sidebar" aria-label={t.details}>
-        <button type="button" className="pane-close" aria-label={t.close} title={t.close}
-          onClick={closeDetailPanel}>×</button>
+      {currentNode&&detailPanelOpen&&<aside className="detail-sidebar"
+        aria-label={t.details+': '+labelOf(currentNode,lang)}>
+        <div className="pane-toolbar">
+          <span aria-hidden="true">{labelOf(currentNode,lang)}</span>
+          <button type="button" className="pane-close" aria-label={t.close} title={t.close}
+            onClick={closeDetailPanel}>×</button>
+        </div>
         {details}
       </aside>}
     </div>
@@ -1300,11 +1351,16 @@ export default function App() {
       if(drawer==='tree')closeModulePanel();else closeDetailPanel();
     }}>
       <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true"
-        aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):t.details}
+        aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
+          t.details+(currentNode?': '+labelOf(currentNode,lang):'')}
         onClick={e=>e.stopPropagation()}>
-        <button className="drawer-close" aria-label={t.close} onClick={()=>{
-          if(drawer==='tree')closeModulePanel();else closeDetailPanel();
-        }}>×</button>
+        <div className="drawer-toolbar">
+          <span aria-hidden="true">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
+            currentNode?labelOf(currentNode,lang):t.details}</span>
+          <button type="button" className="drawer-close" aria-label={t.close} onClick={()=>{
+            if(drawer==='tree')closeModulePanel();else closeDetailPanel();
+          }}>×</button>
+        </div>
         {drawer==='tree'?(module==='administrative'?treePanel:
           <section className="tree-content">
             <div className="panel-heading"><h2>{MODULES.find(x=>x.id===module)?.[lang]}</h2></div>
