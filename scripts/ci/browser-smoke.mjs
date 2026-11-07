@@ -302,6 +302,15 @@ async function tablet(cdp){
     'Tablet module close button restores map');
   await p.close();
 }
+async function assertMobileScalePlacement(p,label){
+  const geometry=await p.eval("(()=>{const area=document.querySelector('.map-area').getBoundingClientRect();const rail=document.querySelector('.module-rail').getBoundingClientRect();const scale=document.querySelector('.maplibregl-ctrl-scale').getBoundingClientRect();const attr=document.querySelector('.maplibregl-ctrl-attrib').getBoundingClientRect();const paddedIntersection=!(scale.right+4<=attr.left||attr.right+4<=scale.left||scale.bottom+4<=attr.top||attr.bottom+4<=scale.top);return {mapBottom:area.bottom,railTop:rail.top,scaleBottom:scale.bottom,scaleLeft:scale.left,mapLeft:area.left,scaleRight:scale.right,attributionLeft:attr.left,overlapsAttribution:paddedIntersection};})()");
+  assert(geometry.mapBottom-geometry.scaleBottom>=5&&geometry.mapBottom-geometry.scaleBottom<=28,
+    label+' scale must sit near bottom of map, not float above it: '+JSON.stringify(geometry));
+  assert(geometry.scaleLeft>=geometry.mapLeft+5&&geometry.scaleBottom<=geometry.railTop-5,
+    label+' scale must remain inside the map, clear of module bar: '+JSON.stringify(geometry));
+  assert(!geometry.overlapsAttribution,
+    label+' scale must not cover OpenStreetMap attribution: '+JSON.stringify(geometry));
+}
 async function mobile(cdp){
   const p=await cdp.page(390,844,true);
   await p.wait("!!document.querySelector('.map-area .zoom-controls')",'mobile app mounted');
@@ -316,6 +325,7 @@ async function mobile(cdp){
   assert.equal(geometry.zoomButtons,3,'Mobile map contains only zoom and Home');
   assert.equal(await p.eval("!!document.querySelector('.map-area .mobile-controls')"),false,
     'Duplicate mobile floating buttons removed');
+  await assertMobileScalePlacement(p,'390px');
   await p.snap('mobile-initial.png');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("!!document.querySelector('.drawer[role=dialog] .tree-content')",'mobile tree drawer');
@@ -385,6 +395,7 @@ async function narrowMobile(cdp){
   assert(metrics.zoomTop>=metrics.mapTop&&metrics.zoomBottom<metrics.railTop,
     'Zoom/Home toolbar does not overlap the header or module bar');
   assert(metrics.zoomRight<=metrics.width,'Zoom toolbar stays inside viewport');
+  await assertMobileScalePlacement(p,'360px');
   await p.snap('mobile-360-initial.png');
 
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
