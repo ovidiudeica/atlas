@@ -15,6 +15,10 @@ function comparable(value){
 export function shortTreeName(node,lang){
   if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
   if(node.id==='osm-r58974')return 'Moldova';
+  // Two separate city-council relations under Nistrenia have descriptive
+  // administrative qualifiers in English; the geographical tree names do not.
+  if(node.id==='osm-r1702219'||node.id==='osm-r944727')
+    return node.name;
   // One administrative relation and one independent NTS3 statistical entity.
   if(node.id==='osm-r2607033'||node.statisticalRoles?.some(x=>x.code==='MD120'))
     return LEFT_BANK[lang==='ro'?0:1];

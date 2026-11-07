@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibre-gl';
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
+import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
   matchingCombinedLevelIds, matchingOsmLevelIds, matchingStatisticalLevelIds } from './data/osmLevelFilter.mjs';
 import { REFERENCE_STYLE, administrativeStyle, statisticalStyle, styleForEntity } from './data/cartographicStyle.mjs';
@@ -168,7 +169,7 @@ function restoreVisible(): string[] {
   } catch { /* Use safe defaults if an older preference cannot be read. */ }
   return DEFAULT_VISIBLE;
 }
-function createHierarchy(nodes: Territory[], view: TreeView): Map<string, Territory[]> {
+function createHierarchy(nodes: Territory[], view: TreeView, lang: Locale): Map<string, Territory[]> {
   const map = new Map<string, Territory[]>();
   for (const node of nodes) {
     if(view === 'administrative' && !node.roles.includes('administrative')) continue;
@@ -178,15 +179,8 @@ function createHierarchy(nodes: Territory[], view: TreeView): Map<string, Territ
     const arr=map.get(parent) || [];
     arr.push(node); map.set(parent, arr);
   }
-  for(const arr of map.values())arr.sort((a,b) => {
-    const aStat=a.roles.includes('statistical')&&!a.roles.includes('administrative')?0:1;
-    const bStat=b.roles.includes('statistical')&&!b.roles.includes('administrative')?0:1;
-    if(aStat!==bStat)return aStat-bStat;
-    const aCode=a.statisticalRoles[0]?.code,bCode=b.statisticalRoles[0]?.code;
-    if(view!=='administrative' && aCode && bCode)return aCode.localeCompare(bCode,'en',{numeric:true});
-    if((a.adminLevel??0)!==(b.adminLevel??0) && view==='administrative')return (a.adminLevel??0)-(b.adminLevel??0);
-    return a.name.localeCompare(b.name,'ro');
-  });
+  for(const [parentId,arr] of map)
+    arr.sort((a,b)=>compareTreeSiblings(a,b,view,parentId,lang));
   return map;
 }
 function featureCountryCode(id: string): string {
@@ -282,7 +276,7 @@ export default function App() {
     }
     return keys;
   },[mapVisible,nodes,adminFilters,statFilters]);
-  const hierarchy = useMemo(()=>createHierarchy(catalog,treeView),[catalog,treeView]);
+  const hierarchy = useMemo(()=>createHierarchy(catalog,treeView,lang),[catalog,treeView,lang]);
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
