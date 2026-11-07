@@ -196,6 +196,36 @@ async function desktop(cdp){
       await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   }
+  // WEB-R3.10: the NTS3 regions group ADM4 only in All; each ADM4
+  // already owns its ADM8 children. Check regional seat then local seat.
+  await p.eval("document.querySelector('.tree-sidebar .tree-filters button:first-child').click()");
+  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .node-name')).some(x=>x.textContent.trim()==='West')",'NTS2 West exists');
+  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
+  for(const [region,seat,expected] of [['North','Bălți',12],['Centre','Ialoveni',13],['South','Cimișlia',8]]){
+    const regionExpr=desktopRow(region,'NTS 3');
+    await p.wait("!!("+regionExpr+")",'NTS3 region '+region);
+    await p.eval(regionExpr+".querySelector('.expand-button').click()");
+    await p.wait("(()=>{const e="+regionExpr+";return e?.closest('.territory-branch')?.querySelectorAll(':scope > .tree-children > .territory-branch').length==="+expected+";})()",
+      'Region '+region+' ADM4 children');
+    const districts=await desktopChildren(regionExpr);
+    assert.equal(districts.length,expected);
+    assert.equal(districts[0].name,seat,region+' agency seat first');
+    assert(districts.every(x=>x.level.startsWith('ADM 4')),region+' children are ADM4');
+    const districtExpr=desktopRow(seat,'ADM 4');
+    await p.eval(districtExpr+".querySelector('.expand-button').click()");
+    await p.wait("(()=>{const x="+districtExpr+";return !!x?.closest('.territory-branch')?.querySelector('.tree-children .territory-branch');})()",
+      'ADM8 children shown for '+seat);
+    const locals=await desktopChildren(districtExpr);
+    assert.equal(locals[0].name,seat,seat+' locality first');
+    assert(locals.every(x=>x.level.startsWith('ADM 8')),seat+' children are ADM8');
+    await p.eval(districtExpr+".scrollIntoView({block:'center'})");
+    await p.snap('desktop-md-'+region.toLowerCase()+'-seats-en.png');
+    await p.eval(districtExpr+".querySelector('.expand-button').click()");
+    await p.eval(regionExpr+".querySelector('.expand-button').click()");
+  }
+  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
+  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   await p.eval("document.querySelector('.tree-sidebar .tree-filters button:first-child').click()");
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Repeated module click closes panel');
@@ -588,6 +618,31 @@ async function mobile(cdp){
   await p.wait("!!document.querySelector('.drawer .tree-footnote strong')",'mobile catalog shown in drawer');
   assert(await p.eval("document.querySelector('.drawer[role=dialog]')?.getAttribute('aria-modal')==='true'"));
   await p.snap('mobile-tree-drawer.png');
+  // WEB-R3.10 mobile: same regional/ADM4/ADM8 nesting in the drawer,
+  // regardless of the persisted Romanian/English locale preference.
+  const regionalLocale=await p.eval("document.documentElement.lang==='ro'?'Nord':'North'");
+  const westernLocale=await p.eval("document.documentElement.lang==='ro'?'Vest':'West'");
+  const drawerLine=(name)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+")";
+  await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
+  await p.wait("!!("+drawerLine(westernLocale)+")",'mobile western statistical region');
+  await p.eval(drawerLine(westernLocale)+".querySelector('.expand-button').click()");
+  await p.wait("!!("+drawerLine(regionalLocale)+")",'mobile northern statistical region');
+  await p.eval(drawerLine(regionalLocale)+".querySelector('.expand-button').click()");
+  const firstNorthern=await p.eval("(()=>{const x="+drawerLine(regionalLocale)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')].map(x=>x.textContent.trim());})()");
+  assert.equal(firstNorthern.length,12);
+  assert.equal(firstNorthern[0],'Bălți','Mobile northern region puts agency seat first');
+  const baltiDistrict="Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Bălți'&&x.querySelector('.node-level')?.textContent.trim().startsWith('ADM 4'))";
+  await p.eval(baltiDistrict+".querySelector('.expand-button').click()");
+  await p.wait("(()=>{const x="+baltiDistrict+";return !!x?.closest('.territory-branch')?.querySelector('.tree-children .territory-branch');})()",
+    'Mobile Bălți ADM8 expanded');
+  const mobileBaltiFirst=await p.eval("(()=>{const x="+baltiDistrict+";return x.closest('.territory-branch').querySelector(':scope > .tree-children > .territory-branch > .tree-line .node-name')?.textContent.trim();})()");
+  assert.equal(mobileBaltiFirst,'Bălți','Mobile seat locality first');
+  await p.eval(baltiDistrict+".scrollIntoView({block:'center'})");
+  await p.snap('mobile-md-north-balti-nested.png');
+  await p.eval(baltiDistrict+".querySelector('.expand-button').click()");
+  await p.eval(drawerLine(regionalLocale)+".querySelector('.expand-button').click()");
+  await p.eval(drawerLine(westernLocale)+".querySelector('.expand-button').click()");
+  await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
   await p.eval("document.querySelector('.drawer .tree-line .tree-label').click()");
   await p.wait("!!document.querySelector('.drawer-detail .entity-card')",'Mobile selection opens details');
   await p.eval("document.querySelector('.drawer-close').click()");
