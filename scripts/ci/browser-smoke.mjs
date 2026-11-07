@@ -226,6 +226,54 @@ async function desktop(cdp){
   }
   await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
   await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  // WEB-R3.13: browse the actual East NTS3 → Bender / UATSN structure.
+  // Exact identities are retained; CUATM distinguishes both Hlinaia rows.
+  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  const eastStat=desktopRow('East','NTS 2');
+  await p.wait("!!("+eastStat+")",'East NTS2 appears');
+  await p.eval(eastStat+".querySelector('.expand-button').click()");
+  const eastNts3=desktopRow('Left Bank','NTS 3');
+  await p.wait("!!("+eastNts3+")",'Eastern Left Bank NTS3 appears');
+  await p.eval(eastNts3+".querySelector('.expand-button').click()");
+  const eastParents=await desktopChildren(eastNts3);
+  assert.deepEqual(eastParents.map(x=>x.name),['Bender','Left Bank']);
+  assert(eastParents.every(x=>x.level==='ADM 4'));
+  const benderAdm4=desktopRow('Bender','ADM 4');
+  await p.eval(benderAdm4+".querySelector('.expand-button').click()");
+  const benderAdms=await desktopChildren(benderAdm4);
+  assert.deepEqual(benderAdms.map(x=>x.name),['Bender','Proteagailovca']);
+  assert(benderAdms.every(x=>x.level==='ADM 8'));
+  await p.eval(benderAdm4+".scrollIntoView({block:'center'})");
+  await p.snap('desktop-east-bender-hierarchy-en.png');
+  await p.eval(benderAdm4+".querySelector('.expand-button').click()");
+  const uatsnAdm4=desktopRow('Left Bank','ADM 4');
+  await p.eval(uatsnAdm4+".querySelector('.expand-button').click()");
+  const uatsnChildren=await desktopChildren(uatsnAdm4);
+  assert.equal(uatsnChildren.length,79);
+  assert(uatsnChildren.every(x=>x.level.startsWith('ADM 8')),'Level tags may also show CUATM for duplicate Hlinaia');
+  const enNames=uatsnChildren.map(x=>x.name);
+  assert.deepEqual(enNames,[...enNames].sort((a,b)=>a.localeCompare(b,'en')),'English alphabetic UATSN');
+  await p.eval(uatsnAdm4+".scrollIntoView({block:'center'})");
+  await p.snap('desktop-east-uatsn-en.png');
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='RO').click()");
+  await p.wait("document.documentElement.lang==='ro'",'Romanian UATSN switch');
+  const uatsnRo=desktopRow('Stânga Nistrului','ADM 4');
+  const roKids=await desktopChildren(uatsnRo);
+  assert.equal(roKids.length,79);
+  assert.deepEqual(roKids.map(x=>x.name),[...roKids.map(x=>x.name)].sort((a,b)=>a.localeCompare(b,'ro')),
+    'Romanian alphabetic UATSN');
+  const hlinaia=await p.eval("(()=>{const node="+uatsnRo+";return [...node.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].filter(x=>x.querySelector('.node-name')?.textContent.trim()==='Hlinaia').map(x=>({level:x.querySelector('.node-level')?.textContent.trim(),accessible:x.querySelector('.tree-label')?.getAttribute('aria-label')}));})()");
+  assert.deepEqual(hlinaia.map(x=>x.level),['ADM 8 · CUATM 7625','ADM 8 · CUATM 5029']);
+  assert(hlinaia[0].accessible?.includes('7625')&&hlinaia[1].accessible?.includes('5029'));
+  await p.eval(uatsnRo+".scrollIntoView({block:'center'})");
+  await p.snap('desktop-east-uatsn-ro-hlinaia.png');
+  await p.eval(uatsnRo+".querySelector('.expand-button').click()");
+  const ntsRo=desktopRow('Stânga Nistrului','NTS 3');
+  await p.eval(ntsRo+".querySelector('.expand-button').click()");
+  await p.eval(desktopRow('Est','NTS 2')+".querySelector('.expand-button').click()");
+  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
+  await p.wait("document.documentElement.lang==='en'",'Restore original desktop test locale');
   await p.eval("document.querySelector('.tree-sidebar .tree-filters button:first-child').click()");
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Repeated module click closes panel');

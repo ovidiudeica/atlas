@@ -799,6 +799,11 @@ export default function App() {
     const isExpanded=expandedSet.has(node.id);
     const isChecked=visibleSet.has(node.id);
     const rowLabel=labelOf(node,lang);
+    // Two separate UATSN ADM8 polygons share the Romanian name Hlinaia.
+    // Keep the geographical label identical; disambiguate only in UI metadata.
+    const eastHlinaiaCode=(node.id==='osm-r9301463'||node.id==='osm-r8291058')
+      ?node.registry?.code:null;
+    const accessibleRowLabel=eastHlinaiaCode?rowLabel+' (CUATM '+eastHlinaiaCode+')':rowLabel;
     const stat=node.statisticalRoles.length>0;
     return <div className="territory-branch" key={node.id} role={searchMatch?'none':'none'}>
       <div className={'tree-line'+(selected===node.id?' is-selected':'')} role="treeitem"
@@ -806,16 +811,16 @@ export default function App() {
            aria-expanded={!searchMatch&&childNodes.length?isExpanded:undefined}
            style={{paddingLeft: Math.min(depth,7)*14+3}}>
         {childNodes.length&&!searchMatch?
-          <button className="expand-button" aria-label={(isExpanded?t.collapse:t.expand)+' '+rowLabel}
+          <button className="expand-button" aria-label={(isExpanded?t.collapse:t.expand)+' '+accessibleRowLabel}
             onClick={()=>setExpanded(old=>isExpanded?old.filter(id=>id!==node.id):[...old,node.id])}>
             {isExpanded?'⌄':'›'}</button>:
           <span className="tree-spacer" aria-hidden="true">·</span>}
-        <input type="checkbox" checked={isChecked} aria-label={t.visible+': '+rowLabel}
+        <input type="checkbox" checked={isChecked} aria-label={t.visible+': '+accessibleRowLabel}
           onChange={()=>toggleVisible(node.id)} />
-        <button className="tree-label" aria-label={rowLabel} title={node.officialName}
+        <button className="tree-label" aria-label={accessibleRowLabel} title={node.officialName}
           onClick={()=>searchMatch?chooseSearch(node.id):choose(node.id)}>
           <span className="node-name">{rowLabel}</span>
-          <span className={'node-level'+(stat?' is-stat':'')}>{roleLabel(node)}</span>
+          <span className={'node-level'+(stat?' is-stat':'')}>{roleLabel(node)}{eastHlinaiaCode?' · CUATM '+eastHlinaiaCode:''}</span>
         </button>
         {searchMatch&&<span className="search-country">{node.country}</span>}
       </div>
