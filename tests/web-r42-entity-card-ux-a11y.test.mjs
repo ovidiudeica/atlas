@@ -48,7 +48,7 @@ test('WEB-R4.2: card-local navigation transfers focus and resets its own scroll 
   assert.match(flow,/panel\?\.scrollTo\(\{top:0,behavior:'auto'\}\)/);
   assert.match(flow,/\[selected,drawer,detailPanelOpen\]/);
   assert.doesNotMatch(flow,/setVisible\(|fitBounds\(|resetGeometries\(/);
-  assert.match(app,/<h3 tabIndex=\{-1\}>\{labelOf\(currentNode,lang\)\}<\/h3>/);
+  assert.match(app,/<h3 tabIndex=\{-1\}>\{cardNameOf\(currentNode,lang\)\}<\/h3>/);
   assert.match(app,/onClick=\{\(\)=>chooseRelated\(parent\.id\)\}/);
   assert.match(app,/onClick=\{\(\)=>chooseRelated\(child\.id\)\}/);
   assert.match(app,/onClick=\{\(\)=>chooseRelated\(crumb\.id\)\}/);
@@ -57,8 +57,8 @@ test('WEB-R4.2: card-local navigation transfers focus and resets its own scroll 
 test('WEB-R4.2: closing controls occupy a sticky toolbar and name the selected dialog',()=>{
   assert.match(app,/className="pane-toolbar"/);
   assert.match(app,/className="drawer-toolbar"/);
-  assert(app.includes("aria-label={t.details+': '+labelOf(currentNode,lang)}"));
-  assert(app.includes("t.details+(currentNode?': '+labelOf(currentNode,lang):'')"));
+  assert(app.includes("aria-label={t.details+': '+cardNameOf(currentNode,lang)}"));
+  assert(app.includes("t.details+(currentNode?': '+cardNameOf(currentNode,lang):'')"));
   assert.match(app,/document\.querySelector<HTMLButtonElement>\('\.header-entity-action'\)\?\.focus\(\)/);
   assert.match(styles,/\.pane-toolbar,\.drawer-toolbar\{/);
   assert.match(styles,/\.pane-toolbar \.pane-close,\.drawer-toolbar \.drawer-close\{/);
