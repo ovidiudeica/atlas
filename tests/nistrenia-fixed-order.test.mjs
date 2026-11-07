@@ -17,16 +17,16 @@ const children=(id,view)=>records.filter(node=>
 const ranked=(parent,view,lang)=>children(parent,view).sort((a,b)=>
   compareTreeSiblings(a,b,view,parent,lang));
 const EXPECTED_IDS=[
-  'osm-r1702219', // Tiraspol
-  'osm-r944727',  // Bender
-  'osm-r1702218', // Slobozia
-  'osm-r1702214', // Grigoriopol
-  'osm-r1702215', // Dubăsari
-  'osm-r1702217', // Rîbnița
-  'osm-r1702216'  // Camenca
+  'osm-r944727',  // Bender 32
+  'osm-r1702219', // Tiraspol 33
+  'osm-r1702214', // Grigoriopol 40
+  'osm-r1702215', // Dubăsari 45
+  'osm-r1702217', // Rîbnița 55
+  'osm-r1702218', // Slobozia 57
+  'osm-r1702216'  // Camenca 66
 ];
-const EXPECTED_RO=['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca'];
-const EXPECTED_EN=['Tiraspol','Bender','Slobdzeya','Grigoriopol','Dubossary','Rybnitsa','Kamenka'];
+const EXPECTED_RO=['Bender','Tiraspol','Grigoriopol','Dubăsari','Rîbnița','Slobozia','Camenca'];
+const EXPECTED_EN=['Bender','Tiraspol','Grigoriopol','Dubossary','Rybnitsa','Slobdzeya','Kamenka'];
 
 test('WEB-R3.15: seven Nistrenia ADM5 children exactly match original Atlas IDs and parents',()=>{
   assert.equal(records.length,4283);
@@ -52,7 +52,7 @@ test('WEB-R3.15: seven Nistrenia ADM5 children exactly match original Atlas IDs 
     'Nistrenia ADM children are not statistical entities');
 });
 
-test('WEB-R3.15: fixed Tiraspol, Bender, then five raions south-to-north in BOTH views and languages',()=>{
+test('WEB-R3.18: verified PMR cadastral seat-code order in BOTH views and languages',()=>{
   for(const view of ['all','administrative'])
     for(const lang of ['ro','en']){
       const nodes=ranked(NISTRIAN_PARENT_ID,view,lang);
