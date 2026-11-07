@@ -294,8 +294,8 @@ async function desktop(cdp){
   await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"NTS 2\"]').click()");
   await p.wait("document.querySelector('.map-area')?.dataset.mapVisibleCount==='8'",
     'NTS 2 adds two regions to NUTS 1 without duplicates');
-  await p.eval("document.querySelector('.tree-sidebar .atlas-export-tools>summary').click()");
-  await p.wait("!document.querySelector('#phase5-export-panel')",'close export overlay for statistical evidence');
+  assert.equal(await p.eval("!!document.querySelector('.atlas-global-tools-panel,#phase5-export-panel')"),false,
+    'Global Export stays closed while Administrative filters are used');
   await pause(1000);
   await p.snap('desktop-statistical-regions-shown.png');
   await p.eval("document.querySelector('.tree-sidebar .osm-level-choices input[aria-label=\"NUTS 1\"]').click()");
