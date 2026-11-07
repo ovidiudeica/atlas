@@ -521,6 +521,20 @@ async function desktop(cdp){
   await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Bălți')",
     'Municipality can be searched by original name but appears without Municipality');
   await p.snap('desktop-municipality-short-en.png');
+  // WEB-R3.11: the historical OSMB council label remains a valid search alias;
+  // only the Romanian tree display is shortened. English remains Kitskany.
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
+  await p.call('Input.insertText',{text:'Sovetul sătesc Chițcani'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Kitskany')",
+    'Chițcani source alias resolves to original English short name');
+  await p.snap('desktop-chitcani-short-en.png');
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='RO').click()");
+  await p.wait("document.documentElement.lang==='ro'",'Romanian locale for Chițcani');
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Chițcani')",
+    'Romanian tree presents Chițcani without the OSMB council descriptor');
+  assert.equal(await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Chițcani')?.title"),
+    'Sovetul sătesc Chițcani','Original OSMB descriptor retained in the tree title');
+  await p.snap('desktop-chitcani-short-ro.png');
   await p.close();
 }
 async function tablet(cdp){
