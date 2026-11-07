@@ -281,3 +281,40 @@
     width:min(360px,calc(100vw - 52px));max-height:none;border-radius:0 13px 13px 0}
   .atlas-tools-heading{min-height:66px}
 }
+
+/* WEB-R3.5: three task-based map tools, contextual legend, mobile bottom sheet. */
+.atlas-tools-grab{display:none}
+.atlas-tools-fit-button{border:1px solid #c4d9ca;border-radius:8px;background:#f9fcfa;
+  min-height:44px;padding:10px 12px;text-align:left;font-size:12px;font-weight:750;color:#215c44}
+.atlas-tools-fit-button:hover:not(:disabled){background:#eaf4ec}
+.atlas-tools-fit-button:disabled{opacity:.45;cursor:default}
+.atlas-legend-toolbar{display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;color:#5d7967;font-size:11px}
+.atlas-legend-expand{border:1px solid #bcd5c3;background:#fff;color:#1b6047;
+  min-height:44px;padding:8px 10px;border-radius:7px;font-size:11px;font-weight:700}
+.atlas-tools-footer{border-top:1px solid #e1eae3;margin:0 14px 11px;padding:8px 0 0}
+.atlas-tools-about-link{display:flex;align-items:center;gap:6px;min-height:44px;
+  width:100%;border:0;background:transparent;color:#668273;font-size:11px;
+  text-align:left;text-decoration:underline;text-decoration-color:#bfd3c5}
+.atlas-tools-about-link:hover{color:#1c5e45}
+.atlas-tools-footer .atlas-tools-content{padding:11px 7px 15px}
+@media(max-width:700px){
+  .atlas-tools-overlay{display:flex;flex-direction:column;justify-content:flex-end}
+  .atlas-global-tools-panel{
+    position:relative;top:auto;bottom:auto;left:auto;right:auto;
+    width:100%;max-width:none;
+    max-height:min(78dvh,calc(100% - 14px));
+    border-radius:17px 17px 0 0;border-bottom:0;box-shadow:0 -7px 28px #09281c30;
+    transform:translateY(0);
+  }
+  .atlas-tools-grab{display:flex;align-items:center;justify-content:center;
+    height:23px;min-height:23px;touch-action:pan-y}
+  .atlas-tools-grab span{display:block;width:38px;height:4px;border-radius:10px;background:#afc5b7}
+  .atlas-tools-heading{min-height:54px;padding-top:5px}
+  .atlas-tools-list{padding-top:2px}
+  .atlas-tools-entry{min-height:60px}
+  .atlas-tools-footer{margin-bottom:5px}
+}
+@media(prefers-reduced-motion:reduce){
+  .atlas-global-tools-panel{transition:none!important}
+}
