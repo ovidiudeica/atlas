@@ -198,6 +198,12 @@ async function desktop(cdp){
   await p.snap('desktop-levels-two-columns.png');
 
   // Hide a single ADM 8 geometry from the tree; the filter must update itself.
+  // Choosing a search result clears the search field, so find Brețcu again
+  // rather than toggling the first root checkbox (Romania).
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
+  await p.call('Input.insertText',{text:'Brețcu'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .tree-label')).some(x=>x.textContent.includes('Brețcu'))",
+    'Brețcu tree result for individual visibility toggle');
   await p.eval("document.querySelector('.tree-sidebar .tree-line input[type=checkbox]').click()");
   await p.wait("!JSON.parse(localStorage.getItem('atlas-visible-phase4')).includes('siruta-u64096')",
     'Tree checkbox hides Brețcu immediately');
