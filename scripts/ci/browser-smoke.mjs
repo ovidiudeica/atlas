@@ -365,6 +365,8 @@ async function desktop(cdp){
   assert.deepEqual(resetState.rows,[true,true],'Only two national root geometries must remain selected');
   assert.equal(resetState.search,'','Reset should restore unfiltered tree overview');
   assert.equal(resetState.language,'ro','Language must survive geometry reset');
+  const romanianRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
+  assert.deepEqual(romanianRoots,['România','Moldova'],'Romanian tree uses concise national names');
   await p.eval("document.querySelector('.atlas-tools-toggle').click()");
   await p.eval("document.querySelector('.atlas-tools-entry[aria-controls=atlas-section-settings]').click()");
   assert.equal(await p.eval("document.querySelector('#atlas-section-settings .simplify-control input').checked"),true,
@@ -376,8 +378,6 @@ async function desktop(cdp){
   for(const key of ['entity','lng','lat','zoom'])assert(!new URLSearchParams(resetState.query).has(key),
     'Reset must remove stale shared-URL '+key);
   await p.wait("!document.querySelector('.map-boot-status')",'original national preview reloaded');
-  const romanianRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
-  assert.deepEqual(romanianRoots,['România','Moldova'],'Romanian tree uses concise national names');
   await p.snap('desktop-reset-geometries.png');
 
   await p.call('Page.reload',{ignoreCache:true});
@@ -392,6 +392,9 @@ async function desktop(cdp){
   assert.equal(await p.eval("document.querySelector('#atlas-section-settings .simplify-control input').checked"),true,
     'Simplification preference survives reset and page reload');
   await p.eval("document.querySelector('.atlas-tools-close').click()");
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar input[type=search]')",
+    'Reopen Administrative tree after global Settings before alias search');
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
   await p.call('Input.insertText',{text:'Unitățile din stânga Nistrului'});
   await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label')).some(x=>x.textContent.trim()==='Stânga Nistrului')",
