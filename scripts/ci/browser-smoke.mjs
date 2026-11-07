@@ -272,6 +272,8 @@ async function desktop(cdp){
   await p.eval(ntsRo+".querySelector('.expand-button').click()");
   await p.eval(desktopRow('Est','NTS 2')+".querySelector('.expand-button').click()");
   await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
+  await p.wait("document.documentElement.lang==='en'",'Restore original desktop test locale');
   await p.eval("document.querySelector('.tree-sidebar .tree-filters button:first-child').click()");
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Repeated module click closes panel');
