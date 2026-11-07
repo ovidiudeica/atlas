@@ -168,14 +168,18 @@ async function desktop(cdp){
     'Global tools close the entity details without clearing selection');
   assert.equal(await p.eval("document.activeElement===document.querySelector('.atlas-tools-close')"),true,
     'Global tool dialog focuses its Close button');
-  assert.equal(await p.eval("document.querySelectorAll('.atlas-tools-entry').length"),5,
-    'One compact menu exposes Settings, Fit, Legend, Export, About');
+  assert.equal(await p.eval("document.querySelectorAll('.atlas-tools-entry').length"),3,
+    'Exactly three map tool sections: Appearance, Legend, Export');
+  assert.equal(await p.eval("!!document.querySelector('.atlas-tools-about-link')"),true,
+    'About Atlas is a low-priority footer action, not a fourth primary entry');
   assert.equal(await p.eval("!!document.querySelector('.atlas-tools-content')"),false,
     'Global menu starts with all secondary sections collapsed');
   await p.snap('desktop-global-tools-menu.png');
   await p.eval("document.querySelector('.atlas-tools-entry[aria-controls=atlas-section-settings]').click()");
   assert.equal(await p.eval("!!document.querySelector('#atlas-section-settings')"),true);
-  await p.eval("document.querySelector('.atlas-tools-entry[aria-controls=atlas-section-about]').click()");
+  assert.equal(await p.eval("!!document.querySelector('#atlas-section-settings .atlas-tools-fit-button')"),true,
+    'Fit Visible is grouped with basemap and geometry simplification');
+  await p.eval("document.querySelector('.atlas-tools-about-link').click()");
   assert.equal(await p.eval("!!document.querySelector('#atlas-section-settings')"),false,
     'Opening About collapses Settings (one global section open)');
   assert.equal(await p.eval("!!document.querySelector('#atlas-section-about')"),true,
@@ -255,18 +259,27 @@ async function desktop(cdp){
   assert.equal(await p.eval("document.querySelector('.map-area').dataset.roStyle"),'reference');
   assert.equal(await p.eval("document.querySelector('.map-area').dataset.mapVisibleCount"),'3');
 
-  // The legend must reproduce each actual boundary color and dash style.
+  // The contextual legend starts with only currently rendered boundary styles,
+  // including an individually tree-visible ADM 8 entity (Brețcu).
   await p.eval("document.querySelector('.atlas-tools-toggle').click()");
-  await p.wait("!!document.querySelector('.atlas-global-tools-panel')",'global legend available with Administrative module closed');
+  await p.wait("!!document.querySelector('.atlas-global-tools-panel')",'global legend available independently');
   await p.eval("document.querySelector('.atlas-tools-entry[aria-controls=atlas-section-legend]').click()");
+  const activeLegend=await p.eval("Array.from(document.querySelectorAll('.atlas-tools-legend .legend-row')).map(x=>x.dataset.styleKey)");
+  assert.deepEqual(activeLegend,['reference','ADM 8'],
+    'Contextual legend shows neutral national outlines plus tree-selected ADM 8, not all 13 levels');
+  await p.snap('desktop-legend-active-only.png');
+  await p.eval("document.querySelector('.atlas-legend-expand').click()");
   const legend=await p.eval("(()=>{const l=document.querySelector('.atlas-tools-legend .map-legend');return [...l.querySelectorAll('.legend-row')].map(x=>({key:x.dataset.styleKey,color:getComputedStyle(x.querySelector('.legend-line')).borderTopColor,dash:getComputedStyle(x.querySelector('.legend-line')).borderTopStyle}));})()");
-  assert.equal(legend.length,14,'Reference, seven ADM and six NUTS/NTS legend entries');
-  assert.equal(new Set(legend.map(x=>x.color)).size,14,'Each released cartographic boundary color is unique');
+  assert.equal(legend.length,14,'Full legend expands to reference, seven ADM and six NUTS/NTS entries');
+  assert.equal(new Set(legend.map(x=>x.color)).size,14,'Each cartographic border level has a unique color');
   assert.equal(legend.find(x=>x.key==='NTS 1')?.dash,'dashed');
   assert.equal(legend.find(x=>x.key==='ADM 2')?.dash,'solid');
   await p.eval("document.querySelector('.atlas-tools-legend .map-legend').scrollIntoView({block:'center'})");
   await pause(200);
   await p.snap('desktop-cartographic-legend.png');
+  await p.eval("document.querySelector('.atlas-legend-expand').click()");
+  assert.deepEqual(await p.eval("Array.from(document.querySelectorAll('.atlas-tools-legend .legend-row')).map(x=>x.dataset.styleKey)"),
+    ['reference','ADM 8'],'Full legend collapses back to the styles on the map');
   await p.eval("document.querySelector('.atlas-tools-close').click()");
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("!!document.querySelector('.tree-sidebar .osm-level-filter')",'tree reopened after global legend');
@@ -436,11 +449,16 @@ async function mobile(cdp){
   await p.wait("!!document.querySelector('.atlas-global-tools-panel')",'mobile global map tools');
   assert.equal(await p.eval("document.querySelector('.atlas-global-tools-panel').getAttribute('aria-modal')"),'true');
   assert.equal(await p.eval("document.activeElement===document.querySelector('.atlas-tools-close')"),true);
-  const mobileMenu=await p.eval("(()=>{const panel=document.querySelector('.atlas-global-tools-panel');const rc=panel.getBoundingClientRect();const map=document.querySelector('.map-area').getBoundingClientRect();return {entries:panel.querySelectorAll('.atlas-tools-entry').length,width:rc.width,bottom:rc.bottom,rail:document.querySelector('.module-rail').getBoundingClientRect().top,mapTop:map.top,scroll:document.documentElement.scrollWidth}})()");
-  assert(mobileMenu.entries===5&&mobileMenu.width<=360&&mobileMenu.bottom<=mobileMenu.rail+1
-    &&mobileMenu.scroll<=391,'Mobile tools are compact and clear of the module bar');
+  const mobileMenu=await p.eval("(()=>{const panel=document.querySelector('.atlas-global-tools-panel');const rc=panel.getBoundingClientRect();const map=document.querySelector('.map-area').getBoundingClientRect(),rail=document.querySelector('.module-rail').getBoundingClientRect();return {entries:panel.querySelectorAll('.atlas-tools-entry').length,width:rc.width,bottom:rc.bottom,top:rc.top,rail:rail.top,mapTop:map.top,scroll:document.documentElement.scrollWidth,handle:!!panel.querySelector('.atlas-tools-grab'),about:!!panel.querySelector('.atlas-tools-about-link')}})()");
+  assert(mobileMenu.entries===3&&mobileMenu.width>=389&&mobileMenu.bottom<=mobileMenu.rail+1
+    &&mobileMenu.top>mobileMenu.mapTop+70&&mobileMenu.handle&&mobileMenu.about&&mobileMenu.scroll<=391,
+    'Adaptive bottom sheet uses the full phone width, starts below map header, clears module bar');
   await p.snap('mobile-global-tools-menu.png');
   await p.eval("document.querySelector('.atlas-tools-entry[aria-controls=atlas-section-legend]').click()");
+  assert.deepEqual(await p.eval("Array.from(document.querySelectorAll('.atlas-tools-legend .legend-row')).map(x=>x.dataset.styleKey)"),
+    ['reference'],'Mobile legend starts with only two national neutral reference contours');
+  await p.snap('mobile-global-legend-contextual.png');
+  await p.eval("document.querySelector('.atlas-legend-expand').click()");
   assert.equal(await p.eval("document.querySelectorAll('.atlas-tools-legend .legend-row').length"),14);
   await p.snap('mobile-global-legend.png');
   await p.eval("document.querySelector('.atlas-tools-entry[aria-controls=phase5-export-panel]').click()");
@@ -448,8 +466,18 @@ async function mobile(cdp){
     'Opening Export collapses the mobile Legend');
   assert.equal(await p.eval("!!document.querySelector('#phase5-export-panel select')"),true,
     'Export is available without opening any module');
+  // Gesture dismissal is a real touch sequence on the non-interactive grip.
+  const grab=await p.eval("(()=>{const r=document.querySelector('.atlas-tools-grab').getBoundingClientRect();return {x:r.left+r.width/2,y:r.top+r.height/2};})()");
+  await p.call('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:grab.x,y:grab.y}]});
+  await p.call('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:grab.x,y:grab.y+112}]});
+  await p.call('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+  await p.wait("!document.querySelector('.atlas-global-tools-panel')",'Swipe-down grip dismisses the sheet');
+  await p.wait("document.activeElement===document.querySelector('.atlas-tools-toggle')",
+    'Swipe dismiss returns focus to map tools icon');
+  await p.eval("document.querySelector('.atlas-tools-toggle').click()");
+  await p.wait("!!document.querySelector('.atlas-global-tools-panel')",'Sheet reopens after swipe');
   await p.eval("document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}))");
-  await p.wait("!document.querySelector('.atlas-global-tools-panel')",'Mobile Escape closes global tools');
+  await p.wait("!document.querySelector('.atlas-global-tools-panel')",'Mobile Escape closes bottom sheet');
   await p.wait("document.activeElement===document.querySelector('.atlas-tools-toggle')",
     'Mobile global tool Escape returns focus to opener');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
