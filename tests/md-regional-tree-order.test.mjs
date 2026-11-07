@@ -117,7 +117,7 @@ test('Dubăsari Council seat Coșnița wins over Cocieri and name duplicates do 
  }
 });
 
-test('Statistical view, source parents, and accepted Găgăuzia/Nistrenia/Chișinău rules remain unchanged',()=>{
+test('Statistical view, source parents, and accepted Găgăuzia/WEB-R3.15 Nistrenia/Chișinău rules are respected',()=>{
  for(const node of entities){
    // WEB-R3.10 has no parent overlay; all source parent pointers are read-only.
    assert.equal(presentationParentId(node,'statistical'),node.treeParentId);
@@ -126,7 +126,7 @@ test('Statistical view, source parents, and accepted Găgăuzia/Nistrenia/Chiși
    assert.equal(children(id,'statistical').length,0);
  assert.deepEqual([...children('osm-r65335','all')].sort((a,b)=>
      compareTreeSiblings(a,b,'all','osm-r65335','ro')).map(x=>shortTreeName(x,'ro')),
-   ['Camenca','Dubăsari','Grigoriopol','Rîbnița','Slobozia','Bender','Tiraspol']);
+   ['Tiraspol','Bender','Slobozia','Grigoriopol','Dubăsari','Rîbnița','Camenca']);
  assert.equal(sorted('osm-r1699032','ro','all')[0].id,'osm-r1706978');
  assert.equal(sorted('osm-r1691801','ro','all')[0].id,'osm-r1748490');
  for(const regionId of Object.keys(REGIONAL_SEATS)){
