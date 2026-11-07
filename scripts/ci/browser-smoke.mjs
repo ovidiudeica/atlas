@@ -130,6 +130,24 @@ async function desktop(cdp){
   const englishRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
   assert.deepEqual(englishRoots,['Romania','Moldova'],'English tree uses concise national names');
   await p.snap('desktop-module-open.png');
+  // Nistrenia/Pridnestrovie: five districts first, two city councils last.
+  // Both mixed and administrative tree views must expose the same 7 identities.
+  for(const view of ['all','administrative']){
+    if(view==='administrative')
+      await p.eval("document.querySelector('.tree-sidebar .tree-filters button:nth-child(2)').click()");
+    await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+    await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .node-name')).some(x=>x.textContent.trim()==='Pridnestrovie')",
+      'Nistrenia appears under Moldova');
+    await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').querySelector('.expand-button').click()");
+    const order=await p.eval("(()=>{const line=Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie');return Array.from(line.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim());})()");
+    assert.deepEqual(order,['Dubossary','Grigoriopol','Kamenka','Rybnitsa','Slobdzeya','Bender','Tiraspol'],
+      'English Nistrenia children: alphabetic raions then concise city councils, '+view);
+    await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').scrollIntoView({block:'center'})");
+    await p.snap('desktop-nistrenia-children-en-'+view+'.png');
+    await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').querySelector('.expand-button').click()");
+    await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  }
+  await p.eval("document.querySelector('.tree-sidebar .tree-filters button:first-child').click()");
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Repeated module click closes panel');
   await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
@@ -589,6 +607,19 @@ async function mobile(cdp){
   assert((await p.eval('document.documentElement.scrollWidth'))<=391,'Mobile reset action must not introduce overflow');
   await p.snap('mobile-reset-geometries.png');
   await p.eval("if(!document.querySelector('.drawer .tree-content'))document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.drawer .tree-line .node-name')",
+    'mobile Administrative tree is open for Nistrenia verification');
+  await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  await p.wait("Array.from(document.querySelectorAll('.drawer .tree-line .node-name')).some(x=>x.textContent.trim()==='Nistrenia')",
+    'Romanian Nistrenia appears beneath Moldova on mobile');
+  await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').querySelector('.expand-button').click()");
+  const pmrRomanian=await p.eval("(()=>{const line=Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia');return Array.from(line.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim());})()");
+  assert.deepEqual(pmrRomanian,['Camenca','Dubăsari','Grigoriopol','Rîbnița','Slobozia','Bender','Tiraspol'],
+    'Romanian mobile Nistrenia: five alphabetic raions, then Bender and Tiraspol');
+  await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').scrollIntoView({block:'start'})");
+  await p.snap('mobile-nistrenia-children-ro.png');
+  await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').querySelector('.expand-button').click()");
+  await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   await p.wait("!!document.querySelector('.drawer input[type=search]')",
     'Mobile Administrative tree available for short-name verification');
   await p.eval("document.querySelector('.drawer input[type=search]').focus()");
