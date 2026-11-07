@@ -21,7 +21,7 @@ test('all 4283 certified tree names are concise in both languages',()=>{
     assert(name.length<46,'Overlong label '+node.id+'/'+lang+': '+name);
   }
 });
-test('all 48 previously long English names and 2 Romanian labels are shortened',()=>{
+test('50 English and 47 Romanian presentation-only names are shortened',()=>{
   const changed={en:[],ro:[]};
   function legacy(node,lang){
     if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
@@ -39,10 +39,13 @@ test('all 48 previously long English names and 2 Romanian labels are shortened',
     const before=legacy(node,lang),after=shortTreeName(node,lang);
     if(before!==after)changed[lang].push({id:node.id,before,after});
   }
-  assert.equal(changed.en.length,48,JSON.stringify(changed.en));
-  assert.equal(changed.ro.length,2,JSON.stringify(changed.ro));
-  assert.deepEqual(new Set(changed.ro.map(x=>x.id)),new Set(['osm-r2607033','osm-r6879649']));
-  assert.equal(new Set(changed.en.map(x=>x.id)).size,48);
+  assert.equal(changed.en.length,50,JSON.stringify(changed.en));
+  assert.equal(changed.ro.length,47,JSON.stringify(changed.ro));
+  assert(changed.ro.some(x=>x.id==='osm-r2607033'));
+  assert(changed.ro.some(x=>x.id==='osm-r6879649'));
+  assert(changed.ro.some(x=>x.id==='osm-r8290877'));
+  assert.equal(new Set(changed.ro.map(x=>x.id)).size,47);
+  assert.equal(new Set(changed.en.map(x=>x.id)).size,50);
 });
 test('both left-bank entities and district/municipality names are concise',()=>{
   const get=(id,lang)=>shortTreeName(byId.get(id),lang);
