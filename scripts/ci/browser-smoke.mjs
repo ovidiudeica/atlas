@@ -232,11 +232,12 @@ async function desktop(cdp){
   const eastStat=desktopRow('East','NTS 2');
   await p.wait("!!("+eastStat+")",'East NTS2 appears');
   await p.eval(eastStat+".querySelector('.expand-button').click()");
-  const eastNts3=desktopRow('Left Bank','NTS 3');
-  await p.wait("!!("+eastNts3+")",'Eastern Left Bank NTS3 appears');
+  const eastNts3=desktopRow('Transnistria','NTS 3');
+  await p.wait("!!("+eastNts3+")",'Eastern Transnistria NTS3 appears');
   await p.eval(eastNts3+".querySelector('.expand-button').click()");
   const eastParents=await desktopChildren(eastNts3);
-  assert.deepEqual(eastParents.map(x=>x.name),['Bender','Left Bank']);
+  assert.equal(await p.eval(eastNts3+".querySelector('.node-name').textContent.trim()"),'Transnistria');
+  assert.deepEqual(eastParents.map(x=>x.name),['ATULBD','Bender']);
   assert(eastParents.every(x=>x.level==='ADM 4'));
   const benderAdm4=desktopRow('Bender','ADM 4');
   await p.eval(benderAdm4+".querySelector('.expand-button').click()");
@@ -246,7 +247,7 @@ async function desktop(cdp){
   await p.eval(benderAdm4+".scrollIntoView({block:'center'})");
   await p.snap('desktop-east-bender-hierarchy-en.png');
   await p.eval(benderAdm4+".querySelector('.expand-button').click()");
-  const uatsnAdm4=desktopRow('Left Bank','ADM 4');
+  const uatsnAdm4=desktopRow('ATULBD','ADM 4');
   await p.eval(uatsnAdm4+".querySelector('.expand-button').click()");
   const uatsnChildren=await desktopChildren(uatsnAdm4);
   assert.equal(uatsnChildren.length,79);
@@ -257,7 +258,7 @@ async function desktop(cdp){
   await p.snap('desktop-east-uatsn-en.png');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='RO').click()");
   await p.wait("document.documentElement.lang==='ro'",'Romanian UATSN switch');
-  const uatsnRo=desktopRow('Stânga Nistrului','ADM 4');
+  const uatsnRo=desktopRow('UATSN','ADM 4');
   const roKids=await desktopChildren(uatsnRo);
   assert.equal(roKids.length,79);
   assert.deepEqual(roKids.map(x=>x.name),[...roKids.map(x=>x.name)].sort((a,b)=>a.localeCompare(b,'ro')),
@@ -271,7 +272,7 @@ async function desktop(cdp){
     'Both CUATM homonym badges must be simultaneously visible in Chromium capture');
   await p.snap('desktop-east-uatsn-ro-hlinaia.png');
   await p.eval(uatsnRo+".querySelector('.expand-button').click()");
-  const ntsRo=desktopRow('Stânga Nistrului','NTS 3');
+  const ntsRo=desktopRow('Transnistria','NTS 3');
   await p.eval(ntsRo+".querySelector('.expand-button').click()");
   await p.eval(desktopRow('Est','NTS 2')+".querySelector('.expand-button').click()");
   await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
@@ -547,21 +548,21 @@ async function desktop(cdp){
   await p.call('Input.insertText',{text:'Unitățile din stânga Nistrului'});
   await pause(700);
   const aliasResult=await p.eval("(()=>({query:document.querySelector('.tree-sidebar input[type=search]')?.value,view:[...document.querySelectorAll('.tree-sidebar .tree-filters button')].filter(x=>x.getAttribute('aria-pressed')==='true').map(x=>x.textContent.trim()),matches:[...document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')].map(x=>x.textContent.trim()),count:document.querySelector('.tree-sidebar .results-heading')?.textContent.trim()}))()");
-  assert(aliasResult.matches.includes('Stânga Nistrului'),
+  assert(aliasResult.matches.includes('Transnistria'),
     'Official MD120 search must resolve to short label: '+JSON.stringify(aliasResult));
-  await p.snap('desktop-left-bank-short-name-ro.png');
+  await p.snap('desktop-east-transnistria-short-ro.png');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
   await p.wait("document.documentElement.lang==='en'",'English language switch');
-  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Left Bank')",
-    'Same MD120 search result uses short English label');
-  await p.snap('desktop-left-bank-short-name-en.png');
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Transnistria')",
+    'Same MD120 source alias resolves to Transnistria in English');
+  await p.snap('desktop-east-transnistria-short-en.png');
   // The certified administrative left-bank relation has its own ID and must
   // be short just like the distinct statistical MD120 entity.
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
   await p.call('Input.insertText',{text:'Unitățile administrativ-teritoriale din stînga Nistrului'});
-  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).filter(x=>x.textContent.trim()==='Left Bank').length===2",
-    'Both independent left-bank administrative/statistical identities appear as Left Bank');
-  await p.snap('desktop-two-left-bank-entities-en.png');
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).filter(x=>['Transnistria','ATULBD'].includes(x.textContent.trim())).length===2",
+    'Original full-name search resolves distinct Transnistria NTS3 and ATULBD ADM4 labels');
+  await p.snap('desktop-east-distinct-stat-admin-en.png');
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
   await p.call('Input.insertText',{text:'Basarabeasca District'});
   await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Basarabeasca')",
@@ -741,19 +742,19 @@ async function mobile(cdp){
   const eastDrawerRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
   await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
   await p.eval(eastDrawerRow('Est','NTS 2')+".querySelector('.expand-button').click()");
-  await p.eval(eastDrawerRow('Stânga Nistrului','NTS 3')+".querySelector('.expand-button').click()");
-  const mobileEastOrder=await p.eval("(()=>{const x="+eastDrawerRow('Stânga Nistrului','NTS 3')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>x.querySelector('.node-name')?.textContent.trim());})()");
-  assert.deepEqual(mobileEastOrder,['Bender','Stânga Nistrului']);
-  await p.eval(eastDrawerRow('Stânga Nistrului','ADM 4')+".querySelector('.expand-button').click()");
-  const mobileEastKids=await p.eval("(()=>{const x="+eastDrawerRow('Stânga Nistrului','ADM 4')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
+  await p.eval(eastDrawerRow('Transnistria','NTS 3')+".querySelector('.expand-button').click()");
+  const mobileEastOrder=await p.eval("(()=>{const x="+eastDrawerRow('Transnistria','NTS 3')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>x.querySelector('.node-name')?.textContent.trim());})()");
+  assert.deepEqual(mobileEastOrder,['UATSN','Bender']);
+  await p.eval(eastDrawerRow('UATSN','ADM 4')+".querySelector('.expand-button').click()");
+  const mobileEastKids=await p.eval("(()=>{const x="+eastDrawerRow('UATSN','ADM 4')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
   assert.equal(mobileEastKids.length,79);
   assert.deepEqual(mobileEastKids.map(x=>x.name),[...mobileEastKids.map(x=>x.name)].sort((a,b)=>a.localeCompare(b,'ro')));
   assert.deepEqual(mobileEastKids.filter(x=>x.name==='Hlinaia').map(x=>x.level),
     ['ADM 8 · CUATM 7625','ADM 8 · CUATM 5029']);
-  await p.eval("(()=>{const x="+eastDrawerRow('Stânga Nistrului','ADM 4')+";const rows=[...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')];rows.find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM 7625')).scrollIntoView({block:'center'});})()");
+  await p.eval("(()=>{const x="+eastDrawerRow('UATSN','ADM 4')+";const rows=[...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')];rows.find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM 7625')).scrollIntoView({block:'center'});})()");
   await p.snap('mobile-east-uatsn-hlinaia-ro.png');
-  await p.eval(eastDrawerRow('Stânga Nistrului','ADM 4')+".querySelector('.expand-button').click()");
-  await p.eval(eastDrawerRow('Stânga Nistrului','NTS 3')+".querySelector('.expand-button').click()");
+  await p.eval(eastDrawerRow('UATSN','ADM 4')+".querySelector('.expand-button').click()");
+  await p.eval(eastDrawerRow('Transnistria','NTS 3')+".querySelector('.expand-button').click()");
   await p.eval(eastDrawerRow('Est','NTS 2')+".querySelector('.expand-button').click()");
   await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
   if(originalEastMobileLocale!=='ro')
@@ -895,13 +896,13 @@ async function mobile(cdp){
     'Mobile tree available for short-name verification');
   await p.eval("document.querySelector('.drawer input[type=search]').focus()");
   await p.call('Input.insertText',{text:'Unitățile administrativ-teritoriale din stînga Nistrului'});
-  await p.wait("Array.from(document.querySelectorAll('.drawer .tree-list .node-name')).filter(x=>x.textContent.trim()==='Stânga Nistrului').length===2",
-    'Mobile Romanian tree shortens BOTH left-bank identities');
-  await p.snap('mobile-two-left-bank-entities-ro.png');
+  await p.wait("Array.from(document.querySelectorAll('.drawer .tree-list .node-name')).filter(x=>['Transnistria','UATSN'].includes(x.textContent.trim())).length===2",
+    'Mobile Romanian tree differentiates Transnistria and UATSN');
+  await p.snap('mobile-east-distinct-stat-admin-ro.png');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
-  await p.wait("Array.from(document.querySelectorAll('.drawer .tree-list .node-name')).filter(x=>x.textContent.trim()==='Left Bank').length===2",
-    'Mobile English tree uses Left Bank for both source entities');
-  await p.snap('mobile-two-left-bank-entities-en.png');
+  await p.wait("Array.from(document.querySelectorAll('.drawer .tree-list .node-name')).filter(x=>['Transnistria','ATULBD'].includes(x.textContent.trim())).length===2",
+    'Mobile English distinguishes statistical Transnistria from ATULBD');
+  await p.snap('mobile-east-distinct-stat-admin-en.png');
   await p.close();
 }
 async function narrowMobile(cdp){
