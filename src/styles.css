@@ -93,7 +93,7 @@
   .map-quick-actions{top:64px;left:9px;max-width:calc(100% - 68px);gap:5px}
   .map-quick-actions button{font-size:10px;min-height:35px;padding:7px 8px}
   .export-panel{top:151px;left:9px;max-height:calc(100% - 217px);width:min(326px,calc(100% - 18px));padding:13px}
-  .maplibregl-ctrl-bottom-left{bottom:142px!important;left:9px!important}
+  /* The WEB-R3.2 map no longer has floating controls here; preserve native MapLibre bottom-left scale placement. */
 }
 @media(max-width:380px){.export-panel{top:184px;max-height:calc(100% - 250px)}}
 
