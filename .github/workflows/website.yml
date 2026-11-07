@@ -7,6 +7,13 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Serialize complete main builds and Pages deploys. A prior Pages deployment
+# must finish before the next main workflow starts (HTTP 400 otherwise).
+# PR checks use separate ref-specific groups and do not block each other.
+concurrency:
+  group: atlas-website-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: read
 
@@ -61,8 +68,13 @@ jobs:
           name: website-dist
           path: dist/
       - uses: actions/configure-pages@v5
+      # Re-runs share artifacts with earlier attempts of the same run, so use
+      # an attempt-unique name to avoid deploy-pages' duplicate-artifact error.
       - uses: actions/upload-pages-artifact@v3
         with:
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: dist/
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
