@@ -74,6 +74,10 @@ function comparable(value){
 export function shortTreeName(node,lang){
   if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
   if(node.id==='osm-r58974')return 'Moldova';
+  // WEB-R3.20: under ADM4 municipality the already-existing ADM8 city
+  // is shown as «Oraș» / «City», without repeating «Chișinău» twice.
+  // Canonical city identity, names, geometry and lookup aliases remain intact.
+  if(node.id==='osm-r1748490')return lang==='ro'?'Oraș':'City';
   if(node.id===PERVOMAISC_ID)return 'Pervomaisc';
   if(lang==='ro'&&Object.hasOwn(UATSN_RO_SHORT_LABELS,node.id))
     return UATSN_RO_SHORT_LABELS[node.id];
