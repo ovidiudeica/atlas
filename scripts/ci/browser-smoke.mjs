@@ -541,7 +541,7 @@ async function desktop(cdp){
   await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Popencu')",
     'Popencu retains source alias and has concise Romanian display name');
   const popencuTitle=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Popencu')?.title");
-  assert.equal(popencuTitle,'Sovetul sătesc Popencu','Source council name retained in HTML title');
+  assert.equal(popencuTitle,'comuna Popencu','CUATM official name retained in tree title; original OSMB name remains searchable');
   await p.snap('desktop-uatsn-popencu-ro.png');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
   await p.wait("document.documentElement.lang==='en'",'English locale for Popencu');
