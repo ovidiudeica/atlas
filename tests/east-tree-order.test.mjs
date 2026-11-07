@@ -39,10 +39,10 @@ test('WEB-R3.13: 2 East ADM4, Bender 2 ADM8, UATSN 79 ADM8, authentic parentage'
  }
 });
 
-test('WEB-R3.13: Bender first, city first, UATSN 79 sorted by short labels in RO/EN',()=>{
+test('WEB-R3.14: UATSN first, city first under Bender, UATSN 79 sorted in RO/EN',()=>{
  for(const lang of ['ro','en']){
   assert.deepEqual(sorted(EAST_STAT_PARENT_ID,'all',lang).map(x=>x.id),
-    [EAST_BENDER_ADM4_ID,EAST_UATSN_ADM4_ID]);
+    [EAST_UATSN_ADM4_ID,EAST_BENDER_ADM4_ID]);
   for(const view of ['all','administrative']){
    assert.deepEqual(sorted(EAST_BENDER_ADM4_ID,view,lang).map(x=>x.id),
      [EAST_BENDER_ADM8_CITY_ID,'osm-r12463378']);
@@ -90,4 +90,23 @@ test('WEB-R3.13: statistical view and existing Nistrenia, Găgăuzia, Chișinău
   assert.equal(byId.get(id).administrativeParentId,'osm-r65343');
   assert.equal(byId.get(id).treeParentId,'osm-r65343');
  }
+});
+
+test('WEB-R3.14: East NTS3 and CUATM 9800 display distinct source-grounded short labels',()=>{
+ const nts=byId.get('stat-MD120'),uatsn=byId.get(EAST_UATSN_ADM4_ID);
+ assert.equal(nts.statisticalRoles[0].code,'MD120');
+ assert.equal(nts.sourceTags['ref:nuts'],'MD121');
+ assert.equal(nts.sourceTags.alt_name,'Regiunea Transnistria');
+ assert.equal(uatsn.sourceTags.short_name,'UATSN');
+ assert.equal(uatsn.registry.code,'9800');
+ for(const lang of ['ro','en']){
+   assert.equal(shortTreeName(nts,lang),'Transnistria');
+   assert.equal(shortTreeName(uatsn,lang),lang==='ro'?'UATSN':'ATULBD');
+   assert.notEqual(shortTreeName(nts,lang),shortTreeName(uatsn,lang));
+ }
+ assert.equal(nts.treeParentId,'stat-MD12');
+ assert.equal(uatsn.treeParentId,nts.id);
+ assert.equal(uatsn.administrativeParentId,'osm-r58974');
+ assert.equal(shortTreeName(byId.get('osm-r65335'),'ro'),'Nistrenia');
+ assert.equal(shortTreeName(byId.get('osm-r65335'),'en'),'Pridnestrovie');
 });

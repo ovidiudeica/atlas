@@ -4,7 +4,11 @@ const STAT_OVERRIDES = {
   MD11:['Vest','West'], MD12:['Est','East'],
   MD111:['Nord','North'], MD112:['Centru','Centre'], MD113:['Sud','South']
 };
-const LEFT_BANK = ['Stânga Nistrului','Left Bank'];
+// NTS3 shows the geographical name. CUATM 9800 uses OSM's UATSN in
+// Romanian, the English government-report abbreviation ATULBD in English.
+// The separate de-facto Nistrenia/Pridnestrovie is never relabeled.
+const EAST_STAT_LABEL='Transnistria';
+const EAST_ADMIN_LABELS=Object.freeze({ro:'UATSN',en:'ATULBD'});
 // WEB-R3.12: 44 individually verified UATSN ADM8 council names.
 // Key by authentic OSM ID; never rewrite the certified OSMB or CUATM fields.
 // One city council (Dubăsari), forty-three village councils. The strings
@@ -82,8 +86,8 @@ export function shortTreeName(node,lang){
   if(node.id==='osm-r1702219'||node.id==='osm-r944727')
     return node.name;
   // One administrative relation and one independent NTS3 statistical entity.
-  if(node.id==='osm-r2607033'||node.statisticalRoles?.some(x=>x.code==='MD120'))
-    return LEFT_BANK[lang==='ro'?0:1];
+  if(node.id==='osm-r2607033')return EAST_ADMIN_LABELS[lang==='ro'?'ro':'en'];
+  if(node.id==='stat-MD120')return EAST_STAT_LABEL;
   const stat=node.statisticalRoles?.[0]?.code;
   if(stat&&STAT_OVERRIDES[stat])return STAT_OVERRIDES[stat][lang==='ro'?0:1];
   const preferred=node.roles?.includes('statistical')&&node.sourceTags?.short_name
