@@ -1,7 +1,8 @@
 // Stable, presentation-only order of sibling territorial entities.
-// WEB-R3.15: Nistrenia's two city councils (Tiraspol, Bender) come first,
-// followed by its five de-facto raions from south to north.
-// The exact order is fixed across RO/EN, independently of locale sorting.
+// WEB-R3.17: Moldova siblings use statistical code first (including dual-role
+// units), then CUATM code for administrative entities. No cross-parent moves.
+// Uncoded Nistrenia ADM5 units retain the approved geographical fallback;
+// Romania's ordering is untouched.
 import {shortTreeName} from './treeNames.mjs';
 import {comparePresentationSiblings} from './treeOverlay.mjs';
 export const NISTRIAN_PARENT_ID='osm-r65335';
@@ -84,7 +85,40 @@ const seatFirst=(a,b,seatId,lang)=>
   Number(b.id===seatId)-Number(a.id===seatId)
   ||sortedByLocalizedShortName(a,b,lang);
 
+// Returns null only when BOTH nodes have neither a statistical code nor a
+// CUATM code. A coded node sorts before an uncoded administrative sibling.
+// This works with mixed statistical/admin siblings: MD114/MD115 have both,
+// and must be ordered by MD114/MD115, NOT their CUATM 9600/0100.
+// Code collisions are resolved deterministically using the next code, then ID.
+export function compareMoldovaSiblingCodes(a,b){
+  const statA=a.statisticalRoles?.[0]?.code||null;
+  const statB=b.statisticalRoles?.[0]?.code||null;
+  const cuatmA=a.registry?.system==='CUATM'&&a.registry.code?a.registry.code:null;
+  const cuatmB=b.registry?.system==='CUATM'&&b.registry.code?b.registry.code:null;
+  if(statA||statB){
+    if(!statA||!statB)return statA?-1:1;
+    const byStat=statA.localeCompare(statB,'en');
+    if(byStat)return byStat;
+    if(cuatmA||cuatmB){
+      if(!cuatmA||!cuatmB)return cuatmA?-1:1;
+      const byCu=cuatmA.localeCompare(cuatmB,'en');
+      if(byCu)return byCu;
+    }
+    return a.id.localeCompare(b.id,'en');
+  }
+  if(cuatmA||cuatmB){
+    if(!cuatmA||!cuatmB)return cuatmA?-1:1;
+    return cuatmA.localeCompare(cuatmB,'en')||a.id.localeCompare(b.id,'en');
+  }
+  return null;
+}
+
 export function compareTreeSiblings(a,b,view,parentId,lang='ro'){
+  // Restrict the new ordering to Moldova and keep ALL of Romania unchanged.
+  if(a.country==='MD'&&b.country==='MD'){
+    const byOfficialCodes=compareMoldovaSiblingCodes(a,b);
+    if(byOfficialCodes!==null)return byOfficialCodes;
+  }
   const presented=comparePresentationSiblings(a,b,view,parentId,lang);
   if(presented!==null)return presented;
   if(parentId===NISTRIAN_PARENT_ID&&view!=='statistical'){
@@ -96,29 +130,8 @@ export function compareTreeSiblings(a,b,view,parentId,lang='ro'){
     // Graceful fallback for unexpected future children without changing IDs.
     return sortedByLocalizedShortName(a,b,lang);
   }
-  // WEB-R3.16 — West: the existing Chișinău ADM4 / NTS3 MD115
-  // appears before Nord/Centru/Sud/Găgăuzia in All and Statistical views.
-  // Other siblings keep their accepted relative order; parent IDs stay intact.
-  if(parentId===WEST_STAT_PARENT_ID&&view!=='administrative'){
-    if(a.id===CHISINAU_PARENT_ID&&b.id!==CHISINAU_PARENT_ID)return -1;
-    if(b.id===CHISINAU_PARENT_ID&&a.id!==CHISINAU_PARENT_ID)return 1;
-  }
-  // WEB-R3.14 — EAST: the MD120 statistical node groups the existing
-  // UATSN (9800) first, Bender (0500) second in the All view. Their
-  // canonical parents under Moldova are untouched in Administrative view.
-  if(view!=='statistical'){
-    if(parentId===EAST_STAT_PARENT_ID){
-      const aRank=a.id===EAST_UATSN_ADM4_ID?0:1;
-      const bRank=b.id===EAST_UATSN_ADM4_ID?0:1;
-      return aRank-bRank||sortedByLocalizedShortName(a,b,lang);
-    }
-    if(parentId===EAST_BENDER_ADM4_ID)
-      return seatFirst(a,b,EAST_BENDER_ADM8_CITY_ID,lang);
-    if(parentId===EAST_UATSN_ADM4_ID)
-      return sortedByLocalizedShortName(a,b,lang);
-  }
-  // No statistical-mode changes: geography displayed under a statistical NTS3
-  // region in "all", or under canonical ADM4 in "administrative".
+  // Fallback only for uncoded siblings: prior seat/raion presentation rules
+  // remain available where no statistical or CUATM code can distinguish them.
   if(view!=='statistical'){
     if(Object.hasOwn(REGIONAL_SEATS,parentId))
       return seatFirst(a,b,REGIONAL_SEATS[parentId],lang);
