@@ -14,7 +14,7 @@ import { REFERENCE_STYLE, administrativeStyle, statisticalStyle, styleForEntity 
 import { buildPermalink, clearGeometryPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
   type ExportScope } from './data/phase5.mjs';
 import {
-  asDisplayFeatures, bboxOfGeometry, codeOf, EMPTY_FEATURES, labelOf, loadCatalog,
+  asDisplayFeatures, bboxOfGeometry, EMPTY_FEATURES, labelOf, loadCatalog,
   loadGeometryShard, lookupKeys, normalize, ROOT_IDS,
   type GeometryMode, type Locale, type Territory, type TerritoryFeature
 } from './data/territories';
