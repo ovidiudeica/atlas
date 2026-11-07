@@ -84,7 +84,7 @@ test('WEB-R4.1: Găgăuzia, Nistrenia and missing OSM IDs retain their source se
 });
 
 test('WEB-R4.1: UI shows short heading, typed roles, verified hierarchy, legal caveat and mobile permalinks',()=>{
-  assert.match(app,/<h3>\{labelOf\(currentNode,lang\)\}<\/h3>/);
+  assert.match(app,/<h3 tabIndex=\{-1\}>\{labelOf\(currentNode,lang\)\}<\/h3>/);
   assert.match(app,/<dt>\{t\.official\}<\/dt><dd>\{currentNode\.officialName\}<\/dd>/);
   assert.match(app,/entityCardRoles\(currentNode\)/);
   assert.match(app,/cardRoles\.administrative\.map/);
@@ -93,7 +93,7 @@ test('WEB-R4.1: UI shows short heading, typed roles, verified hierarchy, legal c
   assert.match(app,/cardRoles\.statistical\.map/);
   assert.match(app,/<strong>\{role\.label\}<\/strong>/);
   assert.match(app,/verifiedStatisticalParent\(statisticalIndex,role\)/);
-  assert.match(app,/onClick=\{\(\)=>choose\(parent\.id\)\}/);
+  assert.match(app,/onClick=\{\(\)=>chooseRelated\(parent\.id\)\}/);
   assert.match(app,/className="entity-parent-link"/);
   assert.match(app,/SHARED_STATE\.entity&&window\.innerWidth<=700\?'detail':null/);
   assert.match(app,/currentNode\.osmRelationId!==null/);

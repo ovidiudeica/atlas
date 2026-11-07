@@ -1071,6 +1071,119 @@ async function roleAwareCards(cdp){
   }
 }
 
+/* WEB-R4.2 — keyboard focus, card child navigation, non-overlapping close bars,
+ * incremental child disclosure and map-state preservation.
+ */
+async function cardUxAccessibility(cdp){
+  const url=id=>site+'?lang=ro&entity='+id;
+  const desktop=await cdp.page(1440,900,false,url('osm-r377733'));
+  await desktop.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'R4.2 desktop map and Bucharest loaded');
+  await desktop.wait("document.querySelectorAll('.detail-sidebar .entity-child-link').length===6",
+    'Bucharest has six presentation children');
+  const before=await desktop.eval(`(()=>{
+    const panel=document.querySelector('.detail-sidebar');
+    const bar=panel.querySelector('.pane-toolbar').getBoundingClientRect();
+    const close=panel.querySelector('.pane-close').getBoundingClientRect();
+    return {visible:document.querySelector('.map-area').dataset.mapVisibleCount,
+      title:panel.querySelector('.entity-title h3').textContent.trim(),
+      children:panel.querySelectorAll('.entity-child-link').length,
+      label:panel.getAttribute('aria-label'),
+      toolbarWidth:bar.width,closeWithin:close.left>=bar.left&&close.right<=bar.right,
+      closeHeight:close.height};
+  })()`);
+  assert.equal(before.title,'București');
+  assert.equal(before.children,6);
+  assert(before.closeWithin&&before.closeHeight>=44&&before.toolbarWidth>=300,
+    'Desktop close button owns a full-width non-overlapping toolbar');
+  await desktop.snap('desktop-web-r42-bucharest-children.png');
+  await desktop.eval("document.querySelector('.detail-sidebar .entity-child-link').click()");
+  await desktop.wait("(()=>{const h=document.querySelector('.detail-sidebar .entity-title h3');return h&&h.textContent.trim()!=='București'&&document.activeElement===h})()",
+    'Child navigation places keyboard focus on the new entity heading');
+  const afterChild=await desktop.eval(`({
+    visible:document.querySelector('.map-area').dataset.mapVisibleCount,
+    title:document.querySelector('.detail-sidebar .entity-title h3').textContent.trim(),
+    scroll:document.querySelector('.detail-sidebar').scrollTop,
+    focused:document.activeElement===document.querySelector('.detail-sidebar .entity-title h3')
+  })`);
+  assert.equal(afterChild.visible,before.visible,'Card navigation must not change visible geometries');
+  assert(afterChild.focused&&afterChild.scroll<=2,'Child navigation moves focus and resets scroll');
+  await desktop.snap('desktop-web-r42-child-focused.png');
+  await desktop.eval("(()=>{const buttons=[...document.querySelectorAll('.detail-sidebar .entity-breadcrumbs button')];const b=buttons.find(x=>x.textContent.trim()==='București');if(!b)throw Error('Missing Bucharest breadcrumb');b.click()})()");
+  await desktop.wait("(()=>{const h=document.querySelector('.detail-sidebar .entity-title h3');return h?.textContent.trim()==='București'&&document.activeElement===h})()",
+    'Breadcrumb returns to Bucharest with heading focus');
+  await desktop.eval("document.querySelector('.detail-sidebar .pane-close').click()");
+  await desktop.wait("!document.querySelector('.detail-sidebar')",
+    'Closing desktop card removes only the detail panel');
+  await desktop.wait("document.activeElement===document.querySelector('.header-entity-action')",
+    'Desktop card close restores focus to header opener');
+  assert.equal(await desktop.eval("document.querySelector('.map-area').dataset.mapVisibleCount"),
+    before.visible,'Closing detail panel preserves displayed geometries');
+  await desktop.close();
+
+  const mobile=await cdp.page(360,780,true,url('osm-r377733'));
+  await mobile.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'R4.2 mobile Bucharest loaded');
+  await mobile.wait("!!document.querySelector('.drawer-detail .entity-child-link')",
+    'Mobile child links available');
+  const mobileBefore=await mobile.eval(`(()=>{
+    const panel=document.querySelector('.drawer-detail');
+    const bar=panel.querySelector('.drawer-toolbar').getBoundingClientRect();
+    const close=panel.querySelector('.drawer-close').getBoundingClientRect();
+    return {visible:document.querySelector('.map-area').dataset.mapVisibleCount,
+      label:panel.getAttribute('aria-label'),barTop:bar.top,panelTop:panel.getBoundingClientRect().top,
+      barBottom:bar.bottom,barWidth:bar.width,closeWithin:close.left>=bar.left&&close.right<=bar.right};
+  })()`);
+  assert(mobileBefore.label.includes('București'),'Dialog name includes current entity');
+  assert(mobileBefore.closeWithin&&mobileBefore.barWidth>=330,'Mobile close toolbar covers card width');
+  await mobile.eval("(()=>{const p=document.querySelector('.drawer-detail');p.scrollTop=p.scrollHeight;return true})()");
+  const stick=await mobile.eval(`(()=>{
+    const panel=document.querySelector('.drawer-detail');
+    const bar=panel.querySelector('.drawer-toolbar').getBoundingClientRect();
+    const close=panel.querySelector('.drawer-close').getBoundingClientRect();
+    const hit=document.elementFromPoint(close.left+close.width/2,close.top+close.height/2);
+    return {top:bar.top,panelTop:panel.getBoundingClientRect().top,
+      closeWithin:close.top>=bar.top&&close.bottom<=bar.bottom,
+      hit:hit===panel.querySelector('.drawer-close')||panel.querySelector('.drawer-close').contains(hit)};
+  })()`);
+  assert(stick.closeWithin&&stick.hit&&Math.abs(stick.top-stick.panelTop)<2,
+    'Sticky mobile toolbar isolates close button from scrollable card text');
+  await mobile.snap('mobile-web-r42-bucharest-sticky-toolbar.png');
+  await mobile.eval("document.querySelector('.drawer-detail .entity-child-link').click()");
+  await mobile.wait("(()=>{const h=document.querySelector('.drawer-detail .entity-title h3');return h&&h.textContent.trim()!=='București'&&document.activeElement===h})()",
+    'Mobile child selection moves keyboard focus to new heading');
+  const mobileAfter=await mobile.eval(`({
+    visible:document.querySelector('.map-area').dataset.mapVisibleCount,
+    scroll:document.querySelector('.drawer-detail').scrollTop,
+    label:document.querySelector('.drawer-detail').getAttribute('aria-label')
+  })`);
+  assert.equal(mobileAfter.visible,mobileBefore.visible);
+  assert(mobileAfter.scroll<=2,'Mobile navigation starts at the new card heading');
+  assert(!mobileAfter.label.endsWith('București'),'Dialog accessible name updates with selection');
+  await mobile.snap('mobile-web-r42-child-focused.png');
+  await mobile.eval("document.querySelector('.drawer-detail .drawer-close').click()");
+  await mobile.wait("!document.querySelector('.drawer-screen')",'Mobile detail closed');
+  await mobile.wait("document.activeElement===document.querySelector('.header-entity-action')",
+    'Mobile detail close restores keyboard focus');
+  await mobile.close();
+
+  const many=await cdp.page(1440,900,false,url('osm-r1691801'));
+  await many.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'R4.2 Chișinău municipality loaded');
+  await many.wait("document.querySelectorAll('.detail-sidebar .entity-child-link').length===12",
+    'Large presentation branch initially renders only twelve children');
+  assert.equal(await many.eval("!!document.querySelector('.detail-sidebar .entity-children-more')"),
+    true,'Progressive child navigation offers an explicit More button');
+  await many.snap('desktop-web-r42-chisinau-before-more.png');
+  await many.eval("document.querySelector('.detail-sidebar .entity-children-more').click()");
+  await many.wait("(()=>{const b=[...document.querySelectorAll('.detail-sidebar .entity-child-link')].find(x=>x.dataset.childIndex==='12');return b&&document.activeElement===b})()",
+    'More children moves focus to first newly revealed child');
+  const revealed=await many.eval("document.querySelectorAll('.detail-sidebar .entity-child-link').length");
+  assert(revealed>12&&revealed<=24,'Progressive pagination reveals at most twelve new children');
+  await many.snap('desktop-web-r42-chisinau-more-focused.png');
+  await many.close();
+}
+
 async function narrowMobile(cdp){
   const p=await cdp.page(360,780,true);
   await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
@@ -1158,6 +1271,7 @@ try{
   await mobile(client);
   await narrowMobile(client);
   await roleAwareCards(client);
+  await cardUxAccessibility(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
