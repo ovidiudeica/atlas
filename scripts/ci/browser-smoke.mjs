@@ -265,7 +265,10 @@ async function desktop(cdp){
   const hlinaia=await p.eval("(()=>{const node="+uatsnRo+";return [...node.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].filter(x=>x.querySelector('.node-name')?.textContent.trim()==='Hlinaia').map(x=>({level:x.querySelector('.node-level')?.textContent.trim(),accessible:x.querySelector('.tree-label')?.getAttribute('aria-label')}));})()");
   assert.deepEqual(hlinaia.map(x=>x.level),['ADM 8 · CUATM 7625','ADM 8 · CUATM 5029']);
   assert(hlinaia[0].accessible?.includes('7625')&&hlinaia[1].accessible?.includes('5029'));
-  await p.eval(uatsnRo+".scrollIntoView({block:'center'})");
+  await p.eval("(()=>{const parent="+uatsnRo+";const rows=[...parent.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')];const first=rows.find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM 7625'));first.scrollIntoView({block:'center'});})()");
+  const visibleHlinaia=await p.eval("(()=>{const r=[...document.querySelectorAll('.tree-sidebar .tree-line')].filter(x=>x.querySelector('.node-level')?.textContent.includes('CUATM '));return r.filter(x=>{const b=x.getBoundingClientRect(),v=document.querySelector('.tree-sidebar').getBoundingClientRect();return b.bottom>=v.top&&b.top<=v.bottom;}).map(x=>x.querySelector('.node-level')?.textContent.trim());})()");
+  assert(visibleHlinaia.includes('ADM 8 · CUATM 7625')&&visibleHlinaia.includes('ADM 8 · CUATM 5029'),
+    'Both CUATM homonym badges must be simultaneously visible in Chromium capture');
   await p.snap('desktop-east-uatsn-ro-hlinaia.png');
   await p.eval(uatsnRo+".querySelector('.expand-button').click()");
   const ntsRo=desktopRow('Stânga Nistrului','NTS 3');
@@ -730,6 +733,33 @@ async function mobile(cdp){
   await p.eval(drawerLine(regionalLocale)+".querySelector('.expand-button').click()");
   await p.eval(drawerLine(westernLocale)+".querySelector('.expand-button').click()");
   await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
+  // WEB-R3.13 mobile: verify East hierarchy and distinguish both UATSN Hlinaia.
+  const originalEastMobileLocale=await p.eval("document.documentElement.lang");
+  if(originalEastMobileLocale!=='ro')
+    await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='RO').click()");
+  await p.wait("document.documentElement.lang==='ro'",'Mobile Romanian East tree');
+  const eastDrawerRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
+  await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
+  await p.eval(eastDrawerRow('Est','NTS 2')+".querySelector('.expand-button').click()");
+  await p.eval(eastDrawerRow('Stânga Nistrului','NTS 3')+".querySelector('.expand-button').click()");
+  const mobileEastOrder=await p.eval("(()=>{const x="+eastDrawerRow('Stânga Nistrului','NTS 3')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>x.querySelector('.node-name')?.textContent.trim());})()");
+  assert.deepEqual(mobileEastOrder,['Bender','Stânga Nistrului']);
+  await p.eval(eastDrawerRow('Stânga Nistrului','ADM 4')+".querySelector('.expand-button').click()");
+  const mobileEastKids=await p.eval("(()=>{const x="+eastDrawerRow('Stânga Nistrului','ADM 4')+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
+  assert.equal(mobileEastKids.length,79);
+  assert.deepEqual(mobileEastKids.map(x=>x.name),[...mobileEastKids.map(x=>x.name)].sort((a,b)=>a.localeCompare(b,'ro')));
+  assert.deepEqual(mobileEastKids.filter(x=>x.name==='Hlinaia').map(x=>x.level),
+    ['ADM 8 · CUATM 7625','ADM 8 · CUATM 5029']);
+  await p.eval("(()=>{const x="+eastDrawerRow('Stânga Nistrului','ADM 4')+";const rows=[...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')];rows.find(x=>x.querySelector('.node-level')?.textContent.includes('CUATM 7625')).scrollIntoView({block:'center'});})()");
+  await p.snap('mobile-east-uatsn-hlinaia-ro.png');
+  await p.eval(eastDrawerRow('Stânga Nistrului','ADM 4')+".querySelector('.expand-button').click()");
+  await p.eval(eastDrawerRow('Stânga Nistrului','NTS 3')+".querySelector('.expand-button').click()");
+  await p.eval(eastDrawerRow('Est','NTS 2')+".querySelector('.expand-button').click()");
+  await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
+  if(originalEastMobileLocale!=='ro')
+    await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
+  await p.wait("document.documentElement.lang==="+JSON.stringify(originalEastMobileLocale),
+    'Mobile locale restored after East QA');
   await p.eval("document.querySelector('.drawer .tree-line .tree-label').click()");
   await p.wait("!!document.querySelector('.drawer-detail .entity-card')",'Mobile selection opens details');
   await p.eval("document.querySelector('.drawer-close').click()");
