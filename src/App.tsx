@@ -3,6 +3,7 @@ import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibr
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
 import { compareTreeSiblings } from './data/treeOrder.mjs';
+import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { presentationParentId } from './data/treeOverlay.mjs';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
   matchingCombinedLevelIds, matchingOsmLevelIds, matchingStatisticalLevelIds } from './data/osmLevelFilter.mjs';
@@ -43,6 +44,8 @@ const WORDS = {
     official: 'Official name', osmId: 'OSM ID', adminLevel: 'OSM administrative level',
     statisticalRole: 'Statistical codes', parentAdmin: 'Administrative parent', parentTree: 'Tree parent',
     source: 'Source', registry: 'Official registry', origin: 'Country',
+    pmrCadastralCode: 'PMR cadastral code', pmrCadastralSource: 'PMR cadastral source',
+    pmrCadastralCaveat: 'Code of the cadastral unit associated with the administrative seat; not a KLADR PMR identifier or CUATM code, and not proof that the entire OSMB boundary shares the cadastral extent.',
     raw: 'Original OSM tags', officialRecord: 'Full official registry record',
     view: 'Show on map', hide: 'Hide on map', locate: 'Zoom to territory',
     childrenShow: 'Show children', childrenHide: 'Hide children',
@@ -103,6 +106,8 @@ const WORDS = {
     official: 'Denumire oficială', osmId: 'ID OSM', adminLevel: 'Nivel administrativ OSM',
     statisticalRole: 'Coduri statistice', parentAdmin: 'Părinte administrativ', parentTree: 'Părinte în arbore',
     source: 'Sursă', registry: 'Registru oficial', origin: 'Țară',
+    pmrCadastralCode: 'Cod cadastral PMR', pmrCadastralSource: 'Sursa codului cadastral PMR',
+    pmrCadastralCaveat: 'Cod al unității cadastrale asociate reședinței administrative; nu este identificator KLADR PMR sau cod CUATM și nu dovedește că întregul contur OSMB coincide cu unitatea cadastrală.',
     raw: 'Tag-uri OSM originale', officialRecord: 'Fișa integrală din registrul oficial',
     view: 'Afișează pe hartă', hide: 'Ascunde de pe hartă', locate: 'Încadrează teritoriul',
     childrenShow: 'Afișează copiii', childrenHide: 'Ascunde copiii',
@@ -953,10 +958,20 @@ export default function App() {
         <dt>{t.osmId}</dt><dd>{currentNode.osmRelationId!==null?
           <a href={'https://www.openstreetmap.org/relation/'+currentNode.osmRelationId} target="_blank" rel="noreferrer">{currentNode.osmRelationId} ↗</a>:null}</dd>
         <dt>{t.registry}</dt><dd>{currentNode.registry?currentNode.registry.system+' '+currentNode.registry.code:null}</dd>
+        {pmrCadastralSeatCode(currentNode.id)&&<>
+          <dt>{t.pmrCadastralCode}</dt><dd>{pmrCadastralSeatCode(currentNode.id)}</dd>
+          <dt>{t.pmrCadastralSource}</dt><dd>
+            <a href={PMR_CADASTRAL_SOURCE.url} target="_blank" rel="noreferrer">
+              {lang==='ro'?'Ordinul nr. 361/2015, anexa 2':'Order 361/2015, Annex 2'} ↗
+            </a>
+          </dd>
+        </>}
         <dt>{t.statisticalRole}</dt><dd>{codeOf(currentNode)||null}</dd>
         <dt>{t.parentAdmin}</dt><dd>{currentNode.administrativeParentId?nodes.get(currentNode.administrativeParentId)?.officialName:null}</dd>
         <dt>{t.parentTree}</dt><dd>{currentNode.treeParentId?labelOf(nodes.get(currentNode.treeParentId)!,lang):null}</dd>
       </dl>
+      {pmrCadastralSeatCode(currentNode.id)&&
+        <p className="source-caveat">{t.pmrCadastralCaveat}</p>}
       {currentNode.registryIdentityReviewStatus&&<p className="source-caveat">{t.relationshipNote}</p>}
       {currentNode.registry?.record&&<details className="raw-details">
         <summary>{t.officialRecord}</summary>
