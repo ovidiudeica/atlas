@@ -127,6 +127,8 @@ async function desktop(cdp){
     'Independent map-tool opener defaults to closed');
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar .atlas-admin-reset')"),true,
     'Reset display remains in the Administrative module');
+  const englishRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
+  assert.deepEqual(englishRoots,['Romania','Moldova'],'English tree uses concise national names');
   await p.snap('desktop-module-open.png');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Repeated module click closes panel');
@@ -374,6 +376,8 @@ async function desktop(cdp){
   for(const key of ['entity','lng','lat','zoom'])assert(!new URLSearchParams(resetState.query).has(key),
     'Reset must remove stale shared-URL '+key);
   await p.wait("!document.querySelector('.map-boot-status')",'original national preview reloaded');
+  const romanianRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
+  assert.deepEqual(romanianRoots,['România','Moldova'],'Romanian tree uses concise national names');
   await p.snap('desktop-reset-geometries.png');
 
   await p.call('Page.reload',{ignoreCache:true});
@@ -388,6 +392,16 @@ async function desktop(cdp){
   assert.equal(await p.eval("document.querySelector('#atlas-section-settings .simplify-control input').checked"),true,
     'Simplification preference survives reset and page reload');
   await p.eval("document.querySelector('.atlas-tools-close').click()");
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
+  await p.call('Input.insertText',{text:'Unitățile din stânga Nistrului'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label')).some(x=>x.textContent.trim()==='Stânga Nistrului')",
+    'Long Romanian official search resolves to short MD120 tree label');
+  await p.snap('desktop-left-bank-short-name-ro.png');
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
+  await p.wait("document.documentElement.lang==='en'",'English language switch');
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label')).some(x=>x.textContent.trim()==='Left Bank')",
+    'Same MD120 search result uses short English label');
+  await p.snap('desktop-left-bank-short-name-en.png');
   await p.close();
 }
 async function tablet(cdp){
