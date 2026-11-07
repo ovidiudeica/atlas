@@ -6,6 +6,7 @@ import {readFileSync} from 'node:fs';
 import {entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent}
   from '../src/data/entityCardRoles.mjs';
 import {presentationParentId} from '../src/data/treeOverlay.mjs';
+import {shortTreeName,cardNameOf} from '../src/data/treeNames.mjs';
 
 const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
 const css=read('src/styles.css'),app=read('src/App.tsx');
@@ -108,12 +109,12 @@ test('WEB-R4.3 acceptance: no hidden legal reparenting in card navigation',()=>{
 });
 
 test('WEB-R4.3 acceptance: accessible, bilingual and retractable card contract remains',()=>{
-  assert(app.includes("aria-label={t.details+': '+labelOf(currentNode,lang)}"));
-  assert(app.includes("t.details+(currentNode?': '+labelOf(currentNode,lang):'')"));
+  assert(app.includes("aria-label={t.details+': '+cardNameOf(currentNode,lang)}"));
+  assert(app.includes("t.details+(currentNode?': '+cardNameOf(currentNode,lang):'')"));
   assert.match(app,/aria-modal="true"/);
-  assert.match(app,/<h3 tabIndex=\{-1\}>\{labelOf\(currentNode,lang\)\}<\/h3>/);
-  assert.match(app,/aria-label=\{t\.cardOpenChild\+': '\+labelOf\(child,lang\)\}/);
-  assert.match(app,/aria-label=\{t\.cardOpenParent\+': '\+labelOf\(parent,lang\)\}/);
+  assert.match(app,/<h3 tabIndex=\{-1\}>\{cardNameOf\(currentNode,lang\)\}<\/h3>/);
+  assert.match(app,/aria-label=\{t\.cardOpenChild\+': '\+cardNameOf\(child,lang\)\}/);
+  assert.match(app,/aria-label=\{t\.cardOpenParent\+': '\+cardNameOf\(parent,lang\)\}/);
   assert.match(app,/kind="records" collapsible/);
   assert.match(app,/aria-label=\{t\.statisticalRole\}/);
   assert.match(app,/t\.pmrCadastralCaveat/);
@@ -122,4 +123,19 @@ test('WEB-R4.3 acceptance: accessible, bilingual and retractable card contract r
   assert.match(app,/exportCSV/);
   assert.match(app,/copyPermalink/);
   assert.match(app,/cardChildren\.slice\(0,cardChildrenShown\)/);
+});
+
+test('WEB-R4.3: context-complete Chișinău card title in RO/EN without changing tree',()=>{
+  const city=index.get('osm-r1748490');
+  assert.equal(shortTreeName(city,'ro'),'Oraș');
+  assert.equal(shortTreeName(city,'en'),'City');
+  assert.equal(cardNameOf(city,'ro'),'Orașul Chișinău');
+  assert.equal(cardNameOf(city,'en'),'Chișinău city');
+  for(const other of ['osm-r1691801','osm-r377733','osm-r944727']){
+    const entity=index.get(other);
+    for(const lang of ['ro','en'])
+      assert.equal(cardNameOf(entity,lang),shortTreeName(entity,lang));
+  }
+  assert.match(app,/import \{ cardNameOf \} from '.\/data\/treeNames\.mjs'/);
+  assert.match(app,/<h3 tabIndex=\{-1\}>\{cardNameOf\(currentNode,lang\)\}<\/h3>/);
 });
