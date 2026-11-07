@@ -156,6 +156,17 @@ async function desktop(cdp){
     if(view==='all'){
       await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .node-name')).some(x=>x.textContent.trim()==='West')",'West statistical node available');
       await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
+      // WEB-R3.16: verify the five direct West children without moving them
+      // in the canonical tree. Chișinău comes before NTS3 regions.
+      const westExpr=desktopRow('West','NTS 2');
+      const westChildren=await desktopChildren(westExpr);
+      assert.deepEqual(westChildren.map(x=>x.name),
+        ['Chișinău','North','Centre','South','Gagauzia'],
+        'West children: Chișinău first, all others retain their relative order');
+      assert.deepEqual(westChildren.map(x=>x.level),
+        ['ADM 4 · NTS 3','NTS 3','NTS 3','NTS 3','ADM 4 · NTS 3']);
+      await p.eval(westExpr+".scrollIntoView({block:'center'})");
+      await p.snap('desktop-west-chisinau-first-en.png');
     }
     for(const parentName of ['Gagauzia','Chișinău']){
       const root=desktopRow(parentName,'ADM 4');
@@ -717,6 +728,13 @@ async function mobile(cdp){
   await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
   await p.wait("!!("+drawerLine(westernLocale)+")",'mobile western statistical region');
   await p.eval(drawerLine(westernLocale)+".querySelector('.expand-button').click()");
+  const westMobileChildren=await p.eval("(()=>{const x="+drawerLine(westernLocale)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>x.querySelector('.node-name')?.textContent.trim());})()");
+  assert.deepEqual(westMobileChildren,await p.eval("document.documentElement.lang==='ro'")?
+    ['Chișinău','Nord','Centru','Sud','Găgăuzia']:
+    ['Chișinău','North','Centre','South','Gagauzia'],
+    'Mobile West children start with Chișinău in either locale');
+  await p.eval(drawerLine(westernLocale)+".scrollIntoView({block:'start'})");
+  await p.snap('mobile-west-chisinau-first.png');
   await p.wait("!!("+drawerLine(regionalLocale)+")",'mobile northern statistical region');
   await p.eval(drawerLine(regionalLocale)+".querySelector('.expand-button').click()");
   const firstNorthern=await p.eval("(()=>{const x="+drawerLine(regionalLocale)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')].map(x=>x.textContent.trim());})()");

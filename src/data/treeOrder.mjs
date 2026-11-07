@@ -7,6 +7,7 @@ import {comparePresentationSiblings} from './treeOverlay.mjs';
 export const NISTRIAN_PARENT_ID='osm-r65335';
 export const GAGAUZIA_PARENT_ID='osm-r1699032';
 export const CHISINAU_PARENT_ID='osm-r1691801';
+export const WEST_STAT_PARENT_ID='stat-MD11'; // NTS2 West; presentation sibling order only
 export const EAST_STAT_PARENT_ID='stat-MD120'; // Statistical, not administrative
 export const EAST_BENDER_ADM4_ID='osm-r9581354'; // CUATM 0500
 export const EAST_UATSN_ADM4_ID='osm-r2607033'; // CUATM 9800
@@ -94,6 +95,13 @@ export function compareTreeSiblings(a,b,view,parentId,lang='ro'){
     if(bRank!==undefined)return 1;
     // Graceful fallback for unexpected future children without changing IDs.
     return sortedByLocalizedShortName(a,b,lang);
+  }
+  // WEB-R3.16 — West: the existing Chișinău ADM4 / NTS3 MD115
+  // appears before Nord/Centru/Sud/Găgăuzia in All and Statistical views.
+  // Other siblings keep their accepted relative order; parent IDs stay intact.
+  if(parentId===WEST_STAT_PARENT_ID&&view!=='administrative'){
+    if(a.id===CHISINAU_PARENT_ID&&b.id!==CHISINAU_PARENT_ID)return -1;
+    if(b.id===CHISINAU_PARENT_ID&&a.id!==CHISINAU_PARENT_ID)return 1;
   }
   // WEB-R3.14 — EAST: the MD120 statistical node groups the existing
   // UATSN (9800) first, Bender (0500) second in the All view. Their
