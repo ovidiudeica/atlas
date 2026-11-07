@@ -6,6 +6,7 @@ import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
+import { cardNameOf } from './data/treeNames.mjs';
 import { entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent } from './data/entityCardRoles.mjs';
 import { presentationParentId } from './data/treeOverlay.mjs';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
@@ -984,13 +985,13 @@ export default function App() {
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
         <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
-        <div><h3 tabIndex={-1}>{labelOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
+        <div><h3 tabIndex={-1}>{cardNameOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
       </header>
       {breadcrumbs.length>0&&<nav className="entity-breadcrumbs" aria-label={t.path}>
         {breadcrumbs.map((crumb,index)=><span className="breadcrumb-part" key={crumb.id}>
           {index>0&&<span aria-hidden="true">›</span>}
           <button type="button" aria-current={crumb.id===currentNode.id?'location':undefined}
-            onClick={()=>chooseRelated(crumb.id)}>{labelOf(crumb,lang)}</button>
+            onClick={()=>chooseRelated(crumb.id)}>{cardNameOf(crumb,lang)}</button>
         </span>)}
       </nav>}
       <div className="sibling-navigation">
@@ -1087,9 +1088,9 @@ export default function App() {
             <dt>{t.parentTree}</dt>
             <dd>{nodes.get(currentNode.treeParentId)?
               <button type="button" className="entity-parent-link"
-                aria-label={t.cardOpenParent+': '+labelOf(nodes.get(currentNode.treeParentId)!,lang)}
+                aria-label={t.cardOpenParent+': '+cardNameOf(nodes.get(currentNode.treeParentId)!,lang)}
                 onClick={()=>chooseRelated(currentNode.treeParentId!)}>
-                {labelOf(nodes.get(currentNode.treeParentId)!,lang)}
+                {cardNameOf(nodes.get(currentNode.treeParentId)!,lang)}
               </button>:null}</dd>
           </>}
           {cardRoles?.statistical.map(role=>{
@@ -1097,8 +1098,8 @@ export default function App() {
             return parent?<div className="entity-hierarchy-stat" key={role.classification+'-'+role.code}>
               <dt>{t.cardStatParent} ({role.parentCode})</dt>
               <dd><button type="button" className="entity-parent-link"
-                aria-label={t.cardOpenParent+': '+labelOf(parent,lang)}
-                onClick={()=>chooseRelated(parent.id)}>{labelOf(parent,lang)}</button></dd>
+                aria-label={t.cardOpenParent+': '+cardNameOf(parent,lang)}
+                onClick={()=>chooseRelated(parent.id)}>{cardNameOf(parent,lang)}</button></dd>
             </div>:null;
           })}
         </dl>
@@ -1110,9 +1111,9 @@ export default function App() {
             <li key={child.id}>
               <button type="button" className="entity-child-link"
                 data-child-index={index}
-                aria-label={t.cardOpenChild+': '+labelOf(child,lang)}
+                aria-label={t.cardOpenChild+': '+cardNameOf(child,lang)}
                 onClick={()=>chooseRelated(child.id)}>
-                <span>{labelOf(child,lang)}</span>
+                <span>{cardNameOf(child,lang)}</span>
                 <small>{roleLabel(child)}</small>
               </button>
             </li>)}
@@ -1355,9 +1356,9 @@ export default function App() {
         </div>}
       </main>
       {currentNode&&detailPanelOpen&&<aside className="detail-sidebar"
-        aria-label={t.details+': '+labelOf(currentNode,lang)}>
+        aria-label={t.details+': '+cardNameOf(currentNode,lang)}>
         <div className="pane-toolbar">
-          <span aria-hidden="true">{labelOf(currentNode,lang)}</span>
+          <span aria-hidden="true">{cardNameOf(currentNode,lang)}</span>
           <button type="button" className="pane-close" aria-label={t.close} title={t.close}
             onClick={closeDetailPanel}>×</button>
         </div>
@@ -1369,11 +1370,11 @@ export default function App() {
     }}>
       <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true"
         aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
-          t.details+(currentNode?': '+labelOf(currentNode,lang):'')}
+          t.details+(currentNode?': '+cardNameOf(currentNode,lang):'')}
         onClick={e=>e.stopPropagation()}>
         <div className="drawer-toolbar">
           <span aria-hidden="true">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
-            currentNode?labelOf(currentNode,lang):t.details}</span>
+            currentNode?cardNameOf(currentNode,lang):t.details}</span>
           <button type="button" className="drawer-close" aria-label={t.close} onClick={()=>{
             if(drawer==='tree')closeModulePanel();else closeDetailPanel();
           }}>×</button>

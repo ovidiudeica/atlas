@@ -71,6 +71,15 @@ function comparable(value){
   return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .toLocaleLowerCase('ro-RO').trim();
 }
+// WEB-R4.3: the tree intentionally shows «Oraș»/«City» under Chișinău.
+// Outside that context, a card, breadcrumb or dialog must name the city
+// unambiguously. Source names, OSM IDs and the compact tree are unchanged.
+export function cardNameOf(node,lang){
+  return node.id==='osm-r1748490'
+    ?(lang==='ro'?'Orașul Chișinău':'Chișinău city')
+    :shortTreeName(node,lang);
+}
+
 export function shortTreeName(node,lang){
   if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
   if(node.id==='osm-r58974')return 'Moldova';

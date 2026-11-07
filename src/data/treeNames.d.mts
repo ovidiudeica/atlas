@@ -4,3 +4,5 @@ export interface ShortTreeEntity {
   sourceTags?:Record<string,string>;
 }
 export function shortTreeName(node:ShortTreeEntity,lang:'en'|'ro'):string;
+/** Full contextual label for standalone cards; the nested tree stays compact. */
+export function cardNameOf(node:ShortTreeEntity,lang:'en'|'ro'):string;
