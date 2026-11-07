@@ -147,36 +147,50 @@ async function desktop(cdp){
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').querySelector('.expand-button').click()");
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   }
-  // Verify both parent branches in mixed and administrative views, without
-  // changing source parentage or hiding ADM8 units with duplicate names.
+  // WEB-R3.9: check real nested children rather than obsolete flat counts.
+  const desktopRow=(name,level)=>"Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
+  const desktopChildren=async expr=>await p.eval("(()=>{const l="+expr+";return Array.from(l.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')).map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
   for(const view of ['all','administrative']){
-    await p.eval("document.querySelector('.tree-sidebar .tree-filters button:nth-child("+ (view==='all'?'1':'2') +")').click()");
+    await p.eval("document.querySelector('.tree-sidebar .tree-filters button:nth-child("+(view==='all'?'1':'2')+")').click()");
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
     if(view==='all'){
-      await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .node-name')).some(x=>x.textContent.trim()==='West')",'West statistical node present');
+      await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .node-name')).some(x=>x.textContent.trim()==='West')",'West statistical node available');
       await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
     }
-    for(const [label,count,head,headLevel,localLevel] of [
-      ['Gagauzia',29,['Ceadîr-Lunga','Comrat','Vulcănești'],'ADM 5','ADM 8'],
-      ['Chișinău',24,['Botanica','Buiucani','Centru','Ciocana','Rîșcani'],'ADM 7','ADM 8']
-    ]){
-      await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .node-name')).some(x=>x.textContent.trim()==="+JSON.stringify(label)+")",
-        label+' present in '+view+' tree');
-      await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+").querySelector('.expand-button').click()");
-      const children=await p.eval("(()=>{const l=Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+");return Array.from(l.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')).map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}))})()");
-      assert.equal(children.length,count,label+' children unchanged, '+view);
-      assert.deepEqual(children.slice(0,head.length).map(x=>x.name),head,label+' priority subdivisions, '+view);
-      assert(children.slice(0,head.length).every(x=>x.level===headLevel),label+' group level, '+view);
-      assert(children.slice(head.length).every(x=>x.level===localLevel),label+' local units after subdivisions, '+view);
-      const locals=children.slice(head.length).map(x=>x.name);
-      assert.deepEqual(locals,[...locals].sort((a,b)=>a.localeCompare(b,'en')),label+' locale order among locals, '+view);
-      if(label==='Gagauzia'){
-        for(const name of head)assert.equal(children.filter(x=>x.name===name).length,2,
-          name+' district and municipality both preserved');
+    for(const parentName of ['Gagauzia','Chișinău']){
+      const root=desktopRow(parentName,'ADM 4');
+      await p.wait("!!("+root+")",parentName+' found in '+view);
+      await p.eval(root+".querySelector('.expand-button').click()");
+      const direct=await desktopChildren(root);
+      if(parentName==='Gagauzia'){
+        assert.deepEqual(direct.map(x=>x.name),['Comrat','Ceadîr-Lunga','Vulcănești']);
+        assert(direct.every(x=>x.level==='ADM 5'));
+        for(const [name,count] of [['Comrat',13],['Ceadîr-Lunga',9],['Vulcănești',4]]){
+          const raion=desktopRow(name,'ADM 5');
+          await p.eval(raion+".querySelector('.expand-button').click()");
+          const kids=await desktopChildren(raion);
+          assert.equal(kids.length,count,name+' nested ADM8 count '+view);
+          assert(kids.every(x=>x.level==='ADM 8'));
+          assert.deepEqual(kids.map(x=>x.name),[...kids.map(x=>x.name)].sort((a,b)=>a.localeCompare(b,'en')),
+            name+' children alphabetically sorted '+view);
+          await p.eval(raion+".scrollIntoView({block:'center'})");
+          await p.snap('desktop-gagauzia-'+name.replace(/[^a-z]/gi,'').toLowerCase()+'-nested-en-'+view+'.png');
+          await p.eval(raion+".querySelector('.expand-button').click()");
+        }
+      }else{
+        assert.equal(direct.length,19,'Chișinău city plus 18 ADM8 localities '+view);
+        assert.deepEqual(direct[0],{name:'Chișinău',level:'ADM 8'});
+        assert(direct.slice(1).every(x=>x.level==='ADM 8'));
+        const city=desktopRow('Chișinău','ADM 8');
+        await p.eval(city+".querySelector('.expand-button').click()");
+        const sectors=await desktopChildren(city);
+        assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Centru','Ciocana','Rîșcani']);
+        assert(sectors.every(x=>x.level==='ADM 7'));
+        await p.eval(city+".scrollIntoView({block:'center'})");
+        await p.snap('desktop-chisinau-sectors-nested-en-'+view+'.png');
+        await p.eval(city+".querySelector('.expand-button').click()");
       }
-      await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+").scrollIntoView({block:'center'})");
-      await p.snap('desktop-'+(label==='Gagauzia'?'gagauzia':'chisinau')+'-children-en-'+view+'.png');
-      await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+").querySelector('.expand-button').click()");
+      await p.eval(root+".querySelector('.expand-button').click()");
     }
     if(view==='all')
       await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
@@ -665,24 +679,39 @@ async function mobile(cdp){
   const mobileBranchDebug=await p.eval("(()=>{const root=Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova');return {lang:document.documentElement.lang,view:[...document.querySelectorAll('.drawer .tree-filters button')].map(x=>({text:x.textContent.trim(),selected:x.getAttribute('aria-pressed')})),rootExpanded:root?.getAttribute('aria-expanded'),visibleNames:[...document.querySelectorAll('.drawer .tree-line .node-name')].map(x=>x.textContent.trim()).slice(0,70),search:document.querySelector('.drawer input[type=search]')?.value}})()");
   assert(mobileBranchDebug.visibleNames.includes('Găgăuzia')&&mobileBranchDebug.visibleNames.includes('Chișinău'),
     'Găgăuzia/Chișinău must be direct mobile Administrative children: '+JSON.stringify(mobileBranchDebug));
-  for(const [label,count,first,groupLevel,groupSize] of [
-    ['Găgăuzia',29,['Ceadîr-Lunga','Comrat','Vulcănești'],'ADM 5',3],
-    ['Chișinău',24,['Botanica','Buiucani','Centru','Ciocana','Rîșcani'],'ADM 7',5]
-  ]){
-    await p.wait("Array.from(document.querySelectorAll('.drawer .tree-line .node-name')).some(x=>x.textContent.trim()==="+JSON.stringify(label)+")",
-      label+' mobile branch appears');
-    await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+").querySelector('.expand-button').click()");
-    const children=await p.eval("(()=>{const l=Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+");return Array.from(l.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')).map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}))})()");
-    assert.equal(children.length,count,label+' mobile child count unchanged');
-    assert.deepEqual(children.slice(0,groupSize).map(x=>x.name),first,label+' Romanian subdivision ordering');
-    assert(children.slice(0,groupSize).every(x=>x.level===groupLevel));
-    assert(children.slice(groupSize).every(x=>x.level==='ADM 8'));
-    const localNames=children.slice(groupSize).map(x=>x.name);
-    assert.deepEqual(localNames,[...localNames].sort((a,b)=>a.localeCompare(b,'ro')),
-      label+' mobile Romanian alphabetical locality ordering');
-    await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+").scrollIntoView({block:'start'})");
-    await p.snap('mobile-'+(label==='Găgăuzia'?'gagauzia':'chisinau')+'-children-ro.png');
-    await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+").querySelector('.expand-button').click()");
+  // WEB-R3.9: mobile Romanian nesting. The unit identities stay intact.
+  const mobileRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
+  const mobileChildren=async expr=>await p.eval("(()=>{const l="+expr+";return Array.from(l.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')).map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
+  for(const parentName of ['Găgăuzia','Chișinău']){
+    const root=mobileRow(parentName,'ADM 4');
+    await p.wait("!!("+root+")",parentName+' visible on mobile');
+    await p.eval(root+".querySelector('.expand-button').click()");
+    const direct=await mobileChildren(root);
+    if(parentName==='Găgăuzia'){
+      assert.deepEqual(direct.map(x=>x.name),['Comrat','Ceadîr-Lunga','Vulcănești']);
+      assert(direct.every(x=>x.level==='ADM 5'));
+      const raion=mobileRow('Comrat','ADM 5');
+      await p.eval(raion+".querySelector('.expand-button').click()");
+      const kids=await mobileChildren(raion);
+      assert.equal(kids.length,13,'Comrat raion ADM8 localities indented');
+      assert(kids.every(x=>x.level==='ADM 8'));
+      await p.eval(raion+".scrollIntoView({block:'start'})");
+      await p.snap('mobile-gagauzia-raion-nested-ro.png');
+      await p.eval(raion+".querySelector('.expand-button').click()");
+    }else{
+      assert.equal(direct.length,19,'City Chișinău and 18 other ADM8 localities');
+      assert.deepEqual(direct[0],{name:'Chișinău',level:'ADM 8'});
+      assert(direct.slice(1).every(x=>x.level==='ADM 8'));
+      const city=mobileRow('Chișinău','ADM 8');
+      await p.eval(city+".querySelector('.expand-button').click()");
+      const sectors=await mobileChildren(city);
+      assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Centru','Ciocana','Rîșcani']);
+      assert(sectors.every(x=>x.level==='ADM 7'));
+      await p.eval(city+".scrollIntoView({block:'start'})");
+      await p.snap('mobile-chisinau-city-sectors-nested-ro.png');
+      await p.eval(city+".querySelector('.expand-button').click()");
+    }
+    await p.eval(root+".querySelector('.expand-button').click()");
   }
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   // The pre-existing short-name search verifies two identities, one ADM and

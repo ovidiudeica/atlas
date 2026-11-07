@@ -3,6 +3,7 @@ import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibr
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
 import { compareTreeSiblings } from './data/treeOrder.mjs';
+import { presentationParentId } from './data/treeOverlay.mjs';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
   matchingCombinedLevelIds, matchingOsmLevelIds, matchingStatisticalLevelIds } from './data/osmLevelFilter.mjs';
 import { REFERENCE_STYLE, administrativeStyle, statisticalStyle, styleForEntity } from './data/cartographicStyle.mjs';
@@ -174,7 +175,7 @@ function createHierarchy(nodes: Territory[], view: TreeView, lang: Locale): Map<
   for (const node of nodes) {
     if(view === 'administrative' && !node.roles.includes('administrative')) continue;
     if(view === 'statistical' && !node.statisticalRoles.length && !ROOT_IDS.includes(node.id as typeof ROOT_IDS[number])) continue;
-    const parent = view === 'administrative' ? node.administrativeParentId : node.treeParentId;
+    const parent = presentationParentId(node,view);
     if(!parent) continue;
     const arr=map.get(parent) || [];
     arr.push(node); map.set(parent, arr);
@@ -286,14 +287,14 @@ export default function App() {
     const visited=new Set<string>();
     while(cursor && !visited.has(cursor.id) && path.length<32){
       path.unshift(cursor);visited.add(cursor.id);
-      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      const parent=presentationParentId(cursor,treeView);
       cursor=parent?nodes.get(parent):undefined;
     }
     return path;
   },[nodes,selected,treeView]);
   const siblings=useMemo(()=>{
     if(!currentNode)return [];
-    const parent=treeView==='administrative'?currentNode.administrativeParentId:currentNode.treeParentId;
+    const parent=presentationParentId(currentNode,treeView);
     return parent?(hierarchy.get(parent)||[]):ROOT_IDS.map(id=>nodes.get(id)).filter((n):n is Territory=>Boolean(n));
   },[currentNode,hierarchy,nodes,treeView]);
   const siblingIndex=siblings.findIndex(n=>n.id===selected);
@@ -433,12 +434,12 @@ export default function App() {
     const path:string[]=[];
     let cursor=nodes.get(SHARED_STATE.entity),depth=0;
     while(cursor && depth++<32){
-      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      const parent=presentationParentId(cursor,treeView);
       if(!parent)break;
       path.push(parent);cursor=nodes.get(parent);
     }
     setExpanded(old=>[...new Set([...old,...path])]);
-  },[catalog.length,nodes]);
+  },[catalog.length,nodes,treeView]);
 
   useEffect(()=>{
     if(!catalog.length)return;
@@ -786,7 +787,7 @@ export default function App() {
     let cursor=nodes.get(id),depth=0;
     const ancestry:string[]=[];
     while(cursor&&depth++<24){
-      const parent=treeView==='administrative'?cursor.administrativeParentId:cursor.treeParentId;
+      const parent=presentationParentId(cursor,treeView);
       if(!parent)break;
       ancestry.push(parent);cursor=nodes.get(parent);
     }
