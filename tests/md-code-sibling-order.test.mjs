@@ -117,7 +117,7 @@ function mdRoots(){
     .map(id=>byId.get(id));
 }
 
-test('WEB-R3.17: Romanian catalog keeps its prior ordering byte-for-byte semantically',()=>{
+test('WEB-R3.19b: Romanian code ordering replaces the previously frozen fallback',()=>{
  const ro=entities.filter(n=>n.country==='RO');
  const parents=new Set(ro.flatMap(x=>[x.treeParentId,x.administrativeParentId]).filter(Boolean));
  let compared=0;
@@ -125,12 +125,24 @@ test('WEB-R3.17: Romanian catalog keeps its prior ordering byte-for-byte semanti
   for(const parent of parents){
    const arr=siblings(parent,view);
    if(arr.length<2||!arr.every(x=>x.country==='RO'))continue;
-   const expected=[...arr].sort((a,b)=>oldRomaniaComparator(a,b,view));
    const actual=[...arr].sort((a,b)=>compareTreeSiblings(a,b,view,parent,lang));
-   assert.deepEqual(actual.map(x=>x.id),expected.map(x=>x.id),
-     'Romania ordering untouched: '+parent+' '+view+' '+lang);
+   const coded=actual.filter(n=>n.statisticalRoles.some(r=>r.classification==='NUTS')
+     ||n.registry?.system==='SIRUTA'&&n.registry?.code);
+   const expected=[...coded].sort((a,b)=>{
+     const x=a.statisticalRoles.find(r=>r.classification==='NUTS')?.code;
+     const y=b.statisticalRoles.find(r=>r.classification==='NUTS')?.code;
+     if(Boolean(x)!==Boolean(y))return x?-1:1;
+     if(x&&y&&x!==y)return x.localeCompare(y,'en',{numeric:true});
+     const ca=a.registry?.system==='SIRUTA'?a.registry.code:null;
+     const cb=b.registry?.system==='SIRUTA'?b.registry.code:null;
+     if(Boolean(ca)!==Boolean(cb))return ca?-1:1;
+     if(ca&&cb&&ca!==cb)return Number(ca)-Number(cb);
+     return a.id.localeCompare(b.id,'en');
+   });
+   assert.deepEqual(coded.map(n=>n.id),expected.map(n=>n.id),
+     'Romania official-code order: '+parent+' '+view+' '+lang);
    compared++;
   }
  }
- assert(compared>100,'Romanian tree coverage');
+ assert(compared>100,'Romanian sibling groups covered');
 });
