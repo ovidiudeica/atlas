@@ -90,6 +90,7 @@ test('Phase 5 integrates map navigation/export without modifying certified Phase
   assert.match(app, /buildPermalink\(/);
   assert.match(app, /fitVisible/);
   assert.match(app, /breadcrumbs/);
-  assert.match(app, /aria-expanded=\{exportOpen\}/);
+  assert.match(app, /aria-controls="phase5-export-panel"/);
+  assert.match(app, /aria-expanded=\{toolSection==='export'\}/);
   assert.match(app, /mode:GeometryMode=simplified/);
 });

@@ -218,3 +218,66 @@
 .legend-line{display:inline-block;flex:0 0 37px;width:37px;height:0;
   border-top-style:solid;border-top-width:2px;border-top-color:#46554f}
 .legend-line.is-statistical{border-top-style:dashed}
+
+/* WEB-R3.4 — global map tools, independent of the six modules. Only the
+   selected subpanel is expanded. The Administrative module owns the tree. */
+.atlas-admin-actions{margin:14px 17px 10px;border-top:1px solid #e2ece5;padding-top:11px}
+.atlas-admin-reset{width:100%;min-height:44px;text-align:left;border:0;background:transparent;
+  color:#3d7358;font-size:12px;font-weight:650;display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:8px}
+.atlas-admin-reset:hover{background:#edf5ee}
+.atlas-admin-reset span{font-size:21px}
+.atlas-tools-toggle{position:absolute;z-index:6;top:18px;left:17px;
+  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
+  background:#fff;border:1px solid #d6e5db;color:#18513c;font-size:25px;
+  border-radius:10px;box-shadow:0 4px 16px #1d493322;cursor:pointer}
+.atlas-tools-toggle[aria-expanded=true]{background:#e7f2ea}
+.atlas-tools-overlay{position:absolute;inset:0;z-index:7;pointer-events:none}
+.atlas-global-tools-panel{pointer-events:auto;position:absolute;left:17px;top:72px;
+  width:min(366px,calc(100% - 95px));max-height:calc(100% - 84px);
+  overflow-y:auto;overscroll-behavior:contain;background:#fff;color:#1b4935;
+  border:1px solid #d2e4d7;border-radius:13px;box-shadow:0 12px 35px #09281c3d}
+.atlas-tools-heading{position:sticky;top:0;z-index:2;background:#fff;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;border-bottom:1px solid #e0eae3;padding:10px 12px 10px 17px;min-height:58px}
+.atlas-tools-heading h2{font:600 21px/1.2 Georgia,serif;margin:0;color:#174530}
+.atlas-tools-close{width:44px;height:44px;min-width:44px;border-radius:8px;
+  border:1px solid #d3e2d8;background:#fff;color:#183e30;font-size:27px}
+.atlas-tools-close:hover{background:#edf4ef}
+.atlas-tools-list{padding:7px 11px 12px}
+.atlas-tools-item{border-bottom:1px solid #e5ede7}
+.atlas-tools-item:last-child{border-bottom:0}
+.atlas-tools-entry{width:100%;border:0;background:transparent;color:#1d533d;
+  display:flex;align-items:center;gap:12px;padding:12px 5px;min-height:64px;text-align:left}
+.atlas-tools-entry:hover:not(:disabled),.atlas-tools-entry[aria-expanded=true]{background:#eff6f1}
+.atlas-tools-entry:disabled{opacity:.5;cursor:default}
+.atlas-tools-entry-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.atlas-tools-entry-copy strong{font-size:12px}
+.atlas-tools-entry-copy small{font-size:10px;color:#668273;line-height:1.35}
+.atlas-tools-icon{font-size:23px;width:36px;height:36px;flex:0 0 36px;
+  display:inline-flex;align-items:center;justify-content:center;border-radius:9px;
+  background:#eaf3ed;color:#1c6048}
+.atlas-tools-info{font:bold 20px Georgia,serif}
+.atlas-tools-content{position:static;display:flex;flex-direction:column;gap:10px;
+  padding:12px 8px 16px;min-width:0;border-top:1px solid #dfeae2}
+.atlas-tools-content .basemap-select,.atlas-tools-content .simplify-control{
+  width:100%;min-width:0;height:auto;min-height:44px;padding:9px 11px;box-shadow:none;
+  position:relative;max-width:none;justify-content:flex-start}
+.atlas-tools-content .basemap-select select{margin-left:auto;max-width:120px}
+.atlas-tools-content .control-caption{font-size:12px}
+.atlas-tools-export .export-panel{position:static;left:auto;top:auto;z-index:auto;
+  width:100%;max-height:none;overflow:visible;background:transparent;
+  border:0;box-shadow:none;border-radius:0}
+.atlas-tools-export .export-buttons button{min-height:44px}
+.atlas-tools-legend .map-legend{position:static;display:grid;grid-template-columns:1fr;
+  gap:12px;width:100%;margin:0;padding:10px;background:#fff;box-shadow:none;
+  border:1px solid #e1e9e3;font-size:11px;font-weight:400}
+.atlas-tools-about-content h3{font-size:12px;margin:0 0 3px}
+.atlas-tools-about-content p{font-size:11px;line-height:1.55;margin:0;color:#597464}
+@media(max-width:700px){
+  .atlas-tools-toggle{top:12px;left:9px;width:44px;height:44px}
+  .atlas-tools-overlay{position:fixed;inset:60px 0 64px;
+    background:#09281ca1;pointer-events:auto;z-index:35}
+  .atlas-global-tools-panel{position:absolute;top:0;bottom:0;left:0;
+    width:min(360px,calc(100vw - 52px));max-height:none;border-radius:0 13px 13px 0}
+  .atlas-tools-heading{min-height:66px}
+}
