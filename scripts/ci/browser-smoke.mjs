@@ -654,14 +654,11 @@ async function mobile(cdp){
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').scrollIntoView({block:'start'})");
   await p.snap('mobile-nistrenia-children-ro.png');
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').querySelector('.expand-button').click()");
-  // Mobile, Romanian mixed tree: Moldova > Vest > both ADM4 entities.
-  // The previous Nistrenia check may leave the drawer in Administrative view.
-  // Explicitly restore All to reveal statistical parent MD11 (Vest).
-  await p.eval("document.querySelector('.drawer .tree-filters button:first-child').click()");
+  // Mobile, Romanian Administrative view: Găgăuzia and Chișinău are
+  // direct administrative children of Moldova (the mixed tree is verified
+  // separately on desktop through their statistical parent Vest).
+  await p.eval("document.querySelector('.drawer .tree-filters button:nth-child(2)').click()");
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
-  await p.wait("Array.from(document.querySelectorAll('.drawer .tree-line .node-name')).some(x=>x.textContent.trim()==='Vest')",
-    'statistical West contains the Gagauzia and Chisinau administrative branches');
-  await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Vest').querySelector('.expand-button').click()");
   for(const [label,count,first,groupLevel,groupSize] of [
     ['Găgăuzia',29,['Ceadîr-Lunga','Comrat','Vulcănești'],'ADM 5',3],
     ['Chișinău',24,['Botanica','Buiucani','Centru','Ciocana','Rîșcani'],'ADM 7',5]
@@ -681,7 +678,6 @@ async function mobile(cdp){
     await p.snap('mobile-'+(label==='Găgăuzia'?'gagauzia':'chisinau')+'-children-ro.png');
     await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+").querySelector('.expand-button').click()");
   }
-  await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Vest').querySelector('.expand-button').click()");
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   await p.wait("!!document.querySelector('.drawer input[type=search]')",
     'Mobile Administrative tree available for short-name verification');
