@@ -655,6 +655,9 @@ async function mobile(cdp){
   await p.snap('mobile-nistrenia-children-ro.png');
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Nistrenia').querySelector('.expand-button').click()");
   // Mobile, Romanian mixed tree: Moldova > Vest > both ADM4 entities.
+  // The previous Nistrenia check may leave the drawer in Administrative view.
+  // Explicitly restore All to reveal statistical parent MD11 (Vest).
+  await p.eval("document.querySelector('.drawer .tree-filters button:first-child').click()");
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   await p.wait("Array.from(document.querySelectorAll('.drawer .tree-line .node-name')).some(x=>x.textContent.trim()==='Vest')",
     'statistical West contains the Gagauzia and Chisinau administrative branches');
