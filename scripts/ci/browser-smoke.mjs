@@ -658,7 +658,13 @@ async function mobile(cdp){
   // direct administrative children of Moldova (the mixed tree is verified
   // separately on desktop through their statistical parent Vest).
   await p.eval("document.querySelector('.drawer .tree-filters button:nth-child(2)').click()");
-  await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  await p.wait("document.querySelector('.drawer .tree-filters button:nth-child(2)').getAttribute('aria-pressed')==='true'",
+    'Administrative tree view selected explicitly');
+  await p.eval("(()=>{const line=Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova');if(line?.getAttribute('aria-expanded')!=='true')line?.querySelector('.expand-button')?.click();})()");
+  await pause(450);
+  const mobileBranchDebug=await p.eval("(()=>{const root=Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova');return {lang:document.documentElement.lang,view:[...document.querySelectorAll('.drawer .tree-filters button')].map(x=>({text:x.textContent.trim(),selected:x.getAttribute('aria-pressed')})),rootExpanded:root?.getAttribute('aria-expanded'),visibleNames:[...document.querySelectorAll('.drawer .tree-line .node-name')].map(x=>x.textContent.trim()).slice(0,70),search:document.querySelector('.drawer input[type=search]')?.value}})()");
+  assert(mobileBranchDebug.visibleNames.includes('Găgăuzia')&&mobileBranchDebug.visibleNames.includes('Chișinău'),
+    'Găgăuzia/Chișinău must be direct mobile Administrative children: '+JSON.stringify(mobileBranchDebug));
   for(const [label,count,first,groupLevel,groupSize] of [
     ['Găgăuzia',29,['Ceadîr-Lunga','Comrat','Vulcănești'],'ADM 5',3],
     ['Chișinău',24,['Botanica','Buiucani','Centru','Ciocana','Rîșcani'],'ADM 7',5]
