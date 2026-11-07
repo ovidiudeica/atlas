@@ -8,7 +8,8 @@ test('all tree labels use presentation shortener, without altering official deta
   assert.match(source,/import \{ shortTreeName \} from '.\/treeNames\.mjs'/);
   assert.match(source,/return shortTreeName\(node,lang\)/);
   assert.match(app,/title=\{node\.officialName\}/);
-  assert.match(app,/<h3>\{currentNode\.officialName\}<\/h3>/);
+  assert.match(app,/<h3>\{labelOf\(currentNode,lang\)\}<\/h3>/);
+  assert.match(app,/<dt>\{t\.official\}<\/dt><dd>\{currentNode\.officialName\}<\/dd>/);
   assert.match(app,/currentNode\.country==='RO'\?'România':'Republica Moldova'/);
   assert.equal(shortTreeName({id:'osm-r58974'},'en'),'Moldova');
 });
