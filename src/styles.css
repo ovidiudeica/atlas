@@ -340,7 +340,7 @@
   letter-spacing:.25px;line-height:1.5
 }
 .entity-card-section>summary{cursor:pointer;min-height:44px}
-.entity-card-section>summary:focus-visible{outline:3px solid #e6a73d;outline-offset:-3px}
+.entity-card-section>summary:focus-visible{outline:3px solid #946217;outline-offset:-3px}
 .entity-card-section--collapsible:not([open])>summary{border-bottom:0}
 .entity-card-section--collapsible>summary::after{content:'+';float:right;font-size:16px;line-height:1}
 .entity-card-section--collapsible[open]>summary::after{content:'−'}
@@ -356,7 +356,7 @@
 .entity-statistical-roles li{padding:9px;border:1px solid #e0e9e5;border-radius:7px;background:#f8fbf9;display:grid;gap:4px}
 .entity-statistical-primary{display:flex;gap:8px;justify-content:space-between;align-items:baseline;font-size:12px;color:#1e5039}
 .entity-statistical-primary span{font-weight:800;overflow-wrap:anywhere;text-align:right}
-.entity-statistical-roles small{font-size:10px;color:#607b6a;overflow-wrap:anywhere}
+.entity-statistical-roles small{font-size:10px;color:#4c6858;overflow-wrap:anywhere}
 .entity-card-section--records .raw-details{margin:0}
 .entity-card-section--records .raw-details summary{min-height:42px;display:flex;align-items:center}
 @media(max-width:700px){
@@ -382,7 +382,7 @@
  color:#196349;font-size:inherit;font-weight:700;line-height:1.4;text-align:left;cursor:pointer;
  overflow-wrap:anywhere}
 .entity-parent-link:hover{text-decoration:underline}
-.entity-parent-link:focus-visible{outline:3px solid #e6a73d;outline-offset:2px}
+.entity-parent-link:focus-visible{outline:3px solid #946217;outline-offset:2px}
 .entity-card-section--hierarchy .metadata dd{min-width:0}
 @media(max-width:700px){
  .drawer .entity-admin-role-primary{flex-wrap:wrap}
@@ -410,14 +410,14 @@
 }
 .pane-toolbar .pane-close:hover,.drawer-toolbar .drawer-close:hover{background:#ecf5ef}
 .pane-toolbar .pane-close:focus-visible,.drawer-toolbar .drawer-close:focus-visible{
-  outline:3px solid #e6a73d;outline-offset:2px
+  outline:3px solid #946217;outline-offset:2px
 }
 .drawer,.detail-sidebar,.tree-sidebar{scroll-padding-top:66px}
 .detail-content .panel-heading{padding:12px 20px 10px}
 .detail-content .panel-heading h2{font-size:20px;margin-top:6px}
-.entity-card .entity-title h3:focus{outline:3px solid #e6a73d;outline-offset:4px;border-radius:3px}
+.entity-card .entity-title h3:focus{outline:3px solid #946217;outline-offset:4px;border-radius:3px}
 .entity-card .entity-title h3:focus-visible{
-  outline:3px solid #e6a73d;outline-offset:4px;border-radius:3px
+  outline:3px solid #946217;outline-offset:4px;border-radius:3px
 }
 .entity-card .entity-title h3{scroll-margin-top:74px}
 .entity-card-section .metadata{font-size:12px;line-height:1.45}
@@ -437,7 +437,7 @@
 .entity-child-link:hover{background:#eaf4ec}
 .entity-child-link>span{min-width:0;overflow-wrap:anywhere}
 .entity-child-link>small{flex:0 0 auto;max-width:43%;font-size:10px;
-  line-height:1.3;color:#668174;text-align:right;overflow-wrap:anywhere}
+  line-height:1.4;color:#496456;text-align:right;overflow-wrap:anywhere}
 .entity-children-more{
   margin-top:9px;width:100%;min-height:44px;padding:8px 10px;
   border:1px solid #b7d2c0;border-radius:8px;background:#f4faf6;
@@ -452,3 +452,15 @@
 @media(prefers-reduced-motion:reduce){
   .entity-card .entity-title h3{scroll-behavior:auto}
 }
+
+/* WEB-R4.3: visually robust focus on all navigation controls inside cards;
+ * dark amber contrast >3:1 against the light card and toolbar backgrounds. */
+.entity-card .entity-breadcrumbs button:focus-visible,
+.entity-card .sibling-navigation button:focus-visible,
+.entity-card .entity-actions button:focus-visible,
+.entity-card .entity-child-link:focus-visible,
+.entity-card .entity-children-more:focus-visible,
+.entity-card .atlas-detail-export button:focus-visible{
+  outline:3px solid #946217;outline-offset:2px
+}
+.entity-card .entity-child-link>small{font-size:11px}
