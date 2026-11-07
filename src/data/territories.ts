@@ -116,12 +116,12 @@ export function codeOf(node: Territory): string {
 }
 export function labelOf(node: Territory, lang: Locale): string {
   if (node.id === 'osm-r90689') return lang === 'en' ? 'Romania' : 'România';
-  if (node.id === 'osm-r58974') return lang === 'en' ? 'Republic of Moldova' : 'Republica Moldova';
+  if (node.id === 'osm-r58974') return 'Moldova';
   const stat = node.statisticalRoles[0]?.code;
   const overrides: Record<string, [string, string]> = {
     MD11: ['Vest', 'West'], MD12: ['Est', 'East'],
     MD111: ['Nord', 'North'], MD112: ['Centru', 'Centre'], MD113: ['Sud', 'South'],
-    MD120: ['Unitățile din stânga Nistrului', 'Left-bank territorial units'],
+    MD120: ['Stânga Nistrului', 'Left Bank'],
   };
   if (stat && overrides[stat]) return overrides[stat][lang === 'ro' ? 0 : 1];
   if (node.roles.includes('statistical') && node.sourceTags?.short_name) {
@@ -133,6 +133,11 @@ export function lookupKeys(node: Territory): string {
   const tags = node.sourceTags || {};
   return normalize([
     node.id, node.name, node.shortName?.ro, node.shortName?.en, node.officialName,
+    labelOf(node,'ro'), labelOf(node,'en'),
+    // The official phrases remain valid search aliases; only tree labels shorten.
+    ...(node.id === 'osm-r58974' ? ['Republic of Moldova','Republica Moldova'] : []),
+    ...(node.statisticalRoles.some(role => role.code === 'MD120')
+      ? ['Unitățile din stânga Nistrului','Left-bank territorial units'] : []),
     node.osmRelationId, node.registry?.code, codeOf(node),
     tags['name:ro'], tags['name:en'], tags.alt_name, tags.old_name,
     tags['ref:nuts'], tags['ref:cuatm:codunic'], tags.wikidata,
