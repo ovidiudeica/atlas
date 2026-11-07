@@ -323,3 +323,43 @@
 .atlas-tools-about-symbol{display:inline-flex;align-items:center;justify-content:center;
   flex:0 0 15px;width:15px;height:15px;border:1.2px solid currentColor;border-radius:50%;
   font:700 10px/1 Arial,sans-serif}
+
+
+/* WEB-R4.0 — semantic entity cards, shared between the desktop sidebar and mobile drawer. */
+.entity-card{display:flex;flex-direction:column;gap:10px;padding-bottom:20px}
+.entity-card>.entity-title{padding:8px 0 4px;min-width:0}
+.entity-card>.entity-title>div{min-width:0;overflow-wrap:anywhere}
+.entity-card>.entity-breadcrumbs{padding-bottom:8px}
+.entity-card>.sibling-navigation{margin:0}
+.entity-card>.entity-actions{margin:0}
+.entity-card>.atlas-detail-export{margin:0}
+.entity-card-section{border:1px solid #d9e7dd;border-radius:11px;background:#fff;overflow:hidden}
+.entity-card-section>h4,.entity-card-section>summary{
+  display:block;margin:0;padding:11px 12px;color:#1a553e;background:#f3f8f4;
+  border-bottom:1px solid #e0ebe3;font-size:11px;font-weight:800;
+  letter-spacing:.25px;line-height:1.5
+}
+.entity-card-section>summary{cursor:pointer;min-height:44px}
+.entity-card-section>summary:focus-visible{outline:3px solid #e6a73d;outline-offset:-3px}
+.entity-card-section--collapsible:not([open])>summary{border-bottom:0}
+.entity-card-section--collapsible>summary::after{content:'+';float:right;font-size:16px;line-height:1}
+.entity-card-section--collapsible[open]>summary::after{content:'−'}
+.entity-card-section-body{padding:2px 12px 10px}
+.entity-card-section .metadata{grid-template-columns:minmax(0,43%) minmax(0,57%);font-size:11px}
+.entity-card-section .metadata dt,.entity-card-section .metadata dd{min-height:32px;padding:9px 0}
+.entity-card-section .metadata dt{padding-right:7px}
+.entity-card-section .metadata dd{overflow-wrap:anywhere}
+.entity-card-section .metadata dt:last-of-type,.entity-card-section .metadata dd:last-of-type{border-bottom:0}
+.entity-card-section .note{margin:9px 0 0;font-size:11px}
+.entity-card-section .source-caveat{margin:9px 0 0;border-radius:4px}
+.entity-statistical-roles{list-style:none;margin:7px 0 0;padding:0;display:grid;gap:6px}
+.entity-statistical-roles li{padding:9px;border:1px solid #e0e9e5;border-radius:7px;background:#f8fbf9;display:grid;gap:4px}
+.entity-statistical-primary{display:flex;gap:8px;justify-content:space-between;align-items:baseline;font-size:12px;color:#1e5039}
+.entity-statistical-primary span{font-weight:800;overflow-wrap:anywhere;text-align:right}
+.entity-statistical-roles small{font-size:10px;color:#607b6a;overflow-wrap:anywhere}
+.entity-card-section--records .raw-details{margin:0}
+.entity-card-section--records .raw-details summary{min-height:42px;display:flex;align-items:center}
+@media(max-width:700px){
+  .drawer .entity-card{padding-bottom:24px}
+  .drawer .entity-card-section>summary{min-height:46px}
+}
