@@ -5,6 +5,7 @@ import { getCountryGeoJSON } from './data/borders';
 import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
+import { EntityCardSection } from './components/EntityCardSection';
 import { presentationParentId } from './data/treeOverlay.mjs';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
   matchingCombinedLevelIds, matchingOsmLevelIds, matchingStatisticalLevelIds } from './data/osmLevelFilter.mjs';
@@ -92,7 +93,11 @@ const WORDS = {
     mapToolAboutHint: 'Sources, methodology and legal status',
     mapAppearance: 'Map appearance', legendShowAll: 'Show all levels',
     legendOnlyVisible: 'Show only visible boundaries', legendCurrentlyVisible: 'Currently visible',
-    mapSwipeHint: 'Swipe down to close'
+    mapSwipeHint: 'Swipe down to close',
+    cardIdentity: 'Identity', cardAdministration: 'Administrative & registry',
+    cardStatistics: 'Statistical roles', cardHierarchy: 'Territorial hierarchy',
+    cardCartography: 'Geometry & provenance', cardRecords: 'Original records',
+    statVersion: 'Version', statParentCode: 'Statistical parent code'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -154,7 +159,11 @@ const WORDS = {
     mapToolAboutHint: 'Surse, metodologie și statut juridic',
     mapAppearance: 'Aspectul hărții', legendShowAll: 'Arată toate nivelurile',
     legendOnlyVisible: 'Arată doar contururile vizibile', legendCurrentlyVisible: 'Vizibile acum',
-    mapSwipeHint: 'Glisează în jos pentru închidere'
+    mapSwipeHint: 'Glisează în jos pentru închidere',
+    cardIdentity: 'Identitate', cardAdministration: 'Administrativ și registru',
+    cardStatistics: 'Roluri statistice', cardHierarchy: 'Ierarhie teritorială',
+    cardCartography: 'Geometrie și proveniență', cardRecords: 'Înregistrări originale',
+    statVersion: 'Versiune', statParentCode: 'Cod părinte statistic'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -913,13 +922,15 @@ export default function App() {
     </div>
   </section>;
 
+  // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
+  // A new entity key resets expanded source records, never map selection/visibility.
   const details=<section className="detail-content">
     <div className="panel-heading"><span className="eyebrow">{t.sourceSnapshot}</span><h2>{t.details}</h2></div>
-    {currentNode?<div className="entity-card">
-      <div className="entity-title">
+    {currentNode?<div className="entity-card" key={currentNode.id}>
+      <header className="entity-title">
         <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
         <div><h3>{currentNode.officialName}</h3><small>{roleLabel(currentNode)}</small></div>
-      </div>
+      </header>
       {breadcrumbs.length>0&&<nav className="entity-breadcrumbs" aria-label={t.path}>
         {breadcrumbs.map((crumb,index)=><span className="breadcrumb-part" key={crumb.id}>
           {index>0&&<span aria-hidden="true">›</span>}
@@ -934,8 +945,8 @@ export default function App() {
           onClick={()=>{const n=siblings[siblingIndex+1];if(n)choose(n.id);}}>{t.next} ›</button>
       </div>
       <div className="entity-actions">
-        <button onClick={()=>toggleVisible(currentNode.id)}>{visibleSet.has(currentNode.id)?t.hide:t.view}</button>
-        <button className="secondary" onClick={()=>void locate(currentNode.id)}>{t.locate}</button>
+        <button type="button" onClick={()=>toggleVisible(currentNode.id)}>{visibleSet.has(currentNode.id)?t.hide:t.view}</button>
+        <button type="button" className="secondary" onClick={()=>void locate(currentNode.id)}>{t.locate}</button>
       </div>
       <details className="atlas-detail-export">
         <summary>{t.entityExport}</summary>
@@ -951,48 +962,92 @@ export default function App() {
             onFocus={e=>e.currentTarget.select()} />}
         </div>
       </details>
-      <div className="detail-section">{t.details}</div>
-      <dl className="metadata">
-        <dt>{t.official}</dt><dd>{currentNode.officialName}</dd>
-        <dt>{t.country}</dt><dd>{currentNode.country==='RO'?'România':'Republica Moldova'}</dd>
-        <dt>{t.adminLevel}</dt><dd>{currentNode.adminLevel===null?'':currentNode.adminLevel}</dd>
-        <dt>{t.osmId}</dt><dd>{currentNode.osmRelationId!==null?
-          <a href={'https://www.openstreetmap.org/relation/'+currentNode.osmRelationId} target="_blank" rel="noreferrer">{currentNode.osmRelationId} ↗</a>:null}</dd>
-        <dt>{t.registry}</dt><dd>{currentNode.registry?currentNode.registry.system+' '+currentNode.registry.code:null}</dd>
-        {pmrCadastralSeatCode(currentNode.id)&&<>
-          <dt>{t.pmrCadastralCode}</dt><dd>{pmrCadastralSeatCode(currentNode.id)}</dd>
-          <dt>{t.pmrCadastralSource}</dt><dd>
-            <a href={PMR_CADASTRAL_SOURCE.url} target="_blank" rel="noreferrer">
-              {lang==='ro'?'Ordinul nr. 361/2015, anexa 2':'Order 361/2015, Annex 2'} ↗
-            </a>
-          </dd>
-        </>}
-        <dt>{t.statisticalRole}</dt><dd>{codeOf(currentNode)||null}</dd>
-        <dt>{t.parentAdmin}</dt><dd>{currentNode.administrativeParentId?nodes.get(currentNode.administrativeParentId)?.officialName:null}</dd>
-        <dt>{t.parentTree}</dt><dd>{currentNode.treeParentId?labelOf(nodes.get(currentNode.treeParentId)!,lang):null}</dd>
-      </dl>
-      {pmrCadastralSeatCode(currentNode.id)&&
-        <p className="source-caveat">{t.pmrCadastralCaveat}</p>}
-      {currentNode.registryIdentityReviewStatus&&<p className="source-caveat">{t.relationshipNote}</p>}
-      {currentNode.registry?.record&&<details className="raw-details">
-        <summary>{t.officialRecord}</summary>
-        <dl className="raw-tags">{Object.entries(currentNode.registry.record).map(([key,value])=>
-          <div key={key}><dt>{key}</dt><dd>{value===null?'':String(value)}</dd></div>)}</dl>
-      </details>}
-      <details className="raw-details">
-        <summary>{t.raw} ({Object.keys(currentNode.sourceTags||{}).length})</summary>
-        <dl className="raw-tags">{Object.entries(currentNode.sourceTags||{}).sort(([a],[b])=>a.localeCompare(b)).map(([key,value])=>
-          <div key={key}><dt>{key}</dt><dd>{value}</dd></div>)}</dl>
-      </details>
-      <div className="detail-section">{t.source}</div>
-      <dl className="metadata">
-        <dt>{t.source}</dt><dd>{t.sourceBoundary}</dd>
-        <dt>{t.original}</dt><dd>2026-10-05</dd>
-      </dl>
-      <p className="note">{t.detailNote}</p>
+      <EntityCardSection title={t.cardIdentity} kind="identity">
+        <dl className="metadata">
+          <dt>{t.official}</dt><dd>{currentNode.officialName}</dd>
+          <dt>{t.country}</dt><dd>{currentNode.country==='RO'?'România':'Republica Moldova'}</dd>
+        </dl>
+      </EntityCardSection>
+      {(currentNode.roles.includes('administrative')||currentNode.registry||
+        pmrCadastralSeatCode(currentNode.id))&&
+      <EntityCardSection title={t.cardAdministration} kind="administrative">
+        <dl className="metadata">
+          {currentNode.registry&&<>
+            <dt>{t.registry}</dt><dd>{currentNode.registry.system+' '+currentNode.registry.code}</dd>
+          </>}
+          {pmrCadastralSeatCode(currentNode.id)&&<>
+            <dt>{t.pmrCadastralCode}</dt><dd>{pmrCadastralSeatCode(currentNode.id)}</dd>
+            <dt>{t.pmrCadastralSource}</dt><dd>
+              <a href={PMR_CADASTRAL_SOURCE.url} target="_blank" rel="noreferrer">
+                {lang==='ro'?'Ordinul nr. 361/2015, anexa 2':'Order 361/2015, Annex 2'} ↗
+              </a>
+            </dd>
+          </>}
+        </dl>
+        {municipalRoleClarification(currentNode,lang)&&
+          <p className="source-caveat">{municipalRoleClarification(currentNode,lang)}</p>}
+        {pmrCadastralSeatCode(currentNode.id)&&
+          <p className="source-caveat">{t.pmrCadastralCaveat}</p>}
+        {currentNode.registryIdentityReviewStatus&&
+          <p className="source-caveat">{t.relationshipNote}</p>}
+      </EntityCardSection>}
+      {currentNode.statisticalRoles.length>0&&
+      <EntityCardSection title={t.cardStatistics} kind="statistical">
+        <dl className="metadata">
+          <dt>{t.statisticalRole}</dt><dd>{codeOf(currentNode)||null}</dd>
+        </dl>
+        <ul className="entity-statistical-roles">
+          {currentNode.statisticalRoles.map((role,index)=>
+            <li key={role.classification+'-'+role.code+'-'+index}>
+              <div className="entity-statistical-primary">
+                <strong>{role.classification} {role.level}</strong>
+                <span>{role.code}</span>
+              </div>
+              <small>{t.statVersion}: {role.version}</small>
+              {role.parentCode&&<small>{t.statParentCode}: {role.parentCode}</small>}
+            </li>)}
+        </ul>
+      </EntityCardSection>}
+      {(currentNode.administrativeParentId||currentNode.treeParentId)&&
+      <EntityCardSection title={t.cardHierarchy} kind="hierarchy">
+        <dl className="metadata">
+          {currentNode.administrativeParentId&&<>
+            <dt>{t.parentAdmin}</dt>
+            <dd>{nodes.get(currentNode.administrativeParentId)?.officialName||null}</dd>
+          </>}
+          {currentNode.treeParentId&&<>
+            <dt>{t.parentTree}</dt>
+            <dd>{nodes.get(currentNode.treeParentId)?
+              labelOf(nodes.get(currentNode.treeParentId)!,lang):null}</dd>
+          </>}
+        </dl>
+      </EntityCardSection>}
+      <EntityCardSection title={t.cardCartography} kind="cartographic">
+        <dl className="metadata">
+          <dt>{t.adminLevel}</dt>
+          <dd>{currentNode.adminLevel===null?'':currentNode.adminLevel}</dd>
+          <dt>{t.osmId}</dt><dd>{currentNode.osmRelationId!==null?
+            <a href={'https://www.openstreetmap.org/relation/'+currentNode.osmRelationId}
+              target="_blank" rel="noreferrer">{currentNode.osmRelationId} ↗</a>:null}</dd>
+          <dt>{t.source}</dt><dd>{t.sourceBoundary}</dd>
+          <dt>{t.original}</dt><dd>2026-10-05</dd>
+        </dl>
+        <p className="note">{t.detailNote}</p>
+      </EntityCardSection>
+      <EntityCardSection title={t.cardRecords} kind="records" collapsible>
+        {currentNode.registry?.record&&<details className="raw-details">
+          <summary>{t.officialRecord}</summary>
+          <dl className="raw-tags">{Object.entries(currentNode.registry.record).map(([key,value])=>
+            <div key={key}><dt>{key}</dt><dd>{value===null?'':String(value)}</dd></div>)}</dl>
+        </details>}
+        <details className="raw-details">
+          <summary>{t.raw} ({Object.keys(currentNode.sourceTags||{}).length})</summary>
+          <dl className="raw-tags">{Object.entries(currentNode.sourceTags||{}).sort(([a],[b])=>a.localeCompare(b)).map(([key,value])=>
+            <div key={key}><dt>{key}</dt><dd>{value}</dd></div>)}</dl>
+        </details>
+      </EntityCardSection>
     </div>:<div className="empty-detail"><span>◇</span><h3>{t.selectEntity}</h3><p>{t.select}</p></div>}
   </section>;
-
 
   // WEB-R3.5: three top-level actions, with a contextual legend and a small
   // secondary About link. On mobile the dialog is an adaptive bottom sheet.
