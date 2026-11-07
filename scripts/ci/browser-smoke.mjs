@@ -374,6 +374,9 @@ async function desktop(cdp){
     'Global tools reclaim map space by closing the module panel');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,
     'Global tools close the entity details without clearing selection');
+  // WEB-R4.2 hotfix: focus must remain in the dialog across a frame, even
+  // after previously closing and reopening the selected entity card.
+  await pause(100);
   assert.equal(await p.eval("document.activeElement===document.querySelector('.atlas-tools-close')"),true,
     'Global tool dialog focuses its Close button');
   assert.equal(await p.eval("document.querySelectorAll('.atlas-tools-entry').length"),3,
