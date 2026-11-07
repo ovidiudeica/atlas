@@ -1,7 +1,7 @@
 // Stable, presentation-only order of sibling territorial entities.
-// Nistrenia has five raions and two independently administered city councils.
-// Show the five raions first and the two cities last, alphabetically in the
-// currently selected UI language within each group.
+// WEB-R3.15: Nistrenia's two city councils (Tiraspol, Bender) come first,
+// followed by its five de-facto raions from south to north.
+// The exact order is fixed across RO/EN, independently of locale sorting.
 import {shortTreeName} from './treeNames.mjs';
 import {comparePresentationSiblings} from './treeOverlay.mjs';
 export const NISTRIAN_PARENT_ID='osm-r65335';
@@ -12,8 +12,19 @@ export const EAST_BENDER_ADM4_ID='osm-r9581354'; // CUATM 0500
 export const EAST_UATSN_ADM4_ID='osm-r2607033'; // CUATM 9800
 export const EAST_BENDER_ADM8_CITY_ID='osm-r12463379';
 
-export const NISTRIAN_CITY_COUNCILS=Object.freeze(['osm-r944727','osm-r1702219']);
-const cityCouncilIds=new Set(NISTRIAN_CITY_COUNCILS);
+export const NISTRIAN_CITY_COUNCILS=Object.freeze(['osm-r1702219','osm-r944727']);
+// The seven actual ADM5 child IDs of osm-r65335, verified against OSMB 2026-10-05.
+// Order: Tiraspol, Bender; Slobozia, Grigoriopol, Dubăsari, Rîbnița, Camenca.
+export const NISTRIAN_CHILD_ORDER=Object.freeze([
+  'osm-r1702219', // Tiraspol city council — de-facto administrative seat
+  'osm-r944727',  // Bender city council
+  'osm-r1702218', // Slobozia raion — south
+  'osm-r1702214', // Grigoriopol raion
+  'osm-r1702215', // Dubăsari raion
+  'osm-r1702217', // Rîbnița raion
+  'osm-r1702216'  // Camenca raion — north
+]);
+const nistrianChildRank=new Map(NISTRIAN_CHILD_ORDER.map((id,index)=>[id,index]));
 
 // WEB-R3.10 — only display ordering; the three NTS3 regions are NOT
 // administrative superiors. Their first item is the seat of the regional
@@ -75,12 +86,14 @@ const seatFirst=(a,b,seatId,lang)=>
 export function compareTreeSiblings(a,b,view,parentId,lang='ro'){
   const presented=comparePresentationSiblings(a,b,view,parentId,lang);
   if(presented!==null)return presented;
-  if(parentId===NISTRIAN_PARENT_ID){
-    const aRank=cityCouncilIds.has(a.id)?1:0;
-    const bRank=cityCouncilIds.has(b.id)?1:0;
-    if(aRank!==bRank)return aRank-bRank;
-    const byShortName=shortTreeName(a,lang).localeCompare(shortTreeName(b,lang),lang);
-    return byShortName||a.id.localeCompare(b.id,'en');
+  if(parentId===NISTRIAN_PARENT_ID&&view!=='statistical'){
+    const aRank=nistrianChildRank.get(a.id);
+    const bRank=nistrianChildRank.get(b.id);
+    if(aRank!==undefined&&bRank!==undefined)return aRank-bRank;
+    if(aRank!==undefined)return -1;
+    if(bRank!==undefined)return 1;
+    // Graceful fallback for unexpected future children without changing IDs.
+    return sortedByLocalizedShortName(a,b,lang);
   }
   // WEB-R3.14 — EAST: the MD120 statistical node groups the existing
   // UATSN (9800) first, Bender (0500) second in the All view. Their
