@@ -535,6 +535,31 @@ async function desktop(cdp){
   assert.equal(await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Chițcani')?.title"),
     'Sovetul sătesc Chițcani','Original OSMB descriptor retained in the tree title');
   await p.snap('desktop-chitcani-short-ro.png');
+  // WEB-R3.12 — source aliases must stay searchable after UATSN name overrides.
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
+  await p.call('Input.insertText',{text:'Sovetul sătesc Popencu'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Popencu')",
+    'Popencu retains source alias and has concise Romanian display name');
+  const popencuTitle=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Popencu')?.title");
+  assert.equal(popencuTitle,'comuna Popencu','CUATM official name retained in tree title; original OSMB name remains searchable');
+  await p.snap('desktop-uatsn-popencu-ro.png');
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
+  await p.wait("document.documentElement.lang==='en'",'English locale for Popencu');
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Popencu')",
+    'Popencu also concise in English');
+  await p.snap('desktop-uatsn-popencu-en.png');
+  await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='RO').click()");
+  await p.wait("document.documentElement.lang==='ro'",'Romanian locale for Pervomaisc');
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
+  await p.call('Input.insertText',{text:'Satul Pervomaisc'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Pervomaisc')",
+    'Original official name finds Pervomaisc despite misleading Slobozia source name');
+  await p.snap('desktop-uatsn-pervomaisc-ro.png');
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
+  await p.call('Input.insertText',{text:'Sovetul orășenesc Dubăsari'});
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Dubăsari')",
+    'Dubăsari city council shows geographical Romanian short label');
+  await p.snap('desktop-uatsn-dubasari-ro.png');
   await p.close();
 }
 async function tablet(cdp){
