@@ -3,7 +3,8 @@ import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibr
 import type { FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
 import { availableOsmLevels, availableStatisticalLevels, buildOsmLevelIndex,
-  matchingCombinedLevelIds, orderTerritorialScopes, updateOsmLevelVisibility } from './data/osmLevelFilter.mjs';
+  matchingOsmLevelIds, matchingStatisticalLevelIds, levelVisibilityState,
+  updateOsmLevelVisibility } from './data/osmLevelFilter.mjs';
 import { buildPermalink, clearGeometryPermalink, idsForScope, makeDetailedCollection, metadataCsv, readPermalink,
   type ExportScope } from './data/phase5.mjs';
 import {
@@ -213,35 +214,20 @@ export default function App() {
   const [shareNotice,setShareNotice] = useState('');
   const [shareFallback,setShareFallback] = useState('');
   const [navBusy,setNavBusy] = useState(false);
-  const [levelScopeSelection,setLevelScopeSelection] = useState<string[] | null>(null);
-  const [levelSelection,setLevelSelection] = useState<number[]>([]);
-  const [statLevelSelection,setStatLevelSelection] = useState<string[]>([]);
-  const [levelActionMessage,setLevelActionMessage] = useState('');
   const navigationEpoch = useRef(0);
   const lastDrawerRef = useRef<Drawer>(null);
 
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
   const nodes = useMemo(()=>new Map(catalog.map(n=>[n.id,n])),[catalog]);
-  // Filter scopes and available levels come from catalog metadata, not RO/MD
-  // constants. Future independent territorial sets can register their own root.
+  // One visibility state shared by tree rows and filter level checkboxes.
+  // Filter levels always span every certified territorial set.
   const osmLevelIndex = useMemo(()=>buildOsmLevelIndex(catalog),[catalog]);
-  // Keep the accepted RO -> MD root order, without freezing the list of future
-  // regional or statistical-only territorial sets.
-  const orderedLevelScopes = useMemo(()=>
-    orderTerritorialScopes(osmLevelIndex.scopes,ROOT_IDS),[osmLevelIndex]);
-  const selectedLevelScopes = useMemo(()=>
-    levelScopeSelection ?? orderedLevelScopes.map(scope=>scope.id),
-    [levelScopeSelection,orderedLevelScopes]);
+  const allLevelScopes = useMemo(()=>osmLevelIndex.scopes.map(scope=>scope.id),[osmLevelIndex]);
   const levelOptions = useMemo(()=>
-    availableOsmLevels(osmLevelIndex,selectedLevelScopes),
-    [osmLevelIndex,selectedLevelScopes]);
+    availableOsmLevels(osmLevelIndex,allLevelScopes),[osmLevelIndex,allLevelScopes]);
   const statisticalLevelOptions = useMemo(()=>
-    availableStatisticalLevels(osmLevelIndex,selectedLevelScopes),
-    [osmLevelIndex,selectedLevelScopes]);
-  const matchingLevelIds = useMemo(()=>
-    matchingCombinedLevelIds(osmLevelIndex,selectedLevelScopes,levelSelection,statLevelSelection),
-    [osmLevelIndex,selectedLevelScopes,levelSelection,statLevelSelection]);
+    availableStatisticalLevels(osmLevelIndex,allLevelScopes),[osmLevelIndex,allLevelScopes]);
   const hierarchy = useMemo(()=>createHierarchy(catalog,treeView),[catalog,treeView]);
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
@@ -510,31 +496,6 @@ export default function App() {
     m.setPaintProperty('backdrop','background-color',basemap==='dark'?'#14241e':'#f1f5ef');
   },[basemap,ready]);
 
-  function toggleLevelScope(id:string, checked:boolean){
-    setLevelScopeSelection(old=>{
-      const current=old ?? orderedLevelScopes.map(scope=>scope.id);
-      return checked?[...new Set([...current,id])]:current.filter(value=>value!==id);
-    });
-    setLevelActionMessage('');
-  }
-  function toggleLevel(level:number, checked:boolean){
-    setLevelSelection(old=>checked?[...new Set([...old,level])]:old.filter(value=>value!==level));
-    setLevelActionMessage('');
-  }
-  function toggleStatisticalLevel(key:string, checked:boolean){
-    setStatLevelSelection(old=>checked?[...new Set([...old,key])]:old.filter(value=>value!==key));
-    setLevelActionMessage('');
-  }
-  function applyCombinedLevelSelection(show:boolean){
-    const selectedIds=matchingLevelIds;
-    const selectedSet=new Set(visible);
-    const affected=selectedIds.filter(id=>selectedSet.has(id)).length;
-    const changed=show?selectedIds.length-affected:affected;
-    setVisible(old=>updateOsmLevelVisibility(old,selectedIds,show));
-    setLevelActionMessage(changed.toLocaleString(lang==='ro'?'ro-RO':'en-US')+' '+
-      (show?(changed===1?t.levelShownOne:t.levelShownMany):
-        (changed===1?t.levelHiddenOne:t.levelHiddenMany)));
-  }
   const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
     const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
@@ -716,52 +677,49 @@ export default function App() {
         }} />
     </label>
     <p className="search-tip">{t.searchShortcut}</p>
+    <details className="osm-level-filter">
+      <summary>{t.levelFilter}</summary>
+      <div className="osm-level-filter-body">
+        <div className="osm-level-columns">
+          <fieldset className="osm-level-choices" data-column="administrative">
+            <legend>{t.adminView}</legend>
+            {levelOptions.map(option=>{
+              const ids=matchingOsmLevelIds(osmLevelIndex,allLevelScopes,[option.level]);
+              const state=levelVisibilityState(visibleSet,ids);
+              return <label key={'adm-'+option.level} data-level-kind="administrative">
+                <input type="checkbox" checked={state.checked} aria-checked={state.mixed?'mixed':state.checked}
+                  ref={el=>{if(el)el.indeterminate=state.mixed;}}
+                  aria-label={'OSM '+option.level}
+                  onChange={event=>setVisible(old=>updateOsmLevelVisibility(old,ids,event.target.checked))}/>
+                <span>ADM {option.level}</span>
+                <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
+              </label>;
+            })}
+          </fieldset>
+          <fieldset className="osm-level-choices" data-column="statistical">
+            <legend>{t.statView}</legend>
+            {statisticalLevelOptions.map(option=>{
+              const ids=matchingStatisticalLevelIds(osmLevelIndex,allLevelScopes,[option.key]);
+              const state=levelVisibilityState(visibleSet,ids);
+              return <label key={option.key} data-level-kind="statistical">
+                <input type="checkbox" checked={state.checked} aria-checked={state.mixed?'mixed':state.checked}
+                  ref={el=>{if(el)el.indeterminate=state.mixed;}}
+                  aria-label={(option.classification==='NUTS_MOLDOVA'?'NTS':option.classification)+' '+option.level}
+                  onChange={event=>setVisible(old=>updateOsmLevelVisibility(old,ids,event.target.checked))}/>
+                <span>{option.classification==='NUTS_MOLDOVA'?'NTS':option.classification} {option.level}</span>
+                <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
+              </label>;
+            })}
+          </fieldset>
+        </div>
+        <p className="osm-stat-hint">{t.statRoleNote}</p>
+      </div>
+    </details>
     <div className="tree-filters" role="group" aria-label={t.dataRole}>
       {(['all','administrative','statistical'] as TreeView[]).map(key=><button key={key}
         aria-pressed={treeView===key} className={treeView===key?'active':''} onClick={()=>setTreeView(key)}>
         {key==='all'?t.all:key==='administrative'?t.adminView:t.statView}</button>)}
     </div>
-    <details className="osm-level-filter">
-      <summary>{t.levelFilter}</summary>
-      <div className="osm-level-filter-body">
-        <fieldset className="osm-level-scopes">
-          <legend>{t.levelScope}</legend>
-          {orderedLevelScopes.map(scope=><label key={scope.id}>
-            <input type="checkbox" checked={selectedLevelScopes.includes(scope.id)}
-              aria-label={nodes.has(scope.id)?labelOf(nodes.get(scope.id)!,lang):scope.names[lang]}
-              onChange={event=>toggleLevelScope(scope.id,event.target.checked)} />
-            <span>{nodes.has(scope.id)?labelOf(nodes.get(scope.id)!,lang):scope.names[lang]}</span>
-          </label>)}
-        </fieldset>
-        <fieldset className="osm-level-choices">
-          <legend>{t.levelChoose}</legend>
-          {levelOptions.map(option=><label key={'adm-'+option.level} data-level-kind="administrative">
-            <input type="checkbox" checked={levelSelection.includes(option.level)}
-              aria-label={'OSM '+option.level} onChange={event=>toggleLevel(option.level,event.target.checked)} />
-            <span>ADM {option.level}</span>
-            <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
-          </label>)}
-          {statisticalLevelOptions.map(option=><label key={option.key} data-level-kind="statistical">
-            <input type="checkbox" checked={statLevelSelection.includes(option.key)}
-              aria-label={(option.classification==='NUTS_MOLDOVA'?'NTS':option.classification)+' '+option.level}
-              onChange={event=>toggleStatisticalLevel(option.key,event.target.checked)} />
-            <span>{option.classification==='NUTS_MOLDOVA'?'NTS':option.classification} {option.level}</span>
-            <small>{option.count.toLocaleString(lang==='ro'?'ro-RO':'en-US')}</small>
-          </label>)}
-        </fieldset>
-        <p className="osm-level-count">{matchingLevelIds.length.toLocaleString(lang==='ro'?'ro-RO':'en-US')} {t.levelMatch}</p>
-        <div className="osm-level-actions">
-          <button type="button" disabled={!matchingLevelIds.length}
-            aria-label={t.levelShow+' · '+t.levelChoose}
-            onClick={()=>applyCombinedLevelSelection(true)}>{t.levelShow}</button>
-          <button type="button" disabled={!matchingLevelIds.length}
-            aria-label={t.levelHide+' · '+t.levelChoose}
-            onClick={()=>applyCombinedLevelSelection(false)}>{t.levelHide}</button>
-        </div>
-        {levelActionMessage&&<p className="osm-level-feedback" role="status">{levelActionMessage}</p>}
-        <p className="osm-stat-hint">{t.statRoleNote}</p>
-      </div>
-    </details>
     {catalogError?<div className="loading-msg" role="alert">{t.loadFailed}<button onClick={()=>window.location.reload()}>{t.retry}</button></div>:
       catalog.length===0?<p className="loading-msg" role="status">{t.loading}</p>:
       <div className="tree-list" role="tree" aria-label={t.tree}>

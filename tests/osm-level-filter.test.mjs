@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildOsmLevelIndex, availableOsmLevels, matchingOsmLevelIds, updateOsmLevelVisibility,
   availableStatisticalLevels, matchingStatisticalLevelIds, matchingCombinedLevelIds, statisticalLevelKey,
-  orderTerritorialScopes }
+  orderTerritorialScopes, levelVisibilityState }
   from '../src/data/osmLevelFilter.mjs';
 
 function node(id,country,level,parent=null,setRoot=null,role=['administrative']){
@@ -150,4 +150,16 @@ test('Filtre follows the existing national root order: Romania before Moldova',(
   assert.deepEqual(orderTerritorialScopes(idx.scopes,[]).map(x=>x.id),
     idx.scopes.map(x=>x.id),
     'An empty preference list retains dynamically discovered order');
+});
+
+test('live filter checkboxes reflect individual tree toggles and shared geometries',()=>{
+  const targets=['ro','md'];
+  assert.deepEqual(levelVisibilityState(new Set(['ro','md']),targets),{checked:true,mixed:false});
+  assert.deepEqual(levelVisibilityState(new Set(['ro']),targets),{checked:false,mixed:true});
+  assert.deepEqual(levelVisibilityState(new Set(),targets),{checked:false,mixed:false});
+  assert.deepEqual(levelVisibilityState(new Set(['ro']),[]),{checked:false,mixed:false});
+  const shared=matchingCombinedLevelIds(buildOsmLevelIndex(sample),['ro','md'],[4],[statisticalLevelKey('NUTS',3)]);
+  assert.deepEqual(shared,['ro-county','md-shared']);
+  assert.deepEqual(levelVisibilityState(new Set(['ro-county']),shared),{checked:false,mixed:true});
+  assert.deepEqual(levelVisibilityState(new Set(shared),shared),{checked:true,mixed:false});
 });
