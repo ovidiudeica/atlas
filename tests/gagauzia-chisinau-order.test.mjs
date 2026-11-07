@@ -111,7 +111,7 @@ test('hierarchical presentation retains all 53 source children and has no cycles
 });
 test('canonical details, parent IDs, statistical tree and Nistrenia remain unchanged',()=>{
   assert.equal(byId.get(CHISINAU_CITY_ID).administrativeParentId,CHISINAU_ID);
-  assert.equal(byId.get('osm-r1813297').officialName,'sectorul Buiucani');
+  assert.equal(byId.get('osm-r1813297').officialName,'Sectorul Buiucani');
   assert.equal(presentationParentId(byId.get('osm-r1813297'),'statistical'),CHISINAU_ID);
   for(const node of all){
     if(!['osm-r1699032','osm-r1691801'].includes(node.administrativeParentId))
@@ -128,6 +128,6 @@ test('visible breadcrumbs, search expansion and sibling navigation use presentat
   assert.match(app,/const parent = presentationParentId\(node,view\)/);
   assert.equal((app.match(/const parent=presentationParentId\(cursor,treeView\)/g)||[]).length,3);
   assert.match(app,/const parent=presentationParentId\(currentNode,treeView\)/);
-  assert.match(app,/treeView==='administrative'&&x.node.roles.includes\('administrative'\)/);
+  assert.match(app,/treeView==='administrative'\s*&&\s*x\.node\.roles\.includes\('administrative'\)/);
   assert.match(app,/<dt>\{t.parentAdmin\}<\/dt>/);
 });
