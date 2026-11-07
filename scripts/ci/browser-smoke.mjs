@@ -148,7 +148,7 @@ async function desktop(cdp){
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
   }
   // WEB-R3.9: check real nested children rather than obsolete flat counts.
-  const desktopRow=(name,level)=>"Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+")+")";
+  const desktopRow=(name,level)=>"Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
   const desktopChildren=async expr=>await p.eval("(()=>{const l="+expr+";return Array.from(l.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')).map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
   for(const view of ['all','administrative']){
     await p.eval("document.querySelector('.tree-sidebar .tree-filters button:nth-child("+(view==='all'?'1':'2')+")').click()");
@@ -680,7 +680,7 @@ async function mobile(cdp){
   assert(mobileBranchDebug.visibleNames.includes('Găgăuzia')&&mobileBranchDebug.visibleNames.includes('Chișinău'),
     'Găgăuzia/Chișinău must be direct mobile Administrative children: '+JSON.stringify(mobileBranchDebug));
   // WEB-R3.9: mobile Romanian nesting. The unit identities stay intact.
-  const mobileRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+")+")";
+  const mobileRow=(name,level)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith("+JSON.stringify(level)+"))";
   const mobileChildren=async expr=>await p.eval("(()=>{const l="+expr+";return Array.from(l.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')).map(x=>({name:x.querySelector('.node-name')?.textContent.trim(),level:x.querySelector('.node-level')?.textContent.trim()}));})()");
   for(const parentName of ['Găgăuzia','Chișinău']){
     const root=mobileRow(parentName,'ADM 4');
