@@ -398,13 +398,13 @@ async function desktop(cdp){
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
   await p.call('Input.insertText',{text:'Unitățile din stânga Nistrului'});
   await pause(700);
-  const aliasResult=await p.eval("(()=>({query:document.querySelector('.tree-sidebar input[type=search]')?.value,view:[...document.querySelectorAll('.tree-sidebar .tree-filters button')].filter(x=>x.getAttribute('aria-pressed')==='true').map(x=>x.textContent.trim()),matches:[...document.querySelectorAll('.tree-sidebar .tree-list .tree-label')].map(x=>x.textContent.trim()),count:document.querySelector('.tree-sidebar .results-heading')?.textContent.trim()}))()");
+  const aliasResult=await p.eval("(()=>({query:document.querySelector('.tree-sidebar input[type=search]')?.value,view:[...document.querySelectorAll('.tree-sidebar .tree-filters button')].filter(x=>x.getAttribute('aria-pressed')==='true').map(x=>x.textContent.trim()),matches:[...document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')].map(x=>x.textContent.trim()),count:document.querySelector('.tree-sidebar .results-heading')?.textContent.trim()}))()");
   assert(aliasResult.matches.includes('Stânga Nistrului'),
     'Official MD120 search must resolve to short label: '+JSON.stringify(aliasResult));
   await p.snap('desktop-left-bank-short-name-ro.png');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='EN').click()");
   await p.wait("document.documentElement.lang==='en'",'English language switch');
-  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label')).some(x=>x.textContent.trim()==='Left Bank')",
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Left Bank')",
     'Same MD120 search result uses short English label');
   await p.snap('desktop-left-bank-short-name-en.png');
   await p.close();
