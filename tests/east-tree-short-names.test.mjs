@@ -71,8 +71,16 @@ test('WEB-R3.12: neither east branch identity nor Nistrenia children or statisti
   assert.equal(admin.registry.code,'9800');
   assert.equal(admin.administrativeParentId,'osm-r58974');
   assert.equal(admin.treeParentId,'stat-MD120');
-  assert.equal(shortTreeName(admin,'ro'),'Stânga Nistrului');
-  assert.equal(shortTreeName(byId.get('stat-MD120'),'en'),'Left Bank');
+  assert.equal(admin.sourceTags.short_name,'UATSN');
+  assert.equal(admin.registry.record.name,'Unitățile administrativ-teritoriale din stînga Nistrului');
+  assert.equal(shortTreeName(admin,'ro'),'UATSN');
+  assert.equal(shortTreeName(admin,'en'),'ATULBD');
+  const statistical=byId.get('stat-MD120');
+  assert.equal(statistical.sourceTags.alt_name,'Regiunea Transnistria');
+  assert.equal(statistical.statisticalRoles[0].code,'MD120');
+  assert.equal(statistical.sourceTags['ref:nuts'],'MD121');
+  assert.equal(shortTreeName(statistical,'ro'),'Transnistria');
+  assert.equal(shortTreeName(statistical,'en'),'Transnistria');
   assert.equal(shortTreeName(byId.get(BENDER_ID),'ro'),'Bender');
   assert.equal(shortTreeName(byId.get(BENDER_ID),'en'),'Bender');
   assert.equal(byId.get(BENDER_ID).registry.code,'0500');
