@@ -2,82 +2,132 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {gunzipSync} from 'node:zlib';
-import {compareTreeSiblings,GAGAUZIA_PARENT_ID,CHISINAU_PARENT_ID}
-  from '../src/data/treeOrder.mjs';
 import {shortTreeName} from '../src/data/treeNames.mjs';
-
-const entries=JSON.parse(gunzipSync(readFileSync(
- new URL('../public/data/phase4/catalog.json.gz',import.meta.url))).toString('utf8')).entities;
-const byId=new Map(entries.map(x=>[x.id,x]));
-const groups=[
- {id:GAGAUZIA_PARENT_ID,name:'Găgăuzia',levels:{5:3,8:26},
-  first:['osm-r1706979','osm-r1706978','osm-r7103068']},
- {id:CHISINAU_PARENT_ID,name:'Chișinău',levels:{7:5,8:19},
-  first:['osm-r1813306','osm-r1813297','osm-r58512','osm-r1813315','osm-r1813316']}
-];
-const children=id=>entries.filter(x=>x.treeParentId===id);
-test('certified Gagauzia and Chisinau parentage and child identities are unchanged',()=>{
- assert.equal(entries.length,4283);
- assert.equal(byId.size,4283);
- for(const {id,name,levels} of groups){
-   const parent=byId.get(id),direct=children(id);
-   assert.equal(parent.name,name);
-   assert.equal(direct.length,Object.values(levels).reduce((a,b)=>a+b,0));
-   assert(direct.every(x=>x.administrativeParentId===id));
-   assert.equal(new Set(direct.map(x=>x.id)).size,direct.length);
-   const count={};for(const node of direct)count[node.adminLevel]=(count[node.adminLevel]||0)+1;
-   assert.deepEqual(count,levels);
- }
+import {presentationParentId,comparePresentationSiblings,GAGAUZIA_ID,CHISINAU_ID,
+  CHISINAU_CITY_ID,COMRAT_RAION_ID,RAION_CHILDREN,SECTOR_IDS} from '../src/data/treeOverlay.mjs';
+import {compareTreeSiblings} from '../src/data/treeOrder.mjs';
+const all=JSON.parse(gunzipSync(readFileSync(
+  new URL('../public/data/phase4/catalog.json.gz',import.meta.url))).toString('utf8')).entities;
+const byId=new Map(all.map(e=>[e.id,e]));
+const children=(pid,view='administrative')=>all.filter(
+  x=>presentationParentId(x,view)===pid);
+const sorted=(pid,lang='ro',view='administrative')=>[...children(pid,view)]
+  .sort((a,b)=>compareTreeSiblings(a,b,view,pid,lang));
+const names=(pid,lang='ro',view='administrative')=>sorted(pid,lang,view)
+  .map(x=>shortTreeName(x,lang));
+test('certified catalog remains intact, and all OSMB Gagauzia ADM8 memberships have unique raions',()=>{
+  assert.equal(all.length,4283);
+  assert.equal(byId.size,4283);
+  assert.equal(byId.get(GAGAUZIA_ID).name,'Găgăuzia');
+  assert.equal(byId.get(CHISINAU_ID).name,'Chișinău');
+  assert.equal(byId.get(CHISINAU_CITY_ID).name,'Chișinău');
+  assert.equal(byId.get(CHISINAU_CITY_ID).adminLevel,8);
+  const mapping=Object.entries(RAION_CHILDREN);
+  assert.deepEqual(mapping.map(([pid,ids])=>[pid,ids.length]),
+    [['osm-r1706978',13],['osm-r1706979',9],['osm-r7103068',4]]);
+  assert.equal(new Set(mapping.flatMap(([,ids])=>ids)).size,26);
+  for(const [pid,ids] of mapping){
+    const raion=byId.get(pid);
+    assert.equal(raion.administrativeParentId,GAGAUZIA_ID);
+    assert.equal(raion.adminLevel,5);
+    for(const id of ids){
+      const child=byId.get(id);
+      assert(child,'Unknown Gagauzia source unit '+id);
+      assert.equal(child.adminLevel,8);
+      assert.equal(child.administrativeParentId,GAGAUZIA_ID);
+      assert.equal(child.treeParentId,GAGAUZIA_ID);
+      assert.equal(presentationParentId(child,'statistical'),GAGAUZIA_ID);
+      for(const view of ['administrative','all'])
+        assert.equal(presentationParentId(child,view),pid);
+    }
+  }
 });
-test('3 raions and 5 sectors precede ADM8 localities, alphabetically in both languages and views',()=>{
- for(const {id,first} of groups){
-   const source=children(id);
-   for(const lang of ['ro','en'])for(const view of ['administrative','all']){
-     const actual=[...source].sort((a,b)=>compareTreeSiblings(a,b,view,id,lang));
-     assert.deepEqual(new Set(actual.map(x=>x.id)),new Set(source.map(x=>x.id)));
-     assert.deepEqual(actual.slice(0,first.length).map(x=>x.id),first,
-       id+'/'+view+'/'+lang);
-     for(let n=1;n<actual.length;n++){
-       const prev=actual[n-1],next=actual[n];
-       assert(prev.adminLevel<=next.adminLevel,'Level ordering '+id+'/'+view+'/'+lang);
-       if(prev.adminLevel===next.adminLevel)
-         assert(shortTreeName(prev,lang).localeCompare(shortTreeName(next,lang),lang)<=0,
-           'Alphabetical order '+id+'/'+view+'/'+lang+': '+shortTreeName(prev,lang)+' > '+shortTreeName(next,lang));
-     }
-   }
- }
+test('regional capital raion Comrat first; each raion contains its ADM8 localities, both locales',()=>{
+  for(const view of ['administrative','all']){
+    const raions=sorted(GAGAUZIA_ID,'ro',view);
+    assert.deepEqual(raions.map(x=>x.id),
+      [COMRAT_RAION_ID,'osm-r1706979','osm-r7103068']);
+    assert.deepEqual(raions.map(x=>shortTreeName(x,'ro')),
+      ['Comrat','Ceadîr-Lunga','Vulcănești']);
+    assert.equal(raions.length,3);
+    for(const [raion,ids] of Object.entries(RAION_CHILDREN)){
+      for(const lang of ['ro','en']){
+        const kids=sorted(raion,lang,view);
+        assert.deepEqual(new Set(kids.map(x=>x.id)),new Set(ids));
+        assert.equal(kids.length,ids.length);
+        assert(kids.every(x=>x.adminLevel===8));
+        const displayed=names(raion,lang,view);
+        assert.deepEqual(displayed,[...displayed].sort((a,b)=>a.localeCompare(b,lang)));
+      }
+    }
+  }
+  assert.equal(byId.get('osm-r19118615').name,'Comrat');
+  assert.equal(byId.get(COMRAT_RAION_ID).name,'Comrat');
+  assert.notEqual(byId.get('osm-r19118615').adminLevel,byId.get(COMRAT_RAION_ID).adminLevel);
 });
-test('short sector names preserve full source labels and identities',()=>{
- for(const [id,short,full] of [
-   ['osm-r1813297','Buiucani','Buiucani Sector'],
-   ['osm-r1813316','Rîșcani','Rîșcani Sector']]){
-   const node=byId.get(id);
-   assert.equal(node.shortName.en,full);
-   assert.equal(shortTreeName(node,'en'),short);
-   assert.equal(shortTreeName(node,'ro'),short);
-   assert.equal(node.adminLevel,7);
-   assert.equal(node.administrativeParentId,CHISINAU_PARENT_ID);
- }
- for(const [raion,local] of [
-   ['osm-r1706978','osm-r19118615'],
-   ['osm-r1706979','osm-r19118605'],
-   ['osm-r7103068','osm-r19117343']]){
-   const p=byId.get(raion),c=byId.get(local);
-   assert.equal(p.name,c.name);
-   assert.equal(p.adminLevel,5);
-   assert.equal(c.adminLevel,8);
-   assert.equal(p.administrativeParentId,c.administrativeParentId);
-   assert.equal(p.administrativeParentId,GAGAUZIA_PARENT_ID);
- }
+test('city Chișinău first; all five sectors nested under city, other 18 ADM8 follow',()=>{
+  assert.equal(SECTOR_IDS.length,5);
+  for(const view of ['administrative','all']){
+    for(const lang of ['ro','en']){
+      const roots=sorted(CHISINAU_ID,lang,view);
+      assert.equal(roots.length,19); // ADM8 city + 18 localities
+      assert.equal(roots[0].id,CHISINAU_CITY_ID);
+      assert(roots.every(x=>x.adminLevel===8));
+      assert.deepEqual(roots.slice(1).map(x=>shortTreeName(x,lang)),
+        [...roots.slice(1).map(x=>shortTreeName(x,lang))].sort((a,b)=>a.localeCompare(b,lang)));
+      const sectors=sorted(CHISINAU_CITY_ID,lang,view);
+      assert.equal(sectors.length,5);
+      assert.deepEqual(new Set(sectors.map(x=>x.id)),new Set(SECTOR_IDS));
+      assert.deepEqual(sectors.map(x=>shortTreeName(x,lang)),
+        ['Botanica','Buiucani','Centru','Ciocana','Rîșcani']);
+      for(const s of sectors){
+        assert.equal(s.adminLevel,7);
+        assert.equal(s.administrativeParentId,CHISINAU_ID); // actual source parent
+        assert.equal(s.treeParentId,CHISINAU_ID);
+        assert.equal(presentationParentId(s,view),CHISINAU_CITY_ID);
+        assert.equal(presentationParentId(s,'statistical'),CHISINAU_ID);
+      }
+    }
+  }
 });
-test('Nistrenia sibling order and unrelated default tree ordering remain stable',()=>{
- const pmr=children('osm-r65335');
- assert.deepEqual([...pmr].sort((a,b)=>compareTreeSiblings(a,b,'administrative','osm-r65335','ro'))
-   .map(x=>shortTreeName(x,'ro')),
-   ['Camenca','Dubăsari','Grigoriopol','Rîbnița','Slobozia','Bender','Tiraspol']);
- const others=entries.filter(x=>x.administrativeParentId==='osm-r58974'&&
-   x.id!=='osm-r65335').slice(0,9);
- assert.deepEqual(
-   [...others].sort((a,b)=>compareTreeSiblings(a,b,'administrative','osm-r58974','ro')).map(x=>x.id),
-   [...others].sort((a,b)=>a.name.localeCompare(b.name,'ro')).map(x=>x.id));
+test('hierarchical presentation retains all 53 source children and has no cycles/duplicate nodes',()=>{
+  for(const view of ['all','administrative']){
+    for(const root of [GAGAUZIA_ID,CHISINAU_ID]){
+      const direct=all.filter(x=>x.administrativeParentId===root);
+      const discovered=new Set(),visit=(id,depth)=>{
+        assert(depth<5,'Unexpected presentation cycle');
+        for(const node of children(id,view)){
+          assert(!discovered.has(node.id),'Duplicate display node '+node.id);
+          discovered.add(node.id);
+          visit(node.id,depth+1);
+        }
+      };
+      visit(root,0);
+      assert.deepEqual(discovered,new Set(direct.map(x=>x.id)),
+        'All original direct children must occur exactly once after indentation');
+      assert.equal(discovered.size,root===GAGAUZIA_ID?29:24);
+    }
+  }
+});
+test('canonical details, parent IDs, statistical tree and Nistrenia remain unchanged',()=>{
+  assert.equal(byId.get(CHISINAU_CITY_ID).administrativeParentId,CHISINAU_ID);
+  assert.equal(byId.get('osm-r1813297').officialName,'sectorul Buiucani');
+  assert.equal(presentationParentId(byId.get('osm-r1813297'),'statistical'),CHISINAU_ID);
+  for(const node of all){
+    if(!['osm-r1699032','osm-r1691801'].includes(node.administrativeParentId))
+      assert.equal(presentationParentId(node,'administrative'),node.administrativeParentId,
+        'Unrelated administrative parent must not be overridden: '+node.id);
+  }
+  const nistrenia=all.filter(x=>x.treeParentId==='osm-r65335');
+  assert.deepEqual([...nistrenia].sort((a,b)=>
+    compareTreeSiblings(a,b,'all','osm-r65335','ro')).map(x=>shortTreeName(x,'ro')),
+    ['Camenca','Dubăsari','Grigoriopol','Rîbnița','Slobozia','Bender','Tiraspol']);
+});
+test('visible breadcrumbs, search expansion and sibling navigation use presentation hierarchy',()=>{
+  const app=readFileSync(new URL('../src/App.tsx',import.meta.url),'utf8');
+  assert.match(app,/const parent = presentationParentId\(node,view\)/);
+  assert.equal((app.match(/const parent=presentationParentId\(cursor,treeView\)/g)||[]).length,3);
+  assert.match(app,/const parent=presentationParentId\(currentNode,treeView\)/);
+  assert.match(app,/treeView==='administrative'&&x.node.roles.includes\('administrative'\)/);
+  assert.match(app,/<dt>\{t.parentAdmin\}<\/dt>/);
 });
