@@ -9,7 +9,7 @@ const entities=catalog.entities,byId=new Map(entities.map(x=>[x.id,x]));
 test('all 4283 certified tree names are concise in both languages',()=>{
   assert.equal(entities.length,4283);
   assert.equal(byId.size,4283);
-  const forbiddenEnglish=/\s(?:District|Municipality|County|Commune|City|Town)$/iu;
+  const forbiddenEnglish=/\s(?:District|Municipality|County|Commune|City|Town|Sector)$/iu;
   const forbiddenRomanian=/^(?:Județul|Raionul|Municipiul|Municipalitatea|Orașul|Comuna|Districtul)\s+/iu;
   for(const node of entities)for(const lang of ['ro','en']){
     const name=shortTreeName(node,lang);
@@ -21,7 +21,7 @@ test('all 4283 certified tree names are concise in both languages',()=>{
     assert(name.length<46,'Overlong label '+node.id+'/'+lang+': '+name);
   }
 });
-test('all 46 previously long English names and the 1 Romanian counterpart are shortened',()=>{
+test('all 48 previously long English names and the 1 Romanian counterpart are shortened',()=>{
   const changed={en:[],ro:[]};
   function legacy(node,lang){
     if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
@@ -39,10 +39,10 @@ test('all 46 previously long English names and the 1 Romanian counterpart are sh
     const before=legacy(node,lang),after=shortTreeName(node,lang);
     if(before!==after)changed[lang].push({id:node.id,before,after});
   }
-  assert.equal(changed.en.length,46,JSON.stringify(changed.en));
+  assert.equal(changed.en.length,48,JSON.stringify(changed.en));
   assert.equal(changed.ro.length,1,JSON.stringify(changed.ro));
   assert.equal(changed.ro[0].id,'osm-r2607033');
-  assert.equal(new Set(changed.en.map(x=>x.id)).size,46);
+  assert.equal(new Set(changed.en.map(x=>x.id)).size,48);
 });
 test('both left-bank entities and district/municipality names are concise',()=>{
   const get=(id,lang)=>shortTreeName(byId.get(id),lang);
@@ -60,6 +60,8 @@ test('both left-bank entities and district/municipality names are concise',()=>{
   assert.equal(get('osm-r19112364','ro'),'Satul Nou');
   assert.equal(get('stat-RO1','ro'),'Macroregiunea Unu');
   assert.equal(get('osm-r1702219','en'),'Tiraspol');
+  assert.equal(get('osm-r1813297','en'),'Buiucani');
+  assert.equal(get('osm-r1813316','en'),'Rîșcani');
   assert.equal(get('osm-r944727','en'),'Bender');
 });
 test('canonical catalog names and official identities remain unchanged',()=>{
