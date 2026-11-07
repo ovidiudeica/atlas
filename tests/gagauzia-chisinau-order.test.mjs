@@ -42,7 +42,7 @@ test('certified catalog remains intact, and all OSMB Gagauzia ADM8 memberships h
     }
   }
 });
-test('regional capital raion Comrat first; each raion contains its ADM8 localities, both locales',()=>{
+test('Comrat uncoded raion keeps inherited order; Găgăuzia ADM8 localities sort by CUATM in both locales',()=>{
   for(const view of ['administrative','all']){
     const raions=sorted(GAGAUZIA_ID,'ro',view);
     assert.deepEqual(raions.map(x=>x.id),
@@ -56,8 +56,10 @@ test('regional capital raion Comrat first; each raion contains its ADM8 localiti
         assert.deepEqual(new Set(kids.map(x=>x.id)),new Set(ids));
         assert.equal(kids.length,ids.length);
         assert(kids.every(x=>x.adminLevel===8));
-        const displayed=names(raion,lang,view);
-        assert.deepEqual(displayed,[...displayed].sort((a,b)=>a.localeCompare(b,lang)));
+        assert.deepEqual(kids.map(x=>x.id),
+          [...kids].sort((a,b)=>a.registry.code.localeCompare(b.registry.code,'en')
+            ||a.id.localeCompare(b.id,'en')).map(x=>x.id),
+          'Găgăuzia ADM8 CUATM sorted within '+raion+' / '+lang+' / '+view);
       }
     }
   }
@@ -65,7 +67,7 @@ test('regional capital raion Comrat first; each raion contains its ADM8 localiti
   assert.equal(byId.get(COMRAT_RAION_ID).name,'Comrat');
   assert.notEqual(byId.get('osm-r19118615').adminLevel,byId.get(COMRAT_RAION_ID).adminLevel);
 });
-test('city Chișinău first; all five sectors nested under city, other 18 ADM8 follow',()=>{
+test('Chișinău code 0100 first; sectors nested under city and sorted by available CUATM',()=>{
   assert.equal(SECTOR_IDS.length,5);
   for(const view of ['administrative','all']){
     for(const lang of ['ro','en']){
@@ -73,13 +75,15 @@ test('city Chișinău first; all five sectors nested under city, other 18 ADM8 f
       assert.equal(roots.length,19); // ADM8 city + 18 localities
       assert.equal(roots[0].id,CHISINAU_CITY_ID);
       assert(roots.every(x=>x.adminLevel===8));
-      assert.deepEqual(roots.slice(1).map(x=>shortTreeName(x,lang)),
-        [...roots.slice(1).map(x=>shortTreeName(x,lang))].sort((a,b)=>a.localeCompare(b,lang)));
+      assert.deepEqual(roots.map(x=>x.id),
+        [...roots].sort((a,b)=>a.registry.code.localeCompare(b.registry.code,'en')
+          ||a.id.localeCompare(b.id,'en')).map(x=>x.id),
+        'Chișinău ADM8 siblings sorted by CUATM, not by localized name');
       const sectors=sorted(CHISINAU_CITY_ID,lang,view);
       assert.equal(sectors.length,5);
       assert.deepEqual(new Set(sectors.map(x=>x.id)),new Set(SECTOR_IDS));
       assert.deepEqual(sectors.map(x=>shortTreeName(x,lang)),
-        ['Botanica','Buiucani','Centru','Ciocana','Rîșcani']);
+        ['Botanica','Buiucani','Ciocana','Rîșcani','Centru']);
       for(const s of sectors){
         assert.equal(s.adminLevel,7);
         assert.equal(s.administrativeParentId,CHISINAU_ID); // actual source parent
