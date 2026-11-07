@@ -42,7 +42,7 @@ ordine: antet, roluri, clasificatoare, relații, mobil, verificări.
 2. București: NUTS3, ADM4 real și rol SIRUTA ADM8 `179132`, fără geometrie
    secundară. Navigare la părintele statistic verificat.
 3. Chișinău ADM4 NTS3 și orașul Chișinău ADM8: fișe și geometrii distincte.
-4. Găgăuzia ADM4 + CUATM `9600`.
+4. Găgăuzia ADM4 + NTS3 (`MD114`) + CUATM `9600`, o singură geometrie.
 5. Bender ADM5 + PMR `32`, fără cod CUATM fabricat.
 6. `stat-MD120` pur statistic NTS3 fără nivel administrativ OSM.
 7. Brețcu, `siruta-u64096`, fără relație OSM fabricată.
