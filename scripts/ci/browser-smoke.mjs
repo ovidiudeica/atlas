@@ -685,8 +685,13 @@ async function mobile(cdp){
     await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(label)+").querySelector('.expand-button').click()");
   }
   await p.eval("Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Moldova').querySelector('.expand-button').click()");
+  // The pre-existing short-name search verifies two identities, one ADM and
+  // one statistical, so it must run in All view after the new ADM-only audit.
+  await p.eval("document.querySelector('.drawer .tree-filters button:first-child').click()");
+  await p.wait("document.querySelector('.drawer .tree-filters button:first-child').getAttribute('aria-pressed')==='true'",
+    'Restore All view for dual administrative/statistical identity search');
   await p.wait("!!document.querySelector('.drawer input[type=search]')",
-    'Mobile Administrative tree available for short-name verification');
+    'Mobile tree available for short-name verification');
   await p.eval("document.querySelector('.drawer input[type=search]').focus()");
   await p.call('Input.insertText',{text:'Unitățile administrativ-teritoriale din stînga Nistrului'});
   await p.wait("Array.from(document.querySelectorAll('.drawer .tree-list .node-name')).filter(x=>x.textContent.trim()==='Stânga Nistrului').length===2",
