@@ -166,7 +166,7 @@ async function desktop(cdp){
       'Nistrenia appears under Moldova');
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').querySelector('.expand-button').click()");
     const order=await p.eval("(()=>{const line=Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie');return Array.from(line.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim());})()");
-    assert.deepEqual(order,['Bender','Tiraspol','Grigoriopol','Dubossary','Rybnitsa','Slobdzeya','Kamenka'],
+    assert.deepEqual(order,['Bender','Tiraspol','Grigoriopol','Dubasari','Ribnita','Slobozia','Camenca'],
       'English Nistrenia children follow PMR cadastral seat-code order, '+view);
     await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Pridnestrovie').scrollIntoView({block:'center'})");
     await p.snap('desktop-nistrenia-web-r318-cadastral-order-en-'+view+'.png');
@@ -641,10 +641,10 @@ async function desktop(cdp){
     'Municipality can be searched by original name but appears without Municipality');
   await p.snap('desktop-municipality-short-en.png');
   // WEB-R3.11: the historical OSMB council label remains a valid search alias;
-  // only the Romanian tree display is shortened. English remains Kitskany.
+  // EN display uses Chitcani; Kitskany remains searchable as source alias.
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
   await p.call('Input.insertText',{text:'Sovetul sătesc Chițcani'});
-  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Kitskany')",
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Chitcani')",
     'Chițcani source alias resolves to original English short name');
   await p.snap('desktop-chitcani-short-en.png');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(x=>x.textContent==='RO').click()");

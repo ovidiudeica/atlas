@@ -52,9 +52,12 @@ test('EN-R1: reviewed exonyms and NUTS display translations do not replace nativ
     'osm-r1748490':'Chisinau',
     'osm-r2607033':'ATULBD',
     'stat-MD120':'Transnistria',
-    'osm-r6879649':'Kitskany',
-    'osm-r1702216':'Kamenka',
-    'osm-r8291058':'Glinoye',
+    'osm-r6879649':'Chitcani',
+    'osm-r1702216':'Camenca',
+    'osm-r1702217':'Ribnita',
+    'osm-r1702215':'Dubasari',
+    'osm-r1702218':'Slobozia',
+    'osm-r8291058':'Hlinaia',
     'osm-r8290877':'Pervomaisc'
   })){
     assert(byId.has(id),'Missing canonical entity: '+id);

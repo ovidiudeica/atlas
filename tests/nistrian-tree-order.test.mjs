@@ -42,7 +42,7 @@ test('English: same published cadastral code order despite translated exonyms',(
   for(const view of ['administrative','all']){
     const sorted=[...children].sort((a,b)=>compareTreeSiblings(a,b,view,parent.id,'en'));
     assert.deepEqual(sorted.map(e=>shortTreeName(e,'en')),
-      ['Bender','Tiraspol','Grigoriopol','Dubossary','Rybnitsa','Slobdzeya','Kamenka']);
+      ['Bender','Tiraspol','Grigoriopol','Dubasari','Ribnita','Slobozia','Camenca']);
     assert.deepEqual(sorted.slice(0,2).map(e=>e.id),
       ['osm-r944727','osm-r1702219']);
     assert.deepEqual(sorted.map(e=>e.id),expectedIds);

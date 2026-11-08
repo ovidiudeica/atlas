@@ -60,7 +60,7 @@ test('both left-bank entities and district/municipality names are concise',()=>{
   assert.equal(get('osm-r1748490','en'),'Chisinau');
   assert.equal(get('osm-r58983','en'),'Balti');
   assert.equal(get('osm-r1104136','en'),'Basarabeasca');
-  assert.equal(get('osm-r1702216','en'),'Kamenka');
+  assert.equal(get('osm-r1702216','en'),'Camenca');
   assert.equal(get('osm-r1702216','ro'),'Camenca');
   assert.equal(get('osm-r90689','en'),'Romania');
   assert.equal(get('osm-r58974','ro'),'Moldova');
@@ -107,5 +107,5 @@ test('Chițcani shows the short Romanian name without changing certified OSMB/CU
   assert.equal(n.sourceTags['name:ro'],'Sovetul sătesc Chițcani');
   assert.equal(n.shortName.en,'Kitskany');
   assert.equal(shortTreeName(n,'ro'),'Chițcani');
-  assert.equal(shortTreeName(n,'en'),'Kitskany');
+  assert.equal(shortTreeName(n,'en'),'Chitcani');
 });

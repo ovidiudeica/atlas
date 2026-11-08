@@ -26,7 +26,7 @@ const EXPECTED_IDS=[
   'osm-r1702216'  // Camenca 66
 ];
 const EXPECTED_RO=['Bender','Tiraspol','Grigoriopol','Dubăsari','Rîbnița','Slobozia','Camenca'];
-const EXPECTED_EN=['Bender','Tiraspol','Grigoriopol','Dubossary','Rybnitsa','Slobdzeya','Kamenka'];
+const EXPECTED_EN=['Bender','Tiraspol','Grigoriopol','Dubasari','Ribnita','Slobozia','Camenca'];
 
 test('WEB-R3.15: seven Nistrenia ADM5 children exactly match original Atlas IDs and parents',()=>{
   assert.equal(records.length,4283);

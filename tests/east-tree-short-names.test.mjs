@@ -63,7 +63,8 @@ test('WEB-R3.12: Popencu English, Pervomaisc RO/EN and two independent Hlinaia i
   assert.equal(shortTreeName(one,'ro'),'Hlinaia');
   assert.equal(shortTreeName(two,'ro'),'Hlinaia');
   assert.equal(shortTreeName(one,'en'),'Hlinaia');
-  assert.equal(shortTreeName(two,'en'),'Glinoye','Existing English exonym is preserved');
+  assert.equal(shortTreeName(two,'en'),'Hlinaia','Romanian authoritative toponym is the EN display; source OSM English alias remains intact');
+  assert.equal(two.shortName.en,'Glinoye');
 });
 
 test('WEB-R3.12: neither east branch identity nor Nistrenia children or statistical nodes are renamed at source',()=>{

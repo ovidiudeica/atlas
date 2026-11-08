@@ -22,7 +22,15 @@ const EN_ENTITY_DISPLAY=Object.freeze({
   'osm-r377733':'Bucharest',
   'osm-r1699032':'Gagauzia',
   'osm-r1691801':'Chisinau',
-  'osm-r13799978':'Floresti-Stoenesti'
+  'osm-r13799978':'Floresti-Stoenesti',
+  // EN-R2b: authoritative Romanian toponyms take precedence over
+  // Russian-derived OSM English aliases (which remain searchable as source).
+  'osm-r1702216':'Camenca',
+  'osm-r1702217':'Ribnita',
+  'osm-r1702215':'Dubasari',
+  'osm-r1702218':'Slobozia',
+  'osm-r6879649':'Chitcani',
+  'osm-r8291058':'Hlinaia'
 });
 // Correct the display of the same commune in RO without changing source fields.
 const RO_ENTITY_DISPLAY=Object.freeze({'osm-r13799978':'Florești-Stoenești'});
