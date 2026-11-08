@@ -173,3 +173,52 @@ export function shortTreeName(node,lang){
   }
   return value;
 }
+
+// EN-R2c: qualifiers for *homonymous siblings* are separate UI metadata,
+// never suffixes to the toponym or changes to the certified identity.
+function englishAdministrativeKind(node){
+  const official=asciiEnglish(node.officialName||'').trim();
+  if(/^orasul\s/iu.test(official))return 'Town';
+  if(/^municipiul\s/iu.test(official))return 'Municipality';
+  if(/^comuna\s/iu.test(official))return 'Commune';
+  if(/^satul\s/iu.test(official))return 'Village';
+  if(/^sectorul\s/iu.test(official))return 'Sector';
+  if(node.entityType==='town_uat')return 'Town';
+  if(node.entityType==='commune')return 'Commune';
+  return 'Administrative unit';
+}
+
+export function englishSiblingQualifiers(entities){
+  const grouped=new Map();
+  for(const node of entities){
+    if(!node.roles?.includes('administrative')||!node.treeParentId)continue;
+    const key=[node.country,node.treeParentId,node.adminLevel,
+      shortTreeName(node,'en').toLowerCase()].join('|');
+    if(!grouped.has(key))grouped.set(key,[]);
+    grouped.get(key).push(node);
+  }
+  const result=new Map();
+  for(const group of grouped.values()){
+    if(group.length<2)continue;
+    for(const node of group){
+      const kind=englishAdministrativeKind(node);
+      const sameKind=group.filter(other=>englishAdministrativeKind(other)===kind);
+      if(sameKind.length===1){
+        result.set(node.id,kind);
+        continue;
+      }
+      const system=node.registry?.system;
+      const code=node.registry?.code;
+      if(system&&code&&sameKind.filter(other=>
+        other.registry?.system===system&&other.registry?.code===code).length===1){
+        result.set(node.id,kind+' · '+system+' '+code);
+        continue;
+      }
+      // Every source OSM relation has an immutable numeric ID. Use it for
+      // unresolved same-kind homonyms, never invent a place name or legal type.
+      result.set(node.id,kind+' · '+(node.osmRelationId!==null&&node.osmRelationId!==undefined
+        ?'OSM '+node.osmRelationId:node.id));
+    }
+  }
+  return result;
+}

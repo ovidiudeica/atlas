@@ -6,7 +6,7 @@ import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
-import { cardNameOf } from './data/treeNames.mjs';
+import { cardNameOf, englishSiblingQualifiers } from './data/treeNames.mjs';
 import { makeModuleVisibility, setModuleGeometry, resetModuleGeometry,
   displayedModuleGeometry, moduleHasSelections } from './data/moduleReset.mjs';
 import { entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent } from './data/entityCardRoles.mjs';
@@ -294,6 +294,7 @@ export default function App() {
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
   const nodes = useMemo(()=>new Map(catalog.map(n=>[n.id,n])),[catalog]);
+  const englishSiblingHints=useMemo(()=>englishSiblingQualifiers(catalog),[catalog]);
   const statisticalIndex = useMemo(()=>statisticalCodeIndex(catalog),[catalog]);
   // One visibility state shared by tree rows and filter level checkboxes.
   // Filter levels always span every certified territorial set.
@@ -916,9 +917,11 @@ export default function App() {
     // Keep the geographical label identical; disambiguate only in UI metadata.
     const eastHlinaiaCode=(node.id==='osm-r9301463'||node.id==='osm-r8291058')
       ?node.registry?.code:null;
-    const accessibleRowLabel=isChisinauCity
+    const enHint=lang==='en'?englishSiblingHints.get(node.id)||null:null;
+    const baseAccessibleRowLabel=isChisinauCity
       ?(lang==='ro'?'Orașul Chișinău':'City of Chisinau')
       :eastHlinaiaCode?rowLabel+' (CUATM '+eastHlinaiaCode+')':rowLabel;
+    const accessibleRowLabel=enHint?baseAccessibleRowLabel+' ('+enHint+')':baseAccessibleRowLabel;
     const stat=node.statisticalRoles.length>0;
     return <div className="territory-branch" key={node.id} role={searchMatch?'none':'none'}>
       <div className={'tree-line'+(selected===node.id?' is-selected':'')} role="treeitem"
@@ -936,6 +939,7 @@ export default function App() {
           onClick={()=>searchMatch?chooseSearch(node.id):choose(node.id)}>
           <span className="node-name">{rowLabel}</span>
           <span className={'node-level'+(stat?' is-stat':'')} title={municipalRoleClarification(node,lang)||undefined}>{roleLabel(node)}{eastHlinaiaCode?' · CUATM '+eastHlinaiaCode:''}</span>
+          {enHint&&<span className="node-disambiguation">{enHint}</span>}
         </button>
         {searchMatch&&<span className="search-country">{node.country}</span>}
       </div>
