@@ -101,10 +101,13 @@ async function desktop(cdp){
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Initial module panel absent');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Initial detail panel absent');
   await p.wait("!document.querySelector('.map-boot-status')",'certified national contours');
-  const frame=await p.eval("({screen:innerWidth,scroll:document.documentElement.scrollWidth,map:document.querySelector('.map-area').getBoundingClientRect().width,phase:document.querySelector('.version')?.textContent})");
+  const frame=await p.eval("({screen:innerWidth,scroll:document.documentElement.scrollWidth,map:document.querySelector('.map-area').getBoundingClientRect().width,brand:document.querySelector('.site-header .brand strong')?.textContent,tagline:document.querySelector('.site-header .brand small')?.textContent,phasePresent:!!document.querySelector('.site-header .version'),langRight:document.querySelector('.site-header .language')?.getBoundingClientRect().right})");
   assert(frame.scroll<=frame.screen+1,'Desktop horizontal overflow');
   assert(frame.map>1300,'Map-first desktop must use available width');
-  assert.match(frame.phase,/Phase 5/);
+  assert.equal(frame.phasePresent,false,'No internal phase label in the public header');
+  assert.equal(frame.brand,'Territorial Atlas');
+  assert.equal(frame.tagline,'Geography · History · Communities');
+  assert(frame.langRight>=frame.screen-30,'Language switcher remains aligned right');
   assert.equal(await p.eval("document.querySelectorAll('.map-area .zoom-controls button').length"),3,'Zoom/Home buttons stay grouped separately from global reset');
   assert.equal(await p.eval("!!document.querySelector('.map-area .map-quick-actions,.map-area .map-controls,.map-area .map-legend,.map-area .map-note,.map-area .mobile-controls')"),false,
     'Secondary commands, legend, source note and mobile buttons absent from map');
@@ -906,6 +909,10 @@ async function mobile(cdp){
   await p.wait("!document.querySelector('.drawer-screen')",'Repeated mobile module click closes drawer');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
   await p.wait("document.documentElement.lang==='ro'",'Romanian language');
+  assert.equal(await p.eval("!!document.querySelector('.site-header .version')"),false,
+    'Romanian mobile header omits internal phase banner');
+  assert.equal(await p.eval("document.querySelector('.site-header .brand strong')?.textContent"),
+    'Atlas Teritorial','Localized title remains unchanged');
   await p.snap('mobile-ro.png');
   assert((await p.eval('document.documentElement.scrollWidth'))<=391,'Mobile overflow in Romanian');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
