@@ -1059,7 +1059,8 @@ export default function App() {
       <EntityCardSection title={t.cardIdentity} kind="identity">
         <dl className="metadata">
           <dt>{t.official}</dt><dd>{currentNode.officialName}</dd>
-          <dt>{t.country}</dt><dd>{currentNode.country==='RO'?'România':'Republica Moldova'}</dd>
+          <dt>{t.country}</dt><dd>{currentNode.country==='RO'?(lang==='ro'?'România':'Romania'):
+            (lang==='ro'?'Republica Moldova':'Republic of Moldova')}</dd>
         </dl>
       </EntityCardSection>
       {(cardRoles?.administrative.length||currentNode.registry||
@@ -1117,9 +1118,9 @@ export default function App() {
             <dt>{t.parentAdmin}</dt>
             <dd>{nodes.get(currentNode.administrativeParentId)?
               <button type="button" className="entity-parent-link"
-                aria-label={t.cardOpenParent+': '+nodes.get(currentNode.administrativeParentId)!.officialName}
+                aria-label={t.cardOpenParent+': '+cardNameOf(nodes.get(currentNode.administrativeParentId)!,lang)}
                 onClick={()=>chooseRelated(currentNode.administrativeParentId!)}>
-                {nodes.get(currentNode.administrativeParentId)!.officialName}
+                {cardNameOf(nodes.get(currentNode.administrativeParentId)!,lang)}
               </button>:null}</dd>
           </>}
           {currentNode.treeParentId&&<>

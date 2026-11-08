@@ -12,7 +12,7 @@ const EN_NUTS_DISPLAY=Object.freeze({
   RO3:'Macroregion Three',RO4:'Macroregion Four',
   RO11:'North-West',RO12:'Centre',
   RO21:'North-East',RO22:'South-East',
-  RO31:'South Muntenia',RO32:'Bucharest-Ilfov',
+  RO31:'South-Muntenia',RO32:'Bucharest-Ilfov',
   RO41:'South-West Oltenia',RO42:'West'
 });
 // Reviewed English exonyms / Atlas editorial exceptions, keyed by stable ID.
@@ -21,8 +21,11 @@ const EN_NUTS_DISPLAY=Object.freeze({
 const EN_ENTITY_DISPLAY=Object.freeze({
   'osm-r377733':'Bucharest',
   'osm-r1699032':'Gagauzia',
-  'osm-r1691801':'Chisinau'
+  'osm-r1691801':'Chisinau',
+  'osm-r13799978':'Floresti-Stoenesti'
 });
+// Correct the display of the same commune in RO without changing source fields.
+const RO_ENTITY_DISPLAY=Object.freeze({'osm-r13799978':'Florești-Stoenești'});
 const ROMANIAN_TYPE_PREFIX_EN=/^(?:Judetul|Raionul|Municipiul|Municipalitatea|Orasul|Comuna|Districtul|Sectorul|Sovetul (?:satesc|orasenesc))\s+/iu;
 function asciiEnglish(value){
   return String(value||'').normalize('NFD')
@@ -144,6 +147,7 @@ export function shortTreeName(node,lang){
   const stat=node.statisticalRoles?.[0]?.code;
   if(stat&&STAT_OVERRIDES[stat])return STAT_OVERRIDES[stat][lang==='ro'?0:1];
   if(lang==='en')return englishTerritorialName(node);
+  if(Object.hasOwn(RO_ENTITY_DISPLAY,node.id))return RO_ENTITY_DISPLAY[node.id];
   const preferred=node.roles?.includes('statistical')&&node.sourceTags?.short_name
     ?node.sourceTags.short_name:(node.shortName?.[lang]||node.name);
   const value=String(preferred||'').trim();

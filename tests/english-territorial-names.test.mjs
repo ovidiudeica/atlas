@@ -34,6 +34,7 @@ test('EN-R1: reviewed exonyms and NUTS display translations do not replace nativ
     'osm-r90689':'Romania',
     'osm-r58974':'Moldova',
     'osm-r377733':'Bucharest',
+    'osm-r13799978':'Floresti-Stoenesti',
     'stat-RO1':'Macroregion One',
     'stat-RO2':'Macroregion Two',
     'stat-RO3':'Macroregion Three',
@@ -42,7 +43,7 @@ test('EN-R1: reviewed exonyms and NUTS display translations do not replace nativ
     'stat-RO12':'Centre',
     'stat-RO21':'North-East',
     'stat-RO22':'South-East',
-    'stat-RO31':'South Muntenia',
+    'stat-RO31':'South-Muntenia',
     'stat-RO32':'Bucharest-Ilfov',
     'stat-RO41':'South-West Oltenia',
     'stat-RO42':'West',
@@ -61,6 +62,7 @@ test('EN-R1: reviewed exonyms and NUTS display translations do not replace nativ
   }
   assert.equal(cardNameOf(byId.get('osm-r1748490'),'en'),'Chisinau city');
   assert.equal(name('stat-RO3','ro'),'Macroregiunea Trei');
+  assert.equal(name('osm-r13799978','ro'),'Florești-Stoenești');
   assert.equal(name('osm-r1699032','ro'),'Găgăuzia');
   assert.equal(name('osm-r1748490','ro'),'Chișinău');
   assert.equal(name('osm-r1813316','ro'),'Rîșcani');
