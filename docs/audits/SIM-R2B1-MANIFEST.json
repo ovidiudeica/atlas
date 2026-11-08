@@ -1,0 +1,31 @@
+{
+  "stage": "SIM-R2b.1",
+  "date": "2026-11-08",
+  "status": "identity-wide audit, legal evidence incomplete, no authenticated graphical assets",
+  "base_sha": "670062655577ebbcf82fdcd40d93a1646f8db5e3",
+  "certified_catalog_sha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+  "cohorts": {
+    "Romania_counties": 41,
+    "Bucharest": 1,
+    "Moldova_districts": 32,
+    "total": 74
+  },
+  "identified": {
+    "Romania_coat_act_links": 24,
+    "Romania_flag_act_links": 2,
+    "Bucharest_modifier_2024": 1,
+    "Moldova_presidential_registration_decrees": 2,
+    "Moldova_institutional_source_pages_candidates": 14
+  },
+  "graphically_authenticated_for_import": 0,
+  "policy": "No image is published until exact-ID+effective law+original graphical annex+visual concordance+file SHA256+reproduction rights are independently verified.",
+  "caveats": [
+    "act found does not imply current exact annex",
+    "office/municipality/commune heraldry cannot be equated with a county/district emblem",
+    "unknown evidence is not evidence of nonexistence",
+    "no changes to certified catalog, identities, source tags, parent hierarchy or geometries"
+  ],
+  "csv_file": "SIM-R2B1-EVIDENCE-74.csv",
+  "report_file": "SIM-R2B1-LEGAL-GRAPHIC-AUDIT.md",
+  "next_stage": "SIM-R2b.2"
+}
