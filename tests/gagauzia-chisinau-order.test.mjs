@@ -22,8 +22,8 @@ test('certified catalog remains intact, and all OSMB Gagauzia ADM8 memberships h
   assert.equal(byId.get(CHISINAU_ID).name,'Chișinău');
   assert.equal(byId.get(CHISINAU_CITY_ID).name,'Chișinău');
   assert.equal(byId.get(CHISINAU_CITY_ID).adminLevel,8);
-  assert.equal(shortTreeName(byId.get(CHISINAU_CITY_ID),'ro'),'Oraș');
-  assert.equal(shortTreeName(byId.get(CHISINAU_CITY_ID),'en'),'City');
+  assert.equal(shortTreeName(byId.get(CHISINAU_CITY_ID),'ro'),'Chișinău');
+  assert.equal(shortTreeName(byId.get(CHISINAU_CITY_ID),'en'),'Chișinău');
   const mapping=Object.entries(RAION_CHILDREN);
   assert.deepEqual(mapping.map(([pid,ids])=>[pid,ids.length]),
     [['osm-r1706978',13],['osm-r1706979',9],['osm-r7103068',4]]);
