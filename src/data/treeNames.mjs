@@ -127,7 +127,7 @@ function comparable(value){
 // No catalog source name, OSM ID, or administrative parentage is modified.
 export function cardNameOf(node,lang){
   return node.id==='osm-r1748490'
-    ?(lang==='ro'?'Orașul Chișinău':'Chisinau city')
+    ?(lang==='ro'?'Orașul Chișinău':'City of Chisinau')
     :shortTreeName(node,lang);
 }
 
@@ -221,4 +221,23 @@ export function englishSiblingQualifiers(entities){
     }
   }
   return result;
+}
+
+// EN-R2d: role-specific context is separate from geographic names.
+const TERRITORIAL_CONTEXT=Object.freeze({
+  'osm-r65335':Object.freeze({
+    ro:'Entitate teritorială de facto administrată separat; distinctă de UATSN/ATULBD și de regiunea statistică. Eticheta nu implică recunoașterea statalității.',
+    en:"Separately administered de facto territory; distinct from Moldova's ATULBD administrative units and the statistical region. The label does not imply recognition of statehood."
+  }),
+  'osm-r2607033':Object.freeze({
+    ro:'UATSN / ATULBD: unitățile administrativ-teritoriale din stânga Nistrului în administrația Republicii Moldova, distincte de entitatea de facto.',
+    en:"ATULBD: Administrative-Territorial Units of the Left Bank of the Dniester in Moldova's administration, distinct from the de facto territorial entity."
+  }),
+  'stat-MD120':Object.freeze({
+    ro:'Regiune statistică pentru unitățile din stânga Nistrului; nu constituie o entitate administrativă independentă și nu trebuie confundată cu Nistrenia de facto.',
+    en:"Statistical region for Moldova's left-bank units; not a separate administrative jurisdiction and not interchangeable with de facto Pridnestrovie."
+  })
+});
+export function territorialContextNote(node,lang){
+  return TERRITORIAL_CONTEXT[node.id]?.[lang==='ro'?'ro':'en']||null;
 }

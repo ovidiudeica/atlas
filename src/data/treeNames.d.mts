@@ -11,3 +11,5 @@ export function shortTreeName(node:ShortTreeEntity,lang:'en'|'ro'):string;
 export function cardNameOf(node:ShortTreeEntity,lang:'en'|'ro'):string;
 /** EN-only secondary labels to distinguish otherwise identical sibling toponyms. */
 export function englishSiblingQualifiers(entities:readonly ShortTreeEntity[]):Map<string,string>;
+/** Role-sensitive explanatory text; null for ordinary territory identities. */
+export function territorialContextNote(node:ShortTreeEntity,lang:'en'|'ro'):string|null;

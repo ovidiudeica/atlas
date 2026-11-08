@@ -6,7 +6,7 @@ import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
-import { cardNameOf, englishSiblingQualifiers } from './data/treeNames.mjs';
+import { cardNameOf, englishSiblingQualifiers, territorialContextNote } from './data/treeNames.mjs';
 import { makeModuleVisibility, setModuleGeometry, resetModuleGeometry,
   displayedModuleGeometry, moduleHasSelections } from './data/moduleReset.mjs';
 import { entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent } from './data/entityCardRoles.mjs';
@@ -911,7 +911,7 @@ export default function App() {
     const isChecked=visibleSet.has(node.id);
     const isChisinauCity=node.id==='osm-r1748490';
     const rowLabel=isChisinauCity&&searchMatch
-      ?(lang==='ro'?'Orașul Chișinău':'Chisinau city')
+      ?(lang==='ro'?'Orașul Chișinău':'City of Chisinau')
       :labelOf(node,lang);
     // Two separate UATSN ADM8 polygons share the Romanian name Hlinaia.
     // Keep the geographical label identical; disambiguate only in UI metadata.
@@ -935,7 +935,7 @@ export default function App() {
           <span className="tree-spacer" aria-hidden="true">·</span>}
         <input type="checkbox" checked={isChecked} aria-label={t.visible+': '+accessibleRowLabel}
           onChange={()=>toggleVisible(node.id)} />
-        <button className="tree-label" aria-label={accessibleRowLabel} title={node.officialName}
+        <button className="tree-label" aria-label={accessibleRowLabel} title={lang==='ro'?node.officialName:accessibleRowLabel}
           onClick={()=>searchMatch?chooseSearch(node.id):choose(node.id)}>
           <span className="node-name">{rowLabel}</span>
           <span className={'node-level'+(stat?' is-stat':'')} title={municipalRoleClarification(node,lang)||undefined}>{roleLabel(node)}{eastHlinaiaCode?' · CUATM '+eastHlinaiaCode:''}</span>
@@ -1066,6 +1066,8 @@ export default function App() {
           <dt>{t.country}</dt><dd>{currentNode.country==='RO'?(lang==='ro'?'România':'Romania'):
             (lang==='ro'?'Republica Moldova':'Republic of Moldova')}</dd>
         </dl>
+        {territorialContextNote(currentNode,lang)&&
+          <p className="source-caveat">{territorialContextNote(currentNode,lang)}</p>}
       </EntityCardSection>
       {(cardRoles?.administrative.length||currentNode.registry||
         pmrCadastralSeatCode(currentNode.id))&&
