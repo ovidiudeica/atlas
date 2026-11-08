@@ -226,19 +226,19 @@
   color:#3d7358;font-size:12px;font-weight:650;display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:8px}
 .atlas-admin-reset:hover{background:#edf5ee}
 .atlas-admin-reset span{font-size:21px}
-.atlas-tools-toggle{position:absolute;z-index:6;top:18px;left:17px;
-  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
+.atlas-tools-toggle{position:relative;z-index:auto;
+  width:44px;height:44px;min-height:44px;display:flex;align-items:center;justify-content:center;
   background:#fff;border:1px solid #d6e5db;color:#18513c;font-size:25px;
   border-radius:10px;box-shadow:0 4px 16px #1d493322;cursor:pointer}
 .atlas-tools-toggle[aria-expanded=true]{background:#e7f2ea}
 .atlas-tools-overlay{position:absolute;inset:0;z-index:7;pointer-events:none}
-.atlas-global-tools-panel{pointer-events:auto;position:absolute;left:17px;top:72px;
-  width:min(366px,calc(100% - 95px));max-height:calc(100% - 84px);
+.atlas-global-tools-panel{pointer-events:auto;position:absolute;right:72px;top:17px;
+  width:min(366px,calc(100% - 95px));max-height:calc(100% - 35px);
   overflow-y:auto;overscroll-behavior:contain;background:#fff;color:#1b4935;
   border:1px solid #d2e4d7;border-radius:13px;box-shadow:0 12px 35px #09281c3d}
 .atlas-tools-heading{position:sticky;top:0;z-index:2;background:#fff;
   display:flex;align-items:center;justify-content:space-between;
-  gap:10px;border-bottom:1px solid #e0eae3;padding:10px 12px 10px 17px;min-height:58px}
+  gap:10px;border-bottom:1px solid #e0eae3;padding:0 0 0 17px;min-height:44px}
 .atlas-tools-heading h2{font:600 21px/1.2 Georgia,serif;margin:0;color:#174530}
 .atlas-tools-close{width:44px;height:44px;min-width:44px;border-radius:8px;
   border:1px solid #d3e2d8;background:#fff;color:#183e30;font-size:27px}
@@ -274,7 +274,7 @@
 .atlas-tools-about-content h3{font-size:12px;margin:0 0 3px}
 .atlas-tools-about-content p{font-size:11px;line-height:1.55;margin:0;color:#597464}
 @media(max-width:700px){
-  .atlas-tools-toggle{top:12px;left:9px;width:44px;height:44px}
+  .atlas-tools-toggle{width:44px;height:44px}
   .atlas-tools-overlay{position:fixed;inset:60px 0 64px;
     background:#09281ca1;pointer-events:auto;z-index:35}
   .atlas-global-tools-panel{position:absolute;top:0;bottom:0;left:0;
@@ -310,7 +310,7 @@
   .atlas-tools-grab{display:flex;align-items:center;justify-content:center;
     height:23px;min-height:23px;touch-action:pan-y}
   .atlas-tools-grab span{display:block;width:38px;height:4px;border-radius:10px;background:#afc5b7}
-  .atlas-tools-heading{min-height:54px;padding-top:5px}
+  .atlas-tools-heading{min-height:54px;padding:5px 12px 5px 17px}
   .atlas-tools-list{padding-top:2px}
   .atlas-tools-entry{min-height:60px}
   .atlas-tools-footer{margin-bottom:5px}
@@ -465,8 +465,9 @@
 }
 .entity-card .entity-child-link>small{font-size:11px}
 
-/* WEB-R4.4 — compact global reset below zoom, independent per-module reset
- * next to Close. Zoom/Home remain separate camera-only actions. */
+/* WEB-R4.6 — Map tools above zoom/Home, global reset below. Desktop tools
+ * dialog opens left, its close X aligned vertically with Map tools.
+ * Mobile keeps the adaptive bottom sheet. */
 .map-action-stack{
   position:absolute;z-index:2;right:16px;top:18px;display:flex;
   flex-direction:column;align-items:stretch;gap:9px;width:44px;
