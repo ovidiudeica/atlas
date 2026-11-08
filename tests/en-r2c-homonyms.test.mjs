@@ -16,13 +16,14 @@ const expectedHomonyms=[
   ['osm-r19068255','osm-r19068260'], // Drochia
   ['osm-r19072238','osm-r19072257'], // Ghindesti
   ['osm-r19072254','osm-r19072273'], // Marculesti
-  ['osm-r19100165','osm-r19100169','osm-r19100182'] // Recea
+  ['osm-r19100165','osm-r19100169','osm-r19100182'], // Recea
+  ['osm-r9301463','osm-r8291058'] // Hlinaia - new EN homonym after R2b
 ];
 
-test('EN-R2c: all nine remaining homonymous sibling groups carry unique contextual identifiers',()=>{
+test('EN-R2c: all ten remaining homonymous sibling groups carry unique contextual identifiers',()=>{
   const before=JSON.stringify(nodes);
   const hints=englishSiblingQualifiers(nodes);
-  assert.equal(hints.size,20,'Nine groups, twenty unresolved sibling name collisions');
+  assert.equal(hints.size,22,'Ten groups, twenty-two sibling name collisions, including restored Hlinaia');
   for(const group of expectedHomonyms){
     const entities=group.map(id=>byId.get(id));
     assert(entities.every(Boolean));

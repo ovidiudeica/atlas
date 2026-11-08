@@ -915,7 +915,8 @@ export default function App() {
       :labelOf(node,lang);
     // Two separate UATSN ADM8 polygons share the Romanian name Hlinaia.
     // Keep the geographical label identical; disambiguate only in UI metadata.
-    const eastHlinaiaCode=(node.id==='osm-r9301463'||node.id==='osm-r8291058')
+    const eastHlinaiaCode=lang==='ro'&&
+      (node.id==='osm-r9301463'||node.id==='osm-r8291058')
       ?node.registry?.code:null;
     const enHint=lang==='en'?englishSiblingHints.get(node.id)||null:null;
     const baseAccessibleRowLabel=isChisinauCity
