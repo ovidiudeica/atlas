@@ -1410,6 +1410,64 @@ async function verifiedSymbolPilot(cdp){
   await mobile.close();
 }
 
+
+/* SIM-R3.1: browser audit for county/district symbols, neutral holds and responsive layout.
+ * External image availability is recorded separately from app correctness.
+ */
+async function simR31MediaVisualAudit(cdp){
+  const examples=[
+    {id:'osm-r194271',name:'Alba',source:'commons.wikimedia.org'},
+    {id:'osm-r1692078',name:'Anenii Noi',source:'commons.wikimedia.org'},
+    {id:'osm-r1699033',name:'Taraclia',source:'raiontaraclia.md'}
+  ];
+  for(const {id,name,source} of examples){
+    const p=await cdp.page(1440,900,false,site+'?lang=en&entity='+id);
+    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+      'SIM-R3.1 desktop map ready '+id);
+    await p.wait("document.querySelectorAll('.detail-sidebar .territory-symbol-gallery--editorial figure').length===2",
+      'SIM-R3.1 card with coat and flag '+id);
+    const info=await p.eval("(()=>{const c=document.querySelector('.detail-sidebar .entity-card');const f=[...c.querySelectorAll('.territory-symbol-gallery--editorial figure')];return {assets:f.map(el=>({img:el.querySelector('img')?.src||'',alt:el.querySelector('img')?.alt||'',source:el.querySelector('a')?.href||'',width:el.querySelector('.territory-symbol-frame')?.getBoundingClientRect().width||0})),hasTopSymbol:!!c.querySelector('.entity-title .territorial-symbol-header'),overflow:document.documentElement.scrollWidth-innerWidth}})()");
+    assert.equal(info.assets.length,2,'Two SIM-R3.1 symbol tiles '+name);
+    assert(info.assets.every(x=>x.img.startsWith('https://')&&
+      x.source.startsWith('https://')&&x.source.includes(source)&&x.alt&&x.width>55),
+      'Media URLs, attribution, accessible alt and geometry '+name+': '+JSON.stringify(info));
+    assert(info.hasTopSymbol&&info.overflow<=1,
+      'Desktop entity symbol and no viewport overflow '+name+': '+JSON.stringify(info));
+    await p.eval("document.querySelector('.module-rail button:first-child').click()");
+    await p.wait("!!document.querySelector('.tree-sidebar input[type=search]')",
+      'SIM-R3.1 tree opened '+id);
+    await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
+    await p.call('Input.insertText',{text:id});
+    await p.wait("!!document.querySelector('.tree-sidebar .tree-list .tree-label-heading .tree-territorial-symbol')",
+      'SIM-R3.1 exact-ID tree symbol '+id);
+    const row=await p.eval("(()=>{const line=document.querySelector('.tree-sidebar .tree-list .tree-line');const img=line?.querySelector('.tree-territorial-symbol');return {name:line?.querySelector('.node-name')?.textContent?.trim(),src:img?.src||'',width:img?.getBoundingClientRect().width||0}})()");
+    assert(row.name&&row.src.startsWith('https://')&&row.width>=14,
+      'SIM-R3.1 tree image with exact entity '+name+': '+JSON.stringify(row));
+    await pause(1200);
+    const load=await p.eval("(()=>{const imgs=[...document.querySelectorAll('.detail-sidebar .territory-symbol-gallery--editorial img')];return imgs.map(x=>({complete:x.complete,naturalWidth:x.naturalWidth,src:x.src}))})()");
+    console.log('SIM-R3.1 external images '+id+': '+JSON.stringify(load));
+    await p.snap('desktop-sim-r31-'+id+'.png');
+    await p.close();
+  }
+  const neutral=await cdp.page(1440,900,false,site+'?lang=ro&entity=osm-r377733');
+  await neutral.wait("!!document.querySelector('.detail-sidebar .entity-card-section--symbols')",
+    'SIM-R3.1 Bucharest card');
+  const hold=await neutral.eval("(()=>{const c=document.querySelector('.detail-sidebar .entity-card');return {neutral:c.querySelectorAll('.territory-symbol-gallery--editorial .territorial-symbol-fallback').length,images:c.querySelectorAll('.territory-symbol-gallery--editorial img').length,header:!!c.querySelector('.entity-title .territorial-symbol-fallback'),reference:c.querySelector('.entity-card-section--symbols a')?.href||''}})()");
+  assert(hold.neutral===2&&hold.images===0&&hold.header&&hold.reference.includes('2024'),
+    'Outdated Bucharest graphic must not appear '+JSON.stringify(hold));
+  await neutral.snap('desktop-sim-r31-bucharest-neutral.png');
+  await neutral.close();
+  const mobile=await cdp.page(390,844,true,site+'?lang=ro&entity=osm-r1692078');
+  await mobile.wait("document.querySelectorAll('.drawer-detail .territory-symbol-gallery--editorial figure').length===2",
+    'SIM-R3.1 mobile entity card');
+  const layout=await mobile.eval("(()=>{const c=document.querySelector('.drawer-detail .entity-card');const section=c.querySelector('.territory-symbol-gallery--editorial');const figures=[...section.querySelectorAll('figure')].map(f=>({width:f.getBoundingClientRect().width,x:f.getBoundingClientRect().x,source:!!f.querySelector('a[href^=\"https://\"]'),imagery:!!f.querySelector('img,.territorial-symbol-fallback')}));return {figures,overflow:document.documentElement.scrollWidth-innerWidth}})()");
+  assert(layout.figures.length===2&&layout.figures.every(f=>f.width>=65&&f.source&&f.imagery)&&
+    layout.figures[0].x<layout.figures[1].x&&layout.overflow<=1,
+    '390px card displays coat and flag in two accessible columns: '+JSON.stringify(layout));
+  await mobile.snap('mobile-sim-r31-district-symbols.png');
+  await mobile.close();
+}
+
 /* WEB-R4.8: flags must load as image files on desktop and mobile, not emoji. */
 async function entityFlagAssets(cdp){
   for(const {id,asset} of [
@@ -1694,6 +1752,7 @@ try{
   await finalCardAcceptance(client);
   await entityFlagAssets(client);
   await verifiedSymbolPilot(client);
+  await simR31MediaVisualAudit(client);
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');

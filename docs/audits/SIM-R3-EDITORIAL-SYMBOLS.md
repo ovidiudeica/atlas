@@ -38,3 +38,24 @@ No inferred heraldry for statistical entities, Nistrenia/PMR legal identity, mun
 ## Acceptance
 
 Run `npm test`, `npm run build`, existing Chromium desktop/mobile smoke via `.github/workflows/website.yml`; require no UI regressions and a clean `main` merge. Publish only through the existing workflow after successful gates.
+
+
+## SIM-R3.1 — operational media and responsive UI audit (8 November 2026)
+
+The 74-ID editorial catalog has **137 image references**. Wikimedia Commons' MediaWiki **imageinfo** API returned an actual file record, media URL, MIME type, byte count, and file SHA-1 for **all 135 Commons files** (zero missing). The two remaining images are district council-hosted coat and flag links on the [Taraclia official symbolism page](https://raiontaraclia.md/ro/simbolica-raionului/). These checks are a practical *media existence* audit, **not** an official legal-graphic certification or a guarantee of third-party server uptime.
+
+The mechanical per-ID registry is [SIM-R31-ASSET-CHECK-20261108.json](SIM-R31-ASSET-CHECK-20261108.json). File SHAs identify the uploaded Wikimedia media; they do not authenticate current legal annex versions. Source links and fallback semantics remain active in desktop and mobile cards. The browser smoke adds reference screenshots for a Romanian county, a Moldovan district, Taraclia, Bucharest's neutral placeholders, and the mobile two-column layout.
+
+### Permanent evidence discovery rule for future SIM phases
+
+**Wikipedia (în toate limbile / in all languages)** may be used to **discover candidates** for local steme și drapele (coats of arms and flags), including pages and infoboxes in Romanian, English, Russian, Ukrainian, Hungarian, Bulgarian, Gagauz and other language editions. Search all relevant editions rather than limiting discovery to Romanian/English.
+
+A Wikipedia or Wikidata infobox alone is **not** sufficient to assign a symbol. Inspect its linked Wikimedia Commons file page, source/history, copyright status, version/date, administrative holder and exact territorial scope. Correlate the candidate with the **exact Atlas ID and official SIRUTA/CUATM identity** and available local/government institutional evidence; avoid matching a village's coat to its commune, a city to a raion or an administrative overlay to a statistical unit. Never assume symbols inherit from a parent or from an identically named unit.
+
+Use the existing A/B/C tiers. When the design is disputed, older than an identified legal amendment, or inaccessible, show the **neutral placeholder** and record the unresolved reason. This rule guides future municipal/communal coverage without introducing a new blanket certification requirement.
+
+### Acceptance and limitations
+
+- Node/TypeScript regression, website build and Chromium desktop/mobile smoke must succeed on the exact change SHA before protected merge.
+- Canonical geographic files, SIM-R2a local imagery and geometry remain unchanged.
+- Browser screenshot samples establish UI behavior, but complete real-time image loading at all 137 external URLs cannot be guaranteed indefinitely. A failed network image displays ◇; existing source and license links remain available.
