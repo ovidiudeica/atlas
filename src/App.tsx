@@ -39,7 +39,7 @@ const MODULES: { id: ModuleId; symbol: string; en: string; ro: string }[] = [
 const WORDS = {
   en: {
     title: 'Territorial Atlas', tagline: 'Geography · History · Communities',
-    version: 'Administrative & statistical atlas · Phase 5', tree: 'Territorial tree',
+    tree: 'Territorial tree',
     search: 'Search names, OSM IDs, SIRUTA, CUATM or NUTS codes',
     all: 'All', adminView: 'Administrative', statView: 'Statistical',
     visible: 'Display geometry', details: 'Entity details', select: 'Select a territory on the map or in the tree.',
@@ -113,7 +113,7 @@ const WORDS = {
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
-    version: 'Atlas administrativ și statistic · Etapa 5', tree: 'Arbore teritorial',
+    tree: 'Arbore teritorial',
     search: 'Caută nume, ID OSM, coduri SIRUTA, CUATM sau NUTS',
     all: 'Toate', adminView: 'Administrativ', statView: 'Statistic',
     visible: 'Afișează geometria', details: 'Detaliile entității', select: 'Selectează un teritoriu pe hartă sau în arbore.',
@@ -1335,7 +1335,6 @@ export default function App() {
     <header className="site-header">
       <div className="brand-symbol" aria-hidden="true">◎</div>
       <div className="brand"><strong>{t.title}</strong><small>{t.tagline}</small></div>
-      <span className="version">{t.version}</span>
       {currentNode&&<button type="button" className="header-entity-action" aria-label={t.openDetail}
         title={t.openDetail} aria-expanded={detailPanelOpen}
         onClick={()=>{
