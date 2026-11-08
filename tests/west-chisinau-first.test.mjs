@@ -37,7 +37,7 @@ test('WEB-R3.17: West statistical MD111–MD115 order overrides previous Chișin
   assert.deepEqual(actual.map(x=>x.id),WEST_IDS,view+' / '+lang);
   assert.deepEqual(actual.map(x=>shortTreeName(x,lang)),
     lang==='ro'?['Nord','Centru','Sud','Găgăuzia','Chișinău']:
-      ['North','Centre','South','Gagauzia','Chișinău']);
+      ['North','Centre','South','Gagauzia','Chisinau']);
   assert.equal(new Set(actual.map(x=>x.id)).size,5,'no duplicates');
   assert(actual.every(x=>x.treeParentId===WEST_STAT_PARENT_ID),'original NTS2 parent');
  }
