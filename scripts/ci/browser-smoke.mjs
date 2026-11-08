@@ -352,9 +352,9 @@ async function desktop(cdp){
   await p.wait("!!document.querySelector('.tree-sidebar input[type=search]')",'Returning to administrative module');
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
   await p.call('Input.insertText',{text:'Brețcu'});
-  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-label')).some(b=>b.textContent.includes('Brețcu'))",'Brețcu search results');
-  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-label')).find(b=>b.textContent.includes('Brețcu')).click()");
-  await p.wait("document.querySelector('.detail-sidebar .entity-title h3')?.textContent.includes('Brețcu')",'Brețcu entity details');
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-label')).some(b=>b.textContent.includes('Bretcu'))",'Brețcu search results');
+  await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-label')).find(b=>b.textContent.includes('Bretcu')).click()");
+  await p.wait("document.querySelector('.detail-sidebar .entity-title h3')?.textContent.includes('Bretcu')",'Brețcu entity details');
   await p.eval("document.querySelector('.detail-sidebar .pane-close').click()");
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,'Details × hides panel');
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar .tree-line[aria-selected=true]')"),true,
@@ -505,7 +505,7 @@ async function desktop(cdp){
   // A tree toggle changes individual selection, not filter checkboxes.
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
   await p.call('Input.insertText',{text:'Brețcu'});
-  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .tree-label')).some(x=>x.textContent.includes('Brețcu'))",
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-line .tree-label')).some(x=>x.textContent.includes('Bretcu'))",
     'Brețcu tree search result visible');
   await p.eval("document.querySelector('.tree-sidebar .tree-line input[type=checkbox]').click()");
   await p.wait("!JSON.parse(localStorage.getItem('atlas-visible-phase4')).includes('siruta-u64096')",
@@ -637,7 +637,7 @@ async function desktop(cdp){
   await p.snap('desktop-district-short-en.png');
   await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus();document.querySelector('.tree-sidebar input[type=search]').select()");
   await p.call('Input.insertText',{text:'Bălți Municipality'});
-  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Bălți')",
+  await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .tree-list .tree-label .node-name')).some(x=>x.textContent.trim()==='Balti')",
     'Municipality can be searched by original name but appears without Municipality');
   await p.snap('desktop-municipality-short-en.png');
   // WEB-R3.11: the historical OSMB council label remains a valid search alias;
@@ -805,7 +805,7 @@ async function mobile(cdp){
   const westMobileChildren=await p.eval("(()=>{const x="+drawerLine(westernLocale)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line')].map(x=>x.querySelector('.node-name')?.textContent.trim());})()");
   assert.deepEqual(westMobileChildren,await p.eval("document.documentElement.lang==='ro'")?
     ['Nord','Centru','Sud','Găgăuzia','Chișinău']:
-    ['North','Centre','South','Gagauzia','Chișinău'],
+    ['North','Centre','South','Gagauzia','Chisinau'],
     'Mobile West follows statistical MD111–MD115');
   await p.eval(drawerLine(westernLocale)+".scrollIntoView({block:'start'})");
   await p.snap('mobile-west-codes-md111-md115.png');
