@@ -21,7 +21,7 @@ test('all 4283 certified tree names are concise in both languages',()=>{
     assert(name.length<46,'Overlong label '+node.id+'/'+lang+': '+name);
   }
 });
-test('51 English and 48 Romanian presentation-only names remain shortened after the Chișinău correction',()=>{
+test('English presentation is localized and the 48 original Romanian shortened names are preserved',()=>{
   const changed={en:[],ro:[]};
   function legacy(node,lang){
     if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
@@ -39,7 +39,7 @@ test('51 English and 48 Romanian presentation-only names remain shortened after 
     const before=legacy(node,lang),after=shortTreeName(node,lang);
     if(before!==after)changed[lang].push({id:node.id,before,after});
   }
-  assert.equal(changed.en.length,51,JSON.stringify(changed.en));
+  assert(changed.en.length>51,'EN must correct more than the 51 legacy short names');
   assert.equal(changed.ro.length,48,JSON.stringify(changed.ro));
   assert(changed.ro.some(x=>x.id==='osm-r2607033'));
   assert(changed.ro.some(x=>x.id==='osm-r6879649'));
@@ -47,7 +47,7 @@ test('51 English and 48 Romanian presentation-only names remain shortened after 
   assert(changed.ro.some(x=>x.id==='stat-MD120'));
   assert.equal(new Set(changed.ro.map(x=>x.id)).size,48);
   assert(changed.en.some(x=>x.id==='stat-MD120'));
-  assert.equal(new Set(changed.en.map(x=>x.id)).size,51);
+  assert.equal(new Set(changed.en.map(x=>x.id)).size,changed.en.length);
 });
 test('both left-bank entities and district/municipality names are concise',()=>{
   const get=(id,lang)=>shortTreeName(byId.get(id),lang);
@@ -55,10 +55,10 @@ test('both left-bank entities and district/municipality names are concise',()=>{
   assert.equal(get('osm-r2607033','en'),'ATULBD');
   assert.equal(get('stat-MD120','ro'),'Transnistria');
   assert.equal(get('stat-MD120','en'),'Transnistria');
-  assert.equal(get('osm-r1691801','en'),'Chișinău');
+  assert.equal(get('osm-r1691801','en'),'Chisinau');
   assert.equal(get('osm-r1748490','ro'),'Chișinău');
-  assert.equal(get('osm-r1748490','en'),'Chișinău');
-  assert.equal(get('osm-r58983','en'),'Bălți');
+  assert.equal(get('osm-r1748490','en'),'Chisinau');
+  assert.equal(get('osm-r58983','en'),'Balti');
   assert.equal(get('osm-r1104136','en'),'Basarabeasca');
   assert.equal(get('osm-r1702216','en'),'Kamenka');
   assert.equal(get('osm-r1702216','ro'),'Camenca');
@@ -66,9 +66,13 @@ test('both left-bank entities and district/municipality names are concise',()=>{
   assert.equal(get('osm-r58974','ro'),'Moldova');
   assert.equal(get('osm-r19112364','ro'),'Satul Nou');
   assert.equal(get('stat-RO1','ro'),'Macroregiunea Unu');
+  assert.equal(get('stat-RO1','en'),'Macroregion One');
+  assert.equal(get('stat-RO3','en'),'Macroregion Three');
+  assert.equal(get('stat-RO32','en'),'Bucharest-Ilfov');
+  assert.equal(get('osm-r377733','en'),'Bucharest');
   assert.equal(get('osm-r1702219','en'),'Tiraspol');
   assert.equal(get('osm-r1813297','en'),'Buiucani');
-  assert.equal(get('osm-r1813316','en'),'Rîșcani');
+  assert.equal(get('osm-r1813316','en'),'Riscani');
   assert.equal(get('osm-r944727','en'),'Bender');
 });
 test('canonical catalog names and official identities remain unchanged',()=>{

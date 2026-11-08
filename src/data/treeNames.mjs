@@ -4,6 +4,46 @@ const STAT_OVERRIDES = {
   MD11:['Vest','West'], MD12:['Est','East'],
   MD111:['Nord','North'], MD112:['Centru','Centre'], MD113:['Sud','South']
 };
+// Reviewed English display labels for the Romanian NUTS 1/2 regions.
+// These are presentation translations, NOT replacements for Eurostat names,
+// OSM tags or Romanian official identities. NUTS 3 counties remain toponyms.
+const EN_NUTS_DISPLAY=Object.freeze({
+  RO1:'Macroregion One',RO2:'Macroregion Two',
+  RO3:'Macroregion Three',RO4:'Macroregion Four',
+  RO11:'North-West',RO12:'Centre',
+  RO21:'North-East',RO22:'South-East',
+  RO31:'South Muntenia',RO32:'Bucharest-Ilfov',
+  RO41:'South-West Oltenia',RO42:'West'
+});
+// Reviewed English exonyms / Atlas editorial exceptions, keyed by stable ID.
+// Everywhere else use the source English form where available, then the
+// unchanged local toponym with Romanian diacritics removed for EN display.
+const EN_ENTITY_DISPLAY=Object.freeze({
+  'osm-r377733':'Bucharest',
+  'osm-r1699032':'Gagauzia',
+  'osm-r1691801':'Chisinau'
+});
+const ROMANIAN_TYPE_PREFIX_EN=/^(?:Judetul|Raionul|Municipiul|Municipalitatea|Orasul|Comuna|Districtul|Sectorul|Sovetul (?:satesc|orasenesc))\s+/iu;
+function asciiEnglish(value){
+  return String(value||'').normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .replace(/[șş]/g,'s').replace(/[ȘŞ]/g,'S')
+    .replace(/[țţ]/g,'t').replace(/[ȚŢ]/g,'T');
+}
+function englishTerritorialName(node){
+  const nuts=node.statisticalRoles?.find(x=>x.classification==='NUTS')?.code;
+  if(nuts&&Object.hasOwn(EN_NUTS_DISPLAY,nuts))return EN_NUTS_DISPLAY[nuts];
+  if(Object.hasOwn(EN_ENTITY_DISPLAY,node.id))return EN_ENTITY_DISPLAY[node.id];
+  // The catalog's shortName.en already prefers OSM short_name:en/name:en.
+  // Never let unlocalized sourceTags.short_name override it in EN.
+  let name=asciiEnglish(node.shortName?.en||node.sourceTags?.['short_name:en']
+    ||node.sourceTags?.['name:en']||node.name).trim();
+  if(node.roles?.includes('administrative')){
+    name=name.replace(EN_SUFFIX,'').replace(EN_PREFIX,'')
+      .replace(ROMANIAN_TYPE_PREFIX_EN,'').trim();
+  }
+  return name;
+}
 // NTS3 shows the geographical name. CUATM 9800 uses OSM's UATSN in
 // Romanian, the English government-report abbreviation ATULBD in English.
 // The separate de-facto Nistrenia/Pridnestrovie is never relabeled.
@@ -76,7 +116,7 @@ function comparable(value){
 // No catalog source name, OSM ID, or administrative parentage is modified.
 export function cardNameOf(node,lang){
   return node.id==='osm-r1748490'
-    ?(lang==='ro'?'Orașul Chișinău':'Chișinău city')
+    ?(lang==='ro'?'Orașul Chișinău':'Chisinau city')
     :shortTreeName(node,lang);
 }
 
@@ -86,7 +126,7 @@ export function shortTreeName(node,lang){
   // WEB-R4.5: the ADM8 city must keep its geographical name in the tree.
   // A generic type-only label ('Oraș'/'City') was ambiguous and incorrect.
   // The ADM4 municipality and ADM8 city remain distinct via their levels.
-  if(node.id==='osm-r1748490')return 'Chișinău';
+  if(node.id==='osm-r1748490')return lang==='en'?'Chisinau':'Chișinău';
   if(node.id===PERVOMAISC_ID)return 'Pervomaisc';
   if(lang==='ro'&&Object.hasOwn(UATSN_RO_SHORT_LABELS,node.id))
     return UATSN_RO_SHORT_LABELS[node.id];
@@ -97,12 +137,13 @@ export function shortTreeName(node,lang){
   // Two separate city-council relations under Nistrenia have descriptive
   // administrative qualifiers in English; the geographical tree names do not.
   if(node.id==='osm-r1702219'||node.id==='osm-r944727')
-    return node.name;
+    return lang==='en'?asciiEnglish(node.name):node.name;
   // One administrative relation and one independent NTS3 statistical entity.
   if(node.id==='osm-r2607033')return EAST_ADMIN_LABELS[lang==='ro'?'ro':'en'];
   if(node.id==='stat-MD120')return EAST_STAT_LABEL;
   const stat=node.statisticalRoles?.[0]?.code;
   if(stat&&STAT_OVERRIDES[stat])return STAT_OVERRIDES[stat][lang==='ro'?0:1];
+  if(lang==='en')return englishTerritorialName(node);
   const preferred=node.roles?.includes('statistical')&&node.sourceTags?.short_name
     ?node.sourceTags.short_name:(node.shortName?.[lang]||node.name);
   const value=String(preferred||'').trim();

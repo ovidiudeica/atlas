@@ -45,7 +45,7 @@ test('WEB-R3.20: ADM4 municipiu and ADM8 oraș Chișinău coexist with authentic
  assert.equal(city.treeParentId,CHISINAU_ID);
  assert.equal(shortTreeName(m,'ro'),'Chișinău');
  assert.equal(shortTreeName(city,'ro'),'Chișinău');
- assert.equal(shortTreeName(city,'en'),'Chișinău');
+ assert.equal(shortTreeName(city,'en'),'Chisinau');
  assert.equal(city.name,'Chișinău');
  assert(city.officialName.includes('Chișinău'),'Original official name remains searchable');
  for(const view of ['all','administrative']){
@@ -64,7 +64,7 @@ test('WEB-R3.20: ADM4 municipiu and ADM8 oraș Chișinău coexist with authentic
 test('WEB-R3.20: tree cannot silently discard city or change Nistrenia order',()=>{
  const source=readFileSync(new URL('../src/App.tsx',import.meta.url),'utf8');
  assert.match(source,/isChisinauCity&&searchMatch/);
- assert.match(source,/City of Chișinău/);
+ assert.match(source,/City of Chisinau/);
  assert.match(source,/function chooseSearch\(id:string\)/);
  assert.match(source,/const parent=presentationParentId\(cursor,treeView\)/);
  assert.match(source,/onClick=\{\(\)=>searchMatch\?chooseSearch\(node.id\):choose\(node.id\)\}/);
