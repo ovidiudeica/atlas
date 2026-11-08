@@ -1380,6 +1380,36 @@ async function finalCardAcceptance(cdp){
     'WEB-R4.3 Escape returns keyboard focus');
   await mobile.close();
 }
+/* SIM-R2a: exact ID, heraldic image, ownership and no country flag replacement. */
+async function verifiedSymbolPilot(cdp){
+  for(const [id,asset,expectedOwner] of [
+    ['osm-r1699032','gagauzia-coat.png','Gagauzia'],
+    ['osm-r1813315','chisinau-ciocana-coat.png','Chisinau']
+  ]){
+    const page=await cdp.page(1440,900,false,site+'?lang=en&entity='+id);
+    await page.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",'SIM-R2a desktop map '+id);
+    await page.wait("(()=>{const e=document.querySelector('.detail-sidebar .entity-title .flag img');return !!e&&e.complete&&e.naturalWidth>0})()",
+      'SIM-R2a loaded official graphic '+id);
+    const check=await page.eval("(()=>{const card=document.querySelector('.detail-sidebar .entity-card');const image=card.querySelector('.entity-title .flag img');const section=card.querySelector('.entity-card-section--symbols');return {path:new URL(image.src).pathname,natural:image.naturalWidth,owner:section?.querySelector('.territory-symbol-owner')?.textContent||'',source:section?.querySelector('.territory-symbol-source')?.href||'',coats:[...section.querySelectorAll('.territory-symbol-gallery img')].map(x=>({complete:x.complete,width:x.naturalWidth}))}})()");
+    assert(check.path.endsWith('/atlas/symbols/'+asset)&&check.natural>0&&
+      check.owner.includes(expectedOwner)&&check.source.startsWith('https://')&&
+      check.coats.every(x=>x.complete&&x.width>0),
+      'SIM-R2a desktop verified image, holder and act '+id+': '+JSON.stringify(check));
+    await page.snap('desktop-sim-r2a-'+id+'.png');
+    await page.close();
+  }
+  const mobile=await cdp.page(390,844,true,site+'?lang=ro&entity=osm-r1699032');
+  await mobile.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",'SIM-R2a mobile map ready');
+  await mobile.wait("(()=>{const e=document.querySelector('.drawer-detail .entity-title .flag img');return !!e&&e.complete&&e.naturalWidth>0})()",
+    'SIM-R2a mobile Gagauzia coat');
+  const result=await mobile.eval("(()=>{const card=document.querySelector('.drawer-detail .entity-card');const gallery=card.querySelector('.entity-card-section--symbols');return {images:[...gallery.querySelectorAll('img')].map(x=>({url:new URL(x.src).pathname,width:x.naturalWidth,complete:x.complete})),owner:gallery.querySelector('.territory-symbol-owner')?.textContent||'',overflow:document.documentElement.scrollWidth-innerWidth}})()");
+  assert(result.images.length===2&&result.images.every(x=>x.complete&&x.width>0)&&
+    result.owner.includes('Găgăuzia')&&result.overflow<=1,
+    'SIM-R2a mobile coat and regional flag visible: '+JSON.stringify(result));
+  await mobile.snap('mobile-sim-r2a-gagauzia.png');
+  await mobile.close();
+}
+
 /* WEB-R4.8: flags must load as image files on desktop and mobile, not emoji. */
 async function entityFlagAssets(cdp){
   for(const {id,asset} of [
@@ -1663,6 +1693,7 @@ try{
   await cardUxAccessibility(client);
   await finalCardAcceptance(client);
   await entityFlagAssets(client);
+  await verifiedSymbolPilot(client);
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');

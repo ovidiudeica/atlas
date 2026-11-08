@@ -8,6 +8,7 @@ import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.
 import { EntityCardSection } from './components/EntityCardSection';
 import { cardNameOf, englishSiblingQualifiers, territorialContextNote } from './data/treeNames.mjs';
 import { flagFileForEntity } from './data/entityFlags.mjs';
+import { officialSymbolsForEntity } from './data/officialSymbols.mjs';
 import { makeModuleVisibility, setModuleGeometry, resetModuleGeometry,
   displayedModuleGeometry, moduleHasSelections } from './data/moduleReset.mjs';
 import { entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent } from './data/entityCardRoles.mjs';
@@ -1025,11 +1026,15 @@ export default function App() {
   // A new entity key resets expanded source records, never map selection/visibility.
   // Presentation-only flag; the certified MD identity of Pridnestrovie remains unchanged.
   const currentFlag=currentNode?flagFileForEntity(currentNode):null;
+  // Exact-ID symbols, only if the act, representation, and owner were reviewed.
+  const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
+  const primarySymbolPath=officialSymbols?.coat
+    ?'symbols/'+officialSymbols.coat:currentFlag?'flags/'+currentFlag:null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
-        <span className="flag" aria-hidden="true">
-          {currentFlag&&<img src={import.meta.env.BASE_URL+'flags/'+currentFlag}
+        <span className={'flag'+(officialSymbols?.coat?' flag--coat':'')} aria-hidden="true">
+          {primarySymbolPath&&<img src={import.meta.env.BASE_URL+primarySymbolPath}
             alt="" loading="eager" decoding="async" />}
         </span>
         <div><h3 tabIndex={-1}>{cardNameOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
@@ -1074,6 +1079,38 @@ export default function App() {
         {territorialContextNote(currentNode,lang)&&
           <p className="source-caveat">{territorialContextNote(currentNode,lang)}</p>}
       </EntityCardSection>
+      {officialSymbols&&
+      <EntityCardSection
+        title={lang==='ro'?'Simboluri teritoriale':'Territorial symbols'} kind="symbols">
+        <div className="territory-symbol-gallery">
+          {officialSymbols.coat&&<figure>
+            <img src={import.meta.env.BASE_URL+'symbols/'+officialSymbols.coat}
+              alt={lang==='ro'?'Stema '+officialSymbols.holder.ro:
+                'Coat of arms of '+officialSymbols.holder.en} loading="lazy" />
+            <figcaption>{lang==='ro'?'Stemă':'Coat of arms'}</figcaption>
+          </figure>}
+          {officialSymbols.flag&&<figure>
+            <img src={import.meta.env.BASE_URL+'symbols/'+officialSymbols.flag}
+              alt={lang==='ro'?'Drapelul '+officialSymbols.holder.ro:
+                'Flag of '+officialSymbols.holder.en} loading="lazy" />
+            <figcaption>{lang==='ro'?'Drapel':'Flag'}</figcaption>
+          </figure>}
+        </div>
+        <p className="territory-symbol-owner">
+          <strong>{lang==='ro'?'Deținător: ':'Holder: '}</strong>
+          {officialSymbols.holder[lang]}
+        </p>
+        <p className="territory-symbol-evidence">{officialSymbols.legal[lang]}</p>
+        <a className="territory-symbol-source" href={officialSymbols.legalUrl}
+           target="_blank" rel="noopener noreferrer">
+          {lang==='ro'?'Actul și sursa oficială':'Official act and source'} ↗
+        </a>
+        <p className="territory-symbol-disclaimer">
+          {lang==='ro'
+            ?'Reproducere strict informativă; simbolul nu este sigla atlasului.'
+            :'Informational reproduction only; this symbol is not the Atlas logo.'}
+        </p>
+      </EntityCardSection>}
       {(cardRoles?.administrative.length||currentNode.registry||
         pmrCadastralSeatCode(currentNode.id))&&
       <EntityCardSection title={t.cardAdministration} kind="administrative">

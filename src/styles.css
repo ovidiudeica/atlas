@@ -507,3 +507,15 @@
 /* WEB-R4.7: content begins directly under the unique module toolbar.
  * The search field retains breathing room after removing the large tree title. */
 .tree-content > .search{margin-top:14px}
+
+/* SIM-R2a: documentary territorial arms are not country emojis or branding. */
+.entity-title .flag.flag--coat{flex:0 0 62px;width:62px;height:58px;align-items:center}
+.entity-title .flag.flag--coat img{max-width:62px;max-height:58px;width:auto;height:auto;object-fit:contain;box-shadow:none}
+.territory-symbol-gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:8px 0 12px}
+.territory-symbol-gallery figure{margin:0;flex:1 1 94px;max-width:190px;text-align:center}
+.territory-symbol-gallery img{display:block;max-width:100%;max-height:150px;width:auto;height:auto;margin:0 auto;object-fit:contain}
+.territory-symbol-gallery figcaption{margin-top:6px;font-size:11px;font-weight:700;color:#365e49}
+.territory-symbol-owner,.territory-symbol-evidence,.territory-symbol-disclaimer{margin:7px 0;font-size:11px;line-height:1.45;color:#4f6b5b}
+.territory-symbol-owner strong{color:#244e37}
+.territory-symbol-source{display:inline-block;margin:4px 0;font-size:11px;font-weight:700;color:#1c674a;text-decoration:underline;text-underline-offset:2px}
+.territory-symbol-disclaimer{font-size:10px;color:#637d6d}
