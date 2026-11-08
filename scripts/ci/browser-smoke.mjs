@@ -1449,9 +1449,6 @@ async function moduleScopedResets(cdp){
     'Local reset is disabled at rest and next to Close with 44px targets');
   await p.snap('desktop-web-r44-module-reset-idle.png');
 
-  await p.eval("document.querySelector('.tree-sidebar input[type=search]').value='București';document.querySelector('.tree-sidebar input[type=search]').dispatchEvent(new Event('input',{bubbles:true}))");
-  // Search changes via React's controlled input: use focus/keyboard below
-  // to keep a real user-triggered interaction.
   await p.eval("document.querySelector('.tree-sidebar .tree-line input[type=checkbox]').click()");
   await p.wait("document.querySelector('.tree-sidebar .module-reset')?.disabled===false",
     'R4.4 local reset enabled after country selection change');
