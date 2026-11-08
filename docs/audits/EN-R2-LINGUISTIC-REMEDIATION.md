@@ -26,9 +26,9 @@
 
 Source forms are indexed as search aliases. PCGN recommends Romanian names for Moldova, including the left bank, and cross-references Russian forms where informative. The Atlas's ASCII style is editorial, not mandated by PCGN.
 
-## EN-R2c — 9 remaining sibling homonym groups (20 entities)
+## EN-R2c — 10 remaining sibling homonym groups (22 entities)
 
-Original EN-R2 audit found **10 groups / 22 entities**. The Giurgiu case is resolved via restored full commune toponym. For the remaining groups, the tree's geographical `.node-name` is kept verbatim; a secondary small hint and an accessible label disambiguate identities. If recorded type alone is not unique, use a distinct official registry code or immutable OSM relation ID.
+Original EN-R2 audit found **10 groups / 22 entities**. The Giurgiu case is resolved via restored full commune toponym; restoring Hlinaia from Glinoye creates a genuine new same-name sibling pair. The current count therefore remains **10 groups / 22 identities**. For these groups, the tree's geographical `.node-name` is kept verbatim; a secondary small hint and an accessible label disambiguate identities. If recorded type alone is not unique, use a distinct official registry code or immutable OSM relation ID.
 
 | Group | Exact immutable OSM Atlas IDs |
 |---|---|
@@ -41,6 +41,7 @@ Original EN-R2 audit found **10 groups / 22 entities**. The Giurgiu case is reso
 | Ghindesti | 19072238, 19072257 |
 | Marculesti | 19072254, 19072273 |
 | Recea | 19100165, 19100169, 19100182 |
+| Hlinaia (ATULBD) | 9301463, 8291058 |
 
 ## EN-R2d — decisions and context
 
@@ -54,7 +55,7 @@ Original EN-R2 audit found **10 groups / 22 entities**. The Giurgiu case is reso
 
 - `tests/en-r2a-presentation.test.mjs` checks exact ID and original official names for the corrected commune and RO31.
 - `tests/en-r2b-toponym-reconciliation.test.mjs` checks all six display corrections, original OSM aliases and de facto/de jure separation.
-- `tests/en-r2c-homonyms.test.mjs` enumerates the exact nine groups and demands 20 distinct contextual descriptors.
+- `tests/en-r2c-homonyms.test.mjs` enumerates the exact ten current groups and demands 22 distinct contextual descriptors.
 - `tests/en-r2d-context.test.mjs` validates all three role-specific notes, Romanian counterparts and Chisinau.
 - `tests/english-territorial-names.test.mjs` runs ASCII and immutable catalog SHA-256 checks across all 4,283 entities. The exact catalog SHA-256 must remain `1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482`.
 - Full Node tests, TypeScript + Vite build, desktop and mobile Chromium smoke, and GitHub Pages are release gates. Never represent a skipped or pending check as successful.
