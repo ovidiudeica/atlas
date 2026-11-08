@@ -105,7 +105,7 @@ async function desktop(cdp){
   assert(frame.scroll<=frame.screen+1,'Desktop horizontal overflow');
   assert(frame.map>1300,'Map-first desktop must use available width');
   assert.match(frame.phase,/Phase 5/);
-  assert.equal(await p.eval("document.querySelectorAll('.map-area .zoom-controls button').length"),3,'Only zoom/−/Home permanent');
+  assert.equal(await p.eval("document.querySelectorAll('.map-area .zoom-controls button').length"),3,'Zoom/Home buttons stay grouped separately from global reset');
   assert.equal(await p.eval("!!document.querySelector('.map-area .map-quick-actions,.map-area .map-controls,.map-area .map-legend,.map-area .map-note,.map-area .mobile-controls')"),false,
     'Secondary commands, legend, source note and mobile buttons absent from map');
   const accessibleMap=await p.eval("({attribution:!!document.querySelector('.maplibregl-ctrl-attrib'),scale:!!document.querySelector('.maplibregl-ctrl-scale'),zoom:[...document.querySelectorAll('.zoom-controls button')].map(b=>({label:b.getAttribute('aria-label'),w:b.getBoundingClientRect().width,h:b.getBoundingClientRect().height}))})");
@@ -125,8 +125,12 @@ async function desktop(cdp){
     'Administrative panel is limited to tree, filters and reset; global tools are closed');
   assert.equal(await p.eval("document.querySelector('.atlas-tools-toggle')?.getAttribute('aria-expanded')"),'false',
     'Independent map-tool opener defaults to closed');
-  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar .atlas-admin-reset')"),true,
-    'Reset display remains in the Administrative module');
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar .module-reset')"),true,
+    'Reset icon appears next to Close in the Administrative toolbar');
+  assert.equal(await p.eval("document.querySelector('.tree-sidebar .module-reset').disabled"),true,
+    'Reset is inactive when the module has no selections');
+  assert.equal(await p.eval("!!document.querySelector('.map-reset-global')"),true,
+    'Global reset is independently visible below zoom');
   const englishRoots=await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-list > .territory-branch > .tree-line .node-name')).map(x=>x.textContent.trim())");
   assert.deepEqual(englishRoots,['Romania','Moldova'],'English tree uses concise national names');
   await p.snap('desktop-module-open.png');
@@ -558,12 +562,12 @@ async function desktop(cdp){
   await p.snap('desktop-map-settings.png');
   await p.eval("document.querySelector('.atlas-tools-close').click()");
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
-  await p.wait("!!document.querySelector('.tree-sidebar .atlas-admin-reset')",
-    'Administrative panel reopened for its own geometry reset');
+  await p.wait("!!document.querySelector('.tree-sidebar .module-reset')",
+    'Administrative panel reopened while global reset stays on the map');
   await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
   await p.wait("document.documentElement.lang==='ro'",'Romanian reset label');
   await p.eval("history.replaceState(history.state,'','?utm=preserved&entity=siruta-u64096&lng=26.4&lat=45.9&zoom=9')");
-  await p.eval("document.querySelector('.tree-sidebar .atlas-admin-reset').click()");
+  await p.eval("document.querySelector('.map-reset-global').click()");
   await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'default national preview restored');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,
     'Geometry reset closes the entity detail panel');
@@ -908,8 +912,8 @@ async function mobile(cdp){
   await p.wait("!!document.querySelector('.drawer[role=dialog] .tree-content')",'mobile tree for geometry reset');
   await p.eval("document.querySelector('.drawer .tree-line input[type=checkbox]').click()");
   await p.wait("JSON.parse(localStorage.getItem('atlas-visible-phase4')).length===1",'mobile country outline deselected');
-  assert.equal(await p.eval("document.querySelector('.drawer .atlas-admin-reset').textContent.includes('Restabilește afișarea inițială')"),true);
-  await p.eval("document.querySelector('.drawer .atlas-admin-reset').click()");
+  assert.equal(await p.eval("document.querySelector('.drawer-tree .module-reset').getAttribute('aria-label')"),'Resetează selecțiile acestui modul');
+  await p.eval("document.querySelector('.drawer-tree .module-reset').click()");
   await p.wait("(()=>{const v=JSON.parse(localStorage.getItem('atlas-visible-phase4'));return v.length===2&&v.includes('osm-r90689')&&v.includes('osm-r58974')})()",'mobile default national preview');
   assert((await p.eval('document.documentElement.scrollWidth'))<=391,'Mobile reset action must not introduce overflow');
   await p.snap('mobile-reset-geometries.png');
@@ -1410,6 +1414,107 @@ async function sourceHeadingDedup(cdp){
   await mobile.close();
 }
 
+/* WEB-R4.4 — global control below zoom, local control beside Close,
+ * local reset isolation and full global reset on desktop and mobile.
+ */
+async function moduleScopedResets(cdp){
+  const p=await cdp.page(1440,900,false,site+'?lang=ro');
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'R4.4 desktop countries loaded');
+  const initial=await p.eval(`(()=>{
+    const controls=document.querySelector('.zoom-controls').getBoundingClientRect();
+    const reset=document.querySelector('.map-reset-global').getBoundingClientRect();
+    return {resetTop:reset.top,zoomBottom:controls.bottom,resetWidth:reset.width,resetHeight:reset.height,
+      mapRight:document.querySelector('.map-area').getBoundingClientRect().right,resetRight:reset.right,
+      resetLabel:document.querySelector('.map-reset-global').getAttribute('aria-label')};
+  })()`);
+  assert(initial.resetTop>initial.zoomBottom+5&&initial.resetWidth>=44&&initial.resetHeight>=44,
+    'Global reset is a separate 44px icon below zoom/Home');
+  assert(initial.resetRight<=initial.mapRight+1,'Reset stays inside map');
+  assert(initial.resetLabel.includes('tuturor modulelor'),'Global reset is bilingual and explicit');
+  await p.snap('desktop-web-r44-global-reset-below-zoom.png');
+
+  await p.eval("document.querySelector('.module-rail button:first-child').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar .module-reset')",
+    'R4.4 desktop module reset visible');
+  const toolbar=await p.eval(`(()=>{
+    const bar=document.querySelector('.tree-sidebar .pane-toolbar');
+    const reset=bar.querySelector('.module-reset'),close=bar.querySelector('.module-pane-close');
+    const a=reset.getBoundingClientRect(),b=close.getBoundingClientRect();
+    return {disabled:reset.disabled,resetRight:a.right,closeLeft:b.left,
+      resetSize:[a.width,a.height],closeSize:[b.width,b.height]};
+  })()`);
+  assert(toolbar.disabled&&toolbar.resetRight<=toolbar.closeLeft&&
+    toolbar.resetSize.every(n=>n>=44)&&toolbar.closeSize.every(n=>n>=44),
+    'Local reset is disabled at rest and next to Close with 44px targets');
+  await p.snap('desktop-web-r44-module-reset-idle.png');
+
+  await p.eval("document.querySelector('.tree-sidebar input[type=search]').value='București';document.querySelector('.tree-sidebar input[type=search]').dispatchEvent(new Event('input',{bubbles:true}))");
+  // Search changes via React's controlled input: use focus/keyboard below
+  // to keep a real user-triggered interaction.
+  await p.eval("document.querySelector('.tree-sidebar .tree-line input[type=checkbox]').click()");
+  await p.wait("document.querySelector('.tree-sidebar .module-reset')?.disabled===false",
+    'R4.4 local reset enabled after country selection change');
+  const before=await p.eval(`(()=>{
+    const map=document.querySelector('.map-area');
+    const open=!!document.querySelector('.tree-sidebar');
+    return {visible:map.dataset.mapVisibleCount,open,
+      language:document.documentElement.lang};
+  })()`);
+  assert.equal(before.language,'ro');
+  await p.snap('desktop-web-r44-module-reset-active.png');
+  await p.eval("document.querySelector('.tree-sidebar .module-reset').click()");
+  await p.wait("(()=>{const b=document.querySelector('.tree-sidebar .module-reset');return b&&b.disabled&&document.querySelector('.map-area').dataset.mapVisibleCount==='2'})()",
+    'R4.4 local reset restores Administrative country selection');
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),true,
+    'Local reset leaves the module open');
+  assert.equal(await p.eval("document.activeElement===document.querySelector('.tree-sidebar .module-pane-close')"),true,
+    'Local reset transfers focus to enabled Close control');
+  await p.snap('desktop-web-r44-module-reset-done.png');
+
+  await p.eval("document.querySelector('.tree-sidebar .tree-line input[type=checkbox]').click()");
+  await p.wait("document.querySelector('.map-area').dataset.mapVisibleCount==='1'",
+    'R4.4 global reset preparation');
+  await p.eval("document.querySelector('.map-reset-global').click()");
+  await p.wait("document.querySelector('.map-area').dataset.mapVisibleCount==='2'",
+    'R4.4 global reset restores both national outlines');
+  assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,
+    'Global reset closes module panels and clears session selections');
+  await p.snap('desktop-web-r44-global-reset-done.png');
+  await p.close();
+
+  const phone=await cdp.page(360,780,true,site+'?lang=ro');
+  await phone.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'R4.4 mobile map loaded');
+  const mobileGeometry=await phone.eval(`(()=>{
+    const reset=document.querySelector('.map-reset-global').getBoundingClientRect();
+    const zoom=document.querySelector('.zoom-controls').getBoundingClientRect();
+    const rail=document.querySelector('.module-rail').getBoundingClientRect();
+    return {resetTop:reset.top,zoomBottom:zoom.bottom,resetBottom:reset.bottom,
+      railTop:rail.top,resetRight:reset.right,width:innerWidth,scroll:document.documentElement.scrollWidth};
+  })()`);
+  assert(mobileGeometry.resetTop>mobileGeometry.zoomBottom+5&&mobileGeometry.resetBottom<mobileGeometry.railTop,
+    'Mobile global reset is below zoom and above module rail');
+  assert(mobileGeometry.resetRight<=mobileGeometry.width&&mobileGeometry.scroll<=mobileGeometry.width+1);
+  await phone.snap('mobile-web-r44-global-reset-below-zoom.png');
+  await phone.eval("document.querySelector('.module-rail button:first-child').click()");
+  await phone.wait("!!document.querySelector('.drawer-tree .module-reset')",
+    'R4.4 mobile local control available');
+  assert.equal(await phone.eval("document.querySelector('.drawer-tree .module-reset').disabled"),true,
+    'Mobile local reset starts disabled');
+  await phone.snap('mobile-web-r44-module-reset-idle.png');
+  await phone.eval("document.querySelector('.drawer-tree .tree-line input[type=checkbox]').click()");
+  await phone.wait("!document.querySelector('.drawer-tree .module-reset').disabled",
+    'R4.4 mobile local reset becomes active');
+  await phone.snap('mobile-web-r44-module-reset-active.png');
+  await phone.eval("document.querySelector('.drawer-tree .module-reset').click()");
+  await phone.wait("document.querySelector('.drawer-tree .module-reset')?.disabled===true",
+    'R4.4 local reset finishes without closing mobile drawer');
+  assert.equal(await phone.eval("document.activeElement===document.querySelector('.drawer-tree .module-pane-close')"),true,
+    'Mobile reset keeps keyboard focus inside dialog');
+  await phone.snap('mobile-web-r44-module-reset-done.png');
+  await phone.close();
+}
 async function narrowMobile(cdp){
   const p=await cdp.page(360,780,true);
   await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
@@ -1500,6 +1605,7 @@ try{
   await cardUxAccessibility(client);
   await finalCardAcceptance(client);
   await sourceHeadingDedup(client);
+  await moduleScopedResets(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
