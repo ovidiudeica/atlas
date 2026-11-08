@@ -44,8 +44,8 @@ test('WEB-R3.20: ADM4 municipiu and ADM8 oraș Chișinău coexist with authentic
  assert.equal(city.administrativeParentId,CHISINAU_ID);
  assert.equal(city.treeParentId,CHISINAU_ID);
  assert.equal(shortTreeName(m,'ro'),'Chișinău');
- assert.equal(shortTreeName(city,'ro'),'Oraș');
- assert.equal(shortTreeName(city,'en'),'City');
+ assert.equal(shortTreeName(city,'ro'),'Chișinău');
+ assert.equal(shortTreeName(city,'en'),'Chișinău');
  assert.equal(city.name,'Chișinău');
  assert(city.officialName.includes('Chișinău'),'Original official name remains searchable');
  for(const view of ['all','administrative']){
