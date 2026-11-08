@@ -6,9 +6,11 @@ import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
+import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { cardNameOf, englishSiblingQualifiers, territorialContextNote } from './data/treeNames.mjs';
 import { flagFileForEntity } from './data/entityFlags.mjs';
 import { officialSymbolsForEntity } from './data/officialSymbols.mjs';
+import { editorialSymbolsForEntity, symbolAssetUrl, symbolSourceUrl } from './data/territorialSymbols.mjs';
 import { makeModuleVisibility, setModuleGeometry, resetModuleGeometry,
   displayedModuleGeometry, moduleHasSelections } from './data/moduleReset.mjs';
 import { entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent } from './data/entityCardRoles.mjs';
@@ -926,6 +928,13 @@ export default function App() {
       :eastHlinaiaCode?rowLabel+' (CUATM '+eastHlinaiaCode+')':rowLabel;
     const accessibleRowLabel=enHint?baseAccessibleRowLabel+' ('+enHint+')':baseAccessibleRowLabel;
     const stat=node.statisticalRoles.length>0;
+    // SIM-R3: one-to-one local coat/flag only; no propagation to siblings or parents.
+    const approvedTreeSymbols=officialSymbolsForEntity(node);
+    const editorialTreeSymbols=approvedTreeSymbols?null:editorialSymbolsForEntity(node);
+    const treeSymbols=approvedTreeSymbols||editorialTreeSymbols;
+    const approvedTreeFile=approvedTreeSymbols?.coat||approvedTreeSymbols?.flag;
+    const treeSymbolSrc=approvedTreeFile?import.meta.env.BASE_URL+'symbols/'+approvedTreeFile:
+      symbolAssetUrl(editorialTreeSymbols?.coat||editorialTreeSymbols?.flag);
     return <div className="territory-branch" key={node.id} role={searchMatch?'none':'none'}>
       <div className={'tree-line'+(selected===node.id?' is-selected':'')} role="treeitem"
            aria-level={searchMatch?1:depth+1} aria-selected={selected===node.id}
@@ -940,7 +949,11 @@ export default function App() {
           onChange={()=>toggleVisible(node.id)} />
         <button className="tree-label" aria-label={accessibleRowLabel} title={lang==='ro'?node.officialName:accessibleRowLabel}
           onClick={()=>searchMatch?chooseSearch(node.id):choose(node.id)}>
-          <span className="node-name">{rowLabel}</span>
+          <span className="tree-label-heading">
+            {treeSymbols&&<TerritorialSymbolImage key={node.id+'-'+(treeSymbolSrc||'empty')}
+              src={treeSymbolSrc} alt="" className="tree-territorial-symbol" />}
+            <span className="node-name">{rowLabel}</span>
+          </span>
           <span className={'node-level'+(stat?' is-stat':'')} title={municipalRoleClarification(node,lang)||undefined}>{roleLabel(node)}{eastHlinaiaCode?' · CUATM '+eastHlinaiaCode:''}</span>
           {enHint&&<span className="node-disambiguation">{enHint}</span>}
         </button>
@@ -1028,14 +1041,19 @@ export default function App() {
   const currentFlag=currentNode?flagFileForEntity(currentNode):null;
   // Exact-ID symbols, only if the act, representation, and owner were reviewed.
   const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
+  const editorialSymbols=currentNode&&!officialSymbols?editorialSymbolsForEntity(currentNode):null;
+  const editorialPreferred=editorialSymbols?.coat||editorialSymbols?.flag;
   const primarySymbolPath=officialSymbols?.coat
     ?'symbols/'+officialSymbols.coat:currentFlag?'flags/'+currentFlag:null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
-        <span className={'flag'+(officialSymbols?.coat?' flag--coat':'')} aria-hidden="true">
-          {primarySymbolPath&&<img src={import.meta.env.BASE_URL+primarySymbolPath}
-            alt="" loading="eager" decoding="async" />}
+        <span className={'flag'+(officialSymbols?.coat||editorialSymbols?.coat?' flag--coat':'')} aria-hidden="true">
+          {editorialSymbols?
+            <TerritorialSymbolImage key={currentNode.id} className="territorial-symbol-header"
+              src={symbolAssetUrl(editorialPreferred)} alt="" loading="eager" />:
+            primarySymbolPath&&<img src={import.meta.env.BASE_URL+primarySymbolPath}
+              alt="" loading="eager" decoding="async" />}
         </span>
         <div><h3 tabIndex={-1}>{cardNameOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
       </header>
@@ -1109,6 +1127,39 @@ export default function App() {
           {lang==='ro'
             ?'Reproducere strict informativă; simbolul nu este sigla atlasului.'
             :'Informational reproduction only; this symbol is not the Atlas logo.'}
+        </p>
+      </EntityCardSection>}
+      {editorialSymbols&&
+      <EntityCardSection
+        title={lang==='ro'?'Simboluri teritoriale':'Territorial symbols'} kind="symbols">
+        <div className="territory-symbol-gallery territory-symbol-gallery--editorial">
+          {(['coat','flag'] as const).map(kind=>{
+            const asset=editorialSymbols[kind];
+            const label=kind==='coat'?(lang==='ro'?'Stemă':'Coat of arms'):(lang==='ro'?'Drapel':'Flag');
+            const source=symbolSourceUrl(asset);
+            return <figure key={kind}>
+              <div className="territory-symbol-frame">
+                <TerritorialSymbolImage key={currentNode.id+kind} className="territory-symbol-media"
+                  src={symbolAssetUrl(asset)} alt={asset?label+' · '+editorialSymbols.name:label+' — '+(lang==='ro'?'indisponibil':'unavailable')} />
+              </div>
+              <figcaption>{label}</figcaption>
+              {source&&<a className="territory-symbol-source" href={source}
+                target="_blank" rel="noopener noreferrer">
+                {asset?.tier==='A'?(lang==='ro'?'Sursa instituțională':'Institutional source'):
+                  (lang==='ro'?'Sursa și licența':'Source and license')} ↗
+              </a>}
+            </figure>;
+          })}
+        </div>
+        {editorialSymbols.reference&&<a className="territory-symbol-source"
+          href={editorialSymbols.reference} target="_blank" rel="noopener noreferrer">
+          {lang==='ro'?'Document de referință':'Reference document'} ↗
+        </a>}
+        {editorialSymbols.note&&<p className="territory-symbol-evidence">{editorialSymbols.note[lang]}</p>}
+        <p className="territory-symbol-disclaimer">
+          {lang==='ro'
+            ?'Reproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.'
+            :'Illustrative reproductions linked only to this entity. Tier B means documented imagery, not a certified official master. Missing images show a neutral placeholder.'}
         </p>
       </EntityCardSection>}
       {(cardRoles?.administrative.length||currentNode.registry||
