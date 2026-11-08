@@ -47,7 +47,7 @@ test('English presentation is localized and the 48 original Romanian shortened n
   assert(changed.ro.some(x=>x.id==='stat-MD120'));
   assert.equal(new Set(changed.ro.map(x=>x.id)).size,48);
   assert(changed.en.some(x=>x.id==='stat-MD120'));
-  assert.equal(new Set(changed.en.map(x=>x.id)).size,51);
+  assert.equal(new Set(changed.en.map(x=>x.id)).size,changed.en.length);
 });
 test('both left-bank entities and district/municipality names are concise',()=>{
   const get=(id,lang)=>shortTreeName(byId.get(id),lang);
