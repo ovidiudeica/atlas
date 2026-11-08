@@ -25,7 +25,7 @@ test('WEB-R4.5: the Chișinău ADM8 node has an actual place name in RO and EN',
     assert.equal(shortTreeName(municipality,lang),lang==='ro'?'Chișinău':'Chisinau');
     assert.equal(shortTreeName(city,lang),lang==='ro'?'Chișinău':'Chisinau',
       'ADM8 label must identify a place, not generic Oraș or City');
-    assert.equal(cardNameOf(city,lang),lang==='ro'?'Orașul Chișinău':'Chisinau city',
+    assert.equal(cardNameOf(city,lang),lang==='ro'?'Orașul Chișinău':'City of Chisinau',
       'Standalone details retain their unambiguous city context');
   }
 });

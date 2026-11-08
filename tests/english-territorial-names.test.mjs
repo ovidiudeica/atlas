@@ -63,7 +63,7 @@ test('EN-R1: reviewed exonyms and NUTS display translations do not replace nativ
     assert(byId.has(id),'Missing canonical entity: '+id);
     assert.equal(name(id),english,id);
   }
-  assert.equal(cardNameOf(byId.get('osm-r1748490'),'en'),'Chisinau city');
+  assert.equal(cardNameOf(byId.get('osm-r1748490'),'en'),'City of Chisinau');
   assert.equal(name('stat-RO3','ro'),'Macroregiunea Trei');
   assert.equal(name('osm-r13799978','ro'),'Florești-Stoenești');
   assert.equal(name('osm-r1699032','ro'),'Găgăuzia');

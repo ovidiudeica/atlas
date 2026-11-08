@@ -130,7 +130,7 @@ test('WEB-R4.3 and R4.5: Chișinău card remains contextual and tree names the A
   assert.equal(shortTreeName(city,'ro'),'Chișinău');
   assert.equal(shortTreeName(city,'en'),'Chisinau');
   assert.equal(cardNameOf(city,'ro'),'Orașul Chișinău');
-  assert.equal(cardNameOf(city,'en'),'Chisinau city');
+  assert.equal(cardNameOf(city,'en'),'City of Chisinau');
   for(const other of ['osm-r1691801','osm-r377733','osm-r944727']){
     const entity=index.get(other);
     for(const lang of ['ro','en'])

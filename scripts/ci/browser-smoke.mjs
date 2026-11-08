@@ -1328,7 +1328,7 @@ async function finalCardAcceptance(cdp){
       level:panel.querySelector('.entity-admin-role-primary strong')?.textContent.trim(),
       close:panel.querySelector('.pane-toolbar .pane-close')?.getBoundingClientRect().width};
   })()`);
-  assert(t.name.includes('Chisinau city')&&t.heading==='Chisinau city'&&
+  assert(t.name.includes('City of Chisinau')&&t.heading==='City of Chisinau'&&
     t.level==='ADM 8'&&t.close>=44&&t.scroll<=t.width+1,
     'Tablet city details are accessible without horizontal overflow');
   await tablet.snap('tablet-web-r43-final-chisinau-city-en.png');
