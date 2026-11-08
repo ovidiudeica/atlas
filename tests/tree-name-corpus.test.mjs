@@ -56,8 +56,8 @@ test('both left-bank entities and district/municipality names are concise',()=>{
   assert.equal(get('stat-MD120','ro'),'Transnistria');
   assert.equal(get('stat-MD120','en'),'Transnistria');
   assert.equal(get('osm-r1691801','en'),'Chișinău');
-  assert.equal(get('osm-r1748490','ro'),'Oraș');
-  assert.equal(get('osm-r1748490','en'),'City');
+  assert.equal(get('osm-r1748490','ro'),'Chișinău');
+  assert.equal(get('osm-r1748490','en'),'Chișinău');
   assert.equal(get('osm-r58983','en'),'Bălți');
   assert.equal(get('osm-r1104136','en'),'Basarabeasca');
   assert.equal(get('osm-r1702216','en'),'Kamenka');
