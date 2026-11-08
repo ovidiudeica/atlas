@@ -15,10 +15,10 @@ const EXPECTED=[
   ['osm-r944727','32','Bender','Bender'],
   ['osm-r1702219','33','Tiraspol','Tiraspol'],
   ['osm-r1702214','40','Grigoriopol','Grigoriopol'],
-  ['osm-r1702215','45','Dubăsari','Dubossary'],
-  ['osm-r1702217','55','Rîbnița','Rybnitsa'],
-  ['osm-r1702218','57','Slobozia','Slobdzeya'],
-  ['osm-r1702216','66','Camenca','Kamenka']
+  ['osm-r1702215','45','Dubăsari','Dubasari'],
+  ['osm-r1702217','55','Rîbnița','Ribnita'],
+  ['osm-r1702218','57','Slobozia','Slobozia'],
+  ['osm-r1702216','66','Camenca','Camenca']
 ];
 const expectedIds=EXPECTED.map(x=>x[0]);
 

@@ -12,7 +12,7 @@ const EN_NUTS_DISPLAY=Object.freeze({
   RO3:'Macroregion Three',RO4:'Macroregion Four',
   RO11:'North-West',RO12:'Centre',
   RO21:'North-East',RO22:'South-East',
-  RO31:'South Muntenia',RO32:'Bucharest-Ilfov',
+  RO31:'South-Muntenia',RO32:'Bucharest-Ilfov',
   RO41:'South-West Oltenia',RO42:'West'
 });
 // Reviewed English exonyms / Atlas editorial exceptions, keyed by stable ID.
@@ -21,8 +21,19 @@ const EN_NUTS_DISPLAY=Object.freeze({
 const EN_ENTITY_DISPLAY=Object.freeze({
   'osm-r377733':'Bucharest',
   'osm-r1699032':'Gagauzia',
-  'osm-r1691801':'Chisinau'
+  'osm-r1691801':'Chisinau',
+  'osm-r13799978':'Floresti-Stoenesti',
+  // EN-R2b: authoritative Romanian toponyms take precedence over
+  // Russian-derived OSM English aliases (which remain searchable as source).
+  'osm-r1702216':'Camenca',
+  'osm-r1702217':'Ribnita',
+  'osm-r1702215':'Dubasari',
+  'osm-r1702218':'Slobozia',
+  'osm-r6879649':'Chitcani',
+  'osm-r8291058':'Hlinaia'
 });
+// Correct the display of the same commune in RO without changing source fields.
+const RO_ENTITY_DISPLAY=Object.freeze({'osm-r13799978':'Florești-Stoenești'});
 const ROMANIAN_TYPE_PREFIX_EN=/^(?:Judetul|Raionul|Municipiul|Municipalitatea|Orasul|Comuna|Districtul|Sectorul|Sovetul (?:satesc|orasenesc))\s+/iu;
 function asciiEnglish(value){
   return String(value||'').normalize('NFD')
@@ -116,7 +127,7 @@ function comparable(value){
 // No catalog source name, OSM ID, or administrative parentage is modified.
 export function cardNameOf(node,lang){
   return node.id==='osm-r1748490'
-    ?(lang==='ro'?'Orașul Chișinău':'Chisinau city')
+    ?(lang==='ro'?'Orașul Chișinău':'City of Chisinau')
     :shortTreeName(node,lang);
 }
 
@@ -144,6 +155,7 @@ export function shortTreeName(node,lang){
   const stat=node.statisticalRoles?.[0]?.code;
   if(stat&&STAT_OVERRIDES[stat])return STAT_OVERRIDES[stat][lang==='ro'?0:1];
   if(lang==='en')return englishTerritorialName(node);
+  if(Object.hasOwn(RO_ENTITY_DISPLAY,node.id))return RO_ENTITY_DISPLAY[node.id];
   const preferred=node.roles?.includes('statistical')&&node.sourceTags?.short_name
     ?node.sourceTags.short_name:(node.shortName?.[lang]||node.name);
   const value=String(preferred||'').trim();
@@ -160,4 +172,72 @@ export function shortTreeName(node,lang){
     }
   }
   return value;
+}
+
+// EN-R2c: qualifiers for *homonymous siblings* are separate UI metadata,
+// never suffixes to the toponym or changes to the certified identity.
+function englishAdministrativeKind(node){
+  const official=asciiEnglish(node.officialName||'').trim();
+  if(/^orasul\s/iu.test(official))return 'Town';
+  if(/^municipiul\s/iu.test(official))return 'Municipality';
+  if(/^comuna\s/iu.test(official))return 'Commune';
+  if(/^satul\s/iu.test(official))return 'Village';
+  if(/^sectorul\s/iu.test(official))return 'Sector';
+  if(node.entityType==='town_uat')return 'Town';
+  if(node.entityType==='commune')return 'Commune';
+  return 'Administrative unit';
+}
+
+export function englishSiblingQualifiers(entities){
+  const grouped=new Map();
+  for(const node of entities){
+    if(!node.roles?.includes('administrative')||!node.treeParentId)continue;
+    const key=[node.country,node.treeParentId,node.adminLevel,
+      shortTreeName(node,'en').toLowerCase()].join('|');
+    if(!grouped.has(key))grouped.set(key,[]);
+    grouped.get(key).push(node);
+  }
+  const result=new Map();
+  for(const group of grouped.values()){
+    if(group.length<2)continue;
+    for(const node of group){
+      const kind=englishAdministrativeKind(node);
+      const sameKind=group.filter(other=>englishAdministrativeKind(other)===kind);
+      if(sameKind.length===1){
+        result.set(node.id,kind);
+        continue;
+      }
+      const system=node.registry?.system;
+      const code=node.registry?.code;
+      if(system&&code&&sameKind.filter(other=>
+        other.registry?.system===system&&other.registry?.code===code).length===1){
+        result.set(node.id,kind+' · '+system+' '+code);
+        continue;
+      }
+      // Every source OSM relation has an immutable numeric ID. Use it for
+      // unresolved same-kind homonyms, never invent a place name or legal type.
+      result.set(node.id,kind+' · '+(node.osmRelationId!==null&&node.osmRelationId!==undefined
+        ?'OSM '+node.osmRelationId:node.id));
+    }
+  }
+  return result;
+}
+
+// EN-R2d: role-specific context is separate from geographic names.
+const TERRITORIAL_CONTEXT=Object.freeze({
+  'osm-r65335':Object.freeze({
+    ro:'Entitate teritorială de facto administrată separat; distinctă de UATSN/ATULBD și de regiunea statistică. Eticheta nu implică recunoașterea statalității.',
+    en:"Separately administered de facto territory; distinct from Moldova's ATULBD administrative units and the statistical region. The label does not imply recognition of statehood."
+  }),
+  'osm-r2607033':Object.freeze({
+    ro:'UATSN / ATULBD: unitățile administrativ-teritoriale din stânga Nistrului în administrația Republicii Moldova, distincte de entitatea de facto.',
+    en:"ATULBD: Administrative-Territorial Units of the Left Bank of the Dniester in Moldova's administration, distinct from the de facto territorial entity."
+  }),
+  'stat-MD120':Object.freeze({
+    ro:'Regiune statistică pentru unitățile din stânga Nistrului; nu constituie o entitate administrativă independentă și nu trebuie confundată cu Nistrenia de facto.',
+    en:"Statistical region for Moldova's left-bank units; not a separate administrative jurisdiction and not interchangeable with de facto Pridnestrovie."
+  })
+});
+export function territorialContextNote(node,lang){
+  return TERRITORIAL_CONTEXT[node.id]?.[lang==='ro'?'ro':'en']||null;
 }

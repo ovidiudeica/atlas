@@ -502,3 +502,6 @@
   .map-action-stack{right:10px;top:12px}
   .map-action-stack .zoom-controls button{width:44px;height:44px}
 }
+
+/* EN-R2c: compact contextual metadata for homonymous administrative siblings. */
+.node-disambiguation{font-size:10px;font-weight:550;line-height:1.2;color:#536f61;max-width:100%;overflow-wrap:anywhere}
