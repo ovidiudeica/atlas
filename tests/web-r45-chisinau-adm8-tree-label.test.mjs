@@ -22,10 +22,10 @@ test('WEB-R4.5: the Chișinău ADM8 node has an actual place name in RO and EN',
   assert.equal(city.name,'Chișinău');
   assert(city.officialName.includes('Chișinău'));
   for(const lang of ['ro','en']){
-    assert.equal(shortTreeName(municipality,lang),'Chișinău');
-    assert.equal(shortTreeName(city,lang),'Chișinău',
+    assert.equal(shortTreeName(municipality,lang),lang==='ro'?'Chișinău':'Chisinau');
+    assert.equal(shortTreeName(city,lang),lang==='ro'?'Chișinău':'Chisinau',
       'ADM8 label must identify a place, not generic Oraș or City');
-    assert.equal(cardNameOf(city,lang),lang==='ro'?'Orașul Chișinău':'Chișinău city',
+    assert.equal(cardNameOf(city,lang),lang==='ro'?'Orașul Chișinău':'Chisinau city',
       'Standalone details retain their unambiguous city context');
   }
 });
@@ -40,7 +40,7 @@ test('WEB-R4.5: city remains first ADM8 child and retains its five sectors',()=>
     assert.equal(siblings.length,19);
     assert.equal(siblings[0].id,CHISINAU_CITY_ID);
     for(const lang of ['ro','en']){
-      assert.equal(shortTreeName(siblings[0],lang),'Chișinău');
+      assert.equal(shortTreeName(siblings[0],lang),lang==='ro'?'Chișinău':'Chisinau');
     }
     const sectors=entities.filter(e=>presentationParentId(e,view)===city.id);
     assert.equal(sectors.length,5);
