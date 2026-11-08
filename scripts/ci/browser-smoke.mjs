@@ -140,7 +140,7 @@ async function desktop(cdp){
   // WEB-R3.19b: browse the authentic RO3/RO32/București hierarchy in Chromium.
   // Numeric SIRUTA places sectors 1..6 even when OSM IDs are out of order.
   const roRow=name=>"Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+")";
-  for(const name of ['Romania','Macroregiunea Trei','Bucureşti-Ilfov','Bucharest']){
+  for(const name of ['Romania','Macroregion Three','Bucharest-Ilfov','Bucharest']){
     await p.wait("!!("+roRow(name)+")",'Romanian presentation node '+name);
     await p.eval(roRow(name)+".querySelector('.expand-button').click()");
   }
@@ -153,7 +153,7 @@ async function desktop(cdp){
   assert(buchHint?.includes('SIRUTA municipal role'),'Bucharest municipal role is not OSM ADM8');
   await p.eval(roRow('Bucharest')+".scrollIntoView({block:'start'})");
   await p.snap('desktop-romania-bucharest-siruta-en.png');
-  for(const name of ['Bucharest','Bucureşti-Ilfov','Macroregiunea Trei','Romania'])
+  for(const name of ['Bucharest','Bucharest-Ilfov','Macroregion Three','Romania'])
     await p.eval(roRow(name)+".querySelector('.expand-button').click()");
 
   // WEB-R3.18 Nistrenia/Pridnestrovie: cadastral seat codes 32–66 ascending.
@@ -205,29 +205,29 @@ async function desktop(cdp){
       const westExpr=desktopRow('West','NTS 2');
       const westChildren=await desktopChildren(westExpr);
       assert.deepEqual(westChildren.map(x=>x.name),
-        ['North','Centre','South','Gagauzia','Chișinău'],
+        ['North','Centre','South','Gagauzia','Chisinau'],
         'West NTS3 siblings follow statistical MD111–MD115');
       assert.deepEqual(westChildren.map(x=>x.level),
         ['NTS 3','NTS 3','NTS 3','NTS 3 · ADM 4','NTS 3 · ADM 4']);
       await p.eval(westExpr+".scrollIntoView({block:'center'})");
       await p.snap('desktop-west-codes-md111-md115-en.png');
     }
-    for(const parentName of ['Gagauzia','Chișinău']){
+    for(const parentName of ['Gagauzia','Chisinau']){
       const root=desktopRow(parentName,'ADM 4');
       await p.wait("!!("+root+")",parentName+' found in '+view);
       await p.eval(root+".querySelector('.expand-button').click()");
       const direct=await desktopChildren(root);
       if(parentName==='Gagauzia'){
-        assert.deepEqual(direct.map(x=>x.name),['Comrat','Ceadîr-Lunga','Vulcănești']);
+        assert.deepEqual(direct.map(x=>x.name),['Comrat','Ceadir-Lunga','Vulcanesti']);
         assert(direct.every(x=>x.level==='ADM 5'));
-        for(const [name,count] of [['Comrat',13],['Ceadîr-Lunga',9],['Vulcănești',4]]){
+        for(const [name,count] of [['Comrat',13],['Ceadir-Lunga',9],['Vulcanesti',4]]){
           const raion=desktopRow(name,'ADM 5');
           await p.eval(raion+".querySelector('.expand-button').click()");
           const kids=await desktopChildren(raion);
           assert.equal(kids.length,count,name+' nested ADM8 count '+view);
           assert(kids.every(x=>x.level==='ADM 8'));
           assert.equal(kids[0].name,name,name+' locality has smallest CUATM in its raion');
-          assert.equal(kids[1].name,({Comrat:'Avdarma','Ceadîr-Lunga':'Baurci','Vulcănești':'Carbalia'})[name],
+          assert.equal(kids[1].name,({Comrat:'Avdarma','Ceadir-Lunga':'Baurci','Vulcanesti':'Carbalia'})[name],
             name+' next ADM8 is CUATM-ordered, not alphabetical');
           await p.eval(raion+".scrollIntoView({block:'center'})");
           await p.snap('desktop-gagauzia-'+name.replace(/[^a-z]/gi,'').toLowerCase()+'-nested-en-'+view+'.png');
@@ -235,12 +235,12 @@ async function desktop(cdp){
         }
       }else{
         assert.equal(direct.length,19,'Chișinău city plus 18 ADM8 localities '+view);
-        assert.deepEqual(direct[0],{name:'Chișinău',level:'ADM 8'});
+        assert.deepEqual(direct[0],{name:'Chisinau',level:'ADM 8'});
         assert(direct.slice(1).every(x=>x.level==='ADM 8'));
-        const city=desktopRow('Chișinău','ADM 8');
+        const city=desktopRow('Chisinau','ADM 8');
         await p.eval(city+".querySelector('.expand-button').click()");
         const sectors=await desktopChildren(city);
-        assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Ciocana','Rîșcani','Centru']);
+        assert.deepEqual(sectors.map(x=>x.name),['Botanica','Buiucani','Ciocana','Riscani','Centru']);
         assert(sectors.every(x=>x.level==='ADM 7'));
         await p.eval(city+".scrollIntoView({block:'center'})");
         await p.snap('desktop-chisinau-sectors-nested-en-'+view+'.png');
@@ -259,8 +259,8 @@ async function desktop(cdp){
   await p.wait("Array.from(document.querySelectorAll('.tree-sidebar .node-name')).some(x=>x.textContent.trim()==='West')",'NTS2 West exists');
   await p.eval("Array.from(document.querySelectorAll('.tree-sidebar .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='West').querySelector('.expand-button').click()");
   for(const [region,seat,expected,firstLocal] of [
-    ['North','Bălți',12,'Elizaveta'],
-    ['Centre','Anenii Noi',13,'Varnița'],
+    ['North','Balti',12,'Elizaveta'],
+    ['Centre','Anenii Noi',13,'Varnita'],
     ['South','Basarabeasca',8,'Basarabeasca']
   ]){
     const regionExpr=desktopRow(region,'NTS 3');
@@ -783,8 +783,10 @@ async function mobile(cdp){
   const drawerLine=(name)=>"Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(name)+")";
   // WEB-R3.19b mobile: the same six SIRUTA-ordered Bucharest sectors.
   const romanianName=await p.eval("document.documentElement.lang==='ro'?'România':'Romania'");
+  const macroName=await p.eval("document.documentElement.lang==='ro'?'Macroregiunea Trei':'Macroregion Three'");
+  const buchRegionName=await p.eval("document.documentElement.lang==='ro'?'Bucureşti-Ilfov':'Bucharest-Ilfov'");
   const capitalName=await p.eval("document.documentElement.lang==='ro'?'București':'Bucharest'");
-  for(const name of [romanianName,'Macroregiunea Trei','Bucureşti-Ilfov',capitalName]){
+  for(const name of [romanianName,macroName,buchRegionName,capitalName]){
     await p.wait("!!("+drawerLine(name)+")",'Romania mobile node '+name);
     await p.eval(drawerLine(name)+".querySelector('.expand-button').click()");
   }
@@ -794,7 +796,7 @@ async function mobile(cdp){
     'NUTS 3 · ADM 4 · ADM 8','mobile Bucharest roles use NUTS before both administrative roles');
   await p.eval(drawerLine(capitalName)+".scrollIntoView({block:'start'})");
   await p.snap('mobile-romania-bucharest-siruta.png');
-  for(const name of [capitalName,'Bucureşti-Ilfov','Macroregiunea Trei',romanianName])
+  for(const name of [capitalName,buchRegionName,macroName,romanianName])
     await p.eval(drawerLine(name)+".querySelector('.expand-button').click()");
 
   await p.eval(drawerLine('Moldova')+".querySelector('.expand-button').click()");
@@ -811,8 +813,9 @@ async function mobile(cdp){
   await p.eval(drawerLine(regionalLocale)+".querySelector('.expand-button').click()");
   const firstNorthern=await p.eval("(()=>{const x="+drawerLine(regionalLocale)+";return [...x.closest('.territory-branch').querySelectorAll(':scope > .tree-children > .territory-branch > .tree-line .node-name')].map(x=>x.textContent.trim());})()");
   assert.equal(firstNorthern.length,12);
-  assert.equal(firstNorthern[0],'Bălți','Mobile northern region puts agency seat first');
-  const baltiDistrict="Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==='Bălți'&&x.querySelector('.node-level')?.textContent.trim().startsWith('ADM 4'))";
+  const baltiName=await p.eval("document.documentElement.lang==='ro'?'Bălți':'Balti'");
+  assert.equal(firstNorthern[0],baltiName,'Mobile northern region puts agency seat first');
+  const baltiDistrict="Array.from(document.querySelectorAll('.drawer .tree-line')).find(x=>x.querySelector('.node-name')?.textContent.trim()==="+JSON.stringify(baltiName)+"&&x.querySelector('.node-level')?.textContent.trim().startsWith('ADM 4'))";
   await p.eval(baltiDistrict+".querySelector('.expand-button').click()");
   await p.wait("(()=>{const x="+baltiDistrict+";return !!x?.closest('.territory-branch')?.querySelector('.tree-children .territory-branch');})()",
     'Mobile Bălți ADM8 expanded');
@@ -1325,7 +1328,7 @@ async function finalCardAcceptance(cdp){
       level:panel.querySelector('.entity-admin-role-primary strong')?.textContent.trim(),
       close:panel.querySelector('.pane-toolbar .pane-close')?.getBoundingClientRect().width};
   })()`);
-  assert(t.name.includes('Chișinău city')&&t.heading==='Chișinău city'&&
+  assert(t.name.includes('Chisinau city')&&t.heading==='Chisinau city'&&
     t.level==='ADM 8'&&t.close>=44&&t.scroll<=t.width+1,
     'Tablet city details are accessible without horizontal overflow');
   await tablet.snap('tablet-web-r43-final-chisinau-city-en.png');
