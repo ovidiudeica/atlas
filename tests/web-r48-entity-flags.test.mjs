@@ -14,7 +14,10 @@ test('WEB-R4.8 flags are self-contained assets, not OS-dependent Unicode emoji',
   const css=readFileSync(new URL('../src/styles.css',import.meta.url),'utf8');
   assert.match(app,/import \{ flagFileForEntity \} from '.\/data\/entityFlags\.mjs'/);
   assert.match(app,/const currentFlag=currentNode\?flagFileForEntity\(currentNode\):null/);
-  assert.match(app,/src=\{import\.meta\.env\.BASE_URL\+'flags\/'\+currentFlag\}/);
+  assert.match(app,/src=\{import\.meta\.env\.BASE_URL\+primarySymbolPath\}/);
+  assert.match(app,/currentFlag\?'flags\/'\+currentFlag:null/);
+  assert.match(app,/officialSymbols\?\.coat/,
+    'Reviewed local armorial symbols override the country flag only for their exact IDs');
   assert.match(css,/\.entity-title \.flag img\{[^}]*object-fit:contain/);
   assert(!app.includes('🇷🇴')&&!app.includes('🇲🇩'));
   for(const flag of ['romania','moldova','pridnestrovie']){
