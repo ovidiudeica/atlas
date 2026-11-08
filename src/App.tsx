@@ -7,6 +7,7 @@ import { territorialRoleLabel as roleLabel, municipalRoleClarification } from '.
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
 import { cardNameOf, englishSiblingQualifiers, territorialContextNote } from './data/treeNames.mjs';
+import { flagFileForEntity } from './data/entityFlags.mjs';
 import { makeModuleVisibility, setModuleGeometry, resetModuleGeometry,
   displayedModuleGeometry, moduleHasSelections } from './data/moduleReset.mjs';
 import { entityCardRoles, statisticalCodeIndex, verifiedStatisticalParent } from './data/entityCardRoles.mjs';
@@ -1022,10 +1023,15 @@ export default function App() {
 
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
+  // Presentation-only flag; the certified MD identity of Pridnestrovie remains unchanged.
+  const currentFlag=currentNode?flagFileForEntity(currentNode):null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
-        <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
+        <span className="flag" aria-hidden="true">
+          {currentFlag&&<img src={import.meta.env.BASE_URL+'flags/'+currentFlag}
+            alt="" loading="eager" decoding="async" />}
+        </span>
         <div><h3 tabIndex={-1}>{cardNameOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
       </header>
       {breadcrumbs.length>0&&<nav className="entity-breadcrumbs" aria-label={t.path}>

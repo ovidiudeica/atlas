@@ -1380,6 +1380,36 @@ async function finalCardAcceptance(cdp){
     'WEB-R4.3 Escape returns keyboard focus');
   await mobile.close();
 }
+/* WEB-R4.8: flags must load as image files on desktop and mobile, not emoji. */
+async function entityFlagAssets(cdp){
+  for(const {id,asset} of [
+    {id:'osm-r90689',asset:'romania.svg'},
+    {id:'osm-r58974',asset:'moldova.svg'},
+    {id:'osm-r65335',asset:'pridnestrovie.svg'}
+  ]){
+    const p=await cdp.page(1440,900,false,site+'?lang=en&entity='+id);
+    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+      'R4.8 desktop map ready '+id);
+    await p.wait("(()=>{const img=document.querySelector('.detail-sidebar .entity-title .flag img');return img?.complete&&img.naturalWidth>0&&img.naturalHeight>0})()",
+      'R4.8 desktop flag loaded '+id);
+    const info=await p.eval("(()=>{const el=document.querySelector('.detail-sidebar .entity-title .flag img'),rect=el.getBoundingClientRect();return {path:new URL(el.src).pathname,w:rect.width,h:rect.height,naturalWidth:el.naturalWidth}})()");
+    assert(info.path.endsWith('/atlas/flags/'+asset)&&info.w>=24&&info.h>=20,
+      'R4.8 desktop asset '+id+': '+JSON.stringify(info));
+    await p.snap('desktop-r48-'+asset+'.png');
+    await p.close();
+  }
+  const mobile=await cdp.page(390,844,true,site+'?lang=ro&entity=osm-r65335');
+  await mobile.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'R4.8 mobile map ready');
+  await mobile.wait("(()=>{const el=document.querySelector('.drawer-detail .entity-title .flag img');return el?.complete&&el.naturalWidth>0})()",
+    'R4.8 mobile de facto flag loaded');
+  const image=await mobile.eval("(()=>{const el=document.querySelector('.drawer-detail .entity-title .flag img');return {path:new URL(el.src).pathname,width:el.getBoundingClientRect().width,scroll:document.documentElement.scrollWidth}})()");
+  assert(image.path.endsWith('/atlas/flags/pridnestrovie.svg')&&image.width>=24&&image.scroll<=391,
+    'R4.8 mobile Pridnestrovie flag is visible with no overflow');
+  await mobile.snap('mobile-r48-pridnestrovie.png');
+  await mobile.close();
+}
+
 /* WEB-R4.3a: the OSMB snapshot belongs only to Geometry & Provenance,
  * never as a duplicated eyebrow above the module or entity card heading.
  */
@@ -1632,6 +1662,7 @@ try{
   await roleAwareCards(client);
   await cardUxAccessibility(client);
   await finalCardAcceptance(client);
+  await entityFlagAssets(client);
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
