@@ -49,3 +49,14 @@ test('EN-R2c: qualifiers are presentation-only and remain separate from tree lab
   assert.match(app,/accessibleRowLabel=enHint\?/);
   assert.equal(shortTreeName(byId.get('osm-r19055800'),'en'),'Donduseni');
 });
+
+test('EN-R2c: the contextual-qualifier text reaches WCAG AA small-text contrast on white',()=>{
+  const css=readFileSync(new URL('../src/styles.css',import.meta.url),'utf8');
+  const match=css.match(/\.node-disambiguation\{[^}]*color:(#[a-f0-9]{6})/i);
+  assert(match,'Visible secondary label color is explicitly defined');
+  const channels=[1,3,5].map(i=>parseInt(match[1].slice(i,i+2),16)/255);
+  const lightness=channels.map(c=>c<=0.04045?c/12.92:((c+0.055)/1.055)**2.4);
+  const luminance=lightness[0]*0.2126+lightness[1]*0.7152+lightness[2]*0.0722;
+  const contrast=1.05/(luminance+0.05);
+  assert(contrast>=4.5,'Insufficient 4.5:1 text contrast: '+contrast.toFixed(3));
+});
