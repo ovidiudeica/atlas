@@ -21,7 +21,7 @@ test('all 4283 certified tree names are concise in both languages',()=>{
     assert(name.length<46,'Overlong label '+node.id+'/'+lang+': '+name);
   }
 });
-test('English presentation is localized and the 48 original Romanian shortened names are preserved',()=>{
+test('English presentation is localized; 48 original Romanian short names plus one corrected commune are preserved',()=>{
   const changed={en:[],ro:[]};
   function legacy(node,lang){
     if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
@@ -40,12 +40,13 @@ test('English presentation is localized and the 48 original Romanian shortened n
     if(before!==after)changed[lang].push({id:node.id,before,after});
   }
   assert(changed.en.length>51,'EN must correct more than the 51 legacy short names');
-  assert.equal(changed.ro.length,48,JSON.stringify(changed.ro));
+  assert.equal(changed.ro.length,49,JSON.stringify(changed.ro));
   assert(changed.ro.some(x=>x.id==='osm-r2607033'));
   assert(changed.ro.some(x=>x.id==='osm-r6879649'));
   assert(changed.ro.some(x=>x.id==='osm-r8290877'));
   assert(changed.ro.some(x=>x.id==='stat-MD120'));
-  assert.equal(new Set(changed.ro.map(x=>x.id)).size,48);
+  assert(changed.ro.some(x=>x.id==='osm-r13799978'),'RO display restores full Florești-Stoenești name');
+  assert.equal(new Set(changed.ro.map(x=>x.id)).size,49);
   assert(changed.en.some(x=>x.id==='stat-MD120'));
   assert.equal(new Set(changed.en.map(x=>x.id)).size,changed.en.length);
 });
