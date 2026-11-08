@@ -23,7 +23,7 @@ test('certified catalog remains intact, and all OSMB Gagauzia ADM8 memberships h
   assert.equal(byId.get(CHISINAU_CITY_ID).name,'Chișinău');
   assert.equal(byId.get(CHISINAU_CITY_ID).adminLevel,8);
   assert.equal(shortTreeName(byId.get(CHISINAU_CITY_ID),'ro'),'Chișinău');
-  assert.equal(shortTreeName(byId.get(CHISINAU_CITY_ID),'en'),'Chișinău');
+  assert.equal(shortTreeName(byId.get(CHISINAU_CITY_ID),'en'),'Chisinau');
   const mapping=Object.entries(RAION_CHILDREN);
   assert.deepEqual(mapping.map(([pid,ids])=>[pid,ids.length]),
     [['osm-r1706978',13],['osm-r1706979',9],['osm-r7103068',4]]);
@@ -85,7 +85,8 @@ test('Chișinău code 0100 first; sectors nested under city and sorted by availa
       assert.equal(sectors.length,5);
       assert.deepEqual(new Set(sectors.map(x=>x.id)),new Set(SECTOR_IDS));
       assert.deepEqual(sectors.map(x=>shortTreeName(x,lang)),
-        ['Botanica','Buiucani','Ciocana','Rîșcani','Centru']);
+        lang==='ro'?['Botanica','Buiucani','Ciocana','Rîșcani','Centru']:
+          ['Botanica','Buiucani','Ciocana','Riscani','Centru']);
       for(const s of sectors){
         assert.equal(s.adminLevel,7);
         assert.equal(s.administrativeParentId,CHISINAU_ID); // actual source parent
