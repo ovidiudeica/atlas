@@ -7,7 +7,7 @@ const smoke=readFileSync(new URL('../scripts/ci/browser-smoke.mjs',import.meta.u
 
 test('WEB-R4.2 hotfix: closing selected details restores focus before a competing dialog opens',()=>{
   const from=app.indexOf('function closeDetailPanel(){');
-  const to=app.indexOf('// Home restores only the camera',from);
+  const to=app.indexOf('// Home moves only the camera',from);
   assert(from>=0&&to>from);
   const close=app.slice(from,to);
   assert(close.indexOf("document.querySelector<HTMLButtonElement>('.header-entity-action')?.focus()")>=0);
