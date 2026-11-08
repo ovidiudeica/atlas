@@ -1400,16 +1400,17 @@ async function sourceHeadingDedup(cdp){
       const card=document.querySelector('.detail-sidebar .detail-content');
       const provenance=card.querySelector('.entity-card-section--cartographic');
       return {
-        moduleHeading:tree.querySelector('.panel-heading')?.innerText.trim(),
-        detailHeading:card.querySelector('.panel-heading')?.innerText.trim(),
+        moduleHeading:document.querySelector('.tree-sidebar .pane-toolbar > span')?.innerText.trim(),
+        detailHeading:document.querySelector('.detail-sidebar .pane-toolbar > span')?.innerText.trim(),
         source:provenance?.innerText||'',
-        eyebrowTree:!!tree.querySelector('.panel-heading .eyebrow'),
-        eyebrowDetails:!!card.querySelector('.panel-heading .eyebrow')
+        duplicateTreeHeading:!!tree.querySelector('.panel-heading'),
+        duplicateDetailHeading:!!card.querySelector('.panel-heading')
       };
     })()`);
-    assert(!info.eyebrowTree&&!info.eyebrowDetails,'Snapshot removed from both desktop headings '+lang);
-    assert.equal(info.moduleHeading,lang==='ro'?'Arbore teritorial':'Territorial tree');
-    assert.equal(info.detailHeading,lang==='ro'?'Detaliile entității':'Entity details');
+    assert(!info.duplicateTreeHeading&&!info.duplicateDetailHeading,
+      'No duplicate heading below module and entity toolbars '+lang);
+    assert.equal(info.moduleHeading,lang==='ro'?'Administrativ':'Administrative');
+    assert.equal(info.detailHeading,lang==='ro'?'Entitate':'Entity');
     assert(info.source.includes('OSM-Boundaries')&&info.source.includes('2026-10-05'),
       'Actual geometry provenance preserved '+lang);
     await p.snap('desktop-web-r43a-clean-headings-'+lang+'.png');
@@ -1421,23 +1422,25 @@ async function sourceHeadingDedup(cdp){
     'Dedup 360px card loaded');
   const detail=await mobile.eval(`(()=>{
     const drawer=document.querySelector('.drawer-detail');
-    return {heading:drawer.querySelector('.detail-content .panel-heading')?.innerText.trim(),
+    return {heading:drawer.querySelector('.drawer-toolbar > span')?.innerText.trim(),
       source:drawer.querySelector('.entity-card-section--cartographic')?.innerText||'',
-      eyebrow:!!drawer.querySelector('.detail-content .panel-heading .eyebrow')};
+      duplicate:!!drawer.querySelector('.detail-content .panel-heading')};
   })()`);
-  assert.equal(detail.heading,'Detaliile entității');
-  assert(!detail.eyebrow&&detail.source.includes('OSM-Boundaries')&&detail.source.includes('2026-10-05'));
+  assert.equal(detail.heading,'Entitate');
+  assert(!detail.duplicate&&detail.source.includes('OSM-Boundaries')&&detail.source.includes('2026-10-05'));
+  assert.equal(await mobile.eval("document.querySelector('.drawer-detail .entity-title h3')?.textContent?.trim()"),'București',
+    'Entity name remains in the card body, not its toolbar');
   await mobile.snap('mobile-web-r43a-clean-details-ro.png');
   await mobile.eval("document.querySelector('.drawer-detail .drawer-close').click()");
   await mobile.wait("!document.querySelector('.drawer-screen')",'Dedup close detail');
   await mobile.eval("document.querySelector('.module-rail button:first-child').click()");
   await mobile.wait("!!document.querySelector('.drawer .tree-content')",'Dedup mobile module opened');
   const module=await mobile.eval(`(()=>{
-    const h=document.querySelector('.drawer .tree-content .panel-heading');
-    return {title:h?.innerText.trim(),eyebrow:!!h?.querySelector('.eyebrow')};
+    const toolbar=document.querySelector('.drawer .drawer-toolbar > span');
+    return {title:toolbar?.innerText.trim(),duplicate:!!document.querySelector('.drawer .tree-content .panel-heading')};
   })()`);
-  assert.equal(module.title,'Arbore teritorial');
-  assert(!module.eyebrow,'No duplicate OSMB snapshot in mobile module');
+  assert.equal(module.title,'Administrativ');
+  assert(!module.duplicate,'No duplicate heading below mobile module toolbar');
   await mobile.snap('mobile-web-r43a-clean-module-ro.png');
   await mobile.close();
 }

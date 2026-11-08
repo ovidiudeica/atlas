@@ -413,8 +413,6 @@
   outline:3px solid #946217;outline-offset:2px
 }
 .drawer,.detail-sidebar,.tree-sidebar{scroll-padding-top:66px}
-.detail-content .panel-heading{padding:12px 20px 10px}
-.detail-content .panel-heading h2{font-size:20px;margin-top:6px}
 .entity-card .entity-title h3:focus{outline:3px solid #946217;outline-offset:4px;border-radius:3px}
 .entity-card .entity-title h3:focus-visible{
   outline:3px solid #946217;outline-offset:4px;border-radius:3px
@@ -446,7 +444,6 @@
 .entity-children-more:hover{background:#e9f3ec}
 @media(max-width:700px){
   .drawer-toolbar{min-height:56px;padding:6px 12px}
-  .drawer .detail-content .panel-heading{padding-top:12px}
   .drawer .entity-child-link>small{max-width:48%}
 }
 @media(prefers-reduced-motion:reduce){
@@ -506,3 +503,7 @@
 
 /* EN-R2c: compact contextual metadata for homonymous administrative siblings. */
 .node-disambiguation{font-size:10px;font-weight:550;line-height:1.2;color:#536f61;max-width:100%;overflow-wrap:anywhere}
+
+/* WEB-R4.7: content begins directly under the unique module toolbar.
+ * The search field retains breathing room after removing the large tree title. */
+.tree-content > .search{margin-top:14px}

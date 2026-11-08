@@ -42,7 +42,7 @@ const WORDS = {
     tree: 'Territorial tree',
     search: 'Search names, OSM IDs, SIRUTA, CUATM or NUTS codes',
     all: 'All', adminView: 'Administrative', statView: 'Statistical',
-    visible: 'Display geometry', details: 'Entity details', select: 'Select a territory on the map or in the tree.',
+    visible: 'Display geometry', details: 'Entity', select: 'Select a territory on the map or in the tree.',
     searchResults: 'Search results', searchLimit: 'Showing the first 80 matches. Refine the search for more.',
     sourceNote: 'Original-source geometry; documented OSMB exceptions are retained.',
     basemap: 'Basemap', standard: 'Standard', grayscale: 'Grayscale', dark: 'Dark', none: 'None',
@@ -116,7 +116,7 @@ const WORDS = {
     tree: 'Arbore teritorial',
     search: 'Caută nume, ID OSM, coduri SIRUTA, CUATM sau NUTS',
     all: 'Toate', adminView: 'Administrativ', statView: 'Statistic',
-    visible: 'Afișează geometria', details: 'Detaliile entității', select: 'Selectează un teritoriu pe hartă sau în arbore.',
+    visible: 'Afișează geometria', details: 'Entitate', select: 'Selectează un teritoriu pe hartă sau în arbore.',
     searchResults: 'Rezultatele căutării', searchLimit: 'Sunt afișate primele 80 de rezultate. Rafinează căutarea pentru restul.',
     sourceNote: 'Geometrii din sursa originală; excepțiile OSMB documentate sunt păstrate.',
     basemap: 'Hartă de fundal', standard: 'Standard', grayscale: 'Tonuri de gri', dark: 'Întunecată', none: 'Fără fundal',
@@ -955,7 +955,6 @@ export default function App() {
   };
 
   const treePanel=<section className="tree-content">
-    <div className="panel-heading"><h2>{t.tree}</h2></div>
     <label className="search"><span aria-hidden="true">⌕</span>
       <input ref={searchRef} type="search" placeholder={t.search} aria-label={t.search} value={search}
         onChange={e=>setSearch(e.target.value)}
@@ -1024,7 +1023,6 @@ export default function App() {
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
   const details=<section className="detail-content">
-    <div className="panel-heading"><h2>{t.details}</h2></div>
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
         <span className="flag" aria-hidden="true">{currentNode.country==='RO'?'🇷🇴':'🇲🇩'}</span>
@@ -1378,7 +1376,6 @@ export default function App() {
         </div>
         {module==='administrative'?treePanel:
           <section className="tree-content">
-            <div className="panel-heading"><h2>{MODULES.find(x=>x.id===module)?.[lang]}</h2></div>
             <p className="planned-module-description">{t.planned}</p>
           </section>}
       </aside>}
@@ -1414,7 +1411,7 @@ export default function App() {
       {currentNode&&detailPanelOpen&&<aside className="detail-sidebar"
         aria-label={t.details+': '+cardNameOf(currentNode,lang)}>
         <div className="pane-toolbar">
-          <span aria-hidden="true">{cardNameOf(currentNode,lang)}</span>
+          <span aria-hidden="true">{t.details}</span>
           <button type="button" className="pane-close" aria-label={t.close} title={t.close}
             onClick={closeDetailPanel}>×</button>
         </div>
@@ -1430,7 +1427,7 @@ export default function App() {
         onClick={e=>e.stopPropagation()}>
         <div className="drawer-toolbar">
           <span aria-hidden="true">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
-            currentNode?cardNameOf(currentNode,lang):t.details}</span>
+            t.details}</span>
           <div className={drawer==='tree'?'module-pane-actions':'detail-pane-actions'}>
             {drawer==='tree'&&<button type="button" className="module-reset"
               aria-label={t.resetModule} title={t.resetModule}
@@ -1446,7 +1443,6 @@ export default function App() {
         </div>
         {drawer==='tree'?(module==='administrative'?treePanel:
           <section className="tree-content">
-            <div className="panel-heading"><h2>{MODULES.find(x=>x.id===module)?.[lang]}</h2></div>
             <p className="planned-module-description">{t.planned}</p>
           </section>):details}
       </div>
