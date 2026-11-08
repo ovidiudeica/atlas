@@ -519,3 +519,30 @@
 .territory-symbol-owner strong{color:#244e37}
 .territory-symbol-source{display:inline-block;margin:4px 0;font-size:11px;font-weight:700;color:#1c674a;text-decoration:underline;text-underline-offset:2px}
 .territory-symbol-disclaimer{font-size:10px;color:#637d6d}
+
+
+/* SIM-R3: compact, exact-ID territorial heraldry in the tree and entity card.
+   Source imagery is optional; missing/blocked URLs always yield a neutral glyph. */
+.tree-label-heading{display:flex;align-items:center;gap:6px;max-width:100%;min-width:0;width:100%}
+.tree-label-heading>.node-name{min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tree-territorial-symbol{flex:0 0 18px;width:18px;height:21px;max-width:18px;max-height:21px;object-fit:contain}
+.tree-label-heading .territorial-symbol-fallback{color:#7c9585;font-size:18px;line-height:21px}
+.entity-title .flag .territorial-symbol-header{max-width:100%;max-height:100%;object-fit:contain;box-shadow:none}
+.entity-title .flag .territorial-symbol-fallback{display:flex;align-items:center;justify-content:center;color:#7c9585;font-size:27px}
+.territory-symbol-gallery--editorial{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.territory-symbol-gallery--editorial figure{max-width:none;min-width:0;padding:9px 7px;border:1px solid #dce8e0;border-radius:8px;background:#f9fbf9}
+.territory-symbol-frame{min-height:104px;height:104px;display:flex;align-items:center;justify-content:center}
+.territory-symbol-frame .territory-symbol-media{display:block;max-height:99px;max-width:100%;width:auto;height:auto;object-fit:contain}
+.territory-symbol-frame .territorial-symbol-fallback{display:flex;align-items:center;justify-content:center;color:#7e9588;font-size:30px}
+.territory-symbol-gallery--editorial figcaption{margin-top:5px}
+.territory-symbol-gallery--editorial .territory-symbol-source{display:block;margin:5px 0 0;font-size:10px;line-height:1.35;overflow-wrap:anywhere}
+@media(max-width:390px){
+  .territory-symbol-gallery--editorial{gap:6px}
+  .territory-symbol-gallery--editorial figure{padding:6px 4px}
+  .territory-symbol-frame{height:85px;min-height:85px}
+  .territory-symbol-frame .territory-symbol-media{max-height:82px}
+}
+@media(forced-colors:active){
+  .territory-symbol-gallery--editorial figure{border-color:CanvasText}
+  .territorial-symbol-fallback{color:CanvasText}
+}
