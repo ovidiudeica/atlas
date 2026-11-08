@@ -464,3 +464,41 @@
   outline:3px solid #946217;outline-offset:2px
 }
 .entity-card .entity-child-link>small{font-size:11px}
+
+/* WEB-R4.4 — compact global reset below zoom, independent per-module reset
+ * next to Close. Zoom/Home remain separate camera-only actions. */
+.map-action-stack{
+  position:absolute;z-index:2;right:16px;top:18px;display:flex;
+  flex-direction:column;align-items:stretch;gap:9px;width:44px;
+}
+.map-action-stack .zoom-controls{
+  position:static;right:auto;top:auto;flex:none;overflow:hidden;
+}
+.map-reset-global{
+  display:flex;align-items:center;justify-content:center;
+  width:44px;height:44px;min-height:44px;border:1px solid #cadbce;
+  border-radius:10px;background:#fff;color:#185a42;
+  box-shadow:0 4px 18px #1d493322;padding:0;
+}
+.map-reset-global>span,.module-reset>span{font-size:25px;line-height:1}
+.map-reset-global:hover,.module-reset:not(:disabled):hover{background:#eaf3ed}
+.map-reset-global:focus-visible,.module-reset:focus-visible{
+  outline:3px solid #946217;outline-offset:2px;
+}
+.module-pane-actions,.detail-pane-actions{
+  display:flex;align-items:center;justify-content:flex-end;
+  flex:0 0 auto;gap:5px;
+}
+.pane-toolbar .module-reset,.drawer-toolbar .module-reset{
+  display:flex;align-items:center;justify-content:center;
+  flex:0 0 44px;width:44px;height:44px;min-height:44px;
+  padding:0;border:1px solid #cddfd2;border-radius:9px;
+  background:#fff;color:#185a42;
+}
+.module-reset:disabled{
+  opacity:.38;cursor:default;background:#f4f7f5;
+}
+@media(max-width:700px){
+  .map-action-stack{right:10px;top:12px}
+  .map-action-stack .zoom-controls button{width:44px;height:44px}
+}
