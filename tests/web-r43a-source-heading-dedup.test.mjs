@@ -6,17 +6,21 @@ import {createHash} from 'node:crypto';
 const app=readFileSync(new URL('../src/App.tsx',import.meta.url),'utf8');
 const catalog=readFileSync(new URL('../public/data/phase4/catalog.json.gz',import.meta.url));
 
-test('WEB-R4.3a: module tree heading no longer duplicates OSMB snapshot',()=>{
-  assert.match(app,/<div className="panel-heading"><h2>\{t\.tree\}<\/h2><\/div>/);
+test('WEB-R4.3a/R4.7: module title exists only in toolbar, never alongside OSMB snapshot',()=>{
+  assert.match(app,/<div className="pane-toolbar">\s*<span aria-hidden="true">\{MODULES\.find\(x=>x\.id===module\)\?\.\[lang\]\}<\/span>/);
+  assert.doesNotMatch(app,/<div className="panel-heading">/);
   assert.doesNotMatch(app,/<span className="eyebrow">\{t\.sourceSnapshot\}<\/span>/);
   assert(!app.includes('sourceSnapshot:'),'No unused duplicate header translations');
 });
 
-test('WEB-R4.3a: entity card heading no longer duplicates the snapshot',()=>{
+test('WEB-R4.3a/R4.7: Entity detail heading moves into toolbar without losing entity name',()=>{
   const details=app.slice(app.indexOf('const details=<section'),app.indexOf('// WEB-R3.5:'));
-  assert.match(details,/<div className="panel-heading"><h2>\{t\.details\}<\/h2><\/div>/);
-  assert.doesNotMatch(details,/sourceSnapshot/);
+  assert.doesNotMatch(details,/panel-heading|sourceSnapshot/);
   assert.match(details,/className="entity-title"/);
+  assert.match(details,/<h3 tabIndex=\{-1\}>\{cardNameOf\(currentNode,lang\)\}<\/h3>/);
+  assert.match(app,/<div className="pane-toolbar">\s*<span aria-hidden="true">\{t\.details\}<\/span>/);
+  assert.match(app,/details: 'Entity'/);
+  assert.match(app,/details: 'Entitate'/);
 });
 
 test('WEB-R4.3a: geometry provenance and its source date remain visible in card',()=>{
