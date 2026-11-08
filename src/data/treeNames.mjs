@@ -71,9 +71,9 @@ function comparable(value){
   return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .toLocaleLowerCase('ro-RO').trim();
 }
-// WEB-R4.3: the tree intentionally shows «Oraș»/«City» under Chișinău.
-// Outside that context, a card, breadcrumb or dialog must name the city
-// unambiguously. Source names, OSM IDs and the compact tree are unchanged.
+// Standalone cards and dialogs use a context-complete city label; tree rows
+// show the actual geographic name together with their ADM level.
+// No catalog source name, OSM ID, or administrative parentage is modified.
 export function cardNameOf(node,lang){
   return node.id==='osm-r1748490'
     ?(lang==='ro'?'Orașul Chișinău':'Chișinău city')
@@ -83,10 +83,10 @@ export function cardNameOf(node,lang){
 export function shortTreeName(node,lang){
   if(node.id==='osm-r90689')return lang==='en'?'Romania':'România';
   if(node.id==='osm-r58974')return 'Moldova';
-  // WEB-R3.20: under ADM4 municipality the already-existing ADM8 city
-  // is shown as «Oraș» / «City», without repeating «Chișinău» twice.
-  // Canonical city identity, names, geometry and lookup aliases remain intact.
-  if(node.id==='osm-r1748490')return lang==='ro'?'Oraș':'City';
+  // WEB-R4.5: the ADM8 city must keep its geographical name in the tree.
+  // A generic type-only label ('Oraș'/'City') was ambiguous and incorrect.
+  // The ADM4 municipality and ADM8 city remain distinct via their levels.
+  if(node.id==='osm-r1748490')return 'Chișinău';
   if(node.id===PERVOMAISC_ID)return 'Pervomaisc';
   if(lang==='ro'&&Object.hasOwn(UATSN_RO_SHORT_LABELS,node.id))
     return UATSN_RO_SHORT_LABELS[node.id];

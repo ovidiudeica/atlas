@@ -125,10 +125,10 @@ test('WEB-R4.3 acceptance: accessible, bilingual and retractable card contract r
   assert.match(app,/cardChildren\.slice\(0,cardChildrenShown\)/);
 });
 
-test('WEB-R4.3: context-complete Chișinău card title in RO/EN without changing tree',()=>{
+test('WEB-R4.3 and R4.5: Chișinău card remains contextual and tree names the ADM8 city',()=>{
   const city=index.get('osm-r1748490');
-  assert.equal(shortTreeName(city,'ro'),'Oraș');
-  assert.equal(shortTreeName(city,'en'),'City');
+  assert.equal(shortTreeName(city,'ro'),'Chișinău');
+  assert.equal(shortTreeName(city,'en'),'Chișinău');
   assert.equal(cardNameOf(city,'ro'),'Orașul Chișinău');
   assert.equal(cardNameOf(city,'en'),'Chișinău city');
   for(const other of ['osm-r1691801','osm-r377733','osm-r944727']){
