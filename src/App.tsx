@@ -1390,12 +1390,12 @@ export default function App() {
       }}>
         <div className="map-canvas" ref={mapEl} aria-label="Territorial map" />
         {!rootsLoaded&&catalog.length>0&&<span className="map-boot-status" role="status">{t.loadingGeom}</span>}
-        <button ref={toolsOpenerRef} type="button" className="atlas-tools-toggle"
-          title={t.mapToolTip} aria-label={t.mapToolMenu} aria-haspopup="dialog"
-          aria-controls="atlas-global-tools" aria-expanded={toolsOpen} onClick={toggleTools}>
-          <span aria-hidden="true">⚙</span>
-        </button>
         <div className="map-action-stack">
+          <button ref={toolsOpenerRef} type="button" className="atlas-tools-toggle"
+            title={t.mapToolTip} aria-label={t.mapToolMenu} aria-haspopup="dialog"
+            aria-controls="atlas-global-tools" aria-expanded={toolsOpen} onClick={toggleTools}>
+            <span aria-hidden="true">⚙</span>
+          </button>
           <div className="zoom-controls">
             <button aria-label={t.zoomIn} title={t.zoomIn} onClick={()=>mapRef.current?.zoomIn()}>+</button>
             <button aria-label={t.zoomOut} title={t.zoomOut} onClick={()=>mapRef.current?.zoomOut()}>−</button>

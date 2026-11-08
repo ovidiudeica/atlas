@@ -109,6 +109,12 @@ async function desktop(cdp){
   assert.equal(frame.tagline,'Geography · History · Communities');
   assert(frame.langRight>=frame.screen-30,'Language switcher remains aligned right');
   assert.equal(await p.eval("document.querySelectorAll('.map-area .zoom-controls button').length"),3,'Zoom/Home buttons stay grouped separately from global reset');
+  const toolsStack=await p.eval("(()=>{const box=e=>{const r=document.querySelector(e).getBoundingClientRect();return {top:r.top,bottom:r.bottom,left:r.left,right:r.right,width:r.width,height:r.height}};return {toggle:box('.atlas-tools-toggle'),zoom:box('.zoom-controls'),reset:box('.map-reset-global')};})()");
+  assert(toolsStack.toggle.bottom+5<toolsStack.zoom.top&&toolsStack.zoom.bottom+5<toolsStack.reset.top,
+    'Desktop order: Map tools > Zoom/Home > Global reset: '+JSON.stringify(toolsStack));
+  assert(Math.abs(toolsStack.toggle.right-toolsStack.zoom.right)<1&&
+    Math.abs(toolsStack.reset.right-toolsStack.zoom.right)<1,'Desktop controls align at the right edge');
+  assert(toolsStack.toggle.width>=44&&toolsStack.toggle.height>=44,'Accessible 44px Map tools button');
   assert.equal(await p.eval("!!document.querySelector('.map-area .map-quick-actions,.map-area .map-controls,.map-area .map-legend,.map-area .map-note,.map-area .mobile-controls')"),false,
     'Secondary commands, legend, source note and mobile buttons absent from map');
   const accessibleMap=await p.eval("({attribution:!!document.querySelector('.maplibregl-ctrl-attrib'),scale:!!document.querySelector('.maplibregl-ctrl-scale'),zoom:[...document.querySelectorAll('.zoom-controls button')].map(b=>({label:b.getAttribute('aria-label'),w:b.getBoundingClientRect().width,h:b.getBoundingClientRect().height}))})");
@@ -377,6 +383,13 @@ async function desktop(cdp){
   // Global tools must be independent of the selected module and details.
   await p.eval("document.querySelector('.atlas-tools-toggle').click()");
   await p.wait("!!document.querySelector('.atlas-global-tools-panel')",'global tools opened from map');
+  const toolsAlignment=await p.eval("(()=>{const box=e=>{const r=document.querySelector(e).getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,centerY:(r.top+r.bottom)/2}};return {toggle:box('.atlas-tools-toggle'),close:box('.atlas-tools-close'),panel:box('.atlas-global-tools-panel'),zoom:box('.zoom-controls')};})()");
+  assert(Math.abs(toolsAlignment.toggle.centerY-toolsAlignment.close.centerY)<=2,
+    'Desktop Close X must align with Map tools trigger: '+JSON.stringify(toolsAlignment));
+  assert(toolsAlignment.panel.right<=toolsAlignment.toggle.left-8,
+    'Desktop Map tools panel opens to the left of map controls');
+  assert(toolsAlignment.toggle.bottom<toolsAlignment.zoom.top,'Map tools stays above zoom');
+  await p.snap('desktop-map-tools-aligned-close.png');
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,
     'Global tools reclaim map space by closing the module panel');
   assert.equal(await p.eval("!!document.querySelector('.detail-sidebar')"),false,
@@ -731,6 +744,11 @@ async function mobile(cdp){
   assert(geometry.scroll<=geometry.width+1,'Mobile horizontal overflow');
   assert(geometry.height>300,'Map is hidden on mobile');
   assert.equal(geometry.zoomButtons,3,'Mobile map contains only zoom and Home');
+  const mobileTools=await p.eval("(()=>{const rect=x=>{const r=document.querySelector(x).getBoundingClientRect();return {top:r.top,bottom:r.bottom,right:r.right}};return {toggle:rect('.atlas-tools-toggle'),zoom:rect('.zoom-controls'),reset:rect('.map-reset-global')}})()");
+  assert(mobileTools.toggle.bottom+5<mobileTools.zoom.top&&mobileTools.zoom.bottom+5<mobileTools.reset.top,
+    'Mobile Map tools stays above zoom/Home and global reset below');
+  assert(Math.abs(mobileTools.toggle.right-mobileTools.zoom.right)<1,
+    'Mobile Map tools and zoom align on the right');
   assert.equal(await p.eval("!!document.querySelector('.map-area .mobile-controls')"),false,
     'Duplicate mobile floating buttons removed');
   await assertMobileScalePlacement(p,'390px');
