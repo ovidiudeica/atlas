@@ -72,7 +72,7 @@ test('EN-R1: reviewed exonyms and NUTS display translations do not replace nativ
 test('EN-R1: native official records and search aliases are maintained alongside translated labels',()=>{
   const city=byId.get('osm-r1748490');
   assert.equal(city.name,'Chișinău');
-  assert.equal(city.officialName,'Orașul Chișinău');
+  assert.equal(city.officialName,'municipiul Chișinău');
   assert.equal(city.osmRelationId,1748490);
   const municipality=byId.get('osm-r1691801');
   assert.equal(municipality.sourceTags['name:en'],'Chișinău Municipality');
