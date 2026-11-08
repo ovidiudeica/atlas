@@ -1,0 +1,113 @@
+{
+  "audit": "SIM-R2a",
+  "date": "2026-11-08",
+  "baselineCatalog": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+  "note": "Seven exact-ID matches from official territorial authorities; no inheritance, no guessed historical symbols.",
+  "source": [
+    {
+      "url": "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "act": "Gagauzia local laws 2-IV/I (31 October 1995) and 13-X/I (28 June 1996)"
+    },
+    {
+      "url": "https://cnh.prm.md/",
+      "act": "Chișinău municipal and sector arms registered 2020"
+    },
+    {
+      "url": "https://ciocana.md/simbolurile-sectorului",
+      "act": "Chișinău Council Decision 5/2 (19 December 2019), Decree 1475-VIII (2 March 2020); informational use under Moldovan Law on Public Symbols 12(3)"
+    },
+    {
+      "url": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "act": "Municipal rules; atlas display is not corporate or trademark use"
+    }
+  ],
+  "assets": [
+    {
+      "file": "gagauzia-flag.svg",
+      "sha256": "42d70a80a73497ca343f885e828d822c9b73cdbab2f6e34c57b3d803c6cdc83f",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Gagauzia.svg",
+      "derivation": "Unmodified SVG; proportions checked against Gagauzia 1995 law",
+      "holder": "Autonomous Territorial Unit of Gagauzia"
+    },
+    {
+      "file": "gagauzia-coat.png",
+      "sha256": "3b89e01629d8c5c20c5ed1518a0f37e017444e523b0a2af2480702408f9ba7a6",
+      "source": "https://www.gagauzia.md/assets/app/img/gagauzia.png",
+      "derivation": "Only lossless PNG rendering and high-quality downsampling from 800px to 360px; content unchanged",
+      "holder": "Autonomous Territorial Unit of Gagauzia"
+    },
+    {
+      "file": "chisinau-coat.jpg",
+      "sha256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+      "source": "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+      "derivation": "Original JPG, unchanged",
+      "holder": "Municipiul Chișinău"
+    },
+    {
+      "file": "chisinau-botanica-coat.png",
+      "sha256": "5fb05e8e73ab772b391312bc89fcf6b838a6d2e0429f0c597ee0c63f7b32a11b",
+      "source": "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+      "derivation": "Exact crop 1/5 from 1040x371 official composite: [0,0,208,371], pixel elements unchanged; PNG storage",
+      "holder": "Municipiul Chișinău — sectorul Botanica"
+    },
+    {
+      "file": "chisinau-buiucani-coat.png",
+      "sha256": "dbf8d74d471f761c4320c8a78453f1793c16590b80ce76951a2adc471cc900c3",
+      "source": "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+      "derivation": "Exact crop 2/5 from 1040x371 official composite: [208,0,208,371], pixel elements unchanged; PNG storage",
+      "holder": "Municipiul Chișinău — sectorul Buiucani"
+    },
+    {
+      "file": "chisinau-centru-coat.png",
+      "sha256": "3492de568ecdfa2dc31539927c048867c1efdae0591729b4bf7beec32130e08a",
+      "source": "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+      "derivation": "Exact crop 3/5 from 1040x371 official composite: [416,0,208,371], pixel elements unchanged; PNG storage",
+      "holder": "Municipiul Chișinău — sectorul Centru"
+    },
+    {
+      "file": "chisinau-ciocana-coat.png",
+      "sha256": "c50c587f47af355bd3f7d114a24986a2d6d476d443b9e3431721794faa5a1f59",
+      "source": "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+      "derivation": "Exact crop 4/5 from 1040x371 official composite: [624,0,208,371], pixel elements unchanged; PNG storage",
+      "holder": "Municipiul Chișinău — sectorul Ciocana"
+    },
+    {
+      "file": "chisinau-riscani-coat.png",
+      "sha256": "15088d1fbbc6e498f8e0a3c4a54f6f814ebd44de319f4ccae7fca812ad5ea526",
+      "source": "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+      "derivation": "Exact crop 5/5 from 1040x371 official composite: [832,0,208,371], pixel elements unchanged; PNG storage",
+      "holder": "Municipiul Chișinău — sectorul Rîșcani"
+    }
+  ],
+  "composite": {
+    "source": "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+    "sha256": "1b71b9ec04e081feca80d8b92e06dd8c945743b29fd91b26a6322ea8d9e726f4",
+    "size": [
+      1040,
+      371
+    ],
+    "nameOrder": [
+      "Botanica",
+      "Buiucani",
+      "Centru",
+      "Ciocana",
+      "Rîșcani"
+    ]
+  },
+  "exactIds": [
+    "osm-r1699032",
+    "osm-r1748490",
+    "osm-r1813306",
+    "osm-r1813297",
+    "osm-r58512",
+    "osm-r1813315",
+    "osm-r1813316"
+  ],
+  "blocked": [
+    "osm-r377733: Bucharest council Decision 47 of 31 Jan 2024 modified the coat of arms, superseding the 1998 artwork; await authentic 2024 annex graphic.",
+    "osm-r2607033: Moldovan ATULBD does not inherit Pridnestrovie de facto flag or coat.",
+    "stat-MD120: statistical unit has no automatic territorial heraldry.",
+    "Orhei city versus modern municipality: verify scope before use.",
+    "Lăpușna village emblem must not be assigned to its commune."
+  ]
+}

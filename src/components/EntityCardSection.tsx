@@ -10,7 +10,7 @@ export interface EntityCardSectionProps {
   title: string;
   children: ReactNode;
   collapsible?: boolean;
-  kind?: 'identity' | 'administrative' | 'statistical' | 'hierarchy' | 'children' | 'cartographic' | 'records';
+  kind?: 'identity' | 'administrative' | 'statistical' | 'hierarchy' | 'children' | 'cartographic' | 'records' | 'symbols';
 }
 
 export function EntityCardSection({
