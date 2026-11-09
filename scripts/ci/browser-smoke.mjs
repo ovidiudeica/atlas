@@ -1757,6 +1757,42 @@ async function narrowMobile(cdp){
 }
 /* WEB-HEADER: detail button belongs after RO/EN at the right, with identical
  * 44px dimensions, a visible focus target and no horizontal overflow. */
+/* WEB-EN-OFFICIAL: the complete official-name field follows the language,
+ * while the certified Romanian source name remains readable as metadata. */
+async function bilingualOfficialEntityNames(cdp){
+  for(const width of [1440,390]){
+    const mobile=width<700;
+    const p=await cdp.page(width,mobile?844:900,mobile,site+'?lang=ro&entity=osm-r1748490');
+    const selector=mobile?'.drawer-detail .entity-card':'.detail-sidebar .entity-card';
+    const detail=selector+' .entity-card-section--identity .metadata';
+    await p.wait("!!document.querySelector("+JSON.stringify(detail+" dd:first-of-type")+")",
+      'Official identity card visible at '+width);
+    const read=()=>p.eval("(()=>{const dl=document.querySelector("+JSON.stringify(detail)+");const dt=dl.querySelector('dt'),dd=dl.querySelector('dd');return {lang:document.documentElement.lang,label:dt.textContent.trim(),name:dd.textContent.trim(),original:dd.getAttribute('title'),overflow:document.documentElement.scrollWidth-innerWidth}})()");
+    const ro=await read();
+    assert.equal(ro.lang,'ro');
+    assert.equal(ro.label,'Denumire oficială');
+    assert.equal(ro.name,'municipiul Chișinău');
+    assert.equal(ro.original,null);
+    await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='EN').click()");
+    await p.wait("document.documentElement.lang==='en'&&document.querySelector("+JSON.stringify(detail+" dd")+")?.textContent.trim()==='Municipality of Chisinau'",
+      'English complete official-name rendering '+width);
+    const en=await read();
+    assert.equal(en.label,'Official name');
+    assert.equal(en.name,'Municipality of Chisinau');
+    assert.equal(en.original,'municipiul Chișinău');
+    assert(en.overflow<=1,'Localized details must not cause horizontal overflow '+width+': '+JSON.stringify(en));
+    await p.snap((mobile?'mobile':'desktop')+'-official-name-en-'+width+'.png');
+    await p.eval("Array.from(document.querySelectorAll('.language button')).find(b=>b.textContent==='RO').click()");
+    await p.wait("document.documentElement.lang==='ro'&&document.querySelector("+JSON.stringify(detail+" dd")+")?.textContent.trim()==='municipiul Chișinău'",
+      'Romanian original restored '+width);
+    await p.close();
+  }
+  const county=await cdp.page(1440,900,false,site+'?lang=en&entity=osm-r194271');
+  await county.wait("document.querySelector('.detail-sidebar .entity-card-section--identity .metadata dd')?.textContent.trim()==='Alba County'",
+    'County full name translated into English');
+  await county.close();
+}
+
 async function headerEntityButtonPlacement(cdp){
   for(const width of [1440,900,390,360]){
     const mobile=width<=700;
@@ -1929,6 +1965,7 @@ try{
   await cardUxAccessibility(client);
   await finalCardAcceptance(client);
   await headerEntityButtonPlacement(client);
+  await bilingualOfficialEntityNames(client);
   await entityCoatAndFlagAssets(client);
   await verifiedSymbolPilot(client);
   await simR31MediaVisualAudit(client);
