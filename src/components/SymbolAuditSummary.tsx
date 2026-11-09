@@ -25,6 +25,6 @@ export function SymbolAuditSummary({id,kind,lang}:{id:string;kind:'coat'|'flag';
   </p>
   {audit.evidenceNote&&<p>{audit.evidenceNote}</p>}
   {audit.source&&<a href={audit.source} target="_blank" rel="noopener noreferrer">{lang==='ro'?'Dovada / sursa examinată':'Evidence / examined source'} ↗</a>}
-  <a href={import.meta.env.BASE_URL+'data/symbols/audit-r7.json.gz'} download>{lang==='ro'?'Registrul SIM-R7 (JSON gzip)':'SIM-R7 register (gzip JSON)'}</a>
+  <a href={import.meta.env.BASE_URL+'data/symbols/audit-r8.json.gz'} download>{lang==='ro'?'Registrul SIM-R8 (JSON gzip)':'SIM-R8 register (gzip JSON)'}</a>
  </details>;
 }

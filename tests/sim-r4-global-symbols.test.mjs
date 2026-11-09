@@ -1,3 +1,4 @@
+import {R8_CORRECTIONS} from '../src/data/symbolR8Selections.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -63,7 +64,7 @@ test('SIM-R4: SIM-R2a/R3 symbols and known exclusions survive population',()=>{
   }
   if(editorial){
    const display=withGlobalSymbols(n,editorial);
-   for(const k of ['coat','flag'])if(editorial[k])assert.deepEqual(display[k],editorial[k]);
+   for(const k of ['coat','flag'])if(editorial[k])assert.deepEqual(display[k],R8_CORRECTIONS[n.id]?.[k]||editorial[k]);
   }
  }
  for(const [id,kind] of [['osm-r377733','coat'],['osm-r377733','flag'],['osm-r2248660','coat'],['osm-r59002','coat'],['osm-r59002','flag']])assert.equal(registry[id][kind],null);

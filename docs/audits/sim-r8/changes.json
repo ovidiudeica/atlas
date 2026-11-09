@@ -1,0 +1,93 @@
+{
+  "stage": "SIM-R8",
+  "changes": [
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "coat",
+      "action": "REPLACE",
+      "previousImage": {
+        "kind": "commons",
+        "file": "ROU AG Campulung CoA.png",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+        "tier": "B"
+      },
+      "previousSHA256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee",
+      "image": {
+        "kind": "local",
+        "file": "campulung-coat.png",
+        "url": "symbols/sim-r8/campulung-coat.png",
+        "sourceUrl": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+        "tier": "A",
+        "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae"
+      },
+      "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae",
+      "source": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+      "reason": "Final normative blue field contradicts violet artistic reproduction; separate rights chain avoided through literal annex reproduction."
+    },
+    {
+      "atlasId": "osm-r2248660",
+      "kind": "coat",
+      "action": "ADD",
+      "previousImage": null,
+      "previousSHA256": null,
+      "image": {
+        "kind": "local",
+        "file": "harghita-coat.png",
+        "url": "symbols/sim-r8/harghita-coat.png",
+        "sourceUrl": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+        "tier": "A",
+        "sha256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556"
+      },
+      "sha256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556",
+      "source": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+      "reason": "Previously missing final4-cross/8-star annex recovered."
+    },
+    {
+      "atlasId": "osm-r1699033",
+      "kind": "coat",
+      "action": "REPLACE",
+      "previousImage": {
+        "kind": "official",
+        "url": "https://raiontaraclia.md/wp-content/uploads/2022/01/taraclia_rai-modern-konec-1-scaled.jpg",
+        "sourceUrl": "https://raiontaraclia.md/ro/simbolica-raionului/",
+        "tier": "A"
+      },
+      "previousSHA256": "39bbca6a409e4452855b8fd2abc63b2d1e104b919ea29afa372382a9a19c5774",
+      "image": {
+        "kind": "local",
+        "file": "taraclia-coat.png",
+        "url": "symbols/sim-r8/taraclia-coat.png",
+        "sourceUrl": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+        "tier": "A",
+        "sha256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698"
+      },
+      "sha256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698",
+      "source": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+      "reason": "Replace unclear artistic JPEG with its exact district normative colour annex; preserve scan colour cast and flag proportions."
+    },
+    {
+      "atlasId": "osm-r1699033",
+      "kind": "flag",
+      "action": "REPLACE",
+      "previousImage": {
+        "kind": "official",
+        "url": "https://raiontaraclia.md/wp-content/uploads/2022/01/flag-1h6-modern-konec-bez-razmera--scaled.jpg",
+        "sourceUrl": "https://raiontaraclia.md/ro/simbolica-raionului/",
+        "tier": "A"
+      },
+      "previousSHA256": "fdc48e70812e538dca923faa08231c98a7571b85d24f6c3e812817a1b5967352",
+      "image": {
+        "kind": "local",
+        "file": "taraclia-flag.png",
+        "url": "symbols/sim-r8/taraclia-flag.png",
+        "sourceUrl": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+        "tier": "A",
+        "sha256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e"
+      },
+      "sha256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e",
+      "source": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+      "reason": "Replace unclear artistic JPEG with its exact district normative colour annex; preserve scan colour cast and flag proportions."
+    }
+  ]
+}

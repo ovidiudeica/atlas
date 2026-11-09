@@ -1795,13 +1795,21 @@ async function simR4GlobalSymbols(cdp){
 }
 
 async function simR6Exceptions(cdp){
- for(const width of [1440,360])for(const id of ['osm-r59002','osm-r377733','osm-r2248660','osm-r10715725','osm-r9714843','osm-r1748490','osm-r1691801']){
+ for(const width of [1440,360])for(const id of ['osm-r59002','osm-r377733','osm-r2248660','osm-r10664180','osm-r1699033','osm-r10715725','osm-r9714843','osm-r1748490','osm-r1691801']){
   const mobile=width<700,p=await cdp.page(width,844,mobile,site+'?lang=ro&entity='+id);
   const selector=JSON.stringify((mobile?'.drawer-detail ':'.detail-sidebar ')+'.entity-card');
   await p.wait('!!document.querySelector('+selector+')','SIM-R6 exact entity card '+id);
   const info=await p.eval('(()=>{const c=document.querySelector('+selector+');return {heading:c.querySelector(".entity-title img")?.getAttribute("src")||null,neutral:!!c.querySelector(".entity-title .territorial-symbol-fallback"),coat:c.querySelector(".territory-symbol-gallery figure:first-child img")?.getAttribute("src")||null,flag:c.querySelector(".territory-symbol-gallery figure:last-child img")?.getAttribute("src")||null,overflow:document.documentElement.scrollWidth-innerWidth,images:document.querySelectorAll("img").length};})()');
   assert(info.overflow<=1&&info.images<40,'SIM-R6 compact progressive layout '+id+JSON.stringify(info));
-  if(['osm-r377733','osm-r2248660','osm-r10715725'].includes(id))assert(info.neutral&&!info.heading&&!info.coat,'SIM-R6 neutral coat without flag fallback '+id+JSON.stringify(info));
+  if(['osm-r377733','osm-r10715725'].includes(id))assert(info.neutral&&!info.heading&&!info.coat,'SIM-R6 neutral coat without flag fallback '+id+JSON.stringify(info));
+  const r8={'osm-r2248660':'harghita','osm-r10664180':'campulung','osm-r1699033':'taraclia'}[id];
+  if(r8){
+   assert(info.heading?.includes('/symbols/sim-r8/'+r8+'-coat.png')&&info.coat===info.heading,'SIM-R8 same normative coat in card and gallery '+id+JSON.stringify(info));
+   if(id==='osm-r1699033')assert(info.flag?.includes('/symbols/sim-r8/taraclia-flag.png')&&info.flag!==info.coat,'SIM-R8 distinct district flag');
+   await p.wait('document.querySelector('+selector+').querySelector(".entity-title img")?.naturalWidth>0','SIM-R8 normative coat loads '+id);
+   const img=await p.eval('(()=>{const i=document.querySelector('+selector+').querySelector(".entity-title img");return {w:i.getBoundingClientRect().width,h:i.getBoundingClientRect().height,alt:i.alt};})()');assert(img.w>0&&img.h>0&&img.alt,'SIM-R8 accessible proportional image '+JSON.stringify(img));
+   await p.snap((mobile?'mobile':'desktop')+'-sim-r8-'+id+'.png');
+  }
   if(id==='osm-r9714843')assert(!info.flag,'English-language icon cannot return as Strehaia flag');
   if(id==='osm-r59002'){
    assert(info.heading?.includes('briceni-coat.png')&&info.coat===info.heading&&info.flag?.includes('briceni-flag.png'),'SIM-R6 distinct literal coat/flag '+JSON.stringify(info));
@@ -1811,7 +1819,7 @@ async function simR6Exceptions(cdp){
    await p.wait('!!document.querySelector('+selector+').querySelector(".entity-title .territorial-symbol-fallback")','SIM-R6 neutral unavailable-image behavior');
   }
   if(id==='osm-r1748490'){
-   const rights=await p.eval(`(()=>{const c=document.querySelector(${selector});return {closed:[...c.querySelectorAll('.symbol-audit')].every(d=>!d.open),wording:c.textContent.includes('inclusiv redistribuirea fișierului'),register:[...c.querySelectorAll('a[download]')].some(a=>a.getAttribute('href')?.endsWith('audit-r7.json.gz'))};})()`);
+   const rights=await p.eval(`(()=>{const c=document.querySelector(${selector});return {closed:[...c.querySelectorAll('.symbol-audit')].every(d=>!d.open),wording:c.textContent.includes('inclusiv redistribuirea fișierului'),register:[...c.querySelectorAll('a[download]')].some(a=>a.getAttribute('href')?.endsWith('audit-r8.json.gz'))};})()`);
    assert(rights.closed&&rights.wording&&rights.register,'SIM-R7 precise on-demand reproduction-rights disclosure '+JSON.stringify(rights));
   }
   await p.snap((mobile?'mobile':'desktop')+'-sim-r6-'+id+'.png');await p.close();
@@ -1831,7 +1839,7 @@ async function simR5Audit(cdp){
     coatNeutral:!!c.querySelector('.territory-symbol-gallery figure:first-child .territorial-symbol-fallback'),
     verdicts:[...c.querySelectorAll('[data-symbol-verdict]')].map(e=>e.dataset.symbolVerdict),
     overflow:document.documentElement.scrollWidth-innerWidth,images:document.querySelectorAll('img').length,
-    download:!!c.querySelector('a[download][href$="audit-r7.json.gz"]')};})()`);
+    download:!!c.querySelector('a[download][href$="audit-r8.json.gz"]')};})()`);
    assert(info.overflow<=1&&info.images<40&&info.download,'SIM-R5 accessible progressive UI '+id+': '+JSON.stringify(info));
    if(id==='osm-r14772859')assert(info.headerNeutral&&info.coatNeutral&&info.verdicts.includes('MISATTRIBUTED'),'Wrong-county assignment removed from card and header');
    if(id==='osm-r9882384')assert(!info.verdicts.includes('MISATTRIBUTED'),'Jilava is not removed from filename abbreviation alone');
