@@ -1,6 +1,7 @@
 export interface EditorialSymbolAsset {
  readonly kind:'commons'|'official';
  readonly tier:'A'|'B';
+ readonly status?:'CANDIDATE'|'REVIEWED_SOURCE';
  readonly file?:string;
  readonly url?:string;
  readonly sourceUrl?:string;
