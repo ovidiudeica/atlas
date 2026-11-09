@@ -1023,6 +1023,7 @@ export const SIM_R3_COUNTS=Object.freeze({"entities":74,"coat":70,"flag":67,"bot
 export function editorialSymbolsForEntity(node){return node?.id&&Object.hasOwn(CATALOG,node.id)?CATALOG[node.id]:null;}
 export function symbolAssetUrl(asset){
  if(!asset)return null;
+ if(asset.kind==='commons'&&asset.url?.startsWith('https://upload.wikimedia.org/wikipedia/commons/'))return asset.url;
  if(asset.kind==='commons'&&asset.file)return 'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(asset.file.replaceAll(' ','_'));
  if(asset.kind==='official'&&asset.url?.startsWith('https://'))return asset.url;
  return null;

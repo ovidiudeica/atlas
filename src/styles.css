@@ -546,3 +546,5 @@
   .territory-symbol-gallery--editorial figure{border-color:CanvasText}
   .territorial-symbol-fallback{color:CanvasText}
 }
+
+.territory-symbol-status{display:block;font-size:10px;line-height:1.4;color:#715213;overflow-wrap:anywhere;margin:4px 0}

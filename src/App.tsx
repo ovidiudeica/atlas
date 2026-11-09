@@ -9,6 +9,7 @@ import { EntityCardSection } from './components/EntityCardSection';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { cardNameOf, englishSiblingQualifiers, territorialContextNote } from './data/treeNames.mjs';
 import { flagFileForEntity } from './data/entityFlags.mjs';
+import { globalSymbolsForEntity, withGlobalSymbols } from './data/globalSymbols.mjs';
 import { officialSymbolsForEntity } from './data/officialSymbols.mjs';
 import { editorialSymbolsForEntity, symbolAssetUrl, symbolSourceUrl } from './data/territorialSymbols.mjs';
 import { makeModuleVisibility, setModuleGeometry, resetModuleGeometry,
@@ -930,7 +931,7 @@ export default function App() {
     const stat=node.statisticalRoles.length>0;
     // SIM-R3: one-to-one local coat/flag only; no propagation to siblings or parents.
     const approvedTreeSymbols=officialSymbolsForEntity(node);
-    const editorialTreeSymbols=approvedTreeSymbols?null:editorialSymbolsForEntity(node);
+    const editorialTreeSymbols=approvedTreeSymbols?null:withGlobalSymbols(node,editorialSymbolsForEntity(node));
     const treeSymbols=approvedTreeSymbols||editorialTreeSymbols;
     const approvedTreeFile=approvedTreeSymbols?.coat||approvedTreeSymbols?.flag;
     const treeSymbolSrc=approvedTreeFile?import.meta.env.BASE_URL+'symbols/'+approvedTreeFile:
@@ -1041,15 +1042,16 @@ export default function App() {
   const currentFlag=currentNode?flagFileForEntity(currentNode):null;
   // Exact-ID symbols, only if the act, representation, and owner were reviewed.
   const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
-  const editorialSymbols=currentNode&&!officialSymbols?editorialSymbolsForEntity(currentNode):null;
-  const editorialPreferred=editorialSymbols?.coat||editorialSymbols?.flag;
+  const editorialSymbols=currentNode&&!officialSymbols?withGlobalSymbols(currentNode,editorialSymbolsForEntity(currentNode)):null;
+  const headerEditorial=currentNode?editorialSymbolsForEntity(currentNode):null;
+  const editorialPreferred=headerEditorial?.coat||headerEditorial?.flag;
   const primarySymbolPath=officialSymbols?.coat
     ?'symbols/'+officialSymbols.coat:currentFlag?'flags/'+currentFlag:null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
-        <span className={'flag'+(officialSymbols?.coat||editorialSymbols?.coat?' flag--coat':'')} aria-hidden="true">
-          {editorialSymbols?
+        <span className={'flag'+(officialSymbols?.coat||headerEditorial?.coat?' flag--coat':'')} aria-hidden="true">
+          {editorialPreferred?
             <TerritorialSymbolImage key={currentNode.id} className="territorial-symbol-header"
               src={symbolAssetUrl(editorialPreferred)} alt="" loading="eager" />:
             primarySymbolPath&&<img src={import.meta.env.BASE_URL+primarySymbolPath}
@@ -1102,13 +1104,25 @@ export default function App() {
         title={lang==='ro'?'Simboluri teritoriale':'Territorial symbols'} kind="symbols">
         <div className="territory-symbol-gallery">
           {officialSymbols.coat&&<figure>
-            <img src={import.meta.env.BASE_URL+'symbols/'+officialSymbols.coat}
+            <TerritorialSymbolImage className="territory-symbol-media" src={import.meta.env.BASE_URL+'symbols/'+officialSymbols.coat}
               alt={lang==='ro'?'Stema '+officialSymbols.holder.ro:
                 'Coat of arms of '+officialSymbols.holder.en} loading="lazy" />
             <figcaption>{lang==='ro'?'Stemă':'Coat of arms'}</figcaption>
           </figure>}
+          {!officialSymbols.flag&&<figure>
+            <div className="territory-symbol-frame">
+              <TerritorialSymbolImage className="territory-symbol-media"
+                src={symbolAssetUrl(globalSymbolsForEntity(currentNode)?.flag)}
+                alt={(lang==='ro'?'Drapel':'Flag')+' · '+currentNode.name} />
+            </div>
+            <figcaption>{lang==='ro'?'Drapel':'Flag'}</figcaption>
+            {symbolSourceUrl(globalSymbolsForEntity(currentNode)?.flag)&&
+              <a className="territory-symbol-source"
+                href={symbolSourceUrl(globalSymbolsForEntity(currentNode)?.flag)!}
+                target="_blank" rel="noopener noreferrer">{lang==='ro'?'Sursa imaginii':'Image source'} ↗</a>}
+          </figure>}
           {officialSymbols.flag&&<figure>
-            <img src={import.meta.env.BASE_URL+'symbols/'+officialSymbols.flag}
+            <TerritorialSymbolImage className="territory-symbol-media" src={import.meta.env.BASE_URL+'symbols/'+officialSymbols.flag}
               alt={lang==='ro'?'Drapelul '+officialSymbols.holder.ro:
                 'Flag of '+officialSymbols.holder.en} loading="lazy" />
             <figcaption>{lang==='ro'?'Drapel':'Flag'}</figcaption>
@@ -1143,6 +1157,9 @@ export default function App() {
                   src={symbolAssetUrl(asset)} alt={asset?label+' · '+editorialSymbols.name:label+' — '+(lang==='ro'?'indisponibil':'unavailable')} />
               </div>
               <figcaption>{label}</figcaption>
+              {asset?.status==='CANDIDATE'&&<small className="territory-symbol-status">
+                {lang==='ro'?'Imagine candidat · de verificat':'Candidate image · review pending'}
+              </small>}
               {source&&<a className="territory-symbol-source" href={source}
                 target="_blank" rel="noopener noreferrer">
                 {asset?.tier==='A'?(lang==='ro'?'Sursa instituțională':'Institutional source'):

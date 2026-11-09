@@ -1718,6 +1718,42 @@ async function narrowMobile(cdp){
     'Mobile detail Escape returns focus to header entity icon');
   await p.close();
 }
+async function simR4GlobalSymbols(cdp){
+ for(const width of [1440,390]){
+  const mobile=width<700;
+  for(const id of ['osm-r90689','stat-MD120']){
+   const p=await cdp.page(width,844,mobile,site+'?lang=ro&entity='+id);
+   await p.wait("document.querySelectorAll('.entity-card-section--symbols figure').length===2",'SIM-R4 two separate symbol slots '+id);
+   const info=await p.eval(`(()=>{
+    const section=document.querySelector('.entity-card-section--symbols');
+    const figures=[...section.querySelectorAll('figure')];
+    return {overflow:document.documentElement.scrollWidth-innerWidth,
+     figures:figures.map(f=>({label:f.querySelector('figcaption')?.textContent,
+      image:!!f.querySelector('img'),fallback:!!f.querySelector('.territorial-symbol-fallback'),
+      lazy:f.querySelector('img')?.loading,alt:f.querySelector('img')?.alt,
+      source:f.querySelector('a')?.href})),
+     images:document.querySelectorAll('img').length};
+   })()`);
+   assert(info.overflow<=1,'SIM-R4 no horizontal overflow '+width+' '+id);
+   assert.equal(info.figures.length,2);
+   assert(info.figures.every(f=>f.image||f.fallback),'Each slot has media or neutral fallback');
+   assert(info.figures.every(f=>!f.image||(f.lazy==='lazy'&&f.alt&&f.source?.startsWith('https://'))),
+    'New images retain lazy loading, alt text and per-image source');
+   assert(info.images<40,'No eager loading of the entire inventory');
+   if(id==='stat-MD120')assert(info.figures.every(f=>f.fallback),'Statistical unit does not inherit PMR symbols');
+   if(id==='osm-r90689'){
+    const hasImage=await p.eval("!!document.querySelector('.entity-card-section--symbols img')");
+    if(hasImage){
+     await p.eval("document.querySelector('.entity-card-section--symbols img').src='/atlas/sim-r4-intentionally-unavailable.svg'");
+     await p.wait("!!document.querySelector('.entity-card-section--symbols .territorial-symbol-fallback')",'Broken image uses neutral fallback');
+    }
+   }
+   await p.snap((mobile?'mobile':'desktop')+'-sim-r4-'+id+'.png');
+   await p.close();
+  }
+ }
+}
+
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
@@ -1753,6 +1789,7 @@ try{
   await entityFlagAssets(client);
   await verifiedSymbolPilot(client);
   await simR31MediaVisualAudit(client);
+  await simR4GlobalSymbols(client);
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
