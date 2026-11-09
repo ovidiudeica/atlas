@@ -1,0 +1,23 @@
+[
+  {
+    "file": "doc-0.bin",
+    "sha256": "59d44de8a98a73f25519719fbc0a20eb68db943f4a8dd4ccea65a2d1b316ba7a",
+    "pages": 2,
+    "embeddedFileNames": [],
+    "method": "pypdf page inventory and embedded-file enumeration; visual page review recorded separately"
+  },
+  {
+    "file": "doc-5.bin",
+    "sha256": "7cb5a3ac6d1860f2f3188d7c9d3fc38cd632a15a896d9144a56beb4524f7a397",
+    "pages": 4,
+    "embeddedFileNames": [],
+    "method": "pypdf page inventory and embedded-file enumeration; visual page review recorded separately"
+  },
+  {
+    "file": "extra-1.bin",
+    "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+    "pages": 14,
+    "embeddedFileNames": [],
+    "method": "pypdf page inventory and embedded-file enumeration; visual page review recorded separately"
+  }
+]

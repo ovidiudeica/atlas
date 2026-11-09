@@ -1,0 +1,108 @@
+[
+  {
+    "index": 5,
+    "url": "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf",
+    "checkedAt": "2026-11-09T16:44:28.380Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf",
+    "contentType": "application/pdf",
+    "retryAfter": null,
+    "bytes": 102732,
+    "sha256": "7cb5a3ac6d1860f2f3188d7c9d3fc38cd632a15a896d9144a56beb4524f7a397",
+    "cacheFile": "081ff65689ce8a4208a55af363420ef042e8fed1d4897388229a168ab7238067.bin",
+    "atlasIds": [
+      "osm-r2248660"
+    ],
+    "act": "HCJ Harghita6/27 January2026",
+    "date": "2026-01-27",
+    "sourceType": "PRIMARY_COUNTY_ACT",
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "correspondence": "Signed county decision amending the proposed blazon; not HG510 final graphic annex",
+    "newToSIMR7": true,
+    "graphicAnnex": false,
+    "finding": "Five crosses and12 stars on pages3-4; articleII preserves the earlier graphic proposal. Not the final four/eight version.",
+    "localFile": "docs/audits/sim-r7/evidence/harghita-hcj6-2026.pdf"
+  },
+  {
+    "index": 1,
+    "url": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+    "checkedAt": "2026-11-09T16:58:07.241Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+    "contentType": "application/pdf",
+    "retryAfter": null,
+    "bytes": 7254116,
+    "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+    "cacheFile": "098c57a61d6f039470687401d94a782c9e552662426d70a8a5711659ce4af633.bin",
+    "atlasIds": [
+      "osm-r1748490",
+      "osm-r1691801"
+    ],
+    "act": "Municipal mayor disposition537-d/1 October2020",
+    "date": "2020-10-01",
+    "sourceType": "PRIMARY_MUNICIPAL_ACT_PUBLISHED_BY_SUBORDINATE_AUTHORITY",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "correspondence": "Institutional copy of signed act and11 letterhead annexes. Not the graphic registration annex to Decree1475-VIII.",
+    "newToSIMR7": true,
+    "graphicAnnex": false,
+    "finding": "Monochrome large municipal arms in letterhead models; page13 prescribes large municipal arms on official forms. English CITY HALL is a translation, not proof of a second independent heraldic holder.",
+    "localFile": "docs/audits/sim-r7/evidence/chisinau-disposition-537d-2020.pdf"
+  },
+  {
+    "index": 0,
+    "url": "https://particip.gov.md/ro/download_attachment/20092",
+    "checkedAt": "2026-11-09T16:58:05.243Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://particip.gov.md/ro/download_attachment/20092",
+    "contentType": "application/pdf",
+    "retryAfter": null,
+    "bytes": 619292,
+    "sha256": "bab5a231ce4a3ed2bdfeb39bd8b300fa9389c874fecd9d6b1adeb31a8a1067ed",
+    "cacheFile": "7d6ea201705c0d344ae63775cd5753b1df05f2ae15e54dd3328d570ae5bd38e3.bin",
+    "atlasIds": [
+      "osm-r1748490",
+      "osm-r1691801"
+    ],
+    "act": "Undated, unnumbered municipal draft regulation",
+    "sourceType": "PRIMARY_PUBLIC_CONSULTATION_DRAFT",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "correspondence": "Official consultation copy; blank adoption number/date, not a final enacted decision",
+    "newToSIMR7": true,
+    "graphicAnnex": false,
+    "finding": "Regulates commercial names, logos and trademarks using local symbolism. Does not provide the missing coat/flag graphic annex or a reproduction licence."
+  }
+]

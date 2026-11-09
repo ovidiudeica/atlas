@@ -1,0 +1,18 @@
+{
+  "previousAttempt": [
+    {
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3ACoat+of+arms+of+Gagauzia.svg%7CFile%3ACoat+of+arms+of+Chi%C8%99in%C4%83u+1991.svg%7CFile%3ACoat+of+Arms+of+Chi%C8%99in%C4%83u.svg%7CFile%3ACOA+Buiucani.png%7CFile%3AStema+sectorului+Buiucani.png%7CFile%3ACOA+Ciocana.png%7CFile%3AStema+sectorului+Ciocana.png%7CFile%3ACOA+R%C3%A2%C8%99cani.png%7CFile%3AStema+sectorului+R%C3%A2%C8%99cani.png%7CFile%3ACOA+Centru.png%7CFile%3AStema+sectorului+Centru.png%7CFile%3AStema+Raionului+Taraclia.png%7CFile%3AStema+Raionul+Taraclia.gif%7CFile%3ACOA+Botanica.png%7CFile%3AStema+sectorului+Botanica.png%7CFile%3ADrapel+Raionul+Taraclia.png%7CFile%3AROU+AG+C%C3%A2mpulung+CoA.svg%7CFile%3AROU+AG+Campulung+CoA.png%7CFile%3AInterbelic+Campulung+CoA.png&prop=imageinfo%7Crevisions&iiprop=url%7Csha1%7Ctimestamp%7Cuser%7Cextmetadata&iilimit=5&rvprop=ids%7Ctimestamp%7Cuser%7Ccontent&rvslots=main&rvlimit=1",
+      "checkedAt": "2026-11-09T16:49:38.802Z",
+      "method": "PUBLIC_HTTP_GET",
+      "binary": false,
+      "status": 200,
+      "finalUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3ACoat+of+arms+of+Gagauzia.svg%7CFile%3ACoat+of+arms+of+Chi%C8%99in%C4%83u+1991.svg%7CFile%3ACoat+of+Arms+of+Chi%C8%99in%C4%83u.svg%7CFile%3ACOA+Buiucani.png%7CFile%3AStema+sectorului+Buiucani.png%7CFile%3ACOA+Ciocana.png%7CFile%3AStema+sectorului+Ciocana.png%7CFile%3ACOA+R%C3%A2%C8%99cani.png%7CFile%3AStema+sectorului+R%C3%A2%C8%99cani.png%7CFile%3ACOA+Centru.png%7CFile%3AStema+sectorului+Centru.png%7CFile%3AStema+Raionului+Taraclia.png%7CFile%3AStema+Raionul+Taraclia.gif%7CFile%3ACOA+Botanica.png%7CFile%3AStema+sectorului+Botanica.png%7CFile%3ADrapel+Raionul+Taraclia.png%7CFile%3AROU+AG+C%C3%A2mpulung+CoA.svg%7CFile%3AROU+AG+Campulung+CoA.png%7CFile%3AInterbelic+Campulung+CoA.png&prop=imageinfo%7Crevisions&iiprop=url%7Csha1%7Ctimestamp%7Cuser%7Cextmetadata&iilimit=5&rvprop=ids%7Ctimestamp%7Cuser%7Ccontent&rvslots=main&rvlimit=1",
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "bytes": 611,
+      "sha256": "194a946fec1bc70b7ceac812b80ceb42398d8afebbe7f7773adc10481595f8ce",
+      "cacheFile": "c50d9e5fc6914802bfa4446c198bf4e32d81b8cf2da6279c3dfa2a5876d274c8.bin"
+    }
+  ],
+  "reason": "MediaWiki invalidparammix: revision limit only valid for single-page query; removed parameter and retried a distinct valid request"
+}

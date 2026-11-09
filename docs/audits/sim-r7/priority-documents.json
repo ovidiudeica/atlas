@@ -1,0 +1,176 @@
+[
+  {
+    "index": 0,
+    "url": "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+    "checkedAt": "2026-11-09T16:44:26.709Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+    "contentType": "application/pdf",
+    "retryAfter": null,
+    "bytes": 218261,
+    "sha256": "59d44de8a98a73f25519719fbc0a20eb68db943f4a8dd4ccea65a2d1b316ba7a",
+    "cacheFile": "4e7a2e6aac82580f67dbfac802980822cd830ec9fc51027681baad8c551ebb46.bin"
+  },
+  {
+    "index": 1,
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+    "checkedAt": "2026-11-09T16:44:26.707Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 2,
+    "url": "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg",
+    "checkedAt": "2026-11-09T16:44:26.709Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 3,
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+    "checkedAt": "2026-11-09T16:44:27.659Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 4,
+    "url": "https://www.legis.md/cautare/getResults?doc_id=120612&lang=ro",
+    "checkedAt": "2026-11-09T16:44:27.911Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 403,
+    "finalUrl": "https://www.legis.md/cautare/getResults?doc_id=120612&lang=ro",
+    "contentType": "text/html; charset=UTF-8",
+    "retryAfter": null,
+    "error": "Error: HTTP 403"
+  },
+  {
+    "index": 5,
+    "url": "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf",
+    "checkedAt": "2026-11-09T16:44:28.380Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf",
+    "contentType": "application/pdf",
+    "retryAfter": null,
+    "bytes": 102732,
+    "sha256": "7cb5a3ac6d1860f2f3188d7c9d3fc38cd632a15a896d9144a56beb4524f7a397",
+    "cacheFile": "081ff65689ce8a4208a55af363420ef042e8fed1d4897388229a168ab7238067.bin"
+  },
+  {
+    "index": 6,
+    "url": "https://www.mdlpa.ro/uploads/articole/attachments/6a2926c8e3f5f908612564.pdf",
+    "checkedAt": "2026-11-09T16:44:28.600Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 7,
+    "url": "https://www.mdlpa.ro/uploads/articole/attachments/6a2926c91084e361673819.docx",
+    "checkedAt": "2026-11-09T16:44:29.112Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 8,
+    "url": "https://www.mdlpa.ro/uploads/articole/attachments/69b8110cbd979515028279.pdf",
+    "checkedAt": "2026-11-09T16:44:29.316Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 9,
+    "url": "https://www.mdlpa.ro/uploads/articole/attachments/69b8110cd778a719549168.docx",
+    "checkedAt": "2026-11-09T16:44:39.675Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 10,
+    "url": "https://sgg.gov.ro/1/wp-content/uploads/2026/06/HG-64.pdf",
+    "checkedAt": "2026-11-09T16:44:50.867Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 503,
+    "finalUrl": "https://sgg.gov.ro/1/wp-content/uploads/2026/06/HG-64.pdf",
+    "contentType": "text/html;charset=utf-8",
+    "retryAfter": null,
+    "error": "Error: HTTP 503"
+  },
+  {
+    "index": 11,
+    "url": "https://sgg.gov.ro/1/wp-content/uploads/2026/06/ANEXA-2-11.pdf",
+    "checkedAt": "2026-11-09T16:44:51.672Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 503,
+    "finalUrl": "https://sgg.gov.ro/1/wp-content/uploads/2026/06/ANEXA-2-11.pdf",
+    "contentType": "text/html;charset=utf-8",
+    "retryAfter": null,
+    "error": "Error: HTTP 503"
+  },
+  {
+    "index": 12,
+    "url": "https://sgg.gov.ro/1/wp-content/uploads/2026/04/NF-41.pdf",
+    "checkedAt": "2026-11-09T16:44:52.292Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 503,
+    "finalUrl": "https://sgg.gov.ro/1/wp-content/uploads/2026/04/NF-41.pdf",
+    "contentType": "text/html;charset=utf-8",
+    "retryAfter": null,
+    "error": "Error: HTTP 503"
+  },
+  {
+    "index": 13,
+    "url": "https://www.cjsibiu.ro/wp-content/uploads/2016/01/HERALDICA-LOCALA-cu-descrieri-si-bookmark-ri.pdf",
+    "checkedAt": "2026-11-09T16:44:52.903Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://www.cjsibiu.ro/wp-content/uploads/2016/01/HERALDICA-LOCALA-cu-descrieri-si-bookmark-ri.pdf",
+    "contentType": "application/pdf",
+    "retryAfter": null,
+    "bytes": 12914919,
+    "sha256": "9ea61ee04a5ba324081a94c0de0e7328c09b511d566e8dae7ecd2e6fc435305f",
+    "cacheFile": "e66899711d350700b15fd78513fd12b91d05bc46bb292b2602817735e23aa277.bin"
+  },
+  {
+    "index": 14,
+    "url": "https://talmaciu.ro/consiliul-local/hotarari/proiecte-de-hotarari",
+    "checkedAt": "2026-11-09T16:45:02.041Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://talmaciu.ro/consiliul-local/hotarari/proiecte-de-hotarari/",
+    "contentType": "text/html; charset=UTF-8",
+    "retryAfter": null,
+    "bytes": 90363,
+    "sha256": "3271ee0e36274071eecd2e34569ac6a19d414afeda9f7d3ee4d8cef3f4f762ac",
+    "cacheFile": "b1c06d25a062e5df75d1e72564e917ca5524d031476b9ec191ed15cdd8a732ed.bin"
+  },
+  {
+    "index": 15,
+    "url": "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+    "checkedAt": "2026-11-09T16:45:05.377Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+    "contentType": "image/jpeg",
+    "retryAfter": null,
+    "bytes": 92125,
+    "sha256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+    "cacheFile": "1a9a8a03be6c621c337ec0bcc2fb518d105cd558545656ea449c7462787fd9d7.bin"
+  }
+]

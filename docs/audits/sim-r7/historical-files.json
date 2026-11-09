@@ -1,0 +1,41 @@
+{
+  "baseCommit": "a71291c4ca46ecab85d42a11e75bc42e95f44590",
+  "files": [
+    {
+      "path": "public/data/symbols/registry.json.gz",
+      "sha256": "e75fe4eb8a49f5dbb4bcb5827d725fa585cc9f1837083b3cdd1d3a15c0b16892"
+    },
+    {
+      "path": "public/data/symbols/registry-current.json.gz",
+      "sha256": "3edc8235aec684c91da5f349dd3e1e20af3b140439c420f097752c4d63f1c8a4"
+    },
+    {
+      "path": "public/data/symbols/registry-r6.json.gz",
+      "sha256": "8bd6dbeec849e9a6cc8b6855af8b33fa985aaf3587a90a08d6350f9b1cdb6781"
+    },
+    {
+      "path": "public/data/symbols/audit.json.gz",
+      "sha256": "ff1f6cddbe151d9cc44092a6e4fdfd8c97d232e7368d1c1edec398352cfe0d8d"
+    },
+    {
+      "path": "public/data/symbols/audit-r6.json.gz",
+      "sha256": "6fbd0df36d3b2860f14bc4c00259fb3519205150c3b5490b1ab1582cd6964e8f"
+    },
+    {
+      "path": "src/data/globalSymbolSelections.mjs",
+      "sha256": "6846da61fce788fe97b80c0f2b6439b197f309ea3feebc8f629b87a71c4b8fec"
+    },
+    {
+      "path": "src/data/symbolAuditSelections.mjs",
+      "sha256": "1da239ad80de7768c7187ae435b4d6c99afcc7db0b371a2d73bae8d242acee54"
+    },
+    {
+      "path": "src/data/symbolR6Selections.mjs",
+      "sha256": "93146f6254b1afecb7190431a95bb9cd1e20dc51bcc6ea8ce0cd3fa6ceed6fab"
+    },
+    {
+      "path": "docs/audits/sim-r7/sim-r6-results-baseline.json",
+      "sha256": "273a05e2e7bb97528c1a38969f73d93a8d8b105a2583c40b0ddc5d1d4ef259be"
+    }
+  ]
+}

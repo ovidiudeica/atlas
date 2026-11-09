@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-09T17:46:53.074Z",
+  "method": "Independent public web-reader fallback after native HTTP/Tavily attempts",
+  "attempts": [
+    {
+      "url": "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg",
+      "result": "NOT_ACCESSIBLE_THROUGH_WEB_READER",
+      "documentRecovered": false
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+      "result": "FETCH_FAILED_502",
+      "documentRecovered": false
+    },
+    {
+      "url": "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+      "result": "PRIMARY_PDF_READ_TWO_PAGES",
+      "finding": "Same two-page adopted decision, including monastic garments description; graphic annex absent from available pages.",
+      "newDocument": false
+    }
+  ]
+}
