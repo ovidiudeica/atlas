@@ -1723,9 +1723,11 @@ async function simR4GlobalSymbols(cdp){
   const mobile=width<700;
   for(const id of ['osm-r90689','stat-MD120']){
    const p=await cdp.page(width,844,mobile,site+'?lang=ro&entity='+id);
-   await p.wait("document.querySelectorAll('.entity-card-section--symbols figure').length===2",'SIM-R4 two separate symbol slots '+id);
+   const selector=JSON.stringify((mobile?'.drawer-detail ':'.detail-sidebar ')+'.entity-card-section--symbols');
+   await p.wait("document.querySelector("+selector+")?.querySelectorAll('figure').length===2",
+    'SIM-R4 two separate visible symbol slots '+id);
    const info=await p.eval(`(()=>{
-    const section=document.querySelector('.entity-card-section--symbols');
+    const section=document.querySelector(${selector});
     const figures=[...section.querySelectorAll('figure')];
     return {overflow:document.documentElement.scrollWidth-innerWidth,
      figures:figures.map(f=>({label:f.querySelector('figcaption')?.textContent,
@@ -1742,10 +1744,11 @@ async function simR4GlobalSymbols(cdp){
    assert(info.images<40,'No eager loading of the entire inventory');
    if(id==='stat-MD120')assert(info.figures.every(f=>f.fallback),'Statistical unit does not inherit PMR symbols');
    if(id==='osm-r90689'){
-    const hasImage=await p.eval("!!document.querySelector('.entity-card-section--symbols img')");
+    const hasImage=await p.eval("!!document.querySelector("+selector+")?.querySelector('img')");
     if(hasImage){
-     await p.eval("document.querySelector('.entity-card-section--symbols img').src='/atlas/sim-r4-intentionally-unavailable.svg'");
-     await p.wait("!!document.querySelector('.entity-card-section--symbols .territorial-symbol-fallback')",'Broken image uses neutral fallback');
+     await p.eval("document.querySelector("+selector+").querySelector('img').src='/atlas/sim-r4-intentionally-unavailable.svg'");
+     await p.wait("!!document.querySelector("+selector+").querySelector('.territorial-symbol-fallback')",
+      'Broken image uses neutral fallback');
     }
    }
    await p.snap((mobile?'mobile':'desktop')+'-sim-r4-'+id+'.png');
