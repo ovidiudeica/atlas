@@ -1026,7 +1026,7 @@ export function symbolAssetUrl(asset){
  if(asset.kind==='commons'&&asset.url?.startsWith('https://upload.wikimedia.org/wikipedia/commons/'))return asset.url;
  if(asset.kind==='commons'&&asset.file)return 'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(asset.file.replaceAll(' ','_'));
  if(asset.kind==='official'&&asset.url?.startsWith('https://'))return asset.url;
- if(asset.kind==='local'&&/^symbols\/sim-r5\/[a-z0-9-]+\.png$/.test(asset.url||''))return (import.meta.env?.BASE_URL||'/')+asset.url;
+ if(asset.kind==='local'&&/^symbols\/sim-r[56]\/[a-z0-9-]+\.png$/.test(asset.url||''))return (import.meta.env?.BASE_URL||'/')+asset.url;
  return null;
 }
 export function symbolSourceUrl(asset){

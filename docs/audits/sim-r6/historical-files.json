@@ -1,0 +1,29 @@
+{
+  "baseCommit": "ce078147bc8500f2454b409676f6f1fad622bdba",
+  "files": [
+    {
+      "path": "public/data/symbols/registry.json.gz",
+      "sha256": "e75fe4eb8a49f5dbb4bcb5827d725fa585cc9f1837083b3cdd1d3a15c0b16892"
+    },
+    {
+      "path": "public/data/symbols/registry-current.json.gz",
+      "sha256": "3edc8235aec684c91da5f349dd3e1e20af3b140439c420f097752c4d63f1c8a4"
+    },
+    {
+      "path": "public/data/symbols/audit.json.gz",
+      "sha256": "ff1f6cddbe151d9cc44092a6e4fdfd8c97d232e7368d1c1edec398352cfe0d8d"
+    },
+    {
+      "path": "public/data/symbols/audit-initial.json.gz",
+      "sha256": "dd7a10ecde0718faf62380ba0f83d21f85ff4f40cf7d9d4eeec1db2db65fe521"
+    },
+    {
+      "path": "src/data/globalSymbolSelections.mjs",
+      "sha256": "6846da61fce788fe97b80c0f2b6439b197f309ea3feebc8f629b87a71c4b8fec"
+    },
+    {
+      "path": "src/data/symbolAuditSelections.mjs",
+      "sha256": "1da239ad80de7768c7187ae435b4d6c99afcc7db0b371a2d73bae8d242acee54"
+    }
+  ]
+}

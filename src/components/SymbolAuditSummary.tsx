@@ -16,13 +16,13 @@ export function SymbolAuditSummary({id,kind,lang}:{id:string;kind:'coat'|'flag';
   <p>{audit.graphicVersion==='CURRENT_REPRESENTATION_CONFIRMED'
     ?(lang==='ro'?'Reprezentare actuală confirmată prin comparația documentată.':'Current representation confirmed by documented comparison.')
     :(lang==='ro'?'Fidelitatea grafică are limite de verificare; consultați registrul auditului.':'Graphic fidelity has verification limits; consult the audit register.')}</p>
-  <p>{audit.rights==='RIGHTS_UNCLEAR'
+  <p>{['RIGHTS_UNCLEAR','RIGHTS_UNRESOLVED'].includes(audit.rights)
     ?(lang==='ro'?'Drepturile reproducerii rămân neclarificate.':'Reproduction rights remain unclear.')
     :(lang==='ro'?'Declarația licenței sursei: ':'Source licence declaration: ')}
-    {audit.rights!=='RIGHTS_UNCLEAR'&&(audit.licenseUrl?<a href={audit.licenseUrl} target="_blank" rel="noopener noreferrer">{audit.license}</a>:audit.license)}
+    {!['RIGHTS_UNCLEAR','RIGHTS_UNRESOLVED'].includes(audit.rights)&&(audit.licenseUrl?<a href={audit.licenseUrl} target="_blank" rel="noopener noreferrer">{audit.license}</a>:audit.license)}
     {audit.artist&&<> · {audit.artist}</>}
   </p>
   {audit.source&&<a href={audit.source} target="_blank" rel="noopener noreferrer">{lang==='ro'?'Dovada / sursa examinată':'Evidence / examined source'} ↗</a>}
-  <a href={import.meta.env.BASE_URL+'data/symbols/audit.json.gz'} download>{lang==='ro'?'Registrul SIM-R5 (JSON gzip)':'SIM-R5 register (gzip JSON)'}</a>
+  <a href={import.meta.env.BASE_URL+'data/symbols/audit-r6.json.gz'} download>{lang==='ro'?'Registrul SIM-R6 (JSON gzip)':'SIM-R6 register (gzip JSON)'}</a>
  </details>;
 }

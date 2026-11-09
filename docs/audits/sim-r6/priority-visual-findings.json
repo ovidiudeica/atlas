@@ -1,0 +1,80 @@
+{
+  "osm-r2248660:flag": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Blue field, gold horizontal band and sun/moon; differs from white bordered2002 proposal described by2004 statute. Later flag act not recovered.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "ef0e43cf51867502f93fa518fcaace23948d030cb0789836e645cd33a72540a1"
+  },
+  "osm-r2260187:coat": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Eagle and silver bull above barrel surrounded by five grape bunches; major charges match2026 statutory blazon. Exact official annex not recovered.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "69e17cef8566be1efa92b62fcde72f0e0e06ae39d039b0827508b27a1767a686"
+  },
+  "osm-r2260187:flag": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "White flag with embedded Vrancea arms. Coat approval does not establish flag approval.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "f1d3b065eaf765b8b973a9bd4fbc640e10edc6f8e8f43e7b0c5af059dbd0cf5e"
+  },
+  "osm-r59002:coat": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Literal official decree coat crop, red shield and district crown, crossed swords, cross, book and apple flowers; compared with full page3.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "d3d03e70331f83b3cd4de50d7ad715f41e3564c6babec319ec4d424a59b90efa"
+  },
+  "osm-r59002:flag": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Literal official decree flag crop, same charges without shield/crown on red; compared with full page5.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "2c287a687e074c50e30504c38151d79d38cafc12e925f5d47b6015c3ac7c0278"
+  },
+  "osm-r1748490:coat": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Institutional large municipal coat with water-tower supporters; original source bytes match.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014"
+  },
+  "osm-r1748490:flag": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "White municipal flag with three narrow yellow bars and central shield; matches designer description, full normative graphic annex still absent.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "8e60933d88f208625e105b40c40db12dd51daf0c30feb6e4dae0e565a9a722d3"
+  },
+  "osm-r1691801:coat": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Large municipal coat SVG with tower supporters, not a separate small city coat; legal scope of second Atlas identity unresolved.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "7f2c805fcab071d6e926a54fa67a47b42f2c991beab4e95718166414de9b4840"
+  },
+  "osm-r1691801:flag": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "White/yellow municipal pattern; no evidence of a distinct city legal holder.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "7c3d4c07394042aee03150c272426ddb6120b650177302745dbbbb78816ad639"
+  },
+  "osm-r10664180:coat": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Violet field and black upper eagle conflict with blue-field local blazon; retained disputed.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee"
+  },
+  "osm-r10664180:flag": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Blue/yellow flag with central shield lacking upper black eagle; no independent current flag approval retrieved.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "4b52b32fbdc14e3578874923c1cae8305f0215d2cc8dbc7d3dc99020b24720cd"
+  },
+  "osm-r9982547:coat": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Modern quartered municipal arms with tree, crosses and fortification; retained separately from disputed flag.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "9458ccb3852f9d7358771dcd94f667cb144b7868b2885503f236a3b6ca5b1cb6"
+  },
+  "osm-r9982547:flag": {
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Blue/red/yellow horizontal flag carrying modern-looking municipal arms; Commons before1918 dating conflicts with graphic context.2021 municipal consultation does not prove approval of this particular file.",
+    "result": "See per-ID priority verdict; visual similarity alone does not certify legal identity",
+    "examinedSHA256": "ab557bdcad6a24a97ab63c2d00714987268c5ad5d546ee0e5a1da3f2f85e647b"
+  }
+}
