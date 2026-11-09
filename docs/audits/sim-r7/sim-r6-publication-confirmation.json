@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-09T16:39:57.930Z",
+  "pr": "https://github.com/ovidiudeica/atlas/pull/76",
+  "mergeCommit": "a71291c4ca46ecab85d42a11e75bc42e95f44590",
+  "postMergeCI": "https://github.com/ovidiudeica/atlas/actions/runs/42648094318",
+  "ciConclusion": "success",
+  "site": "https://ovidiudeica.github.io/atlas/",
+  "files": [
+    {
+      "path": "data/symbols/registry-r6.json.gz",
+      "status": 200,
+      "sha256": "8bd6dbeec849e9a6cc8b6855af8b33fa985aaf3587a90a08d6350f9b1cdb6781",
+      "matches": true
+    },
+    {
+      "path": "symbols/sim-r6/briceni-coat.png",
+      "status": 200,
+      "sha256": "d3d03e70331f83b3cd4de50d7ad715f41e3564c6babec319ec4d424a59b90efa",
+      "matches": true
+    }
+  ]
+}
