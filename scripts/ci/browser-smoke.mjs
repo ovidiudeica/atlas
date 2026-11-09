@@ -1755,6 +1755,40 @@ async function narrowMobile(cdp){
     'Mobile detail Escape returns focus to header entity icon');
   await p.close();
 }
+/* WEB-HEADER: detail button belongs after RO/EN at the right, with identical
+ * 44px dimensions, a visible focus target and no horizontal overflow. */
+async function headerEntityButtonPlacement(cdp){
+  for(const width of [1440,900,390,360]){
+    const mobile=width<=700;
+    const page=await cdp.page(width,mobile?844:900,mobile,site+'?lang=ro&entity=osm-r90689');
+    await page.wait("!!document.querySelector('.site-header .header-actions .header-entity-action')",
+      'Header selected entity control mounted '+width);
+    const layout=await page.eval("(()=>{const h=document.querySelector('.site-header');const a=h.querySelector('.header-actions');const l=a.querySelector('.language');const en=l.querySelector('button:first-child'),ro=l.querySelector('button:last-child'),d=a.querySelector('.header-entity-action'),brand=h.querySelector('.brand'),rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,right:r.right,width:r.width,height:r.height,top:r.top}};return {header:rect(h),actions:rect(a),language:rect(l),en:rect(en),ro:rect(ro),detail:rect(d),brand:rect(brand),detailLabel:d.getAttribute('aria-label'),overflow:document.documentElement.scrollWidth-innerWidth,order:[...a.children].map(e=>e.className)}})()");
+    for(const key of ['en','ro','detail']){
+      assert(Math.abs(layout[key].width-44)<1&&Math.abs(layout[key].height-44)<1,
+        'Header EN/RO/details share 44px dimensions at '+width+': '+JSON.stringify(layout));
+    }
+    assert(layout.order[0]==='language'&&layout.order[1]==='header-entity-action',
+      'Entity detail control follows the language switcher: '+JSON.stringify(layout));
+    assert(layout.ro.right<=layout.detail.x&&layout.detail.right<=layout.header.right&&
+      layout.detail.right>=width-24&&layout.brand.right<=layout.actions.x+1,
+      'Header controls aligned right without overlap at '+width+': '+JSON.stringify(layout));
+    assert(layout.overflow<=1&&layout.detailLabel,'Header no overflow and accessible name '+width);
+    await page.eval("document.querySelector('.header-entity-action').focus()");
+    assert.equal(await page.eval("document.activeElement===document.querySelector('.header-entity-action')"),true,
+      'Entity button receives keyboard focus '+width);
+    await page.snap((mobile?'mobile':'desktop')+'-header-entity-right-'+width+'.png');
+    await page.close();
+  }
+  const unselected=await cdp.page(390,844,true,site+'?lang=ro');
+  await unselected.wait("!!document.querySelector('.site-header .header-actions .language')",
+    'Unselected header controls');
+  const controls=await unselected.eval("(()=>{const a=document.querySelector('.site-header .header-actions');return {languages:a.querySelectorAll('.language button').length,detail:!!a.querySelector('.header-entity-action'),right:a.getBoundingClientRect().right,scroll:document.documentElement.scrollWidth-innerWidth}})()");
+  assert(controls.languages===2&&!controls.detail&&controls.right>=380&&controls.scroll<=1,
+    'No phantom details button before selection; languages stay right');
+  await unselected.close();
+}
+
 async function simR4GlobalSymbols(cdp){
  for(const width of [1440,390]){
   const mobile=width<700;
@@ -1885,6 +1919,7 @@ try{
   await roleAwareCards(client);
   await cardUxAccessibility(client);
   await finalCardAcceptance(client);
+  await headerEntityButtonPlacement(client);
   await entityCoatAndFlagAssets(client);
   await verifiedSymbolPilot(client);
   await simR31MediaVisualAudit(client);
