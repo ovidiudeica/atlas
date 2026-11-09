@@ -1448,17 +1448,19 @@ export default function App() {
     <header className="site-header">
       <div className="brand-symbol" aria-hidden="true">◎</div>
       <div className="brand"><strong>{t.title}</strong><small>{t.tagline}</small></div>
-      {currentNode&&<button type="button" className="header-entity-action" aria-label={t.openDetail}
-        title={t.openDetail} aria-expanded={detailPanelOpen}
-        onClick={()=>{
-          if(detailPanelOpen){closeDetailPanel();return;}
-          setDetailPanelOpen(true);
-          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
-          else if(window.innerWidth<1100)setModulePanelOpen(false);
-        }}><span className="detail-info-glyph" aria-hidden="true">i</span></button>}
-      <div className="language" aria-label="Language">
-        <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
-        <button className={lang==='ro'?'active':''} aria-pressed={lang==='ro'} onClick={()=>setLang('ro')}>RO</button>
+      <div className="header-actions">
+        <div className="language" aria-label="Language">
+          <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
+          <button className={lang==='ro'?'active':''} aria-pressed={lang==='ro'} onClick={()=>setLang('ro')}>RO</button>
+        </div>
+        {currentNode&&<button type="button" className="header-entity-action" aria-label={t.openDetail}
+          title={t.openDetail} aria-expanded={detailPanelOpen}
+          onClick={()=>{
+            if(detailPanelOpen){closeDetailPanel();return;}
+            setDetailPanelOpen(true);
+            if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+            else if(window.innerWidth<1100)setModulePanelOpen(false);
+          }}><span className="detail-info-glyph" aria-hidden="true">i</span></button>}
       </div>
     </header>
     <div className="workspace">
