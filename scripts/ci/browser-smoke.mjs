@@ -1784,8 +1784,8 @@ async function headerEntityButtonPlacement(cdp){
   await unselected.wait("!!document.querySelector('.site-header .header-actions .language')",
     'Unselected header controls');
   const controls=await unselected.eval("(()=>{const a=document.querySelector('.site-header .header-actions');return {languages:a.querySelectorAll('.language button').length,detail:!!a.querySelector('.header-entity-action'),right:a.getBoundingClientRect().right,scroll:document.documentElement.scrollWidth-innerWidth}})()");
-  assert(controls.languages===2&&!controls.detail&&controls.right>=380&&controls.scroll<=1,
-    'No phantom details button before selection; languages stay right');
+  assert(controls.languages===2&&!controls.detail&&controls.right>=378&&controls.scroll<=1,
+    'No phantom details button before selection; languages stay right with 11px mobile padding: '+JSON.stringify(controls));
   await unselected.close();
 }
 
