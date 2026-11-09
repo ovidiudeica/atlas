@@ -78,5 +78,7 @@
       "path": "docs/audits/SIM-R7-RESULTS.json",
       "sha256": "733e1a4b9a516a11ec259b4f4316fb9de3c05cacf4f4c72667d455381f284bfa"
     }
-  ]
+  ],
+  "integrationBaseCommit": "96a57ccaf66765c8ab419c926ae06a070d9196e2",
+  "continuityNote": "Main advanced during research through protected PR78; its independent header layout changes were merged without overwriting them. Initial symbol/geographic baseline remains SIM-R7."
 }

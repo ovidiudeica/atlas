@@ -1,0 +1,109 @@
+{
+  "stage": "SIM-R8",
+  "checkedAt": "2026-11-09T23:32:51.092Z",
+  "platform": "win32",
+  "node": "v24.21.0",
+  "staticTests": {
+    "passed": 270,
+    "failed": 0,
+    "skipped": 0
+  },
+  "typeScriptVite": "PASS",
+  "reproducibility": {
+    "SIM_R7": "PASS_7_ARTIFACTS",
+    "SIM_R8": "PASS_6_ISOLATED_ARTIFACTS_SOURCE_UNCHANGED",
+    "gzipOS": 255
+  },
+  "Chromium": {
+    "localFocused": "PASS_SIM_R31_R4_R5_R6_R8_DESKTOP_MOBILE",
+    "widths": [
+      1440,
+      390,
+      360
+    ],
+    "previousFullWindowsRun": "Passed preceding suites, stopped at obsolete external-only Taraclia source assertion. Exact-ID normative-source expectation corrected; no UI defect hidden.",
+    "fullExactSHA": "Required independently in GitHub Actions; not asserted by this local record",
+    "screenshots": [
+      "desktop-sim-r8-osm-r10664180.png",
+      "desktop-sim-r8-osm-r1699033.png",
+      "desktop-sim-r8-osm-r2248660.png",
+      "mobile-sim-r8-osm-r10664180.png",
+      "mobile-sim-r8-osm-r1699033.png",
+      "mobile-sim-r8-osm-r2248660.png"
+    ],
+    "decodedNormativeImages": "PASS_DESKTOP1440_MOBILE360_ALL_THREE_CHANGED_HOLDERS",
+    "screenshotHashes": [
+      {
+        "name": "desktop-sim-r8-osm-r10664180.png",
+        "sha256": "dfcb2923c30ae5aa9311f9718766bff7cb80d6036604c9ce87e411546d495996"
+      },
+      {
+        "name": "desktop-sim-r8-osm-r1699033.png",
+        "sha256": "4d2d8b6bc75195a1706a00902c248cb469d96f36e060785b5bb599174f5c5a32"
+      },
+      {
+        "name": "desktop-sim-r8-osm-r2248660.png",
+        "sha256": "6bca44b0136512cd4a70c76f4adeb43185873c7502f02302836c67ea9d80ce05"
+      },
+      {
+        "name": "mobile-sim-r8-osm-r10664180.png",
+        "sha256": "419d401817c36d4d2f6518ab9fc1e2e15b3964215ffcaa51a9e66c2f610b3d12"
+      },
+      {
+        "name": "mobile-sim-r8-osm-r1699033.png",
+        "sha256": "e35702d4828b3e1e86ff113e8d772d42648937ad5c1f345bceb85c7b319912eb"
+      },
+      {
+        "name": "mobile-sim-r8-osm-r2248660.png",
+        "sha256": "8ec9abdcffa16b3d8d7ef1df696cec17e9b642c3a501a8688a8c261f400fc7a0"
+      }
+    ]
+  },
+  "sourceFiles": [
+    {
+      "path": "src/App.tsx",
+      "sha256": "f280e743814bfc1c700deeb38017ecce22eac7c825412f2a4fb8bd66c4947c60"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "b4b2904efaa77ec1ee7b689128ab6bf4c5726ac784bb88841a78c26272a1fe1a"
+    },
+    {
+      "path": "scripts/ci/browser-smoke.mjs",
+      "sha256": "39f436ccc0ab6d7e9336ffac54f5cb6aedaadfc3f3a4c4f9d7539625ba505086"
+    },
+    {
+      "path": "src/data/symbolAudit.mjs",
+      "sha256": "355535aacf1b8eb347c3d60e638efa399f36bf31f4eac36b1d3783cbaf0f4c70"
+    },
+    {
+      "path": "src/data/symbolSelectionPolicy.mjs",
+      "sha256": "894b5cf32aae725309361de3a2db0d486cd0959cdf2a2d089fb26134a55fa65f"
+    },
+    {
+      "path": "src/data/symbolR8Invalidations.mjs",
+      "sha256": "52d20e098fa657fc85fd66268a425111d0e062929f3e17e48f7c1473b6086116"
+    },
+    {
+      "path": "src/data/symbolR8Selections.mjs",
+      "sha256": "08457ecc5c2201feff66c7ba5d39bd5077647114cb3b6afc938cf6ea1546eaf2"
+    },
+    {
+      "path": "src/data/territorialSymbols.mjs",
+      "sha256": "74d67bd08788cada0e643bd4f182ba6f4355e2432b0aa0c28b8955aaa2359538"
+    },
+    {
+      "path": "src/components/SymbolAuditSummary.tsx",
+      "sha256": "d559998e4b1900729880d48de98817137f4b81867b781ee6750bd847da6fc952"
+    },
+    {
+      "path": "public/data/symbols/registry-r8.json.gz",
+      "sha256": "e6fe731e54b35dc872801e8c8f915a0ec70c7674c402c3fbca41760b099f1ba1"
+    },
+    {
+      "path": "public/data/symbols/audit-r8.json.gz",
+      "sha256": "ffe699b225a1fac484918761c4e539dbb1058979fadcbecb4b246e0f94c977b8"
+    }
+  ],
+  "publication": "Post-merge Actions and live Pages hashes required independently."
+}

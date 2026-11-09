@@ -19,3 +19,5 @@ Generatorul02 citește exclusiv registrele/probele comise. Fișierele PNG sunt d
 Trei cazuri de drepturi sunt rezolvate prin înlocuire, nu prin certificarea retroactivă a vechilor opere. Cele41 rămase au impedimente individuale. Cele18 alternative în carantină și31 invalidări istorice rămân; invalidarea nouă Câmpulung este separată. Nu există derogări globale de selecție.
 
 Testele istorice R6/R7 confruntă snapshotul etapei lor pentru verdictele legitim schimbate înR8; testele R8 verifică separat runtime-ul și împiedică fallback-ul vechi. Contractele negative și probele geografice nu sunt slăbite.
+
+Gate-ul03 regenerează în work/sim-r8-repro-* și compară strict cele6 ieșiri cu artefactele sursă, fără rescrierea lor. Această izolare evită blocări temporare Windows ale fișierelor gzip și păstrează identitatea byte-cu-byte. Artefactele temporare rămân checkpointuri locale ignorate de Git.

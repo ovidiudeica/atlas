@@ -1418,9 +1418,9 @@ async function simR31MediaVisualAudit(cdp){
   const examples=[
     {id:'osm-r194271',name:'Alba',source:'commons.wikimedia.org'},
     {id:'osm-r1692078',name:'Anenii Noi',source:'commons.wikimedia.org'},
-    {id:'osm-r1699033',name:'Taraclia',source:'raiontaraclia.md'}
+    {id:'osm-r1699033',name:'Taraclia',source:'presedinte.md/app/webroot/Decrete/241.pdf',local:'taraclia'}
   ];
-  for(const {id,name,source} of examples){
+  for(const {id,name,source,local} of examples){
     const p=await cdp.page(1440,900,false,site+'?lang=en&entity='+id);
     await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
       'SIM-R3.1 desktop map ready '+id);
@@ -1428,8 +1428,8 @@ async function simR31MediaVisualAudit(cdp){
       'SIM-R3.1 card with coat and flag '+id);
     const info=await p.eval("(()=>{const c=document.querySelector('.detail-sidebar .entity-card');const f=[...c.querySelectorAll('.territory-symbol-gallery--editorial figure')];return {assets:f.map(el=>({img:el.querySelector('img')?.src||'',alt:el.querySelector('img')?.alt||'',fallback:!!el.querySelector('.territorial-symbol-fallback'),source:el.querySelector('a')?.href||'',width:el.querySelector('.territory-symbol-frame')?.getBoundingClientRect().width||0})),hasTopSymbol:!!c.querySelector('.entity-title .territorial-symbol-header'),overflow:document.documentElement.scrollWidth-innerWidth}})()");
     assert.equal(info.assets.length,2,'Two SIM-R3.1 symbol tiles '+name);
-    assert(info.assets.every(x=>
-      ((x.img.startsWith('https://')&&x.alt)||(!x.img&&x.fallback))&&
+    assert(info.assets.every((x,i)=>
+      (((local?x.img===site+'symbols/sim-r8/'+local+(i===0?'-coat.png':'-flag.png'):x.img.startsWith('https://'))&&x.alt)||(!x.img&&x.fallback))&&
       x.source.startsWith('https://')&&x.source.includes(source)&&x.width>55),
       'Image or neutral network fallback, source attribution and layout '+name+': '+JSON.stringify(info));
     assert(info.hasTopSymbol&&info.overflow<=1,
@@ -1442,7 +1442,7 @@ async function simR31MediaVisualAudit(cdp){
     await p.wait("!!document.querySelector('.tree-sidebar .tree-list .tree-label-heading .tree-territorial-symbol')",
       'SIM-R3.1 exact-ID tree symbol '+id);
     const row=await p.eval("(()=>{const line=document.querySelector('.tree-sidebar .tree-list .tree-line');const img=line?.querySelector('.tree-territorial-symbol');return {name:line?.querySelector('.node-name')?.textContent?.trim(),src:img?.src||'',fallback:img?.classList.contains('territorial-symbol-fallback')||false,width:img?.getBoundingClientRect().width||0}})()");
-    assert(row.name&&(row.src.startsWith('https://')||row.fallback)&&row.width>=14,
+    assert(row.name&&((local?row.src===site+'symbols/sim-r8/'+local+'-coat.png':row.src.startsWith('https://'))||row.fallback)&&row.width>=14,
       'SIM-R3.1 tree coat or neutral network fallback '+name+': '+JSON.stringify(row));
     await pause(1200);
     const load=await p.eval("(()=>{const imgs=[...document.querySelectorAll('.detail-sidebar .territory-symbol-gallery--editorial img')];return imgs.map(x=>({complete:x.complete,naturalWidth:x.naturalWidth,src:x.src}))})()");
@@ -1841,7 +1841,8 @@ async function simR6Exceptions(cdp){
    assert(info.heading?.includes('/symbols/sim-r8/'+r8+'-coat.png')&&info.coat===info.heading,'SIM-R8 same normative coat in card and gallery '+id+JSON.stringify(info));
    if(id==='osm-r1699033')assert(info.flag?.includes('/symbols/sim-r8/taraclia-flag.png')&&info.flag!==info.coat,'SIM-R8 distinct district flag');
    await p.wait('document.querySelector('+selector+').querySelector(".entity-title img")?.naturalWidth>0','SIM-R8 normative coat loads '+id);
-   const img=await p.eval('(()=>{const i=document.querySelector('+selector+').querySelector(".entity-title img");return {w:i.getBoundingClientRect().width,h:i.getBoundingClientRect().height,alt:i.alt};})()');assert(img.w>0&&img.h>0&&img.alt,'SIM-R8 accessible proportional image '+JSON.stringify(img));
+   await p.eval('(async()=>{const c=document.querySelector('+selector+');await Promise.all([...c.querySelectorAll("img[src*=sim-r8]")].map(i=>i.decode()));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));})()');
+   const img=await p.eval('(()=>{const i=document.querySelector('+selector+').querySelector(".entity-title img");return {w:i.getBoundingClientRect().width,h:i.getBoundingClientRect().height,alt:i.alt,hidden:!!i.closest("[aria-hidden=true]"),galleryAlt:document.querySelector('+selector+').querySelector(".territory-symbol-gallery figure:first-child img")?.alt};})()');assert(img.w>0&&img.h>0&&img.alt===''&&img.hidden&&img.galleryAlt,'SIM-R8 decorative heading and informative gallery image '+JSON.stringify(img));
    await p.snap((mobile?'mobile':'desktop')+'-sim-r8-'+id+'.png');
   }
   if(id==='osm-r9714843')assert(!info.flag,'English-language icon cannot return as Strehaia flag');
