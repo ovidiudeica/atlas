@@ -1116,6 +1116,8 @@ export default function App() {
                 alt={(lang==='ro'?'Drapel':'Flag')+' · '+currentNode.name} />
             </div>
             <figcaption>{lang==='ro'?'Drapel':'Flag'}</figcaption>
+            {globalSymbolsForEntity(currentNode)?.flag?.status==='CANDIDATE'&&
+              <small className="territory-symbol-status">{lang==='ro'?'Imagine candidat · de verificat':'Candidate image · review pending'}</small>}
             {symbolSourceUrl(globalSymbolsForEntity(currentNode)?.flag)&&
               <a className="territory-symbol-source"
                 href={symbolSourceUrl(globalSymbolsForEntity(currentNode)?.flag)!}
