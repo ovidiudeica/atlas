@@ -1426,11 +1426,12 @@ async function simR31MediaVisualAudit(cdp){
       'SIM-R3.1 desktop map ready '+id);
     await p.wait("document.querySelectorAll('.detail-sidebar .territory-symbol-gallery--editorial figure').length===2",
       'SIM-R3.1 card with coat and flag '+id);
-    const info=await p.eval("(()=>{const c=document.querySelector('.detail-sidebar .entity-card');const f=[...c.querySelectorAll('.territory-symbol-gallery--editorial figure')];return {assets:f.map(el=>({img:el.querySelector('img')?.src||'',alt:el.querySelector('img')?.alt||'',source:el.querySelector('a')?.href||'',width:el.querySelector('.territory-symbol-frame')?.getBoundingClientRect().width||0})),hasTopSymbol:!!c.querySelector('.entity-title .territorial-symbol-header'),overflow:document.documentElement.scrollWidth-innerWidth}})()");
+    const info=await p.eval("(()=>{const c=document.querySelector('.detail-sidebar .entity-card');const f=[...c.querySelectorAll('.territory-symbol-gallery--editorial figure')];return {assets:f.map(el=>({img:el.querySelector('img')?.src||'',alt:el.querySelector('img')?.alt||'',fallback:!!el.querySelector('.territorial-symbol-fallback'),source:el.querySelector('a')?.href||'',width:el.querySelector('.territory-symbol-frame')?.getBoundingClientRect().width||0})),hasTopSymbol:!!c.querySelector('.entity-title .territorial-symbol-header'),overflow:document.documentElement.scrollWidth-innerWidth}})()");
     assert.equal(info.assets.length,2,'Two SIM-R3.1 symbol tiles '+name);
-    assert(info.assets.every(x=>x.img.startsWith('https://')&&
-      x.source.startsWith('https://')&&x.source.includes(source)&&x.alt&&x.width>55),
-      'Media URLs, attribution, accessible alt and geometry '+name+': '+JSON.stringify(info));
+    assert(info.assets.every(x=>
+      ((x.img.startsWith('https://')&&x.alt)||(!x.img&&x.fallback))&&
+      x.source.startsWith('https://')&&x.source.includes(source)&&x.width>55),
+      'Image or neutral network fallback, source attribution and layout '+name+': '+JSON.stringify(info));
     assert(info.hasTopSymbol&&info.overflow<=1,
       'Desktop entity symbol and no viewport overflow '+name+': '+JSON.stringify(info));
     await p.eval("document.querySelector('.module-rail button:first-child').click()");
@@ -1440,9 +1441,9 @@ async function simR31MediaVisualAudit(cdp){
     await p.call('Input.insertText',{text:id});
     await p.wait("!!document.querySelector('.tree-sidebar .tree-list .tree-label-heading .tree-territorial-symbol')",
       'SIM-R3.1 exact-ID tree symbol '+id);
-    const row=await p.eval("(()=>{const line=document.querySelector('.tree-sidebar .tree-list .tree-line');const img=line?.querySelector('.tree-territorial-symbol');return {name:line?.querySelector('.node-name')?.textContent?.trim(),src:img?.src||'',width:img?.getBoundingClientRect().width||0}})()");
-    assert(row.name&&row.src.startsWith('https://')&&row.width>=14,
-      'SIM-R3.1 tree image with exact entity '+name+': '+JSON.stringify(row));
+    const row=await p.eval("(()=>{const line=document.querySelector('.tree-sidebar .tree-list .tree-line');const img=line?.querySelector('.tree-territorial-symbol');return {name:line?.querySelector('.node-name')?.textContent?.trim(),src:img?.src||'',fallback:img?.classList.contains('territorial-symbol-fallback')||false,width:img?.getBoundingClientRect().width||0}})()");
+    assert(row.name&&(row.src.startsWith('https://')||row.fallback)&&row.width>=14,
+      'SIM-R3.1 tree coat or neutral network fallback '+name+': '+JSON.stringify(row));
     await pause(1200);
     const load=await p.eval("(()=>{const imgs=[...document.querySelectorAll('.detail-sidebar .territory-symbol-gallery--editorial img')];return imgs.map(x=>({complete:x.complete,naturalWidth:x.naturalWidth,src:x.src}))})()");
     console.log('SIM-R3.1 external images '+id+': '+JSON.stringify(load));
