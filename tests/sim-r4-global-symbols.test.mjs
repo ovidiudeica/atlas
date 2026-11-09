@@ -110,3 +110,9 @@ test('SIM-R4: national symbols and homonymous authority collisions are not local
   }
  }
 });
+
+test('SIM-R4: Commons holder descriptions resolve Bunești homonyms and reject Leova at Cneazevca',()=>{
+ assert.equal(registry['osm-r19113640'].coat,null);
+ assert.equal(registry['osm-r10519773'].coat.file,'ROU BV Bunesti CoA.png');
+ assert.equal(registry['osm-r14778265'].coat.file,'ROU SV Bunesti CoA.png');
+});

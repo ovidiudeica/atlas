@@ -1051,7 +1051,7 @@ export default function App() {
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
         <span className={'flag'+(officialSymbols?.coat||headerEditorial?.coat?' flag--coat':'')} aria-hidden="true">
-          {editorialPreferred?
+          {headerEditorial?
             <TerritorialSymbolImage key={currentNode.id} className="territorial-symbol-header"
               src={symbolAssetUrl(editorialPreferred)} alt="" loading="eager" />:
             primarySymbolPath&&<img src={import.meta.env.BASE_URL+primarySymbolPath}

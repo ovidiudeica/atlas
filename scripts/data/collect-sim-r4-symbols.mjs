@@ -2,7 +2,7 @@
  * SIM-R4: reproducible exact-identity discovery. Never match symbols by names.
  * Network responses are cached; errors remain distinct from empty results.
  */
-import {applySymbolConflicts} from './sim-r4-policy.mjs';
+import {applySymbolConflicts,candidateConflict} from './sim-r4-policy.mjs';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {gunzipSync,gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
@@ -169,6 +169,8 @@ for(let i=0;i<files.length;i+=40){
 }
 for(const row of Object.values(rows)){
  for(const candidate of row.candidates){
+  const conflict=candidateConflict(row.atlasId,candidate.file);
+  if(conflict){candidate.eligible=false;candidate.reviewNotes.push(conflict);}
   const info=media[candidate.file.replaceAll('_',' ')];
   if(info&&['image/svg+xml','image/png','image/jpeg','image/gif','image/webp','image/avif'].includes(info.mime)){
    Object.assign(candidate,{url:info.url,sourceUrl:info.descriptionurl,mime:info.mime,sha1:info.sha1,
@@ -177,10 +179,16 @@ for(const row of Object.values(rows)){
  }
  for(const kind of ['coat','flag']){
   const usable=row.candidates.filter(c=>c.symbolType===kind&&c.eligible);
-  if(!row[kind]&&usable.length===1){
-   const c=usable[0];row[kind]={kind:'commons',file:c.file,url:c.url,sourceUrl:c.sourceUrl,tier:'B'};
+  if(!row[kind]&&usable.length){
+   const wikipediaCount=c=>(c.discoveredIn?.length||0)+(c.sourceType==='wikipedia-infobox'?1:0);
+   usable.sort((a,b)=>wikipediaCount(b)-wikipediaCount(a)||
+    Number(/\.svg$/i.test(b.file))-Number(/\.svg$/i.test(a.file))||
+    preferredLanguages.indexOf(a.sourceLanguage||'zz')-preferredLanguages.indexOf(b.sourceLanguage||'zz')||
+    a.file.localeCompare(b.file));
+   const c=usable[0];
+   if(usable.length>1)row.reviewNotes.push('Multiple source renderings: selected by Wikipedia corroboration and SVG preference; alternatives retained for SIM-R5');row[kind]={kind:'commons',file:c.file,url:c.url,sourceUrl:c.sourceUrl,tier:'B'};
    row.source[kind]=c.sourceUrl;row.sourceLanguage[kind]=c.sourceLanguage;row.sourceType[kind]=c.sourceType+'-commons';row.status[kind]='CANDIDATE';
-  }else if(!row[kind]&&usable.length>1)row.reviewNotes.push('Multiple current '+kind+' candidates; not automatically selected');
+  }
  }
 }
 const institutionalJobs=[];
