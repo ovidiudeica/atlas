@@ -135,21 +135,21 @@ const EN_OFFICIAL_EXACT=Object.freeze({
   'stat-MD12':'Eastern Part (Left Bank of the Dniester)'
 });
 const EN_OFFICIAL_PREFIXES=Object.freeze([
-  [/^Județul\s+/iu,name=>name+' County'],
-  [/^Raionul\s+/iu,name=>name+' District'],
-  [/^Municipiul\s+/iu,name=>'Municipality of '+name],
-  [/^Municipalitatea\s+/iu,name=>'Municipality of '+name],
-  [/^Orașul\s+/iu,name=>'Town of '+name],
-  [/^Comuna\s+/iu,name=>name+' Commune'],
-  [/^Satul\s+/iu,name=>name+' Village'],
-  [/^Sovetul sătesc\s+/iu,name=>name+' Village Council'],
-  [/^Sovetul orășenesc\s+/iu,name=>name+' Town Council'],
-  [/^Sectorul\s+/iu,name=>/^Sector\b/iu.test(name)?name:name+' Sector'],
-  [/^Districtul\s+/iu,name=>name+' District'],
-  [/^Unitatea teritorială autonomă\s+/iu,name=>'Autonomous Territorial Unit of '+name],
-  [/^Regiunea de dezvoltare\s+/iu,name=>name+' Development Region'],
-  [/^Regiunea\s+/iu,name=>name+' Region'],
-  [/^Macroregiunea\s+/iu,name=>name]
+  [/^Judetul\s+/i,name=>name+' County'],
+  [/^Raionul\s+/i,name=>name+' District'],
+  [/^Municipiul\s+/i,name=>'Municipality of '+name],
+  [/^Municipalitatea\s+/i,name=>'Municipality of '+name],
+  [/^Orasul\s+/i,name=>'Town of '+name],
+  [/^Comuna\s+/i,name=>name+' Commune'],
+  [/^Satul\s+/i,name=>name+' Village'],
+  [/^Sovetul satesc\s+/i,name=>name+' Village Council'],
+  [/^Sovetul orasenesc\s+/i,name=>name+' Town Council'],
+  [/^Sectorul\s+/i,name=>/^Sector\b/i.test(name)?name:name+' Sector'],
+  [/^Districtul\s+/i,name=>name+' District'],
+  [/^Unitatea teritoriala autonoma\s+/i,name=>'Autonomous Territorial Unit of '+name],
+  [/^Regiunea de dezvoltare\s+/i,name=>name+' Development Region'],
+  [/^Regiunea\s+/i,name=>name+' Region'],
+  [/^Macroregiunea\s+/i,name=>name]
 ]);
 
 export function officialNameForLocale(node,lang){
@@ -158,16 +158,17 @@ export function officialNameForLocale(node,lang){
   if(!original)return shortTreeName(node,'en');
   if(Object.hasOwn(EN_OFFICIAL_EXACT,node.id))
     return EN_OFFICIAL_EXACT[node.id];
-  if(/^Republica Moldovenească Nistreană$/iu.test(original))
+  const normalized=asciiEnglish(original);
+  if(/^Republica Moldoveneasca Nistreana$/i.test(normalized))
     return 'Pridnestrovian Moldavian Republic';
   const englishName=shortTreeName(node,'en');
   for(const [prefix,format] of EN_OFFICIAL_PREFIXES){
-    if(prefix.test(original))return format(englishName);
+    if(prefix.test(normalized))return format(englishName);
   }
   // An unqualified name is a toponym; reuse the reviewed English tree label.
   // For an otherwise unrecognized institutional descriptor, retain source
   // wording rather than invent an official English legal designation.
-  if(!/^(?:Unitățile|Unitatea|Administrația|Consiliul|Republica|Teritoriul|Zona)\b/iu.test(original))
+  if(!/^(?:Unitatile|Unitatea|Administratia|Consiliul|Republica|Teritoriul|Zona)\b/i.test(normalized))
     return englishName;
   return original;
 }
