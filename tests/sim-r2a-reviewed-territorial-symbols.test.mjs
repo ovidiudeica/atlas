@@ -90,7 +90,9 @@ test('SIM-R2a: card visibly distinguishes verified coats from country flags and 
   const css=readFileSync(new URL('../src/styles.css',import.meta.url),'utf8');
   const component=readFileSync(new URL('../src/components/EntityCardSection.tsx',import.meta.url),'utf8');
   assert.match(app,/officialSymbolsForEntity\(currentNode\)/);
-  assert.match(app,/officialSymbols\?\.coat/);
+  const coat=readFileSync(new URL('../src/data/entityCoat.mjs',import.meta.url),'utf8');
+  assert.match(coat,/reviewed\?\.coat/);
+  assert.match(app,/src=\{headerCoatSrc\}/);
   assert.match(app,/kind="symbols"/);
   assert.match(app,/officialSymbols\.holder\[lang\]/);
   assert.match(app,/officialSymbols\.legalUrl/);
