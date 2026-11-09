@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.primariahunedoara.ro/files/pages_files/STATUT_HD.pdf",
+    "finalUrl": "https://www.primariahunedoara.ro/files/pages_files/STATUT_HD.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:28:37.795Z",
+    "sha256": "819ca734c051f26d97328cabaa3d6429472dd537bc852e0450044f3e4df0ac6a",
+    "bytes": 510790,
+    "contentType": "application/pdf"
+  },
+  {
+    "url": "https://bendery.gospmr.org/gerb_flag_bendery.html",
+    "finalUrl": "https://bendery.gospmr.org/gerb_flag_bendery.html",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:28:40.098Z",
+    "sha256": "00a07d3b025a84357583b8987dbd16fcd251ef77792685c7301cb0c3d013ccf5",
+    "bytes": 43146,
+    "contentType": "text/html; charset=CP1251"
+  },
+  {
+    "url": "https://talmaciu.ro/",
+    "finalUrl": "https://talmaciu.ro/",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:28:41.972Z",
+    "sha256": "42bea4c34c76307f786913929252d0fe9254e0ca4b6143e1d80e41ff2c239e65",
+    "bytes": 185693,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Coa_Romania_Town_Vajdahunyad_History.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "finalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Coa_Romania_Town_Vajdahunyad_History.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:28:45.203Z",
+    "sha256": "4eca7d97e89a943782cb9afe1433b9e43c1901392be4b0a832db7840a28c54eb",
+    "bytes": 52805,
+    "contentType": "image/svg+xml"
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/ROU_HD_Hunedoara_CoA1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "finalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/ROU_HD_Hunedoara_CoA1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:28:47.058Z",
+    "sha256": "fc8999875f923c41ee04f3695f74455759df24d0d0b52e5a4c9908e8cd8caa9f",
+    "bytes": 22585,
+    "contentType": "image/jpeg"
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Talmesh_before_1918.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "finalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Talmesh_before_1918.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:28:48.619Z",
+    "sha256": "ab557bdcad6a24a97ab63c2d00714987268c5ad5d546ee0e5a1da3f2f85e647b",
+    "bytes": 923997,
+    "contentType": "image/jpeg"
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "finalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:28:50.641Z",
+    "sha256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee",
+    "bytes": 581745,
+    "contentType": "image/png"
+  }
+]

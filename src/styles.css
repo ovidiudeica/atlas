@@ -548,3 +548,8 @@
 }
 
 .territory-symbol-status{display:block;font-size:10px;line-height:1.4;color:#715213;overflow-wrap:anywhere;margin:4px 0}
+/* SIM-R5: audit details remain within each compact symbol tile. */
+.symbol-audit { font-size:.72rem; line-height:1.4; margin-top:.4rem; min-width:0; overflow-wrap:anywhere; }
+.symbol-audit summary { cursor:pointer; color:var(--muted); }
+.symbol-audit p { margin:.4rem 0; }
+.symbol-audit a { display:block; margin-top:.3rem; overflow-wrap:anywhere; }

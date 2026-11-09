@@ -1,0 +1,12 @@
+{
+  "atlasId": "osm-r90689",
+  "kind": "flag",
+  "sha256": "57e1c4d27feec8e7a459e2dc522b9e6ec3eec996d9504733a9a17d9b4fce3026",
+  "viewBox": true,
+  "colours": true,
+  "rectangles": true,
+  "legalSource": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/279161",
+  "act": "Law 75/1994, annex 1 as amended by Law 176/19 June 2023",
+  "comparison": "Current primary legislative table gives RGB 0,43,127;252,209,22;206,17,38, three equal bands and 2:3 ratio. Actual SVG rectangles match exactly.",
+  "retrievalLimitation": "Legal text read through public legislative portal extraction; direct TLS request unavailable. SVG independently downloaded."
+}

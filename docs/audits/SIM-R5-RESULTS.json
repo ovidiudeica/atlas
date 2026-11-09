@@ -1,0 +1,1141 @@
+{
+  "schema": "atlas-sim-r5-audit-v1",
+  "baseCommit": "7288b44f2b0e355b4c4b585ee5b87e6574fae60b",
+  "catalogSHA256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+  "baseline": {
+    "entities": 4283,
+    "slots": 8566,
+    "existingImages": 1824,
+    "coat": 1518,
+    "flag": 306,
+    "both": 297,
+    "withoutImages": 2756,
+    "candidate": 1679
+  },
+  "results": {
+    "slots": 8566,
+    "examined": 1824,
+    "coats": 1518,
+    "flags": 306,
+    "verdicts": {
+      "MISSING": 6742,
+      "SOURCE_CORROBORATED": 1132,
+      "CANDIDATE_UNVERIFIED": 683,
+      "OUTDATED_VERSION": 2,
+      "VERIFIED_OFFICIAL": 3,
+      "HISTORICAL_ONLY": 1,
+      "DISPUTED": 2,
+      "MISATTRIBUTED": 1
+    },
+    "verifiedCoats": 2,
+    "verifiedFlags": 1,
+    "rightsUnclear": 45,
+    "needsFurtherReview": 1821,
+    "removed": 1,
+    "replaced": 3,
+    "currentCoats": 1517,
+    "currentFlags": 306,
+    "currentUnconfirmed": 1818,
+    "currentVerifiedCoats": 2,
+    "currentVerifiedFlags": 3
+  },
+  "byScope": {
+    "Moldova": {
+      "slots": 2068,
+      "examined": 387,
+      "coats": 197,
+      "flags": 190,
+      "verdicts": {
+        "MISSING": 1681,
+        "SOURCE_CORROBORATED": 172,
+        "CANDIDATE_UNVERIFIED": 211,
+        "OUTDATED_VERSION": 2,
+        "VERIFIED_OFFICIAL": 2
+      },
+      "verifiedCoats": 2,
+      "verifiedFlags": 0,
+      "rightsUnclear": 10,
+      "needsFurtherReview": 385,
+      "removed": 0,
+      "replaced": 2,
+      "currentCoats": 197,
+      "currentFlags": 190,
+      "currentUnconfirmed": 383,
+      "currentVerifiedCoats": 2,
+      "currentVerifiedFlags": 2
+    },
+    "Nistrenia_de_facto": {
+      "slots": 16,
+      "examined": 2,
+      "coats": 1,
+      "flags": 1,
+      "verdicts": {
+        "MISSING": 14,
+        "SOURCE_CORROBORATED": 2
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 2,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 1,
+      "currentFlags": 1,
+      "currentUnconfirmed": 2,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "Romania": {
+      "slots": 6482,
+      "examined": 1435,
+      "coats": 1320,
+      "flags": 115,
+      "verdicts": {
+        "MISSING": 5047,
+        "CANDIDATE_UNVERIFIED": 472,
+        "SOURCE_CORROBORATED": 958,
+        "HISTORICAL_ONLY": 1,
+        "DISPUTED": 2,
+        "MISATTRIBUTED": 1,
+        "VERIFIED_OFFICIAL": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 1,
+      "rightsUnclear": 35,
+      "needsFurtherReview": 1434,
+      "removed": 1,
+      "replaced": 1,
+      "currentCoats": 1319,
+      "currentFlags": 115,
+      "currentUnconfirmed": 1433,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 1
+    }
+  },
+  "byCountry": {
+    "MD": {
+      "slots": 2084,
+      "examined": 389,
+      "coats": 198,
+      "flags": 191,
+      "verdicts": {
+        "MISSING": 1695,
+        "SOURCE_CORROBORATED": 174,
+        "CANDIDATE_UNVERIFIED": 211,
+        "OUTDATED_VERSION": 2,
+        "VERIFIED_OFFICIAL": 2
+      },
+      "verifiedCoats": 2,
+      "verifiedFlags": 0,
+      "rightsUnclear": 10,
+      "needsFurtherReview": 387,
+      "removed": 0,
+      "replaced": 2,
+      "currentCoats": 198,
+      "currentFlags": 191,
+      "currentUnconfirmed": 385,
+      "currentVerifiedCoats": 2,
+      "currentVerifiedFlags": 2
+    },
+    "RO": {
+      "slots": 6482,
+      "examined": 1435,
+      "coats": 1320,
+      "flags": 115,
+      "verdicts": {
+        "MISSING": 5047,
+        "CANDIDATE_UNVERIFIED": 472,
+        "SOURCE_CORROBORATED": 958,
+        "HISTORICAL_ONLY": 1,
+        "DISPUTED": 2,
+        "MISATTRIBUTED": 1,
+        "VERIFIED_OFFICIAL": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 1,
+      "rightsUnclear": 35,
+      "needsFurtherReview": 1434,
+      "removed": 1,
+      "replaced": 1,
+      "currentCoats": 1319,
+      "currentFlags": 115,
+      "currentUnconfirmed": 1433,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 1
+    }
+  },
+  "byAdministrativeType": {
+    "level_1_uat": {
+      "slots": 1096,
+      "examined": 114,
+      "coats": 57,
+      "flags": 57,
+      "verdicts": {
+        "MISSING": 982,
+        "SOURCE_CORROBORATED": 38,
+        "CANDIDATE_UNVERIFIED": 76
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 114,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 57,
+      "currentFlags": 57,
+      "currentUnconfirmed": 114,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "commune_or_independent_village_uat": {
+      "slots": 744,
+      "examined": 94,
+      "coats": 49,
+      "flags": 45,
+      "verdicts": {
+        "MISSING": 650,
+        "SOURCE_CORROBORATED": 28,
+        "OUTDATED_VERSION": 2,
+        "CANDIDATE_UNVERIFIED": 64
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 92,
+      "removed": 0,
+      "replaced": 2,
+      "currentCoats": 49,
+      "currentFlags": 45,
+      "currentUnconfirmed": 92,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 2
+    },
+    "town_uat": {
+      "slots": 96,
+      "examined": 72,
+      "coats": 37,
+      "flags": 35,
+      "verdicts": {
+        "MISSING": 24,
+        "CANDIDATE_UNVERIFIED": 27,
+        "SOURCE_CORROBORATED": 45
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 72,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 37,
+      "currentFlags": 35,
+      "currentUnconfirmed": 72,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "district": {
+      "slots": 64,
+      "examined": 62,
+      "coats": 31,
+      "flags": 31,
+      "verdicts": {
+        "CANDIDATE_UNVERIFIED": 24,
+        "SOURCE_CORROBORATED": 37,
+        "VERIFIED_OFFICIAL": 1,
+        "MISSING": 2
+      },
+      "verifiedCoats": 1,
+      "verifiedFlags": 0,
+      "rightsUnclear": 2,
+      "needsFurtherReview": 62,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 31,
+      "currentFlags": 31,
+      "currentUnconfirmed": 61,
+      "currentVerifiedCoats": 1,
+      "currentVerifiedFlags": 0
+    },
+    "municipality_or_city_uat": {
+      "slots": 28,
+      "examined": 25,
+      "coats": 13,
+      "flags": 12,
+      "verdicts": {
+        "MISSING": 3,
+        "SOURCE_CORROBORATED": 15,
+        "CANDIDATE_UNVERIFIED": 10
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 1,
+      "needsFurtherReview": 25,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 13,
+      "currentFlags": 12,
+      "currentUnconfirmed": 25,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "level_2_municipality": {
+      "slots": 6,
+      "examined": 6,
+      "coats": 3,
+      "flags": 3,
+      "verdicts": {
+        "CANDIDATE_UNVERIFIED": 5,
+        "SOURCE_CORROBORATED": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 6,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 3,
+      "currentFlags": 3,
+      "currentUnconfirmed": 6,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "special_territorial_unit": {
+      "slots": 4,
+      "examined": 2,
+      "coats": 1,
+      "flags": 1,
+      "verdicts": {
+        "VERIFIED_OFFICIAL": 1,
+        "SOURCE_CORROBORATED": 1,
+        "MISSING": 2
+      },
+      "verifiedCoats": 1,
+      "verifiedFlags": 0,
+      "rightsUnclear": 2,
+      "needsFurtherReview": 2,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 1,
+      "currentFlags": 1,
+      "currentUnconfirmed": 1,
+      "currentVerifiedCoats": 1,
+      "currentVerifiedFlags": 0
+    },
+    "subdivision_level_5": {
+      "slots": 20,
+      "examined": 0,
+      "coats": 0,
+      "flags": 0,
+      "verdicts": {
+        "MISSING": 20
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 0,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 0,
+      "currentFlags": 0,
+      "currentUnconfirmed": 0,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "chisinau_sector": {
+      "slots": 8,
+      "examined": 8,
+      "coats": 4,
+      "flags": 4,
+      "verdicts": {
+        "SOURCE_CORROBORATED": 4,
+        "CANDIDATE_UNVERIFIED": 4
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 4,
+      "needsFurtherReview": 8,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 4,
+      "currentFlags": 4,
+      "currentUnconfirmed": 8,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "unclassified": {
+      "slots": 2,
+      "examined": 2,
+      "coats": 1,
+      "flags": 1,
+      "verdicts": {
+        "SOURCE_CORROBORATED": 1,
+        "CANDIDATE_UNVERIFIED": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 1,
+      "needsFurtherReview": 2,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 1,
+      "currentFlags": 1,
+      "currentUnconfirmed": 2,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "state": {
+      "slots": 4,
+      "examined": 4,
+      "coats": 2,
+      "flags": 2,
+      "verdicts": {
+        "SOURCE_CORROBORATED": 3,
+        "VERIFIED_OFFICIAL": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 1,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 3,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 2,
+      "currentFlags": 2,
+      "currentUnconfirmed": 3,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 1
+    },
+    "nistrenia_administrative": {
+      "slots": 2,
+      "examined": 2,
+      "coats": 1,
+      "flags": 1,
+      "verdicts": {
+        "SOURCE_CORROBORATED": 2
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 2,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 1,
+      "currentFlags": 1,
+      "currentUnconfirmed": 2,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "statistical_region": {
+      "slots": 36,
+      "examined": 0,
+      "coats": 0,
+      "flags": 0,
+      "verdicts": {
+        "MISSING": 36
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 0,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 0,
+      "currentFlags": 0,
+      "currentUnconfirmed": 0,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "commune": {
+      "slots": 5724,
+      "examined": 1042,
+      "coats": 1011,
+      "flags": 31,
+      "verdicts": {
+        "MISSING": 4682,
+        "CANDIDATE_UNVERIFIED": 320,
+        "SOURCE_CORROBORATED": 721,
+        "MISATTRIBUTED": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 31,
+      "needsFurtherReview": 1042,
+      "removed": 1,
+      "replaced": 0,
+      "currentCoats": 1010,
+      "currentFlags": 31,
+      "currentUnconfirmed": 1041,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "town": {
+      "slots": 432,
+      "examined": 203,
+      "coats": 185,
+      "flags": 18,
+      "verdicts": {
+        "SOURCE_CORROBORATED": 157,
+        "MISSING": 229,
+        "CANDIDATE_UNVERIFIED": 45,
+        "DISPUTED": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 2,
+      "needsFurtherReview": 203,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 185,
+      "currentFlags": 18,
+      "currentUnconfirmed": 203,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "municipality": {
+      "slots": 204,
+      "examined": 106,
+      "coats": 82,
+      "flags": 24,
+      "verdicts": {
+        "CANDIDATE_UNVERIFIED": 42,
+        "MISSING": 98,
+        "SOURCE_CORROBORATED": 62,
+        "HISTORICAL_ONLY": 1,
+        "DISPUTED": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 1,
+      "needsFurtherReview": 106,
+      "removed": 0,
+      "replaced": 1,
+      "currentCoats": 82,
+      "currentFlags": 24,
+      "currentUnconfirmed": 106,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "county": {
+      "slots": 84,
+      "examined": 81,
+      "coats": 40,
+      "flags": 41,
+      "verdicts": {
+        "CANDIDATE_UNVERIFIED": 64,
+        "SOURCE_CORROBORATED": 17,
+        "MISSING": 3
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 81,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 40,
+      "currentFlags": 41,
+      "currentUnconfirmed": 81,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "sector": {
+      "slots": 12,
+      "examined": 1,
+      "coats": 1,
+      "flags": 0,
+      "verdicts": {
+        "CANDIDATE_UNVERIFIED": 1,
+        "MISSING": 11
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 1,
+      "needsFurtherReview": 1,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 1,
+      "currentFlags": 0,
+      "currentUnconfirmed": 1,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    }
+  },
+  "byAdministrativeLevel": {
+    "2": {
+      "slots": 4,
+      "examined": 4,
+      "coats": 2,
+      "flags": 2,
+      "verdicts": {
+        "SOURCE_CORROBORATED": 3,
+        "VERIFIED_OFFICIAL": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 1,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 3,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 2,
+      "currentFlags": 2,
+      "currentUnconfirmed": 3,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 1
+    },
+    "3": {
+      "slots": 2,
+      "examined": 2,
+      "coats": 1,
+      "flags": 1,
+      "verdicts": {
+        "SOURCE_CORROBORATED": 2
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 2,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 1,
+      "currentFlags": 1,
+      "currentUnconfirmed": 2,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "4": {
+      "slots": 158,
+      "examined": 151,
+      "coats": 75,
+      "flags": 76,
+      "verdicts": {
+        "CANDIDATE_UNVERIFIED": 93,
+        "SOURCE_CORROBORATED": 56,
+        "VERIFIED_OFFICIAL": 2,
+        "MISSING": 7
+      },
+      "verifiedCoats": 2,
+      "verifiedFlags": 0,
+      "rightsUnclear": 4,
+      "needsFurtherReview": 151,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 75,
+      "currentFlags": 76,
+      "currentUnconfirmed": 149,
+      "currentVerifiedCoats": 2,
+      "currentVerifiedFlags": 0
+    },
+    "5": {
+      "slots": 20,
+      "examined": 0,
+      "coats": 0,
+      "flags": 0,
+      "verdicts": {
+        "MISSING": 20
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 0,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 0,
+      "currentFlags": 0,
+      "currentUnconfirmed": 0,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "7": {
+      "slots": 10,
+      "examined": 10,
+      "coats": 5,
+      "flags": 5,
+      "verdicts": {
+        "SOURCE_CORROBORATED": 5,
+        "CANDIDATE_UNVERIFIED": 5
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 5,
+      "needsFurtherReview": 10,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 5,
+      "currentFlags": 5,
+      "currentUnconfirmed": 10,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "8": {
+      "slots": 8324,
+      "examined": 1656,
+      "coats": 1434,
+      "flags": 222,
+      "verdicts": {
+        "MISSING": 6668,
+        "SOURCE_CORROBORATED": 1066,
+        "CANDIDATE_UNVERIFIED": 584,
+        "OUTDATED_VERSION": 2,
+        "HISTORICAL_ONLY": 1,
+        "DISPUTED": 2,
+        "MISATTRIBUTED": 1
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 35,
+      "needsFurtherReview": 1654,
+      "removed": 1,
+      "replaced": 3,
+      "currentCoats": 1433,
+      "currentFlags": 222,
+      "currentUnconfirmed": 1653,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 2
+    },
+    "9": {
+      "slots": 12,
+      "examined": 1,
+      "coats": 1,
+      "flags": 0,
+      "verdicts": {
+        "CANDIDATE_UNVERIFIED": 1,
+        "MISSING": 11
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 1,
+      "needsFurtherReview": 1,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 1,
+      "currentFlags": 0,
+      "currentUnconfirmed": 1,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    },
+    "null": {
+      "slots": 36,
+      "examined": 0,
+      "coats": 0,
+      "flags": 0,
+      "verdicts": {
+        "MISSING": 36
+      },
+      "verifiedCoats": 0,
+      "verifiedFlags": 0,
+      "rightsUnclear": 0,
+      "needsFurtherReview": 0,
+      "removed": 0,
+      "replaced": 0,
+      "currentCoats": 0,
+      "currentFlags": 0,
+      "currentUnconfirmed": 0,
+      "currentVerifiedCoats": 0,
+      "currentVerifiedFlags": 0
+    }
+  },
+  "gagauzia": {
+    "slots": 60,
+    "examined": 13,
+    "coats": 8,
+    "flags": 5,
+    "verdicts": {
+      "VERIFIED_OFFICIAL": 1,
+      "SOURCE_CORROBORATED": 5,
+      "MISSING": 47,
+      "CANDIDATE_UNVERIFIED": 7
+    },
+    "verifiedCoats": 1,
+    "verifiedFlags": 0,
+    "rightsUnclear": 2,
+    "needsFurtherReview": 13,
+    "removed": 0,
+    "replaced": 0,
+    "currentCoats": 8,
+    "currentFlags": 5,
+    "currentUnconfirmed": 12,
+    "currentVerifiedCoats": 1,
+    "currentVerifiedFlags": 0
+  },
+  "institutionalAccess": {
+    "cases": 1207,
+    "holders": 1200,
+    "recovered": 300,
+    "stillInaccessible": 907,
+    "archiveServiceProbe": {
+      "url": "https://archive.org/wayback/available?url=https%3A%2F%2Fbriceni.md%2Fstema-raionului-briceni%2F",
+      "finalUrl": "https://archive.org/wayback/available?url=https%3A%2F%2Fbriceni.md%2Fstema-raionului-briceni%2F",
+      "status": 429,
+      "checkedAt": "2026-11-09T07:01:39.473Z",
+      "contentType": "text/html; charset=utf-8",
+      "error": "Error: HTTP 429"
+    }
+  },
+  "sources": {
+    "wikidataEntities": 1542,
+    "commonsFiles": 2268,
+    "wikipediaAttempts": 38494,
+    "wikipediaRetrieved": 38494,
+    "documentSearchEntities": 1547,
+    "armorialPages": 174,
+    "presidentialDecreePDFs": 61,
+    "independentImageSHA256": 195,
+    "sourceReportedOriginalSHA1": 1780
+  },
+  "statisticalRegions": [
+    {
+      "atlasId": "stat-MD11",
+      "name": "Partea de Vest (partea dreapta a Nistrului)",
+      "country": "MD",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-MD111",
+      "name": "Regiunea Nord",
+      "country": "MD",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-MD112",
+      "name": "Regiunea Centru",
+      "country": "MD",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-MD113",
+      "name": "Regiunea Sud",
+      "country": "MD",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-MD12",
+      "name": "Partea de Est (partea stîngă a Nistrului)",
+      "country": "MD",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-MD120",
+      "name": "Unitățile administrativ-teritoriale din stînga Nistrului",
+      "country": "MD",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO1",
+      "name": "Macroregiunea Unu",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO11",
+      "name": "Nord-Vest",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO12",
+      "name": "Centru",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO2",
+      "name": "Macroregiunea Doi",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO21",
+      "name": "Nord-Est",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO22",
+      "name": "Sud-Est",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO3",
+      "name": "Macroregiunea Trei",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO31",
+      "name": "Sud-Muntenia",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO32",
+      "name": "Bucureşti-Ilfov",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO4",
+      "name": "Macroregiunea Patru",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO41",
+      "name": "Sud-Vest Oltenia",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    },
+    {
+      "atlasId": "stat-RO42",
+      "name": "Vest",
+      "country": "RO",
+      "coat": "MISSING",
+      "flag": "MISSING",
+      "search": "SEARCH_EXECUTED",
+      "finding": "No own symbol established; both nulls preserved, not a claim of nonexistence."
+    }
+  ],
+  "priorityFindings": [
+    {
+      "atlasId": "osm-r377733",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf"
+      ],
+      "act": "HCGMB 47/31 January 2024 amending 76/1993",
+      "finding": "Both baseline slots are null. The retrieved two-page decision changes the saint to Dimitrie cel Nou in monastic dress; its replacement graphic annex is not in the retrieved PDF. Preserve nulls, do not introduce the older soldier representation.",
+      "symbolActs": {
+        "coat": "HCGMB 47/31 January 2024 amending 76/1993"
+      }
+    },
+    {
+      "atlasId": "osm-r2248660",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+        "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg"
+      ],
+      "act": "HG 510/26 June 2026, MO 544/2 July 2026",
+      "finding": "Primary act text recovered through legislative portal extraction; graphic annex retrieval failed. Coat was already null. Flag is independent: the new coat act does not demonstrate that the selected flag has been superseded.",
+      "symbolActs": {
+        "coat": "HG 510/26 June 2026"
+      }
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+        "https://www.cdep.ro/ords/pls/legis/legis_pck.lista_anuala?an=2026&emi=3&nrc=200&rep=0&tip=2"
+      ],
+      "act": "HG 228/16 April 2026, MO 315/21 April 2026",
+      "finding": "Official legislative index corroborates the 2026 act. Full primary act/graphic retrieval failed. Existing coat and flag retained without a new official certification; no proven obsolete assignment is inferred.",
+      "symbolActs": {
+        "coat": "HG 228/16 April 2026"
+      }
+    },
+    {
+      "atlasId": "osm-r59002",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://briceni.md/stema-raionului-briceni/",
+        "https://presedinte.md/app/webroot/Decrete/721-n.pdf"
+      ],
+      "act": "Decree 721-X/7 August 2026; district decision 3/3/3 June 2026",
+      "finding": "Official five-page decree and blazons recovered. Baseline slots are null. Symbol existence is documented, but no new reproduction is introduced in this audit without a reuse assessment.",
+      "symbolActs": {
+        "coat": "Decree 721-X/7 August 2026",
+        "flag": "Decree 721-X/7 August 2026"
+      }
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg"
+      ],
+      "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+      "finding": "Official gazette index reconfirms decree identity. Fresh CNH coat bytes match the existing local JPEG. Full original decree graphic annex not recovered; source corroboration does not newly certify the entire legal chain.",
+      "symbolActs": {
+        "coat": "Decree 1475-VIII/2 March 2020"
+      }
+    },
+    {
+      "atlasId": "osm-r1691801",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg"
+      ],
+      "finding": "City and municipality are distinct certified IDs. Preserve the city assignment as unconfirmed; do not propagate the municipality's 2019 symbol to the city solely because both are named Chișinău.",
+      "symbolActs": {}
+    },
+    {
+      "atlasId": "osm-r90689",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://legislatie.just.ro/Public/DetaliiDocument/2381",
+        "https://legislatie.just.ro/Public/DetaliiDocumentAfis/180207",
+        "https://legislatie.just.ro/Public/DetaliiDocumentAfis/279161"
+      ],
+      "act": "Law 102/1992 as amended by 146/2016; Law 75/1994 as amended by 176/2023 and 12/2024",
+      "finding": "Primary legislative texts checked. Crown introduced in 2016; current flag annex includes 2023 RGB values. Existing image bytes downloaded and hashed. No full primary coat annex comparison completed; do not claim full graphic certification. Actual selected coat inspected: crowned eagle, divided chest shield, sword and sceptre are present. Full primary graphic fidelity remains unconfirmed.",
+      "symbolActs": {
+        "coat": "Law 102/21 September 1992 as amended by Law 146/12 July 2016",
+        "flag": "Law 75/16 July 1994 as amended by Law 176/19 June 2023"
+      }
+    },
+    {
+      "atlasId": "osm-r58974",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://presedinte.md/rom/emblem",
+        "https://presedinte.md/rom/flag"
+      ],
+      "act": "Law 32/7 March 2013; Law 217/17 September 2010, as cited by current presidency pages",
+      "finding": "Current primary descriptions checked; selected image bytes downloaded and hashed. Independent full annex/version-chain comparison remains incomplete. Actual selected coat inspected: eagle, divided ox-head shield, cross, olive branch and sceptre present; no independent full-annex certification.",
+      "symbolActs": {
+        "coat": "Law 32/7 March 2013",
+        "flag": "Law 217/17 September 2010"
+      }
+    },
+    {
+      "atlasId": "osm-r65335",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://www.president.gospmr.org/gos-gerb-pmr/",
+        "https://vspmr.org/about/gosudarstvennie-simvoli/flag-pmr.html",
+        "https://www.president.gospmr.org/pravovye-akty/konstitutsiya-pmr/konstitutsiya-pmr-rus/"
+      ],
+      "finding": "Sources are explicitly de facto authority sources. Indexed constitutional/symbol descriptions corroborate use; presidential direct endpoint returned 404. Selected bytes downloaded and hashed. No international-recognition claim or automatic transfer to Moldova-recognized administrative IDs. Actual selected coat inspected: hammer/sickle, rising sun over river, agricultural wreath and trilingual ribbons. Corroboration concerns de facto use only.",
+      "symbolActs": {}
+    }
+  ],
+  "currentCoverage": {
+    "entities": 4283,
+    "coat": 1517,
+    "flag": 306,
+    "both": 297,
+    "withoutImages": 2757
+  },
+  "currentVerified": {
+    "coat": 2,
+    "flag": 3
+  },
+  "currentVerdicts": {
+    "MISSING": 6743,
+    "SOURCE_CORROBORATED": 1133,
+    "CANDIDATE_UNVERIFIED": 683,
+    "VERIFIED_OFFICIAL": 5,
+    "DISPUTED": 2
+  },
+  "recognizedLeftBank": {
+    "slots": 160,
+    "examined": 14,
+    "coats": 7,
+    "flags": 7,
+    "verdicts": {
+      "MISSING": 146,
+      "CANDIDATE_UNVERIFIED": 14
+    },
+    "verifiedCoats": 0,
+    "verifiedFlags": 0,
+    "rightsUnclear": 0,
+    "needsFurtherReview": 14,
+    "removed": 0,
+    "replaced": 0,
+    "currentCoats": 7,
+    "currentFlags": 7,
+    "currentUnconfirmed": 14,
+    "currentVerifiedCoats": 0,
+    "currentVerifiedFlags": 0
+  },
+  "articleHistory": {
+    "total": 1527,
+    "states": {
+      "RETRIEVED": 1387,
+      "NO_EXACT_LINKED_MATCHING_ARTICLE": 140
+    },
+    "limitation": "Up to five latest revisions of one exact-Wikidata linked, selected-file-matching article per assigned holder. Current article content checked in source-metadata. Not a complete historical diff audit."
+  },
+  "visualReview": {
+    "sourcePairs": 48,
+    "documentedSymbolDecisions": 93,
+    "scope": "Targeted primary-annex visual comparisons; remaining graphic fidelity is explicitly unconfirmed."
+  }
+}

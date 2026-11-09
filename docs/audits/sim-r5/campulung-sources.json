@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/ROU_AG_C%C3%A2mpulung_CoA.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "finalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/ROU_AG_C%C3%A2mpulung_CoA.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:31:10.100Z",
+    "sha256": "ebbec44b29f6796ae4d2831e50bb8eb803ec5ffb638d7d03219b71f18a5cf11b",
+    "bytes": 133208,
+    "contentType": "image/svg+xml"
+  },
+  {
+    "url": "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+    "finalUrl": "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:31:10.486Z",
+    "sha256": "29a8cec6a06f2dae89dbb31f18c34966e890dd59b304ea0ace5218d5d0d172e8",
+    "bytes": 1335137,
+    "contentType": "application/pdf"
+  },
+  {
+    "url": "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf",
+    "finalUrl": "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T08:31:11.331Z",
+    "sha256": "19ff48b1e181ca18b7aa7006886d0d18afaf4e8235a9fb73da737b24edc0ecd6",
+    "bytes": 1838861,
+    "contentType": "application/pdf"
+  }
+]

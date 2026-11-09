@@ -7,6 +7,8 @@ import { territorialRoleLabel as roleLabel, municipalRoleClarification } from '.
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
+import { SymbolAuditSummary } from './components/SymbolAuditSummary';
+import { symbolAuditFor } from './data/symbolAudit.mjs';
 import { cardNameOf, englishSiblingQualifiers, territorialContextNote } from './data/treeNames.mjs';
 import { coatImageForEntity } from './data/entityCoat.mjs';
 import { globalSymbolsForEntity, withGlobalSymbols } from './data/globalSymbols.mjs';
@@ -1096,6 +1098,7 @@ export default function App() {
               alt={lang==='ro'?'Stema '+officialSymbols.holder.ro:
                 'Coat of arms of '+officialSymbols.holder.en} loading="lazy" />
             <figcaption>{lang==='ro'?'Stemă':'Coat of arms'}</figcaption>
+            <SymbolAuditSummary id={currentNode.id} kind="coat" lang={lang} />
           </figure>}
           {!officialSymbols.flag&&<figure>
             <div className="territory-symbol-frame">
@@ -1104,18 +1107,20 @@ export default function App() {
                 alt={(lang==='ro'?'Drapel':'Flag')+' · '+currentNode.name} />
             </div>
             <figcaption>{lang==='ro'?'Drapel':'Flag'}</figcaption>
-            {globalSymbolsForEntity(currentNode)?.flag?.status==='CANDIDATE'&&
+            {globalSymbolsForEntity(currentNode)?.flag?.status==='CANDIDATE'&&symbolAuditFor(currentNode.id,'flag')?.verdict!=='VERIFIED_OFFICIAL'&&
               <small className="territory-symbol-status">{lang==='ro'?'Imagine candidat · de verificat':'Candidate image · review pending'}</small>}
             {symbolSourceUrl(globalSymbolsForEntity(currentNode)?.flag)&&
               <a className="territory-symbol-source"
                 href={symbolSourceUrl(globalSymbolsForEntity(currentNode)?.flag)!}
                 target="_blank" rel="noopener noreferrer">{lang==='ro'?'Sursa imaginii':'Image source'} ↗</a>}
+            <SymbolAuditSummary id={currentNode.id} kind="flag" lang={lang} />
           </figure>}
           {officialSymbols.flag&&<figure>
             <TerritorialSymbolImage className="territory-symbol-media" src={import.meta.env.BASE_URL+'symbols/'+officialSymbols.flag}
               alt={lang==='ro'?'Drapelul '+officialSymbols.holder.ro:
                 'Flag of '+officialSymbols.holder.en} loading="lazy" />
             <figcaption>{lang==='ro'?'Drapel':'Flag'}</figcaption>
+            <SymbolAuditSummary id={currentNode.id} kind="flag" lang={lang} />
           </figure>}
         </div>
         <p className="territory-symbol-owner">
@@ -1147,7 +1152,7 @@ export default function App() {
                   src={symbolAssetUrl(asset)} alt={asset?label+' · '+editorialSymbols.name:label+' — '+(lang==='ro'?'indisponibil':'unavailable')} />
               </div>
               <figcaption>{label}</figcaption>
-              {asset?.status==='CANDIDATE'&&<small className="territory-symbol-status">
+              {asset?.status==='CANDIDATE'&&symbolAuditFor(currentNode.id,kind)?.verdict!=='VERIFIED_OFFICIAL'&&<small className="territory-symbol-status">
                 {lang==='ro'?'Imagine candidat · de verificat':'Candidate image · review pending'}
               </small>}
               {source&&<a className="territory-symbol-source" href={source}
@@ -1155,6 +1160,7 @@ export default function App() {
                 {asset?.tier==='A'?(lang==='ro'?'Sursa instituțională':'Institutional source'):
                   (lang==='ro'?'Sursa și licența':'Source and license')} ↗
               </a>}
+              <SymbolAuditSummary id={currentNode.id} kind={kind} lang={lang} />
             </figure>;
           })}
         </div>

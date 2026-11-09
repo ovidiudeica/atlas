@@ -1,5 +1,5 @@
 export interface EditorialSymbolAsset {
- readonly kind:'commons'|'official';
+ readonly kind:'commons'|'official'|'local';
  readonly tier:'A'|'B';
  readonly status?:'CANDIDATE'|'REVIEWED_SOURCE';
  readonly file?:string;

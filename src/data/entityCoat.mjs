@@ -3,9 +3,11 @@
 import {officialSymbolsForEntity} from './officialSymbols.mjs';
 import {editorialSymbolsForEntity,symbolAssetUrl} from './territorialSymbols.mjs';
 import {withGlobalSymbols} from './globalSymbols.mjs';
+import {symbolIsRemoved} from './symbolAudit.mjs';
 
 export function coatImageForEntity(node,basePath='/'){
   if(!node?.id)return null;
+  if(symbolIsRemoved(node.id,'coat'))return null;
   const reviewed=officialSymbolsForEntity(node);
   if(reviewed?.coat)return basePath+'symbols/'+reviewed.coat;
   const symbols=withGlobalSymbols(node,editorialSymbolsForEntity(node));

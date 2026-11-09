@@ -1,0 +1,62 @@
+[
+  {
+    "file": "chisinau-botanica-coat.png",
+    "sourceSize": [
+      1040,
+      371
+    ],
+    "size": [
+      208,
+      371
+    ],
+    "exactPixels": false
+  },
+  {
+    "file": "chisinau-buiucani-coat.png",
+    "sourceSize": [
+      1040,
+      371
+    ],
+    "size": [
+      208,
+      371
+    ],
+    "exactPixels": false
+  },
+  {
+    "file": "chisinau-centru-coat.png",
+    "sourceSize": [
+      1040,
+      371
+    ],
+    "size": [
+      208,
+      371
+    ],
+    "exactPixels": false
+  },
+  {
+    "file": "chisinau-ciocana-coat.png",
+    "sourceSize": [
+      1040,
+      371
+    ],
+    "size": [
+      208,
+      371
+    ],
+    "exactPixels": false
+  },
+  {
+    "file": "chisinau-riscani-coat.png",
+    "sourceSize": [
+      1040,
+      371
+    ],
+    "size": [
+      208,
+      371
+    ],
+    "exactPixels": false
+  }
+]

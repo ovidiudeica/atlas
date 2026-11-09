@@ -1,0 +1,46 @@
+[
+  {
+    "name": "copanca",
+    "sourceURL": "https://presedinte.md/app/webroot/Decrete/1539.pdf",
+    "sourceSHA256": "739b558d516c84e5983a634f76f31d2c5cb9fe35a49aa8a1fc404de2b7877d5a",
+    "pdfPage": 5,
+    "embeddedImageSize": [
+      1666,
+      2349
+    ],
+    "crop": [
+      536,
+      401,
+      1302,
+      1173
+    ],
+    "outputSize": [
+      512,
+      516
+    ],
+    "outputSHA256": "539f61bce17608d616cfd479de89fbbd9f90862ad823001e5acefd0bbe957f92",
+    "method": "Crop of the colour image embedded in the official decree PDF; no redraw, recolouring or generative processing."
+  },
+  {
+    "name": "valcinet",
+    "sourceURL": "https://presedinte.md/app/webroot/Decrete/51-n.pdf",
+    "sourceSHA256": "f2d337934057f15082d73a108b128a3d75ac6bd5a216f2defd074fd9ce26e4fc",
+    "pdfPage": 5,
+    "embeddedImageSize": [
+      1664,
+      2342
+    ],
+    "crop": [
+      383,
+      549,
+      1380,
+      1539
+    ],
+    "outputSize": [
+      512,
+      508
+    ],
+    "outputSHA256": "cfe729a24ebe5c30cd8a3bbd45353086453ec5dc6c59ede9abe15c67db583bcb",
+    "method": "Crop of the colour image embedded in the official decree PDF; no redraw, recolouring or generative processing."
+  }
+]
