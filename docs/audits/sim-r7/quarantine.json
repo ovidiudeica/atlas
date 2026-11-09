@@ -1,0 +1,724 @@
+{
+  "stage": "SIM-R7",
+  "newEditorialCandidates": 18,
+  "cases": [
+    {
+      "atlasId": "osm-r1699032",
+      "entity": "Unitatea Teritorială Autonomă Găgăuzia",
+      "kind": "coat",
+      "asset": {
+        "file": "Coat of arms of Gagauzia.svg",
+        "url": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Gagauzia.svg",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q164819",
+        "symbolType": "coat",
+        "sha1": "4c8cbf89a6fe76772c42d9c71df7d5cda70d3717"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "UNRELATED_ENTITY",
+            "detail": "Identical reproduction is attributed to another exact holder; documented shared scope is required",
+            "source": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Gagauzia.svg"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Gagauzia.svg"
+    },
+    {
+      "atlasId": "osm-r1699033",
+      "entity": "Taraclia",
+      "kind": "coat",
+      "asset": {
+        "file": "Stema Raionului Taraclia.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Stema_Raionului_Taraclia.png",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q865884",
+        "symbolType": "coat",
+        "sha1": "831358ba8d605520d0b05a2042d9ab665ec72a1c"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q865884"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Stema_Raionului_Taraclia.png"
+    },
+    {
+      "atlasId": "osm-r1699033",
+      "entity": "Taraclia",
+      "kind": "coat",
+      "asset": {
+        "file": "Stema Raionul Taraclia.gif",
+        "url": "https://commons.wikimedia.org/wiki/File:Stema_Raionul_Taraclia.gif",
+        "sourceUrl": "https://uk.wikipedia.org/w/index.php?oldid=48822740",
+        "symbolType": "coat",
+        "sha1": "bda139425e6c055b89b625cc711412726d93282d"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://uk.wikipedia.org/w/index.php?oldid=48822740"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Stema_Raionul_Taraclia.gif"
+    },
+    {
+      "atlasId": "osm-r1699033",
+      "entity": "Taraclia",
+      "kind": "flag",
+      "asset": {
+        "file": "Drapel Raionul Taraclia.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Drapel_Raionul_Taraclia.png",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q865884",
+        "symbolType": "flag",
+        "sha1": "79a4f245d0074aa0ce0798b3de6088b60fa46b5c"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q865884"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Drapel_Raionul_Taraclia.png"
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "entity": "municipiul Chișinău",
+      "kind": "coat",
+      "asset": {
+        "file": "Coat of arms of Chișinău 1991.svg",
+        "url": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Chi%C8%99in%C4%83u_1991.svg",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q21197",
+        "symbolType": "coat",
+        "sha1": "61cb28523bec6f62ac84b8aa7063397e89739be8"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q21197"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Chi%C8%99in%C4%83u_1991.svg"
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "entity": "municipiul Chișinău",
+      "kind": "coat",
+      "asset": {
+        "file": "Coat of Arms of Chișinău.svg",
+        "url": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q21197",
+        "symbolType": "coat",
+        "sha1": "245cbf6face7429b8b11a40fbd3ec449633e5a3e"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "PARENT_ADMIN_SYMBOL",
+            "detail": "Identical reproduction is attributed to another exact holder; documented shared scope is required",
+            "source": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg"
+    },
+    {
+      "atlasId": "osm-r1813297",
+      "entity": "Sectorul Buiucani",
+      "kind": "coat",
+      "asset": {
+        "file": "COA Buiucani.png",
+        "url": "https://commons.wikimedia.org/wiki/File:COA_Buiucani.png",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q1003159",
+        "symbolType": "coat",
+        "sha1": "2a86451a3bb3497f1e31cf2462e219d47b2ba07d"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q1003159"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:COA_Buiucani.png"
+    },
+    {
+      "atlasId": "osm-r1813297",
+      "entity": "Sectorul Buiucani",
+      "kind": "coat",
+      "asset": {
+        "file": "Stema sectorului Buiucani.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Buiucani.png",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379117858",
+        "symbolType": "coat",
+        "sha1": "e4026be70bb7569620a6d26a697b2b175345dc19"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://en.wikipedia.org/w/index.php?oldid=1379117858"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Buiucani.png"
+    },
+    {
+      "atlasId": "osm-r1813306",
+      "entity": "sectorul Botanica",
+      "kind": "coat",
+      "asset": {
+        "file": "COA Botanica.png",
+        "url": "https://commons.wikimedia.org/wiki/File:COA_Botanica.png",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q894628",
+        "symbolType": "coat",
+        "sha1": "dc60db8f064f5650e41728b3ebb140e13ea65b9c"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q894628"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:COA_Botanica.png"
+    },
+    {
+      "atlasId": "osm-r1813306",
+      "entity": "sectorul Botanica",
+      "kind": "coat",
+      "asset": {
+        "file": "Stema sectorului Botanica.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Botanica.png",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379117854",
+        "symbolType": "coat",
+        "sha1": "7d6ea36d22c1bdcdeab1c791f939520d1dff29bf"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://en.wikipedia.org/w/index.php?oldid=1379117854"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Botanica.png"
+    },
+    {
+      "atlasId": "osm-r1813315",
+      "entity": "sectorul Ciocana",
+      "kind": "coat",
+      "asset": {
+        "file": "COA Ciocana.png",
+        "url": "https://commons.wikimedia.org/wiki/File:COA_Ciocana.png",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q1092642",
+        "symbolType": "coat",
+        "sha1": "c4215b396fac77c54dd2d60623c8d90c223c3243"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q1092642"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:COA_Ciocana.png"
+    },
+    {
+      "atlasId": "osm-r1813315",
+      "entity": "sectorul Ciocana",
+      "kind": "coat",
+      "asset": {
+        "file": "Stema sectorului Ciocana.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Ciocana.png",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379117872",
+        "symbolType": "coat",
+        "sha1": "019106ed353ebcff5a7b653a3c085f94b82fc06e"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://en.wikipedia.org/w/index.php?oldid=1379117872"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Ciocana.png"
+    },
+    {
+      "atlasId": "osm-r1813316",
+      "entity": "sectorul Rîșcani",
+      "kind": "coat",
+      "asset": {
+        "file": "COA Râșcani.png",
+        "url": "https://commons.wikimedia.org/wiki/File:COA_R%C3%A2%C8%99cani.png",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q2038449",
+        "symbolType": "coat",
+        "sha1": "7181f7e944b3efd7ea081041e0aae40ad52ad500"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q2038449"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:COA_R%C3%A2%C8%99cani.png"
+    },
+    {
+      "atlasId": "osm-r1813316",
+      "entity": "sectorul Rîșcani",
+      "kind": "coat",
+      "asset": {
+        "file": "Stema sectorului Râșcani.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_R%C3%A2%C8%99cani.png",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379117878",
+        "symbolType": "coat",
+        "sha1": "9b9abf2fb82a43e9243ffc6ce1131d60c021bc23"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://en.wikipedia.org/w/index.php?oldid=1379117878"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_R%C3%A2%C8%99cani.png"
+    },
+    {
+      "atlasId": "osm-r58512",
+      "entity": "Sectorul Centru",
+      "kind": "coat",
+      "asset": {
+        "file": "COA Centru.png",
+        "url": "https://commons.wikimedia.org/wiki/File:COA_Centru.png",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q1054385",
+        "symbolType": "coat",
+        "sha1": "53d0167b9c6b447ec03ab113462af7a5a343ba5f"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q1054385"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:COA_Centru.png"
+    },
+    {
+      "atlasId": "osm-r58512",
+      "entity": "Sectorul Centru",
+      "kind": "coat",
+      "asset": {
+        "file": "Stema sectorului Centru.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Centru.png",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379117862",
+        "symbolType": "coat",
+        "sha1": "e1ee9b4d861b8eb020e171504a1ccb02846b2b76"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://en.wikipedia.org/w/index.php?oldid=1379117862"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Centru.png"
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "entity": "Municipiul Câmpulung",
+      "kind": "coat",
+      "asset": {
+        "file": "ROU AG Câmpulung CoA.svg",
+        "url": "https://commons.wikimedia.org/wiki/File:ROU_AG_C%C3%A2mpulung_CoA.svg",
+        "sourceUrl": "https://www.wikidata.org/wiki/Q736296",
+        "symbolType": "coat",
+        "sha1": "db5016ffb447600d5cb5c52d71ef6a063f9e7dcc"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://www.wikidata.org/wiki/Q736296"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:ROU_AG_C%C3%A2mpulung_CoA.svg"
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "entity": "Municipiul Câmpulung",
+      "kind": "coat",
+      "asset": {
+        "file": "Interbelic Campulung CoA.png",
+        "url": "https://commons.wikimedia.org/wiki/File:Interbelic_Campulung_CoA.png",
+        "sourceUrl": "https://uk.wikipedia.org/w/index.php?oldid=48557878",
+        "symbolType": "coat",
+        "sha1": "71ec50bfc5441b4ec039f9ee5d5927266f97a9fb"
+      },
+      "assessment": {
+        "decision": "QUARANTINE",
+        "reasons": [
+          {
+            "code": "INSUFFICIENT_IDENTITY_EVIDENCE",
+            "detail": "Exact identity, explicit territorial declaration and hash-bound editorial review are required; header/domain/infobox/filename/QID alone do not suffice",
+            "source": "https://uk.wikipedia.org/w/index.php?oldid=48557878"
+          }
+        ]
+      },
+      "reason": "Unselected alternative: exact current graphic, holder and hash-bound editorial approval have not all been demonstrated.",
+      "currentImagePreserved": true,
+      "rightsDecision": "RIGHTS_UNRESOLVED",
+      "source": "https://commons.wikimedia.org/wiki/File:Interbelic_Campulung_CoA.png"
+    }
+  ],
+  "historicalInvalidationRetests": [
+    {
+      "atlasId": "osm-r1216705",
+      "kind": "flag",
+      "category": "INSUFFICIENT_IDENTITY_EVIDENCE",
+      "source": "https://commons.wikimedia.org/wiki/File:Drapel_Copanca,_Moldova.jpg",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r19095396",
+      "kind": "flag",
+      "category": "INSUFFICIENT_IDENTITY_EVIDENCE",
+      "source": "https://commons.wikimedia.org/wiki/File:Drapel_Valcinet,_Calarasi.jpg",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r10494274",
+      "kind": "coat",
+      "category": "INSUFFICIENT_IDENTITY_EVIDENCE",
+      "source": "https://commons.wikimedia.org/wiki/File:Coa_Romania_Town_Vajdahunyad_History.svg",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14772859",
+      "kind": "coat",
+      "category": "UNRELATED_ENTITY",
+      "source": "https://commons.wikimedia.org/wiki/File:ROU_BR_Faurei_CoA.jpg",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r10715725",
+      "kind": "coat",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://primarialeteaveche.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r11349492",
+      "kind": "flag",
+      "category": "LANGUAGE_ICON",
+      "source": "https://www.bucerdea-granoasa.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r11670644",
+      "kind": "coat",
+      "category": "PARENT_ADMIN_SYMBOL",
+      "source": "https://vetis.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r12594180",
+      "kind": "coat",
+      "category": "INSTITUTIONAL_WORDMARK",
+      "source": "https://hiliseu-horia.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r12709722",
+      "kind": "coat",
+      "category": "INSTITUTIONAL_WORDMARK",
+      "source": "https://www.auseu.ro/public/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r13137637",
+      "kind": "flag",
+      "category": "LANGUAGE_ICON",
+      "source": "https://poienariidemuscel.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r13833306",
+      "kind": "coat",
+      "category": "INSTITUTIONAL_WORDMARK",
+      "source": "https://comunaroseti.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14194836",
+      "kind": "coat",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://comunaardeoani.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14194837",
+      "kind": "coat",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://comunascorteni.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14701120",
+      "kind": "coat",
+      "category": "DECORATIVE_GRAPHIC",
+      "source": "https://scortoasa.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14701730",
+      "kind": "coat",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://primariapredeal-sarari.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14701989",
+      "kind": "coat",
+      "category": "PHOTOGRAPH",
+      "source": "https://www.primariabisoca.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14735409",
+      "kind": "flag",
+      "category": "PHOTOGRAPH",
+      "source": "https://www.primariacirligele.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14735435",
+      "kind": "coat",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://comunaciorasti.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14739041",
+      "kind": "coat",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://glavanesti.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14739043",
+      "kind": "flag",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://dealumorii.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14743203",
+      "kind": "coat",
+      "category": "PARENT_ADMIN_SYMBOL",
+      "source": "https://bira.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14743630",
+      "kind": "coat",
+      "category": "DECORATIVE_GRAPHIC",
+      "source": "https://www.primariasiretel.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14769372",
+      "kind": "flag",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://www.primariadurnesti.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14769510",
+      "kind": "coat",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://comunatudora.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14776663",
+      "kind": "coat",
+      "category": "PARENT_ADMIN_SYMBOL",
+      "source": "https://primariabaltatesti.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14776668",
+      "kind": "coat",
+      "category": "PARENT_ADMIN_SYMBOL",
+      "source": "https://primariaceahlau.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r14786145",
+      "kind": "coat",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://primariahomoroade.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r7960937",
+      "kind": "coat",
+      "category": "INSTITUTIONAL_WORDMARK",
+      "source": "https://www.primarie3.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r9714843",
+      "kind": "flag",
+      "category": "LANGUAGE_ICON",
+      "source": "https://www.primariastrehaia.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r9714862",
+      "kind": "flag",
+      "category": "LANGUAGE_ICON",
+      "source": "https://www.primariapatulelemh.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    },
+    {
+      "atlasId": "osm-r9748438",
+      "kind": "flag",
+      "category": "NATIONAL_SYMBOL_LEAKAGE",
+      "source": "https://www.orasul-horezu.ro/",
+      "decision": "REJECT",
+      "scope": "Existing SIM-R5/SIM-R6 invalidation; no new removal counted"
+    }
+  ]
+}

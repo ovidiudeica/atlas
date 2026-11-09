@@ -1,0 +1,31 @@
+{
+  "method": "Canonical Commons file / exact institutional URL comparison across symbol kinds across all1798 assignments. New candidate gate additionally compares available SHA256/SHA1. No claim that every remote current image was re-downloaded.",
+  "cases": [
+    {
+      "kinds": [
+        "coat"
+      ],
+      "identity": "file:Coat of Arms of Balti.png",
+      "owners": [
+        "osm-r12207955",
+        "osm-r58983"
+      ],
+      "state": "REQUIRES_SCOPE_REVIEW",
+      "action": "PRESERVE_EXISTING",
+      "reason": "Duplicate URL/Commons filename is a review signal, not proof of misattribution."
+    },
+    {
+      "kinds": [
+        "flag"
+      ],
+      "identity": "file:Flag of Bălți.png",
+      "owners": [
+        "osm-r12207955",
+        "osm-r58983"
+      ],
+      "state": "REQUIRES_SCOPE_REVIEW",
+      "action": "PRESERVE_EXISTING",
+      "reason": "Duplicate URL/Commons filename is a review signal, not proof of misattribution."
+    }
+  ]
+}

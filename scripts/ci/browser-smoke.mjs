@@ -1810,6 +1810,10 @@ async function simR6Exceptions(cdp){
    await p.eval('document.querySelector('+selector+').querySelector(".entity-title img").src="/atlas/intentionally-missing-r6.png"');
    await p.wait('!!document.querySelector('+selector+').querySelector(".entity-title .territorial-symbol-fallback")','SIM-R6 neutral unavailable-image behavior');
   }
+  if(id==='osm-r1748490'){
+   const rights=await p.eval(`(()=>{const c=document.querySelector(${selector});return {closed:[...c.querySelectorAll('.symbol-audit')].every(d=>!d.open),wording:c.textContent.includes('inclusiv redistribuirea fișierului'),register:[...c.querySelectorAll('a[download]')].some(a=>a.getAttribute('href')?.endsWith('audit-r7.json.gz'))};})()`);
+   assert(rights.closed&&rights.wording&&rights.register,'SIM-R7 precise on-demand reproduction-rights disclosure '+JSON.stringify(rights));
+  }
   await p.snap((mobile?'mobile':'desktop')+'-sim-r6-'+id+'.png');await p.close();
  }
 }
@@ -1827,7 +1831,7 @@ async function simR5Audit(cdp){
     coatNeutral:!!c.querySelector('.territory-symbol-gallery figure:first-child .territorial-symbol-fallback'),
     verdicts:[...c.querySelectorAll('[data-symbol-verdict]')].map(e=>e.dataset.symbolVerdict),
     overflow:document.documentElement.scrollWidth-innerWidth,images:document.querySelectorAll('img').length,
-    download:!!c.querySelector('a[download][href$="audit-r6.json.gz"]')};})()`);
+    download:!!c.querySelector('a[download][href$="audit-r7.json.gz"]')};})()`);
    assert(info.overflow<=1&&info.images<40&&info.download,'SIM-R5 accessible progressive UI '+id+': '+JSON.stringify(info));
    if(id==='osm-r14772859')assert(info.headerNeutral&&info.coatNeutral&&info.verdicts.includes('MISATTRIBUTED'),'Wrong-county assignment removed from card and header');
    if(id==='osm-r9882384')assert(!info.verdicts.includes('MISATTRIBUTED'),'Jilava is not removed from filename abbreviation alone');

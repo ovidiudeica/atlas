@@ -1,7 +1,7 @@
 {
   "stage": "SIM-R6",
   "baseCommit": "ce078147bc8500f2454b409676f6f1fad622bdba",
-  "status": "IMPLEMENTED_AWAITING_TESTS_AND_INTEGRATION",
+  "status": "INTEGRATED_PUBLISHED_VERIFIED",
   "initial": {
     "entities": 4283,
     "slots": 8566,

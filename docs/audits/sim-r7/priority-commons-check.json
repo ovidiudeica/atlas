@@ -1,0 +1,831 @@
+{
+  "linked": [
+    {
+      "atlasId": "osm-r377733",
+      "kind": "coat",
+      "file": "Coat of arms of Bucharest.svg"
+    },
+    {
+      "atlasId": "osm-r377733",
+      "kind": "coat",
+      "file": "ROU Bucharest CoA.svg"
+    },
+    {
+      "atlasId": "osm-r377733",
+      "kind": "flag",
+      "file": "ROU Bucharest Flag.svg"
+    },
+    {
+      "atlasId": "osm-r2248660",
+      "kind": "coat",
+      "file": "Stema Harghita.svg"
+    },
+    {
+      "atlasId": "osm-r2248660",
+      "kind": "flag",
+      "file": "Flag of Harghita County.gif"
+    },
+    {
+      "atlasId": "osm-r2248660",
+      "kind": "flag",
+      "file": "Flag of Harghita County.gif"
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "kind": "coat",
+      "file": "ROU VN VRANCEA COA.png"
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "kind": "coat",
+      "file": "Stema Vrancea.svg"
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "kind": "coat",
+      "file": "ROU VN VRANCEA COA.png"
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "kind": "coat",
+      "file": "Actual Vrancea county CoA.png"
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "kind": "flag",
+      "file": "Vrancea flag.webp"
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "kind": "flag",
+      "file": "Drapel Județul Vrancea.png"
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "kind": "coat",
+      "file": "Coat of arms of Chișinău 1991.svg"
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "kind": "coat",
+      "file": "Coat of Arms of Chișinău.svg"
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "kind": "flag",
+      "file": "Drapel Municipiul Chisinau.jpg"
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "kind": "flag",
+      "file": "Flag of Chișinău.svg"
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "kind": "flag",
+      "file": "Drapel Municipiul Chisinau.jpg"
+    },
+    {
+      "atlasId": "osm-r1691801",
+      "kind": "coat",
+      "file": "Coat of Arms of Chișinău.svg"
+    },
+    {
+      "atlasId": "osm-r1691801",
+      "kind": "coat",
+      "file": "Coat of arms of Chișinău 1991.svg"
+    },
+    {
+      "atlasId": "osm-r1691801",
+      "kind": "coat",
+      "file": "Coat of Arms of Chișinău.svg"
+    },
+    {
+      "atlasId": "osm-r1691801",
+      "kind": "flag",
+      "file": "Flag of Chișinău.svg"
+    },
+    {
+      "atlasId": "osm-r1691801",
+      "kind": "flag",
+      "file": "Flag of Chișinău.svg"
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "coat",
+      "file": "ROU AG Campulung CoA.png"
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "coat",
+      "file": "ROU AG Câmpulung CoA.svg"
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "coat",
+      "file": "ROU AG Campulung CoA.png"
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "coat",
+      "file": "Interbelic Campulung CoA.png"
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "flag",
+      "file": "Steagul Oficial Al Campulungului.png"
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "flag",
+      "file": "Steagul Oficial Al Campulungului.png"
+    },
+    {
+      "atlasId": "osm-r9982547",
+      "kind": "coat",
+      "file": "ROU SB Talmaciu CoA.jpg"
+    },
+    {
+      "atlasId": "osm-r9982547",
+      "kind": "coat",
+      "file": "ROU SB Talmaciu CoA.jpg"
+    },
+    {
+      "atlasId": "osm-r9982547",
+      "kind": "coat",
+      "file": "ROU SB Talmaciu CoA1.jpg"
+    },
+    {
+      "atlasId": "osm-r9982547",
+      "kind": "flag",
+      "file": "Flag of Talmesh before 1918.jpg"
+    },
+    {
+      "atlasId": "osm-r9982547",
+      "kind": "flag",
+      "file": "Flag of Talmesh before 1918.jpg"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3ACoat+of+arms+of+Bucharest.svg%7CFile%3AROU+Bucharest+CoA.svg%7CFile%3AROU+Bucharest+Flag.svg%7CFile%3AStema+Harghita.svg%7CFile%3AFlag+of+Harghita+County.gif%7CFile%3AROU+VN+VRANCEA+COA.png%7CFile%3AStema+Vrancea.svg%7CFile%3AActual+Vrancea+county+CoA.png%7CFile%3AVrancea+flag.webp%7CFile%3ADrapel+Jude%C8%9Bul+Vrancea.png%7CFile%3ACoat+of+arms+of+Chi%C8%99in%C4%83u+1991.svg%7CFile%3ACoat+of+Arms+of+Chi%C8%99in%C4%83u.svg%7CFile%3ADrapel+Municipiul+Chisinau.jpg%7CFile%3AFlag+of+Chi%C8%99in%C4%83u.svg%7CFile%3AROU+AG+Campulung+CoA.png&prop=imageinfo%7Crevisions&iiprop=url%7Csha1%7Ctimestamp%7Cuser%7Cextmetadata&iilimit=5&rvprop=ids%7Ctimestamp%7Cuser%7Ccontent&rvslots=main&maxlag=5",
+      "checkedAt": "2026-11-09T17:49:19.327Z",
+      "method": "PUBLIC_HTTP_GET",
+      "binary": false,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "apiError": null
+    },
+    {
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AROU+AG+C%C3%A2mpulung+CoA.svg%7CFile%3AInterbelic+Campulung+CoA.png%7CFile%3ASteagul+Oficial+Al+Campulungului.png%7CFile%3AROU+SB+Talmaciu+CoA.jpg%7CFile%3AROU+SB+Talmaciu+CoA1.jpg%7CFile%3AFlag+of+Talmesh+before+1918.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csha1%7Ctimestamp%7Cuser%7Cextmetadata&iilimit=5&rvprop=ids%7Ctimestamp%7Cuser%7Ccontent&rvslots=main&maxlag=5",
+      "checkedAt": "2026-11-09T17:49:44.132Z",
+      "method": "PUBLIC_HTTP_GET",
+      "binary": false,
+      "status": 200,
+      "finalUrl": "https://commons.wikimedia.org/w/api.php?action=query&format=json&titles=File%3AROU+AG+C%C3%A2mpulung+CoA.svg%7CFile%3AInterbelic+Campulung+CoA.png%7CFile%3ASteagul+Oficial+Al+Campulungului.png%7CFile%3AROU+SB+Talmaciu+CoA.jpg%7CFile%3AROU+SB+Talmaciu+CoA1.jpg%7CFile%3AFlag+of+Talmesh+before+1918.jpg&prop=imageinfo%7Crevisions&iiprop=url%7Csha1%7Ctimestamp%7Cuser%7Cextmetadata&iilimit=5&rvprop=ids%7Ctimestamp%7Cuser%7Ccontent&rvslots=main&maxlag=5",
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "bytes": 37874,
+      "sha256": "67fdad225e8e39a6a4648ab7bb0f978808ce82ee4098dd3bef40568f26d925de",
+      "cacheFile": "04b7f2237f1fac71781770f15dfd2b98cf4b1d149f18d89bbdd9c4fbcdc2df78.bin",
+      "apiError": null
+    }
+  ],
+  "pages": [
+    {
+      "pageid": 1848982,
+      "ns": 6,
+      "title": "File:Interbelic Campulung CoA.png",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "timestamp": "2007-03-27T09:10:29Z",
+          "user": "Alex:D",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Interbelic_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Interbelic_Campulung_CoA.png",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1848982",
+          "sha1": "71ec50bfc5441b4ec039f9ee5d5927266f97a9fb",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2007-03-27 09:10:29",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Interbelic Campulung CoA",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Coat of arms images that should use vector graphics|PNG that should use vector graphics|Interwar coats of arms of cities of Romania|Interwar coats of arms of capital cities of Romania|Coats of arms of cities and communes of Argeș County|PD-RO-exempt (coats of arms)|Derivatives of the Coat of arms of Wallachia|Wallachian Bird, Or|Wallachian Bird sable in crest|Symbols of Câmpulung",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Interwar coat of arms of Câmpulung, Muscel County, Kingdom of Romania.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "between 1921 and 1930<div style=\"display: none;\">date QS:P,+1950-00-00T00:00:00Z/7,P1319,+1921-00-00T00:00:00Z/9,P1326,+1930-00-00T00:00:00Z/9</div>",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<p>This image can be found at <b>State's Archives, Bucharest, Romania; The Heraldic Consultative Comission stock, file no. 5</b>.\n</p>\n<ul><li>The image was also pubished in Dogaru, Maria – «Din Heraldica României. Album», Ed. Jif, Bucharest, 1994.<br></li></ul>\nThe image was scanned by me, <b><a href=\"//commons.wikimedia.org/wiki/User:Alex:D\" title=\"User:Alex:D\">Alex:D</a></b>.",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "The Government of Kingdom of Romania.",
+              "source": "commons-desc-page"
+            },
+            "Permission": {
+              "value": "<table class=\"licensetpl\" style=\"display:none\">\n<tbody><tr>\n<td><span class=\"licensetpl_short\">Public domain</span><span class=\"licensetpl_long\">Public domain</span><span class=\"licensetpl_link_req\">false</span><span class=\"licensetpl_attr_req\">false</span>\n</td></tr></tbody></table>\n<table style=\"width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;\" dir=\"ltr\" class=\"layouttemplate\" lang=\"en\">\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span title=\"Public domain\"><img alt=\"Public domain\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"196\" data-file-height=\"196\"></span></span>\n</td>\n<td>According to the <i>Romanian Law on Copyright and Neighboring Rights <a rel=\"nofollow\" class=\"external text\" href=\"https://legislatie.just.ro/Public/DetaliiDocument/7816\">Law no. 8/1996 of March 14, 1996</a> with <a rel=\"nofollow\" class=\"external text\" href=\"https://www.cdep.ro/ords/pls/legis/legis_pck.htp_act?ida=8547\">further amendments</a>, last updated on May 1st, 2022, <b>Title 1 Part 1 Chapter 3 Article 9</b> the following documents shall not benefit from the legal protection accorded to copyright:</i>\n<ul><li>(a) the ideas, theories, concepts, scientific discoveries, procedures, working methods, or mathematical concepts as such and inventions, contained in a work, whatever the manner of the adoption, writing, explanation or expression thereof;</li>\n<li>(b) official texts of a political, legislative, administrative or judicial nature, and official translations thereof;</li>\n<li>(c) official symbols of the State, public authorities and organizations, such as armorial bearings, seals, flags, emblems, shields, badges and medals;</li>\n<li>(d) means of payment;</li>\n<li>(e) news and press information;</li>\n<li>(f) simple facts and data;</li>\n<li>(g) the photographs of letters, deeds, documents of any kind, technical drawings and other similar works;</li>\n<li>(h) materials resulted from an act of reproduction of a work of visual art, whose protection term expired, excepting when the material resulting from the act of reproduction is original, meaning that it represents an own intellectual creation of the author.</li></ul>\n<p><i>Therefore this image is assumed to be in the <a href=\"https://en.wikipedia.org/wiki/public_domain\" class=\"extiw\" title=\"w:public domain\">public domain</a> worldwide, although some of the above categories may be subject to usage restrictions within Romania.</i>\n</p>\n<hr>\n<p><span style=\"font-size:x-small;line-height:140%\" class=\"plainlinks noprint\"><a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ar\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ar\">العربية</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/de\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/de\">Deutsch</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/en\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/en\">English</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/fr\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/fr\">français</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/it\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/it\">italiano</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/mk\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/mk\">македонски</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ro\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ro\">română</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ru\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ru\">русский</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/scn\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/scn\">sicilianu</a> | <small class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/w/index.php?title=Template:PD-RO-exempt/lang&amp;action=edit\" href=\"https://commons.wikimedia.org/w/index.php?title=Template:PD-RO-exempt/lang&amp;action=edit\">+/−</a></small></span>\n</p>\n</td>\n<td><figure class=\"mw-halign-right\" typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Coat_of_arms_of_Romania.svg/120px-Coat_of_arms_of_Romania.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"93\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Coat_of_arms_of_Romania.svg/250px-Coat_of_arms_of_Romania.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"670\" data-file-height=\"970\"></span><figcaption></figcaption></figure>\n</td></tr></tbody></table>",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseShortName": {
+              "value": "Public domain",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Public domain",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Copyrighted": {
+              "value": "False",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "pd",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ],
+      "revisions": [
+        {
+          "revid": 629683416,
+          "parentid": 629683352,
+          "user": "Dahn",
+          "timestamp": "2022-02-14T03:58:17Z",
+          "slots": {
+            "main": {
+              "contentmodel": "wikitext",
+              "contentformat": "text/x-wiki",
+              "*": "{{Information\n|Description={{en|Interwar coat of arms of Câmpulung, Muscel County, Kingdom of Romania.}}{{ro|Stema din perioada interbelică a orașului Câmpulung, județul Muscel, Regatul României.}}\n|Source=This image can be found at '''State's Archives, Bucharest, Romania; The Heraldic Consultative Comission stock, file no. 5'''.\n*The image was also pubished in Dogaru, Maria – «Din Heraldica României. Album», Ed. Jif, Bucharest, 1994.<br>\nThe image was scanned by me, '''[[User:Alex:D|Alex:D]]'''.\n|Date={{other date|between|1921|1930}}\n|Author=The Government of Kingdom of Romania.\n|Permission={{PD-RO-exempt|type=coats of arms}}\n|other_versions=\n}}\n{{SVG|coat of arms}}\n\n[[Category:Interwar coats of arms of cities of Romania]]\n[[Category:Interwar coats of arms of capital cities of Romania]]\n[[Category:Symbols of Câmpulung]]\n[[Category:Derivatives of the Coat of arms of Wallachia]]\n[[Category:Wallachian Bird sable in crest]]\n[[Category:Wallachian Bird, Or]]\n[[Category:Coats of arms of cities and communes of Argeș County]]"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 5864200,
+      "ns": 6,
+      "title": "File:ROU SB Talmaciu CoA1.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "timestamp": "2009-02-04T13:11:02Z",
+          "user": "Mentatus",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/ROU_SB_Talmaciu_CoA1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:ROU_SB_Talmaciu_CoA1.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=5864200",
+          "sha1": "ae5aa471bf93b34d75a19ffcf4305f7aaeb4e668",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2009-02-04 13:11:02",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "ROU SB Talmaciu CoA1",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Coats of arms of cities and communes of Romania|Coats of arms of cities and communes of Sibiu County|PD-RO-exempt (coats of arms)|Symbols of Tălmaciu",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "CoA of Tălmaciu, Sibiu County, Romania",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2008-11-28",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "Romanian Wikipedia <a class=\"external autonumber\" data-mw-original-href=\"http://ro.wikipedia.org/wiki/Fi%C5%9Fier:SIGLA_TALMACIU.jpg\" href=\"https://ro.wikipedia.org/wiki/Fi%C5%9Fier:SIGLA_TALMACIU.jpg\">[1]</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "Originally uploaded to the Romanian Wikipedia by the <a href=\"https://ro.wikipedia.org/wiki/User:Danes_Stefan_Puiu\" class=\"extiw\" title=\"ro:User:Danes Stefan Puiu\">ro:User:Danes Stefan Puiu</a>",
+              "source": "commons-desc-page"
+            },
+            "Permission": {
+              "value": "<table class=\"licensetpl\" style=\"display:none\">\n<tbody><tr>\n<td><span class=\"licensetpl_short\">Public domain</span><span class=\"licensetpl_long\">Public domain</span><span class=\"licensetpl_link_req\">false</span><span class=\"licensetpl_attr_req\">false</span>\n</td></tr></tbody></table>\n<table style=\"width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;\" dir=\"ltr\" class=\"layouttemplate\" lang=\"en\">\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span title=\"Public domain\"><img alt=\"Public domain\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"196\" data-file-height=\"196\"></span></span>\n</td>\n<td>According to the <i>Romanian Law on Copyright and Neighboring Rights <a rel=\"nofollow\" class=\"external text\" href=\"https://legislatie.just.ro/Public/DetaliiDocument/7816\">Law no. 8/1996 of March 14, 1996</a> with <a rel=\"nofollow\" class=\"external text\" href=\"https://www.cdep.ro/ords/pls/legis/legis_pck.htp_act?ida=8547\">further amendments</a>, last updated on May 1st, 2022, <b>Title 1 Part 1 Chapter 3 Article 9</b> the following documents shall not benefit from the legal protection accorded to copyright:</i>\n<ul><li>(a) the ideas, theories, concepts, scientific discoveries, procedures, working methods, or mathematical concepts as such and inventions, contained in a work, whatever the manner of the adoption, writing, explanation or expression thereof;</li>\n<li>(b) official texts of a political, legislative, administrative or judicial nature, and official translations thereof;</li>\n<li>(c) official symbols of the State, public authorities and organizations, such as armorial bearings, seals, flags, emblems, shields, badges and medals;</li>\n<li>(d) means of payment;</li>\n<li>(e) news and press information;</li>\n<li>(f) simple facts and data;</li>\n<li>(g) the photographs of letters, deeds, documents of any kind, technical drawings and other similar works;</li>\n<li>(h) materials resulted from an act of reproduction of a work of visual art, whose protection term expired, excepting when the material resulting from the act of reproduction is original, meaning that it represents an own intellectual creation of the author.</li></ul>\n<p><i>Therefore this image is assumed to be in the <a href=\"https://en.wikipedia.org/wiki/public_domain\" class=\"extiw\" title=\"w:public domain\">public domain</a> worldwide, although some of the above categories may be subject to usage restrictions within Romania.</i>\n</p>\n<hr>\n<p><span style=\"font-size:x-small;line-height:140%\" class=\"plainlinks noprint\"><a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ar\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ar\">العربية</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/de\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/de\">Deutsch</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/en\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/en\">English</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/fr\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/fr\">français</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/it\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/it\">italiano</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/mk\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/mk\">македонски</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ro\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ro\">română</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ru\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ru\">русский</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/scn\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/scn\">sicilianu</a> | <small class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/w/index.php?title=Template:PD-RO-exempt/lang&amp;action=edit\" href=\"https://commons.wikimedia.org/w/index.php?title=Template:PD-RO-exempt/lang&amp;action=edit\">+/−</a></small></span>\n</p>\n</td>\n<td><figure class=\"mw-halign-right\" typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Coat_of_arms_of_Romania.svg/120px-Coat_of_arms_of_Romania.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"93\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Coat_of_arms_of_Romania.svg/250px-Coat_of_arms_of_Romania.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"670\" data-file-height=\"970\"></span><figcaption></figcaption></figure>\n</td></tr></tbody></table>",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseShortName": {
+              "value": "Public domain",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Public domain",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Copyrighted": {
+              "value": "False",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "pd",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ],
+      "revisions": [
+        {
+          "revid": 1009320734,
+          "parentid": 566941939,
+          "user": "Emijrpbot",
+          "timestamp": "2025-03-13T22:15:07Z",
+          "slots": {
+            "main": {
+              "contentmodel": "wikitext",
+              "contentformat": "text/x-wiki",
+              "*": "{{Information\n|Description=CoA of Tălmaciu, Sibiu County, Romania\n|Source=Romanian Wikipedia [http://ro.wikipedia.org/wiki/Fi%C5%9Fier:SIGLA_TALMACIU.jpg]\n|Date=2008-11-28\n|Author=Originally uploaded to the Romanian Wikipedia by the [[:ro:User:Danes Stefan Puiu]]\n|Permission={{PD-RO-exempt|type=coats of arms}}\n|other_versions=\n}}\n[[Category:Coats of arms of cities and communes of Romania]]\n[[Category:Coats of arms of cities and communes of Sibiu County]]\n[[Category:Symbols of Tălmaciu]]"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 10879556,
+      "ns": 6,
+      "title": "File:ROU SB Talmaciu CoA.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "timestamp": "2010-07-13T18:03:57Z",
+          "user": "Magul",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/ROU_SB_Talmaciu_CoA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:ROU_SB_Talmaciu_CoA.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=10879556",
+          "sha1": "9cdab14c4462c22962c1ef694162b0795661bd06",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2010-07-13 18:03:57",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "ROU SB Talmaciu CoA",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Coats of arms of cities and communes of Romania|Coat of arms images that should use vector graphics|Self-published work|PD-self|JPG images that should use vector graphics|Coats of arms of cities and communes of Sibiu County|PD-RO-exempt (coats of arms)|Symbols of Tălmaciu",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Coat of arms of Tălmaciu, Romania",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2009-05-16",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "ro:Fișier:Stema Talmaciu Originala.jpg",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "ro:Danes Stefan Puiu",
+              "source": "commons-desc-page"
+            },
+            "Permission": {
+              "value": "<table class=\"licensetpl\" style=\"display:none\">\n<tbody><tr>\n<td><span class=\"licensetpl_short\">Public domain</span><span class=\"licensetpl_long\">Public domain</span><span class=\"licensetpl_link_req\">false</span><span class=\"licensetpl_attr_req\">false</span>\n</td></tr></tbody></table>\n<table style=\"width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;\" dir=\"ltr\" class=\"layouttemplate\" lang=\"en\">\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span title=\"Public domain\"><img alt=\"Public domain\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"196\" data-file-height=\"196\"></span></span>\n</td>\n<td>According to the <i>Romanian Law on Copyright and Neighboring Rights <a rel=\"nofollow\" class=\"external text\" href=\"https://legislatie.just.ro/Public/DetaliiDocument/7816\">Law no. 8/1996 of March 14, 1996</a> with <a rel=\"nofollow\" class=\"external text\" href=\"https://www.cdep.ro/ords/pls/legis/legis_pck.htp_act?ida=8547\">further amendments</a>, last updated on May 1st, 2022, <b>Title 1 Part 1 Chapter 3 Article 9</b> the following documents shall not benefit from the legal protection accorded to copyright:</i>\n<ul><li>(a) the ideas, theories, concepts, scientific discoveries, procedures, working methods, or mathematical concepts as such and inventions, contained in a work, whatever the manner of the adoption, writing, explanation or expression thereof;</li>\n<li>(b) official texts of a political, legislative, administrative or judicial nature, and official translations thereof;</li>\n<li>(c) official symbols of the State, public authorities and organizations, such as armorial bearings, seals, flags, emblems, shields, badges and medals;</li>\n<li>(d) means of payment;</li>\n<li>(e) news and press information;</li>\n<li>(f) simple facts and data;</li>\n<li>(g) the photographs of letters, deeds, documents of any kind, technical drawings and other similar works;</li>\n<li>(h) materials resulted from an act of reproduction of a work of visual art, whose protection term expired, excepting when the material resulting from the act of reproduction is original, meaning that it represents an own intellectual creation of the author.</li></ul>\n<p><i>Therefore this image is assumed to be in the <a href=\"https://en.wikipedia.org/wiki/public_domain\" class=\"extiw\" title=\"w:public domain\">public domain</a> worldwide, although some of the above categories may be subject to usage restrictions within Romania.</i>\n</p>\n<hr>\n<p><span style=\"font-size:x-small;line-height:140%\" class=\"plainlinks noprint\"><a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ar\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ar\">العربية</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/de\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/de\">Deutsch</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/en\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/en\">English</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/fr\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/fr\">français</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/it\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/it\">italiano</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/mk\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/mk\">македонски</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ro\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ro\">română</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/ru\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/ru\">русский</a> | <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/Template:PD-RO-exempt/scn\" href=\"https://commons.wikimedia.org/wiki/Template:PD-RO-exempt/scn\">sicilianu</a> | <small class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/w/index.php?title=Template:PD-RO-exempt/lang&amp;action=edit\" href=\"https://commons.wikimedia.org/w/index.php?title=Template:PD-RO-exempt/lang&amp;action=edit\">+/−</a></small></span>\n</p>\n</td>\n<td><figure class=\"mw-halign-right\" typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Coat_of_arms_of_Romania.svg/120px-Coat_of_arms_of_Romania.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"93\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Coat_of_arms_of_Romania.svg/250px-Coat_of_arms_of_Romania.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"670\" data-file-height=\"970\"></span><figcaption></figcaption></figure>\n</td></tr></tbody></table>\n<table class=\"licensetpl\" style=\"display:none\">\n<tbody><tr>\n<td><span class=\"licensetpl_short\">Public domain</span><span class=\"licensetpl_long\">Public domain</span><span class=\"licensetpl_link_req\">false</span><span class=\"licensetpl_attr_req\">false</span>\n</td></tr></tbody></table>\n<table style=\"width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;\" dir=\"ltr\" class=\"layouttemplate\" lang=\"en\">\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span title=\"Public domain\"><img alt=\"Public domain\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"196\" data-file-height=\"196\"></span></span>\n</td>\n<td>I, the copyright holder of this work, release this work into the <b><a href=\"https://en.wikipedia.org/wiki/en:public_domain\" class=\"extiw\" title=\"w:en:public domain\">public domain</a></b>. This applies worldwide.<br><small>In some countries this may not be legally possible; if so:</small><br><i>I grant anyone the right to use this work <b>for any purpose</b>, without any conditions, unless such conditions are required by law.</i>\n</td></tr></tbody></table>",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseShortName": {
+              "value": "Public domain",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Public domain",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Copyrighted": {
+              "value": "False",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "pd",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ],
+      "revisions": [
+        {
+          "revid": 975678391,
+          "parentid": 491530940,
+          "user": "SchlurcherBot",
+          "timestamp": "2024-12-26T01:55:00Z",
+          "slots": {
+            "main": {
+              "contentmodel": "wikitext",
+              "contentformat": "text/x-wiki",
+              "*": "{{Information\n|Description=Coat of arms of Tălmaciu, Romania\n|Source=ro:Fișier:Stema Talmaciu Originala.jpg\n|Date=2009-05-16\n|Author=ro:Danes Stefan Puiu  \n|Permission={{PD-RO-exempt|type=coats of arms}}{{PD-self}}\n|other_versions=\n}}\n{{SVG|coat of arms}}\n\n\n[[Category:Coats of arms of cities and communes of Romania]]\n[[Category:Coats of arms of cities and communes of Sibiu County]]\n[[Category:Symbols of Tălmaciu]]"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 25082755,
+      "ns": 6,
+      "title": "File:Flag of Talmesh before 1918.jpg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "timestamp": "2013-03-11T22:36:59Z",
+          "user": "Danes Stefan Puiu",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Talmesh_before_1918.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=25082755",
+          "sha1": "d6be9312d2b1e7798fe712d784510e1036bf4b67",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2013-03-11 22:36:59",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Flag of Talmesh before 1918",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Self-published work|Flags of cities and communes of Sibiu County|Symbols of Tălmaciu",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Flag of Talmesh before 1918",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2013-03-12 02:00:24",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Danes_Stefan_Puiu\" title=\"User:Danes Stefan Puiu\">Danes Stefan Puiu</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 3.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 3.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/3.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-3.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ],
+      "revisions": [
+        {
+          "revid": 1254184349,
+          "parentid": 1215955094,
+          "user": "SchlurcherBot",
+          "timestamp": "2026-07-30T11:06:25Z",
+          "slots": {
+            "main": {
+              "contentmodel": "wikitext",
+              "contentformat": "text/x-wiki",
+              "*": "=={{int:filedesc}}==\n{{Information\n|description={{ro|1=Flag of Talmesh before 1918}}\n|date=2013-03-12 02:00:24\n|source={{own}}\n|author=[[User:Danes Stefan Puiu|Danes Stefan Puiu]]\n|permission=\n|other_versions=\n|other_fields=\n}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-3.0}}\n\n\n[[Category:Symbols of Tălmaciu]]\n[[Category:Flags of cities and communes of Sibiu County]]"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 101462825,
+      "ns": 6,
+      "title": "File:ROU AG Câmpulung CoA.svg",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "timestamp": "2021-03-14T07:34:33Z",
+          "user": "Dahn",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/ROU_AG_C%C3%A2mpulung_CoA.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:ROU_AG_C%C3%A2mpulung_CoA.svg",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=101462825",
+          "sha1": "db5016ffb447600d5cb5c52d71ef6a063f9e7dcc",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2021-03-14 07:34:33",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "ROU AG Câmpulung CoA",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Coats of arms of cities and communes of Romania|Self-published work|PD-RO-exempt (coats of arms)|Derivatives of the Coat of arms of Wallachia|Wallachian Bird, Or|Wallachian Bird sable in crest|Symbols of Câmpulung",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Current coat of arms of Câmpulung, Argeș County, Romania.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2021-03-09",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dahn\" title=\"User:Dahn\">Dahn</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "Public domain",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Public domain",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Copyrighted": {
+              "value": "False",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "pd",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ],
+      "revisions": [
+        {
+          "revid": 973202680,
+          "parentid": 629683724,
+          "user": "SchlurcherBot",
+          "timestamp": "2024-12-20T21:04:12Z",
+          "slots": {
+            "main": {
+              "contentmodel": "wikitext",
+              "contentformat": "text/x-wiki",
+              "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Current coat of arms of Câmpulung, Argeș County, Romania.}}\n|date=2021-03-09\n|source={{own}}\n|author=[[User:Dahn|Dahn]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-by-4.0}}\n{{PD-RO-exempt|type=coats of arms}}\n\n[[Category:Symbols of Câmpulung]]\n[[Category:Derivatives of the Coat of arms of Wallachia]]\n[[Category:Wallachian Bird, Or]]\n[[Category:Wallachian Bird sable in crest]]\n[[Category:Coats of arms of cities and communes of Romania]]"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pageid": 149012972,
+      "ns": 6,
+      "title": "File:Steagul Oficial Al Campulungului.png",
+      "imagerepository": "local",
+      "imageinfo": [
+        {
+          "timestamp": "2024-06-02T22:32:07Z",
+          "user": "Icykenny36",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Steagul_Oficial_Al_Campulungului.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Steagul_Oficial_Al_Campulungului.png",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=149012972",
+          "sha1": "f907eeb064365411280581cf7e8357499c3c0f8a",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2024-06-02 22:32:07",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Steagul Oficial Al Campulungului",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Câmpulung|Steag|Self-published work",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Un al doilea render, cu stema centrata si culori corectate :)",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2024-06-03",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Icykenny36&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Icykenny36 (page does not exist)\">Icykenny36</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          }
+        }
+      ],
+      "revisions": [
+        {
+          "revid": 949700811,
+          "parentid": 927291315,
+          "user": "Luanlou",
+          "timestamp": "2024-10-27T02:46:10Z",
+          "slots": {
+            "main": {
+              "contentmodel": "wikitext",
+              "contentformat": "text/x-wiki",
+              "*": "== {{int:filedesc}} ==\n{{Information\n|description={{ro|1=Un al doilea render, cu stema centrata si culori corectate :)}}\n|date=2024-06-03\n|source={{own}}\n|author=[[User:Icykenny36|Icykenny36]]\n}}\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-4.0}}\n\n[[Category:Steag]]\n[[Category:Câmpulung]]"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Current file description plus newest5 binary image revisions. Discovery/corroboration, not official legal proof."
+}

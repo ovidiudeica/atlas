@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-09T18:14:25.641Z",
+  "run": 42671037439,
+  "head": "a816220bff382ab1bc57fa308540ac996392b5bd",
+  "url": "https://github.com/ovidiudeica/atlas/actions/runs/42671037439",
+  "result": "FAILED_TO_START_REQUIRED_VERIFY_JOB",
+  "annotation": "Internal server error. Correlation ID: 7bfa3502-b22c-4df0-8733-c349f70dba79",
+  "apiJobsObserved": [
+    {
+      "name": "Deploy GitHub Pages",
+      "conclusion": "skipped"
+    }
+  ],
+  "failedJobsRetry": {
+    "http": 403,
+    "message": "This workflow run cannot be retried"
+  },
+  "action": "Documentary checkpoint triggers a new normal PR CI run on a new exact SHA. No gate changes, no workflow_dispatch, no pre-merge deployment, no forced merge.",
+  "codeChanges": false
+}

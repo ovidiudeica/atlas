@@ -1,0 +1,2801 @@
+{
+  "stage": "SIM-R7",
+  "entities": 7,
+  "slots": 14,
+  "newFinalGraphicAnnexes": 0,
+  "newEnactedInstitutionalDocuments": 2,
+  "newConsultationDrafts": 1,
+  "cases": [
+    {
+      "atlasId": "osm-r377733",
+      "entity": "București",
+      "country": "RO",
+      "entityType": "county",
+      "adminLevel": 4,
+      "registryCode": "403",
+      "parentId": "osm-r90689",
+      "previousState": "BLOCKED_EVIDENCE",
+      "currentState": "BLOCKED_EVIDENCE",
+      "checkedAt": "2026-11-09T16:44:26.709Z",
+      "act": {
+        "number": "47",
+        "date": "2024-01-31",
+        "type": "HCGMB",
+        "coat": "Changes HCGMB76/1993 description; no recovered current graphic",
+        "flag": null
+      },
+      "symbols": [
+        {
+          "kind": "coat",
+          "act": {
+            "type": "HCGMB",
+            "number": "47",
+            "date": "2024-01-31"
+          },
+          "requiredEvidence": "Changes HCGMB76/1993 description; no recovered current graphic",
+          "recoveryState": "PARTIAL",
+          "currentImage": null,
+          "verdict": "MISSING",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r377733",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf"
+              ],
+              "act": "HCGMB 47/31 January 2024 amending 76/1993",
+              "finding": "Both baseline slots are null. The retrieved two-page decision changes the saint to Dimitrie cel Nou in monastic dress; its replacement graphic annex is not in the retrieved PDF. Preserve nulls, do not introduce the older soldier representation.",
+              "symbolActs": {
+                "coat": "HCGMB 47/31 January 2024 amending 76/1993"
+              }
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+                "https://www2.pmb.ro/orasul/stema/doc/hot76.php",
+                "https://www2.pmb.ro/orasul/stema/doc/stemabuc.php"
+              ],
+              "finding": "Two-page signed decision recovered; no current graphic annex. PMB legacy annex belongs to HCGMB 76/1993 and does not establish the monastic saint introduced in 2024. No independently approved municipal flag graphic recovered. Both nulls retained.",
+              "state": "BLOCKED_EVIDENCE"
+            }
+          ],
+          "newEvidence": [],
+          "contradictions": [],
+          "blocker": "Fresh primary PDF still has2 pages and no graphic annex. Old PMB military-saint artwork not reinstated. No current municipal flag approval recovered.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        },
+        {
+          "kind": "flag",
+          "act": null,
+          "requiredEvidence": "Independent symbol adoption/use evidence",
+          "recoveryState": "NOT_FOUND",
+          "currentImage": null,
+          "verdict": "MISSING",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r377733",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf"
+              ],
+              "act": "HCGMB 47/31 January 2024 amending 76/1993",
+              "finding": "Both baseline slots are null. The retrieved two-page decision changes the saint to Dimitrie cel Nou in monastic dress; its replacement graphic annex is not in the retrieved PDF. Preserve nulls, do not introduce the older soldier representation.",
+              "symbolActs": {
+                "coat": "HCGMB 47/31 January 2024 amending 76/1993"
+              }
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+                "https://www2.pmb.ro/orasul/stema/doc/hot76.php",
+                "https://www2.pmb.ro/orasul/stema/doc/stemabuc.php"
+              ],
+              "finding": "Two-page signed decision recovered; no current graphic annex. PMB legacy annex belongs to HCGMB 76/1993 and does not establish the monastic saint introduced in 2024. No independently approved municipal flag graphic recovered. Both nulls retained.",
+              "state": "BLOCKED_EVIDENCE"
+            }
+          ],
+          "newEvidence": [],
+          "contradictions": [],
+          "blocker": "Fresh primary PDF still has2 pages and no graphic annex. Old PMB military-saint artwork not reinstated. No current municipal flag approval recovered.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        }
+      ],
+      "sources": [
+        "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+        "https://www2.pmb.ro/orasul/stema/doc/hot76.php",
+        "https://www2.pmb.ro/orasul/stema/doc/stemabuc.php"
+      ],
+      "finding": "Fresh primary PDF still has2 pages and no graphic annex. Old PMB military-saint artwork not reinstated. No current municipal flag approval recovered."
+    },
+    {
+      "atlasId": "osm-r2248660",
+      "entity": "Harghita",
+      "country": "RO",
+      "entityType": "county",
+      "adminLevel": 4,
+      "registryCode": "190",
+      "parentId": "osm-r90689",
+      "previousState": "BLOCKED_EVIDENCE",
+      "currentState": "BLOCKED_EVIDENCE",
+      "checkedAt": "2026-11-09T16:44:26.709Z",
+      "act": {
+        "number": "510",
+        "date": "2026-06-26",
+        "type": "HG",
+        "coat": "Final graphic annex1; blazon4crosses/8stars",
+        "flag": null
+      },
+      "symbols": [
+        {
+          "kind": "coat",
+          "act": {
+            "type": "HG",
+            "number": "510",
+            "date": "2026-06-26"
+          },
+          "requiredEvidence": "Final graphic annex1; blazon4crosses/8stars",
+          "recoveryState": "PARTIAL",
+          "currentImage": null,
+          "verdict": "MISSING",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r2248660",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+                "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg"
+              ],
+              "act": "HG 510/26 June 2026, MO 544/2 July 2026",
+              "finding": "Primary act text recovered through legislative portal extraction; graphic annex retrieval failed. Coat was already null. Flag is independent: the new coat act does not demonstrate that the selected flag has been superseded.",
+              "symbolActs": {
+                "coat": "HG 510/26 June 2026"
+              }
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+                "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg",
+                "https://judetulharghita.ro/wp-content/uploads/2025/12/Anexa.pdf",
+                "https://judetulharghita.ro/wp-content/uploads/2020/12/Anexa-Statut_2004.pdf"
+              ],
+              "finding": "Final statutory blazon has four crosses and eight stars; December 2025 proposal has five crosses and twelve stars, so proposal rejected. Final graphic endpoint failed Node fetch, native PowerShell HTTP and Chromium (HTTP2 protocol error; HTTP1 empty response). Coat null retained. Selected flag is blue/gold with sun and moon; 2004 statute page63 instead describes white with alternating red/black triangular border under decision40/2002. This older text does not establish whether a later flag replaced it. No current flag-approval annex recovered: existing flag retained unconfirmed, independent of coat approval.",
+              "state": "BLOCKED_EVIDENCE"
+            }
+          ],
+          "newEvidence": [
+            {
+              "index": 5,
+              "url": "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf",
+              "checkedAt": "2026-11-09T16:44:28.380Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 102732,
+              "sha256": "7cb5a3ac6d1860f2f3188d7c9d3fc38cd632a15a896d9144a56beb4524f7a397",
+              "cacheFile": "081ff65689ce8a4208a55af363420ef042e8fed1d4897388229a168ab7238067.bin",
+              "atlasIds": [
+                "osm-r2248660"
+              ],
+              "act": "HCJ Harghita6/27 January2026",
+              "date": "2026-01-27",
+              "sourceType": "PRIMARY_COUNTY_ACT",
+              "pages": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "correspondence": "Signed county decision amending the proposed blazon; not HG510 final graphic annex",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Five crosses and12 stars on pages3-4; articleII preserves the earlier graphic proposal. Not the final four/eight version.",
+              "localFile": "docs/audits/sim-r7/evidence/harghita-hcj6-2026.pdf"
+            }
+          ],
+          "contradictions": [],
+          "blocker": "New January2026 county act inspected in full:5 crosses/12 stars remain in the proposal. Final graphic endpoint and MDLPA/SGG attachments unavailable; no substitution. Coat and flag investigated independently.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        },
+        {
+          "kind": "flag",
+          "act": {
+            "type": "HCJ",
+            "number": "40/2002",
+            "date": null,
+            "limitation": "Older county flag decision; exact day and contemporary scope not established"
+          },
+          "requiredEvidence": "Independent symbol adoption/use evidence",
+          "recoveryState": "NOT_FOUND",
+          "currentImage": {
+            "kind": "commons",
+            "file": "Flag of Harghita County.gif",
+            "tier": "B",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Harghita_County.gif",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Harghita_County.gif"
+          },
+          "verdict": "SOURCE_CORROBORATED",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r2248660",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+                "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg"
+              ],
+              "act": "HG 510/26 June 2026, MO 544/2 July 2026",
+              "finding": "Primary act text recovered through legislative portal extraction; graphic annex retrieval failed. Coat was already null. Flag is independent: the new coat act does not demonstrate that the selected flag has been superseded.",
+              "symbolActs": {
+                "coat": "HG 510/26 June 2026"
+              }
+            },
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:Flag of Harghita County.gif",
+              "revision": {
+                "revid": 1254061981,
+                "parentid": 1240965524,
+                "timestamp": "2026-07-30T05:36:15Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2022-10-05T19:45:47Z",
+                  "sha1": "7a5eeab7b11d7ab44361ee40592cb4faa2781207",
+                  "user": "Alexphangia",
+                  "comment": "Uploaded a work by Zoltan Horvath from https://crwflags.com/fotw/flags/ro-hr.html with UploadWizard"
+                }
+              ],
+              "description": "Flag of Harghita County",
+              "credit": "https://www.presidency.ro/ro/presedinte/romania/drapelul-romaniei",
+              "categories": "Flags of counties of Romania|PD-RO-exempt (flags)",
+              "matchedArticles": [
+                {
+                  "language": "en",
+                  "title": "Harghita County",
+                  "url": "https://en.wikipedia.org/wiki/Harghita_County",
+                  "revision": 1381196795
+                },
+                {
+                  "language": "fi",
+                  "title": "Harghita (piirikunta)",
+                  "url": "https://fi.wikipedia.org/wiki/Harghita_(piirikunta)",
+                  "revision": 23402274
+                },
+                {
+                  "language": "sv",
+                  "title": "Harghita",
+                  "url": "https://sv.wikipedia.org/wiki/Harghita",
+                  "revision": 59132231
+                },
+                {
+                  "language": "mn",
+                  "title": "Харгита тойрог",
+                  "url": "https://mn.wikipedia.org/wiki/%D0%A5%D0%B0%D1%80%D0%B3%D0%B8%D1%82%D0%B0_%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D0%B3",
+                  "revision": 867415
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r2248660",
+              "language": "en",
+              "title": "Harghita County",
+              "url": "https://en.wikipedia.org/wiki/Harghita_County",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=Harghita+County&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=Harghita+County&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:47:20.653Z",
+                "sha256": "0df516c1f4d3a26a1eba88703968cadea394da38aae7f908b2755e51f1b797d2",
+                "bytes": 1044,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 1381196795,
+                  "parentid": 1374423069,
+                  "user": "Frietjes",
+                  "timestamp": "2026-10-20T16:35:25Z",
+                  "comment": "/* Administrative divisions */"
+                },
+                {
+                  "revid": 1374423069,
+                  "parentid": 1372367188,
+                  "user": "ZackBot",
+                  "timestamp": "2026-09-12T00:07:02Z",
+                  "comment": "fixing deprecated parameters for [[Template:Infobox settlement]] ([[Wikipedia:Bots/Requests for approval/ZackBot 14|ZackBot 14]])"
+                },
+                {
+                  "revid": 1372367188,
+                  "parentid": 1372367019,
+                  "user": "HarukaAmaranth",
+                  "timestamp": "2026-08-31T12:22:41Z",
+                  "comment": "/* Politics */ accidentally removed a row that spells out the final row for the majority"
+                },
+                {
+                  "revid": 1372367019,
+                  "parentid": 1357616942,
+                  "user": "HarukaAmaranth",
+                  "timestamp": "2026-08-31T12:21:30Z",
+                  "comment": "/* Politics */ remove nonexistent 31st councilor seat"
+                },
+                {
+                  "revid": 1357616942,
+                  "parentid": 1348657967,
+                  "user": "Smoothcheeks",
+                  "timestamp": "2026-06-03T17:26:01Z",
+                  "comment": "/* Politics */ blue"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "site:legislatie.just.ro \"Harghita\" \"România\" (stemei OR steag OR drapel)",
+              "checkedAt": "2026-11-09T07:57:02.377Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "Rezultate Căutare - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/RezultateCautare?publicatinceputtext=2026%2F07%2F02&publicatnumar=544&publicatsfarsittext=2026%2F07%2F02",
+                  "excerpt": "Rezultate Căutare - Portal Legislativ (https://legislatie.just.ro/Public/RezultateCautare?publicatinceputtext=2026%2F07%2F02&publicatnumar=544&publicatsfarsittext=2026%2F07%2F02) Published: 4 months ago; Crawled: 4 months ago; HOTĂRÂRE nr. 509 din 26 iunie 2026 pentru modificarea şi completarea Hotărârii Guvernului nr. 685/2022 privind instituirea regimului de arie naturală protejată şi declararea"
+                },
+                {
+                  "title": "Rezultate Căutare - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/public/RezultateCautare?sectiuneact=3",
+                  "excerpt": " Rezultate Căutare - Portal Legislativ (https://legislatie.just.ro/public/RezultateCautare?sectiuneact=3) Crawled: 4 months ago; HOTĂRÂRE nr. 510 din 26 iunie 2026 privind aprobarea stemei judeţului Harghita EMITENT | * Guvernul PUBLICAT ÎN Monitorul Oficial nr. 544 din 02 iulie 2026 Data intrarii in vigoare: 02 iulie 2026 Alte acte emise de: Guvernul Alte acte din aceeasi publicatie Vizualizeaza "
+                },
+                {
+                  "title": "Rezultate Căutare - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/public/RezultateCautare?publicatinceputtext=2019%2F04%2F12&publicatnumar=281&publicatsfarsittext=2019%2F04%2F12",
+                  "excerpt": " Rezultate Căutare - Portal Legislativ (https://legislatie.just.ro/public/RezultateCautare?publicatinceputtext=2019%2F04%2F12&publicatnumar=281&publicatsfarsittext=2019%2F04%2F12) Published: 7.6 years ago; Crawled: 4 months ago; HOTĂRÂRE nr. 181 din 29 martie 2019 privind aprobarea modelului steagului comunei Răcăşdia, judeţul Caraş-Severin ... HOTĂRÂRE nr. 190 din 29 martie 2019 privind aprobarea"
+                }
+              ],
+              "exactContextMatches": 0,
+              "limitation": "Discovery results do not establish legal authenticity, amendments or graphic fidelity."
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+                "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg",
+                "https://judetulharghita.ro/wp-content/uploads/2025/12/Anexa.pdf",
+                "https://judetulharghita.ro/wp-content/uploads/2020/12/Anexa-Statut_2004.pdf"
+              ],
+              "finding": "Final statutory blazon has four crosses and eight stars; December 2025 proposal has five crosses and twelve stars, so proposal rejected. Final graphic endpoint failed Node fetch, native PowerShell HTTP and Chromium (HTTP2 protocol error; HTTP1 empty response). Coat null retained. Selected flag is blue/gold with sun and moon; 2004 statute page63 instead describes white with alternating red/black triangular border under decision40/2002. This older text does not establish whether a later flag replaced it. No current flag-approval annex recovered: existing flag retained unconfirmed, independent of coat approval.",
+              "state": "BLOCKED_EVIDENCE"
+            }
+          ],
+          "newEvidence": [
+            {
+              "index": 5,
+              "url": "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf",
+              "checkedAt": "2026-11-09T16:44:28.380Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 102732,
+              "sha256": "7cb5a3ac6d1860f2f3188d7c9d3fc38cd632a15a896d9144a56beb4524f7a397",
+              "cacheFile": "081ff65689ce8a4208a55af363420ef042e8fed1d4897388229a168ab7238067.bin",
+              "atlasIds": [
+                "osm-r2248660"
+              ],
+              "act": "HCJ Harghita6/27 January2026",
+              "date": "2026-01-27",
+              "sourceType": "PRIMARY_COUNTY_ACT",
+              "pages": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "correspondence": "Signed county decision amending the proposed blazon; not HG510 final graphic annex",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Five crosses and12 stars on pages3-4; articleII preserves the earlier graphic proposal. Not the final four/eight version.",
+              "localFile": "docs/audits/sim-r7/evidence/harghita-hcj6-2026.pdf"
+            }
+          ],
+          "contradictions": [],
+          "blocker": "New January2026 county act inspected in full:5 crosses/12 stars remain in the proposal. Final graphic endpoint and MDLPA/SGG attachments unavailable; no substitution. Coat and flag investigated independently.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        }
+      ],
+      "sources": [
+        "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+        "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg",
+        "https://judetulharghita.ro/wp-content/uploads/2025/12/Anexa.pdf",
+        "https://judetulharghita.ro/wp-content/uploads/2020/12/Anexa-Statut_2004.pdf",
+        "https://hargitamegye.ro/wp-content/uploads/2026/01/Hot-006-2026.pdf"
+      ],
+      "finding": "New January2026 county act inspected in full:5 crosses/12 stars remain in the proposal. Final graphic endpoint and MDLPA/SGG attachments unavailable; no substitution. Coat and flag investigated independently."
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "entity": "Vrancea",
+      "country": "RO",
+      "entityType": "county",
+      "adminLevel": 4,
+      "registryCode": "396",
+      "parentId": "osm-r90689",
+      "previousState": "PARTIALLY_RESOLVED",
+      "currentState": "PARTIALLY_RESOLVED",
+      "checkedAt": "2026-11-09T16:44:26.709Z",
+      "act": {
+        "number": "228",
+        "date": "2026-04-16",
+        "type": "HG",
+        "coat": "Final graphic annex1",
+        "flag": null
+      },
+      "symbols": [
+        {
+          "kind": "coat",
+          "act": {
+            "type": "HG",
+            "number": "228",
+            "date": "2026-04-16"
+          },
+          "requiredEvidence": "Final graphic annex1",
+          "recoveryState": "PARTIAL",
+          "currentImage": {
+            "kind": "commons",
+            "file": "ROU VN VRANCEA COA.png",
+            "tier": "B",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ROU_VN_VRANCEA_COA.png",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_VN_VRANCEA_COA.png"
+          },
+          "verdict": "SOURCE_CORROBORATED",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r2260187",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+                "https://www.cdep.ro/ords/pls/legis/legis_pck.lista_anuala?an=2026&emi=3&nrc=200&rep=0&tip=2"
+              ],
+              "act": "HG 228/16 April 2026, MO 315/21 April 2026",
+              "finding": "Official legislative index corroborates the 2026 act. Full primary act/graphic retrieval failed. Existing coat and flag retained without a new official certification; no proven obsolete assignment is inferred.",
+              "symbolActs": {
+                "coat": "HG 228/16 April 2026"
+              }
+            },
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:ROU VN VRANCEA COA.png",
+              "revision": {
+                "revid": 1264201735,
+                "parentid": 1264201478,
+                "timestamp": "2026-08-20T11:39:53Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2026-08-20T11:30:12Z",
+                  "sha1": "8a8f52bc9ebdbb4c8d1f9f2b943c0dd4eb3c28cd",
+                  "user": "MSClaudiu",
+                  "comment": "Uploaded a work by Consiliul Județean Vrancea from Consiliul Județean Vrancea with UploadWizard"
+                }
+              ],
+              "description": "Stema Județului Vrancea",
+              "credit": "Consiliul Județean Vrancea",
+              "categories": "Vrancea County|Coats of arms of cities and communes of Vrancea County|PD-RO-exempt (coats of arms)",
+              "matchedArticles": [
+                {
+                  "language": "mn",
+                  "title": "Вранча тойрог",
+                  "url": "https://mn.wikipedia.org/wiki/%D0%92%D1%80%D0%B0%D0%BD%D1%87%D0%B0_%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D0%B3",
+                  "revision": 867451
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r2260187",
+              "language": "mn",
+              "title": "Вранча тойрог",
+              "url": "https://mn.wikipedia.org/wiki/%D0%92%D1%80%D0%B0%D0%BD%D1%87%D0%B0_%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D0%B3",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://mn.wikipedia.org/w/api.php?format=json&action=query&titles=%D0%92%D1%80%D0%B0%D0%BD%D1%87%D0%B0+%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D0%B3&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://mn.wikipedia.org/w/api.php?format=json&action=query&titles=%D0%92%D1%80%D0%B0%D0%BD%D1%87%D0%B0+%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D0%B3&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:47:31.471Z",
+                "sha256": "0e8e6f39f2d2e83844554d3604c6132988ce88b3fd15c57fb1212f33222eb2e0",
+                "bytes": 752,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 867451,
+                  "parentid": 867343,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-27T17:19:30Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 867343,
+                  "parentid": 867336,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-27T12:40:57Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 867336,
+                  "parentid": 866850,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-27T12:37:21Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 866850,
+                  "parentid": 866266,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-21T17:45:05Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 866266,
+                  "parentid": 775391,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-15T14:45:58Z",
+                  "comment": ""
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "site:legislatie.just.ro \"Vrancea\" \"România\" (stemei OR steag OR drapel)",
+              "checkedAt": "2026-11-09T07:57:05.764Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "DECRET 302 25/07/1972",
+                  "url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G37MNAILAD889S2O4T7DAEMTKZL",
+                  "excerpt": "DECRET 302 25/07/1972 (https://legislatie.just.ro/Public/FormaPrintabila/00000G37MNAILAD889S2O4T7DAEMTKZL) Published: 54.0 years ago; Crawled: 5 months ago; Se aprobă stemele judeţelor: Alba, Arad, Arges, Bacau, Bihor, Bistrita-Nasaud, Botosani, Braşov, Brăila, Buzau, Caraş-Severin, Cluj, Constanta, Covasna, Dîmboviţa, Dolj, Galaţi, Gorj, Hunedoara, Harghita, Ialomita, Iaşi, Ilfov, Maramures, Mehe"
+                },
+                {
+                  "title": "Rezultate Căutare - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/RezultateCautare?page=5719&tipdoc=2",
+                  "excerpt": " Rezultate Căutare - Portal Legislativ (https://legislatie.just.ro/Public/RezultateCautare?page=5719&tipdoc=2) Crawled: 4 months ago; HOTĂRÂRE nr. 228 din 16 aprilie 2026 privind aprobarea stemei judeţului Vrancea 1.705/2006】 pentru aprobarea inventarului centralizat al bunurilor din domeniul public al statului EMITENT | * Guvernul PUBLICAT ÎN Monitorul Oficial nr. 315 din 21 aprilie 2026 Data int"
+                },
+                {
+                  "title": "HG 273 09/04/2014",
+                  "url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G31SM7AACQIUGV3SGSJS5UAQKKJ",
+                  "excerpt": " HG 273 09/04/2014 (https://legislatie.just.ro/Public/FormaPrintabila/00000G31SM7AACQIUGV3SGSJS5UAQKKJ) Published: 12.6 years ago; Crawled: 4 months ago; elementelor însumate ale stemei comunei Albeşti, judeţul Botoşani ... Cartea face referire la prima Universitate Populară din România, care a fost înfiinţată în această localitate, având un rol important în propagarea culturii şi a educaţiei în r"
+                }
+              ],
+              "exactContextMatches": 0,
+              "limitation": "Discovery results do not establish legal authenticity, amendments or graphic fidelity."
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+                "https://www.ubbcluj.ro/ro/studenti/files/euro-200/2026/Monitorul_Oficial_2026.pdf"
+              ],
+              "finding": "Act description located: eagle, bull, frontal barrel with five grape bunches. UBB PDF contains only issue cover and pages15-16, not page10 graphic annex. Actual selected coat visually matches the major2026 blazon charges (eagle, silver bull and five grape bunches around the barrel); exact official annex comparison remains blocked. Existing coat and separate white flag with embedded arms retained without full certification. No demonstrated new version justifies replacement.",
+              "state": "PARTIALLY_RESOLVED"
+            }
+          ],
+          "newEvidence": [],
+          "contradictions": [],
+          "blocker": "Government meeting and MDLPA2026 project documentation discovered. Final graphic and linked PDF endpoints inaccessible. Existing coat and separate flag preserved; no graphic difference demonstrated.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        },
+        {
+          "kind": "flag",
+          "act": null,
+          "requiredEvidence": "Independent symbol adoption/use evidence",
+          "recoveryState": "NOT_FOUND",
+          "currentImage": {
+            "kind": "commons",
+            "file": "Vrancea flag.webp",
+            "tier": "B",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vrancea_flag.webp",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vrancea_flag.webp"
+          },
+          "verdict": "CANDIDATE_UNVERIFIED",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r2260187",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+                "https://www.cdep.ro/ords/pls/legis/legis_pck.lista_anuala?an=2026&emi=3&nrc=200&rep=0&tip=2"
+              ],
+              "act": "HG 228/16 April 2026, MO 315/21 April 2026",
+              "finding": "Official legislative index corroborates the 2026 act. Full primary act/graphic retrieval failed. Existing coat and flag retained without a new official certification; no proven obsolete assignment is inferred.",
+              "symbolActs": {
+                "coat": "HG 228/16 April 2026"
+              }
+            },
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:Vrancea flag.webp",
+              "revision": {
+                "revid": 1248609708,
+                "parentid": 1247941471,
+                "timestamp": "2026-07-17T15:45:04Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2026-07-17T15:45:04Z",
+                  "sha1": "3ba9b97de2ac5c799f44fe1dadc064d026e9b6ab",
+                  "user": "Zlatɔn",
+                  "comment": "Reverted to version as of 16:36, 14 January 2026 (UTC)"
+                },
+                {
+                  "timestamp": "2026-07-15T06:55:35Z",
+                  "sha1": "b66eb35a7bfc8d1a62876ccc85f92424f2825f18",
+                  "user": "Zlatɔn",
+                  "comment": "better version"
+                },
+                {
+                  "timestamp": "2026-01-14T16:36:57Z",
+                  "sha1": "3ba9b97de2ac5c799f44fe1dadc064d026e9b6ab",
+                  "user": "Zlatɔn",
+                  "comment": "Uploaded a work by {{Unknown|author}} from https://vexillology.fandom.com/wiki/Flags_of_counties_of_Romania with UploadWizard"
+                }
+              ],
+              "description": "Vrancea flag",
+              "credit": "https://vexillology.fandom.com/wiki/Flags_of_counties_of_Romania",
+              "categories": "CC-Zero|Flags of counties of Romania|Template Unknown (author)|Symbols of Vrancea County",
+              "matchedArticles": [],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r2260187",
+              "language": "mn",
+              "title": "Вранча тойрог",
+              "url": "https://mn.wikipedia.org/wiki/%D0%92%D1%80%D0%B0%D0%BD%D1%87%D0%B0_%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D0%B3",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://mn.wikipedia.org/w/api.php?format=json&action=query&titles=%D0%92%D1%80%D0%B0%D0%BD%D1%87%D0%B0+%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D0%B3&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://mn.wikipedia.org/w/api.php?format=json&action=query&titles=%D0%92%D1%80%D0%B0%D0%BD%D1%87%D0%B0+%D1%82%D0%BE%D0%B9%D1%80%D0%BE%D0%B3&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:47:31.471Z",
+                "sha256": "0e8e6f39f2d2e83844554d3604c6132988ce88b3fd15c57fb1212f33222eb2e0",
+                "bytes": 752,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 867451,
+                  "parentid": 867343,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-27T17:19:30Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 867343,
+                  "parentid": 867336,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-27T12:40:57Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 867336,
+                  "parentid": 866850,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-27T12:37:21Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 866850,
+                  "parentid": 866266,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-21T17:45:05Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 866266,
+                  "parentid": 775391,
+                  "user": "Enkhsaihan2005",
+                  "timestamp": "2026-08-15T14:45:58Z",
+                  "comment": ""
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "site:legislatie.just.ro \"Vrancea\" \"România\" (stemei OR steag OR drapel)",
+              "checkedAt": "2026-11-09T07:57:05.764Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "DECRET 302 25/07/1972",
+                  "url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G37MNAILAD889S2O4T7DAEMTKZL",
+                  "excerpt": "DECRET 302 25/07/1972 (https://legislatie.just.ro/Public/FormaPrintabila/00000G37MNAILAD889S2O4T7DAEMTKZL) Published: 54.0 years ago; Crawled: 5 months ago; Se aprobă stemele judeţelor: Alba, Arad, Arges, Bacau, Bihor, Bistrita-Nasaud, Botosani, Braşov, Brăila, Buzau, Caraş-Severin, Cluj, Constanta, Covasna, Dîmboviţa, Dolj, Galaţi, Gorj, Hunedoara, Harghita, Ialomita, Iaşi, Ilfov, Maramures, Mehe"
+                },
+                {
+                  "title": "Rezultate Căutare - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/RezultateCautare?page=5719&tipdoc=2",
+                  "excerpt": " Rezultate Căutare - Portal Legislativ (https://legislatie.just.ro/Public/RezultateCautare?page=5719&tipdoc=2) Crawled: 4 months ago; HOTĂRÂRE nr. 228 din 16 aprilie 2026 privind aprobarea stemei judeţului Vrancea 1.705/2006】 pentru aprobarea inventarului centralizat al bunurilor din domeniul public al statului EMITENT | * Guvernul PUBLICAT ÎN Monitorul Oficial nr. 315 din 21 aprilie 2026 Data int"
+                },
+                {
+                  "title": "HG 273 09/04/2014",
+                  "url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G31SM7AACQIUGV3SGSJS5UAQKKJ",
+                  "excerpt": " HG 273 09/04/2014 (https://legislatie.just.ro/Public/FormaPrintabila/00000G31SM7AACQIUGV3SGSJS5UAQKKJ) Published: 12.6 years ago; Crawled: 4 months ago; elementelor însumate ale stemei comunei Albeşti, judeţul Botoşani ... Cartea face referire la prima Universitate Populară din România, care a fost înfiinţată în această localitate, având un rol important în propagarea culturii şi a educaţiei în r"
+                }
+              ],
+              "exactContextMatches": 0,
+              "limitation": "Discovery results do not establish legal authenticity, amendments or graphic fidelity."
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+                "https://www.ubbcluj.ro/ro/studenti/files/euro-200/2026/Monitorul_Oficial_2026.pdf"
+              ],
+              "finding": "Act description located: eagle, bull, frontal barrel with five grape bunches. UBB PDF contains only issue cover and pages15-16, not page10 graphic annex. Actual selected coat visually matches the major2026 blazon charges (eagle, silver bull and five grape bunches around the barrel); exact official annex comparison remains blocked. Existing coat and separate white flag with embedded arms retained without full certification. No demonstrated new version justifies replacement.",
+              "state": "PARTIALLY_RESOLVED"
+            }
+          ],
+          "newEvidence": [],
+          "contradictions": [],
+          "blocker": "Government meeting and MDLPA2026 project documentation discovered. Final graphic and linked PDF endpoints inaccessible. Existing coat and separate flag preserved; no graphic difference demonstrated.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        }
+      ],
+      "sources": [
+        "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+        "https://www.ubbcluj.ro/ro/studenti/files/euro-200/2026/Monitorul_Oficial_2026.pdf"
+      ],
+      "finding": "Government meeting and MDLPA2026 project documentation discovered. Final graphic and linked PDF endpoints inaccessible. Existing coat and separate flag preserved; no graphic difference demonstrated."
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "entity": "Municipiul Chișinău",
+      "country": "MD",
+      "entityType": "municipality_or_city_uat",
+      "adminLevel": 8,
+      "registryCode": "0100",
+      "parentId": "osm-r1691801",
+      "previousState": "PARTIALLY_RESOLVED",
+      "currentState": "PARTIALLY_RESOLVED",
+      "checkedAt": "2026-11-09T16:44:26.709Z",
+      "act": {
+        "number": "1475-VIII",
+        "date": "2020-03-02",
+        "type": "Presidential decree",
+        "coat": "Full registration annex",
+        "flag": "Full registration annex"
+      },
+      "symbols": [
+        {
+          "kind": "coat",
+          "act": {
+            "type": "Presidential decree",
+            "number": "1475-VIII",
+            "date": "2020-03-02"
+          },
+          "requiredEvidence": "Full registration annex",
+          "recoveryState": "PARTIAL",
+          "currentImage": {
+            "kind": "local",
+            "file": "chisinau-coat.jpg",
+            "url": "symbols/chisinau-coat.jpg",
+            "sourceUrl": "https://cnh.prm.md/"
+          },
+          "verdict": "SOURCE_CORROBORATED",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r1748490",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://monitorul.gov.md/ro/monitor/2186",
+                "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg"
+              ],
+              "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+              "finding": "Official gazette index reconfirms decree identity. Fresh CNH coat bytes match the existing local JPEG. Full original decree graphic annex not recovered; source corroboration does not newly certify the entire legal chain.",
+              "symbolActs": {
+                "coat": "Decree 1475-VIII/2 March 2020"
+              }
+            },
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "chisinau-coat.jpg",
+              "revision": null,
+              "versions": [],
+              "description": null,
+              "credit": null,
+              "categories": null,
+              "matchedArticles": [],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r1748490",
+              "language": "ro",
+              "title": "Chișinău",
+              "url": "https://ro.wikipedia.org/wiki/Chi%C8%99in%C4%83u",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://ro.wikipedia.org/w/api.php?format=json&action=query&titles=Chi%C8%99in%C4%83u&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://ro.wikipedia.org/w/api.php?format=json&action=query&titles=Chi%C8%99in%C4%83u&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:06:49.073Z",
+                "sha256": "1675a11f2ae0c01e4ca51cd47c97dcdd27863af1845971be57a054435fce7f66",
+                "bytes": 969,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 18035157,
+                  "parentid": 18035155,
+                  "user": "SlartibartfastT",
+                  "timestamp": "2026-10-07T17:28:55Z",
+                  "comment": "Revenire la ultima modificare de către Edward Mike005"
+                },
+                {
+                  "revid": 18035155,
+                  "parentid": 18030391,
+                  "user": "~2026-53864-58",
+                  "temp": "",
+                  "timestamp": "2026-10-07T17:23:52Z",
+                  "comment": "/* */"
+                },
+                {
+                  "revid": 18030391,
+                  "parentid": 18029576,
+                  "user": "Edward Mike005",
+                  "timestamp": "2026-10-06T08:22:27Z",
+                  "comment": "/* Orașul țarist */"
+                },
+                {
+                  "revid": 18029576,
+                  "parentid": 18011543,
+                  "user": "Slartibot",
+                  "timestamp": "2026-10-05T15:57:35Z",
+                  "comment": "Robot: elimin parametrii de populație și densitate din infocaseta localității"
+                },
+                {
+                  "revid": 18011543,
+                  "parentid": 18000243,
+                  "user": "Vellion Eagle",
+                  "timestamp": "2026-09-27T20:25:31Z",
+                  "comment": "Wikizări, stilizări, uniformizări (via JWB)"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "(site:legis.md OR site:presedinte.md OR site:cnh.prm.md) \"Chișinău\" \"Chișinău\" (stemă OR drapel OR символ)",
+              "checkedAt": "2026-11-09T07:12:00.915Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "CONSTITUȚIA REPUBLICII MOLDOVA",
+                  "url": "https://presedinte.md/app/webroot/Constitutia_RM/Constitutia_2024_ro.pdf",
+                  "excerpt": "CONSTITUȚIA REPUBLICII MOLDOVA (https://presedinte.md/app/webroot/Constitutia_RM/Constitutia_2024_ro.pdf) Published: 2.0 years ago; (5) Drapelul, stema și imnul sunt simbolurile de stat ale Republicii Moldova și sunt ocrotite de lege. ... (4) Modul de funcționare a limbilor pe teritoriul Repu-blicii Moldova se stabilește prin lege organică. ... Capitala Republicii Moldova este orașul Chișinău. CON"
+                },
+                {
+                  "title": "PREȘEDINTELE REPUBLICII MOLDOVA",
+                  "url": "https://presedinte.md/app/webroot/Decrete/1701.pdf",
+                  "excerpt": " PREȘEDINTELE REPUBLICII MOLDOVA (https://presedinte.md/app/webroot/Decrete/1701.pdf) Published: 1.9 years ago; Crawled: 9 months ago; Art.1. - Se înregistrează în Armorialul General al Republicii Moldova stema și drapelul satului Mașcăuți, raionul Criuleni, aprobate prin Decizia Consiliului Sătesc Mașcăuți nr. 4/9 din 6 decembrie 2024 (anexele nr. 1 și nr. ... Chișinău, 19 decembrie 2024. PREȘEDI"
+                },
+                {
+                  "title": "PREȘEDINTELE REPUBLICII MOLDOVA",
+                  "url": "https://presedinte.md/app/webroot/Decrete/1507.pdf",
+                  "excerpt": " PREȘEDINTELE REPUBLICII MOLDOVA (https://presedinte.md/app/webroot/Decrete/1507.pdf) Published: 2.4 years ago; Crawled: 11 months ago; Art.1. - Se înregistrează în Armorialul General al Republicii Moldova stema și drapelul satului Gaidar, Unitatea Teritorială Autonomă Găgăuzia, aprobate prin Decizia Consiliului Sătesc Gaidar nr. 5/5 din 11 iunie 2024 (anexele nr. 1 și nr. ... Chișinău, 27 iunie 2"
+                },
+                {
+                  "title": "Decrete — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/rom/decrete-9388",
+                  "excerpt": " Decrete — Președinția Republicii Moldova (https://presedinte.md/rom/decrete-9388) Crawled: 2 months ago; DECRET nr.1665-IX din 28.11.2024 privind înregistrarea stemei și drapelului satului Mârzaci, comuna Mârzești, raionul Orhei ... DECRET nr.633-IX din 09.09.2022 privind înregistrarea stemei și drapelului orașului Vatra, municipiul Chișinău ... DECRET nr.140-IX din 01.09.2021 privind numirea doa"
+                },
+                {
+                  "title": "Constituția Republicii Moldova — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/rom/constitutia-republicii-moldova",
+                  "excerpt": " Constituția Republicii Moldova — Președinția Republicii Moldova (https://presedinte.md/rom/constitutia-republicii-moldova) Crawled: 2 months ago; Republica Moldova, Chișinău, MD 2004 CONSTITUȚIA REPUBLICII MOLDOVA Contact # Constituția Republicii Moldova Image: STEMA DE STAT A REPUBLICII MOLDOVA © Toate materialele de pe acest site sunt disponibile sub licența Atribuire - Partajare în Condiții Id"
+                },
+                {
+                  "title": "Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/corespondenta",
+                  "excerpt": " Президентура Республики Молдова (https://presedinte.md/rus/corespondenta) Crawled: 2 months ago; © 2013 Preşedinţia Republicii Moldova. ... Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Конституция Республики Молдова — Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/constitutia-republicii-moldova",
+                  "excerpt": " Конституция Республики Молдова — Президентура Республики Молдова (https://presedinte.md/rus/constitutia-republicii-moldova) Crawled: 2 months ago; Republica Moldova, Chișinău, MD 2073 "
+                }
+              ],
+              "exactContextMatches": 7,
+              "limitation": "Search results identify documents; they do not alone verify legal authenticity, later amendments or graphic fidelity."
+            },
+            {
+              "type": "LINKED_PRIMARY_REQUEST",
+              "url": "https://www.legis.md/cautare/getResults?doc_id=120612&lang=ro",
+              "status": 403,
+              "error": "Error: HTTP 403"
+            },
+            {
+              "type": "LINKED_PRIMARY_REQUEST",
+              "url": "https://cnh.prm.md/",
+              "status": 200,
+              "sha256": "ffa873a7695115a0b46e0193af604cf8436857e426739cafbf815354bd5c0bf4"
+            },
+            {
+              "type": "PRIMARY_DECREE_DISCOVERY",
+              "documents": [
+                {
+                  "title": "DECRET nr.1498-IX din 24.06.2024 privind înregistrarea unor simboluri teritoriale ale orașului Stăuceni, municipiul Chișinău",
+                  "url": "https://presedinte.md/app/webroot/Decrete/1498.pdf",
+                  "status": 200,
+                  "sha256": "00d0986757e0da4a83494f3391d1b5f777e2b8b723fe95ccc66f5108b8d4c6f6"
+                },
+                {
+                  "title": "DECRET nr.633-IX din 09.09.2022 privind înregistrarea stemei și drapelului orașului Vatra, municipiul Chișinău",
+                  "url": "https://presedinte.md/app/webroot/Decrete/633.pdf",
+                  "status": 200,
+                  "sha256": "cc3fbc99d42c6422251f3e7005f38216acb55c93900180c5f921801b9e87d984"
+                }
+              ],
+              "limitation": "Potential documents, not automatic holder attribution: village/commune and parent scope must still be checked before legal certification."
+            },
+            {
+              "type": "DOCUMENTED_DECISION",
+              "atlasId": "osm-r1748490",
+              "kind": "coat",
+              "verdict": "SOURCE_CORROBORATED",
+              "action": "KEEP",
+              "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+              "sources": [
+                "https://monitorul.gov.md/ro/monitor/2186",
+                "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+                "https://ciocana.md/simbolurile-sectorului"
+              ],
+              "identity": "Exact SIM-R2a holder mapping retained; city/municipal/sector scope is not propagated to other IDs.",
+              "graphicComparison": "Fresh CNH bytes have exactly the existing JPEG SHA256 9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014.",
+              "limitations": [
+                "Gazette index confirms decree identity, but its full original graphic annex was not recovered. Current CNH provenance and exact original-source hash corroborate use; no new full legal certification.",
+                "See SIM-R2A-EVIDENCE.json and local-source-comparisons.json. Informational-use rules and holder attribution preserved; reproduction licence is assessed separately."
+              ]
+            },
+            {
+              "type": "SIM_R6_INDIVIDUAL_REVIEW",
+              "source": "https://cnh.prm.md/",
+              "sha256": "da770cebbfc0c53788aca98468c6431e0d08534786cb350325b767293bcbc605",
+              "finding": "Municipal large coat with water-tower supporters, institutional CNH JPEG; not assigned to the separate city ID."
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://monitorul.gov.md/ro/monitor/2186",
+                "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+                "https://dialogica.asm.md/arhivarevistei/Dialogica/Dialogica_03_2020.pdf",
+                "https://ciocana.md/simbolurile-sectorului",
+                "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8"
+              ],
+              "finding": "Both Atlas identities share CUATM0100 but remain distinct: osm-r1748490 is ADM8 beneath osm-r1691801 ADM4. Institutional large coat bytes exactly match local original. Eight-page use regulation linked from Ciocana recovered, visually read in full: sections1.3 and4.1 identify the municipal holder and the small form, section9.1 preserves statutory uses; no graphic annex in this PDF. Designer first-hand account, Dialogica3/2020 pp19-36, confirms large and small municipal coats plus flag. Full normative annex not recovered. Existing municipal assets retained; informative-symbol use documented separately; reproduction copyright remains unresolved.",
+              "state": "PARTIALLY_RESOLVED"
+            }
+          ],
+          "newEvidence": [
+            {
+              "index": 1,
+              "url": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+              "checkedAt": "2026-11-09T16:58:07.241Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 7254116,
+              "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+              "cacheFile": "098c57a61d6f039470687401d94a782c9e552662426d70a8a5711659ce4af633.bin",
+              "atlasIds": [
+                "osm-r1748490",
+                "osm-r1691801"
+              ],
+              "act": "Municipal mayor disposition537-d/1 October2020",
+              "date": "2020-10-01",
+              "sourceType": "PRIMARY_MUNICIPAL_ACT_PUBLISHED_BY_SUBORDINATE_AUTHORITY",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+              ],
+              "correspondence": "Institutional copy of signed act and11 letterhead annexes. Not the graphic registration annex to Decree1475-VIII.",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Monochrome large municipal arms in letterhead models; page13 prescribes large municipal arms on official forms. English CITY HALL is a translation, not proof of a second independent heraldic holder.",
+              "localFile": "docs/audits/sim-r7/evidence/chisinau-disposition-537d-2020.pdf"
+            },
+            {
+              "index": 0,
+              "url": "https://particip.gov.md/ro/download_attachment/20092",
+              "checkedAt": "2026-11-09T16:58:05.243Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://particip.gov.md/ro/download_attachment/20092",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 619292,
+              "sha256": "bab5a231ce4a3ed2bdfeb39bd8b300fa9389c874fecd9d6b1adeb31a8a1067ed",
+              "cacheFile": "7d6ea201705c0d344ae63775cd5753b1df05f2ae15e54dd3328d570ae5bd38e3.bin",
+              "atlasIds": [
+                "osm-r1748490",
+                "osm-r1691801"
+              ],
+              "act": "Undated, unnumbered municipal draft regulation",
+              "sourceType": "PRIMARY_PUBLIC_CONSULTATION_DRAFT",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "correspondence": "Official consultation copy; blank adoption number/date, not a final enacted decision",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Regulates commercial names, logos and trademarks using local symbolism. Does not provide the missing coat/flag graphic annex or a reproduction licence."
+            }
+          ],
+          "contradictions": [],
+          "blocker": "New signed537-d/2020 institutional copy confirms the large municipal arms on official forms. It is not the registration annex, does not certify the colours of the selected JPEG and does not resolve reproduction copyright.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        },
+        {
+          "kind": "flag",
+          "act": {
+            "type": "Presidential decree",
+            "number": "1475-VIII",
+            "date": "2020-03-02"
+          },
+          "requiredEvidence": "Full registration annex",
+          "recoveryState": "PARTIAL",
+          "currentImage": {
+            "kind": "commons",
+            "file": "Drapel Municipiul Chisinau.jpg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Drapel_Municipiul_Chisinau.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Drapel_Municipiul_Chisinau.jpg",
+            "tier": "B"
+          },
+          "verdict": "SOURCE_CORROBORATED",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r1748490",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://monitorul.gov.md/ro/monitor/2186",
+                "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg"
+              ],
+              "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+              "finding": "Official gazette index reconfirms decree identity. Fresh CNH coat bytes match the existing local JPEG. Full original decree graphic annex not recovered; source corroboration does not newly certify the entire legal chain.",
+              "symbolActs": {
+                "coat": "Decree 1475-VIII/2 March 2020"
+              }
+            },
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:Drapel Municipiul Chisinau.jpg",
+              "revision": {
+                "revid": 922860829,
+                "parentid": 792469308,
+                "timestamp": "2024-09-11T12:16:05Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2021-12-08T19:56:30Z",
+                  "sha1": "9b73a7f068a3a596552b7ce0ba3d9b904b17884c",
+                  "user": "David G217",
+                  "comment": "Cross-wiki upload from ru.wikipedia.org"
+                }
+              ],
+              "description": "Drapel Municipiul Chisinau",
+              "credit": "Own work",
+              "categories": "Flags of Chișinău|Vector version available|With insignia|PD-MD-exempt (flags)",
+              "matchedArticles": [
+                {
+                  "language": "ro",
+                  "title": "Chișinău",
+                  "url": "https://ro.wikipedia.org/wiki/Chi%C8%99in%C4%83u",
+                  "revision": 18035157
+                },
+                {
+                  "language": "sr",
+                  "title": "Кишињев",
+                  "url": "https://sr.wikipedia.org/wiki/%D0%9A%D0%B8%D1%88%D0%B8%D1%9A%D0%B5%D0%B2",
+                  "revision": 31797204
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r1748490",
+              "language": "ro",
+              "title": "Chișinău",
+              "url": "https://ro.wikipedia.org/wiki/Chi%C8%99in%C4%83u",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://ro.wikipedia.org/w/api.php?format=json&action=query&titles=Chi%C8%99in%C4%83u&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://ro.wikipedia.org/w/api.php?format=json&action=query&titles=Chi%C8%99in%C4%83u&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:06:49.073Z",
+                "sha256": "1675a11f2ae0c01e4ca51cd47c97dcdd27863af1845971be57a054435fce7f66",
+                "bytes": 969,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 18035157,
+                  "parentid": 18035155,
+                  "user": "SlartibartfastT",
+                  "timestamp": "2026-10-07T17:28:55Z",
+                  "comment": "Revenire la ultima modificare de către Edward Mike005"
+                },
+                {
+                  "revid": 18035155,
+                  "parentid": 18030391,
+                  "user": "~2026-53864-58",
+                  "temp": "",
+                  "timestamp": "2026-10-07T17:23:52Z",
+                  "comment": "/* */"
+                },
+                {
+                  "revid": 18030391,
+                  "parentid": 18029576,
+                  "user": "Edward Mike005",
+                  "timestamp": "2026-10-06T08:22:27Z",
+                  "comment": "/* Orașul țarist */"
+                },
+                {
+                  "revid": 18029576,
+                  "parentid": 18011543,
+                  "user": "Slartibot",
+                  "timestamp": "2026-10-05T15:57:35Z",
+                  "comment": "Robot: elimin parametrii de populație și densitate din infocaseta localității"
+                },
+                {
+                  "revid": 18011543,
+                  "parentid": 18000243,
+                  "user": "Vellion Eagle",
+                  "timestamp": "2026-09-27T20:25:31Z",
+                  "comment": "Wikizări, stilizări, uniformizări (via JWB)"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "(site:legis.md OR site:presedinte.md OR site:cnh.prm.md) \"Chișinău\" \"Chișinău\" (stemă OR drapel OR символ)",
+              "checkedAt": "2026-11-09T07:12:00.915Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "CONSTITUȚIA REPUBLICII MOLDOVA",
+                  "url": "https://presedinte.md/app/webroot/Constitutia_RM/Constitutia_2024_ro.pdf",
+                  "excerpt": "CONSTITUȚIA REPUBLICII MOLDOVA (https://presedinte.md/app/webroot/Constitutia_RM/Constitutia_2024_ro.pdf) Published: 2.0 years ago; (5) Drapelul, stema și imnul sunt simbolurile de stat ale Republicii Moldova și sunt ocrotite de lege. ... (4) Modul de funcționare a limbilor pe teritoriul Repu-blicii Moldova se stabilește prin lege organică. ... Capitala Republicii Moldova este orașul Chișinău. CON"
+                },
+                {
+                  "title": "PREȘEDINTELE REPUBLICII MOLDOVA",
+                  "url": "https://presedinte.md/app/webroot/Decrete/1701.pdf",
+                  "excerpt": " PREȘEDINTELE REPUBLICII MOLDOVA (https://presedinte.md/app/webroot/Decrete/1701.pdf) Published: 1.9 years ago; Crawled: 9 months ago; Art.1. - Se înregistrează în Armorialul General al Republicii Moldova stema și drapelul satului Mașcăuți, raionul Criuleni, aprobate prin Decizia Consiliului Sătesc Mașcăuți nr. 4/9 din 6 decembrie 2024 (anexele nr. 1 și nr. ... Chișinău, 19 decembrie 2024. PREȘEDI"
+                },
+                {
+                  "title": "PREȘEDINTELE REPUBLICII MOLDOVA",
+                  "url": "https://presedinte.md/app/webroot/Decrete/1507.pdf",
+                  "excerpt": " PREȘEDINTELE REPUBLICII MOLDOVA (https://presedinte.md/app/webroot/Decrete/1507.pdf) Published: 2.4 years ago; Crawled: 11 months ago; Art.1. - Se înregistrează în Armorialul General al Republicii Moldova stema și drapelul satului Gaidar, Unitatea Teritorială Autonomă Găgăuzia, aprobate prin Decizia Consiliului Sătesc Gaidar nr. 5/5 din 11 iunie 2024 (anexele nr. 1 și nr. ... Chișinău, 27 iunie 2"
+                },
+                {
+                  "title": "Decrete — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/rom/decrete-9388",
+                  "excerpt": " Decrete — Președinția Republicii Moldova (https://presedinte.md/rom/decrete-9388) Crawled: 2 months ago; DECRET nr.1665-IX din 28.11.2024 privind înregistrarea stemei și drapelului satului Mârzaci, comuna Mârzești, raionul Orhei ... DECRET nr.633-IX din 09.09.2022 privind înregistrarea stemei și drapelului orașului Vatra, municipiul Chișinău ... DECRET nr.140-IX din 01.09.2021 privind numirea doa"
+                },
+                {
+                  "title": "Constituția Republicii Moldova — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/rom/constitutia-republicii-moldova",
+                  "excerpt": " Constituția Republicii Moldova — Președinția Republicii Moldova (https://presedinte.md/rom/constitutia-republicii-moldova) Crawled: 2 months ago; Republica Moldova, Chișinău, MD 2004 CONSTITUȚIA REPUBLICII MOLDOVA Contact # Constituția Republicii Moldova Image: STEMA DE STAT A REPUBLICII MOLDOVA © Toate materialele de pe acest site sunt disponibile sub licența Atribuire - Partajare în Condiții Id"
+                },
+                {
+                  "title": "Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/corespondenta",
+                  "excerpt": " Президентура Республики Молдова (https://presedinte.md/rus/corespondenta) Crawled: 2 months ago; © 2013 Preşedinţia Republicii Moldova. ... Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Конституция Республики Молдова — Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/constitutia-republicii-moldova",
+                  "excerpt": " Конституция Республики Молдова — Президентура Республики Молдова (https://presedinte.md/rus/constitutia-republicii-moldova) Crawled: 2 months ago; Republica Moldova, Chișinău, MD 2073 "
+                }
+              ],
+              "exactContextMatches": 7,
+              "limitation": "Search results identify documents; they do not alone verify legal authenticity, later amendments or graphic fidelity."
+            },
+            {
+              "type": "PRIMARY_DECREE_DISCOVERY",
+              "documents": [
+                {
+                  "title": "DECRET nr.1498-IX din 24.06.2024 privind înregistrarea unor simboluri teritoriale ale orașului Stăuceni, municipiul Chișinău",
+                  "url": "https://presedinte.md/app/webroot/Decrete/1498.pdf",
+                  "status": 200,
+                  "sha256": "00d0986757e0da4a83494f3391d1b5f777e2b8b723fe95ccc66f5108b8d4c6f6"
+                },
+                {
+                  "title": "DECRET nr.633-IX din 09.09.2022 privind înregistrarea stemei și drapelului orașului Vatra, municipiul Chișinău",
+                  "url": "https://presedinte.md/app/webroot/Decrete/633.pdf",
+                  "status": 200,
+                  "sha256": "cc3fbc99d42c6422251f3e7005f38216acb55c93900180c5f921801b9e87d984"
+                }
+              ],
+              "limitation": "Potential documents, not automatic holder attribution: village/commune and parent scope must still be checked before legal certification."
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://monitorul.gov.md/ro/monitor/2186",
+                "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+                "https://dialogica.asm.md/arhivarevistei/Dialogica/Dialogica_03_2020.pdf",
+                "https://ciocana.md/simbolurile-sectorului",
+                "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8"
+              ],
+              "finding": "Both Atlas identities share CUATM0100 but remain distinct: osm-r1748490 is ADM8 beneath osm-r1691801 ADM4. Institutional large coat bytes exactly match local original. Eight-page use regulation linked from Ciocana recovered, visually read in full: sections1.3 and4.1 identify the municipal holder and the small form, section9.1 preserves statutory uses; no graphic annex in this PDF. Designer first-hand account, Dialogica3/2020 pp19-36, confirms large and small municipal coats plus flag. Full normative annex not recovered. Existing municipal assets retained; informative-symbol use documented separately; reproduction copyright remains unresolved.",
+              "state": "PARTIALLY_RESOLVED"
+            }
+          ],
+          "newEvidence": [
+            {
+              "index": 1,
+              "url": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+              "checkedAt": "2026-11-09T16:58:07.241Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 7254116,
+              "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+              "cacheFile": "098c57a61d6f039470687401d94a782c9e552662426d70a8a5711659ce4af633.bin",
+              "atlasIds": [
+                "osm-r1748490",
+                "osm-r1691801"
+              ],
+              "act": "Municipal mayor disposition537-d/1 October2020",
+              "date": "2020-10-01",
+              "sourceType": "PRIMARY_MUNICIPAL_ACT_PUBLISHED_BY_SUBORDINATE_AUTHORITY",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+              ],
+              "correspondence": "Institutional copy of signed act and11 letterhead annexes. Not the graphic registration annex to Decree1475-VIII.",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Monochrome large municipal arms in letterhead models; page13 prescribes large municipal arms on official forms. English CITY HALL is a translation, not proof of a second independent heraldic holder.",
+              "localFile": "docs/audits/sim-r7/evidence/chisinau-disposition-537d-2020.pdf"
+            },
+            {
+              "index": 0,
+              "url": "https://particip.gov.md/ro/download_attachment/20092",
+              "checkedAt": "2026-11-09T16:58:05.243Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://particip.gov.md/ro/download_attachment/20092",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 619292,
+              "sha256": "bab5a231ce4a3ed2bdfeb39bd8b300fa9389c874fecd9d6b1adeb31a8a1067ed",
+              "cacheFile": "7d6ea201705c0d344ae63775cd5753b1df05f2ae15e54dd3328d570ae5bd38e3.bin",
+              "atlasIds": [
+                "osm-r1748490",
+                "osm-r1691801"
+              ],
+              "act": "Undated, unnumbered municipal draft regulation",
+              "sourceType": "PRIMARY_PUBLIC_CONSULTATION_DRAFT",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "correspondence": "Official consultation copy; blank adoption number/date, not a final enacted decision",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Regulates commercial names, logos and trademarks using local symbolism. Does not provide the missing coat/flag graphic annex or a reproduction licence."
+            }
+          ],
+          "contradictions": [],
+          "blocker": "New signed537-d/2020 institutional copy confirms the large municipal arms on official forms. It is not the registration annex, does not certify the colours of the selected JPEG and does not resolve reproduction copyright.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        }
+      ],
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+        "https://dialogica.asm.md/arhivarevistei/Dialogica/Dialogica_03_2020.pdf",
+        "https://ciocana.md/simbolurile-sectorului",
+        "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8",
+        "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+        "https://particip.gov.md/ro/download_attachment/20092"
+      ],
+      "finding": "New signed537-d/2020 institutional copy confirms the large municipal arms on official forms. It is not the registration annex, does not certify the colours of the selected JPEG and does not resolve reproduction copyright."
+    },
+    {
+      "atlasId": "osm-r1691801",
+      "entity": "Orașul Chișinău",
+      "country": "MD",
+      "entityType": "level_2_municipality",
+      "adminLevel": 4,
+      "registryCode": "0100",
+      "parentId": "osm-r58974",
+      "previousState": "BLOCKED_EVIDENCE",
+      "currentState": "BLOCKED_EVIDENCE",
+      "checkedAt": "2026-11-09T16:44:26.709Z",
+      "act": {
+        "number": null,
+        "date": null,
+        "type": "Independent holder act not established",
+        "coat": "Exact legal holder scope",
+        "flag": "Exact legal holder scope"
+      },
+      "symbols": [
+        {
+          "kind": "coat",
+          "act": {
+            "type": "Independent holder act not established",
+            "number": null,
+            "date": null
+          },
+          "requiredEvidence": "Exact legal holder scope",
+          "recoveryState": "NOT_FOUND",
+          "currentImage": {
+            "kind": "commons",
+            "file": "Coat of Arms of Chișinău.svg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg",
+            "tier": "B"
+          },
+          "verdict": "CANDIDATE_UNVERIFIED",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r1691801",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg"
+              ],
+              "finding": "City and municipality are distinct certified IDs. Preserve the city assignment as unconfirmed; do not propagate the municipality's 2019 symbol to the city solely because both are named Chișinău.",
+              "symbolActs": {}
+            },
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:Coat of Arms of Chișinău.svg",
+              "revision": {
+                "revid": 862753361,
+                "parentid": 792469413,
+                "timestamp": "2024-03-23T07:20:56Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2021-12-14T12:56:46Z",
+                  "sha1": "245cbf6face7429b8b11a40fbd3ec449633e5a3e",
+                  "user": "Fenn-O-maniC",
+                  "comment": "Uploaded a work by Primăria municipiului Chișinău from https://www.legis.md/cautare/getResults?doc_id=120612&lang=ro [[:File:Stema Municipiului Chișinău.png]] with UploadWizard"
+                }
+              ],
+              "description": "Coat of arms of the Municipality of Chișinău, Republic of Moldova.",
+              "credit": "Own work using: DECRET Nr. 1475 din 02-03-2020 privind înregistrarea unor simboluri teritoriale ale municipiului Chișinău Stema Municipiului Chișinău.png",
+              "categories": "Coats of arms of Chișinău|Mural crowns in crest|SVG coats of arms of Moldova|Invalid SVG created with Inkscape:CoA|PD-MD-exempt (coats of arms)",
+              "matchedArticles": [
+                {
+                  "language": "ro",
+                  "title": "Municipiul Chișinău",
+                  "url": "https://ro.wikipedia.org/wiki/Municipiul_Chi%C8%99in%C4%83u",
+                  "revision": 18047667
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r1691801",
+              "language": "ro",
+              "title": "Municipiul Chișinău",
+              "url": "https://ro.wikipedia.org/wiki/Municipiul_Chi%C8%99in%C4%83u",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://ro.wikipedia.org/w/api.php?format=json&action=query&titles=Municipiul+Chi%C8%99in%C4%83u&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://ro.wikipedia.org/w/api.php?format=json&action=query&titles=Municipiul+Chi%C8%99in%C4%83u&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:06:46.653Z",
+                "sha256": "e7e0d0de0a4169dd03453a23e83ffc16f4672bfdc713395cc594084294595e2b",
+                "bytes": 894,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 18047667,
+                  "parentid": 17261909,
+                  "user": "GÜT",
+                  "timestamp": "2026-10-16T19:04:29Z",
+                  "comment": "înlocuit legătură de la cazul genitiv la cazul nominativ using [[Project:AWB|AWB]]"
+                },
+                {
+                  "revid": 17261909,
+                  "parentid": 17208452,
+                  "user": "Tolea93",
+                  "timestamp": "2025-11-10T13:05:37Z",
+                  "comment": "recensământul din 2024"
+                },
+                {
+                  "revid": 17208452,
+                  "parentid": 17208449,
+                  "user": "Tolea93",
+                  "timestamp": "2025-10-09T17:33:56Z",
+                  "comment": "/* Demografie */"
+                },
+                {
+                  "revid": 17208449,
+                  "parentid": 17144229,
+                  "user": "Tolea93",
+                  "timestamp": "2025-10-09T17:32:05Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 17144229,
+                  "parentid": 17139421,
+                  "user": "Gikü",
+                  "timestamp": "2025-08-26T20:28:35Z",
+                  "comment": "precizări Stăuceni și Budești"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "(site:legis.md OR site:presedinte.md OR site:cnh.prm.md) \"Chișinău\" \"Moldova\" (stemă OR drapel OR символ)",
+              "checkedAt": "2026-11-09T07:11:48.388Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "CONSTITUȚIA REPUBLICII MOLDOVA",
+                  "url": "https://presedinte.md/app/webroot/Constitutia_RM/Constitutia_2024_ro.pdf",
+                  "excerpt": " CONSTITUȚIA REPUBLICII MOLDOVA (https://presedinte.md/app/webroot/Constitutia_RM/Constitutia_2024_ro.pdf) Published: 2.0 years ago; (5) Drapelul, stema și imnul sunt simbolurile de stat ale Republicii Moldova și sunt ocrotite de lege. ... (4) Modul de funcționare a limbilor pe teritoriul Repu-blicii Moldova se stabilește prin lege organică. ... Capitala Republicii Moldova este orașul Chișinău. CO"
+                },
+                {
+                  "title": "Constituția Republicii Moldova — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/rom/constitutia-republicii-moldova",
+                  "excerpt": " Constituția Republicii Moldova — Președinția Republicii Moldova (https://presedinte.md/rom/constitutia-republicii-moldova) Crawled: 2 months ago; Republica Moldova, Chișinău, MD 2004 CONSTITUȚIA REPUBLICII MOLDOVA Contact # Constituția Republicii Moldova Image: STEMA DE STAT A REPUBLICII MOLDOVA © Toate materialele de pe acest site sunt disponibile sub licența Atribuire - Partajare în Condiții Id"
+                },
+                {
+                  "title": "Конституция Республики Молдова — Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/constitutia-republicii-moldova",
+                  "excerpt": " Конституция Республики Молдова — Президентура Республики Молдова (https://presedinte.md/rus/constitutia-republicii-moldova) Crawled: 2 months ago; © 2013 Preşedinţia Republicii Moldova. ... Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Căutare — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/search",
+                  "excerpt": " Căutare — Președinția Republicii Moldova (https://presedinte.md/search) Crawled: 4 months ago; Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/corespondenta",
+                  "excerpt": " Президентура Республики Молдова (https://presedinte.md/rus/corespondenta) Crawled: 2 months ago; © 2013 Preşedinţia Republicii Moldova. ... Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Фотогалерея — Пресса — Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/presedinte/foto/page%3A4",
+                  "excerpt": " Фотогалерея — Пресса — Президентура Республики Молдова (https://presedinte.md/rus/presedinte/foto/page%3A4) Crawled: 7 months ago; © 2013 Preşedinţia Republicii Moldova. ... Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Galerie foto — Media — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/rom/presedinte/foto/page%3A200?url=rom%2Fpresedinte%2Ffoto%2Fpage%3A168",
+                  "excerpt": " Galerie foto — Media — Președinția Republicii Moldova (https://presedinte.md/rom/presedinte/foto/page%3A200?url=rom%2Fpresedinte%2Ffoto%2Fpage%3A168) Crawled: 4 months ago; Președinția Republicii Moldova ... Republica Moldova, Chișinău, MD 2073 "
+                }
+              ],
+              "exactContextMatches": 7,
+              "limitation": "Search results identify documents; they do not alone verify legal authenticity, later amendments or graphic fidelity."
+            },
+            {
+              "type": "LINKED_PRIMARY_REQUEST",
+              "url": "https://www.legis.md/cautare/getResults?doc%20id=120612&lang=ro",
+              "status": 403,
+              "error": "Error: HTTP 403"
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://dialogica.asm.md/arhivarevistei/Dialogica/Dialogica_03_2020.pdf",
+                "https://monitorul.gov.md/ro/monitor/2186"
+              ],
+              "finding": "Designer account identifies the old arms as the small MUNICIPAL coat, not proof of a second legal holder for the separate Atlas city identity. Actual selected city SVG depicts the large municipal coat with tower supporters, not a separate small city coat; both current flag images show the white/yellow municipal pattern. Existing plausible assignments retained unconfirmed under conservation principle; no automatic transfer from municipality.",
+              "state": "BLOCKED_EVIDENCE"
+            }
+          ],
+          "newEvidence": [
+            {
+              "index": 1,
+              "url": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+              "checkedAt": "2026-11-09T16:58:07.241Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 7254116,
+              "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+              "cacheFile": "098c57a61d6f039470687401d94a782c9e552662426d70a8a5711659ce4af633.bin",
+              "atlasIds": [
+                "osm-r1748490",
+                "osm-r1691801"
+              ],
+              "act": "Municipal mayor disposition537-d/1 October2020",
+              "date": "2020-10-01",
+              "sourceType": "PRIMARY_MUNICIPAL_ACT_PUBLISHED_BY_SUBORDINATE_AUTHORITY",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+              ],
+              "correspondence": "Institutional copy of signed act and11 letterhead annexes. Not the graphic registration annex to Decree1475-VIII.",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Monochrome large municipal arms in letterhead models; page13 prescribes large municipal arms on official forms. English CITY HALL is a translation, not proof of a second independent heraldic holder.",
+              "localFile": "docs/audits/sim-r7/evidence/chisinau-disposition-537d-2020.pdf"
+            },
+            {
+              "index": 0,
+              "url": "https://particip.gov.md/ro/download_attachment/20092",
+              "checkedAt": "2026-11-09T16:58:05.243Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://particip.gov.md/ro/download_attachment/20092",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 619292,
+              "sha256": "bab5a231ce4a3ed2bdfeb39bd8b300fa9389c874fecd9d6b1adeb31a8a1067ed",
+              "cacheFile": "7d6ea201705c0d344ae63775cd5753b1df05f2ae15e54dd3328d570ae5bd38e3.bin",
+              "atlasIds": [
+                "osm-r1748490",
+                "osm-r1691801"
+              ],
+              "act": "Undated, unnumbered municipal draft regulation",
+              "sourceType": "PRIMARY_PUBLIC_CONSULTATION_DRAFT",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "correspondence": "Official consultation copy; blank adoption number/date, not a final enacted decision",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Regulates commercial names, logos and trademarks using local symbolism. Does not provide the missing coat/flag graphic annex or a reproduction licence."
+            }
+          ],
+          "contradictions": [],
+          "blocker": "No separate heraldic holder act found. Shared CUATM0100 and English CITY HALL wording cannot establish a second legal holder. Both Atlas identities, levels and parents preserved.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        },
+        {
+          "kind": "flag",
+          "act": {
+            "type": "Independent holder act not established",
+            "number": null,
+            "date": null
+          },
+          "requiredEvidence": "Exact legal holder scope",
+          "recoveryState": "NOT_FOUND",
+          "currentImage": {
+            "kind": "commons",
+            "file": "Flag of Chișinău.svg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Flag_of_Chi%C8%99in%C4%83u.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Chi%C8%99in%C4%83u.svg",
+            "tier": "B"
+          },
+          "verdict": "CANDIDATE_UNVERIFIED",
+          "priorEvidence": [
+            {
+              "type": "PRIORITY_RESEARCH",
+              "atlasId": "osm-r1691801",
+              "kinds": [
+                "coat",
+                "flag"
+              ],
+              "sources": [
+                "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg"
+              ],
+              "finding": "City and municipality are distinct certified IDs. Preserve the city assignment as unconfirmed; do not propagate the municipality's 2019 symbol to the city solely because both are named Chișinău.",
+              "symbolActs": {}
+            },
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:Flag of Chișinău.svg",
+              "revision": {
+                "revid": 1254038368,
+                "parentid": 1171386565,
+                "timestamp": "2026-07-30T04:15:42Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2022-07-11T18:16:38Z",
+                  "sha1": "a80ecd93c7054f2422dfba86607b831de3b0329b",
+                  "user": "HapHaxion",
+                  "comment": "reduce file size"
+                },
+                {
+                  "timestamp": "2021-12-15T14:19:47Z",
+                  "sha1": "8c6561d552f5226e3a959bb2ede8954a0d6ce980",
+                  "user": "Fenn-O-maniC",
+                  "comment": "New design adopted by the city in 2020, https://www.chisinau.md/pageview.php?l=ro&idc=499&t=/Orasul/Simbolurile-orasului https://www.legis.md/cautare/getResults?doc_id=120612&lang=ro"
+                },
+                {
+                  "timestamp": "2021-08-03T07:16:17Z",
+                  "sha1": "83b1617d329b778d36ac8bfc87a03a31441d0e5f",
+                  "user": "Andrew J.Kurbiko",
+                  "comment": "Shade per http://www.chisinau.md/pageview.php?l=en&idc=499&t=/CITY/Symbols-of-the-city"
+                },
+                {
+                  "timestamp": "2020-04-23T08:14:12Z",
+                  "sha1": "30f2c93d6d9b08abb8ceb9ea2c46f01aa0715162",
+                  "user": "Лобачев Владимир",
+                  "comment": "Uploaded a work by Design: Георгий Врабие и Евдокия Кожокару-Врабие. Vectorization: [[User:Лобачев Владимир|Vladimir Lobachev]] from {{own}} with UploadWizard"
+                }
+              ],
+              "description": "Flag of the city of Chișinău, Republic of Moldova",
+              "credit": "https://www.legis.md/cautare/getResults?doc_id=120612&lang=ro https://www.chisinau.md/pageview.php?l=ro&idc=499&t=/Orasul/Simbolurile-orasului",
+              "categories": "Flags of Chișinău|SVG flags of Moldova - aspect ratio of 2:1|Blue on flags with white fields|Flags with centered coat of arms|PD-MD-exempt (flags)|Flags with three yellow stripes|Eagles on flags of Moldova",
+              "matchedArticles": [
+                {
+                  "language": "ceb",
+                  "title": "Municipiul Chișinău",
+                  "url": "https://ceb.wikipedia.org/wiki/Municipiul_Chi%C8%99in%C4%83u",
+                  "revision": 34835421
+                },
+                {
+                  "language": "cs",
+                  "title": "Kišiněvská municipalita",
+                  "url": "https://cs.wikipedia.org/wiki/Ki%C5%A1in%C4%9Bvsk%C3%A1_municipalita",
+                  "revision": 25835328
+                },
+                {
+                  "language": "pt",
+                  "title": "Quixinau (município)",
+                  "url": "https://pt.wikipedia.org/wiki/Quixinau_(munic%C3%ADpio)",
+                  "revision": 61557720
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r1691801",
+              "language": "ro",
+              "title": "Municipiul Chișinău",
+              "url": "https://ro.wikipedia.org/wiki/Municipiul_Chi%C8%99in%C4%83u",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://ro.wikipedia.org/w/api.php?format=json&action=query&titles=Municipiul+Chi%C8%99in%C4%83u&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://ro.wikipedia.org/w/api.php?format=json&action=query&titles=Municipiul+Chi%C8%99in%C4%83u&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:06:46.653Z",
+                "sha256": "e7e0d0de0a4169dd03453a23e83ffc16f4672bfdc713395cc594084294595e2b",
+                "bytes": 894,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 18047667,
+                  "parentid": 17261909,
+                  "user": "GÜT",
+                  "timestamp": "2026-10-16T19:04:29Z",
+                  "comment": "înlocuit legătură de la cazul genitiv la cazul nominativ using [[Project:AWB|AWB]]"
+                },
+                {
+                  "revid": 17261909,
+                  "parentid": 17208452,
+                  "user": "Tolea93",
+                  "timestamp": "2025-11-10T13:05:37Z",
+                  "comment": "recensământul din 2024"
+                },
+                {
+                  "revid": 17208452,
+                  "parentid": 17208449,
+                  "user": "Tolea93",
+                  "timestamp": "2025-10-09T17:33:56Z",
+                  "comment": "/* Demografie */"
+                },
+                {
+                  "revid": 17208449,
+                  "parentid": 17144229,
+                  "user": "Tolea93",
+                  "timestamp": "2025-10-09T17:32:05Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 17144229,
+                  "parentid": 17139421,
+                  "user": "Gikü",
+                  "timestamp": "2025-08-26T20:28:35Z",
+                  "comment": "precizări Stăuceni și Budești"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "(site:legis.md OR site:presedinte.md OR site:cnh.prm.md) \"Chișinău\" \"Moldova\" (stemă OR drapel OR символ)",
+              "checkedAt": "2026-11-09T07:11:48.388Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "CONSTITUȚIA REPUBLICII MOLDOVA",
+                  "url": "https://presedinte.md/app/webroot/Constitutia_RM/Constitutia_2024_ro.pdf",
+                  "excerpt": " CONSTITUȚIA REPUBLICII MOLDOVA (https://presedinte.md/app/webroot/Constitutia_RM/Constitutia_2024_ro.pdf) Published: 2.0 years ago; (5) Drapelul, stema și imnul sunt simbolurile de stat ale Republicii Moldova și sunt ocrotite de lege. ... (4) Modul de funcționare a limbilor pe teritoriul Repu-blicii Moldova se stabilește prin lege organică. ... Capitala Republicii Moldova este orașul Chișinău. CO"
+                },
+                {
+                  "title": "Constituția Republicii Moldova — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/rom/constitutia-republicii-moldova",
+                  "excerpt": " Constituția Republicii Moldova — Președinția Republicii Moldova (https://presedinte.md/rom/constitutia-republicii-moldova) Crawled: 2 months ago; Republica Moldova, Chișinău, MD 2004 CONSTITUȚIA REPUBLICII MOLDOVA Contact # Constituția Republicii Moldova Image: STEMA DE STAT A REPUBLICII MOLDOVA © Toate materialele de pe acest site sunt disponibile sub licența Atribuire - Partajare în Condiții Id"
+                },
+                {
+                  "title": "Конституция Республики Молдова — Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/constitutia-republicii-moldova",
+                  "excerpt": " Конституция Республики Молдова — Президентура Республики Молдова (https://presedinte.md/rus/constitutia-republicii-moldova) Crawled: 2 months ago; © 2013 Preşedinţia Republicii Moldova. ... Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Căutare — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/search",
+                  "excerpt": " Căutare — Președinția Republicii Moldova (https://presedinte.md/search) Crawled: 4 months ago; Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/corespondenta",
+                  "excerpt": " Президентура Республики Молдова (https://presedinte.md/rus/corespondenta) Crawled: 2 months ago; © 2013 Preşedinţia Republicii Moldova. ... Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Фотогалерея — Пресса — Президентура Республики Молдова",
+                  "url": "https://presedinte.md/rus/presedinte/foto/page%3A4",
+                  "excerpt": " Фотогалерея — Пресса — Президентура Республики Молдова (https://presedinte.md/rus/presedinte/foto/page%3A4) Crawled: 7 months ago; © 2013 Preşedinţia Republicii Moldova. ... Republica Moldova, Chișinău, MD 2073 "
+                },
+                {
+                  "title": "Galerie foto — Media — Președinția Republicii Moldova",
+                  "url": "https://presedinte.md/rom/presedinte/foto/page%3A200?url=rom%2Fpresedinte%2Ffoto%2Fpage%3A168",
+                  "excerpt": " Galerie foto — Media — Președinția Republicii Moldova (https://presedinte.md/rom/presedinte/foto/page%3A200?url=rom%2Fpresedinte%2Ffoto%2Fpage%3A168) Crawled: 4 months ago; Președinția Republicii Moldova ... Republica Moldova, Chișinău, MD 2073 "
+                }
+              ],
+              "exactContextMatches": 7,
+              "limitation": "Search results identify documents; they do not alone verify legal authenticity, later amendments or graphic fidelity."
+            },
+            {
+              "type": "LINKED_PRIMARY_REQUEST",
+              "url": "https://www.legis.md/cautare/getResults?doc_id=120612&lang=ro",
+              "status": 403,
+              "error": "Error: HTTP 403"
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://dialogica.asm.md/arhivarevistei/Dialogica/Dialogica_03_2020.pdf",
+                "https://monitorul.gov.md/ro/monitor/2186"
+              ],
+              "finding": "Designer account identifies the old arms as the small MUNICIPAL coat, not proof of a second legal holder for the separate Atlas city identity. Actual selected city SVG depicts the large municipal coat with tower supporters, not a separate small city coat; both current flag images show the white/yellow municipal pattern. Existing plausible assignments retained unconfirmed under conservation principle; no automatic transfer from municipality.",
+              "state": "BLOCKED_EVIDENCE"
+            }
+          ],
+          "newEvidence": [
+            {
+              "index": 1,
+              "url": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+              "checkedAt": "2026-11-09T16:58:07.241Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 7254116,
+              "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+              "cacheFile": "098c57a61d6f039470687401d94a782c9e552662426d70a8a5711659ce4af633.bin",
+              "atlasIds": [
+                "osm-r1748490",
+                "osm-r1691801"
+              ],
+              "act": "Municipal mayor disposition537-d/1 October2020",
+              "date": "2020-10-01",
+              "sourceType": "PRIMARY_MUNICIPAL_ACT_PUBLISHED_BY_SUBORDINATE_AUTHORITY",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+              ],
+              "correspondence": "Institutional copy of signed act and11 letterhead annexes. Not the graphic registration annex to Decree1475-VIII.",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Monochrome large municipal arms in letterhead models; page13 prescribes large municipal arms on official forms. English CITY HALL is a translation, not proof of a second independent heraldic holder.",
+              "localFile": "docs/audits/sim-r7/evidence/chisinau-disposition-537d-2020.pdf"
+            },
+            {
+              "index": 0,
+              "url": "https://particip.gov.md/ro/download_attachment/20092",
+              "checkedAt": "2026-11-09T16:58:05.243Z",
+              "method": "PUBLIC_HTTP_GET",
+              "binary": true,
+              "status": 200,
+              "finalUrl": "https://particip.gov.md/ro/download_attachment/20092",
+              "contentType": "application/pdf",
+              "retryAfter": null,
+              "bytes": 619292,
+              "sha256": "bab5a231ce4a3ed2bdfeb39bd8b300fa9389c874fecd9d6b1adeb31a8a1067ed",
+              "cacheFile": "7d6ea201705c0d344ae63775cd5753b1df05f2ae15e54dd3328d570ae5bd38e3.bin",
+              "atlasIds": [
+                "osm-r1748490",
+                "osm-r1691801"
+              ],
+              "act": "Undated, unnumbered municipal draft regulation",
+              "sourceType": "PRIMARY_PUBLIC_CONSULTATION_DRAFT",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "correspondence": "Official consultation copy; blank adoption number/date, not a final enacted decision",
+              "newToSIMR7": true,
+              "graphicAnnex": false,
+              "finding": "Regulates commercial names, logos and trademarks using local symbolism. Does not provide the missing coat/flag graphic annex or a reproduction licence."
+            }
+          ],
+          "contradictions": [],
+          "blocker": "No separate heraldic holder act found. Shared CUATM0100 and English CITY HALL wording cannot establish a second legal holder. Both Atlas identities, levels and parents preserved.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        }
+      ],
+      "sources": [
+        "https://dialogica.asm.md/arhivarevistei/Dialogica/Dialogica_03_2020.pdf",
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+        "https://particip.gov.md/ro/download_attachment/20092"
+      ],
+      "finding": "No separate heraldic holder act found. Shared CUATM0100 and English CITY HALL wording cannot establish a second legal holder. Both Atlas identities, levels and parents preserved."
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "entity": "Câmpulung",
+      "country": "RO",
+      "entityType": "municipality",
+      "adminLevel": 8,
+      "registryCode": "13490",
+      "parentId": "osm-r2261315",
+      "previousState": "DISPUTED",
+      "currentState": "DISPUTED",
+      "checkedAt": "2026-11-09T16:44:26.709Z",
+      "act": {
+        "number": "89",
+        "date": "2015-02-10",
+        "type": "HG",
+        "coat": "National final annex1, not2013 municipal proposal",
+        "flag": null
+      },
+      "symbols": [
+        {
+          "kind": "coat",
+          "act": {
+            "type": "HG",
+            "number": "89",
+            "date": "2015-02-10"
+          },
+          "requiredEvidence": "National final annex1, not2013 municipal proposal",
+          "recoveryState": "PARTIAL",
+          "currentImage": {
+            "kind": "commons",
+            "file": "ROU AG Campulung CoA.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+            "tier": "B"
+          },
+          "verdict": "DISPUTED",
+          "priorEvidence": [
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:ROU AG Campulung CoA.png",
+              "revision": {
+                "revid": 629683575,
+                "parentid": 629521778,
+                "timestamp": "2022-02-14T04:00:13Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2010-10-17T09:50:54Z",
+                  "sha1": "ce878121f89fb90383df9fee735191d99f302e2f",
+                  "user": "CosminN",
+                  "comment": "{{Information |Description={{en|1=The Coat of Arms of Campulung Muscel, edited with parts of the Logo of the Lions Club}} |Source={{own}}{{http://www.lionsclubs.ro/site/2010/05/lions-club-campulung-muscel-racing-contest/}} |Author=[[User:CosminN|CosminN]]"
+                }
+              ],
+              "description": "The Coat of Arms of Campulung Muscel, edited with parts of the Logo of the Lions Club",
+              "credit": "Own work with parts from http://www.lionsclubs.ro/site/2010/05/lions-club-campulung-muscel-racing-contest/",
+              "categories": "Coats of arms of cities and communes of Romania|GFDL|License migration redundant|Self-published work|Coats of arms of cities and communes of Argeș County|Derivatives of the Coat of arms of Wallachia|Wallachian Bird, Or|Wallachian Bird sable in crest|Symbols of Câmpulung",
+              "matchedArticles": [
+                {
+                  "language": "cs",
+                  "title": "Câmpulung",
+                  "url": "https://cs.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 24429392
+                },
+                {
+                  "language": "it",
+                  "title": "Câmpulung",
+                  "url": "https://it.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 144803551
+                },
+                {
+                  "language": "lt",
+                  "title": "Kimpulungas",
+                  "url": "https://lt.wikipedia.org/wiki/Kimpulungas",
+                  "revision": 6538355
+                },
+                {
+                  "language": "nl",
+                  "title": "Câmpulung",
+                  "url": "https://nl.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 70440632
+                },
+                {
+                  "language": "ru",
+                  "title": "Кымпулунг",
+                  "url": "https://ru.wikipedia.org/wiki/%D0%9A%D1%8B%D0%BC%D0%BF%D1%83%D0%BB%D1%83%D0%BD%D0%B3",
+                  "revision": 156021936
+                },
+                {
+                  "language": "hu",
+                  "title": "Câmpulung",
+                  "url": "https://hu.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 28225106
+                },
+                {
+                  "language": "id",
+                  "title": "Câmpulung",
+                  "url": "https://id.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 27995906
+                },
+                {
+                  "language": "sk",
+                  "title": "Câmpulung",
+                  "url": "https://sk.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 7000211
+                },
+                {
+                  "language": "fa",
+                  "title": "کمپولون",
+                  "url": "https://fa.wikipedia.org/wiki/%DA%A9%D9%85%D9%BE%D9%88%D9%84%D9%88%D9%86",
+                  "revision": 43471391
+                },
+                {
+                  "language": "simple",
+                  "title": "Câmpulung",
+                  "url": "https://simple.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 9171204
+                },
+                {
+                  "language": "sl",
+                  "title": "Câmpulung",
+                  "url": "https://sl.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 6729839
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r10664180",
+              "language": "en",
+              "title": "Câmpulung",
+              "url": "https://en.wikipedia.org/wiki/C%C3%A2mpulung",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=C%C3%A2mpulung&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=C%C3%A2mpulung&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:27:56.049Z",
+                "sha256": "d9e79fcfbf49a2fe29d1a4ed1870952d29e27f51cff10c7650c96748dc6497dd",
+                "bytes": 1232,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 1375505080,
+                  "parentid": 1375484174,
+                  "user": "Fleedre",
+                  "timestamp": "2026-09-18T05:22:10Z",
+                  "comment": "Filled in 3 bare reference(s) with reFill 2"
+                },
+                {
+                  "revid": 1375484174,
+                  "parentid": 1375364976,
+                  "user": "ZackBot",
+                  "timestamp": "2026-09-18T01:59:37Z",
+                  "comment": "fixing deprecated parameters for [[Template:Infobox settlement]] ([[Wikipedia:Bots/Requests for approval/ZackBot 14|ZackBot 14]])"
+                },
+                {
+                  "revid": 1375364976,
+                  "parentid": 1372581375,
+                  "user": "MediaKyle",
+                  "timestamp": "2026-09-17T10:56:13Z",
+                  "comment": "Added 3 {{[[Template:Bare URL inline|Bare URL inline]]}} tag(s) using [[User:BrownHairedGirl/BareURLinline.js|a script]]. For other recently-tagged pages with [[WP:Bare URLs|bare URLs]], see [[:Category:Articles with bare URLs for citations from September 2026]]"
+                },
+                {
+                  "revid": 1372581375,
+                  "parentid": 1368054880,
+                  "user": "Oneșteanu",
+                  "timestamp": "2026-09-01T09:37:05Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 1368054880,
+                  "parentid": 1361504025,
+                  "user": "CableCar4",
+                  "timestamp": "2026-08-06T19:21:40Z",
+                  "comment": "Replace language subtag in [[Template:Langx|langx]] with its ISO 639-1 equivalent"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "site:legislatie.just.ro \"Câmpulung\" \"Argeș\" (stemei OR steag OR drapel)",
+              "checkedAt": "2026-11-09T07:38:05.912Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "HG         46 09/02/2017 - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/DetaliiDocument/186828",
+                  "excerpt": "HG 46 09/02/2017 - Portal Legislativ (https://legislatie.just.ro/Public/DetaliiDocument/186828) Published: 9.7 years ago; Crawled: 5 months ago; HOTĂRÂRE nr. 46 din 9 februarie 2017 privind aprobarea modelului steagului oraşului Mioveni, judeţul Argeş ... + Anexa 1 MODELUL STEAGULUI oraşului Mioveni, judeţul Argeş Image + Anexa 2 DESCRIEREA ŞI SEMNIFICAŢIILE elementelor însumate ale modelului stea"
+                },
+                {
+                  "title": "HG       1538 18/12/2002 - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/DetaliiDocument/41352",
+                  "excerpt": " HG 1538 18/12/2002 - Portal Legislativ (https://legislatie.just.ro/Public/DetaliiDocument/41352) Published: 23.8 years ago; Crawled: 4 months ago; + Anexa 1a DESCRIEREA ŞI SEMNIFICATIILE elementelor insumate ale stemei municipiului Alexandria,judeţul Teleorman Descrierea stemei Stema municipiului Alexandria, potrivit anexei nr. 1 la hotărâre, se compune dintr-un scut fasciat.În partea superioară,"
+                },
+                {
+                  "title": "Rezultate Căutare - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/RezultateCautare?publicatinceputtext=2008%2F12%2F04&publicatnumar=811&publicatsfarsittext=2008%2F12%2F04",
+                  "excerpt": " Rezultate Căutare - Portal Legislativ (https://legislatie.just.ro/Public/RezultateCautare?publicatinceputtext=2008%2F12%2F04&publicatnumar=811&publicatsfarsittext=2008%2F12%2F04) Published: 17.9 years ago; Crawled: 4 months ago; privind aprobarea stemei oraşului Mioveni, judeţul Argeş ... privind aprobarea stemei comunei Cotmeana, judeţul Argeş ACT ABROGAT Alte acte emise de: Ministerul Justi?iei"
+                }
+              ],
+              "exactContextMatches": 0,
+              "limitation": "Discovery results do not establish legal authenticity, amendments or graphic fidelity."
+            },
+            {
+              "type": "COUNTY_CONTEXT_ARMORIAL_DISCOVERY",
+              "matches": [
+                {
+                  "page": "https://armerii.ro/judetes06/judetAG1.html",
+                  "image": "https://armerii.ro/images06/AG-Cimpulung1.jpg",
+                  "countyCode": "AG",
+                  "pageSHA256": "679801195e8cac1cd6dde6cc1610423fbc097eb3886f076fe9b4e6405be10f55"
+                },
+                {
+                  "page": "http://www.armerii.ro/judetes06/judetAG1.html",
+                  "image": "http://www.armerii.ro/images06/AG-Cimpulung1.jpg",
+                  "countyCode": "AG",
+                  "pageSHA256": "679801195e8cac1cd6dde6cc1610423fbc097eb3886f076fe9b4e6405be10f55"
+                }
+              ],
+              "limitation": "Context corroboration only; no automatic legal or pixel-fidelity certification."
+            },
+            {
+              "type": "DOCUMENTED_DECISION",
+              "atlasId": "osm-r10664180",
+              "kind": "coat",
+              "verdict": "DISPUTED",
+              "action": "KEEP",
+              "sources": [
+                "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+                "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+                "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf"
+              ],
+              "act": "Municipal HCL 49/30 May 2013 and institutional 2017–2022 strategy; national approval on 10 February 2015 cited by the authority",
+              "identity": "Municipiul Câmpulung, Argeș, exact Atlas ID osm-r10664180; not Câmpulung Moldovenesc or Câmpulung la Tisa.",
+              "graphicComparison": "Current selected PNG has a violet field and a black eagle above the crown. The linked current SVG has a blue field but omits that upper black eagle; the municipal text specifies a blue field and the upper black eagle. Both actual files and primary municipal descriptions examined. Neither candidate can be promoted to an exact approved graphic without resolving this conflict.",
+              "rightsOverride": {
+                "verdict": "RIGHTS_UNCLEAR",
+                "limitation": "Selected PNG credits parts of a Lions Club logo. The Commons public-domain declaration does not independently clear the incorporated third-party artwork."
+              },
+              "limitations": [
+                "Do not automatically replace with the Wikidata current SVG: it conflicts with the institutional description on a charge. No invented heraldic correction or recolouring.",
+                "Full national graphic annex remains required; candidate retained with disputed graphic fidelity and separately unclear reproduction rights."
+              ]
+            },
+            {
+              "type": "SIM_R6_INDIVIDUAL_REVIEW",
+              "source": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "sha256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee",
+              "finding": "Violet-field Campulung PNG with black upper eagle; conflicting blue-field legal description and partial Lions Club credit. Dispute retained."
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+                "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf",
+                "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png"
+              ],
+              "finding": "Signed2013 local-proposal annex is a flag-like composition carrying a blue-field shield with upper black eagle; it is not the recovered national2015 annex. Current violet-field PNG conflicts with municipal blue-field description; alternative SVG lacks upper black eagle required by same description. National graphic annex not recovered. Neither disputed coat nor separately unconfirmed flag replaced; partial Lions Club credit prevents rights clearance.",
+              "state": "DISPUTED"
+            }
+          ],
+          "newEvidence": [],
+          "contradictions": [],
+          "blocker": "Final national annex still not recovered. Violet PNG, missing-eagle alternative and2013 local proposal remain insufficient to resolve the national2015 graphic. Commons confirms borrowed Lions Club artwork.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        },
+        {
+          "kind": "flag",
+          "act": null,
+          "requiredEvidence": "Independent symbol adoption/use evidence",
+          "recoveryState": "NOT_FOUND",
+          "currentImage": {
+            "kind": "commons",
+            "file": "Steagul Oficial Al Campulungului.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Steagul_Oficial_Al_Campulungului.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steagul_Oficial_Al_Campulungului.png",
+            "tier": "B"
+          },
+          "verdict": "CANDIDATE_UNVERIFIED",
+          "priorEvidence": [
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:Steagul Oficial Al Campulungului.png",
+              "revision": {
+                "revid": 949700811,
+                "parentid": 927291315,
+                "timestamp": "2024-10-27T02:46:10Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2024-06-02T22:32:07Z",
+                  "sha1": "f907eeb064365411280581cf7e8357499c3c0f8a",
+                  "user": "Icykenny36",
+                  "comment": "Uploaded while editing \"Câmpulung\" on ro.wikipedia.org"
+                }
+              ],
+              "description": "Un al doilea render, cu stema centrata si culori corectate :)",
+              "credit": "Own work",
+              "categories": "Câmpulung|Steag|Self-published work",
+              "matchedArticles": [
+                {
+                  "language": "en",
+                  "title": "Câmpulung",
+                  "url": "https://en.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 1375505080
+                },
+                {
+                  "language": "pl",
+                  "title": "Câmpulung",
+                  "url": "https://pl.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 79838942
+                },
+                {
+                  "language": "sv",
+                  "title": "Câmpulung",
+                  "url": "https://sv.wikipedia.org/wiki/C%C3%A2mpulung",
+                  "revision": 59825854
+                },
+                {
+                  "language": "ur",
+                  "title": "کیمپولنگ",
+                  "url": "https://ur.wikipedia.org/wiki/%DA%A9%DB%8C%D9%85%D9%BE%D9%88%D9%84%D9%86%DA%AF",
+                  "revision": 10414904
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r10664180",
+              "language": "en",
+              "title": "Câmpulung",
+              "url": "https://en.wikipedia.org/wiki/C%C3%A2mpulung",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=C%C3%A2mpulung&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=C%C3%A2mpulung&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:27:56.049Z",
+                "sha256": "d9e79fcfbf49a2fe29d1a4ed1870952d29e27f51cff10c7650c96748dc6497dd",
+                "bytes": 1232,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 1375505080,
+                  "parentid": 1375484174,
+                  "user": "Fleedre",
+                  "timestamp": "2026-09-18T05:22:10Z",
+                  "comment": "Filled in 3 bare reference(s) with reFill 2"
+                },
+                {
+                  "revid": 1375484174,
+                  "parentid": 1375364976,
+                  "user": "ZackBot",
+                  "timestamp": "2026-09-18T01:59:37Z",
+                  "comment": "fixing deprecated parameters for [[Template:Infobox settlement]] ([[Wikipedia:Bots/Requests for approval/ZackBot 14|ZackBot 14]])"
+                },
+                {
+                  "revid": 1375364976,
+                  "parentid": 1372581375,
+                  "user": "MediaKyle",
+                  "timestamp": "2026-09-17T10:56:13Z",
+                  "comment": "Added 3 {{[[Template:Bare URL inline|Bare URL inline]]}} tag(s) using [[User:BrownHairedGirl/BareURLinline.js|a script]]. For other recently-tagged pages with [[WP:Bare URLs|bare URLs]], see [[:Category:Articles with bare URLs for citations from September 2026]]"
+                },
+                {
+                  "revid": 1372581375,
+                  "parentid": 1368054880,
+                  "user": "Oneșteanu",
+                  "timestamp": "2026-09-01T09:37:05Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 1368054880,
+                  "parentid": 1361504025,
+                  "user": "CableCar4",
+                  "timestamp": "2026-08-06T19:21:40Z",
+                  "comment": "Replace language subtag in [[Template:Langx|langx]] with its ISO 639-1 equivalent"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "site:legislatie.just.ro \"Câmpulung\" \"Argeș\" (stemei OR steag OR drapel)",
+              "checkedAt": "2026-11-09T07:38:05.912Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "HG         46 09/02/2017 - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/DetaliiDocument/186828",
+                  "excerpt": "HG 46 09/02/2017 - Portal Legislativ (https://legislatie.just.ro/Public/DetaliiDocument/186828) Published: 9.7 years ago; Crawled: 5 months ago; HOTĂRÂRE nr. 46 din 9 februarie 2017 privind aprobarea modelului steagului oraşului Mioveni, judeţul Argeş ... + Anexa 1 MODELUL STEAGULUI oraşului Mioveni, judeţul Argeş Image + Anexa 2 DESCRIEREA ŞI SEMNIFICAŢIILE elementelor însumate ale modelului stea"
+                },
+                {
+                  "title": "HG       1538 18/12/2002 - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/DetaliiDocument/41352",
+                  "excerpt": " HG 1538 18/12/2002 - Portal Legislativ (https://legislatie.just.ro/Public/DetaliiDocument/41352) Published: 23.8 years ago; Crawled: 4 months ago; + Anexa 1a DESCRIEREA ŞI SEMNIFICATIILE elementelor insumate ale stemei municipiului Alexandria,judeţul Teleorman Descrierea stemei Stema municipiului Alexandria, potrivit anexei nr. 1 la hotărâre, se compune dintr-un scut fasciat.În partea superioară,"
+                },
+                {
+                  "title": "Rezultate Căutare - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/RezultateCautare?publicatinceputtext=2008%2F12%2F04&publicatnumar=811&publicatsfarsittext=2008%2F12%2F04",
+                  "excerpt": " Rezultate Căutare - Portal Legislativ (https://legislatie.just.ro/Public/RezultateCautare?publicatinceputtext=2008%2F12%2F04&publicatnumar=811&publicatsfarsittext=2008%2F12%2F04) Published: 17.9 years ago; Crawled: 4 months ago; privind aprobarea stemei oraşului Mioveni, judeţul Argeş ... privind aprobarea stemei comunei Cotmeana, judeţul Argeş ACT ABROGAT Alte acte emise de: Ministerul Justi?iei"
+                }
+              ],
+              "exactContextMatches": 0,
+              "limitation": "Discovery results do not establish legal authenticity, amendments or graphic fidelity."
+            },
+            {
+              "type": "DOCUMENTED_DECISION",
+              "atlasId": "osm-r10664180",
+              "kind": "flag",
+              "verdict": "CANDIDATE_UNVERIFIED",
+              "action": "KEEP",
+              "sources": [
+                "https://commons.wikimedia.org/wiki/File:Steagul_Oficial_Al_Campulungului.png"
+              ],
+              "identity": "Exact Câmpulung (Argeș) ID and existing assignment retained.",
+              "graphicComparison": "Commons describes an edited render with centred arms and corrected colours; the word Official in a filename is not approval evidence.",
+              "limitations": [
+                "No independently established current territorial flag approval/graphic annex recovered. Preserve the image as unconfirmed; do not infer approval from the filename."
+              ]
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+                "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf",
+                "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png"
+              ],
+              "finding": "Signed2013 local-proposal annex is a flag-like composition carrying a blue-field shield with upper black eagle; it is not the recovered national2015 annex. Current violet-field PNG conflicts with municipal blue-field description; alternative SVG lacks upper black eagle required by same description. National graphic annex not recovered. Neither disputed coat nor separately unconfirmed flag replaced; partial Lions Club credit prevents rights clearance.",
+              "state": "DISPUTED"
+            }
+          ],
+          "newEvidence": [],
+          "contradictions": [],
+          "blocker": "Final national annex still not recovered. Violet PNG, missing-eagle alternative and2013 local proposal remain insufficient to resolve the national2015 graphic. Commons confirms borrowed Lions Club artwork.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        }
+      ],
+      "sources": [
+        "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+        "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf",
+        "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png"
+      ],
+      "finding": "Final national annex still not recovered. Violet PNG, missing-eagle alternative and2013 local proposal remain insufficient to resolve the national2015 graphic. Commons confirms borrowed Lions Club artwork."
+    },
+    {
+      "atlasId": "osm-r9982547",
+      "entity": "Tălmaciu",
+      "country": "RO",
+      "entityType": "town",
+      "adminLevel": 8,
+      "registryCode": "145827",
+      "parentId": "osm-r2248586",
+      "previousState": "DISPUTED",
+      "currentState": "DISPUTED",
+      "checkedAt": "2026-11-09T16:44:26.709Z",
+      "act": {
+        "number": null,
+        "date": null,
+        "type": "Current flag adoption/readoption act not established",
+        "coat": null,
+        "flag": "Current flag approval and graphic annex"
+      },
+      "symbols": [
+        {
+          "kind": "coat",
+          "act": null,
+          "requiredEvidence": "Independent symbol adoption/use evidence",
+          "recoveryState": "NOT_APPLICABLE",
+          "currentImage": {
+            "kind": "commons",
+            "file": "ROU SB Talmaciu CoA.jpg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/ROU_SB_Talmaciu_CoA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_SB_Talmaciu_CoA.jpg",
+            "tier": "B"
+          },
+          "verdict": "SOURCE_CORROBORATED",
+          "priorEvidence": [
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:ROU SB Talmaciu CoA.jpg",
+              "revision": {
+                "revid": 975678391,
+                "parentid": 491530940,
+                "timestamp": "2024-12-26T01:55:00Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2010-07-13T18:03:57Z",
+                  "sha1": "9cdab14c4462c22962c1ef694162b0795661bd06",
+                  "user": "Magul",
+                  "comment": "{{Information |Description=Coat of arms of Tălmaciu, Romania |Source=ro:Fișier:Stema Talmaciu Originala.jpg |Date=16-05-2009 |Author=ro:Danes Stefan Puiu |Permission={{PD-RO-exempt}}{{PD-self}} |other_versions= }} {{SVG|coat of arms}}"
+                }
+              ],
+              "description": "Coat of arms of Tălmaciu, Romania",
+              "credit": "ro:Fișier:Stema Talmaciu Originala.jpg",
+              "categories": "Coats of arms of cities and communes of Romania|Coat of arms images that should use vector graphics|Self-published work|PD-self|JPG images that should use vector graphics|Coats of arms of cities and communes of Sibiu County|PD-RO-exempt (coats of arms)|Symbols of Tălmaciu",
+              "matchedArticles": [
+                {
+                  "language": "de",
+                  "title": "Tălmaciu",
+                  "url": "https://de.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 256982489
+                },
+                {
+                  "language": "et",
+                  "title": "Tălmaciu",
+                  "url": "https://et.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 7210448
+                },
+                {
+                  "language": "nn",
+                  "title": "Tălmaciu",
+                  "url": "https://nn.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 3654786
+                },
+                {
+                  "language": "pl",
+                  "title": "Tălmaciu",
+                  "url": "https://pl.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 80045196
+                },
+                {
+                  "language": "uk",
+                  "title": "Телмачу",
+                  "url": "https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BB%D0%BC%D0%B0%D1%87%D1%83",
+                  "revision": 32237192
+                },
+                {
+                  "language": "hu",
+                  "title": "Nagytalmács",
+                  "url": "https://hu.wikipedia.org/wiki/Nagytalm%C3%A1cs",
+                  "revision": 28526770
+                },
+                {
+                  "language": "szl",
+                  "title": "Tălmaciu",
+                  "url": "https://szl.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 386481
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r9982547",
+              "language": "en",
+              "title": "Tălmaciu",
+              "url": "https://en.wikipedia.org/wiki/T%C4%83lmaciu",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=T%C4%83lmaciu&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=T%C4%83lmaciu&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:51:54.080Z",
+                "sha256": "364e0eb7115f4a12c7141d5584035640413462f16a478c1f26d5d483fc172ce3",
+                "bytes": 1063,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 1377140032,
+                  "parentid": 1332909605,
+                  "user": "ZackBot",
+                  "timestamp": "2026-09-28T01:56:46Z",
+                  "comment": "fixing deprecated parameters for [[Template:Infobox settlement]] ([[Wikipedia:Bots/Requests for approval/ZackBot 14|ZackBot 14]])"
+                },
+                {
+                  "revid": 1332909605,
+                  "parentid": 1331476371,
+                  "user": "Zlatɔn",
+                  "timestamp": "2026-01-14T15:22:03Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 1331476371,
+                  "parentid": 1253002412,
+                  "user": "Markussep",
+                  "timestamp": "2026-01-06T14:06:38Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 1253002412,
+                  "parentid": 1192949351,
+                  "user": "Monkbot",
+                  "timestamp": "2024-10-23T22:05:37Z",
+                  "comment": "[[User:Monkbot/task 20|Task 20]]: replace {lang-??} templates with {langx|??} [[Wikipedia:Templates_for_discussion/Log/2024_September_27#Replace_and_delete_lang-??_templates|‹See Tfd›]] (Replaced 2);"
+                },
+                {
+                  "revid": 1192949351,
+                  "parentid": 1192949143,
+                  "user": "Turgidson",
+                  "timestamp": "2024-01-01T06:37:14Z",
+                  "comment": "website, c/e"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "site:legislatie.just.ro \"Tălmaciu\" \"Sibiu\" (stemei OR steag OR drapel)",
+              "checkedAt": "2026-11-09T08:01:21.724Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "HG        361 14/04/2010 - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/118210",
+                  "excerpt": " HG 361 14/04/2010 - Portal Legislativ (https://legislatie.just.ro/Public/DetaliiDocumentAfis/118210) Published: 16.6 years ago; Crawled: 5 months ago; + Articolul 1 Se aprobă darea în administrarea Ministerului Administraţiei şi Internelor, pentru Inspectoratul de Poliţie al Judeţului Sibiu, a unor părţi din imobile situate în localităţile Tălmaciu şi Sălişte, judeţul Sibiu, identificate potrivit"
+                },
+                {
+                  "title": "HOTARARE             364 07/05/2020 - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/DetaliiDocument/225538",
+                  "excerpt": " HOTARARE 364 07/05/2020 - Portal Legislativ (https://legislatie.just.ro/Public/DetaliiDocument/225538) Published: 6.5 years ago; Crawled: 4 months ago; LUDOVIC ORBAN ... situate pe raza localităților Boița și Tălmaciu din județul Sibiu, proprietarii sau deținătorii acestora, ... *) Pentru toate pozițiile în care la coloana „Numele și prenumele proprietarului/deținătorului imobilului“ se regăsește"
+                }
+              ],
+              "exactContextMatches": 2,
+              "limitation": "Discovery results do not establish legal authenticity, amendments or graphic fidelity."
+            },
+            {
+              "type": "COUNTY_CONTEXT_ARMORIAL_DISCOVERY",
+              "matches": [
+                {
+                  "page": "https://armerii.ro/judetes06/judetSB1.html",
+                  "image": "https://armerii.ro/images06/SB-Talmaciu1.jpg",
+                  "countyCode": "SB",
+                  "pageSHA256": "9706047fffccf4c97a0b659e8bc3f74756cc8a937580604879597f27d9e3af4e"
+                }
+              ],
+              "limitation": "Context corroboration only; no automatic legal or pixel-fidelity certification."
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://talmaciu.ro/",
+                "https://talmaciu.ro/wp-content/files/ziar_ianuarie_2021.pdf",
+                "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg"
+              ],
+              "finding": "Commons describes before1918 while pixels contain modern-style municipal arms. Municipality January2021 newspaper documents selection procedure for a city flag, not proof current selected Commons file was approved. Period/re-adoption unresolved; flag retained DISPUTED, coat independent.",
+              "state": "DISPUTED"
+            }
+          ],
+          "newEvidence": [],
+          "contradictions": [],
+          "blocker": "Fresh institutional project index and county armorial inspected. County armorial does not supply the current city-flag act. Commons before1918 file versus modern arms and2021 consultation remain unresolved.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        },
+        {
+          "kind": "flag",
+          "act": {
+            "type": "Current flag adoption/readoption act not established",
+            "number": null,
+            "date": null
+          },
+          "requiredEvidence": "Current flag approval and graphic annex",
+          "recoveryState": "NOT_FOUND",
+          "currentImage": {
+            "kind": "commons",
+            "file": "Flag of Talmesh before 1918.jpg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Talmesh_before_1918.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg",
+            "tier": "B"
+          },
+          "verdict": "DISPUTED",
+          "priorEvidence": [
+            {
+              "type": "CURRENT_WIKIMEDIA",
+              "file": "File:Flag of Talmesh before 1918.jpg",
+              "revision": {
+                "revid": 1254184349,
+                "parentid": 1215955094,
+                "timestamp": "2026-07-30T11:06:25Z"
+              },
+              "versions": [
+                {
+                  "timestamp": "2013-03-11T22:36:59Z",
+                  "sha1": "d6be9312d2b1e7798fe712d784510e1036bf4b67",
+                  "user": "Danes Stefan Puiu",
+                  "comment": "User created page with UploadWizard"
+                }
+              ],
+              "description": "Flag of Talmesh before 1918",
+              "credit": "Own work",
+              "categories": "Self-published work|Flags of cities and communes of Sibiu County|Symbols of Tălmaciu",
+              "matchedArticles": [
+                {
+                  "language": "en",
+                  "title": "Tălmaciu",
+                  "url": "https://en.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 1377140032
+                },
+                {
+                  "language": "et",
+                  "title": "Tălmaciu",
+                  "url": "https://et.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 7210448
+                },
+                {
+                  "language": "sv",
+                  "title": "Tălmaciu",
+                  "url": "https://sv.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 59827015
+                },
+                {
+                  "language": "szl",
+                  "title": "Tălmaciu",
+                  "url": "https://szl.wikipedia.org/wiki/T%C4%83lmaciu",
+                  "revision": 386481
+                }
+              ],
+              "sourceMetadata": "docs/audits/sim-r5/source-metadata.json.gz"
+            },
+            {
+              "type": "ARTICLE_HISTORY",
+              "atlasId": "osm-r9982547",
+              "language": "en",
+              "title": "Tălmaciu",
+              "url": "https://en.wikipedia.org/wiki/T%C4%83lmaciu",
+              "state": "RETRIEVED",
+              "request": {
+                "url": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=T%C4%83lmaciu&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "finalUrl": "https://en.wikipedia.org/w/api.php?format=json&action=query&titles=T%C4%83lmaciu&prop=revisions&rvprop=ids%7Ctimestamp%7Ccomment%7Cuser&rvlimit=5&maxlag=5",
+                "status": 200,
+                "checkedAt": "2026-11-09T08:51:54.080Z",
+                "sha256": "364e0eb7115f4a12c7141d5584035640413462f16a478c1f26d5d483fc172ce3",
+                "bytes": 1063,
+                "contentType": "application/json; charset=utf-8"
+              },
+              "revisions": [
+                {
+                  "revid": 1377140032,
+                  "parentid": 1332909605,
+                  "user": "ZackBot",
+                  "timestamp": "2026-09-28T01:56:46Z",
+                  "comment": "fixing deprecated parameters for [[Template:Infobox settlement]] ([[Wikipedia:Bots/Requests for approval/ZackBot 14|ZackBot 14]])"
+                },
+                {
+                  "revid": 1332909605,
+                  "parentid": 1331476371,
+                  "user": "Zlatɔn",
+                  "timestamp": "2026-01-14T15:22:03Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 1331476371,
+                  "parentid": 1253002412,
+                  "user": "Markussep",
+                  "timestamp": "2026-01-06T14:06:38Z",
+                  "comment": ""
+                },
+                {
+                  "revid": 1253002412,
+                  "parentid": 1192949351,
+                  "user": "Monkbot",
+                  "timestamp": "2024-10-23T22:05:37Z",
+                  "comment": "[[User:Monkbot/task 20|Task 20]]: replace {lang-??} templates with {langx|??} [[Wikipedia:Templates_for_discussion/Log/2024_September_27#Replace_and_delete_lang-??_templates|‹See Tfd›]] (Replaced 2);"
+                },
+                {
+                  "revid": 1192949351,
+                  "parentid": 1192949143,
+                  "user": "Turgidson",
+                  "timestamp": "2024-01-01T06:37:14Z",
+                  "comment": "website, c/e"
+                }
+              ]
+            },
+            {
+              "type": "DOCUMENT_DISCOVERY_ONLY",
+              "query": "site:legislatie.just.ro \"Tălmaciu\" \"Sibiu\" (stemei OR steag OR drapel)",
+              "checkedAt": "2026-11-09T08:01:21.724Z",
+              "state": "SEARCH_EXECUTED",
+              "results": [
+                {
+                  "title": "HG        361 14/04/2010 - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/118210",
+                  "excerpt": " HG 361 14/04/2010 - Portal Legislativ (https://legislatie.just.ro/Public/DetaliiDocumentAfis/118210) Published: 16.6 years ago; Crawled: 5 months ago; + Articolul 1 Se aprobă darea în administrarea Ministerului Administraţiei şi Internelor, pentru Inspectoratul de Poliţie al Judeţului Sibiu, a unor părţi din imobile situate în localităţile Tălmaciu şi Sălişte, judeţul Sibiu, identificate potrivit"
+                },
+                {
+                  "title": "HOTARARE             364 07/05/2020 - Portal Legislativ",
+                  "url": "https://legislatie.just.ro/Public/DetaliiDocument/225538",
+                  "excerpt": " HOTARARE 364 07/05/2020 - Portal Legislativ (https://legislatie.just.ro/Public/DetaliiDocument/225538) Published: 6.5 years ago; Crawled: 4 months ago; LUDOVIC ORBAN ... situate pe raza localităților Boița și Tălmaciu din județul Sibiu, proprietarii sau deținătorii acestora, ... *) Pentru toate pozițiile în care la coloana „Numele și prenumele proprietarului/deținătorului imobilului“ se regăsește"
+                }
+              ],
+              "exactContextMatches": 2,
+              "limitation": "Discovery results do not establish legal authenticity, amendments or graphic fidelity."
+            },
+            {
+              "type": "DOCUMENTED_DECISION",
+              "atlasId": "osm-r9982547",
+              "kind": "flag",
+              "verdict": "DISPUTED",
+              "action": "KEEP",
+              "sources": [
+                "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg",
+                "https://talmaciu.ro/",
+                "https://en.wikipedia.org/wiki/T%C4%83lmaciu"
+              ],
+              "identity": "Orașul Tălmaciu, SIRUTA 145827, Sibiu. No holder transfer.",
+              "graphicComparison": "File title and description explicitly say before 1918, but the self-published 2013 image incorporates a later municipal coat and is used in a contemporary linked article. Actual image and metadata inspected. These conflicting period signals do not establish a securely dated historical-only object or current official adoption.",
+              "limitations": [
+                "No current institutional flag act or documented readoption found. Keep the image explicitly disputed; do not remove solely from a filename or absence of an approval act.",
+                "Commons CC BY-SA 3.0 attribution and source remain visible."
+              ]
+            },
+            {
+              "type": "SIM_R6_PRIORITY_REVIEW",
+              "sources": [
+                "https://talmaciu.ro/",
+                "https://talmaciu.ro/wp-content/files/ziar_ianuarie_2021.pdf",
+                "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg"
+              ],
+              "finding": "Commons describes before1918 while pixels contain modern-style municipal arms. Municipality January2021 newspaper documents selection procedure for a city flag, not proof current selected Commons file was approved. Period/re-adoption unresolved; flag retained DISPUTED, coat independent.",
+              "state": "DISPUTED"
+            }
+          ],
+          "newEvidence": [],
+          "contradictions": [],
+          "blocker": "Fresh institutional project index and county armorial inspected. County armorial does not supply the current city-flag act. Commons before1918 file versus modern arms and2021 consultation remain unresolved.",
+          "action": "KEEP",
+          "nextMethod": "Recover final normative graphic from a public official gazette/institutional archive; no paid order, no speculative image assignment."
+        }
+      ],
+      "sources": [
+        "https://talmaciu.ro/",
+        "https://talmaciu.ro/wp-content/files/ziar_ianuarie_2021.pdf",
+        "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg"
+      ],
+      "finding": "Fresh institutional project index and county armorial inspected. County armorial does not supply the current city-flag act. Commons before1918 file versus modern arms and2021 consultation remain unresolved."
+    }
+  ]
+}

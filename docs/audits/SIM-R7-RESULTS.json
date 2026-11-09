@@ -1,0 +1,242 @@
+{
+  "stage": "SIM-R7",
+  "status": "IMPLEMENTED",
+  "baseCommit": "a71291c4ca46ecab85d42a11e75bc42e95f44590",
+  "checkedAt": "2026-11-09T17:49:44.132Z",
+  "initial": {
+    "entities": 4283,
+    "slots": 8566,
+    "coat": 1499,
+    "flag": 299,
+    "withoutImages": 2778,
+    "rights": 44,
+    "inaccessible": 907
+  },
+  "results": {
+    "entities": 4283,
+    "slots": 8566,
+    "coat": 1499,
+    "flag": 299,
+    "withoutImages": 2778,
+    "priorityExamined": 7,
+    "priorityResolved": 0,
+    "priorityPartiallyResolved": 2,
+    "priorityBlocked": 3,
+    "priorityDisputed": 2,
+    "newEnactedDocuments": 2,
+    "newConsultationDrafts": 1,
+    "newFinalGraphicAnnexes": 0,
+    "rightsExamined": 44,
+    "rightsCleared": 0,
+    "rightsRestricted": 0,
+    "rightsUnresolved": 44,
+    "institutionalCasesReinvestigated": 907,
+    "institutionalUnprocessed": 0,
+    "relevantInstitutionalSourcesRecovered": 1,
+    "institutionalStates": {
+      "BLOCKED_ACCESS": 44,
+      "NO_RELEVANT_DOCUMENT": 42,
+      "STILL_INACCESSIBLE": 800,
+      "REDIRECTED": 20,
+      "ARCHIVE_ONLY": 1
+    },
+    "institutionalOriginalHTTPResponses": 488,
+    "institutionalHostRestrictionSkips": 47,
+    "wikipediaArticlesRetrieved": 901,
+    "wikipediaCaseArticleLinksExamined": 907,
+    "sourceHolderEntities": 901,
+    "imagesAdded": 0,
+    "imagesReplaced": 0,
+    "imagesRemoved": 0,
+    "quarantinedNewCandidates": 18,
+    "historicalInvalidationsProtected": 31,
+    "duplicateGroupsFlagged": 2,
+    "statisticalOnlyRegions": 18
+  },
+  "groups": {
+    "Moldova": {
+      "entities": 1004,
+      "coat": 190,
+      "flag": 186,
+      "withoutImages": 811,
+      "rightsExamined": 8,
+      "rightsCleared": 0,
+      "rightsUnresolved": 8,
+      "sourceCases": 17
+    },
+    "Gagauzia": {
+      "entities": 30,
+      "coat": 8,
+      "flag": 5,
+      "withoutImages": 22,
+      "rightsExamined": 1,
+      "rightsCleared": 0,
+      "rightsUnresolved": 1,
+      "sourceCases": 0
+    },
+    "Nistrenia_de_facto": {
+      "entities": 8,
+      "coat": 1,
+      "flag": 1,
+      "withoutImages": 7,
+      "rightsExamined": 0,
+      "rightsCleared": 0,
+      "rightsUnresolved": 0,
+      "sourceCases": 4
+    },
+    "Romania": {
+      "entities": 3241,
+      "coat": 1300,
+      "flag": 107,
+      "withoutImages": 1938,
+      "rightsExamined": 35,
+      "rightsCleared": 0,
+      "rightsUnresolved": 35,
+      "sourceCases": 886
+    }
+  },
+  "statistical": [
+    {
+      "atlasId": "stat-MD11",
+      "name": "Partea de Vest (partea dreapta a Nistrului)",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-MD111",
+      "name": "Regiunea Nord",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-MD112",
+      "name": "Regiunea Centru",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-MD113",
+      "name": "Regiunea Sud",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-MD12",
+      "name": "Partea de Est (partea stîngă a Nistrului)",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-MD120",
+      "name": "Unitățile administrativ-teritoriale din stînga Nistrului",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO1",
+      "name": "Macroregiunea Unu",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO11",
+      "name": "Nord-Vest",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO12",
+      "name": "Centru",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO2",
+      "name": "Macroregiunea Doi",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO21",
+      "name": "Nord-Est",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO22",
+      "name": "Sud-Est",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO3",
+      "name": "Macroregiunea Trei",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO31",
+      "name": "Sud-Muntenia",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO32",
+      "name": "Bucureşti-Ilfov",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO4",
+      "name": "Macroregiunea Patru",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO41",
+      "name": "Sud-Vest Oltenia",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    },
+    {
+      "atlasId": "stat-RO42",
+      "name": "Vest",
+      "coat": null,
+      "flag": null,
+      "state": "NO_OWN_DOCUMENTED_SYMBOL_ASSIGNED"
+    }
+  ],
+  "geographicIntegrity": {
+    "catalogSHA256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+    "historicalManifest": "docs/audits/sim-r7/historical-files.json",
+    "unchanged": true
+  },
+  "limitations": [
+    "No missing final normative graphic annex recovered; new county proposal and municipal letterhead evidence do not complete graphic certification.",
+    "All44 reproductions individually re-examined; authorisation chains remain insufficient. No new permission inferred from official status or Commons hosting.",
+    "All907 cases attempted in a bounded first pass and their linked articles retrieved. Some original requests were skipped after a host access restriction; all-method exhaustive recovery is not claimed.",
+    "A homepage/HTTP200/archived navigation link is not counted as a recovered heraldic document.",
+    "No existing image was modified solely because documentation or network access was insufficient."
+  ],
+  "verification": {
+    "local": "See validation.json; protected GitHub CI on exact PR SHA and post-merge Pages hashes are required independently.",
+    "integration": "Not asserted by this pre-integration snapshot"
+  }
+}

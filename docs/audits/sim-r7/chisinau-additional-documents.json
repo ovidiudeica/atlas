@@ -1,0 +1,59 @@
+[
+  {
+    "index": 0,
+    "url": "https://particip.gov.md/ro/download_attachment/20092",
+    "checkedAt": "2026-11-09T16:58:05.243Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://particip.gov.md/ro/download_attachment/20092",
+    "contentType": "application/pdf",
+    "retryAfter": null,
+    "bytes": 619292,
+    "sha256": "bab5a231ce4a3ed2bdfeb39bd8b300fa9389c874fecd9d6b1adeb31a8a1067ed",
+    "cacheFile": "7d6ea201705c0d344ae63775cd5753b1df05f2ae15e54dd3328d570ae5bd38e3.bin"
+  },
+  {
+    "index": 1,
+    "url": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+    "checkedAt": "2026-11-09T16:58:07.241Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://detsbotanica.md/wp-content/uploads/2020/10/public_publications_31207492_md_537_d.pdf",
+    "contentType": "application/pdf",
+    "retryAfter": null,
+    "bytes": 7254116,
+    "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+    "cacheFile": "098c57a61d6f039470687401d94a782c9e552662426d70a8a5711659ce4af633.bin"
+  },
+  {
+    "index": 2,
+    "url": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+    "checkedAt": "2026-11-09T16:48:59.546Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": false,
+    "status": 200,
+    "finalUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+    "contentType": "text/html; charset=UTF-8",
+    "retryAfter": null,
+    "bytes": 133939,
+    "sha256": "33a697db7ebd1b9950b59c235a78dfd9945b46f6b931fb433cdcebc78a5263f4",
+    "cacheFile": "57970d24934199fb943e11e38d89a2fd65d2823bf424afdbba06f3bdcf8d6f12.bin",
+    "cacheHit": true
+  },
+  {
+    "index": 3,
+    "url": "https://ciocana.md/simbolurile-sectorului",
+    "checkedAt": "2026-11-09T16:58:10.883Z",
+    "method": "PUBLIC_HTTP_GET",
+    "binary": true,
+    "status": 200,
+    "finalUrl": "https://ciocana.md/simbolurile-sectorului",
+    "contentType": "text/html;charset=utf-8",
+    "retryAfter": null,
+    "bytes": 102467,
+    "sha256": "f4a696ed7d865c74807431283c19f4a1366ee66b777360c3be8d7c928818e1f9",
+    "cacheFile": "431bdd02eb60d86cff634c133af36ea5e2156c2ec4117d5b2d1cc085c0c5fc9b.bin"
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-09T18:06:18.200Z",
+  "staticTests": {
+    "command": "npm test",
+    "tests": 255,
+    "passed": 255,
+    "failed": 0,
+    "coverage": "Existing SIM-R2a/3/4/4.1/5/6, geographic/identity contracts and22 SIM-R7 tests"
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "SUCCESS",
+    "warning": "Existing large-bundle advisory; no TypeScript error"
+  },
+  "reproducibility": {
+    "command": "node scripts/audit/sim-r7/12-verify-reproducibility.mjs",
+    "outputs": 7,
+    "result": "BYTE_IDENTICAL"
+  },
+  "chromium": {
+    "command": "node scripts/ci/browser-smoke.mjs",
+    "result": "SUCCESS",
+    "widths": [
+      1440,
+      900,
+      390,
+      360
+    ],
+    "checks": [
+      "coat in tree/header",
+      "separate flag",
+      "neutral missing/unavailable image",
+      "lazy/progressive loading",
+      "no horizontal overflow",
+      "on-demand precise rights disclosure"
+    ],
+    "testedBundle": [
+      {
+        "file": "index-BtLWTJe4.js",
+        "sha256": "f8f07dd7054346be8a5e221fe319263fe9165a31fc53f647ddd84aa93feeb93f"
+      }
+    ],
+    "scope": "Full local UI suite passed; final pure version/hash guard refinements also passed static tests. Protected CI repeats the entire browser suite against the exact final PR SHA."
+  },
+  "files": [
+    {
+      "path": "public/data/phase4/catalog.json.gz",
+      "sha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482"
+    },
+    {
+      "path": "public/data/symbols/registry-r7.json.gz",
+      "sha256": "90fddf3b4a2a69fdb934cd95fc64936acfb365a84ebf533abcc1a60f271fcd11"
+    },
+    {
+      "path": "public/data/symbols/audit-r7.json.gz",
+      "sha256": "e681b74801e8e3c278ff62f1e1ecd0668ddd310d6acd40f060b56b5be0b5dfa7"
+    },
+    {
+      "path": "src/data/symbolR7Selections.mjs",
+      "sha256": "f86ee03dc83cf22fef97157593051c6d692a223a6d0d3b3630c47432028b5bc9"
+    }
+  ],
+  "remoteVerification": "Exact-SHA PR CI, protected merge, post-merge CI/deploy and live Pages hashes must be verified separately; not inferred here."
+}
