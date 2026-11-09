@@ -12,12 +12,13 @@ const byId=new Map(entities.map(n=>[n.id,n]));
 test('WEB-R4.8 flags are self-contained assets, not OS-dependent Unicode emoji',()=>{
   const app=readFileSync(new URL('../src/App.tsx',import.meta.url),'utf8');
   const css=readFileSync(new URL('../src/styles.css',import.meta.url),'utf8');
-  assert.match(app,/import \{ flagFileForEntity \} from '.\/data\/entityFlags\.mjs'/);
-  assert.match(app,/const currentFlag=currentNode\?flagFileForEntity\(currentNode\):null/);
-  assert.match(app,/src=\{import\.meta\.env\.BASE_URL\+primarySymbolPath\}/);
-  assert.match(app,/currentFlag\?'flags\/'\+currentFlag:null/);
-  assert.match(app,/officialSymbols\?\.coat/,
-    'Reviewed local armorial symbols override the country flag only for their exact IDs');
+  assert.match(app,/import \{ coatImageForEntity \} from '.\/data\/entityCoat\.mjs'/);
+  assert.match(app,/const headerCoatSrc=currentNode\?coatImageForEntity\(currentNode,import\.meta\.env\.BASE_URL\):null/);
+  assert.match(app,/src=\{headerCoatSrc\}/);
+  assert.match(app,/src=\{symbolAssetUrl\(asset\)\}/,
+    'National/de facto flags remain in territorial-symbol gallery');
+  assert.doesNotMatch(app,/flagFileForEntity\(currentNode\)/,
+    'Never revert to a national flag in the card heading');
   assert.match(css,/\.entity-title \.flag img\{[^}]*object-fit:contain/);
   assert(!app.includes('🇷🇴')&&!app.includes('🇲🇩'));
   for(const flag of ['romania','moldova','pridnestrovie']){

@@ -88,7 +88,9 @@ test('SIM-R4: UI retains lazy images, neutral network failures and per-symbol so
  const image=read('src/components/TerritorialSymbolImage.tsx').toString();
  const app=read('src/App.tsx').toString();
  assert.match(image,/loading='lazy'/);assert.match(image,/onError=\{\(\)=>setFailed\(true\)\}/);
- assert.match(app,/withGlobalSymbols\(node,editorialSymbolsForEntity\(node\)\)/);
+ const coat=read('src/data/entityCoat.mjs').toString();
+ assert.match(coat,/withGlobalSymbols\(node,editorialSymbolsForEntity\(node\)\)/);
+ assert.match(app,/coatImageForEntity\(node,import\.meta\.env\.BASE_URL\)/);
  assert.match(app,/withGlobalSymbols\(currentNode,editorialSymbolsForEntity\(currentNode\)\)/);
  assert.match(app,/symbolSourceUrl\(asset\)/);assert.match(app,/Candidate image · review pending/);
  for(const n of nodes.filter(n=>!registry[n.id].coat&&!registry[n.id].flag)){

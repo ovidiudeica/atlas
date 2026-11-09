@@ -8,7 +8,7 @@ import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.
 import { EntityCardSection } from './components/EntityCardSection';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { cardNameOf, englishSiblingQualifiers, territorialContextNote } from './data/treeNames.mjs';
-import { flagFileForEntity } from './data/entityFlags.mjs';
+import { coatImageForEntity } from './data/entityCoat.mjs';
 import { globalSymbolsForEntity, withGlobalSymbols } from './data/globalSymbols.mjs';
 import { officialSymbolsForEntity } from './data/officialSymbols.mjs';
 import { editorialSymbolsForEntity, symbolAssetUrl, symbolSourceUrl } from './data/territorialSymbols.mjs';
@@ -929,13 +929,8 @@ export default function App() {
       :eastHlinaiaCode?rowLabel+' (CUATM '+eastHlinaiaCode+')':rowLabel;
     const accessibleRowLabel=enHint?baseAccessibleRowLabel+' ('+enHint+')':baseAccessibleRowLabel;
     const stat=node.statisticalRoles.length>0;
-    // SIM-R3: one-to-one local coat/flag only; no propagation to siblings or parents.
-    const approvedTreeSymbols=officialSymbolsForEntity(node);
-    const editorialTreeSymbols=approvedTreeSymbols?null:withGlobalSymbols(node,editorialSymbolsForEntity(node));
-    const treeSymbols=approvedTreeSymbols||editorialTreeSymbols;
-    const approvedTreeFile=approvedTreeSymbols?.coat||approvedTreeSymbols?.flag;
-    const treeSymbolSrc=approvedTreeFile?import.meta.env.BASE_URL+'symbols/'+approvedTreeFile:
-      symbolAssetUrl(editorialTreeSymbols?.coat||editorialTreeSymbols?.flag);
+    // SIM-R4.1: tree and card heading share an exact-ID coat source, never a flag.
+    const treeSymbolSrc=coatImageForEntity(node,import.meta.env.BASE_URL);
     return <div className="territory-branch" key={node.id} role={searchMatch?'none':'none'}>
       <div className={'tree-line'+(selected===node.id?' is-selected':'')} role="treeitem"
            aria-level={searchMatch?1:depth+1} aria-selected={selected===node.id}
@@ -951,8 +946,8 @@ export default function App() {
         <button className="tree-label" aria-label={accessibleRowLabel} title={lang==='ro'?node.officialName:accessibleRowLabel}
           onClick={()=>searchMatch?chooseSearch(node.id):choose(node.id)}>
           <span className="tree-label-heading">
-            {treeSymbols&&<TerritorialSymbolImage key={node.id+'-'+(treeSymbolSrc||'empty')}
-              src={treeSymbolSrc} alt="" className="tree-territorial-symbol" />}
+            <TerritorialSymbolImage key={node.id+'-'+(treeSymbolSrc||'empty')}
+              src={treeSymbolSrc} alt="" className="tree-territorial-symbol" />
             <span className="node-name">{rowLabel}</span>
           </span>
           <span className={'node-level'+(stat?' is-stat':'')} title={municipalRoleClarification(node,lang)||undefined}>{roleLabel(node)}{eastHlinaiaCode?' · CUATM '+eastHlinaiaCode:''}</span>
@@ -1038,24 +1033,17 @@ export default function App() {
 
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
-  // Presentation-only flag; the certified MD identity of Pridnestrovie remains unchanged.
-  const currentFlag=currentNode?flagFileForEntity(currentNode):null;
-  // Exact-ID symbols, only if the act, representation, and owner were reviewed.
+  // SIM-R4.1: the heading shows the same coat as the tree, with a neutral
+  // placeholder if no coat exists. Flags remain in Territorial symbols below.
   const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
   const editorialSymbols=currentNode&&!officialSymbols?withGlobalSymbols(currentNode,editorialSymbolsForEntity(currentNode)):null;
-  const headerEditorial=currentNode?editorialSymbolsForEntity(currentNode):null;
-  const editorialPreferred=headerEditorial?.coat||headerEditorial?.flag;
-  const primarySymbolPath=officialSymbols?.coat
-    ?'symbols/'+officialSymbols.coat:currentFlag?'flags/'+currentFlag:null;
+  const headerCoatSrc=currentNode?coatImageForEntity(currentNode,import.meta.env.BASE_URL):null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
-        <span className={'flag'+(officialSymbols?.coat||headerEditorial?.coat?' flag--coat':'')} aria-hidden="true">
-          {headerEditorial?
-            <TerritorialSymbolImage key={currentNode.id} className="territorial-symbol-header"
-              src={symbolAssetUrl(editorialPreferred)} alt="" loading="eager" />:
-            primarySymbolPath&&<img src={import.meta.env.BASE_URL+primarySymbolPath}
-              alt="" loading="eager" decoding="async" />}
+        <span className="flag flag--coat" aria-hidden="true">
+          <TerritorialSymbolImage key={currentNode.id+'-coat'} className="territorial-symbol-header"
+            src={headerCoatSrc} alt="" loading="eager" />
         </span>
         <div><h3 tabIndex={-1}>{cardNameOf(currentNode,lang)}</h3><small>{roleLabel(currentNode)}</small></div>
       </header>

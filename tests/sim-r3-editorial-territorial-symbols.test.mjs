@@ -85,7 +85,9 @@ test('SIM-R3: tree and card UI share source-backed symbols and neutral failures'
  const fallback=readFileSync(new URL('../src/components/TerritorialSymbolImage.tsx',import.meta.url),'utf8');
  assert.match(app,/editorialSymbolsForEntity\(currentNode\)/);
  assert.match(app,/officialSymbolsForEntity\(currentNode\)/);
- assert.match(app,/officialSymbolsForEntity\(node\)/);
+ const coat=readFileSync(new URL('../src/data/entityCoat.mjs',import.meta.url),'utf8');
+ assert.match(coat,/officialSymbolsForEntity\(node\)/);
+ assert.match(app,/coatImageForEntity\(node,import\.meta\.env\.BASE_URL\)/);
  assert.match(app,/symbolSourceUrl\(asset\)/);
  assert.match(app,/tree-label-heading/);
  assert.match(app,/territory-symbol-gallery--editorial/);
