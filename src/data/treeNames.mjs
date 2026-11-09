@@ -122,6 +122,57 @@ function comparable(value){
   return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .toLocaleLowerCase('ro-RO').trim();
 }
+// WEB-EN-OFFICIAL: full English *presentation* renderings of source official
+// names. These do not replace a legally authoritative name or mutate OSM/registry
+// data. Only established geographic exonyms and explicit administrative terms
+// are translated; original source wording stays available in the entity card.
+const EN_OFFICIAL_EXACT=Object.freeze({
+  'osm-r90689':'Romania',
+  'osm-r58974':'Republic of Moldova',
+  'osm-r2607033':'Administrative-Territorial Units of the Left Bank of the Dniester',
+  'stat-MD120':'Administrative-Territorial Units of the Left Bank of the Dniester',
+  'stat-MD11':'Western Part (Right Bank of the Dniester)',
+  'stat-MD12':'Eastern Part (Left Bank of the Dniester)'
+});
+const EN_OFFICIAL_PREFIXES=Object.freeze([
+  [/^Judetul\s+/i,name=>name+' County'],
+  [/^Raionul\s+/i,name=>name+' District'],
+  [/^Municipiul\s+/i,name=>'Municipality of '+name],
+  [/^Municipalitatea\s+/i,name=>'Municipality of '+name],
+  [/^Orasul\s+/i,name=>'Town of '+name],
+  [/^Comuna\s+/i,name=>name+' Commune'],
+  [/^Satul\s+/i,name=>name+' Village'],
+  [/^Sovetul satesc\s+/i,name=>name+' Village Council'],
+  [/^Sovetul orasenesc\s+/i,name=>name+' Town Council'],
+  [/^Sectorul\s+/i,name=>/^Sector\b/i.test(name)?name:name+' Sector'],
+  [/^Districtul\s+/i,name=>name+' District'],
+  [/^Unitatea teritoriala autonoma\s+/i,name=>'Autonomous Territorial Unit of '+name],
+  [/^Regiunea de dezvoltare\s+/i,name=>name+' Development Region'],
+  [/^Regiunea\s+/i,name=>name+' Region'],
+  [/^Macroregiunea\s+/i,name=>name]
+]);
+
+export function officialNameForLocale(node,lang){
+  const original=String(node?.officialName||node?.name||'').trim();
+  if(lang==='ro')return original;
+  if(!original)return shortTreeName(node,'en');
+  if(Object.hasOwn(EN_OFFICIAL_EXACT,node.id))
+    return EN_OFFICIAL_EXACT[node.id];
+  const normalized=asciiEnglish(original);
+  if(/^Republica Moldoveneasca Nistreana$/i.test(normalized))
+    return 'Pridnestrovian Moldavian Republic';
+  const englishName=shortTreeName(node,'en');
+  for(const [prefix,format] of EN_OFFICIAL_PREFIXES){
+    if(prefix.test(normalized))return format(englishName);
+  }
+  // An unqualified name is a toponym; reuse the reviewed English tree label.
+  // For an otherwise unrecognized institutional descriptor, retain source
+  // wording rather than invent an official English legal designation.
+  if(!/^(?:Unitatile|Unitatea|Administratia|Consiliul|Republica|Teritoriul|Zona)\b/i.test(normalized))
+    return englishName;
+  return original;
+}
+
 // Standalone cards and dialogs use a context-complete city label; tree rows
 // show the actual geographic name together with their ADM level.
 // No catalog source name, OSM ID, or administrative parentage is modified.
