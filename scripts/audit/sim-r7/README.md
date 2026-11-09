@@ -14,7 +14,7 @@ npm run build
 node scripts/ci/browser-smoke.mjs
 ```
 
-Generatorul citește registrele SIM-R6 și dovezile SIM-R7 deja consemnate. Nu modifică o imagine în baza unei observații și nu suprascrie snapshoturile istorice. Gate-ul CI verifică determinismul a șapte artefacte. Testele validează separat cele4.283 identități,8.566 sloturi,44 drepturi,907 surse și18 regiuni exclusiv statistice.
+Generatorul citește registrele SIM-R6 și dovezile SIM-R7 deja consemnate. Nu modifică o imagine în baza unei observații și nu suprascrie snapshoturile istorice. Gate-ul CI verifică determinismul a șapte artefacte. Antetul gzip folosește OS=255, independent de platformă; un antet Windows/Linux diferit a fost detectat și corectat fără schimbarea conținutului JSON. Testele validează separat cele4.283 identități,8.566 sloturi,44 drepturi,907 surse și18 regiuni exclusiv statistice.
 
 ## Reluarea investigației cu rețea publică
 

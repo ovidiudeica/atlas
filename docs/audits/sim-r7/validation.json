@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-09T18:00:30.859Z",
+  "checkedAt": "2026-11-09T18:06:18.200Z",
   "staticTests": {
     "command": "npm test",
-    "tests": 254,
-    "passed": 254,
+    "tests": 255,
+    "passed": 255,
     "failed": 0,
-    "coverage": "Existing SIM-R2a/3/4/4.1/5/6, geographic/identity contracts and21 SIM-R7 tests"
+    "coverage": "Existing SIM-R2a/3/4/4.1/5/6, geographic/identity contracts and22 SIM-R7 tests"
   },
   "build": {
     "command": "npm run build",
@@ -49,11 +49,11 @@
     },
     {
       "path": "public/data/symbols/registry-r7.json.gz",
-      "sha256": "10a2e0f04c90052511840781f2342b38d1e727921f91f985fc56d425d826038f"
+      "sha256": "90fddf3b4a2a69fdb934cd95fc64936acfb365a84ebf533abcc1a60f271fcd11"
     },
     {
       "path": "public/data/symbols/audit-r7.json.gz",
-      "sha256": "8fa3a4e59c47fa6221b0dfc20e3f3039f9fbf94546bf5146c8aed012715ac4fc"
+      "sha256": "e681b74801e8e3c278ff62f1e1ecd0668ddd310d6acd40f060b56b5be0b5dfa7"
     },
     {
       "path": "src/data/symbolR7Selections.mjs",

@@ -1,0 +1,14 @@
+{
+  "failedRun": 42670534321,
+  "failedHead": "690957d83508724ff6a38e65347c047e394cda40",
+  "finding": "Only gzip header OS byte differs. Replacing Windows OS=10 with Linux OS=3 reproduced both exact CI actual hashes; uncompressed JSON and compressed DEFLATE payload unchanged.",
+  "windows": {
+    "registry": "10a2e0f04c90052511840781f2342b38d1e727921f91f985fc56d425d826038f",
+    "audit": "8fa3a4e59c47fa6221b0dfc20e3f3039f9fbf94546bf5146c8aed012715ac4fc"
+  },
+  "linux": {
+    "registry": "a0229cecf65f4453b8caa8ab7c01451f8c1ad93ed8926280882e35ae8855e652",
+    "audit": "201a75379bc4857ce977f7695342c725ed1f87457f6e43fb1faadd43d3795af3"
+  },
+  "fix": "RFC1952 OS=255, preserve default zero MTIME; retain strict byte-for-byte gate and immutable historical snapshots"
+}
