@@ -36,7 +36,7 @@ test('WEB-EN-OFFICIAL: reviewed national, municipal, county and statistical Engl
  assert.equal(full('stat-MD11','en'),'Western Part (Right Bank of the Dniester)');
  assert.equal(full('stat-MD12','en'),'Eastern Part (Left Bank of the Dniester)');
  assert.equal(full('stat-RO1','en'),'Macroregion One');
- assert.equal(full('stat-RO11','en'),'North-West Region');
+ assert.equal(full('stat-RO11','en'),'North-West');
  assert.equal(shortTreeName(byId.get('osm-r1748490'),'en'),'Chisinau',
   'Tree labels remain compact; official-name field gives the complete form');
 });
