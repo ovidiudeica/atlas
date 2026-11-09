@@ -9,7 +9,7 @@ import { EntityCardSection } from './components/EntityCardSection';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { SymbolAuditSummary } from './components/SymbolAuditSummary';
 import { symbolAuditFor } from './data/symbolAudit.mjs';
-import { cardNameOf, englishSiblingQualifiers, territorialContextNote } from './data/treeNames.mjs';
+import { cardNameOf, englishSiblingQualifiers, officialNameForLocale, territorialContextNote } from './data/treeNames.mjs';
 import { coatImageForEntity } from './data/entityCoat.mjs';
 import { globalSymbolsForEntity, withGlobalSymbols } from './data/globalSymbols.mjs';
 import { officialSymbolsForEntity } from './data/officialSymbols.mjs';
@@ -1082,7 +1082,7 @@ export default function App() {
       </details>
       <EntityCardSection title={t.cardIdentity} kind="identity">
         <dl className="metadata">
-          <dt>{t.official}</dt><dd>{currentNode.officialName}</dd>
+          <dt>{t.official}</dt><dd title={lang==='en'?currentNode.officialName:undefined}>{officialNameForLocale(currentNode,lang)}</dd>
           <dt>{t.country}</dt><dd>{currentNode.country==='RO'?(lang==='ro'?'România':'Romania'):
             (lang==='ro'?'Republica Moldova':'Republic of Moldova')}</dd>
         </dl>
