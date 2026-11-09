@@ -1468,34 +1468,70 @@ async function simR31MediaVisualAudit(cdp){
   await mobile.close();
 }
 
-/* WEB-R4.8: flags must load as image files on desktop and mobile, not emoji. */
-async function entityFlagAssets(cdp){
-  for(const {id,asset} of [
-    {id:'osm-r90689',asset:'romania.svg'},
-    {id:'osm-r58974',asset:'moldova.svg'},
-    {id:'osm-r65335',asset:'pridnestrovie.svg'}
-  ]){
-    const p=await cdp.page(1440,900,false,site+'?lang=en&entity='+id);
-    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
-      'R4.8 desktop map ready '+id);
-    await p.wait("(()=>{const img=document.querySelector('.detail-sidebar .entity-title .flag img');return img?.complete&&img.naturalWidth>0&&img.naturalHeight>0})()",
-      'R4.8 desktop flag loaded '+id);
-    const info=await p.eval("(()=>{const el=document.querySelector('.detail-sidebar .entity-title .flag img'),rect=el.getBoundingClientRect();return {path:new URL(el.src).pathname,w:rect.width,h:rect.height,naturalWidth:el.naturalWidth}})()");
-    assert(info.path.endsWith('/atlas/flags/'+asset)&&info.w>=24&&info.h>=20,
-      'R4.8 desktop asset '+id+': '+JSON.stringify(info));
-    await p.snap('desktop-r48-'+asset+'.png');
-    await p.close();
+/* SIM-R4.1 supersedes WEB-R4.8 for entity headings:
+ * cards and tree rows show coats; national/de facto flags remain in gallery.
+ * All media can fail externally, in which case the coat becomes neutral.
+ */
+async function entityCoatAndFlagAssets(cdp){
+  const roots=[
+    {id:'osm-r90689',coat:'Coat_of_arms_of_Romania.svg',flag:'Flag_of_Romania.svg'},
+    {id:'osm-r58974',coat:'Coat_of_arms_of_Moldova.svg',flag:'Flag_of_Moldova.svg'},
+    {id:'osm-r65335',coat:'Coat_of_arms_of_Transnistria.svg',flag:'Flag_of_Transnistria'}
+  ];
+  for(const width of [1440,390]){
+    const mobile=width<700;
+    for(const {id,coat,flag} of roots){
+      const p=await cdp.page(width,mobile?844:900,mobile,site+'?lang=en&entity='+id);
+      const prefix=mobile?'.drawer-detail ':'.detail-sidebar ';
+      const cardSelector=JSON.stringify(prefix+'.entity-card');
+      await p.wait("document.querySelector("+cardSelector+")?.querySelectorAll('.entity-card-section--symbols figure').length===2",
+        'SIM-R4.1 coat and flag gallery '+id+' '+width);
+      const info=await p.eval("(()=>{const c=document.querySelector("+cardSelector+");const f=[...c.querySelectorAll('.entity-card-section--symbols figure')];const h=c.querySelector('.entity-title .flag');const coat=f[0],flag=f[1];return {header:h.querySelector('img')?.src||'',headerFallback:!!h.querySelector('.territorial-symbol-fallback'),headerWidth:h.getBoundingClientRect().width,coat:coat.querySelector('img')?.src||'',coatSource:coat.querySelector('a')?.href||'',flag:flag.querySelector('img')?.src||'',flagSource:flag.querySelector('a')?.href||'',overflow:document.documentElement.scrollWidth-innerWidth}})()");
+      const normalized=s=>decodeURIComponent(s).replaceAll('_',' ');
+      assert(normalized(info.coatSource).includes(normalized(coat))&&
+        normalized(info.flagSource).includes(normalized(flag)),
+        'SIM-R4.1 exact source links for coat and flag '+id+': '+JSON.stringify(info));
+      assert(info.headerFallback||normalized(info.header).includes(normalized(coat)),
+        'SIM-R4.1 header must contain the coat, never the flag '+id+': '+JSON.stringify(info));
+      if(info.header&&info.coat)assert.equal(info.header,info.coat,
+        'SIM-R4.1 card title and gallery use identical coat '+id);
+      assert(info.headerWidth>=48&&info.overflow<=1,
+        'SIM-R4.1 desktop/mobile layout respects viewport '+id+': '+JSON.stringify(info));
+      if(!mobile){
+        await p.eval("document.querySelector('.module-rail button:first-child').click()");
+        await p.wait("!!document.querySelector('.tree-sidebar input[type=search]')",
+          'SIM-R4.1 tree opened '+id);
+        await p.eval("document.querySelector('.tree-sidebar input[type=search]').focus()");
+        await p.call('Input.insertText',{text:id});
+        await p.wait("!!document.querySelector('.tree-sidebar .tree-list .tree-label-heading')",
+          'SIM-R4.1 tree result '+id);
+        const tree=await p.eval("(()=>{const e=document.querySelector('.tree-sidebar .tree-list .tree-label-heading');return {img:e?.querySelector('img')?.src||'',fallback:!!e?.querySelector('.territorial-symbol-fallback')}})()");
+        assert(tree.fallback||normalized(tree.img).includes(normalized(coat)),
+          'SIM-R4.1 tree must display the same exact-ID coat '+id+': '+JSON.stringify(tree));
+        if(info.header&&tree.img)assert.equal(tree.img,info.header,
+          'SIM-R4.1 tree and heading coat URLs differ '+id);
+      }
+      await p.snap((mobile?'mobile':'desktop')+'-sim-r41-'+id+'-coat.png');
+      await p.close();
+    }
   }
-  const mobile=await cdp.page(390,844,true,site+'?lang=ro&entity=osm-r65335');
-  await mobile.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
-    'R4.8 mobile map ready');
-  await mobile.wait("(()=>{const el=document.querySelector('.drawer-detail .entity-title .flag img');return el?.complete&&el.naturalWidth>0})()",
-    'R4.8 mobile de facto flag loaded');
-  const image=await mobile.eval("(()=>{const el=document.querySelector('.drawer-detail .entity-title .flag img');return {path:new URL(el.src).pathname,width:el.getBoundingClientRect().width,scroll:document.documentElement.scrollWidth}})()");
-  assert(image.path.endsWith('/atlas/flags/pridnestrovie.svg')&&image.width>=24&&image.scroll<=391,
-    'R4.8 mobile Pridnestrovie flag is visible with no overflow');
-  await mobile.snap('mobile-r48-pridnestrovie.png');
-  await mobile.close();
+  // Existing SIM-R2a reviewed imagery must stay a coat, on mobile too.
+  const gagauzia=await cdp.page(390,844,true,site+'?lang=ro&entity=osm-r1699032');
+  await gagauzia.wait("!!document.querySelector('.drawer-detail .entity-title .flag img')",
+    'SIM-R4.1 Gagauzia mobile heading');
+  const ga=await gagauzia.eval("(()=>{const c=document.querySelector('.drawer-detail .entity-card');return {header:c.querySelector('.entity-title .flag img')?.src||'',gallery:[...c.querySelectorAll('.entity-card-section--symbols .territory-symbol-gallery img')].map(i=>i.src),overflow:document.documentElement.scrollWidth-innerWidth}})()");
+  assert(ga.header.endsWith('/atlas/symbols/gagauzia-coat.png')&&
+    ga.gallery.length===2&&ga.gallery[0]===ga.header&&ga.gallery[1].endsWith('/atlas/symbols/gagauzia-flag.svg')&&ga.overflow<=1,
+    'SIM-R4.1 reviewed regional coat and separate flag '+JSON.stringify(ga));
+  await gagauzia.snap('mobile-sim-r41-gagauzia-coat.png');
+  await gagauzia.close();
+  // Statistical-only rows must never inherit a national or de facto emblem.
+  const stat=await cdp.page(390,844,true,site+'?lang=ro&entity=stat-MD120');
+  await stat.wait("!!document.querySelector('.drawer-detail .entity-title .territorial-symbol-fallback')",
+    'SIM-R4.1 statistical entity neutral title');
+  assert.equal(await stat.eval("document.querySelector('.drawer-detail .entity-title .flag img')===null"),true);
+  await stat.snap('mobile-sim-r41-stat-neutral.png');
+  await stat.close();
 }
 
 /* WEB-R4.3a: the OSMB snapshot belongs only to Geometry & Provenance,
@@ -1789,7 +1825,7 @@ try{
   await roleAwareCards(client);
   await cardUxAccessibility(client);
   await finalCardAcceptance(client);
-  await entityFlagAssets(client);
+  await entityCoatAndFlagAssets(client);
   await verifiedSymbolPilot(client);
   await simR31MediaVisualAudit(client);
   await simR4GlobalSymbols(client);
