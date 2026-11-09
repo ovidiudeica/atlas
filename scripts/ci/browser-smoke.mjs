@@ -24,7 +24,7 @@ function findChrome(){
   }
   throw Error('Chromium/Google Chrome is required for UI verification');
 }
-async function until(fn,what,limit=30000){
+async function until(fn,what,limit=Number(process.env.ATLAS_SMOKE_TIMEOUT_MS)||30000){
   const end=Date.now()+limit;
   let last;
   while(Date.now()<end){
@@ -1794,14 +1794,49 @@ async function simR4GlobalSymbols(cdp){
  }
 }
 
+async function simR5Audit(cdp){
+ for(const width of [1440,360]){
+  const mobile=width<700;
+  for(const id of ['osm-r14772859','osm-r9882384','osm-r90689','osm-r1216705','osm-r19095396','osm-r10494274']){
+   const p=await cdp.page(width,844,mobile,site+'?lang=ro&entity='+id);
+   const selector=JSON.stringify((mobile?'.drawer-detail ':'.detail-sidebar ')+'.entity-card');
+   await p.wait("!!document.querySelector("+selector+")?.querySelector('.symbol-audit')",'SIM-R5 audit details '+id);
+   await p.eval("document.querySelectorAll("+selector+"+' .symbol-audit').forEach(d=>d.open=true)");
+   const info=await p.eval(`(()=>{const c=document.querySelector(${selector});return {
+    headerNeutral:!!c.querySelector('.entity-title .territorial-symbol-fallback'),
+    coatNeutral:!!c.querySelector('.territory-symbol-gallery figure:first-child .territorial-symbol-fallback'),
+    verdicts:[...c.querySelectorAll('[data-symbol-verdict]')].map(e=>e.dataset.symbolVerdict),
+    overflow:document.documentElement.scrollWidth-innerWidth,images:document.querySelectorAll('img').length,
+    download:!!c.querySelector('a[download][href$="audit.json.gz"]')};})()`);
+   assert(info.overflow<=1&&info.images<40&&info.download,'SIM-R5 accessible progressive UI '+id+': '+JSON.stringify(info));
+   if(id==='osm-r14772859')assert(info.headerNeutral&&info.coatNeutral&&info.verdicts.includes('MISATTRIBUTED'),'Wrong-county assignment removed from card and header');
+   if(id==='osm-r9882384')assert(!info.verdicts.includes('MISATTRIBUTED'),'Jilava is not removed from filename abbreviation alone');
+   if(id==='osm-r90689')assert(info.verdicts.includes('VERIFIED_OFFICIAL'),'Romanian flag geometric/legal check is visible');
+   if(id==='osm-r90689')assert.equal(await p.eval("document.querySelector("+selector+").querySelector('.territory-symbol-gallery figure:last-child .territory-symbol-status')?.textContent||''"),'','Confirmed flag is not simultaneously labelled a preliminary candidate');
+   if(['osm-r1216705','osm-r19095396'].includes(id)){
+    await p.eval("document.querySelector("+selector+").querySelector('.territory-symbol-gallery figure:last-child').scrollIntoView({block:'center'})");
+    await p.wait("document.querySelector("+selector+")?.querySelector('.territory-symbol-gallery figure:last-child img')?.naturalWidth>0",'Official replacement flag loads '+id);
+    const flag=await p.eval(`(()=>{const i=document.querySelector(${selector}).querySelector('.territory-symbol-gallery figure:last-child img');const c=document.createElement('canvas');c.width=i.naturalWidth;c.height=i.naturalHeight;const ctx=c.getContext('2d');ctx.drawImage(i,0,0);return {url:i.src,ratio:i.naturalWidth/i.naturalHeight,base:[...ctx.getImageData(Math.floor(c.width/2),Math.floor(c.height*.9),1,1).data]};})()`);
+    assert(flag.url.includes('/atlas/symbols/sim-r5/')&&Math.abs(flag.ratio-1)<.02&&flag.base.slice(0,3).every(c=>c>220),'Replacement preserves square flag and documented white base '+id+': '+JSON.stringify(flag));
+   }
+   if(id==='osm-r10494274'){
+    const urls=await p.eval("[...document.querySelector("+selector+").querySelectorAll('.entity-title img,.territory-symbol-gallery figure:first-child img')].map(i=>i.src)");
+    assert((urls.length>=1||info.headerNeutral)&&urls.every(url=>url.includes('ROU_HD_Hunedoara_CoA1.jpg')),'Historical Hunedoara coat does not reappear; unavailable remote media remains neutral');
+   }
+   await p.snap((mobile?'mobile':'desktop')+'-sim-r5-'+id+'.png');await p.close();
+  }
+ }
+}
+
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
-  preview=spawn('npm',['run','preview','--','--host','127.0.0.1','--port','4174','--strictPort'],{cwd:root,stdio:'inherit'});
+  preview=spawn(process.execPath,[resolve(root,'node_modules/vite/bin/vite.js'),'preview','--host','127.0.0.1','--port','4174','--strictPort'],{cwd:root,stdio:'inherit'});
   await until(async()=>(await fetch(site)).ok,'Vite preview');
   chrome=spawn(findChrome(),[
     '--headless=new','--no-sandbox','--disable-dev-shm-usage',
     '--enable-unsafe-swiftshader','--disable-gpu-sandbox',
+    ...(process.env.ATLAS_CHROME_SOFTWARE==='1'?['--use-angle=swiftshader']:[]),
     '--no-first-run','--no-default-browser-check',
     '--user-data-dir='+profile,'--remote-debugging-port=9338','about:blank'
   ],{stdio:'ignore'});
@@ -1830,16 +1865,19 @@ try{
   await verifiedSymbolPilot(client);
   await simR31MediaVisualAudit(client);
   await simR4GlobalSymbols(client);
+  await simR5Audit(client);
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
   console.error('Browser smoke failure:',err);
+  console.error('Uncaught browser exceptions:',JSON.stringify(runtimeErrors));
   process.exitCode=1;
 }finally{
   try{client?.close();}catch{}
   chrome?.kill('SIGKILL');
   preview?.kill('SIGKILL');
-  if(profile)await rm(profile,{recursive:true,force:true}).catch(()=>{});
+  if(profile&&resolve(profile).startsWith(join(resolve(tmpdir()),'atlas-smoke-')))
+    await rm(profile,{recursive:true,force:true}).catch(()=>{});
 }

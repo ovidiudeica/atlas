@@ -1,0 +1,30 @@
+{
+  "sources": [
+    {
+      "url": "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "finalUrl": "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "status": 200,
+      "checkedAt": "2026-11-09T08:16:44.972Z",
+      "sha256": "71bbcb7850cb7d333dd2a0337a1feedf1a484503e6eba1135b8cb3e20d7686d9",
+      "bytes": 933148,
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://old.parlament.md/LegislationDocument.aspx?Id=82c3f10c-b81a-413a-b1f2-40614c551716",
+      "finalUrl": "https://old.parlament.md/LegislationDocument.aspx?Id=82c3f10c-b81a-413a-b1f2-40614c551716",
+      "status": 403,
+      "checkedAt": "2026-11-09T08:16:46.166Z",
+      "contentType": "text/html; charset=UTF-8",
+      "error": "Error: HTTP 403"
+    },
+    {
+      "url": "https://www.legis.md/cautare/getResults?doc_id=149374&lang=ro",
+      "finalUrl": "https://www.legis.md/cautare/getResults?doc_id=149374&lang=ro",
+      "status": 403,
+      "checkedAt": "2026-11-09T08:16:46.680Z",
+      "contentType": "text/html; charset=UTF-8",
+      "error": "Error: HTTP 403"
+    }
+  ],
+  "assessment": "Official decree annex reproductions: Law 230/2022 article 8(b) excludes normative/administrative acts, 8(c) official symbols, 8(g) documentary reproductions. Informational display identifies the holder; no claim of branding/trademark permission. AGEPI institutional English PDF checked at article 8; consolidated Legis endpoint inaccessible. Only literal crops of published normative annexes are introduced."
+}

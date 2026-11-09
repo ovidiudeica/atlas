@@ -1,0 +1,1851 @@
+{
+  "schema": "atlas-sim-r5-manual-decisions-v1",
+  "decisions": [
+    {
+      "atlasId": "osm-r14772859",
+      "kind": "coat",
+      "verdict": "MISATTRIBUTED",
+      "action": "REMOVE",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:ROU_BR_Faurei_CoA.jpg",
+        "https://www.wikidata.org/wiki/Q3878828"
+      ],
+      "identity": "SIRUTA 122613 identifies Comuna Făurei, Neamț, parent osm-r2248675. The selected Commons file explicitly describes Făurei, Brăila. Its Brăila description and categories contradict the certified holder; the Wikidata P94 link does not resolve that contradiction.",
+      "graphicComparison": "Existing JPEG inspected. Removal rests on explicit territorial provenance, not filename similarity or a missing approval act.",
+      "limitations": [
+        "No sufficiently documented replacement established for this commune. Retain the previous assignment in the audit; display neutral substitute."
+      ]
+    },
+    {
+      "atlasId": "osm-r9882384",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "HG 1338/28 October 2022, Monitorul Oficial 1075/8 November 2022",
+      "sources": [
+        "https://legislatie.just.ro/public/DetaliiDocument/261236",
+        "https://armerii.ro/01JosLabele/Albumul/25%20-Ilfov.pdf"
+      ],
+      "identity": "Comuna Jilava, Ilfov. The IL filename token conflicts with the usual county abbreviation, but the Commons description and Government act identify Ilfov. A filename token is insufficient evidence of misattribution.",
+      "graphicComparison": "Existing raster inspected against the textual blazon: crenellated red chief, tears and flowers, Gumelnița figures, cornucopia and wheel, one-tower crown.",
+      "limitations": [
+        "Primary act read through the public legislative portal search/extraction service; direct TLS retrieval failed. Official graphic annex not independently recovered. Armorial has an apparent 2033 date typo; primary 2022 date prevails."
+      ]
+    },
+    {
+      "atlasId": "osm-r1699033",
+      "kind": "coat",
+      "verdict": "VERIFIED_OFFICIAL",
+      "action": "KEEP",
+      "act": "Presidential decree 241-IX/22 November 2021; district council decision 5/23/12 August 2021",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/241.pdf",
+        "https://raiontaraclia.md/ro/simbolica-raionului/",
+        "https://cnh.prm.md/ziua-drapelului-si-stemei-raionului-taraclia/"
+      ],
+      "identity": "Raionul Taraclia, CUATM 8700, not the city of Taraclia.",
+      "graphicComparison": "Downloaded current district JPEG visually compared with decree pages 2–3: same green shield, silver lion passant contourné, crenellated gold base with red Tarac mark and district crown. Scan colour cast differs; charge outlines and arrangement agree. Current institutional use corroborated; no later superseding act found in this investigation.",
+      "annexSHA256": "8624e3575fbfa0be50959ec41c151c05e444fb509223e2aae14422dc25701f6f",
+      "limitations": [
+        "Verdict covers identity, applicable act and graphic composition, not an assertion of pixel-identical scanning or cleared reproduction rights."
+      ]
+    },
+    {
+      "atlasId": "osm-r1699033",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "Presidential decree 241-IX/22 November 2021, annex 2",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/241.pdf",
+        "https://raiontaraclia.md/ro/simbolica-raionului/"
+      ],
+      "identity": "Raionul Taraclia, CUATM 8700.",
+      "graphicComparison": "Current institutional JPEG compared with decree pages 4–5. Same 2:3 field, white contourné lion, crenellated lower third and gold/red bands. Lion scale and scan colours differ between the institutional image and the annex; fidelity of those proportions remains unresolved.",
+      "annexSHA256": "8624e3575fbfa0be50959ec41c151c05e444fb509223e2aae14422dc25701f6f",
+      "limitations": [
+        "Do not certify exact graphic fidelity or replace the current authority image solely from scan colour/scale differences. Institutional reproduction licence not established."
+      ]
+    },
+    {
+      "atlasId": "osm-r1699032",
+      "kind": "coat",
+      "verdict": "VERIFIED_OFFICIAL",
+      "action": "KEEP",
+      "act": "Gagauzia law 13-X/I of 28 June 1996 (current authority transcription)",
+      "sources": [
+        "https://www.gagauzia.md/ru/ato-gagauziya/simvolika.html",
+        "https://www.gagauzia.md/assets/app/img/gagauzia.png"
+      ],
+      "identity": "Autonomous Territorial Unit of Gagauzia; administrative holder unchanged.",
+      "graphicComparison": "Existing local coat and freshly downloaded authority PNG compared side by side: identical composition, sun rays, GAGAUZ YERI ribbon, wheat, grapes and three stars. Current authority text identifies the applicable law; no later replacement found.",
+      "officialImageSHA256": "400bd62f0146a99393f10f88348a3a9cc8e3e7b71daaea07cbb97a2024c240a0",
+      "limitations": [
+        "Authority's current legal transcription and graphic used; original promulgated annex not independently recovered. Reproduction rights remain a separate finding."
+      ]
+    },
+    {
+      "atlasId": "osm-r1699032",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "Gagauzia law 2-IV/I of 31 October 1995 (current authority transcription)",
+      "sources": [
+        "https://www.gagauzia.md/ru/ato-gagauziya/simvolika.html",
+        "https://www.gagauzia.md/assets/app/img/FLAG_GAGAUZII.gif"
+      ],
+      "identity": "Autonomous Territorial Unit of Gagauzia.",
+      "graphicComparison": "Local SVG and current authority GIF inspected: three yellow stars and blue/white/red bands 60:20:20 agree. Blue and red shades and star positions differ slightly; no authoritative colour calibration recovered.",
+      "officialImageSHA256": "079960097f591e8d696e30434015bb4d9df311bccc7427c8773f5593b7689bb4",
+      "limitations": [
+        "Preserve the existing image. The observed shade differences alone do not prove an obsolete or incorrect legal version."
+      ]
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+        "https://ciocana.md/simbolurile-sectorului"
+      ],
+      "identity": "Exact SIM-R2a holder mapping retained; city/municipal/sector scope is not propagated to other IDs.",
+      "graphicComparison": "Fresh CNH bytes have exactly the existing JPEG SHA256 9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014.",
+      "limitations": [
+        "Gazette index confirms decree identity, but its full original graphic annex was not recovered. Current CNH provenance and exact original-source hash corroborate use; no new full legal certification.",
+        "See SIM-R2A-EVIDENCE.json and local-source-comparisons.json. Informational-use rules and holder attribution preserved; reproduction licence is assessed separately."
+      ]
+    },
+    {
+      "atlasId": "osm-r1813306",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+        "https://ciocana.md/simbolurile-sectorului"
+      ],
+      "identity": "Exact SIM-R2a holder mapping retained; city/municipal/sector scope is not propagated to other IDs.",
+      "graphicComparison": "Fresh CNH composite SHA256 exactly matches the SIM-R2a original 1b71b9ec04e081feca80d8b92e06dd8c945743b29fd91b26a6322ea8d9e726f4. Existing 208x371 crops checked at original offsets. Independent JPEG decode differs by at most 3/255 per channel, mean below 0.021/255; do not call these decoded arrays pixel-identical.",
+      "limitations": [
+        "Gazette index confirms decree identity, but its full original graphic annex was not recovered. Current CNH provenance and exact original-source hash corroborate use; no new full legal certification.",
+        "See SIM-R2A-EVIDENCE.json and local-source-comparisons.json. Informational-use rules and holder attribution preserved; reproduction licence is assessed separately."
+      ]
+    },
+    {
+      "atlasId": "osm-r1813297",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+        "https://ciocana.md/simbolurile-sectorului"
+      ],
+      "identity": "Exact SIM-R2a holder mapping retained; city/municipal/sector scope is not propagated to other IDs.",
+      "graphicComparison": "Fresh CNH composite SHA256 exactly matches the SIM-R2a original 1b71b9ec04e081feca80d8b92e06dd8c945743b29fd91b26a6322ea8d9e726f4. Existing 208x371 crops checked at original offsets. Independent JPEG decode differs by at most 3/255 per channel, mean below 0.021/255; do not call these decoded arrays pixel-identical.",
+      "limitations": [
+        "Gazette index confirms decree identity, but its full original graphic annex was not recovered. Current CNH provenance and exact original-source hash corroborate use; no new full legal certification.",
+        "See SIM-R2A-EVIDENCE.json and local-source-comparisons.json. Informational-use rules and holder attribution preserved; reproduction licence is assessed separately."
+      ]
+    },
+    {
+      "atlasId": "osm-r58512",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+        "https://ciocana.md/simbolurile-sectorului"
+      ],
+      "identity": "Exact SIM-R2a holder mapping retained; city/municipal/sector scope is not propagated to other IDs.",
+      "graphicComparison": "Fresh CNH composite SHA256 exactly matches the SIM-R2a original 1b71b9ec04e081feca80d8b92e06dd8c945743b29fd91b26a6322ea8d9e726f4. Existing 208x371 crops checked at original offsets. Independent JPEG decode differs by at most 3/255 per channel, mean below 0.021/255; do not call these decoded arrays pixel-identical.",
+      "limitations": [
+        "Gazette index confirms decree identity, but its full original graphic annex was not recovered. Current CNH provenance and exact original-source hash corroborate use; no new full legal certification.",
+        "See SIM-R2A-EVIDENCE.json and local-source-comparisons.json. Informational-use rules and holder attribution preserved; reproduction licence is assessed separately."
+      ]
+    },
+    {
+      "atlasId": "osm-r1813315",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+        "https://ciocana.md/simbolurile-sectorului"
+      ],
+      "identity": "Exact SIM-R2a holder mapping retained; city/municipal/sector scope is not propagated to other IDs.",
+      "graphicComparison": "Fresh CNH composite SHA256 exactly matches the SIM-R2a original 1b71b9ec04e081feca80d8b92e06dd8c945743b29fd91b26a6322ea8d9e726f4. Existing 208x371 crops checked at original offsets. Independent JPEG decode differs by at most 3/255 per channel, mean below 0.021/255; do not call these decoded arrays pixel-identical.",
+      "limitations": [
+        "Gazette index confirms decree identity, but its full original graphic annex was not recovered. Current CNH provenance and exact original-source hash corroborate use; no new full legal certification.",
+        "See SIM-R2A-EVIDENCE.json and local-source-comparisons.json. Informational-use rules and holder attribution preserved; reproduction licence is assessed separately."
+      ]
+    },
+    {
+      "atlasId": "osm-r1813316",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+        "https://ciocana.md/simbolurile-sectorului"
+      ],
+      "identity": "Exact SIM-R2a holder mapping retained; city/municipal/sector scope is not propagated to other IDs.",
+      "graphicComparison": "Fresh CNH composite SHA256 exactly matches the SIM-R2a original 1b71b9ec04e081feca80d8b92e06dd8c945743b29fd91b26a6322ea8d9e726f4. Existing 208x371 crops checked at original offsets. Independent JPEG decode differs by at most 3/255 per channel, mean below 0.021/255; do not call these decoded arrays pixel-identical.",
+      "limitations": [
+        "Gazette index confirms decree identity, but its full original graphic annex was not recovered. Current CNH provenance and exact original-source hash corroborate use; no new full legal certification.",
+        "See SIM-R2A-EVIDENCE.json and local-source-comparisons.json. Informational-use rules and holder attribution preserved; reproduction licence is assessed separately."
+      ]
+    },
+    {
+      "atlasId": "osm-r10628805",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "ECRET nr.618-X din 25.05.2026 privind înregistrarea stemei și drapelului satului Hîjdieni, raionul Glodeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/618-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Hajdieni.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r10628805, CUATM 4833, Satul Hîjdieni, parent Glodeni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "7d2b13f2c6cda6b08cf88687b4140bd1587664d376ec263b6ac5882adcbe13b4",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r10628805",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "ECRET nr.618-X din 25.05.2026 privind înregistrarea stemei și drapelului satului Hîjdieni, raionul Glodeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/618-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Hajdieni.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r10628805, CUATM 4833, Satul Hîjdieni, parent Glodeni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "7d2b13f2c6cda6b08cf88687b4140bd1587664d376ec263b6ac5882adcbe13b4",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r10629199",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1065-IX din 07.08.2023 privind înregistrarea stemei și drapelului orașului Căinari, raionul Căușeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1065.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Cainari.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r10629199, CUATM 2301, Orașul Căinari, parent Căușeni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "1d01e8692c30954c8362563faa2c8a745e634651ad2da193fc68c48a6187a9fc",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r10629199",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1065-IX din 07.08.2023 privind înregistrarea stemei și drapelului orașului Căinari, raionul Căușeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1065.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Cainari.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r10629199, CUATM 2301, Orașul Căinari, parent Căușeni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "1d01e8692c30954c8362563faa2c8a745e634651ad2da193fc68c48a6187a9fc",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1216705",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1539-IX din 25.07.2024 privind înregistrarea stemei și drapelului satului Copanca, raionul Căușeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1539.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Copanca,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1216705, CUATM 7616, Copanca, parent Căușeni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "739b558d516c84e5983a634f76f31d2c5cb9fe35a49aa8a1fc404de2b7877d5a",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r12462197",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.462-X din 02.12.2025 privind înregistrarea stemei și drapelului satului Opaci, raionul Căușeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/462-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Opaci,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r12462197, CUATM 2718, Opaci, parent Căușeni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "3c49132f849759c2d5d2cb37241ec5630a3419e66ba5073a5b3f358f8ea4cae1",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r12462197",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.462-X din 02.12.2025 privind înregistrarea stemei și drapelului satului Opaci, raionul Căușeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/462-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Opaci,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r12462197, CUATM 2718, Opaci, parent Căușeni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "3c49132f849759c2d5d2cb37241ec5630a3419e66ba5073a5b3f358f8ea4cae1",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r12496670",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1302-IX din 15.01.2024 privind înregistrarea stemei și drapelului satului Roșcani, raionul Anenii Noi",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1302.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Roscani,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r12496670, CUATM 1038, Roșcani, parent Anenii Noi. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "ec70ec0c48435657ff11217c1cf01bc126a6d0b467ae006f550f0362b89fff51",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r12496670",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1302-IX din 15.01.2024 privind înregistrarea stemei și drapelului satului Roșcani, raionul Anenii Noi",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1302.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Roscani,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r12496670, CUATM 1038, Roșcani, parent Anenii Noi. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "ec70ec0c48435657ff11217c1cf01bc126a6d0b467ae006f550f0362b89fff51",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1706594",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "ECRET nr.671-X din 30.06.2026 privind înregistrarea stemei și drapelului satului Volintiri, raionul Ștefan Vodă",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/671-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Volintiri,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1706594, CUATM 8537, Volintiri, parent Ștefan Vodă. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "77b92e008cda8084feffa2e45e35a3bfe40dc3b8d48c4a660483d2b77197d783",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1706594",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "ECRET nr.671-X din 30.06.2026 privind înregistrarea stemei și drapelului satului Volintiri, raionul Ștefan Vodă",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/671-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Volintiri,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1706594, CUATM 8537, Volintiri, parent Ștefan Vodă. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "77b92e008cda8084feffa2e45e35a3bfe40dc3b8d48c4a660483d2b77197d783",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1706630",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1538-IX din 25.07.2024 privind înregistrarea stemei și drapelului satului Popeasca, raionul Ștefan Vodă",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1538.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Popeasca,_Moldova.png"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1706630, CUATM 8527, Popeasca, parent Ștefan Vodă. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "6b18da983ebf0b726e13cfad2e103d17635039ba0e1543117a37ef3a18d12bd3",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1706630",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1538-IX din 25.07.2024 privind înregistrarea stemei și drapelului satului Popeasca, raionul Ștefan Vodă",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1538.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Popeasca,_Moldova.png"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1706630, CUATM 8527, Popeasca, parent Ștefan Vodă. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "6b18da983ebf0b726e13cfad2e103d17635039ba0e1543117a37ef3a18d12bd3",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1706631",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.270-IX din 13.12.2021 privind înregistrarea stemei și drapelului satului Slobozia, raionul Ștefan Vodă",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/270.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_satului_Slobozia,_%C8%98tefan_Vod%C4%83,_Moldova.png"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1706631, CUATM 8533, Slobozia, parent Ștefan Vodă. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "e92dd0acb58c3f610f1cc9f3c6fd435cae82442cc006b057fddaa926a552b5f6",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1706631",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.270-IX din 13.12.2021 privind înregistrarea stemei și drapelului satului Slobozia, raionul Ștefan Vodă",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/270.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapelul_satului_Slobozia,_%C8%98tefan_Vod%C4%83,_Moldova.png"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1706631, CUATM 8533, Slobozia, parent Ștefan Vodă. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "e92dd0acb58c3f610f1cc9f3c6fd435cae82442cc006b057fddaa926a552b5f6",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1768340",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.633-IX din 09.09.2022 privind înregistrarea stemei și drapelului orașului Vatra, municipiul Chișinău",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/633.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Vatra.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1768340, CUATM 0122, orașul Vatra, parent Chișinău. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "cc3fbc99d42c6422251f3e7005f38216acb55c93900180c5f921801b9e87d984",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1768340",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.633-IX din 09.09.2022 privind înregistrarea stemei și drapelului orașului Vatra, municipiul Chișinău",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/633.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Vatra.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1768340, CUATM 0122, orașul Vatra, parent Chișinău. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "cc3fbc99d42c6422251f3e7005f38216acb55c93900180c5f921801b9e87d984",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1782011",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1498-IX din 24.06.2024 privind înregistrarea unor simboluri teritoriale ale orașului Stăuceni, municipiul Chișinău",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1498.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Stauceni.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1782011, CUATM 3153, orașul Stăuceni, parent Chișinău. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "00d0986757e0da4a83494f3391d1b5f777e2b8b723fe95ccc66f5108b8d4c6f6",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1782011",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1498-IX din 24.06.2024 privind înregistrarea unor simboluri teritoriale ale orașului Stăuceni, municipiul Chișinău",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1498.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Stauceni.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1782011, CUATM 3153, orașul Stăuceni, parent Chișinău. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "00d0986757e0da4a83494f3391d1b5f777e2b8b723fe95ccc66f5108b8d4c6f6",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1811555",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.290-IX din 22.12.2021 privind înregistrarea stemei și drapelului satului Talmaza, raionul Ștefan Vodă",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/290.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Talmaza,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1811555, CUATM 8535, Talmaza, parent Ștefan Vodă. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "1f57e79df4a4a517296370a25b874bc309026cac75d9984e85b3e1f2d7e28db1",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1811555",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.290-IX din 22.12.2021 privind înregistrarea stemei și drapelului satului Talmaza, raionul Ștefan Vodă",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/290.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Talmaza,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r1811555, CUATM 8535, Talmaza, parent Ștefan Vodă. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "1f57e79df4a4a517296370a25b874bc309026cac75d9984e85b3e1f2d7e28db1",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r18822136",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.349-X din 01.08.2025 privind înregistrarea stemei și drapelului satului Suruceni, raionul Ialoveni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/349-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:CoA_of_Suruceni,_Ialoveni.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r18822136, CUATM 5530, Satul Suruceni, parent Ialoveni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "964857df16608f4429558200c0b5be94408bc7682c3a111b066535a7414b5f26",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r18822136",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.349-X din 01.08.2025 privind înregistrarea stemei și drapelului satului Suruceni, raionul Ialoveni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/349-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Flag_of_Suruceni,_Ialoveni.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r18822136, CUATM 5530, Satul Suruceni, parent Ialoveni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "964857df16608f4429558200c0b5be94408bc7682c3a111b066535a7414b5f26",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r18822474",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1455-IX din 22.05.2024 privind înregistrarea stemei și drapelului satului Cărbuna, raionul Ialoveni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1455.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Carbuna,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r18822474, CUATM 2313, Satul Cărbuna, parent Ialoveni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "42fd01ed099335b2dba1efedecd591e0d73d042449e160c2a43f39d7f4a4ef53",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r18822474",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1455-IX din 22.05.2024 privind înregistrarea stemei și drapelului satului Cărbuna, raionul Ialoveni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1455.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapelul_Carbuna,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r18822474, CUATM 2313, Satul Cărbuna, parent Ialoveni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "42fd01ed099335b2dba1efedecd591e0d73d042449e160c2a43f39d7f4a4ef53",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19038440",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1356-IX din 04.03.2024 privind înregistrarea unor simboluri teritoriale ale comunei Ocnița, raionul Ocnița",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1356.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_comuna_Ocnita,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19038440, CUATM 6237, comuna Ocnița, parent Ocnița. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "c0cddb314e4d86817367a483f30b5c55c9d5adc57a2b23109717fb322d5049d3",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19038440",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1356-IX din 04.03.2024 privind înregistrarea unor simboluri teritoriale ale comunei Ocnița, raionul Ocnița",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1356.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_comuna_Ocnita,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19038440, CUATM 6237, comuna Ocnița, parent Ocnița. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "c0cddb314e4d86817367a483f30b5c55c9d5adc57a2b23109717fb322d5049d3",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19045243",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1241-IX din 14.12.2023 privind înregistrarea stemei și drapelului satului Pociumbăuți, raionul Rîșcani",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1241.pdf",
+        "https://commons.wikimedia.org/wiki/File:Pociumbauti_Stema.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19045243, CUATM 7141, satul Pociumbăuți, parent Rîșcani. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "1392d2eeb5885b1acf28df5c457a88badf6f8cfea2c6cc154069daa92dbb1d95",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19045243",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1241-IX din 14.12.2023 privind înregistrarea stemei și drapelului satului Pociumbăuți, raionul Rîșcani",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1241.pdf",
+        "https://commons.wikimedia.org/wiki/File:Pociumbauti_Drapel.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19045243, CUATM 7141, satul Pociumbăuți, parent Rîșcani. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "1392d2eeb5885b1acf28df5c457a88badf6f8cfea2c6cc154069daa92dbb1d95",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19055801",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.684-IX din 08.11.2022 privind înregistrarea stemei și drapelului orașului Dondușeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/684.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Donduseni.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19055801, CUATM 3401, orașul Dondușeni, parent Dondușeni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "1fb5e478984855f07bf6ea1d1b1528e23b2c0b9390b37a17fa547fc7a3b1c3d6",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19055801",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.684-IX din 08.11.2022 privind înregistrarea stemei și drapelului orașului Dondușeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/684.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Donduseni.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19055801, CUATM 3401, orașul Dondușeni, parent Dondușeni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "1fb5e478984855f07bf6ea1d1b1528e23b2c0b9390b37a17fa547fc7a3b1c3d6",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19068250",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.199-IX din 19.10.2021 privind înregistrarea stemei și drapelului satului Sofia, raionul Drochia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/199.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Sofia,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19068250, CUATM 3635, satul Sofia, parent Drochia. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "638370d4c5880c9d5c3c099e69a5b47ce088b46a98b1a3eeaaaacbdbad7935fd",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19068250",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.199-IX din 19.10.2021 privind înregistrarea stemei și drapelului satului Sofia, raionul Drochia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/199.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Sofia,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19068250, CUATM 3635, satul Sofia, parent Drochia. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "638370d4c5880c9d5c3c099e69a5b47ce088b46a98b1a3eeaaaacbdbad7935fd",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19072253",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.126-IX din 22.07.2021 privind înregistrarea stemei și drapelului satului Zăluceni, raionul Florești",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/126.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Zaluceni,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19072253, CUATM 1950, satul Zăluceni, parent Florești. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "3ad0929625bc41724b97d4b577c18b292b1b1209c6a8a6efa89da9f2f16b4971",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19072253",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.126-IX din 22.07.2021 privind înregistrarea stemei și drapelului satului Zăluceni, raionul Florești",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/126.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Zaluceni,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19072253, CUATM 1950, satul Zăluceni, parent Florești. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "3ad0929625bc41724b97d4b577c18b292b1b1209c6a8a6efa89da9f2f16b4971",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19080665",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1151-IX din 23.10.2023 privind înregistrarea stemei și drapelului satului Sămășcani, raionul Șoldănești",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1151.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Samascani,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19080665, CUATM 8335, satul Sămășcani, parent Șoldănești. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "b7db3e587d2c268b9a371c06f1672032bdc441687d012f2b96e962293a76804f",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19080665",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1151-IX din 23.10.2023 privind înregistrarea stemei și drapelului satului Sămășcani, raionul Șoldănești",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1151.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Samascani,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19080665, CUATM 8335, satul Sămășcani, parent Șoldănești. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "b7db3e587d2c268b9a371c06f1672032bdc441687d012f2b96e962293a76804f",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19082489",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.686-IX din 08.11.2022 privind înregistrarea unor simboluri teritoriale ale comunei Puțintei, raionul Orhei",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/686.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_comuna_Putintei,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19082489, CUATM 6461, comuna Puțintei, parent Orhei. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "c4e7a7a5b45646337b23e0ed1f8a0090456e94f2577a4593b85b857cff9ea4a7",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19082489",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.686-IX din 08.11.2022 privind înregistrarea unor simboluri teritoriale ale comunei Puțintei, raionul Orhei",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/686.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_comuna_Putintei,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19082489, CUATM 6461, comuna Puțintei, parent Orhei. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "c4e7a7a5b45646337b23e0ed1f8a0090456e94f2577a4593b85b857cff9ea4a7",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19090944",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.481-X din 26.12.2025 privind înregistrarea unor simboluri teritoriale ale comunei Miclești, raionul Criuleni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/481-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_comuna_Miclesti,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19090944, CUATM 3143, comuna Miclești, parent Criuleni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "51900b7ea78914dd78f908b93f2b8cb684a06417190af0b77f39e7273f0c2eac",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19090944",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.481-X din 26.12.2025 privind înregistrarea unor simboluri teritoriale ale comunei Miclești, raionul Criuleni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/481-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_comuna_Miclesti,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19090944, CUATM 3143, comuna Miclești, parent Criuleni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "51900b7ea78914dd78f908b93f2b8cb684a06417190af0b77f39e7273f0c2eac",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19090952",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1701-IX din 19.12.2024 privind înregistrarea stemei și drapelului satului Mașcăuți, raionul Criuleni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1701.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Mascauti,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19090952, CUATM 3142, satul Mașcăuți, parent Criuleni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "16d1ec0b276717f9fdd9d524e162949d3ee32cd65dfb339b2385f958dce47c0a",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19090952",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1701-IX din 19.12.2024 privind înregistrarea stemei și drapelului satului Mașcăuți, raionul Criuleni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1701.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Mascauti,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19090952, CUATM 3142, satul Mașcăuți, parent Criuleni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "16d1ec0b276717f9fdd9d524e162949d3ee32cd65dfb339b2385f958dce47c0a",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19095396",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.51-X din 22.01.2025 privind înregistrarea stemei și drapelului satului Vălcineț, raionul Călărași",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/51-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Valcinet,_Calarasi.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19095396, CUATM 2549, satul Vălcineț, parent Călărași. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "f2d337934057f15082d73a108b128a3d75ac6bd5a216f2defd074fd9ce26e4fc",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19100156",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.549-IX din 18.07.2022 privind înregistrarea stemei și drapelului satului Cojușna, raionul Strășeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/549.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Cojusna,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19100156, CUATM 8015, satul Cojușna, parent Strășeni. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "50d8c5957f7a7b3371c54348c07a6f1c4f30454500015b73d7699e6045597aa8",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19100156",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.549-IX din 18.07.2022 privind înregistrarea stemei și drapelului satului Cojușna, raionul Strășeni",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/549.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Cojusna,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19100156, CUATM 8015, satul Cojușna, parent Strășeni. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "50d8c5957f7a7b3371c54348c07a6f1c4f30454500015b73d7699e6045597aa8",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19110263",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.66-IX din 05.04.2021 privind înregistrarea stemei și drapelului satului Nemțeni, raionul Hîncești",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/66.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Nemteni,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19110263, CUATM 5350, satul Nemțeni, parent Hîncești. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "b1e9701685c27c60eee4e34f0647fcc5936b006b31169da26c84378940868a81",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19110263",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.66-IX din 05.04.2021 privind înregistrarea stemei și drapelului satului Nemțeni, raionul Hîncești",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/66.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Nemteni,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19110263, CUATM 5350, satul Nemțeni, parent Hîncești. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "b1e9701685c27c60eee4e34f0647fcc5936b006b31169da26c84378940868a81",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19112363",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.177-X din 02.05.2025 privind înregistrarea stemei și drapelului satului Gura Galbenei, raionul Cimișlia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/177-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Gura_Galbenei,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19112363, CUATM 2919, satul Gura Galbenei, parent Cimișlia. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "fbd784004f0b160d9d80ac555a8e7a634ed783d3df640054c0e9b1c6b25853a1",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19112363",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.177-X din 02.05.2025 privind înregistrarea stemei și drapelului satului Gura Galbenei, raionul Cimișlia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/177-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Gura_Galbenei,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19112363, CUATM 2919, satul Gura Galbenei, parent Cimișlia. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "fbd784004f0b160d9d80ac555a8e7a634ed783d3df640054c0e9b1c6b25853a1",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19113650",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.109-IX din 07.06.2021 privind înregistrarea unor simboluri teritoriale ale orașului Iargara, raionul Leova",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/109.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_ora%C8%99ului_Iargara,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19113650, CUATM 5702, orașul Iargara, parent Leova. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "23b5f1c1f730db0867c49a0ad592336602f6b693b88399f1ca02f5c950d0faed",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19113650",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.109-IX din 07.06.2021 privind înregistrarea unor simboluri teritoriale ale orașului Iargara, raionul Leova",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/109.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapelul_ora%C8%99ului_Iargara.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19113650, CUATM 5702, orașul Iargara, parent Leova. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "23b5f1c1f730db0867c49a0ad592336602f6b693b88399f1ca02f5c950d0faed",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19113736",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.463-X din 02.12.2025 privind înregistrarea stemei și drapelului orașului Basarabeasca",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/463-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Basarabeasca,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19113736, CUATM 1201, orașul Basarabeasca, parent Basarabeasca. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "bb79db2114f1b486cd29abb24d87a7882c97252905845e3d40a9ee1f18e6e555",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19113736",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.463-X din 02.12.2025 privind înregistrarea stemei și drapelului orașului Basarabeasca",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/463-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Basarabeasca,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19113736, CUATM 1201, orașul Basarabeasca, parent Basarabeasca. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "bb79db2114f1b486cd29abb24d87a7882c97252905845e3d40a9ee1f18e6e555",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19114020",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "ECRET nr.686-X din 16.07.2026 privind înregistrarea stemei și drapelului satului Haragîș, raionul Cantemir",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/686-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Haragas,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19114020, CUATM 2137, satul Haragîș, parent Cantemir. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "a5e0e4c6d8f3c43aa12a8e8bd53d5a01730e115bf2e0831fa53a57866fab4d55",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19114020",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "ECRET nr.686-X din 16.07.2026 privind înregistrarea stemei și drapelului satului Haragîș, raionul Cantemir",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/686-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Haragas,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19114020, CUATM 2137, satul Haragîș, parent Cantemir. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "a5e0e4c6d8f3c43aa12a8e8bd53d5a01730e115bf2e0831fa53a57866fab4d55",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19115695",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1227-IX din 07.12.2023 privind înregistrarea stemei și drapelului satului Roșu, raionul Cahul",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1227.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Rosu,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19115695, CUATM 1738, satul Roșu, parent Cahul. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "66748faa12c32af885ba7a60579605636a785f85cdfe26fae962ab54c7345a17",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19115695",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1227-IX din 07.12.2023 privind înregistrarea stemei și drapelului satului Roșu, raionul Cahul",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1227.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Rosu,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19115695, CUATM 1738, satul Roșu, parent Cahul. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "66748faa12c32af885ba7a60579605636a785f85cdfe26fae962ab54c7345a17",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19115700",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.113-IX din 10.06.2021 privind înregistrarea unor simboluri teritoriale ale comunei Burlacu, raionul Cahul",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/113.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_comuna_Burlacu,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19115700, CUATM 1716, comuna Burlacu, parent Cahul. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "c13185bba9a664ad0fcbbf2d4c398ff9fbfa98e8966c6cb7328f8a99afa7fa25",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19115700",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.113-IX din 10.06.2021 privind înregistrarea unor simboluri teritoriale ale comunei Burlacu, raionul Cahul",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/113.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_comuna_Burlacu,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19115700, CUATM 1716, comuna Burlacu, parent Cahul. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "c13185bba9a664ad0fcbbf2d4c398ff9fbfa98e8966c6cb7328f8a99afa7fa25",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19115715",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.531-IX din 08.07.2022 privind înregistrarea stemei și drapelului satului Vadul lui Isac, raionul Cahul",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/531.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Vadul_lui_Isac.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19115715, CUATM 9423, satul Vadul lui Isac, parent Cahul. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "62d023ae3ab14231bafb3f83603b55c9073d005a77207b3d78e9d9d1ef10d1ff",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19115715",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.531-IX din 08.07.2022 privind înregistrarea stemei și drapelului satului Vadul lui Isac, raionul Cahul",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/531.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Vadul_lui_Isac.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19115715, CUATM 9423, satul Vadul lui Isac, parent Cahul. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "62d023ae3ab14231bafb3f83603b55c9073d005a77207b3d78e9d9d1ef10d1ff",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19115723",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.229-X din 09.06.2025 privind înregistrarea stemei și drapelului satului Andrușul de Jos, raionul Cahul",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/229-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_Andrusul_de_Jos,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19115723, CUATM 1710, satul Andrușul de Jos, parent Cahul. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "316c5c9dd613d8a22357b88b2e4540b4005306407a14204cefb6f850e418d416",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19115723",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.229-X din 09.06.2025 privind înregistrarea stemei și drapelului satului Andrușul de Jos, raionul Cahul",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/229-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Andrusul_de_Jos,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19115723, CUATM 1710, satul Andrușul de Jos, parent Cahul. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "316c5c9dd613d8a22357b88b2e4540b4005306407a14204cefb6f850e418d416",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19118037",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.346-IX din 16.02.2022 privind înregistrarea stemei și drapelului orașului Taraclia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/346.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_ora%C8%99ului_Taraclia,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19118037, CUATM 8701, orașul Taraclia, parent Taraclia. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "3218aadae9fa93e506d4bc07941ec7a662a4c9ec638d606f33c14a11646f7f89",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19118037",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.346-IX din 16.02.2022 privind înregistrarea stemei și drapelului orașului Taraclia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/346.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapelul_ora%C8%99ului_Taraclia,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19118037, CUATM 8701, orașul Taraclia, parent Taraclia. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "3218aadae9fa93e506d4bc07941ec7a662a4c9ec638d606f33c14a11646f7f89",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19118039",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.461-X din 02.12.2025 privind înregistrarea unor simboluri teritoriale ale comunei Albota de Jos, raionul Taraclia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/461-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_comuna_Albota_de_Jos,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19118039, CUATM 8710, comuna Albota de Jos, parent Taraclia. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "8423cf5c3afa2dc8f878bd444f7471a483162dd5d12eb9cc79239648116d7e02",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19118039",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.461-X din 02.12.2025 privind înregistrarea unor simboluri teritoriale ale comunei Albota de Jos, raionul Taraclia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/461-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_comuna_Albota_de_Jos,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19118039, CUATM 8710, comuna Albota de Jos, parent Taraclia. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "8423cf5c3afa2dc8f878bd444f7471a483162dd5d12eb9cc79239648116d7e02",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19118046",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.548-IX din 18.07.2022 privind înregistrarea stemei, drapelului și imnului orașului Tvardița, raionul Taraclia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/548.pdf",
+        "https://commons.wikimedia.org/wiki/File:Stema_ora%C8%99ului_Tvardi%C8%9Ba,_Moldova.png"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19118046, CUATM 8728, orașul Tvardița, parent Taraclia. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "d014291a08673e8bad94ab219a38531eaf7ba3c2eabaebed5b13b18963687ff4",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19118046",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.548-IX din 18.07.2022 privind înregistrarea stemei, drapelului și imnului orașului Tvardița, raionul Taraclia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/548.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapelul_ora%C8%99ului_Tvardi%C8%9Ba,_Moldova.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19118046, CUATM 8728, orașul Tvardița, parent Taraclia. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "d014291a08673e8bad94ab219a38531eaf7ba3c2eabaebed5b13b18963687ff4",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19118611",
+      "kind": "coat",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1507-IX din 27.06.2024 privind înregistrarea stemei și drapelului satului Gaidar, Unitatea Teritorială Autonomă Găgăuzia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1507.pdf",
+        "https://commons.wikimedia.org/wiki/File:CoA_of_Gaidar,_Gagauzia.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19118611, CUATM 9632, satul Gaidar, parent Găgăuzia. No new holder assignment.",
+      "graphicComparison": "Selected coat visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "0d49b51801345161e5b7821d496af4600ad2f9b7bdfe0f58e91d5ff0d53a4c4f",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r19118611",
+      "kind": "flag",
+      "verdict": "SOURCE_CORROBORATED",
+      "action": "KEEP",
+      "act": "DECRET nr.1507-IX din 27.06.2024 privind înregistrarea stemei și drapelului satului Gaidar, Unitatea Teritorială Autonomă Găgăuzia",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1507.pdf",
+        "https://commons.wikimedia.org/wiki/File:Flag_of_Gaidar,_Gagauzia.jpg"
+      ],
+      "identity": "Existing exact Atlas ID osm-r19118611, CUATM 9632, satul Gaidar, parent Găgăuzia. No new holder assignment.",
+      "graphicComparison": "Selected flag visually compared with the corresponding decree annex: principal field, charges and arrangement agree, subject to scan-colour and proportional limitations.",
+      "annexSHA256": "0d49b51801345161e5b7821d496af4600ad2f9b7bdfe0f58e91d5ff0d53a4c4f",
+      "limitations": [
+        "Composition and principal charges visually compared. Scan hue, charge scale, fine detail and absence of later amendments are not independently certified.",
+        "Identity is corroborated, but this is not a complete later-amendment or exact colour-calibration certification."
+      ]
+    },
+    {
+      "atlasId": "osm-r1216705",
+      "kind": "flag",
+      "verdict": "OUTDATED_VERSION",
+      "action": "REPLACE",
+      "act": "Decree 1539-IX/25 July 2024, annex 2",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/1539.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Copanca,_Moldova.jpg"
+      ],
+      "identity": "Copanca, CUATM 7616, exact existing Atlas ID. The decree names this village and its district.",
+      "graphicComparison": "The selected Commons reproduction omits the white lower quarter explicitly required in annex 2 and shown in its colour image. Commons original drawing dates precede the decree (Copanca 21 July 2024; Valcinet 6 December 2024). The current registered representation includes the white base. This structural discrepancy is independent of scan hue or drawing scale.",
+      "annexSHA256": "739b558d516c84e5983a634f76f31d2c5cb9fe35a49aa8a1fc404de2b7877d5a",
+      "replacement": {
+        "kind": "local",
+        "file": "sim-r5/copanca-flag.png",
+        "url": "symbols/sim-r5/copanca-flag.png",
+        "sourceUrl": "https://presedinte.md/app/webroot/Decrete/1539.pdf",
+        "tier": "A",
+        "status": "REVIEWED_SOURCE"
+      },
+      "replacementVerdict": "VERIFIED_OFFICIAL",
+      "replacementHashes": {
+        "sha256": "539f61bce17608d616cfd479de89fbbd9f90862ad823001e5acefd0bbe957f92",
+        "sourcePDFSHA256": "739b558d516c84e5983a634f76f31d2c5cb9fe35a49aa8a1fc404de2b7877d5a"
+      },
+      "replacementRights": {
+        "verdict": "EXEMPT_OFFICIAL_ACT",
+        "license": "Official normative annex; Law 230/2022 art. 8(b), (c), (g)",
+        "licenseUrl": "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+        "artist": "Presidency of the Republic of Moldova · official decree annex",
+        "basis": "Literal crop of a published normative annex, resized to 512px; no redraw. Informational use with exact holder and decree attribution. See reuse-primary-sources.json."
+      },
+      "limitations": [
+        "The replacement reproduces the official scan, including its colour cast and slight scanning distortion. No invented colour correction. Original Commons image and hashes retained in audit.",
+        "The current AGEPI institutional text supports reuse; direct consolidated Legis endpoint returned 403. This assessment is specific to the normative annex reproduction, not blanket clearance for third-party heraldic artwork."
+      ]
+    },
+    {
+      "atlasId": "osm-r19095396",
+      "kind": "flag",
+      "verdict": "OUTDATED_VERSION",
+      "action": "REPLACE",
+      "act": "Decree 51-X/22 January 2025, annex 2",
+      "sources": [
+        "https://presedinte.md/app/webroot/Decrete/51-n.pdf",
+        "https://commons.wikimedia.org/wiki/File:Drapel_Valcinet,_Calarasi.jpg"
+      ],
+      "identity": "satul Vălcineț, CUATM 2549, exact existing Atlas ID. The decree names this village and its district.",
+      "graphicComparison": "The selected Commons reproduction omits the white lower quarter explicitly required in annex 2 and shown in its colour image. Commons original drawing dates precede the decree (Copanca 21 July 2024; Valcinet 6 December 2024). The current registered representation includes the white base. This structural discrepancy is independent of scan hue or drawing scale.",
+      "annexSHA256": "f2d337934057f15082d73a108b128a3d75ac6bd5a216f2defd074fd9ce26e4fc",
+      "replacement": {
+        "kind": "local",
+        "file": "sim-r5/valcinet-flag.png",
+        "url": "symbols/sim-r5/valcinet-flag.png",
+        "sourceUrl": "https://presedinte.md/app/webroot/Decrete/51-n.pdf",
+        "tier": "A",
+        "status": "REVIEWED_SOURCE"
+      },
+      "replacementVerdict": "VERIFIED_OFFICIAL",
+      "replacementHashes": {
+        "sha256": "cfe729a24ebe5c30cd8a3bbd45353086453ec5dc6c59ede9abe15c67db583bcb",
+        "sourcePDFSHA256": "f2d337934057f15082d73a108b128a3d75ac6bd5a216f2defd074fd9ce26e4fc"
+      },
+      "replacementRights": {
+        "verdict": "EXEMPT_OFFICIAL_ACT",
+        "license": "Official normative annex; Law 230/2022 art. 8(b), (c), (g)",
+        "licenseUrl": "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+        "artist": "Presidency of the Republic of Moldova · official decree annex",
+        "basis": "Literal crop of a published normative annex, resized to 512px; no redraw. Informational use with exact holder and decree attribution. See reuse-primary-sources.json."
+      },
+      "limitations": [
+        "The replacement reproduces the official scan, including its colour cast and slight scanning distortion. No invented colour correction. Original Commons image and hashes retained in audit.",
+        "The current AGEPI institutional text supports reuse; direct consolidated Legis endpoint returned 403. This assessment is specific to the normative annex reproduction, not blanket clearance for third-party heraldic artwork."
+      ]
+    },
+    {
+      "atlasId": "osm-r10494274",
+      "kind": "coat",
+      "verdict": "HISTORICAL_ONLY",
+      "action": "REPLACE",
+      "act": "HG 685/30 September 1998, annexes 7 and 7a; official municipal document reproduces its model",
+      "sources": [
+        "https://legislatie.just.ro/public/DetaliiDocument/15899",
+        "https://www.primariahunedoara.ro/files/pages_files/STATUT_HD.pdf",
+        "https://commons.wikimedia.org/wiki/File:ROU_HD_Hunedoara_CoA1.jpg"
+      ],
+      "identity": "Municipiul Hunedoara, exact existing Atlas ID osm-r10494274, Hunedoara county. The alternative is an existing R4 candidate tied to Q215719, not a name-only discovery.",
+      "graphicComparison": "Existing historical SVG is a single blue field with a crow pierced by an arrow and a three-tower crown. The national act and municipality reproduction instead show castle above, crow/ring and metallurgical vessel below, with seven towers. Both actual images and municipal PDF page 9 were inspected; the replacement matches the documented tripartite composition.",
+      "replacement": {
+        "kind": "commons",
+        "file": "ROU HD Hunedoara CoA1.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/ROU_HD_Hunedoara_CoA1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_HD_Hunedoara_CoA1.jpg",
+        "tier": "B",
+        "status": "REVIEWED_SOURCE"
+      },
+      "replacementVerdict": "SOURCE_CORROBORATED",
+      "replacementHashes": {
+        "sha256": "fc8999875f923c41ee04f3695f74455759df24d0d0b52e5a4c9908e8cd8caa9f",
+        "commonsReportedOriginalSHA1": "3c9da86af895045dfc4245cc4a74890800eb23ae"
+      },
+      "replacementRights": {
+        "verdict": "DOCUMENTED_DECLARATION",
+        "license": "Public domain",
+        "artist": "Primăria municipiului Hunedoara",
+        "licenseUrl": null,
+        "source": "https://commons.wikimedia.org/wiki/File:ROU_HD_Hunedoara_CoA1.jpg"
+      },
+      "limitations": [
+        "The municipal PDF is headed as an annex to a 2021 draft statute: it corroborates the graphic, but is not represented as an enacted statute. HG 685/1998 is the approval basis.",
+        "The replacement is a documented Commons reproduction, not newly certified pixel identity with an independently downloaded national graphic annex."
+      ]
+    },
+    {
+      "atlasId": "osm-r9982547",
+      "kind": "flag",
+      "verdict": "DISPUTED",
+      "action": "KEEP",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg",
+        "https://talmaciu.ro/",
+        "https://en.wikipedia.org/wiki/T%C4%83lmaciu"
+      ],
+      "identity": "Orașul Tălmaciu, SIRUTA 145827, Sibiu. No holder transfer.",
+      "graphicComparison": "File title and description explicitly say before 1918, but the self-published 2013 image incorporates a later municipal coat and is used in a contemporary linked article. Actual image and metadata inspected. These conflicting period signals do not establish a securely dated historical-only object or current official adoption.",
+      "limitations": [
+        "No current institutional flag act or documented readoption found. Keep the image explicitly disputed; do not remove solely from a filename or absence of an approval act.",
+        "Commons CC BY-SA 3.0 attribution and source remain visible."
+      ]
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "coat",
+      "verdict": "DISPUTED",
+      "action": "KEEP",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+        "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+        "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf"
+      ],
+      "act": "Municipal HCL 49/30 May 2013 and institutional 2017–2022 strategy; national approval on 10 February 2015 cited by the authority",
+      "identity": "Municipiul Câmpulung, Argeș, exact Atlas ID osm-r10664180; not Câmpulung Moldovenesc or Câmpulung la Tisa.",
+      "graphicComparison": "Current selected PNG has a violet field and a black eagle above the crown. The linked current SVG has a blue field but omits that upper black eagle; the municipal text specifies a blue field and the upper black eagle. Both actual files and primary municipal descriptions examined. Neither candidate can be promoted to an exact approved graphic without resolving this conflict.",
+      "rightsOverride": {
+        "verdict": "RIGHTS_UNCLEAR",
+        "limitation": "Selected PNG credits parts of a Lions Club logo. The Commons public-domain declaration does not independently clear the incorporated third-party artwork."
+      },
+      "limitations": [
+        "Do not automatically replace with the Wikidata current SVG: it conflicts with the institutional description on a charge. No invented heraldic correction or recolouring.",
+        "Full national graphic annex remains required; candidate retained with disputed graphic fidelity and separately unclear reproduction rights."
+      ]
+    },
+    {
+      "atlasId": "osm-r9581354",
+      "kind": "coat",
+      "verdict": "CANDIDATE_UNVERIFIED",
+      "action": "KEEP",
+      "sources": [
+        "https://bendery.gospmr.org/gerb_flag_bendery.html",
+        "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Bendery.svg"
+      ],
+      "identity": "Exact certified Bender level-2 municipality ID retained. The source is the de facto city administration; its act is not automatically treated as an act for the Moldova-recognized unit.",
+      "graphicComparison": "Historical description reviewed against the de facto authority account: the 1826 design was readopted on 25 September 2003, with lion/base changes described. Historical origin alone is not proof of historical-only use. Exact current graphic and recognized-municipality scope remain unresolved.",
+      "limitations": [
+        "Source explicitly de facto; no recognition or jurisdiction reclassification implied.",
+        "Commons description attributes the old design to Alexander I, whereas the authority dates it to Nicholas I, 2 April 1826. Do not propagate that incorrect historical attribution or infer exact fidelity from similar motifs."
+      ]
+    },
+    {
+      "atlasId": "osm-r9581354",
+      "kind": "flag",
+      "verdict": "CANDIDATE_UNVERIFIED",
+      "action": "KEEP",
+      "sources": [
+        "https://bendery.gospmr.org/gerb_flag_bendery.html",
+        "https://commons.wikimedia.org/wiki/File:Flag_of_Bendery_District.svg"
+      ],
+      "identity": "Exact certified Bender level-2 municipality ID retained. The source is the de facto city administration; its act is not automatically treated as an act for the Moldova-recognized unit.",
+      "graphicComparison": "Historical description reviewed against the de facto authority account: the 1826 design was readopted on 25 September 2003, with lion/base changes described. Historical origin alone is not proof of historical-only use. Exact current graphic and recognized-municipality scope remain unresolved.",
+      "limitations": [
+        "Source explicitly de facto; no recognition or jurisdiction reclassification implied.",
+        "Commons description attributes the old design to Alexander I, whereas the authority dates it to Nicholas I, 2 April 1826. Do not propagate that incorrect historical attribution or infer exact fidelity from similar motifs."
+      ]
+    },
+    {
+      "atlasId": "osm-r10664180",
+      "kind": "flag",
+      "verdict": "CANDIDATE_UNVERIFIED",
+      "action": "KEEP",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Steagul_Oficial_Al_Campulungului.png"
+      ],
+      "identity": "Exact Câmpulung (Argeș) ID and existing assignment retained.",
+      "graphicComparison": "Commons describes an edited render with centred arms and corrected colours; the word Official in a filename is not approval evidence.",
+      "limitations": [
+        "No independently established current territorial flag approval/graphic annex recovered. Preserve the image as unconfirmed; do not infer approval from the filename."
+      ]
+    }
+  ],
+  "priorityFindings": [
+    {
+      "atlasId": "osm-r377733",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf"
+      ],
+      "act": "HCGMB 47/31 January 2024 amending 76/1993",
+      "finding": "Both baseline slots are null. The retrieved two-page decision changes the saint to Dimitrie cel Nou in monastic dress; its replacement graphic annex is not in the retrieved PDF. Preserve nulls, do not introduce the older soldier representation.",
+      "symbolActs": {
+        "coat": "HCGMB 47/31 January 2024 amending 76/1993"
+      }
+    },
+    {
+      "atlasId": "osm-r2248660",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+        "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg"
+      ],
+      "act": "HG 510/26 June 2026, MO 544/2 July 2026",
+      "finding": "Primary act text recovered through legislative portal extraction; graphic annex retrieval failed. Coat was already null. Flag is independent: the new coat act does not demonstrate that the selected flag has been superseded.",
+      "symbolActs": {
+        "coat": "HG 510/26 June 2026"
+      }
+    },
+    {
+      "atlasId": "osm-r2260187",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+        "https://www.cdep.ro/ords/pls/legis/legis_pck.lista_anuala?an=2026&emi=3&nrc=200&rep=0&tip=2"
+      ],
+      "act": "HG 228/16 April 2026, MO 315/21 April 2026",
+      "finding": "Official legislative index corroborates the 2026 act. Full primary act/graphic retrieval failed. Existing coat and flag retained without a new official certification; no proven obsolete assignment is inferred.",
+      "symbolActs": {
+        "coat": "HG 228/16 April 2026"
+      }
+    },
+    {
+      "atlasId": "osm-r59002",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://briceni.md/stema-raionului-briceni/",
+        "https://presedinte.md/app/webroot/Decrete/721-n.pdf"
+      ],
+      "act": "Decree 721-X/7 August 2026; district decision 3/3/3 June 2026",
+      "finding": "Official five-page decree and blazons recovered. Baseline slots are null. Symbol existence is documented, but no new reproduction is introduced in this audit without a reuse assessment.",
+      "symbolActs": {
+        "coat": "Decree 721-X/7 August 2026",
+        "flag": "Decree 721-X/7 August 2026"
+      }
+    },
+    {
+      "atlasId": "osm-r1748490",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://monitorul.gov.md/ro/monitor/2186",
+        "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg"
+      ],
+      "act": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+      "finding": "Official gazette index reconfirms decree identity. Fresh CNH coat bytes match the existing local JPEG. Full original decree graphic annex not recovered; source corroboration does not newly certify the entire legal chain.",
+      "symbolActs": {
+        "coat": "Decree 1475-VIII/2 March 2020"
+      }
+    },
+    {
+      "atlasId": "osm-r1691801",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg"
+      ],
+      "finding": "City and municipality are distinct certified IDs. Preserve the city assignment as unconfirmed; do not propagate the municipality's 2019 symbol to the city solely because both are named Chișinău.",
+      "symbolActs": {}
+    },
+    {
+      "atlasId": "osm-r90689",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://legislatie.just.ro/Public/DetaliiDocument/2381",
+        "https://legislatie.just.ro/Public/DetaliiDocumentAfis/180207",
+        "https://legislatie.just.ro/Public/DetaliiDocumentAfis/279161"
+      ],
+      "act": "Law 102/1992 as amended by 146/2016; Law 75/1994 as amended by 176/2023 and 12/2024",
+      "finding": "Primary legislative texts checked. Crown introduced in 2016; current flag annex includes 2023 RGB values. Existing image bytes downloaded and hashed. No full primary coat annex comparison completed; do not claim full graphic certification. Actual selected coat inspected: crowned eagle, divided chest shield, sword and sceptre are present. Full primary graphic fidelity remains unconfirmed.",
+      "symbolActs": {
+        "coat": "Law 102/21 September 1992 as amended by Law 146/12 July 2016",
+        "flag": "Law 75/16 July 1994 as amended by Law 176/19 June 2023"
+      }
+    },
+    {
+      "atlasId": "osm-r58974",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://presedinte.md/rom/emblem",
+        "https://presedinte.md/rom/flag"
+      ],
+      "act": "Law 32/7 March 2013; Law 217/17 September 2010, as cited by current presidency pages",
+      "finding": "Current primary descriptions checked; selected image bytes downloaded and hashed. Independent full annex/version-chain comparison remains incomplete. Actual selected coat inspected: eagle, divided ox-head shield, cross, olive branch and sceptre present; no independent full-annex certification.",
+      "symbolActs": {
+        "coat": "Law 32/7 March 2013",
+        "flag": "Law 217/17 September 2010"
+      }
+    },
+    {
+      "atlasId": "osm-r65335",
+      "kinds": [
+        "coat",
+        "flag"
+      ],
+      "sources": [
+        "https://www.president.gospmr.org/gos-gerb-pmr/",
+        "https://vspmr.org/about/gosudarstvennie-simvoli/flag-pmr.html",
+        "https://www.president.gospmr.org/pravovye-akty/konstitutsiya-pmr/konstitutsiya-pmr-rus/"
+      ],
+      "finding": "Sources are explicitly de facto authority sources. Indexed constitutional/symbol descriptions corroborate use; presidential direct endpoint returned 404. Selected bytes downloaded and hashed. No international-recognition claim or automatic transfer to Moldova-recognized administrative IDs. Actual selected coat inspected: hammer/sickle, rising sun over river, agricultural wreath and trilingual ribbons. Corroboration concerns de facto use only.",
+      "symbolActs": {}
+    }
+  ]
+}
