@@ -1,0 +1,227 @@
+{
+  "osm-r1699032:coat": {
+    "sha256": "3b89e01629d8c5c20c5ed1518a0f37e017444e523b0a2af2480702408f9ba7a6",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Institutional Gagauzia emblem; local raster retained. Official source and informative-use statutory exception examined."
+  },
+  "osm-r1699032:flag": {
+    "sha256": "42d70a80a73497ca343f885e828d822c9b73cdbab2f6e34c57b3d803c6cdc83f",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Three-star Gagauzia flag; local SVG retained. No new artwork copied."
+  },
+  "osm-r1699033:coat": {
+    "sha256": "39bbca6a409e4452855b8fd2abc63b2d1e104b919ea29afa372382a9a19c5774",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Taraclia district crowned lion coat, institutional JPEG, retained; authorship is recorded by source, informative use only."
+  },
+  "osm-r1699033:flag": {
+    "sha256": "fdc48e70812e538dca923faa08231c98a7571b85d24f6c3e812817a1b5967352",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Taraclia district red/yellow/green lion flag, institutional JPEG retained; not the city flag."
+  },
+  "osm-r1748490:coat": {
+    "sha256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Municipal large coat with water-tower supporters, institutional CNH JPEG; not assigned to the separate city ID."
+  },
+  "osm-r1813297:coat": {
+    "sha256": "dbf8d74d471f761c4320c8a78453f1793c16590b80ce76951a2adc471cc900c3",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Buiucani small sector coat, CNH-derived local crop."
+  },
+  "osm-r1813306:coat": {
+    "sha256": "5fb05e8e73ab772b391312bc89fcf6b838a6d2e0429f0c597ee0c63f7b32a11b",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Botanica small sector coat, CNH-derived local crop."
+  },
+  "osm-r1813315:coat": {
+    "sha256": "c50c587f47af355bd3f7d114a24986a2d6d476d443b9e3431721794faa5a1f59",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Ciocana small sector coat, CNH-derived local crop; matches institutional description."
+  },
+  "osm-r1813316:coat": {
+    "sha256": "15088d1fbbc6e498f8e0a3c4a54f6f814ebd44de319f4ccae7fca812ad5ea526",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Riscani small sector coat, CNH-derived local crop."
+  },
+  "osm-r58512:coat": {
+    "sha256": "3492de568ecdfa2dc31539927c048867c1efdae0591729b4bf7beec32130e08a",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Centru small sector coat, CNH-derived local crop."
+  },
+  "osm-r10488681:coat": {
+    "sha256": null,
+    "state": "UNAVAILABLE_HTTP_ERROR",
+    "finding": "Current image request failed; no graphic or licence conclusion inferred from failure."
+  },
+  "osm-r10664180:coat": {
+    "sha256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Violet-field Campulung PNG with black upper eagle; conflicting blue-field legal description and partial Lions Club credit. Dispute retained."
+  },
+  "osm-r10715725:coat": {
+    "sha256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Image visibly depicts the Romanian national coat, not Letea Veche arms."
+  },
+  "osm-r11321092:coat": {
+    "sha256": "9d68ec92b69e0a7eab05d5435e4e9a740418cdcd95f6d094bb1bf9f37eeb65de",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Golaiesti castle coat retained; no explicit reproduction licence recovered."
+  },
+  "osm-r11349492:flag": {
+    "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Circular United States flag from English-language plugin; not a Bucerdea Granoasa territorial flag."
+  },
+  "osm-r11670644:coat": {
+    "sha256": "d35e42d5531632e77eb2ea9fb8e0a5f5bb4a2bc4a9288408150fd1ba3905be73",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Quartered stag/tree/tower/grapes Satu Mare county coat, not Vetis commune coat."
+  },
+  "osm-r12594180:coat": {
+    "sha256": "5f8ec4a05e4cb456beff818131a3c9ab7f88e55381ac9cd5aa82699316ddce6f",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "White COMUNA HILISEU-HORIA institutional wordmark with small emblem; selected reproduction is a logo, not a standalone territorial coat."
+  },
+  "osm-r12709722:coat": {
+    "sha256": "bdebc29926bf16ec942b597647ab1a3245bfc1ac49953ffc614f1495793cc537",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Text-only Primaria Auseu institutional wordmark; no territorial coat in selected image."
+  },
+  "osm-r13137637:flag": {
+    "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Circular United States flag used by English-language accessibility plugin; not Poienarii de Muscel flag."
+  },
+  "osm-r13833306:coat": {
+    "sha256": "e5f0e479d07ec65f1f4160dd4621ecdd6e83b6e0de7d3038e4ae2697cef1a743",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romania map in tricolour beside Primaria si Consiliul Local Roseti text; institutional lockup, not territorial coat."
+  },
+  "osm-r13834489:coat": {
+    "sha256": "1f8ef8e6678c0e1ea10e54253bb0c57445659e422d9fbc9941bc6aa04d7e2428",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Rosiori shield with local charges retained; reproduction licence not documented."
+  },
+  "osm-r14194836:coat": {
+    "sha256": "e35d4e98d7ead6477311a726adee90c2eb71ef5b00eceb865c18aa8ac9a322c6",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national coat, not Ardeoani commune coat."
+  },
+  "osm-r14194837:coat": {
+    "sha256": "4bad3ed6dfe361cf04b8a8b1b56179280c7fe46dca6966b4332726a2d4fa046a",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national coat, not Scorteni commune coat."
+  },
+  "osm-r14701120:coat": {
+    "sha256": "3cdd5189c86de86bdcd183e8e596b464834a1b5b8d47a165b177dee5831dc375",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Aerial/satellite silhouette of territorial outline; not a heraldic coat."
+  },
+  "osm-r14701730:coat": {
+    "sha256": "6658e2a42c9996aef379c709f02ab3ea5beb873f7adc665beed29a5a02aeacc3",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national coat, not Predeal-Sarari commune coat."
+  },
+  "osm-r14701989:coat": {
+    "sha256": "85672982b384defe55d885525f72c2d1a17222e52117cf1cf8d7795fdebe605e",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Portrait photograph of mayor with caption, not Bisoca coat."
+  },
+  "osm-r14735409:flag": {
+    "sha256": "d75e7f262830cc5a4b706fc93e7bba9eafef26ac1f6884a6acbe8718e160fcd0",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Outdoor memorial/cross photograph with vegetation, not a territorial flag."
+  },
+  "osm-r14735435:coat": {
+    "sha256": "a67792a4c6404cb69d2964957de2eab2253a42c522ad5f5525385bc05e203357",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national coat, not Ciorasti commune coat."
+  },
+  "osm-r14739041:coat": {
+    "sha256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national coat, not Glavanesti commune coat."
+  },
+  "osm-r14739043:flag": {
+    "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national coat used in plugin English image path; not Dealu Morii territorial flag. Actual pixels, not filename, determine this finding."
+  },
+  "osm-r14743203:coat": {
+    "sha256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Neamt county coat (chamois/rock and grain), not Bira commune coat."
+  },
+  "osm-r14743630:coat": {
+    "sha256": "8fad7a84634e1f9630aa1f52da37a623b63d238f6253d527a73af8629ae7296e",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Public notice document thumbnail with header emblems and text, not Siretel territorial coat."
+  },
+  "osm-r14769372:flag": {
+    "sha256": "b58680015be38e16455a05afa54d9c64bc0ecee148ac7278ef95b4782b623069",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national tricolour banner, not Durnesti territorial flag."
+  },
+  "osm-r14769510:coat": {
+    "sha256": "2d6ed56cb72d3330da59b941362ac164906617db86eb65bfbe99778d61da22eb",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national coat, not Tudora commune coat."
+  },
+  "osm-r14776663:coat": {
+    "sha256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Neamt county coat, not Baltatesti commune coat."
+  },
+  "osm-r14776666:coat": {
+    "sha256": "29bbbf3d73645cd4a6af22448535887881565a63f4e6020e9e91a9439fd367b2",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Poiana Teiului local shield retained; no explicit reproduction licence recovered."
+  },
+  "osm-r14776668:coat": {
+    "sha256": "1799c20cb40ec129bcf91041222a8d8b03f1a89120ff9403a2b1b7a3a9bfab63",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Neamt county coat, not Ceahlau commune coat."
+  },
+  "osm-r14777047:coat": {
+    "sha256": "39efa6ff19697813e071e65f51a21158315a80f6d1a791b861ec262028653e83",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Brusturi small municipal-style shield retained; low resolution limits graphic assessment, licence unresolved."
+  },
+  "osm-r14786145:coat": {
+    "sha256": "3384e4c4ca071f936b9e7a9b3d7775f15fe4380d0d8e5b3eb36df75d1b4dc3d7",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Romanian national coat, not Homoroade commune coat."
+  },
+  "osm-r14867616:coat": {
+    "sha256": "d127ae3b393b80be6a524f68b9433dea2b246aad56800be0388161d708fb3693",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Remetea Chioarului territorial shield retained; no explicit reproduction licence recovered."
+  },
+  "osm-r7960937:coat": {
+    "sha256": "a2e5880d7689d78768ff726a7dde1ca3e39b181834a9829d0dc0810c0826da29",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Primaria Sectorului 3 Bucuresti institutional wordmark/emblem lockup; not standalone territorial coat."
+  },
+  "osm-r9714843:flag": {
+    "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Circular United States flag from English-language plugin, not Strehaia flag."
+  },
+  "osm-r9714862:flag": {
+    "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Circular United States flag from English-language plugin, not Patulele flag."
+  },
+  "osm-r9748438:flag": {
+    "sha256": "e2b716eeeabaecfc9d8fde42222dfc3f3ebefa2b0f910c5fc9497ef075d8fa36",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Plain Romanian national tricolour, not Horezu territorial flag."
+  },
+  "osm-r9964683:coat": {
+    "sha256": "9ca18f7f1b1719361ba1d2d5c955d2104f4820594abc113caf23791b672dfa1c",
+    "state": "ACTUAL_IMAGE_EXAMINED",
+    "finding": "Mogosesti Iasi local shield retained; no explicit reproduction licence recovered."
+  }
+}

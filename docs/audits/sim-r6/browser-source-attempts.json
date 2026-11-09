@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg",
+    "checkedAt": "2026-11-09T15:35:47.186Z",
+    "method": "Chromium native network, ordinary certificate validation",
+    "navigationError": "net::ERR_HTTP2_PROTOCOL_ERROR",
+    "title": "legislatie.just.ro"
+  },
+  {
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+    "checkedAt": "2026-11-09T15:35:56.288Z",
+    "method": "Chromium native network, ordinary certificate validation",
+    "navigationError": "net::ERR_HTTP2_PROTOCOL_ERROR",
+    "title": "legislatie.just.ro"
+  },
+  {
+    "url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G0STVGKTKE913V0YATREHWFG071",
+    "checkedAt": "2026-11-09T15:35:59.811Z",
+    "method": "Chromium native network, ordinary certificate validation",
+    "navigationError": "net::ERR_HTTP2_PROTOCOL_ERROR",
+    "title": "legislatie.just.ro"
+  }
+]

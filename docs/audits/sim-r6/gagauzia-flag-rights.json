@@ -1,0 +1,20 @@
+{
+  "atlasId": "osm-r1699032",
+  "kind": "flag",
+  "retrieval": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_Gagauzia.svg",
+    "finalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_Gagauzia.svg",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:26:58.620Z",
+    "sha256": "42d70a80a73497ca343f885e828d822c9b73cdbab2f6e34c57b3d803c6cdc83f",
+    "bytes": 714,
+    "contentType": "image/svg+xml"
+  },
+  "localSHA256": "42d70a80a73497ca343f885e828d822c9b73cdbab2f6e34c57b3d803c6cdc83f",
+  "identical": true,
+  "filePage": "https://commons.wikimedia.org/wiki/File:Flag_of_Gagauzia.svg",
+  "author": "Urmas; subsequent Commons revisions credited in file history",
+  "licence": "CC BY-SA 2.5",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+  "changes": "None; original file retained byte-for-byte"
+}

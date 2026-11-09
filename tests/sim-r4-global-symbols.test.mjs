@@ -94,7 +94,10 @@ test('SIM-R4: UI retains lazy images, neutral network failures and per-symbol so
  assert.match(app,/withGlobalSymbols\(currentNode,editorialSymbolsForEntity\(currentNode\)\)/);
  assert.match(app,/symbolSourceUrl\(asset\)/);assert.match(app,/Candidate image · review pending/);
  for(const n of nodes.filter(n=>!registry[n.id].coat&&!registry[n.id].flag)){
-  const r=globalSymbolsForEntity(n);assert(r);assert.equal(r.coat,null);assert.equal(r.flag,null);
+  const r=globalSymbolsForEntity(n);assert(r);
+  // SIM-R6 adds literal decree annexes only to this previously empty district.
+  if(n.id==='osm-r59002'){assert.equal(registry[n.id].coat,null);assert.match(r.coat.url,/sim-r6\/briceni-coat/);assert.match(r.flag.url,/sim-r6\/briceni-flag/);}
+  else {assert.equal(r.coat,null);assert.equal(r.flag,null);}
  }
 });
 

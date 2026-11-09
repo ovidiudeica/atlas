@@ -1,0 +1,210 @@
+[
+  {
+    "index": 0,
+    "url": "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+    "finalUrl": "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:11.195Z",
+    "sha256": "59d44de8a98a73f25519719fbc0a20eb68db943f4a8dd4ccea65a2d1b316ba7a",
+    "bytes": 218261,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 1,
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/311970",
+    "checkedAt": "2026-11-09T15:00:11.197Z",
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 2,
+    "url": "https://legislatie.just.ro/ImaginiDinActe/311970_A4649.jpg",
+    "checkedAt": "2026-11-09T15:00:11.198Z",
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 3,
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/309686",
+    "checkedAt": "2026-11-09T15:00:11.199Z",
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "index": 4,
+    "url": "https://www.ubbcluj.ro/ro/studenti/files/euro-200/2026/Monitorul_Oficial_2026.pdf",
+    "finalUrl": "https://www.ubbcluj.ro/ro/studenti/files/euro-200/2026/Monitorul_Oficial_2026.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:11.476Z",
+    "sha256": "041934026278f364d5526a144072455a02379e5420728bfa0b407e9f10ae5f85",
+    "bytes": 61422,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 5,
+    "url": "https://presedinte.md/app/webroot/Decrete/721-n.pdf",
+    "finalUrl": "https://presedinte.md/app/webroot/Decrete/721-n.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:11.479Z",
+    "sha256": "44470ecb23b464165c94768d34d5f66a6ce80e15c0df37223b2f764ffacf8489",
+    "bytes": 1320136,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 6,
+    "url": "https://briceni.md/stema-raionului-briceni/",
+    "finalUrl": "https://briceni.md/stema-raionului-briceni/",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:11.481Z",
+    "sha256": "7d3822a4b1d36d445c4780c97dddd7c095da099620218df290da4748758125a0",
+    "bytes": 49458,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  {
+    "index": 7,
+    "url": "https://monitorul.gov.md/ro/monitor/2186",
+    "finalUrl": "https://monitorul.gov.md/ro/monitor/2186",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:11.811Z",
+    "sha256": "ec76a9c520d1f64002cbb0a1ad91a3e13ee85ae016a6e44d5762c2cbba3bd47b",
+    "bytes": 65109,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  {
+    "index": 8,
+    "url": "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+    "finalUrl": "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:11.996Z",
+    "sha256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+    "bytes": 92125,
+    "contentType": "image/jpeg"
+  },
+  {
+    "index": 9,
+    "url": "https://dialogica.asm.md/arhivarevistei/Dialogica/Dialogica_03_2020.pdf",
+    "finalUrl": "https://dialogica.asm.md/arhivarevistei/Dialogica/Dialogica_03_2020.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:12.113Z",
+    "sha256": "aa762fc73e23511cce647600f34e8f101cbbc4647e23846c53f6c90e2c14f10b",
+    "bytes": 5090651,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 10,
+    "url": "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+    "finalUrl": "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:12.433Z",
+    "sha256": "71bbcb7850cb7d333dd2a0337a1feedf1a484503e6eba1135b8cb3e20d7686d9",
+    "bytes": 933148,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 11,
+    "url": "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+    "finalUrl": "https://www.primariacampulung.ro/file-zone/registre/HCL/2013/HCL%20nr.%2049%20din%2030.05.2013.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:12.438Z",
+    "sha256": "29a8cec6a06f2dae89dbb31f18c34966e890dd59b304ea0ace5218d5d0d172e8",
+    "bytes": 1335137,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 12,
+    "url": "https://talmaciu.ro/",
+    "finalUrl": "https://talmaciu.ro/",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:00:12.989Z",
+    "sha256": "96dd251db362ae75e75c7accf9eac9168f909a80a9e3876a87f6f04bd7b99d91",
+    "bytes": 185693,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  {
+    "index": 13,
+    "url": "https://www2.pmb.ro/orasul/stema/doc/hot76.php",
+    "finalUrl": "https://www2.pmb.ro/orasul/stema/doc/hot76.php",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:37.002Z",
+    "sha256": "50855594457ceb5c6d6c208f43ea7e26a6f5f0f1175c063da7dd4dcaf8f28701",
+    "bytes": 37886,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  {
+    "index": 14,
+    "url": "https://www2.pmb.ro/orasul/stema/doc/stemabuc.php",
+    "finalUrl": "https://www2.pmb.ro/orasul/stema/doc/stemabuc.php",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:38.400Z",
+    "sha256": "e434d41a2a87995421fc77cf5aba6a8374cb8be17639c4d6da4edf6b14945dc0",
+    "bytes": 36349,
+    "contentType": "text/html; charset=UTF-8"
+  },
+  {
+    "index": 15,
+    "url": "https://judetulharghita.ro/wp-content/uploads/2025/12/Anexa.pdf",
+    "finalUrl": "https://judetulharghita.ro/wp-content/uploads/2025/12/Anexa.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:38.404Z",
+    "sha256": "535da7abf632277fa811882449e3531b57385ee2fca33e3aa52809103d45c7a9",
+    "bytes": 652331,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 16,
+    "url": "https://judetulharghita.ro/wp-content/uploads/2020/12/Anexa-Statut_2004.pdf",
+    "finalUrl": "https://judetulharghita.ro/wp-content/uploads/2020/12/Anexa-Statut_2004.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:38.447Z",
+    "sha256": "378282bdadf2948961b1211784053284022d11393c50b6e637e001f62d0c6831",
+    "bytes": 730203,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 17,
+    "url": "https://talmaciu.ro/wp-content/files/ziar_ianuarie_2021.pdf",
+    "finalUrl": "https://talmaciu.ro/wp-content/files/ziar_ianuarie_2021.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:39.598Z",
+    "sha256": "116d405760aa01da1a5b2b924618d21bb46c523972b80cbb2df320c7af1c0c74",
+    "bytes": 3557943,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 18,
+    "url": "https://ciocana.md/simbolurile-sectorului",
+    "finalUrl": "https://ciocana.md/simbolurile-sectorului",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:39.601Z",
+    "sha256": "f4a696ed7d865c74807431283c19f4a1366ee66b777360c3be8d7c928818e1f9",
+    "bytes": 102467,
+    "contentType": "text/html;charset=utf-8"
+  },
+  {
+    "index": 19,
+    "url": "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+    "finalUrl": "https://cnh.prm.md/wp-content/uploads/Sectoare.jpg",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:39.887Z",
+    "sha256": "1b71b9ec04e081feca80d8b92e06dd8c945743b29fd91b26a6322ea8d9e726f4",
+    "bytes": 165715,
+    "contentType": "image/jpeg"
+  },
+  {
+    "index": 20,
+    "url": "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf",
+    "finalUrl": "https://www.primariacampulung.ro/file-zone/primaria/Strategia%20de%20Dezvoltare%20Local%C4%83%202017-2022.pdf",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:39.891Z",
+    "sha256": "19ff48b1e181ca18b7aa7006886d0d18afaf4e8235a9fb73da737b24edc0ecd6",
+    "bytes": 1838861,
+    "contentType": "application/pdf"
+  },
+  {
+    "index": 21,
+    "url": "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8",
+    "finalUrl": "https://drive.usercontent.google.com/download?id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8&export=download",
+    "status": 200,
+    "checkedAt": "2026-11-09T15:11:40.030Z",
+    "sha256": "4c55fd58bd0e3f20d86aafd50af131fa45620bf6869713835e377f843a4333d9",
+    "bytes": 1945477,
+    "contentType": "application/octet-stream"
+  }
+]

@@ -1,0 +1,3051 @@
+[
+  {
+    "atlasId": "osm-r1699032",
+    "officialName": "Unitatea Teritorială Autonomă Găgăuzia",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "local",
+      "file": "gagauzia-coat.png",
+      "url": "symbols/gagauzia-coat.png",
+      "sourceUrl": "https://www.gagauzia.md/ato-gagauziya/simvolika.html"
+    },
+    "initialVerdict": "VERIFIED_OFFICIAL",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 1,
+    "retrieval": {
+      "url": "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "finalUrl": "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:44.143Z",
+      "sha256": "0fe26c5f399b5cc01596690425a8d3906a44168e48ca55f1bd512e40369b45d1",
+      "bytes": 42950,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "page": null,
+    "examinedAt": "2026-11-09T15:40:28.417Z",
+    "imageSHA256": "3b89e01629d8c5c20c5ed1518a0f37e017444e523b0a2af2480702408f9ba7a6",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Institutional Gagauzia emblem; local raster retained. Official source and informative-use statutory exception examined.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1699032",
+      "kind": "coat",
+      "index": 1,
+      "metadata": {},
+      "sha256": "3b89e01629d8c5c20c5ed1518a0f37e017444e523b0a2af2480702408f9ba7a6",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://www.gagauzia.md/ato-gagauziya/simvolika.html"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r1699032",
+    "officialName": "Unitatea Teritorială Autonomă Găgăuzia",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "local",
+      "file": "gagauzia-flag.svg",
+      "url": "symbols/gagauzia-flag.svg",
+      "sourceUrl": "https://www.gagauzia.md/ato-gagauziya/simvolika.html"
+    },
+    "initialVerdict": "SOURCE_CORROBORATED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 2,
+    "retrieval": {
+      "url": "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "finalUrl": "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:44.143Z",
+      "sha256": "0fe26c5f399b5cc01596690425a8d3906a44168e48ca55f1bd512e40369b45d1",
+      "bytes": 42950,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "page": null,
+    "examinedAt": "2026-11-09T15:40:28.420Z",
+    "imageSHA256": "42d70a80a73497ca343f885e828d822c9b73cdbab2f6e34c57b3d803c6cdc83f",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Three-star Gagauzia flag; local SVG retained. No new artwork copied.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1699032",
+      "kind": "flag",
+      "index": 2,
+      "metadata": {},
+      "sha256": "42d70a80a73497ca343f885e828d822c9b73cdbab2f6e34c57b3d803c6cdc83f",
+      "format": "SVG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": "Urmas; Mike Rohsopht (2022 revision); Commons contributors",
+    "rightsVerdict": "RIGHTS_CLEARED",
+    "rightsScope": "CC BY-SA2.5, Urmas and Commons revision contributors credited; original SVG byte-identical (SHA256 proof in gagauzia-flag-rights.json). No modification. Informative use identifies holder Gagauzia.",
+    "rightsSources": [
+      "https://commons.wikimedia.org/wiki/File:Flag_of_Gagauzia.svg",
+      "https://creativecommons.org/licenses/by-sa/2.5/"
+    ],
+    "licence": "CC BY-SA2.5",
+    "attributionRequired": true,
+    "restrictions": "Credit author and source; link licence; indicate changes; share-alike for derivatives.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r1699033",
+    "officialName": "Taraclia",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://raiontaraclia.md/wp-content/uploads/2022/01/taraclia_rai-modern-konec-1-scaled.jpg",
+      "sourceUrl": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "tier": "A"
+    },
+    "initialVerdict": "VERIFIED_OFFICIAL",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 3,
+    "retrieval": {
+      "url": "https://raiontaraclia.md/wp-content/uploads/2022/01/taraclia_rai-modern-konec-1-scaled.jpg",
+      "finalUrl": "https://raiontaraclia.md/wp-content/uploads/2022/01/taraclia_rai-modern-konec-1-scaled.jpg",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:44.148Z",
+      "sha256": "39bbca6a409e4452855b8fd2abc63b2d1e104b919ea29afa372382a9a19c5774",
+      "bytes": 535868,
+      "contentType": "image/jpeg"
+    },
+    "page": {
+      "url": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "finalUrl": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:45.482Z",
+      "sha256": "a71d2ec7b3229f72e00808986a39013566e5fa88d649e2c0e876e06780314d93",
+      "bytes": 139801,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.421Z",
+    "imageSHA256": "39bbca6a409e4452855b8fd2abc63b2d1e104b919ea29afa372382a9a19c5774",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Taraclia district crowned lion coat, institutional JPEG, retained; authorship is recorded by source, informative use only.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1699033",
+      "kind": "coat",
+      "index": 3,
+      "metadata": {
+        "Artist": "Iurie CAMINSCHI",
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 5.6-c132 79.159284, 2016/04/19-13:13:40        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stEvt=\"http://ns.adobe.com/xap/1.0/sType/ResourceEvent#\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmlns:photoshop=\"http://ns.adobe.com/photoshop/1.0/\" xmp:CreateDate=\"2017-01-20T13:21:04\" xmp:ModifyDate=\"2021-07-07T11:15:08+03:00\" xmp:MetadataDate=\"2021-07-07T11:15:08+03:00\" xmp:CreatorTool=\"Adobe Photoshop CC 2015.5 (Windows)\" dc:format=\"image/jpeg\" xmpMM:InstanceID=\"xmp.iid:f6e95232-1d88-2b4c-848d-569612610526\" xmpMM:DocumentID=\"adobe:docid:photoshop:5e86b1f5-707d-11eb-8e2e-f4d96af783c3\" xmpMM:OriginalDocumentID=\"15FEA48A8C96B3CCDF08482DC5F85F50\" photoshop:DateCreated=\"2017-01-20T13:21:04\" photoshop:LegacyIPTCDigest=\"C84738CB6B700FF8AA1449581B74B783\" photoshop:ColorMode=\"3\" photoshop:ICCProfile=\"sRGB IEC61966-2.1\"> <dc:creator> <rdf:Seq> <rdf:li>Iurie CAMINSCHI</rdf:li> </rdf:Seq> </dc:creator> <xmpMM:History> <rdf:Seq> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:00fe186e-a152-4147-bef5-7d02e2c88181\" stEvt:when=\"2020-10-15T19:39+03:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:f5c71fd2-d72f-0546-ab19-17bd39602b1e\" stEvt:when=\"2020-10-28T23:27:30+02:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"converted\" stEvt:parameters=\"from image/jpeg to application/vnd.adobe.photoshop\"/> <rdf:li stEvt:action=\"derived\" stEvt:parameters=\"converted from image/jpeg to application/vnd.adobe.photoshop\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:3b7cbfd4-3d76-4040-bde0-625e9216219f\" stEvt:when=\"2020-10-28T23:27:30+02:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:da645777-7b27-674e-9ba0-12bb857c51a5\" stEvt:when=\"2020-11-06T14:13:53+02:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"converted\" stEvt:parameters=\"from application/vnd.adobe.photoshop to image/tiff\"/> <rdf:li stEvt:action=\"derived\" stEvt:parameters=\"converted from application/vnd.adobe.photoshop to image/tiff\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:1bec5fd1-59a6-2443-bc97-93f4853514a8\" stEvt:when=\"2020-11-06T14:13:53+02:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:6fa936e4-f165-0b4b-b419-6247071579d7\" stEvt:when=\"2021-02-16T19:35:41+02:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"converted\" stEvt:parame"
+      },
+      "sha256": "39bbca6a409e4452855b8fd2abc63b2d1e104b919ea29afa372382a9a19c5774",
+      "format": "JPEG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": "Iurie CAMINSCHI",
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://raiontaraclia.md/ro/simbolica-raionului/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r1699033",
+    "officialName": "Taraclia",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://raiontaraclia.md/wp-content/uploads/2022/01/flag-1h6-modern-konec-bez-razmera--scaled.jpg",
+      "sourceUrl": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "tier": "A"
+    },
+    "initialVerdict": "SOURCE_CORROBORATED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 4,
+    "retrieval": {
+      "url": "https://raiontaraclia.md/wp-content/uploads/2022/01/flag-1h6-modern-konec-bez-razmera--scaled.jpg",
+      "finalUrl": "https://raiontaraclia.md/wp-content/uploads/2022/01/flag-1h6-modern-konec-bez-razmera--scaled.jpg",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:44.153Z",
+      "sha256": "fdc48e70812e538dca923faa08231c98a7571b85d24f6c3e812817a1b5967352",
+      "bytes": 185749,
+      "contentType": "image/jpeg"
+    },
+    "page": {
+      "url": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "finalUrl": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:45.482Z",
+      "sha256": "a71d2ec7b3229f72e00808986a39013566e5fa88d649e2c0e876e06780314d93",
+      "bytes": 139801,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.421Z",
+    "imageSHA256": "fdc48e70812e538dca923faa08231c98a7571b85d24f6c3e812817a1b5967352",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Taraclia district red/yellow/green lion flag, institutional JPEG retained; not the city flag.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1699033",
+      "kind": "flag",
+      "index": 4,
+      "metadata": {
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 5.6-c132 79.159284, 2016/04/19-13:13:40        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stEvt=\"http://ns.adobe.com/xap/1.0/sType/ResourceEvent#\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmlns:photoshop=\"http://ns.adobe.com/photoshop/1.0/\" xmp:CreatorTool=\"Adobe Photoshop CC 2015.5 (Windows)\" xmp:CreateDate=\"2018-04-26T23:33:44+03:00\" xmp:MetadataDate=\"2021-07-08T03:14:57+03:00\" xmp:ModifyDate=\"2021-07-08T03:14:57+03:00\" dc:format=\"image/jpeg\" xmpMM:InstanceID=\"xmp.iid:ddd930c3-8fc5-8949-b75e-320056fe2608\" xmpMM:DocumentID=\"adobe:docid:photoshop:87346cc2-df81-11eb-bd0f-a4a37d28769e\" xmpMM:OriginalDocumentID=\"xmp.did:cc20a2da-f3a4-f74d-850e-3c34c53bef3a\" photoshop:LegacyIPTCDigest=\"CBCF8E160F9BF095BC511AD2E537DC87\" photoshop:ColorMode=\"3\" photoshop:ICCProfile=\"Adobe RGB (1998)\"> <xmpMM:History> <rdf:Seq> <rdf:li stEvt:action=\"created\" stEvt:instanceID=\"xmp.iid:cc20a2da-f3a4-f74d-850e-3c34c53bef3a\" stEvt:when=\"2018-04-26T23:33:44+03:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:c884a609-b68c-8241-825a-4c50f108db9d\" stEvt:when=\"2018-04-27T00:20:05+03:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:90aad918-7e4f-a747-9d5f-7664eda4d2f5\" stEvt:when=\"2018-04-27T00:48:48+03:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"converted\" stEvt:parameters=\"from image/jpeg to application/vnd.adobe.photoshop\"/> <rdf:li stEvt:action=\"derived\" stEvt:parameters=\"converted from image/jpeg to application/vnd.adobe.photoshop\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:c58e00c6-d12d-e44b-8d8f-6ec08b12eedb\" stEvt:when=\"2018-04-27T00:48:48+03:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:890c8066-8138-f84e-8ceb-dfd84c678264\" stEvt:when=\"2020-11-06T05:27:20+02:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"converted\" stEvt:parameters=\"from application/vnd.adobe.photoshop to image/jpeg\"/> <rdf:li stEvt:action=\"derived\" stEvt:parameters=\"converted from application/vnd.adobe.photoshop to image/jpeg\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:9122cb86-611a-eb4a-a836-bf9b812634e6\" stEvt:when=\"2020-11-06T05:27:20+02:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2015.5 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:bcf1232c-2bd0-7e4c-a001-32b2d0c3a793\" stEvt:when=\"2021-02-16T22:16:40+02:00\" stEvt:softwareAgent=\"Adobe Photosh"
+      },
+      "sha256": "fdc48e70812e538dca923faa08231c98a7571b85d24f6c3e812817a1b5967352",
+      "format": "JPEG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://raiontaraclia.md/ro/simbolica-raionului/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r1748490",
+    "officialName": "municipiul Chișinău",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "local",
+      "file": "chisinau-coat.jpg",
+      "url": "symbols/chisinau-coat.jpg",
+      "sourceUrl": "https://cnh.prm.md/"
+    },
+    "initialVerdict": "SOURCE_CORROBORATED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://cnh.prm.md/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 5,
+    "retrieval": {
+      "url": "https://cnh.prm.md/",
+      "finalUrl": "https://cnh.prm.md/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:44.158Z",
+      "sha256": "da770cebbfc0c53788aca98468c6431e0d08534786cb350325b767293bcbc605",
+      "bytes": 92384,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "page": null,
+    "examinedAt": "2026-11-09T15:40:28.421Z",
+    "imageSHA256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Municipal large coat with water-tower supporters, institutional CNH JPEG; not assigned to the separate city ID.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1748490",
+      "kind": "coat",
+      "index": 5,
+      "metadata": {},
+      "sha256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+      "format": "JPEG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8",
+      "https://cnh.prm.md/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r1813297",
+    "officialName": "Sectorul Buiucani",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "local",
+      "file": "chisinau-buiucani-coat.png",
+      "url": "symbols/chisinau-buiucani-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "initialVerdict": "SOURCE_CORROBORATED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 6,
+    "retrieval": {
+      "url": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "finalUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:45.716Z",
+      "sha256": "33a697db7ebd1b9950b59c235a78dfd9945b46f6b931fb433cdcebc78a5263f4",
+      "bytes": 133939,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "page": null,
+    "examinedAt": "2026-11-09T15:40:28.422Z",
+    "imageSHA256": "dbf8d74d471f761c4320c8a78453f1793c16590b80ce76951a2adc471cc900c3",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Buiucani small sector coat, CNH-derived local crop.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1813297",
+      "kind": "coat",
+      "index": 6,
+      "metadata": {},
+      "sha256": "dbf8d74d471f761c4320c8a78453f1793c16590b80ce76951a2adc471cc900c3",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8",
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r1813306",
+    "officialName": "sectorul Botanica",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "local",
+      "file": "chisinau-botanica-coat.png",
+      "url": "symbols/chisinau-botanica-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "initialVerdict": "SOURCE_CORROBORATED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 7,
+    "retrieval": {
+      "url": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "finalUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:45.716Z",
+      "sha256": "33a697db7ebd1b9950b59c235a78dfd9945b46f6b931fb433cdcebc78a5263f4",
+      "bytes": 133939,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "page": null,
+    "examinedAt": "2026-11-09T15:40:28.422Z",
+    "imageSHA256": "5fb05e8e73ab772b391312bc89fcf6b838a6d2e0429f0c597ee0c63f7b32a11b",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Botanica small sector coat, CNH-derived local crop.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1813306",
+      "kind": "coat",
+      "index": 7,
+      "metadata": {},
+      "sha256": "5fb05e8e73ab772b391312bc89fcf6b838a6d2e0429f0c597ee0c63f7b32a11b",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8",
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r1813315",
+    "officialName": "sectorul Ciocana",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "local",
+      "file": "chisinau-ciocana-coat.png",
+      "url": "symbols/chisinau-ciocana-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "initialVerdict": "SOURCE_CORROBORATED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 8,
+    "retrieval": {
+      "url": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "finalUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:45.716Z",
+      "sha256": "33a697db7ebd1b9950b59c235a78dfd9945b46f6b931fb433cdcebc78a5263f4",
+      "bytes": 133939,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "page": null,
+    "examinedAt": "2026-11-09T15:40:28.423Z",
+    "imageSHA256": "c50c587f47af355bd3f7d114a24986a2d6d476d443b9e3431721794faa5a1f59",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Ciocana small sector coat, CNH-derived local crop; matches institutional description.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1813315",
+      "kind": "coat",
+      "index": 8,
+      "metadata": {},
+      "sha256": "c50c587f47af355bd3f7d114a24986a2d6d476d443b9e3431721794faa5a1f59",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8",
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r1813316",
+    "officialName": "sectorul Rîșcani",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "local",
+      "file": "chisinau-riscani-coat.png",
+      "url": "symbols/chisinau-riscani-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "initialVerdict": "SOURCE_CORROBORATED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 9,
+    "retrieval": {
+      "url": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "finalUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:45.716Z",
+      "sha256": "33a697db7ebd1b9950b59c235a78dfd9945b46f6b931fb433cdcebc78a5263f4",
+      "bytes": 133939,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "page": null,
+    "examinedAt": "2026-11-09T15:40:28.424Z",
+    "imageSHA256": "15088d1fbbc6e498f8e0a3c4a54f6f814ebd44de319f4ccae7fca812ad5ea526",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Riscani small sector coat, CNH-derived local crop.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r1813316",
+      "kind": "coat",
+      "index": 9,
+      "metadata": {},
+      "sha256": "15088d1fbbc6e498f8e0a3c4a54f6f814ebd44de319f4ccae7fca812ad5ea526",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8",
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r58512",
+    "officialName": "Sectorul Centru",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "local",
+      "file": "chisinau-centru-coat.png",
+      "url": "symbols/chisinau-centru-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "initialVerdict": "SOURCE_CORROBORATED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced.",
+      "displayModeAssessment": {
+        "mode": "INFORMATIONAL_WITH_HOLDER_ATTRIBUTION",
+        "source": "https://ciocana.md/simbolurile-sectorului",
+        "basis": "Law on public symbols 86/2011 art.12(3), as transcribed by the territorial authority. Informational use of the symbol and copyright in a particular reproduction are separate questions; no branding permission asserted."
+      }
+    },
+    "index": 10,
+    "retrieval": {
+      "url": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "finalUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:45.716Z",
+      "sha256": "33a697db7ebd1b9950b59c235a78dfd9945b46f6b931fb433cdcebc78a5263f4",
+      "bytes": 133939,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "page": null,
+    "examinedAt": "2026-11-09T15:40:28.425Z",
+    "imageSHA256": "3492de568ecdfa2dc31539927c048867c1efdae0591729b4bf7beec32130e08a",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Centru small sector coat, CNH-derived local crop.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r58512",
+      "kind": "coat",
+      "index": 10,
+      "metadata": {},
+      "sha256": "3492de568ecdfa2dc31539927c048867c1efdae0591729b4bf7beec32130e08a",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+      "https://ciocana.md/simbolurile-sectorului",
+      "https://drive.google.com/uc?export=download&id=1rSI78HGpJ1m8pmEv4m-oXECJoMptqIE8",
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r10488681",
+    "officialName": "Comuna Livada",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://livada-arad.ro/wp-content/uploads/2025/04/stema_ro-e1743708837136.png",
+      "sourceUrl": "https://livada-arad.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://livada-arad.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 11,
+    "retrieval": {
+      "url": "https://livada-arad.ro/wp-content/uploads/2025/04/stema_ro-e1743708837136.png",
+      "finalUrl": "https://livada-arad.ro/wp-content/uploads/2025/04/stema_ro-e1743708837136.png",
+      "status": 403,
+      "checkedAt": "2026-11-09T14:59:45.826Z",
+      "contentType": "text/html; charset=UTF-8",
+      "error": "Error: HTTP 403"
+    },
+    "page": {
+      "url": "https://livada-arad.ro/",
+      "finalUrl": "https://livada-arad.ro/",
+      "status": 403,
+      "checkedAt": "2026-11-09T14:59:46.051Z",
+      "contentType": "text/html; charset=UTF-8",
+      "error": "Error: HTTP 403"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": null,
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Current image request failed; no graphic or licence conclusion inferred from failure.",
+    "visualReview": "UNAVAILABLE_HTTP_ERROR",
+    "embeddedMetadata": {
+      "atlasId": "osm-r10488681",
+      "kind": "coat",
+      "index": 11,
+      "metadata": {},
+      "error": "[Errno 2] No such file or directory: 'work\\\\sim-r6-evidence\\\\rights-11.bin'",
+      "finding": "UNAVAILABLE"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://livada-arad.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r10664180",
+    "officialName": "Municipiul Câmpulung",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "commons",
+      "file": "ROU AG Campulung CoA.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+      "tier": "B"
+    },
+    "initialVerdict": "DISPUTED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "CosminN with artwork from Lions Club",
+      "credit": "Own work with parts from http://www.lionsclubs.ro/site/2010/05/lions-club-campulung-muscel-racing-contest/",
+      "attributionRequired": "true",
+      "restrictions": null,
+      "source": "https://commons.wikimedia.org/wiki/File%3AROU_AG_Campulung_CoA.png",
+      "limitation": "Selected PNG credits parts of a Lions Club logo. The Commons public-domain declaration does not independently clear the incorporated third-party artwork."
+    },
+    "index": 12,
+    "retrieval": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "finalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:45.839Z",
+      "sha256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee",
+      "bytes": 581745,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+      "finalUrl": "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.092Z",
+      "sha256": "7c933d189cdfada728a7779373a62f4ea99a0fe16be910718f5710795c84da67",
+      "bytes": 91659,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Violet-field Campulung PNG with black upper eagle; conflicting blue-field legal description and partial Lions Club credit. Dispute retained.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r10664180",
+      "kind": "coat",
+      "index": 12,
+      "metadata": {},
+      "sha256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": "CosminN with artwork from Lions Club",
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r10715725",
+    "officialName": "Comuna Letea Veche",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://primarialeteaveche.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "sourceUrl": "https://primarialeteaveche.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://primarialeteaveche.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 13,
+    "retrieval": {
+      "url": "https://primarialeteaveche.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "finalUrl": "https://primarialeteaveche.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.139Z",
+      "sha256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+      "bytes": 22237,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://primarialeteaveche.ro/",
+      "finalUrl": "https://primarialeteaveche.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.548Z",
+      "sha256": "10832ea0a3a490114a16f58f9b407c0e318e017c6e1432c86c03cd4722c5b898",
+      "bytes": 254542,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Image visibly depicts the Romanian national coat, not Letea Veche arms.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r10715725",
+      "kind": "coat",
+      "index": 13,
+      "metadata": {},
+      "sha256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://primarialeteaveche.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r11321092",
+    "officialName": "Comuna Golăiești",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.golaiesti.ro/wp-content/uploads/2024/05/stema-golaiesti.webp",
+      "sourceUrl": "https://www.golaiesti.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.golaiesti.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 14,
+    "retrieval": {
+      "url": "https://www.golaiesti.ro/wp-content/uploads/2024/05/stema-golaiesti.webp",
+      "finalUrl": "https://www.golaiesti.ro/wp-content/uploads/2024/05/stema-golaiesti.webp",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.201Z",
+      "sha256": "9d68ec92b69e0a7eab05d5435e4e9a740418cdcd95f6d094bb1bf9f37eeb65de",
+      "bytes": 34754,
+      "contentType": "image/webp"
+    },
+    "page": {
+      "url": "https://www.golaiesti.ro/",
+      "finalUrl": "https://www.golaiesti.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.661Z",
+      "sha256": "d2cb9e4e898ba952d8da50e71f61472f2ed02ca3bd69c4aa8154b6df62aabb6c",
+      "bytes": 522219,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "9d68ec92b69e0a7eab05d5435e4e9a740418cdcd95f6d094bb1bf9f37eeb65de",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Golaiesti castle coat retained; no explicit reproduction licence recovered.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r11321092",
+      "kind": "coat",
+      "index": 14,
+      "metadata": {},
+      "sha256": "9d68ec92b69e0a7eab05d5435e4e9a740418cdcd95f6d094bb1bf9f37eeb65de",
+      "format": "WEBP",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.golaiesti.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r11349492",
+    "officialName": "Comuna Bucerdea Grânoasă",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.bucerdea-granoasa.ro/wp-content/plugins/Modul/assets/images/english.png",
+      "sourceUrl": "https://www.bucerdea-granoasa.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.bucerdea-granoasa.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 15,
+    "retrieval": {
+      "url": "https://www.bucerdea-granoasa.ro/wp-content/plugins/Modul/assets/images/english.png",
+      "finalUrl": "https://www.bucerdea-granoasa.ro/wp-content/plugins/Modul/assets/images/english.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.541Z",
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "bytes": 10748,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://www.bucerdea-granoasa.ro/",
+      "finalUrl": "https://www.bucerdea-granoasa.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.978Z",
+      "sha256": "7a487a32c9cfb8688a00dd245dded766cdc9b6e5f3ca41bc5f1b8c6765b2a12e",
+      "bytes": 538887,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Circular United States flag from English-language plugin; not a Bucerdea Granoasa territorial flag.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r11349492",
+      "kind": "flag",
+      "index": 15,
+      "metadata": {
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>'",
+        "XML:com.adobe.xmp": "<?xpacket begin=\"﻿\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>"
+      },
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "format": "PNG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.bucerdea-granoasa.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r11670644",
+    "officialName": "Comuna Vetiș",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://vetis.ro/wp-content/uploads/2025/10/stema-satu-mare.webp",
+      "sourceUrl": "https://vetis.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://vetis.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 16,
+    "retrieval": {
+      "url": "https://vetis.ro/wp-content/uploads/2025/10/stema-satu-mare.webp",
+      "finalUrl": "https://vetis.ro/wp-content/uploads/2025/10/stema-satu-mare.webp",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.549Z",
+      "sha256": "d35e42d5531632e77eb2ea9fb8e0a5f5bb4a2bc4a9288408150fd1ba3905be73",
+      "bytes": 88026,
+      "contentType": "image/webp"
+    },
+    "page": {
+      "url": "https://vetis.ro/",
+      "finalUrl": "https://vetis.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:47.017Z",
+      "sha256": "abd69e5a3a959ba7a7c490adc9eec6a9d745208c5c769cca4f183d71d8791cd8",
+      "bytes": 638255,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "d35e42d5531632e77eb2ea9fb8e0a5f5bb4a2bc4a9288408150fd1ba3905be73",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Quartered stag/tree/tower/grapes Satu Mare county coat, not Vetis commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r11670644",
+      "kind": "coat",
+      "index": 16,
+      "metadata": {},
+      "sha256": "d35e42d5531632e77eb2ea9fb8e0a5f5bb4a2bc4a9288408150fd1ba3905be73",
+      "format": "WEBP",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://vetis.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r12594180",
+    "officialName": "Comuna Hilișeu-Horia",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://hiliseu-horia.ro/wp-content/uploads/2025/10/hiliseu-horia-alb.svg",
+      "sourceUrl": "https://hiliseu-horia.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://hiliseu-horia.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 17,
+    "retrieval": {
+      "url": "https://hiliseu-horia.ro/wp-content/uploads/2025/10/hiliseu-horia-alb.svg",
+      "finalUrl": "https://hiliseu-horia.ro/wp-content/uploads/2025/10/hiliseu-horia-alb.svg",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.631Z",
+      "sha256": "5f8ec4a05e4cb456beff818131a3c9ab7f88e55381ac9cd5aa82699316ddce6f",
+      "bytes": 131540,
+      "contentType": "image/svg+xml"
+    },
+    "page": {
+      "url": "https://hiliseu-horia.ro/",
+      "finalUrl": "https://hiliseu-horia.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:47.146Z",
+      "sha256": "b728a01f6159539f49dcd5087132da1ff923a137fde533626ea5ce1e78afaedd",
+      "bytes": 517587,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "5f8ec4a05e4cb456beff818131a3c9ab7f88e55381ac9cd5aa82699316ddce6f",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "White COMUNA HILISEU-HORIA institutional wordmark with small emblem; selected reproduction is a logo, not a standalone territorial coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r12594180",
+      "kind": "coat",
+      "index": 17,
+      "metadata": {},
+      "sha256": "5f8ec4a05e4cb456beff818131a3c9ab7f88e55381ac9cd5aa82699316ddce6f",
+      "format": "SVG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://hiliseu-horia.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r12709722",
+    "officialName": "Comuna Aușeu",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.auseu.ro/public/images/primaria_auseu.png",
+      "sourceUrl": "https://www.auseu.ro/public/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.auseu.ro/public/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 18,
+    "retrieval": {
+      "url": "https://www.auseu.ro/public/images/primaria_auseu.png",
+      "finalUrl": "https://www.auseu.ro/public/images/primaria_auseu.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:46.663Z",
+      "sha256": "bdebc29926bf16ec942b597647ab1a3245bfc1ac49953ffc614f1495793cc537",
+      "bytes": 46058,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://www.auseu.ro/public/",
+      "finalUrl": "https://www.auseu.ro/public/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:48.350Z",
+      "sha256": "8288babf2c6ed92f4cd1782deb17c78d0d7b59c76b6710985a573e158cdc821e",
+      "bytes": 55953,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "bdebc29926bf16ec942b597647ab1a3245bfc1ac49953ffc614f1495793cc537",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Text-only Primaria Auseu institutional wordmark; no territorial coat in selected image.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r12709722",
+      "kind": "coat",
+      "index": 18,
+      "metadata": {},
+      "sha256": "bdebc29926bf16ec942b597647ab1a3245bfc1ac49953ffc614f1495793cc537",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.auseu.ro/public/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r13137637",
+    "officialName": "Comuna Poienarii De Muscel",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://poienariidemuscel.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://poienariidemuscel.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://poienariidemuscel.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 19,
+    "retrieval": {
+      "url": "https://poienariidemuscel.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "finalUrl": "https://poienariidemuscel.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:48.788Z",
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "bytes": 10748,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://poienariidemuscel.ro/",
+      "finalUrl": "https://poienariidemuscel.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:49.310Z",
+      "sha256": "f872384044ddbde5a31ba1ec31e5eb86d001f94916a8bc6f46e95acc8d173f73",
+      "bytes": 449187,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Circular United States flag used by English-language accessibility plugin; not Poienarii de Muscel flag.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r13137637",
+      "kind": "flag",
+      "index": 19,
+      "metadata": {
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>'",
+        "XML:com.adobe.xmp": "<?xpacket begin=\"﻿\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>"
+      },
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "format": "PNG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://poienariidemuscel.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r13833306",
+    "officialName": "Comuna Roseți",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://comunaroseti.ro/wp-content/uploads/2026/11/Logo_UAT_Roseti-1-edited.png",
+      "sourceUrl": "https://comunaroseti.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://comunaroseti.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 20,
+    "retrieval": {
+      "url": "https://comunaroseti.ro/wp-content/uploads/2026/11/Logo_UAT_Roseti-1-edited.png",
+      "finalUrl": "https://comunaroseti.ro/wp-content/uploads/2026/11/Logo_UAT_Roseti-1-edited.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:49.282Z",
+      "sha256": "e5f0e479d07ec65f1f4160dd4621ecdd6e83b6e0de7d3038e4ae2697cef1a743",
+      "bytes": 148221,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://comunaroseti.ro/",
+      "finalUrl": "https://comunaroseti.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.354Z",
+      "sha256": "57ef5b16766c29a0d0cd960ce61bc1e6b1d594646a54b667f0146fcc1b078c70",
+      "bytes": 239933,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "e5f0e479d07ec65f1f4160dd4621ecdd6e83b6e0de7d3038e4ae2697cef1a743",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romania map in tricolour beside Primaria si Consiliul Local Roseti text; institutional lockup, not territorial coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r13833306",
+      "kind": "coat",
+      "index": 20,
+      "metadata": {},
+      "sha256": "e5f0e479d07ec65f1f4160dd4621ecdd6e83b6e0de7d3038e4ae2697cef1a743",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://comunaroseti.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r13834489",
+    "officialName": "Comuna Roșiori",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://primariarosiori-il.ro/wp-content/uploads/2026/09/rosiori-il-stema.webp",
+      "sourceUrl": "https://primariarosiori-il.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://primariarosiori-il.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 21,
+    "retrieval": {
+      "url": "https://primariarosiori-il.ro/wp-content/uploads/2026/09/rosiori-il-stema.webp",
+      "finalUrl": "https://primariarosiori-il.ro/wp-content/uploads/2026/09/rosiori-il-stema.webp",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:49.541Z",
+      "sha256": "1f8ef8e6678c0e1ea10e54253bb0c57445659e422d9fbc9941bc6aa04d7e2428",
+      "bytes": 45210,
+      "contentType": "image/webp"
+    },
+    "page": {
+      "url": "https://primariarosiori-il.ro/",
+      "finalUrl": "https://primariarosiori-il.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.354Z",
+      "sha256": "7f9583f17112b7e3d0040139549a0ac2f5fab63ba956c5debe88c7a6e9ddde1b",
+      "bytes": 939886,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "1f8ef8e6678c0e1ea10e54253bb0c57445659e422d9fbc9941bc6aa04d7e2428",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Rosiori shield with local charges retained; reproduction licence not documented.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r13834489",
+      "kind": "coat",
+      "index": 21,
+      "metadata": {},
+      "sha256": "1f8ef8e6678c0e1ea10e54253bb0c57445659e422d9fbc9941bc6aa04d7e2428",
+      "format": "WEBP",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://primariarosiori-il.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r14194836",
+    "officialName": "Comuna Ardeoani",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://comunaardeoani.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "sourceUrl": "https://comunaardeoani.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://comunaardeoani.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 22,
+    "retrieval": {
+      "url": "https://comunaardeoani.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "finalUrl": "https://comunaardeoani.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.330Z",
+      "sha256": "e35d4e98d7ead6477311a726adee90c2eb71ef5b00eceb865c18aa8ac9a322c6",
+      "bytes": 22236,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://comunaardeoani.ro/",
+      "finalUrl": "https://comunaardeoani.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.604Z",
+      "sha256": "cc9af6ae6ca1dc7234e995fa15cef2f88a31099a599c902b17d63a69b610f0af",
+      "bytes": 283253,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "e35d4e98d7ead6477311a726adee90c2eb71ef5b00eceb865c18aa8ac9a322c6",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national coat, not Ardeoani commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14194836",
+      "kind": "coat",
+      "index": 22,
+      "metadata": {},
+      "sha256": "e35d4e98d7ead6477311a726adee90c2eb71ef5b00eceb865c18aa8ac9a322c6",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://comunaardeoani.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14194837",
+    "officialName": "Comuna Scorțeni",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://comunascorteni.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "sourceUrl": "https://comunascorteni.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://comunascorteni.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 23,
+    "retrieval": {
+      "url": "https://comunascorteni.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "finalUrl": "https://comunascorteni.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.356Z",
+      "sha256": "4bad3ed6dfe361cf04b8a8b1b56179280c7fe46dca6966b4332726a2d4fa046a",
+      "bytes": 7251,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://comunascorteni.ro/",
+      "finalUrl": "https://comunascorteni.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.580Z",
+      "sha256": "676ad0f830f3f5f272c2770f103febe0e6e530d72d217726b7e29898badafb30",
+      "bytes": 286177,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "4bad3ed6dfe361cf04b8a8b1b56179280c7fe46dca6966b4332726a2d4fa046a",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national coat, not Scorteni commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14194837",
+      "kind": "coat",
+      "index": 23,
+      "metadata": {},
+      "sha256": "4bad3ed6dfe361cf04b8a8b1b56179280c7fe46dca6966b4332726a2d4fa046a",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://comunascorteni.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14701120",
+    "officialName": "Comuna Scorțoasa",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://scortoasa.ro/_next/image?url=%2Fimages%2Fscortoasa-stema.png&w=384&q=75",
+      "sourceUrl": "https://scortoasa.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://scortoasa.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 24,
+    "retrieval": {
+      "url": "https://scortoasa.ro/_next/image?url=%2Fimages%2Fscortoasa-stema.png&w=384&q=75",
+      "finalUrl": "https://scortoasa.ro/_next/image?url=%2Fimages%2Fscortoasa-stema.png&w=384&q=75",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.374Z",
+      "sha256": "3cdd5189c86de86bdcd183e8e596b464834a1b5b8d47a165b177dee5831dc375",
+      "bytes": 692720,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://scortoasa.ro/",
+      "finalUrl": "https://scortoasa.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.453Z",
+      "sha256": "286756399ee8d1983361877289ae23a588e260d092621a93358185eb01d23806",
+      "bytes": 50453,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "3cdd5189c86de86bdcd183e8e596b464834a1b5b8d47a165b177dee5831dc375",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Aerial/satellite silhouette of territorial outline; not a heraldic coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14701120",
+      "kind": "coat",
+      "index": 24,
+      "metadata": {
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 6.0-c002 79.164460, 2020/05/12-16:04:17        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stEvt=\"http://ns.adobe.com/xap/1.0/sType/ResourceEvent#\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmlns:photoshop=\"http://ns.adobe.com/photoshop/1.0/\" xmp:CreatorTool=\"Adobe Photoshop 21.2 (Windows)\" xmp:CreateDate=\"2022-02-03T14:04:13+02:00\" xmp:MetadataDate=\"2022-02-03T14:20:08+02:00\" xmp:ModifyDate=\"2022-02-03T14:20:08+02:00\" dc:format=\"image/png\" xmpMM:InstanceID=\"xmp.iid:f7f037e3-3e57-094b-85b7-ada1d8a2dfe8\" xmpMM:DocumentID=\"adobe:docid:photoshop:bb0987c3-b8ea-2e4d-8dd3-d169ecd02cb5\" xmpMM:OriginalDocumentID=\"xmp.did:9eeffedc-551a-ee4f-92ce-ca4e29617584\" photoshop:ColorMode=\"3\"> <xmpMM:History> <rdf:Seq> <rdf:li stEvt:action=\"created\" stEvt:instanceID=\"xmp.iid:9eeffedc-551a-ee4f-92ce-ca4e29617584\" stEvt:when=\"2022-02-03T14:04:13+02:00\" stEvt:softwareAgent=\"Adobe Photoshop 21.2 (Windows)\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:56b102ca-10ac-3144-85a8-59276668e902\" stEvt:when=\"2022-02-03T14:20:08+02:00\" stEvt:softwareAgent=\"Adobe Photoshop 21.2 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"converted\" stEvt:parameters=\"from application/vnd.adobe.photoshop to image/png\"/> <rdf:li stEvt:action=\"derived\" stEvt:parameters=\"converted from application/vnd.adobe.photoshop to image/png\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:f7f037e3-3e57-094b-85b7-ada1d8a2dfe8\" stEvt:when=\"2022-02-03T14:20:08+02:00\" stEvt:softwareAgent=\"Adobe Photoshop 21.2 (Windows)\" stEvt:changed=\"/\"/> </rdf:Seq> </xmpMM:History> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:56b102ca-10ac-3144-85a8-59276668e902\" stRef:documentID=\"xmp.did:9eeffedc-551a-ee4f-92ce-ca4e29617584\" stRef:originalDocumentID=\"xmp.did:9eeffedc-551a-ee4f-92ce-ca4e29617584\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>'",
+        "XML:com.adobe.xmp": "<?xpacket begin=\"﻿\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 6.0-c002 79.164460, 2020/05/12-16:04:17        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stEvt=\"http://ns.adobe.com/xap/1.0/sType/ResourceEvent#\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmlns:photoshop=\"http://ns.adobe.com/photoshop/1.0/\" xmp:CreatorTool=\"Adobe Photoshop 21.2 (Windows)\" xmp:CreateDate=\"2022-02-03T14:04:13+02:00\" xmp:MetadataDate=\"2022-02-03T14:20:08+02:00\" xmp:ModifyDate=\"2022-02-03T14:20:08+02:00\" dc:format=\"image/png\" xmpMM:InstanceID=\"xmp.iid:f7f037e3-3e57-094b-85b7-ada1d8a2dfe8\" xmpMM:DocumentID=\"adobe:docid:photoshop:bb0987c3-b8ea-2e4d-8dd3-d169ecd02cb5\" xmpMM:OriginalDocumentID=\"xmp.did:9eeffedc-551a-ee4f-92ce-ca4e29617584\" photoshop:ColorMode=\"3\"> <xmpMM:History> <rdf:Seq> <rdf:li stEvt:action=\"created\" stEvt:instanceID=\"xmp.iid:9eeffedc-551a-ee4f-92ce-ca4e29617584\" stEvt:when=\"2022-02-03T14:04:13+02:00\" stEvt:softwareAgent=\"Adobe Photoshop 21.2 (Windows)\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:56b102ca-10ac-3144-85a8-59276668e902\" stEvt:when=\"2022-02-03T14:20:08+02:00\" stEvt:softwareAgent=\"Adobe Photoshop 21.2 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"converted\" stEvt:parameters=\"from application/vnd.adobe.photoshop to image/png\"/> <rdf:li stEvt:action=\"derived\" stEvt:parameters=\"converted from application/vnd.adobe.photoshop to image/png\"/> <rdf:li stEvt:action=\"saved\" stEvt:instanceID=\"xmp.iid:f7f037e3-3e57-094b-85b7-ada1d8a2dfe8\" stEvt:when=\"2022-02-03T14:20:08+02:00\" stEvt:softwareAgent=\"Adobe Photoshop 21.2 (Windows)\" stEvt:changed=\"/\"/> </rdf:Seq> </xmpMM:History> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:56b102ca-10ac-3144-85a8-59276668e902\" stRef:documentID=\"xmp.did:9eeffedc-551a-ee4f-92ce-ca4e29617584\" stRef:originalDocumentID=\"xmp.did:9eeffedc-551a-ee4f-92ce-ca4e29617584\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>"
+      },
+      "sha256": "3cdd5189c86de86bdcd183e8e596b464834a1b5b8d47a165b177dee5831dc375",
+      "format": "PNG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://scortoasa.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14701730",
+    "officialName": "Comuna Predeal-Sărari",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://i0.wp.com/primariapredeal-sarari.ro/wp-content/uploads/2019/01/stema.png?fit=69%2C100&ssl=1",
+      "sourceUrl": "https://primariapredeal-sarari.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://primariapredeal-sarari.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 25,
+    "retrieval": {
+      "url": "https://i0.wp.com/primariapredeal-sarari.ro/wp-content/uploads/2019/01/stema.png?fit=69%2C100&ssl=1",
+      "finalUrl": "https://i0.wp.com/primariapredeal-sarari.ro/wp-content/uploads/2019/01/stema.png?fit=69%2C100&ssl=1",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.488Z",
+      "sha256": "6658e2a42c9996aef379c709f02ab3ea5beb873f7adc665beed29a5a02aeacc3",
+      "bytes": 5464,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://primariapredeal-sarari.ro/",
+      "finalUrl": "https://primariapredeal-sarari.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:50.550Z",
+      "sha256": "34e856859095a06ccb63383175202cd0f9af0f12f64506e0df944542c259b39a",
+      "bytes": 91094,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "6658e2a42c9996aef379c709f02ab3ea5beb873f7adc665beed29a5a02aeacc3",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national coat, not Predeal-Sarari commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14701730",
+      "kind": "coat",
+      "index": 25,
+      "metadata": {},
+      "sha256": "6658e2a42c9996aef379c709f02ab3ea5beb873f7adc665beed29a5a02aeacc3",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://primariapredeal-sarari.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14701989",
+    "officialName": "Comuna Bisoca",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.primariabisoca.ro/wp-content/uploads/primar-stemate-150x150.jpg",
+      "sourceUrl": "https://www.primariabisoca.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.primariabisoca.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 26,
+    "retrieval": {
+      "url": "https://www.primariabisoca.ro/wp-content/uploads/primar-stemate-150x150.jpg",
+      "finalUrl": "https://www.primariabisoca.ro/wp-content/uploads/primar-stemate-150x150.jpg",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.125Z",
+      "sha256": "85672982b384defe55d885525f72c2d1a17222e52117cf1cf8d7795fdebe605e",
+      "bytes": 7289,
+      "contentType": "image/jpeg"
+    },
+    "page": {
+      "url": "https://www.primariabisoca.ro/",
+      "finalUrl": "https://www.primariabisoca.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.483Z",
+      "sha256": "4201f01230ca5f973efa4abb8ce03ed6a18c2844672ee23f6ae94382db221e31",
+      "bytes": 125433,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "85672982b384defe55d885525f72c2d1a17222e52117cf1cf8d7795fdebe605e",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Portrait photograph of mayor with caption, not Bisoca coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14701989",
+      "kind": "coat",
+      "index": 26,
+      "metadata": {},
+      "sha256": "85672982b384defe55d885525f72c2d1a17222e52117cf1cf8d7795fdebe605e",
+      "format": "JPEG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.primariabisoca.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14735409",
+    "officialName": "Comuna Cârligele",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.primariacirligele.ro/wp-content/themes/cirligele/assets/patrimoniu.webp",
+      "sourceUrl": "https://www.primariacirligele.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.primariacirligele.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 27,
+    "retrieval": {
+      "url": "https://www.primariacirligele.ro/wp-content/themes/cirligele/assets/patrimoniu.webp",
+      "finalUrl": "https://www.primariacirligele.ro/wp-content/themes/cirligele/assets/patrimoniu.webp",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.508Z",
+      "sha256": "d75e7f262830cc5a4b706fc93e7bba9eafef26ac1f6884a6acbe8718e160fcd0",
+      "bytes": 150748,
+      "contentType": "image/webp"
+    },
+    "page": {
+      "url": "https://www.primariacirligele.ro/",
+      "finalUrl": "https://www.primariacirligele.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:52.049Z",
+      "sha256": "e89813006ce783111b90b627f82308bd47a571f28e8df1f100974aa90870dbf3",
+      "bytes": 38087,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "d75e7f262830cc5a4b706fc93e7bba9eafef26ac1f6884a6acbe8718e160fcd0",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Outdoor memorial/cross photograph with vegetation, not a territorial flag.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14735409",
+      "kind": "flag",
+      "index": 27,
+      "metadata": {},
+      "sha256": "d75e7f262830cc5a4b706fc93e7bba9eafef26ac1f6884a6acbe8718e160fcd0",
+      "format": "WEBP",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.primariacirligele.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14735435",
+    "officialName": "Comuna Ciorăști",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://comunaciorasti.ro/wp-content/themes/primaria-moderna/assets/images/stema-romaniei-84.webp",
+      "sourceUrl": "https://comunaciorasti.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://comunaciorasti.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 28,
+    "retrieval": {
+      "url": "https://comunaciorasti.ro/wp-content/themes/primaria-moderna/assets/images/stema-romaniei-84.webp",
+      "finalUrl": "https://comunaciorasti.ro/wp-content/themes/primaria-moderna/assets/images/stema-romaniei-84.webp",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.581Z",
+      "sha256": "a67792a4c6404cb69d2964957de2eab2253a42c522ad5f5525385bc05e203357",
+      "bytes": 4886,
+      "contentType": "image/webp"
+    },
+    "page": {
+      "url": "https://comunaciorasti.ro/",
+      "finalUrl": "https://comunaciorasti.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.884Z",
+      "sha256": "95c3907aba3231014da781c52b3a8ba2e921b76774da6666ff2f50c11e6bfeac",
+      "bytes": 93503,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "a67792a4c6404cb69d2964957de2eab2253a42c522ad5f5525385bc05e203357",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national coat, not Ciorasti commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14735435",
+      "kind": "coat",
+      "index": 28,
+      "metadata": {},
+      "sha256": "a67792a4c6404cb69d2964957de2eab2253a42c522ad5f5525385bc05e203357",
+      "format": "WEBP",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://comunaciorasti.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14739041",
+    "officialName": "Comuna Glăvănești",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://glavanesti.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "sourceUrl": "https://glavanesti.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://glavanesti.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 29,
+    "retrieval": {
+      "url": "https://glavanesti.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "finalUrl": "https://glavanesti.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.761Z",
+      "sha256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+      "bytes": 22237,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://glavanesti.ro/",
+      "finalUrl": "https://glavanesti.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:52.064Z",
+      "sha256": "b8e57a53e3cbde9554f6c274a84b349e560bae719a6a78b617d8982396fa8db6",
+      "bytes": 188182,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national coat, not Glavanesti commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14739041",
+      "kind": "coat",
+      "index": 29,
+      "metadata": {},
+      "sha256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://glavanesti.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14739043",
+    "officialName": "Comuna Dealu Morii",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://dealumorii.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://dealumorii.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://dealumorii.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 30,
+    "retrieval": {
+      "url": "https://dealumorii.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "finalUrl": "https://dealumorii.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.926Z",
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "bytes": 10748,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://dealumorii.ro/",
+      "finalUrl": "https://dealumorii.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:52.194Z",
+      "sha256": "e58ee2fd262f037209190b58ff5166a58686b736169d9553fdafeaaac6d3a24e",
+      "bytes": 457643,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national coat used in plugin English image path; not Dealu Morii territorial flag. Actual pixels, not filename, determine this finding.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14739043",
+      "kind": "flag",
+      "index": 30,
+      "metadata": {
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>'",
+        "XML:com.adobe.xmp": "<?xpacket begin=\"﻿\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>"
+      },
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "format": "PNG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://dealumorii.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14743203",
+    "officialName": "Comuna Bira",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://bira.ro/wp-content/uploads/2024/12/Stema_Neamt.svg",
+      "sourceUrl": "https://bira.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://bira.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 31,
+    "retrieval": {
+      "url": "https://bira.ro/wp-content/uploads/2024/12/Stema_Neamt.svg",
+      "finalUrl": "https://bira.ro/wp-content/uploads/2024/12/Stema_Neamt.svg",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:51.997Z",
+      "sha256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+      "bytes": 28472,
+      "contentType": "image/svg+xml"
+    },
+    "page": {
+      "url": "https://bira.ro/",
+      "finalUrl": "https://bira.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:52.328Z",
+      "sha256": "871d9b6bbb3d71ace4030bd179c17d4de7240ec5b34bad3792c9780b6e387181",
+      "bytes": 588016,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.426Z",
+    "imageSHA256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Neamt county coat (chamois/rock and grain), not Bira commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14743203",
+      "kind": "coat",
+      "index": 31,
+      "metadata": {},
+      "sha256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+      "format": "SVG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://bira.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14743630",
+    "officialName": "Comuna Sirețel",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.primariasiretel.ro/ari_afisare_imagine.php?image=3064",
+      "sourceUrl": "https://www.primariasiretel.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.primariasiretel.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 32,
+    "retrieval": {
+      "url": "https://www.primariasiretel.ro/ari_afisare_imagine.php?image=3064",
+      "finalUrl": "https://www.primariasiretel.ro/ari_afisare_imagine.php?image=3064",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:52.314Z",
+      "sha256": "8fad7a84634e1f9630aa1f52da37a623b63d238f6253d527a73af8629ae7296e",
+      "bytes": 186719,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://www.primariasiretel.ro/",
+      "finalUrl": "https://www.primariasiretel.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:53.190Z",
+      "sha256": "82649e398172f302c3c836b1b3fcf915002f44674b5dd27244c6c0ffa9983667",
+      "bytes": 509336,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "8fad7a84634e1f9630aa1f52da37a623b63d238f6253d527a73af8629ae7296e",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Public notice document thumbnail with header emblems and text, not Siretel territorial coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14743630",
+      "kind": "coat",
+      "index": 32,
+      "metadata": {},
+      "sha256": "8fad7a84634e1f9630aa1f52da37a623b63d238f6253d527a73af8629ae7296e",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.primariasiretel.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14769372",
+    "officialName": "Comuna Durnești",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.primariadurnesti.ro/wp-content/uploads/2020/04/steagul-romaniei-banner.jpg",
+      "sourceUrl": "https://www.primariadurnesti.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.primariadurnesti.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 33,
+    "retrieval": {
+      "url": "https://www.primariadurnesti.ro/wp-content/uploads/2020/04/steagul-romaniei-banner.jpg",
+      "finalUrl": "https://www.primariadurnesti.ro/wp-content/uploads/2020/04/steagul-romaniei-banner.jpg",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:52.500Z",
+      "sha256": "b58680015be38e16455a05afa54d9c64bc0ecee148ac7278ef95b4782b623069",
+      "bytes": 2199,
+      "contentType": "image/jpeg"
+    },
+    "page": {
+      "url": "https://www.primariadurnesti.ro/",
+      "finalUrl": "https://www.primariadurnesti.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:52.903Z",
+      "sha256": "c500dae5520e95a2988fcf232a0712bcafb6a972537bde1dee48099fa4145633",
+      "bytes": 210811,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "b58680015be38e16455a05afa54d9c64bc0ecee148ac7278ef95b4782b623069",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national tricolour banner, not Durnesti territorial flag.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14769372",
+      "kind": "flag",
+      "index": 33,
+      "metadata": {
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 5.6-c145 79.163499, 2018/08/13-16:40:22        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop CC 2019 (Windows)\" xmpMM:InstanceID=\"xmp.iid:A23413A27BCE11EA93B0A65E24152316\" xmpMM:DocumentID=\"xmp.did:A23413A37BCE11EA93B0A65E24152316\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:A23413A07BCE11EA93B0A65E24152316\" stRef:documentID=\"xmp.did:A23413A17BCE11EA93B0A65E24152316\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>'"
+      },
+      "sha256": "b58680015be38e16455a05afa54d9c64bc0ecee148ac7278ef95b4782b623069",
+      "format": "JPEG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.primariadurnesti.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14769510",
+    "officialName": "Comuna Tudora",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://comunatudora.ro/wp-content/uploads/2020/11/Stema_Oficiala_a_Romaniei-207x300.png",
+      "sourceUrl": "https://comunatudora.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://comunatudora.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 34,
+    "retrieval": {
+      "url": "https://comunatudora.ro/wp-content/uploads/2020/11/Stema_Oficiala_a_Romaniei-207x300.png",
+      "finalUrl": "https://comunatudora.ro/wp-content/uploads/2020/11/Stema_Oficiala_a_Romaniei-207x300.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:53.188Z",
+      "sha256": "2d6ed56cb72d3330da59b941362ac164906617db86eb65bfbe99778d61da22eb",
+      "bytes": 75935,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://comunatudora.ro/",
+      "finalUrl": "https://comunatudora.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:53.625Z",
+      "sha256": "da72cec3817232d86d1ace0898fdab3e298cb1eafada22203976525cfcbb53e8",
+      "bytes": 108693,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "2d6ed56cb72d3330da59b941362ac164906617db86eb65bfbe99778d61da22eb",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national coat, not Tudora commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14769510",
+      "kind": "coat",
+      "index": 34,
+      "metadata": {},
+      "sha256": "2d6ed56cb72d3330da59b941362ac164906617db86eb65bfbe99778d61da22eb",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://comunatudora.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14776663",
+    "officialName": "Comuna Bălțătești",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://primariabaltatesti.ro/wp-content/uploads/2025/05/Stema_Neamt.svg",
+      "sourceUrl": "https://primariabaltatesti.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://primariabaltatesti.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 35,
+    "retrieval": {
+      "url": "https://primariabaltatesti.ro/wp-content/uploads/2025/05/Stema_Neamt.svg",
+      "finalUrl": "https://primariabaltatesti.ro/wp-content/uploads/2025/05/Stema_Neamt.svg",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:53.274Z",
+      "sha256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+      "bytes": 28472,
+      "contentType": "image/svg+xml"
+    },
+    "page": {
+      "url": "https://primariabaltatesti.ro/",
+      "finalUrl": "https://primariabaltatesti.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:53.617Z",
+      "sha256": "f9e903896091ea96a888c48574d91434e68b9db4c1609dbe3f43a880ab42d884",
+      "bytes": 566449,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Neamt county coat, not Baltatesti commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14776663",
+      "kind": "coat",
+      "index": 35,
+      "metadata": {},
+      "sha256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+      "format": "SVG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://primariabaltatesti.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14776666",
+    "officialName": "Comuna Poiana Teiului",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://poianateiului.ro/wp-content/uploads/2025/01/stema-poiana-teiului.webp",
+      "sourceUrl": "https://poianateiului.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://poianateiului.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 36,
+    "retrieval": {
+      "url": "https://poianateiului.ro/wp-content/uploads/2025/01/stema-poiana-teiului.webp",
+      "finalUrl": "https://poianateiului.ro/wp-content/uploads/2025/01/stema-poiana-teiului.webp",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:54.575Z",
+      "sha256": "29bbbf3d73645cd4a6af22448535887881565a63f4e6020e9e91a9439fd367b2",
+      "bytes": 14952,
+      "contentType": "image/webp"
+    },
+    "page": {
+      "url": "https://poianateiului.ro/",
+      "finalUrl": "https://poianateiului.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:55.013Z",
+      "sha256": "fcebade3c82b0efbbd3b18672f377db7a1c3fdb30d60e894a70800114947ffbb",
+      "bytes": 648995,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "29bbbf3d73645cd4a6af22448535887881565a63f4e6020e9e91a9439fd367b2",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Poiana Teiului local shield retained; no explicit reproduction licence recovered.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14776666",
+      "kind": "coat",
+      "index": 36,
+      "metadata": {},
+      "sha256": "29bbbf3d73645cd4a6af22448535887881565a63f4e6020e9e91a9439fd367b2",
+      "format": "WEBP",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://poianateiului.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r14776668",
+    "officialName": "Comuna Ceahlău",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://primariaceahlau.ro/wp-content/uploads/2025/08/Stema_Neamt-200x232-1.svg",
+      "sourceUrl": "https://primariaceahlau.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://primariaceahlau.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 37,
+    "retrieval": {
+      "url": "https://primariaceahlau.ro/wp-content/uploads/2025/08/Stema_Neamt-200x232-1.svg",
+      "finalUrl": "https://primariaceahlau.ro/wp-content/uploads/2025/08/Stema_Neamt-200x232-1.svg",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:54.610Z",
+      "sha256": "1799c20cb40ec129bcf91041222a8d8b03f1a89120ff9403a2b1b7a3a9bfab63",
+      "bytes": 38128,
+      "contentType": "image/svg+xml"
+    },
+    "page": {
+      "url": "https://primariaceahlau.ro/",
+      "finalUrl": "https://primariaceahlau.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:55.014Z",
+      "sha256": "332558736433755204b00ee8d18f48036daaa3fe1daba800a1f48ec07a3be000",
+      "bytes": 283720,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "1799c20cb40ec129bcf91041222a8d8b03f1a89120ff9403a2b1b7a3a9bfab63",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Neamt county coat, not Ceahlau commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14776668",
+      "kind": "coat",
+      "index": 37,
+      "metadata": {},
+      "sha256": "1799c20cb40ec129bcf91041222a8d8b03f1a89120ff9403a2b1b7a3a9bfab63",
+      "format": "SVG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://primariaceahlau.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14777047",
+    "officialName": "Comuna Brusturi",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://comunabrusturi.ro/wp-content/uploads/elementor/thumbs/semaBrusturi-51x70-1-rabzvvtcoqdzdazcohebul6535fxrepbhl22jo6uue.png",
+      "sourceUrl": "https://comunabrusturi.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://comunabrusturi.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 38,
+    "retrieval": {
+      "url": "https://comunabrusturi.ro/wp-content/uploads/elementor/thumbs/semaBrusturi-51x70-1-rabzvvtcoqdzdazcohebul6535fxrepbhl22jo6uue.png",
+      "finalUrl": "https://comunabrusturi.ro/wp-content/uploads/elementor/thumbs/semaBrusturi-51x70-1-rabzvvtcoqdzdazcohebul6535fxrepbhl22jo6uue.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:55.362Z",
+      "sha256": "39efa6ff19697813e071e65f51a21158315a80f6d1a791b861ec262028653e83",
+      "bytes": 3712,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://comunabrusturi.ro/",
+      "finalUrl": "https://comunabrusturi.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:55.733Z",
+      "sha256": "fa3a022cde773d93636ec6ffc3cf3946a177101aa92f4c63e3312bd268dc2905",
+      "bytes": 253872,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "39efa6ff19697813e071e65f51a21158315a80f6d1a791b861ec262028653e83",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Brusturi small municipal-style shield retained; low resolution limits graphic assessment, licence unresolved.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14777047",
+      "kind": "coat",
+      "index": 38,
+      "metadata": {},
+      "sha256": "39efa6ff19697813e071e65f51a21158315a80f6d1a791b861ec262028653e83",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://comunabrusturi.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r14786145",
+    "officialName": "Comuna Homoroade",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://primariahomoroade.ro/wp-content/uploads/elementor/thumbs/Coat_of_arms_of_Romania-qbmeuxzws6lpg61e6dtpkf3yttd0a5th4dwe05vde2.png",
+      "sourceUrl": "https://primariahomoroade.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://primariahomoroade.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 39,
+    "retrieval": {
+      "url": "https://primariahomoroade.ro/wp-content/uploads/elementor/thumbs/Coat_of_arms_of_Romania-qbmeuxzws6lpg61e6dtpkf3yttd0a5th4dwe05vde2.png",
+      "finalUrl": "https://primariahomoroade.ro/wp-content/uploads/elementor/thumbs/Coat_of_arms_of_Romania-qbmeuxzws6lpg61e6dtpkf3yttd0a5th4dwe05vde2.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:55.816Z",
+      "sha256": "3384e4c4ca071f936b9e7a9b3d7775f15fe4380d0d8e5b3eb36df75d1b4dc3d7",
+      "bytes": 10521,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://primariahomoroade.ro/",
+      "finalUrl": "https://primariahomoroade.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:56.120Z",
+      "sha256": "16e12be076425fc89574b03717d6b204a8bb603e07d8a8b6c1757bacc7cfd6b9",
+      "bytes": 215772,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "3384e4c4ca071f936b9e7a9b3d7775f15fe4380d0d8e5b3eb36df75d1b4dc3d7",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Romanian national coat, not Homoroade commune coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14786145",
+      "kind": "coat",
+      "index": 39,
+      "metadata": {},
+      "sha256": "3384e4c4ca071f936b9e7a9b3d7775f15fe4380d0d8e5b3eb36df75d1b4dc3d7",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://primariahomoroade.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r14867616",
+    "officialName": "Comuna Remetea Chioarului",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://remeteachioarului.ro/wp-content/uploads/2023/10/stema-remetea-chioarului.webp",
+      "sourceUrl": "https://remeteachioarului.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://remeteachioarului.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 40,
+    "retrieval": {
+      "url": "https://remeteachioarului.ro/wp-content/uploads/2023/10/stema-remetea-chioarului.webp",
+      "finalUrl": "https://remeteachioarului.ro/wp-content/uploads/2023/10/stema-remetea-chioarului.webp",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:57.087Z",
+      "sha256": "d127ae3b393b80be6a524f68b9433dea2b246aad56800be0388161d708fb3693",
+      "bytes": 15724,
+      "contentType": "image/webp"
+    },
+    "page": {
+      "url": "https://remeteachioarului.ro/",
+      "finalUrl": "https://remeteachioarului.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:57.478Z",
+      "sha256": "9c55d9581778ffe157d2bac566cb3ddb4ac92e8a2f31ad072b6a46577e545832",
+      "bytes": 413186,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "d127ae3b393b80be6a524f68b9433dea2b246aad56800be0388161d708fb3693",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Remetea Chioarului territorial shield retained; no explicit reproduction licence recovered.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r14867616",
+      "kind": "coat",
+      "index": 40,
+      "metadata": {},
+      "sha256": "d127ae3b393b80be6a524f68b9433dea2b246aad56800be0388161d708fb3693",
+      "format": "WEBP",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://remeteachioarului.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  },
+  {
+    "atlasId": "osm-r7960937",
+    "officialName": "București Sectorul 3",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.primarie3.ro/img/logo.png",
+      "sourceUrl": "https://www.primarie3.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.primarie3.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 41,
+    "retrieval": {
+      "url": "https://www.primarie3.ro/img/logo.png",
+      "finalUrl": "https://www.primarie3.ro/img/logo.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:57.407Z",
+      "sha256": "a2e5880d7689d78768ff726a7dde1ca3e39b181834a9829d0dc0810c0826da29",
+      "bytes": 58726,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://www.primarie3.ro/",
+      "finalUrl": "https://www.primarie3.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:57.917Z",
+      "sha256": "121afb94bf8f4537eed15f72c1a3c944b3f9a5196978a7d3f6a1418f9cf75ebd",
+      "bytes": 54741,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "a2e5880d7689d78768ff726a7dde1ca3e39b181834a9829d0dc0810c0826da29",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Primaria Sectorului 3 Bucuresti institutional wordmark/emblem lockup; not standalone territorial coat.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r7960937",
+      "kind": "coat",
+      "index": 41,
+      "metadata": {},
+      "sha256": "a2e5880d7689d78768ff726a7dde1ca3e39b181834a9829d0dc0810c0826da29",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.primarie3.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r9714843",
+    "officialName": "Orașul Strehaia",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.primariastrehaia.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://www.primariastrehaia.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.primariastrehaia.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 42,
+    "retrieval": {
+      "url": "https://www.primariastrehaia.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "finalUrl": "https://www.primariastrehaia.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:57.475Z",
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "bytes": 10748,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://www.primariastrehaia.ro/",
+      "finalUrl": "https://www.primariastrehaia.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:57.812Z",
+      "sha256": "4d17bd7d9899cbafae5a2dce36af963e7609d2b1df5127b1683c10abd03e91a7",
+      "bytes": 443208,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Circular United States flag from English-language plugin, not Strehaia flag.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r9714843",
+      "kind": "flag",
+      "index": 42,
+      "metadata": {
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>'",
+        "XML:com.adobe.xmp": "<?xpacket begin=\"﻿\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>"
+      },
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "format": "PNG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.primariastrehaia.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r9714862",
+    "officialName": "Comuna Pătulele",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.primariapatulelemh.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://www.primariapatulelemh.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.primariapatulelemh.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 43,
+    "retrieval": {
+      "url": "https://www.primariapatulelemh.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "finalUrl": "https://www.primariapatulelemh.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:57.763Z",
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "bytes": 10748,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://www.primariapatulelemh.ro/",
+      "finalUrl": "https://www.primariapatulelemh.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:58.051Z",
+      "sha256": "84f598418a3fa1874ac6e5f835b92b93549119148a4e498b15edf8a3f0c2186b",
+      "bytes": 412187,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Circular United States flag from English-language plugin, not Patulele flag.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r9714862",
+      "kind": "flag",
+      "index": 43,
+      "metadata": {
+        "xmp": "b'<?xpacket begin=\"\\xef\\xbb\\xbf\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>'",
+        "XML:com.adobe.xmp": "<?xpacket begin=\"﻿\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?> <x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 9.1-c001 79.1462899777, 2023/06/25-23:57:14        \"> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"> <rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\" xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\" xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\" xmp:CreatorTool=\"Adobe Photoshop 25.3 (Macintosh)\" xmpMM:InstanceID=\"xmp.iid:8EA4E5F7F72711EFABEB8886512BBFB7\" xmpMM:DocumentID=\"xmp.did:8EA4E5F8F72711EFABEB8886512BBFB7\"> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:8EA4E5F5F72711EFABEB8886512BBFB7\" stRef:documentID=\"xmp.did:8EA4E5F6F72711EFABEB8886512BBFB7\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta> <?xpacket end=\"r\"?>"
+      },
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "format": "PNG",
+      "finding": "EXPLICIT_FIELDS_FOUND_REVIEW_REQUIRED"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.primariapatulelemh.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r9748438",
+    "officialName": "Orașul Horezu",
+    "kind": "flag",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://www.orasul-horezu.ro/sites/default/files/romania.png",
+      "sourceUrl": "https://www.orasul-horezu.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://www.orasul-horezu.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 44,
+    "retrieval": {
+      "url": "https://www.orasul-horezu.ro/sites/default/files/romania.png",
+      "finalUrl": "https://www.orasul-horezu.ro/sites/default/files/romania.png",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:58.227Z",
+      "sha256": "e2b716eeeabaecfc9d8fde42222dfc3f3ebefa2b0f910c5fc9497ef075d8fa36",
+      "bytes": 2017,
+      "contentType": "image/png"
+    },
+    "page": {
+      "url": "https://www.orasul-horezu.ro/",
+      "finalUrl": "https://www.orasul-horezu.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:58.568Z",
+      "sha256": "83b1143a6392831f31e77fd89be2655e01bdd4a4aa0f550df178863ef222afe4",
+      "bytes": 150655,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "e2b716eeeabaecfc9d8fde42222dfc3f3ebefa2b0f910c5fc9497ef075d8fa36",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Plain Romanian national tricolour, not Horezu territorial flag.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r9748438",
+      "kind": "flag",
+      "index": 44,
+      "metadata": {},
+      "sha256": "e2b716eeeabaecfc9d8fde42222dfc3f3ebefa2b0f910c5fc9497ef075d8fa36",
+      "format": "PNG",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://www.orasul-horezu.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "REMOVE_MISATTRIBUTED_REPRODUCTION"
+  },
+  {
+    "atlasId": "osm-r9964683",
+    "officialName": "Comuna Mogoșești",
+    "kind": "coat",
+    "initialImage": {
+      "kind": "official",
+      "url": "https://mogosesti-primaria.ro/wp-content/uploads/2025/09/stema-mogosesti-iasi.webp",
+      "sourceUrl": "https://mogosesti-primaria.ro/",
+      "tier": "A"
+    },
+    "initialVerdict": "CANDIDATE_UNVERIFIED",
+    "rights": {
+      "verdict": "RIGHTS_UNCLEAR",
+      "license": null,
+      "licenseUrl": null,
+      "artist": null,
+      "credit": null,
+      "attributionRequired": null,
+      "restrictions": null,
+      "source": "https://mogosesti-primaria.ro/",
+      "limitation": "No explicit reproduction licence established. Existing display retained; no new local copy introduced."
+    },
+    "index": 45,
+    "retrieval": {
+      "url": "https://mogosesti-primaria.ro/wp-content/uploads/2025/09/stema-mogosesti-iasi.webp",
+      "finalUrl": "https://mogosesti-primaria.ro/wp-content/uploads/2025/09/stema-mogosesti-iasi.webp",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:58.361Z",
+      "sha256": "9ca18f7f1b1719361ba1d2d5c955d2104f4820594abc113caf23791b672dfa1c",
+      "bytes": 16892,
+      "contentType": "image/webp"
+    },
+    "page": {
+      "url": "https://mogosesti-primaria.ro/",
+      "finalUrl": "https://mogosesti-primaria.ro/",
+      "status": 200,
+      "checkedAt": "2026-11-09T14:59:58.720Z",
+      "sha256": "48710860f3ec0c3778e047375d9d4c69ae36a5e45aa86bf7a9f4c20baaaa8b1a",
+      "bytes": 615760,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "examinedAt": "2026-11-09T15:40:28.427Z",
+    "imageSHA256": "9ca18f7f1b1719361ba1d2d5c955d2104f4820594abc113caf23791b672dfa1c",
+    "reviewState": "INDIVIDUALLY_EXAMINED",
+    "visualFinding": "Mogosesti Iasi local shield retained; no explicit reproduction licence recovered.",
+    "visualReview": "ACTUAL_IMAGE_EXAMINED",
+    "embeddedMetadata": {
+      "atlasId": "osm-r9964683",
+      "kind": "coat",
+      "index": 45,
+      "metadata": {},
+      "sha256": "9ca18f7f1b1719361ba1d2d5c955d2104f4820594abc113caf23791b672dfa1c",
+      "format": "WEBP",
+      "finding": "NO_AUTHOR_OR_LICENCE_FIELDS_FOUND"
+    },
+    "author": null,
+    "rightsVerdict": "RIGHTS_UNRESOLVED",
+    "rightsScope": "No sufficient reproduction licence/author chain established. Statutory permission for informative use of the SYMBOL does not clear copyright in a particular DRAWING. Existing display conserved; no new local copy introduced.",
+    "rightsSources": [
+      "https://mogosesti-primaria.ro/"
+    ],
+    "licence": null,
+    "attributionRequired": null,
+    "restrictions": "No blanket reuse permission established; informative-symbol use assessed separately.",
+    "alternative": "No new alternative selected without documented exact holder and reproduction rights.",
+    "action": "KEEP"
+  }
+]
