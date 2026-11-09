@@ -1,10 +1,10 @@
 {
   "stage": "SIM-R8",
-  "checkedAt": "2026-11-09T23:32:51.092Z",
+  "checkedAt": "2026-11-09T23:43:12.777Z",
   "platform": "win32",
   "node": "v24.21.0",
   "staticTests": {
-    "passed": 270,
+    "passed": 274,
     "failed": 0,
     "skipped": 0
   },
@@ -31,7 +31,13 @@
       "mobile-sim-r8-osm-r1699033.png",
       "mobile-sim-r8-osm-r2248660.png"
     ],
-    "decodedNormativeImages": "PASS_DESKTOP1440_MOBILE360_ALL_THREE_CHANGED_HOLDERS",
+    "decodedNormativeImages": "PASS_DESKTOP1440_MOBILE360",
+    "continuity": "Heraldic functions remain unchanged after PR79 locale-presentation merge; final combined SHA requires full Linux Chromium CI independently.",
+    "previousFullLinuxCI": {
+      "sha": "cc3bce1977748f3b2b3f3d874c92a9cc2f804ba9",
+      "run": 42721482384,
+      "conclusion": "success"
+    },
     "screenshotHashes": [
       {
         "name": "desktop-sim-r8-osm-r10664180.png",
@@ -62,7 +68,7 @@
   "sourceFiles": [
     {
       "path": "src/App.tsx",
-      "sha256": "f280e743814bfc1c700deeb38017ecce22eac7c825412f2a4fb8bd66c4947c60"
+      "sha256": "a02f4fad3876b900e449486bd0c7a35b0fbcb63bcb237048905690957f95eba6"
     },
     {
       "path": "src/styles.css",
@@ -70,7 +76,7 @@
     },
     {
       "path": "scripts/ci/browser-smoke.mjs",
-      "sha256": "39f436ccc0ab6d7e9336ffac54f5cb6aedaadfc3f3a4c4f9d7539625ba505086"
+      "sha256": "9b142420562a081803bbdead7a391a6e9e9b31fc35bce578332207480f005087"
     },
     {
       "path": "src/data/symbolAudit.mjs",
@@ -105,5 +111,6 @@
       "sha256": "ffe699b225a1fac484918761c4e539dbb1058979fadcbecb4b246e0f94c977b8"
     }
   ],
-  "publication": "Post-merge Actions and live Pages hashes required independently."
+  "publication": "Post-merge Actions and live Pages hashes required independently.",
+  "integrationBaseCommit": "d6f3d48a94939da067b922e85dcb622522e61daa"
 }

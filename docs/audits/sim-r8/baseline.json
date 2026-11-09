@@ -79,6 +79,6 @@
       "sha256": "733e1a4b9a516a11ec259b4f4316fb9de3c05cacf4f4c72667d455381f284bfa"
     }
   ],
-  "integrationBaseCommit": "96a57ccaf66765c8ab419c926ae06a070d9196e2",
-  "continuityNote": "Main advanced during research through protected PR78; its independent header layout changes were merged without overwriting them. Initial symbol/geographic baseline remains SIM-R7."
+  "integrationBaseCommit": "d6f3d48a94939da067b922e85dcb622522e61daa",
+  "continuityNote": "Main advanced during research through PR78 (header) and PR79 (localized official-name presentation); both were merged without changing certified names/catalog. Initial symbol/geographic baseline remains SIM-R7."
 }
