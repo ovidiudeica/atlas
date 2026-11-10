@@ -1,0 +1,685 @@
+{
+  "stage": "SIM-CLOSE",
+  "categories": {
+    "TECHNICAL": "Atlas data/website maintainer",
+    "EXTERNAL_EVIDENCE_REQUIRED": "Heraldic documentary editor / institutional archive",
+    "RIGHTS_EVIDENCE_REQUIRED": "Reproduction-rights editor / identified creator",
+    "DISPUTED_OR_UNCONFIRMED": "Heraldic identity editor"
+  },
+  "technicalItems": [
+    {
+      "id": "TECH-CAMPULUNG-ACT-DATE",
+      "atlasId": "osm-r10664180",
+      "symbolType": "coat",
+      "category": "TECHNICAL",
+      "status": "RECONCILED_IN_CLOSURE_VIEW_LEGACY_FIELD_PRESERVED",
+      "finding": "audit-r8 approvalDate retains the local2013-05-30 proposal date while selected act is HG89/2015. Final gazette identifies national adoption2015-02-10.",
+      "evidenceRefs": [
+        {
+          "path": "public/data/symbols/audit-r8.json.gz",
+          "selector": {
+            "atlasId": "osm-r10664180",
+            "kind": "coat"
+          }
+        },
+        {
+          "path": "docs/audits/sim-r8/documents.json"
+        }
+      ],
+      "acceptance": [
+        "Closure ledger separates2013 local proposal and2015 government adoption.",
+        "Any future current-metadata emitter must use the applicable act date without rewriting archived audit-r8 or changing the image."
+      ],
+      "functionalRemediationInClose": false,
+      "responsibleRole": "Atlas data/website maintainer",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "id": "TECH-VRANCEA-LEGACY-LIMITATION",
+      "atlasId": "osm-r2260187",
+      "symbolType": "coat",
+      "category": "TECHNICAL",
+      "status": "RECONCILED_IN_CLOSURE_VIEW_LEGACY_FIELD_PRESERVED",
+      "finding": "Older inherited limitation says graphic retrieval failed; SIM-R8 final annex recovery and VERIFIED_OFFICIAL coat verdict supersede that old retrieval state.",
+      "evidenceRefs": [
+        {
+          "path": "public/data/symbols/audit-r8.json.gz",
+          "selector": {
+            "atlasId": "osm-r2260187",
+            "kind": "coat"
+          }
+        },
+        {
+          "path": "docs/audits/sim-r8/documents.json"
+        }
+      ],
+      "acceptance": [
+        "Closure identifies the final MO315/2026 p10 as recovered.",
+        "Future current views distinguish as-of historical limitations from applicable evidence; no retrospective archive rewrite."
+      ],
+      "functionalRemediationInClose": false,
+      "responsibleRole": "Atlas data/website maintainer",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "id": "TECH-PUBLISHER-SOURCE-ACCESS-CONTEXT",
+      "category": "TECHNICAL",
+      "status": "POTENTIAL_USABILITY_ITEM_FOR_WEB_AUDIT_NOT_RETESTED_IN_CLOSE",
+      "finding": "R8 recorded that free official-gazette issue URLs require the normal anonymous calendar session; a stateless issue request could redirect to the publisher homepage. This is an access/usability context, not absence of the annex.",
+      "evidenceRefs": [
+        {
+          "path": "docs/audits/sim-r8/official-gazettes.json"
+        }
+      ],
+      "acceptance": [
+        "WEB-AUDIT checks the source link in a fresh browser context.",
+        "If necessary, a later source-access UI change offers the verified archival copy or explicit publication/date access instructions, without changing heraldic assignments or licences."
+      ],
+      "functionalRemediationInClose": false,
+      "responsibleRole": "Atlas data/website maintainer",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "id": "TECH-PREDECESSOR-VS-SELECTED-VERDICT",
+      "category": "TECHNICAL",
+      "status": "RECONCILED_IN_CLOSURE_VIEW_LEGACY_MODEL_PRESERVED",
+      "finding": "Three R5 predecessor verdicts in audit-r8 are OUTDATED_VERSION/HISTORICAL_ONLY; the exact selected recommendedImage already has a distinct documented recommendedVerdict. No new legal verdict is made.",
+      "evidenceRefs": [
+        {
+          "path": "public/data/symbols/audit-r8.json.gz"
+        },
+        {
+          "path": "docs/audits/sim-r5/manual-decisions.json"
+        }
+      ],
+      "acceptance": [
+        "Closure counts the existing recommendedVerdict only when selected and recommended image objects match exactly.",
+        "Future consumers distinguish predecessor and selected-image states; no archive or image rewrite."
+      ],
+      "responsibleRole": "Atlas data/website maintainer",
+      "blocksAtlasDevelopment": false,
+      "functionalRemediationInClose": false
+    }
+  ],
+  "evidenceOnlyItems": [
+    {
+      "caseId": "RIGHTS:osm-r1699032:coat",
+      "atlasId": "osm-r1699032",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r1748490:coat",
+      "atlasId": "osm-r1748490",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "Registered full-colour normative annex identifying this drawing, or an original creator grant covering the exact JPEG and intermediate modifications.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r1813297:coat",
+      "atlasId": "osm-r1813297",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r1813306:coat",
+      "atlasId": "osm-r1813306",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r1813315:coat",
+      "atlasId": "osm-r1813315",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r1813316:coat",
+      "atlasId": "osm-r1813316",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r58512:coat",
+      "atlasId": "osm-r58512",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r10488681:coat",
+      "atlasId": "osm-r10488681",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r10715725:coat",
+      "atlasId": "osm-r10715725",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r11321092:coat",
+      "atlasId": "osm-r11321092",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r11349492:flag",
+      "atlasId": "osm-r11349492",
+      "symbolType": "flag",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r11670644:coat",
+      "atlasId": "osm-r11670644",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r12594180:coat",
+      "atlasId": "osm-r12594180",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r12709722:coat",
+      "atlasId": "osm-r12709722",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r13137637:flag",
+      "atlasId": "osm-r13137637",
+      "symbolType": "flag",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r13833306:coat",
+      "atlasId": "osm-r13833306",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r13834489:coat",
+      "atlasId": "osm-r13834489",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14194836:coat",
+      "atlasId": "osm-r14194836",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14194837:coat",
+      "atlasId": "osm-r14194837",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14701120:coat",
+      "atlasId": "osm-r14701120",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14701730:coat",
+      "atlasId": "osm-r14701730",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14701989:coat",
+      "atlasId": "osm-r14701989",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14735409:flag",
+      "atlasId": "osm-r14735409",
+      "symbolType": "flag",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14735435:coat",
+      "atlasId": "osm-r14735435",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14739041:coat",
+      "atlasId": "osm-r14739041",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14739043:flag",
+      "atlasId": "osm-r14739043",
+      "symbolType": "flag",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14743203:coat",
+      "atlasId": "osm-r14743203",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14743630:coat",
+      "atlasId": "osm-r14743630",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14769372:flag",
+      "atlasId": "osm-r14769372",
+      "symbolType": "flag",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14769510:coat",
+      "atlasId": "osm-r14769510",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14776663:coat",
+      "atlasId": "osm-r14776663",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14776666:coat",
+      "atlasId": "osm-r14776666",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14776668:coat",
+      "atlasId": "osm-r14776668",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14777047:coat",
+      "atlasId": "osm-r14777047",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14786145:coat",
+      "atlasId": "osm-r14786145",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r14867616:coat",
+      "atlasId": "osm-r14867616",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r7960937:coat",
+      "atlasId": "osm-r7960937",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r9714843:flag",
+      "atlasId": "osm-r9714843",
+      "symbolType": "flag",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r9714862:flag",
+      "atlasId": "osm-r9714862",
+      "symbolType": "flag",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r9748438:flag",
+      "atlasId": "osm-r9748438",
+      "symbolType": "flag",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": false,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "RIGHTS:osm-r9964683:coat",
+      "atlasId": "osm-r9964683",
+      "symbolType": "coat",
+      "primaryCategory": "RIGHTS_EVIDENCE_REQUIRED",
+      "responsibleRole": "Reproduction-rights editor / identified creator",
+      "activePublishedRisk": true,
+      "requiredEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+      "source": "docs/audits/sim-close/rights-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "HERALDRY:osm-r377733",
+      "atlasId": "osm-r377733",
+      "primaryCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+      "secondaryCategories": [],
+      "responsibleRole": "Heraldic documentary editor / institutional archive",
+      "requiredEvidence": "Authenticated annex adopted with HCGMB47/2024 or explicit institutional confirmation identifying this exact project graphic as adopted; independent flag act.",
+      "source": "docs/audits/sim-close/exceptions-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "HERALDRY:osm-r2248660",
+      "atlasId": "osm-r2248660",
+      "primaryCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+      "secondaryCategories": [],
+      "responsibleRole": "Heraldic documentary editor / institutional archive",
+      "requiredEvidence": "Coat resolved. Flag adoption/current model still not independently established.",
+      "source": "docs/audits/sim-close/exceptions-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "HERALDRY:osm-r2260187",
+      "atlasId": "osm-r2260187",
+      "primaryCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+      "secondaryCategories": [],
+      "responsibleRole": "Heraldic documentary editor / institutional archive",
+      "requiredEvidence": "Coat graphic comparison complete; no independent final flag act recovered.",
+      "source": "docs/audits/sim-close/exceptions-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "HERALDRY:osm-r1748490",
+      "atlasId": "osm-r1748490",
+      "primaryCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+      "secondaryCategories": [
+        "RIGHTS_EVIDENCE_REQUIRED"
+      ],
+      "responsibleRole": "Heraldic documentary editor / institutional archive",
+      "requiredEvidence": "Adopted colour annexes to CMC5/2 and Decree1475-VIII plus image-specific reproduction chain for selected local JPEG.",
+      "source": "docs/audits/sim-close/exceptions-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "HERALDRY:osm-r1691801",
+      "atlasId": "osm-r1691801",
+      "primaryCategory": "DISPUTED_OR_UNCONFIRMED",
+      "secondaryCategories": [],
+      "responsibleRole": "Heraldic identity editor",
+      "requiredEvidence": "Explicit legal explanation or act identifying independent city holder or documented common scope for both Atlas identities.",
+      "source": "docs/audits/sim-close/exceptions-ledger.json",
+      "blocksAtlasDevelopment": false
+    },
+    {
+      "caseId": "HERALDRY:osm-r9982547",
+      "atlasId": "osm-r9982547",
+      "primaryCategory": "DISPUTED_OR_UNCONFIRMED",
+      "secondaryCategories": [],
+      "responsibleRole": "Heraldic identity editor",
+      "requiredEvidence": "Final local/national flag approval or explicit historical readoption act and associated graphic.",
+      "source": "docs/audits/sim-close/exceptions-ledger.json",
+      "blocksAtlasDevelopment": false
+    }
+  ],
+  "counts": {
+    "technicalItems": 4,
+    "unresolvedRightsDossiers": 41,
+    "openPriorityDossiers": 6,
+    "evidenceOnlyDossiers": 47,
+    "overlappingPriorityHolderIds": [
+      "osm-r1748490"
+    ],
+    "distinctAtlasIds": 46
+  },
+  "referencedSymbolCohorts": [
+    {
+      "source": "public/data/symbols/audit-r8.json.gz",
+      "selectedImageSource": "public/data/symbols/registry-r8.json.gz",
+      "selector": {
+        "selectedImageNotNull": true,
+        "verdict": "SOURCE_CORROBORATED"
+      },
+      "count": 1131,
+      "primaryCategory": "DISPUTED_OR_UNCONFIRMED",
+      "responsibleRole": "Heraldic identity editor",
+      "scope": "Existing per-ID/per-kind audit rows are authoritative. No duplication or fresh investigation. These are not additional priority dossiers.",
+      "action": "CONSERVE_EXISTING_VERDICT;INDIVIDUAL_REVIEW_ONLY_ON_NEW_EVIDENCE;NO_AUTOMATIC_AUDIT"
+    },
+    {
+      "source": "public/data/symbols/audit-r8.json.gz",
+      "selectedImageSource": "public/data/symbols/registry-r8.json.gz",
+      "selector": {
+        "selectedImageNotNull": true,
+        "verdict": "CANDIDATE_UNVERIFIED"
+      },
+      "count": 656,
+      "primaryCategory": "DISPUTED_OR_UNCONFIRMED",
+      "responsibleRole": "Heraldic identity editor",
+      "scope": "Existing per-ID/per-kind audit rows are authoritative. No duplication or fresh investigation. These are not additional priority dossiers.",
+      "action": "CONSERVE_EXISTING_VERDICT;INDIVIDUAL_REVIEW_ONLY_ON_NEW_EVIDENCE;NO_AUTOMATIC_AUDIT"
+    },
+    {
+      "source": "public/data/symbols/audit-r8.json.gz",
+      "selectedImageSource": "public/data/symbols/registry-r8.json.gz",
+      "selector": {
+        "selectedImageNotNull": true,
+        "verdict": "VERIFIED_OFFICIAL"
+      },
+      "count": 11,
+      "primaryCategory": null,
+      "responsibleRole": "Heraldic identity editor",
+      "scope": "Existing per-ID/per-kind audit rows are authoritative. No duplication or fresh investigation. These are not additional priority dossiers.",
+      "action": "CONSERVE_EXISTING_VERDICT;INDIVIDUAL_REVIEW_ONLY_ON_NEW_EVIDENCE;NO_AUTOMATIC_AUDIT"
+    },
+    {
+      "source": "public/data/symbols/audit-r8.json.gz",
+      "selectedImageSource": "public/data/symbols/registry-r8.json.gz",
+      "selector": {
+        "selectedImageNotNull": true,
+        "verdict": "DISPUTED"
+      },
+      "count": 1,
+      "primaryCategory": "DISPUTED_OR_UNCONFIRMED",
+      "responsibleRole": "Heraldic identity editor",
+      "scope": "Existing per-ID/per-kind audit rows are authoritative. No duplication or fresh investigation. These are not additional priority dossiers.",
+      "action": "CONSERVE_EXISTING_VERDICT;INDIVIDUAL_REVIEW_ONLY_ON_NEW_EVIDENCE;NO_AUTOMATIC_AUDIT"
+    }
+  ],
+  "developmentBlocked": false,
+  "executionPolicy": "No unrelated functional remediation in SIM-CLOSE. Technical work proceeds through WEB-AUDIT; evidence/rights cases require individual reopening."
+}
