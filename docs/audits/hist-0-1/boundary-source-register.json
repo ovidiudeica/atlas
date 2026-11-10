@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "phase": "HIST-0.1",
+  "status": "PROVISIONAL",
+  "date": "2026-11-10",
+  "perimeter_not_a_modern_political_boundary": true,
+  "limit_segments": [
+    {
+      "id": "TISA",
+      "name": "Tisa",
+      "kind": "river_centerline",
+      "ohm_relation_ids": [
+        88555
+      ],
+      "verified": "partial OHM river relation with 34 way members",
+      "reconstruction_status": "PARTIAL_DISCONNECTED",
+      "open_issues": [
+        "Choose current source trace, branch and bank convention",
+        "Connect/verify endpoints"
+      ]
+    },
+    {
+      "id": "CARPATHIANS",
+      "name": "Munții Carpați",
+      "kind": "orographic",
+      "verified": "mountain range geographic concept",
+      "reconstruction_status": "NO_SINGLE_LINE_CONVENTION",
+      "open_issues": [
+        "Decide crest/watershed/northern foothills; independent elevation/geological dataset",
+        "Connect to Tisa and upper Southern Bug"
+      ]
+    },
+    {
+      "id": "SOUTHERN_BUG",
+      "name": "Bugul de Sud",
+      "kind": "river_centerline",
+      "ohm_way_count_observed": 24,
+      "verified": "24 OHM ways, traced approx lon 26.50294 lat 49.61165 to lon 30.59859 lat 48.13923",
+      "reconstruction_status": "DOWNSTREAM_INCOMPLETE",
+      "open_issues": [
+        "Trace downstream to Bug estuary and sea",
+        "Resolve discontinuities and choose a bank"
+      ]
+    },
+    {
+      "id": "BLACK_SEA",
+      "name": "Marea Neagră",
+      "kind": "coastline",
+      "verified": "geographical reference only",
+      "reconstruction_status": "SOURCE_GEOMETRY_PENDING",
+      "open_issues": [
+        "Acquire source shoreline",
+        "Define shoreline date, delta and estuary connections"
+      ]
+    },
+    {
+      "id": "BALKAN_MOUNTAINS",
+      "name": "Munții Balcani",
+      "kind": "orographic",
+      "verified": "mountain range geographic concept",
+      "reconstruction_status": "NO_SINGLE_LINE_CONVENTION",
+      "open_issues": [
+        "Decide ridge/northern foothills/other boundary, recover DEM",
+        "Connect with lower Danube and Black Sea"
+      ]
+    },
+    {
+      "id": "DANUBE",
+      "name": "Dunărea",
+      "kind": "river_centerline",
+      "ohm_relation_ids": [
+        89652,
+        2799900
+      ],
+      "verified": "OHM river relations identified",
+      "reconstruction_status": "RELEVANT_REACH_NOT_CERTIFIED",
+      "open_issues": [
+        "Choose upstream/downstream endpoints",
+        "Handle distributaries and Danube delta",
+        "Connect to Tisa and Balkan mountain boundary"
+      ]
+    }
+  ],
+  "explicit_non_admission": [
+    "Approximate envelope cannot be used as canonical historical polygon",
+    "Bounding-box overlap is not exact geometric intersection",
+    "OHM admin_level is not an ACTUAL administrative rank"
+  ],
+  "next_gate": "Specify mountain boundary convention, reconstruct fully sourced GIS linework, then validate polygon topology and OHM intersections"
+}
