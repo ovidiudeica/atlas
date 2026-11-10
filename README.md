@@ -45,3 +45,5 @@ See [PROJECT.md](PROJECT.md) for the initial scope, data policies, and approved 
 ## Licensing and attribution
 
 No repository-wide license has been selected. Public availability does not grant permission to reuse the original code or documentation automatically. External datasets, map tiles, historical materials, and artwork will be reviewed under their respective licenses and attribution requirements before publication. OpenStreetMap data is subject to the ODbL and applicable attribution obligations.
+
+Operational records: [WEB-MAINTENANCE baseline and assistive protocol](docs/audits/web-maintenance/WEB-MAINTENANCE-FINAL-REPORT.md) · [Repository consolidation and historical branch index](docs/audits/repo-cleanup/README.md). Historical modules remain planned; REPO-CLEANUP does not start HIST-0.

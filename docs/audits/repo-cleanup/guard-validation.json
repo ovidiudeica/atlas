@@ -1,0 +1,18 @@
+{
+  "testedAt": "2026-11-10T17:26:48.792Z",
+  "scope": "Synthetic stdin/control fixtures only. No push, remote branch or actual deletion. Exercises real CLI hook path and oldOID comparison.",
+  "tests": [
+    {
+      "name": "auditedOID",
+      "expectedExitCode": 0,
+      "actualExitCode": 0,
+      "outputSHA256": "9bfa64a529053ee5627739637ac752c9d13502840e69c988e27d9ca5cd5dcbba"
+    },
+    {
+      "name": "movedOID",
+      "expectedExitCode": 1,
+      "actualExitCode": 1,
+      "outputSHA256": "28d1fc5258280b868c9e9ebd8c1b6ee7e9a4dbbb4ac6c6fb9b9637494c94e3b6"
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "baseMain": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+  "checkedAt": "2026-11-10T17:06:46.468Z",
+  "trackedFiles": 539,
+  "totalBytes": 191766086,
+  "directories": {
+    ".github": {
+      "files": 1,
+      "bytes": 4404
+    },
+    "(root)": {
+      "files": 9,
+      "bytes": 86172
+    },
+    "data": {
+      "files": 32,
+      "bytes": 52384505
+    },
+    "docs": {
+      "files": 244,
+      "bytes": 82069067
+    },
+    "public": {
+      "files": 74,
+      "bytes": 54742295
+    },
+    "scripts": {
+      "files": 64,
+      "bytes": 571356
+    },
+    "src": {
+      "files": 53,
+      "bytes": 1623684
+    },
+    "tests": {
+      "files": 62,
+      "bytes": 284603
+    }
+  },
+  "largeFiles": [
+    {
+      "path": "docs/audits/sim-r5/source-metadata.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "fc01190ed3e10c01bf4986bba1e43cf3524118ea",
+      "bytes": 24915546,
+      "sha256": "cb70338bb0de49107ca5e4d86f09a5e511acbb7d7b4544248acb4da383924e24",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0544-2026.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "b2c8296ece3139c02da78a3d8f86f74a182e026b",
+      "bytes": 24766026,
+      "sha256": "53ea0c0f7e48d27e11cd1f5868e5ddfb872a0ab8042cd3de42202508d9895e30",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "data/candidates/phase3/actual/ro-administrative-v1.geojson.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "7bdf2214f9c138f634bd5207f1bd2433e34b6fdd",
+      "bytes": 12575973,
+      "sha256": "9b52cb8f6187440c2b613726c578b49885d2f0e7f67635b0782678afb4a6e120",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "data/candidates/phase3/actual/ro-administrative-v2.geojson.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "7bdf2214f9c138f634bd5207f1bd2433e34b6fdd",
+      "bytes": 12575973,
+      "sha256": "9b52cb8f6187440c2b613726c578b49885d2f0e7f67635b0782678afb4a6e120",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "docs/audits/sim-r7/evidence/chisinau-disposition-537d-2020.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "c35d58d0423bf3d45c6b77499401a5d7e472d00a",
+      "bytes": 7254116,
+      "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "data/candidates/phase3/actual/ro-administrative-simplified-v1.geojson.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "fc273dc48737daf521801ad6c433121c50cd5407",
+      "bytes": 6317638,
+      "sha256": "97958728eb457ac25dff44a3a6e31becc0589b3724f724169fc9d77f5276ae23",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "data/candidates/phase3/actual/catalog-v2.json",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "d6017a72583db4df4fb54424537f91ceb30dec43",
+      "bytes": 4794789,
+      "sha256": "e427469ad376cb111ba36758d47286232d291a483c113749be277a9013ac9eed",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "data/candidates/phase3/actual/catalog-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "bf18f0702fc9a953860a152952431777fce7b8fd",
+      "bytes": 4698839,
+      "sha256": "f4d83b5ffdf4b4971d3ed9e9d981249388c0ded99ef2b8fa14ed8ba3e16bbae4",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "docs/audits/sim-r7/institutional-wikipedia-followup.json",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "8b777a6b8bbe82dc7c464524f908bbda7777449c",
+      "bytes": 3382483,
+      "sha256": "e62da7c6e5923cf3b3e93638c7f30eb9b315cc29202ed589223e13619249bb47",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/registry-current.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "7cdf889ab39128e59f50fb71200ad6a4a37ecd11",
+      "bytes": 2945475,
+      "sha256": "3edc8235aec684c91da5f349dd3e1e20af3b140439c420f097752c4d63f1c8a4",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/registry.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "500eab5788a99102276c4abe7f1c925fce1a1397",
+      "bytes": 2945143,
+      "sha256": "e75fe4eb8a49f5dbb4bcb5827d725fa585cc9f1837083b3cdd1d3a15c0b16892",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/registry-r8.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "0d63fb60c20166bbde6f25f4087f8bf0efbc1315",
+      "bytes": 2941806,
+      "sha256": "e6fe731e54b35dc872801e8c8f915a0ec70c7674c402c3fbca41760b099f1ba1",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/registry-r7.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "146b0636eea8481665b88b82fa55b1ae1aea925b",
+      "bytes": 2941301,
+      "sha256": "90fddf3b4a2a69fdb934cd95fc64936acfb365a84ebf533abcc1a60f271fcd11",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/registry-r6.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "858c91c460bd1e54eacc06353efdc27af79c7acc",
+      "bytes": 2940863,
+      "sha256": "8bd6dbeec849e9a6cc8b6855af8b33fa985aaf3587a90a08d6350f9b1cdb6781",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-administrative-v2.geojson.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "6877382945adde27463308bd7f2a6116e8388a5d",
+      "bytes": 2686670,
+      "sha256": "8d5ed9f140af07bac8e5babc4ee33de53474e77f75be1f6a22512c7432a929b2",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/audit-r8.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "b2a8a8ca281feb088f128e5770d412bc69834ab4",
+      "bytes": 2584275,
+      "sha256": "ffe699b225a1fac484918761c4e539dbb1058979fadcbecb4b246e0f94c977b8",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/audit-r7.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "1db436c19501a6798a3e00cd13224fed4cceb3ed",
+      "bytes": 2576834,
+      "sha256": "e681b74801e8e3c278ff62f1e1ecd0668ddd310d6acd40f060b56b5be0b5dfa7",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-administrative-v1.geojson.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "0867ae022f856d84646c7cea705dc4beb60e48f7",
+      "bytes": 2559768,
+      "sha256": "97251a70da54b84d352d6616d10ff8d9c57c113161b65ca648d60224386a2140",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/audit-r6.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "e6ae56bf679f199cdb908ad044ca2def92fb011b",
+      "bytes": 2535533,
+      "sha256": "6fbd0df36d3b2860f14bc4c00259fb3519205150c3b5490b1ab1582cd6964e8f",
+      "worktreeRawMatchesBlob": true
+    },
+    {
+      "path": "public/data/symbols/audit.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "53c472cfe7f3dd7a9a7eada451f59206954e826f",
+      "bytes": 2531876,
+      "sha256": "ff1f6cddbe151d9cc44092a6e4fdfd8c97d232e7368d1c1edec398352cfe0d8d",
+      "worktreeRawMatchesBlob": true
+    }
+  ],
+  "duplicateGroups": [
+    {
+      "blob": "7bdf2214f9c138f634bd5207f1bd2433e34b6fdd",
+      "paths": [
+        "data/candidates/phase3/actual/ro-administrative-v1.geojson.gz",
+        "data/candidates/phase3/actual/ro-administrative-v2.geojson.gz"
+      ],
+      "decision": "KEEP",
+      "reason": "Identical bytes do not prove interchangeable paths or removal safety; historical/source/contract dependencies retained.",
+      "referenceEvidence": [
+        {
+          "path": "data/candidates/phase3/actual/ro-administrative-v1.geojson.gz",
+          "matchedLines": 3,
+          "examples": [
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/sim-r5/protected-files.json:57:      \"path\": \"data/candidates/phase3/actual/ro-administrative-v1.geojson.gz\",",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/web-audit-5/integrity-5a.json:70:      \"path\": \"data/candidates/phase3/actual/ro-administrative-v1.geojson.gz\",",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:scripts/data/build-phase3-v2.mjs:19:const ro=JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(baseline,'actual/ro-administrative-v1.geojson.gz'))));"
+          ]
+        },
+        {
+          "path": "data/candidates/phase3/actual/ro-administrative-v2.geojson.gz",
+          "matchedLines": 10,
+          "examples": [
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/EXCEPTION-INVESTIGATION-2026-11-06.md:12:3. **Independent Romania reference**: geo-spatial.org WFS `administrative-boundaries:ro_admin_lau_polygon`, sourced from ANCPI-provided public UAT boundaries, source feature version `2025-03-26`. Queried only SIRUTA `83749`, `83963`, `84629`. Retrieved source 63,059 bytes, SHA-256 `ed5e98e33bf0c1a4ef7acdaaace8e4b24732d466ed6513e167f47688c87e094`. Compared with original Phase 3 RO features `ro-administra",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/sim-r5/protected-files.json:61:      \"path\": \"data/candidates/phase3/actual/ro-administrative-v2.geojson.gz\",",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/web-audit-5/integrity-5a.json:75:      \"path\": \"data/candidates/phase3/actual/ro-administrative-v2.geojson.gz\",",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/implementation/PHASE-3.md:28:- `actual/ro-administrative-v2.geojson.gz` — 3,229 polygons including reviewed Brețcu/Ojdula.",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:scripts/data/build-phase3-simplified.mjs:32: ['ro-administrative-v2.geojson.gz','ro-admin.geojson','ro-administrative-simplified-v1.geojson.gz',3229],",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:scripts/data/build-phase3-v2.mjs:179:emit('actual/ro-administrative-v2.geojson.gz',ro,true);",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:scripts/data/build-phase4-assets.mjs:53: {country:'ro',mode:'detailed',kind:'administrative',filename:'ro-administrative-v2.geojson.gz'},",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:tests/phase-3-certified.test.mjs:18: ['ro-administrative-simplified-v1.geojson.gz','ro-administrative-v2.geojson.gz',3229],"
+          ]
+        }
+      ]
+    },
+    {
+      "blob": "63a88cde0dcc53744c09e703c655eaaa72d294f7",
+      "paths": [
+        "docs/audits/sim-r5/romania-flag-inspected.svg",
+        "public/flags/romania.svg"
+      ],
+      "decision": "KEEP",
+      "reason": "Identical bytes do not prove interchangeable paths or removal safety; historical/source/contract dependencies retained.",
+      "referenceEvidence": [
+        {
+          "path": "docs/audits/sim-r5/romania-flag-inspected.svg",
+          "matchedLines": 4,
+          "examples": [
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/sim-close/closure-manifest.json:215:      \"path\": \"docs/audits/sim-r5/romania-flag-inspected.svg\",",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/sim-close/source-index.json:211:      \"path\": \"docs/audits/sim-r5/romania-flag-inspected.svg\",",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/web-audit-5/integrity-5a.json:385:      \"path\": \"docs/audits/sim-r5/romania-flag-inspected.svg\",",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:scripts/audit/sim-r5/04-finalize.mjs:46: const svg=await readFile(new URL('docs/audits/sim-r5/romania-flag-inspected.svg',root),'utf8');"
+          ]
+        },
+        {
+          "path": "public/flags/romania.svg",
+          "matchedLines": 6,
+          "examples": [
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/WEB-R4.8-ENTITY-FLAGS.md:8:| Other RO entities | RO | `public/flags/romania.svg` | Romanian national flag |",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:docs/audits/web-audit-5/integrity-5a.json:1190:      \"path\": \"public/flags/romania.svg\",",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:src/data/entityFlags.d.mts:3:  'romania.svg'|'moldova.svg'|'pridnestrovie.svg'|null;",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:src/data/entityFlags.mjs:3:const COUNTRY_FLAG=Object.freeze({RO:'romania.svg',MD:'moldova.svg'});",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:tests/sim-r2a-reviewed-territorial-symbols.test.mjs:65:  assert.equal(flagFileForEntity(byId.get('osm-r90689')),'romania.svg');",
+            "2b679e65ad2da2e964ee6ad91347a96f107eeab6:tests/web-r48-entity-flags.test.mjs:37:  assert.equal(flagFileForEntity(byId.get('osm-r90689')),'romania.svg');"
+          ]
+        }
+      ]
+    }
+  ],
+  "temporaryCandidates": [],
+  "filesApprovedForRemoval": [],
+  "reasonNoFileDeletion": "No tracked temporary candidate; application/data/source/audit/generated assets have explicit build, test, provenance or historical roles. Path duplicates alone are insufficient proof of redundancy.",
+  "referenceSearch": {
+    "method": "One git grep -I -n -F pass over every tracked text file for all audited branch names/full head SHAs; binary assets reviewed by object identity and manifests.",
+    "hits": [
+      {
+        "path": "docs/audits/SIM-CLOSE-FINAL-REPORT.md",
+        "line": 7,
+        "excerpt": "- **SIM-R1**: CLOSED_DRAFT_NOT_MERGED_EVIDENCE_TRIAGE_ONLY. [Sursa](https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md). 4283 identity inventory declared;800/2123 QIDs examined; not legal certification."
+      },
+      {
+        "path": "docs/audits/SIM-R4-GLOBAL-SYMBOLS.md",
+        "line": 3,
+        "excerpt": "Base: `02a96733e919be8af4db4c2f7216eecd2dc9e1da` (SIM-R3.1). Dedicated branch: `sim-r4-global-symbols`."
+      },
+      {
+        "path": "docs/audits/SIM-R5-AUTHENTICITY.md",
+        "line": 170,
+        "excerpt": "Testele obligatorii sunt npm test, npm run build și suita Chromium completă scripts/ci/browser-smoke.mjs. Acestea verifică inventarul, nulurile, sursele, lipsa certificărilor automate, conservarea, corecțiile, aceeași stemă în arbore și antet, lipsa substituirii cu drapel, scalarea desktop/mobil, accesibilitatea, fallbackul și încărcarea progresivă. Verificarea CI a SHA-ului exact și publicarea se consultă în [workflow-ul repository-ului](https://github.com/ovidiudeica/atlas/actions/workflows/website.yml). Integrarea folosește exclusiv branch-ul sim-r5-authenticity și protecțiile main."
+      },
+      {
+        "path": "docs/audits/WEB-R3-PAGES-DEPLOY-RELIABILITY-2026-11-07.md",
+        "line": 5,
+        "excerpt": "1. PR #47 pe SHA `48f2d7a1ab3dd8d61c98c4235b450a56b8ba7907` a trecut integral testele, TypeScript/build și Chromium desktop/mobil și a fost integrat protejat la `d824dde063cb0e1da5abf72d1ab9771f31a9a024`."
+      },
+      {
+        "path": "docs/audits/WEB-R4.3-PREACCEPTANCE-AUDIT.md",
+        "line": 8,
+        "excerpt": "- Suitele existente: `tests/web-r40-entity-card-architecture.test.mjs`, `tests/web-r41-entity-role-cards.test.mjs`, `tests/web-r42-entity-card-ux-a11y.test.mjs`, `tests/web-r42-focus-restoration.test.mjs`, `scripts/ci/browser-smoke.mjs` — verificări de navigare, focus, arbore/filtre, export/permalink, desktop/tabletă/mobil RO/EN."
+      },
+      {
+        "path": "docs/audits/WEB-R4.3a-SOURCE-HEADING-DEDUP.md",
+        "line": 12,
+        "excerpt": "- `tests/web-r43a-source-heading-dedup.test.mjs` verifică în cod lipsa duplicării și păstrarea provenienței, inclusiv SHA-ul ACTUAL."
+      },
+      {
+        "path": "docs/audits/sim-close/closure-manifest.json",
+        "line": 991,
+        "excerpt": "      \"headSHA\": \"cfc030e49973d472c66d62620293cf65ba0afa00\","
+      },
+      {
+        "path": "docs/audits/sim-close/closure-manifest.json",
+        "line": 993,
+        "excerpt": "        \"url\": \"https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md\","
+      },
+      {
+        "path": "docs/audits/sim-close/closure-manifest.json",
+        "line": 998,
+        "excerpt": "        \"url\": \"https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/ATLAS-SYMBOL-AUDIT-ALL-4283-2026-11-08.csv\","
+      },
+      {
+        "path": "docs/audits/sim-close/reconciliation.json",
+        "line": 11,
+        "excerpt": "      \"ref\": \"https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md\","
+      },
+      {
+        "path": "docs/audits/sim-close/reconciliation.json",
+        "line": 185,
+        "excerpt": "      \"authority\": \"https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md\""
+      },
+      {
+        "path": "docs/audits/sim-close/source-index.json",
+        "line": 985,
+        "excerpt": "      \"headSHA\": \"cfc030e49973d472c66d62620293cf65ba0afa00\","
+      },
+      {
+        "path": "docs/audits/sim-close/source-index.json",
+        "line": 987,
+        "excerpt": "        \"url\": \"https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md\","
+      },
+      {
+        "path": "docs/audits/sim-close/source-index.json",
+        "line": 992,
+        "excerpt": "        \"url\": \"https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/ATLAS-SYMBOL-AUDIT-ALL-4283-2026-11-08.csv\","
+      },
+      {
+        "path": "docs/audits/web-audit-5/5a-publication-attestation.json",
+        "line": 4,
+        "excerpt": "  \"head\": \"8236fb37b66412f9be871ed10a3cde33369a88cf\","
+      },
+      {
+        "path": "docs/audits/web-audit-5/certification-manifest.json",
+        "line": 193,
+        "excerpt": "  \"separatePostMergeAttestation\": \"Corresponding web-audit-5c-final-certification PR body and outputs/WEB-AUDIT.5/WEB-AUDIT-5-ATTESTATION.json\""
+      },
+      {
+        "path": "docs/audits/web-audit-5/ci-5ab.json",
+        "line": 10,
+        "excerpt": "      \"headSHA\": \"8236fb37b66412f9be871ed10a3cde33369a88cf\","
+      },
+      {
+        "path": "docs/audits/web-audit-5/ci-5ab.json",
+        "line": 249,
+        "excerpt": "      \"headSHA\": \"c9ddec982c2736c614e682e9bbb9ade778a8b763\","
+      },
+      {
+        "path": "scripts/audit/sim-r5/06-report.mjs",
+        "line": 86,
+        "excerpt": "Testele obligatorii sunt npm test, npm run build și suita Chromium completă scripts/ci/browser-smoke.mjs. Acestea verifică inventarul, nulurile, sursele, lipsa certificărilor automate, conservarea, corecțiile, aceeași stemă în arbore și antet, lipsa substituirii cu drapel, scalarea desktop/mobil, accesibilitatea, fallbackul și încărcarea progresivă. Verificarea CI a SHA-ului exact și publicarea se consultă în [workflow-ul repository-ului](https://github.com/ovidiudeica/atlas/actions/workflows/website.yml). Integrarea folosește exclusiv branch-ul sim-r5-authenticity și protecțiile main."
+      },
+      {
+        "path": "tests/sim-close-registers.test.mjs",
+        "line": 6,
+        "excerpt": "test('SIM-CLOSE:historical references, archival image exposures and generated hashes are verifiable without fetching sources',async()=>{for(const f of manifest.sourceArchives)assert.equal(sha(await readFile(f.path)),f.sha256,f.path);for(const f of manifest.generatedArtifacts)assert.equal(sha(await readFile(f.path)),f.sha256,f.path);assert.equal(sha(await readFile(root+'source-index.json')),manifest.sourceIndexSHA256);for(const r of rights.cases){for(const ref of r.evidenceRefs)assert.ok((await readFile(ref.path)).length);for(const copy of r.archivalCopies)assert.equal(sha(await readFile(copy.path)),copy.sha256);}assert.equal(rights.summary.unresolvedWithArchiveCopies,6);assert.equal(rights.s"
+      }
+    ],
+    "scope": "Historical documents remain byte-identical; current index maps names to exact commits instead of rewriting old reports."
+  },
+  "workflowReview": {
+    "files": [
+      ".github/workflows/website.yml"
+    ],
+    "decision": "KEEP_UNCHANGED",
+    "reason": "Single website CI; PR and main gates, reproducibility, Chromium, exact-head checkout and main-only Pages are necessary and already healthy."
+  },
+  "dependencyReview": {
+    "packageSHA256": "7c53d7c2453b268b4fc198d2e1128b0a479aa1c51a8e5b602f25cb8c261cb8a4",
+    "lockSHA256": "afbb360e2ed2106e9fb9e695499ba7aa5a118bd98049b729734f675263c2082c",
+    "decision": "KEEP_UNCHANGED",
+    "reason": "No demonstrated unused dependency; no removal or addition."
+  },
+  "gitignoreReview": {
+    "content": "node_modules/\ndist/\n.env\n.DS_Store\nartifacts/\n\n/work/\n",
+    "decision": "KEEP_UNCHANGED",
+    "reason": "Existing rules exclude node_modules, dist, artifacts and task-local work; no tracked build/temp directory."
+  },
+  "plannedExistingFileEdits": [
+    {
+      "path": "README.md",
+      "reason": "Current documentation navigation only; append links to maintenance and cleanup index. Historical documents/data untouched."
+    }
+  ]
+}

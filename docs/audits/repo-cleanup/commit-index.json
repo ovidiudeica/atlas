@@ -1,0 +1,3419 @@
+{
+  "baseMain": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+  "scope": "All commits reachable from audited heads but not from baseline main; original metadata/intermediate content will remain reachable through original keep branches and the single archive tag.",
+  "count": 310,
+  "commits": [
+    {
+      "sha": "cfc030e49973d472c66d62620293cf65ba0afa00",
+      "parents": [
+        "8a56ef47626e9739467e9e57d89e1fa8f9d7a541"
+      ],
+      "tree": "c30861a026e7fa04c9ee7267a657e0292d809174",
+      "authorDate": "2026-11-08T14:39:29Z",
+      "commitDate": "2026-11-08T14:39:29Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R1: audit all 4,283 Atlas identities for official territorial symbols and evidence gaps"
+    },
+    {
+      "sha": "a49374c07fab66a11c4bb8db8b8bbc71270f50ec",
+      "parents": [
+        "670062655577ebbcf82fdcd40d93a1646f8db5e3"
+      ],
+      "tree": "2447ea70f0a092392fdcf44cc945681fb9c882f5",
+      "authorDate": "2026-11-08T18:21:49Z",
+      "commitDate": "2026-11-08T18:21:49Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R2b.1: audit 74 county and district identities with legal and graphic evidence gates"
+    },
+    {
+      "sha": "9fbd5f66e55cc7ce761af0a06e7369f246cb9488",
+      "parents": [
+        "ffb6aa4c7ad72915ef8b5e3174d353f54229b6f7"
+      ],
+      "tree": "9f978b1869c7438f7b99b1a0c714511ddaf9822b",
+      "authorDate": "2026-11-07T09:28:49Z",
+      "commitDate": "2026-11-07T09:28:49Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify both left-bank nodes and district/municipality aliases on desktop/mobile"
+    },
+    {
+      "sha": "ffb6aa4c7ad72915ef8b5e3174d353f54229b6f7",
+      "parents": [
+        "b7a8f0dd756d288c851f57028ef8d272ec0eae67"
+      ],
+      "tree": "0751553269bb76a76906deadaf566d3ea5d26dcd",
+      "authorDate": "2026-11-07T09:27:40Z",
+      "commitDate": "2026-11-07T09:27:40Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): enforce concise labels over all 8566 catalog locale entries"
+    },
+    {
+      "sha": "b7a8f0dd756d288c851f57028ef8d272ec0eae67",
+      "parents": [
+        "61b22e8a6ca090deb7b1fa3c85334dcffdbc747d"
+      ],
+      "tree": "acbd5f97df33523b3df93c4b3283cdc79f6684a7",
+      "authorDate": "2026-11-07T09:26:19Z",
+      "commitDate": "2026-11-07T09:26:19Z",
+      "author": "Ovidiu",
+      "subject": "fix(tree): shorten all district, municipality and left-bank display names"
+    },
+    {
+      "sha": "61b22e8a6ca090deb7b1fa3c85334dcffdbc747d",
+      "parents": [
+        "41493d5495e9be146d8665698fabdc6b1c08a2af"
+      ],
+      "tree": "6a5122e2b7e97a60f17f373d0909a6cace1b5c95",
+      "authorDate": "2026-11-07T09:20:27Z",
+      "commitDate": "2026-11-07T09:20:27Z",
+      "author": "Ovidiu",
+      "subject": "test(audit): inventory all displayed territorial tree names in certified catalog"
+    },
+    {
+      "sha": "10abbf8c9900d264203c33d3eb3cb0b9b88f84c5",
+      "parents": [
+        "15c7fd304bb78fdf7125001a7ebc08b36ca06a13"
+      ],
+      "tree": "fc4d8ffe2614106eb72502939e723c3383d9be27",
+      "authorDate": "2026-11-07T12:09:41Z",
+      "commitDate": "2026-11-07T12:09:41Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): fix combined-role label selector syntax"
+    },
+    {
+      "sha": "15c7fd304bb78fdf7125001a7ebc08b36ca06a13",
+      "parents": [
+        "94471f5f6565ed6d1123c129e5e1069b22b12831"
+      ],
+      "tree": "1c5f7d0bb509240b5f8a677e92b77fa93f5df160",
+      "authorDate": "2026-11-07T12:08:59Z",
+      "commitDate": "2026-11-07T12:08:59Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): match ADM prefix when entity has combined ADM/NTS labels"
+    },
+    {
+      "sha": "94471f5f6565ed6d1123c129e5e1069b22b12831",
+      "parents": [
+        "3f52081dbcfc00bdbb086edaa6688273bcab8a23"
+      ],
+      "tree": "0b5ef3971836b1798be2973e1d7b1768969833d7",
+      "authorDate": "2026-11-07T12:06:12Z",
+      "commitDate": "2026-11-07T12:06:12Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): match original capitalization and source whitespace in regression checks"
+    },
+    {
+      "sha": "3f52081dbcfc00bdbb086edaa6688273bcab8a23",
+      "parents": [
+        "3362dfbe2362033d82927ff61d4f3cd6591c28b1"
+      ],
+      "tree": "6a9de3040dec340b6872cb48713023483d704b74",
+      "authorDate": "2026-11-07T12:04:58Z",
+      "commitDate": "2026-11-07T12:04:58Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): replace flat Gagauzia/Chisinau assertions with nested desktop/mobile hierarchy audit"
+    },
+    {
+      "sha": "3362dfbe2362033d82927ff61d4f3cd6591c28b1",
+      "parents": [
+        "6bd4fc802dd7b34ec7b730a2874beb17c4b78fda"
+      ],
+      "tree": "962c518af344f561e7c4678059788c032a932767",
+      "authorDate": "2026-11-07T12:02:33Z",
+      "commitDate": "2026-11-07T12:02:33Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): certify displayed Gagauzia and Chisinau nested child identities, ordering and nonmutation"
+    },
+    {
+      "sha": "6bd4fc802dd7b34ec7b730a2874beb17c4b78fda",
+      "parents": [
+        "42e3e90db1e38e035bb5abd0327381eec3da06f6"
+      ],
+      "tree": "fb86d7956845f33efe5a60ea7f8e0c1ab44b2061",
+      "authorDate": "2026-11-07T12:00:46Z",
+      "commitDate": "2026-11-07T12:00:46Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): source-verified Gagauzia raion nesting and Chisinau city-sector grouping"
+    },
+    {
+      "sha": "72a2dc4c48b4a7b0d68e701ef801e2f3720eaaf6",
+      "parents": [
+        "c00a193b6f9b442398acf434cb69370134300518"
+      ],
+      "tree": "3f58e28793952ede09cf0222586f1093b4f71cab",
+      "authorDate": "2026-11-07T02:36:48Z",
+      "commitDate": "2026-11-07T02:36:48Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): remove retired Administrative export selector"
+    },
+    {
+      "sha": "c00a193b6f9b442398acf434cb69370134300518",
+      "parents": [
+        "da414f6cecabb8e722eeaa416859f035dec8c55a"
+      ],
+      "tree": "55d8f18e833d2c7feeb37619b250ff14e3a23e22",
+      "authorDate": "2026-11-07T02:35:13Z",
+      "commitDate": "2026-11-07T02:35:13Z",
+      "author": "Ovidiu",
+      "subject": "test(ux): assert global legend container class without requiring a single class"
+    },
+    {
+      "sha": "da414f6cecabb8e722eeaa416859f035dec8c55a",
+      "parents": [
+        "56afcc48115c0d7f093ce7f638679c1cbfca85c5"
+      ],
+      "tree": "b525829d9cd46ef1810a14a7bf81f3bdafc5ed68",
+      "authorDate": "2026-11-07T02:34:14Z",
+      "commitDate": "2026-11-07T02:34:14Z",
+      "author": "Ovidiu",
+      "subject": "test(ux): exercise global map tools, keyboard access and module-independent workflows"
+    },
+    {
+      "sha": "56afcc48115c0d7f093ce7f638679c1cbfca85c5",
+      "parents": [
+        "828f0e2ed6f62bd59a253afb6e9d7eef98995e6d"
+      ],
+      "tree": "37330ab3011378b3493a07c051936eda7377fdb9",
+      "authorDate": "2026-11-07T02:32:20Z",
+      "commitDate": "2026-11-07T02:32:20Z",
+      "author": "Ovidiu",
+      "subject": "feat(ux): move global map utilities out of the Administrative module"
+    },
+    {
+      "sha": "28d0558e231ffef3207f63995abdbd41f8c11359",
+      "parents": [
+        "332828808444a42e0b83620f9861c08ef378cec5"
+      ],
+      "tree": "2a45b3822088421ddc0355c32bb11fca21ed8fa5",
+      "authorDate": "2026-11-07T01:38:40Z",
+      "commitDate": "2026-11-07T01:38:40Z",
+      "author": "Ovidiu",
+      "subject": "test(visual): capture full mobile NTS1 border and visible legend in Chromium"
+    },
+    {
+      "sha": "332828808444a42e0b83620f9861c08ef378cec5",
+      "parents": [
+        "cda02b420d48f3f59e66f03053990b6b41836775"
+      ],
+      "tree": "ceaa7e0d08c7dfee85ef351fb9b1a19ba3319c9c",
+      "authorDate": "2026-11-07T01:35:24Z",
+      "commitDate": "2026-11-07T01:35:24Z",
+      "author": "Ovidiu",
+      "subject": "test(map): verify presentation-styled native GeoJSON remains source-faithful"
+    },
+    {
+      "sha": "cda02b420d48f3f59e66f03053990b6b41836775",
+      "parents": [
+        "e0ee0287ccaff6ac903e3289ffcef11a0fb835c7"
+      ],
+      "tree": "60393f0e04ae22040bec57f110d33b777f9a392d",
+      "authorDate": "2026-11-07T01:34:32Z",
+      "commitDate": "2026-11-07T01:34:32Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify neutral roots, unchecked filters and NTS 1 style priority on desktop/mobile"
+    },
+    {
+      "sha": "e0ee0287ccaff6ac903e3289ffcef11a0fb835c7",
+      "parents": [
+        "11480f9788f5401c034df5819224eddd86ace7d8"
+      ],
+      "tree": "b505dfa632feabdf9dac8222a291fb113c129a63",
+      "authorDate": "2026-11-07T01:33:18Z",
+      "commitDate": "2026-11-07T01:33:18Z",
+      "author": "Ovidiu",
+      "subject": "feat(legend): illustrate exact per-level boundary colors, widths and statistical dash"
+    },
+    {
+      "sha": "11480f9788f5401c034df5819224eddd86ace7d8",
+      "parents": [
+        "214601e8ff0c51dccbf2d532aa54341290a4fdbf"
+      ],
+      "tree": "ce796f84e32b2c50a8a63774300940f0d66d9c19",
+      "authorDate": "2026-11-07T01:31:56Z",
+      "commitDate": "2026-11-07T01:31:56Z",
+      "author": "Ovidiu",
+      "subject": "feat(map): add independent filter overlays and source-deduplicated level paint"
+    },
+    {
+      "sha": "214601e8ff0c51dccbf2d532aa54341290a4fdbf",
+      "parents": [
+        "a1b01165639b6a1e1903572b61668b55cb963574"
+      ],
+      "tree": "625691a5e58db790282c52abd5a041b0ff95a5c3",
+      "authorDate": "2026-11-07T01:30:58Z",
+      "commitDate": "2026-11-07T01:30:58Z",
+      "author": "Ovidiu",
+      "subject": "feat(map): define distinct reference, ADM and NUTS/NTS cartographic styles"
+    },
+    {
+      "sha": "f8ee6dca978d3c24e11ff21962bb7aba65e31eb9",
+      "parents": [
+        "4b6b68e819108999c013ffb3b27d85d5a5cfadaa"
+      ],
+      "tree": "bfe9c3c918d2b14f1f33ee4966eaf3fd96b93187",
+      "authorDate": "2026-11-07T08:57:01Z",
+      "commitDate": "2026-11-07T08:57:01Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): compare short name text without appended statistical role"
+    },
+    {
+      "sha": "4b6b68e819108999c013ffb3b27d85d5a5cfadaa",
+      "parents": [
+        "5d240a4a350e20b957ac18089af5ab15467f1aab"
+      ],
+      "tree": "eb5d1b41d52be16abeb2d3a5aa1465b186dacd33",
+      "authorDate": "2026-11-07T08:55:33Z",
+      "commitDate": "2026-11-07T08:55:33Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): capture exact search state when verifying MD120 short label"
+    },
+    {
+      "sha": "5d240a4a350e20b957ac18089af5ab15467f1aab",
+      "parents": [
+        "1075e39429c523887b92c4a57380a245e512a04b"
+      ],
+      "tree": "4ab97285f8354d9ba93c1fc11c649a3dae7100a0",
+      "authorDate": "2026-11-07T08:51:35Z",
+      "commitDate": "2026-11-07T08:51:35Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): check short labels with Administrative tree visible"
+    },
+    {
+      "sha": "1075e39429c523887b92c4a57380a245e512a04b",
+      "parents": [
+        "13419b37222fcc4c65ed68fba1c80ea090de016e"
+      ],
+      "tree": "6e6908060e7b1278e68a9fcfd902fe862729faaa",
+      "authorDate": "2026-11-07T08:49:57Z",
+      "commitDate": "2026-11-07T08:49:57Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): concise Moldova and left-bank labels preserving official search"
+    },
+    {
+      "sha": "ad00d2815dfb978e34d937b51e7a5c03944a36d5",
+      "parents": [
+        "c5b5a3b07e1c43fdf6887372537fc752ab740392"
+      ],
+      "tree": "59da346b255ba164b59f454b48cb8c0f2f1d9292",
+      "authorDate": "2026-11-07T01:03:02Z",
+      "commitDate": "2026-11-07T01:03:02Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): target Brețcu row after search reset"
+    },
+    {
+      "sha": "c5b5a3b07e1c43fdf6887372537fc752ab740392",
+      "parents": [
+        "dd001c9214b979f3624313d74ac560429e0a6988"
+      ],
+      "tree": "4bcd81a686c7a9c9bab1f2c601b756755cbfc967",
+      "authorDate": "2026-11-07T01:00:32Z",
+      "commitDate": "2026-11-07T01:00:32Z",
+      "author": "Ovidiu",
+      "subject": "fix(ci): declare live filter helper and correct Chromium selectors"
+    },
+    {
+      "sha": "dd001c9214b979f3624313d74ac560429e0a6988",
+      "parents": [
+        "ac16c3ba110371dec256ae9f99ae318ec7a3e08c"
+      ],
+      "tree": "1fe8da5cbaf8e0c15b1213678d94ec8b5783e090",
+      "authorDate": "2026-11-07T00:59:12Z",
+      "commitDate": "2026-11-07T00:59:12Z",
+      "author": "Ovidiu",
+      "subject": "feat(filters): place tree-mode selector beside tree and apply level toggles immediately"
+    },
+    {
+      "sha": "733b5c390273461796d5d975cd2250f9ca18bb40",
+      "parents": [
+        "3189bfd17de07d908df782ec46b0c9b01715a4f6"
+      ],
+      "tree": "ce123c77f73124c4acb06fdb8b98a1dd4f3ae14f",
+      "authorDate": "2026-11-08T15:08:33Z",
+      "commitDate": "2026-11-08T15:08:33Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R2a CI: update legacy emoji-flag assertion for exact-ID heraldic fallback"
+    },
+    {
+      "sha": "3189bfd17de07d908df782ec46b0c9b01715a4f6",
+      "parents": [
+        "97a140b06b1a5135754e17d1d3adf3c0d58c9fae"
+      ],
+      "tree": "57be79d6604e41d25b45bc4eaac2ea6077515980",
+      "authorDate": "2026-11-08T15:06:11Z",
+      "commitDate": "2026-11-08T15:06:11Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R2a.3: certify seven exact-ID symbols, provenance hashes and non-inheritance"
+    },
+    {
+      "sha": "97a140b06b1a5135754e17d1d3adf3c0d58c9fae",
+      "parents": [
+        "8c4ad700f5d24814979c5ce451fa410e5ed32f71"
+      ],
+      "tree": "5e6bd21f75b62a509774c91cfed8362d326d1b6c",
+      "authorDate": "2026-11-08T15:05:01Z",
+      "commitDate": "2026-11-08T15:05:01Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R2a.2: render verified local coats and flags in cards with owner and act"
+    },
+    {
+      "sha": "8c4ad700f5d24814979c5ce451fa410e5ed32f71",
+      "parents": [
+        "8a56ef47626e9739467e9e57d89e1fa8f9d7a541"
+      ],
+      "tree": "20d441f207e2307f09a2e3f7bb0712c393c0350b",
+      "authorDate": "2026-11-08T15:02:49Z",
+      "commitDate": "2026-11-08T15:02:49Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R2a.1: retain official heraldic source images, exact-ID evidence and 2024 Bucharest hold"
+    },
+    {
+      "sha": "b451fd4389a56f4ebb1f3c37ce20eaf524eb3293",
+      "parents": [
+        "d6032af6d4e1d0fa855e13e7fe3519db62b6123c"
+      ],
+      "tree": "abd5fae3e805dcf743a4753c5a78eeaf0d7f450c",
+      "authorDate": "2026-11-07T08:20:56Z",
+      "commitDate": "2026-11-07T08:20:56Z",
+      "author": "Ovidiu",
+      "subject": "fix(ux): draw About icon with a font-safe CSS circle"
+    },
+    {
+      "sha": "d6032af6d4e1d0fa855e13e7fe3519db62b6123c",
+      "parents": [
+        "c096ed3606101ae7a523fed945f5e63aae5d5fb0"
+      ],
+      "tree": "19df9a81805440aefaf084044b0295988c0f3112",
+      "authorDate": "2026-11-07T08:17:26Z",
+      "commitDate": "2026-11-07T08:17:26Z",
+      "author": "Ovidiu",
+      "subject": "test(ux): verify three-tool layout, contextual legend, bottom sheet and swipe dismissal"
+    },
+    {
+      "sha": "c096ed3606101ae7a523fed945f5e63aae5d5fb0",
+      "parents": [
+        "e414b7b31a88b92fd8680a4ed8468bf6962830cb"
+      ],
+      "tree": "40b39100d99b7183730ff02fe30a7b382a12bfcd",
+      "authorDate": "2026-11-07T08:15:25Z",
+      "commitDate": "2026-11-07T08:15:25Z",
+      "author": "Ovidiu",
+      "subject": "feat(ux): compact map tools and contextual legend with mobile bottom sheet"
+    },
+    {
+      "sha": "7bdbbd95a1288d95d0690d8b9fb26a4b90b04ed6",
+      "parents": [
+        "51342e3118a762e6344644fb085b882755a8805c"
+      ],
+      "tree": "1a7f2fde2fa22a820ef116b06a59d783f86dc6fe",
+      "authorDate": "2026-11-07T13:39:22Z",
+      "commitDate": "2026-11-07T13:39:22Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): disclose three pre-existing published Căușeni versus OSMB Nistrenia parent conflicts"
+    },
+    {
+      "sha": "51342e3118a762e6344644fb085b882755a8805c",
+      "parents": [
+        "13820e919f9ab0ffaea9fe5e180e10e1c2f0ea1b"
+      ],
+      "tree": "17948a97b3a28845c4f4fe517df0efb0dc66861f",
+      "authorDate": "2026-11-07T13:38:54Z",
+      "commitDate": "2026-11-07T13:38:54Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): reconcile released Căușeni 30 vs OSMB 27 and record three NI source-parent conflicts"
+    },
+    {
+      "sha": "13820e919f9ab0ffaea9fe5e180e10e1c2f0ea1b",
+      "parents": [
+        "26ff183f397bd46a8db2c469325da75a9aa5b21a"
+      ],
+      "tree": "201db38e6219c6ffc003693f9f61e119d2a30351",
+      "authorDate": "2026-11-07T13:37:18Z",
+      "commitDate": "2026-11-07T13:37:18Z",
+      "author": "Ovidiu",
+      "subject": "test(diagnostic): expose exact South catalog-versus-OSMB child delta and normalize historical Romanian glyphs"
+    },
+    {
+      "sha": "26ff183f397bd46a8db2c469325da75a9aa5b21a",
+      "parents": [
+        "0ddea6daee9ec52f1f81d95bd911bf43d3026594"
+      ],
+      "tree": "b42d8d9c05166434d2c9aa11161adc85bffd693c",
+      "authorDate": "2026-11-07T13:34:44Z",
+      "commitDate": "2026-11-07T13:34:44Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify Nord Centru Sud nested regional and local seat order desktop/mobile"
+    },
+    {
+      "sha": "0ddea6daee9ec52f1f81d95bd911bf43d3026594",
+      "parents": [
+        "2bf0d3433ac68c147dc1a3ed62caa3a251e45349"
+      ],
+      "tree": "59746b7753adb0408594793b542f7f74a5d5baf8",
+      "authorDate": "2026-11-07T13:33:45Z",
+      "commitDate": "2026-11-07T13:33:45Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): record region statistical versus canonical administrative hierarchy policy"
+    },
+    {
+      "sha": "2bf0d3433ac68c147dc1a3ed62caa3a251e45349",
+      "parents": [
+        "7b8adca39a2440306f4fe6a4296a4b1b14ddf343"
+      ],
+      "tree": "8416cfd4478b411ef8003eb9984f1cbeffa6b78c",
+      "authorDate": "2026-11-07T13:33:10Z",
+      "commitDate": "2026-11-07T13:33:10Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): exhaustively verify Nord Centru Sud 33 seats and 853 children in both locales"
+    },
+    {
+      "sha": "7b8adca39a2440306f4fe6a4296a4b1b14ddf343",
+      "parents": [
+        "c7142b13e189147eae06fc7342ad419a325ed21b"
+      ],
+      "tree": "cf99da576a1363e7f9d3870f0a98546a3ba7e907",
+      "authorDate": "2026-11-07T13:31:50Z",
+      "commitDate": "2026-11-07T13:31:50Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): prioritize MD North Centre South regional agency seats and ADM4 locality seats"
+    },
+    {
+      "sha": "6bd8a03b87c07fcc9263fc7b6a4f161e53f2afda",
+      "parents": [
+        "b389eb002a4fea2248ab04f64e48171633fea952"
+      ],
+      "tree": "d26c8bbca978fa48161c4d15771c34a8690abc6a",
+      "authorDate": "2026-11-07T14:25:14Z",
+      "commitDate": "2026-11-07T14:25:14Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): preserve Chițcani display-only change and dual administration provenance"
+    },
+    {
+      "sha": "b389eb002a4fea2248ab04f64e48171633fea952",
+      "parents": [
+        "ab432a0606b1a5b24611db2ea9934345b29e8cde"
+      ],
+      "tree": "e44a1ce6739cde5390d2fc60778f12ff47f419cc",
+      "authorDate": "2026-11-07T14:24:37Z",
+      "commitDate": "2026-11-07T14:24:37Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify Chițcani localized short label with original council alias search"
+    },
+    {
+      "sha": "ab432a0606b1a5b24611db2ea9934345b29e8cde",
+      "parents": [
+        "f1d05b4a0d50f1c6fa7f010413913afe8e22e98b"
+      ],
+      "tree": "5525a15585cee8563f7788c5acfb9b5895b85629",
+      "authorDate": "2026-11-07T14:24:08Z",
+      "commitDate": "2026-11-07T14:24:08Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): assert Chițcani RO short name and original EN OSMB/CUATM identities"
+    },
+    {
+      "sha": "f1d05b4a0d50f1c6fa7f010413913afe8e22e98b",
+      "parents": [
+        "8584739fe31a89cc7bb0a86797aa797e55c50460"
+      ],
+      "tree": "20440fb283a8bcdf0638dae219d13492e34eea55",
+      "authorDate": "2026-11-07T14:23:46Z",
+      "commitDate": "2026-11-07T14:23:46Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): show Chițcani instead of OSMB council descriptor in Romanian tree"
+    },
+    {
+      "sha": "d4d7dd64aa0fdca516c8fc76953b26a6875f14ad",
+      "parents": [
+        "88a980c17415a4953743d57ed5a25492b90bbf00"
+      ],
+      "tree": "3d22326a2a86b884781d4f2b97fc7635adf173fb",
+      "authorDate": "2026-11-07T14:52:35Z",
+      "commitDate": "2026-11-07T14:52:35Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): assert CUATM official Popencu title, keep original OSMB search alias"
+    },
+    {
+      "sha": "88a980c17415a4953743d57ed5a25492b90bbf00",
+      "parents": [
+        "7d59bfcd1e11f28f191d4c5fe598a20d53a2ed2c"
+      ],
+      "tree": "7065c3a90c590158a43bfcd20a3f4a0903f0e093",
+      "authorDate": "2026-11-07T14:51:03Z",
+      "commitDate": "2026-11-07T14:51:03Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): document 44 verified UATSN aliases and Popencu/Pervomaisc provenance"
+    },
+    {
+      "sha": "7d59bfcd1e11f28f191d4c5fe598a20d53a2ed2c",
+      "parents": [
+        "6af2e32725f5e76232f6b16122f3011d340645a4"
+      ],
+      "tree": "7da0415a1633630c2d94ca88ff45a75d9678f77d",
+      "authorDate": "2026-11-07T14:50:38Z",
+      "commitDate": "2026-11-07T14:50:38Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify Popencu RO EN, Pervomaisc and Dubăsari with source alias search"
+    },
+    {
+      "sha": "6af2e32725f5e76232f6b16122f3011d340645a4",
+      "parents": [
+        "8e9c17919db74b37b19dc044957769f426227497"
+      ],
+      "tree": "47379e27f1d1928a21fd1034892b298e4a2dc9bb",
+      "authorDate": "2026-11-07T14:50:09Z",
+      "commitDate": "2026-11-07T14:50:09Z",
+      "author": "Ovidiu",
+      "subject": "test(east): validate all 44 ID-bound short names and Popencu Pervomaisc homonyms"
+    },
+    {
+      "sha": "8e9c17919db74b37b19dc044957769f426227497",
+      "parents": [
+        "82d0023df97cc3a3f80f7a190181fd00fcbdfe79"
+      ],
+      "tree": "b0c9512e38103bd80edc4da25e493666b799a3bf",
+      "authorDate": "2026-11-07T14:49:36Z",
+      "commitDate": "2026-11-07T14:49:36Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): account for 44 UATSN Romanian names and two English corrections"
+    },
+    {
+      "sha": "82d0023df97cc3a3f80f7a190181fd00fcbdfe79",
+      "parents": [
+        "6a693a124b4d1d9ddffdabaf12789b11287603ac"
+      ],
+      "tree": "3412c007ca98a5daa45ff4255cc3bcb9dcdcf66f",
+      "authorDate": "2026-11-07T14:49:13Z",
+      "commitDate": "2026-11-07T14:49:13Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): use 44 verified UATSN council short labels plus Popencu/Pervomaisc aliases"
+    },
+    {
+      "sha": "83d3df6dba928225760c2d16a87e380265ea2f97",
+      "parents": [
+        "ff8b4ae4fff6a5a6c1e2ad49d403241ca08f3efd"
+      ],
+      "tree": "6804a6d94c1fc2165d954de7b3461b119886a5ba",
+      "authorDate": "2026-11-07T15:03:50Z",
+      "commitDate": "2026-11-07T15:03:50Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): capture visible Hlinaia CUATM badges on desktop and mobile East tree"
+    },
+    {
+      "sha": "ff8b4ae4fff6a5a6c1e2ad49d403241ca08f3efd",
+      "parents": [
+        "d3dfb13cc380d05113d3be3e44e4fd1f0d178b03"
+      ],
+      "tree": "310f5c2e05f26bd71d2459d1bbc6554ce7bca229",
+      "authorDate": "2026-11-07T15:00:54Z",
+      "commitDate": "2026-11-07T15:00:54Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): allow accessible CUATM metadata on UATSN ADM8 homonym rows"
+    },
+    {
+      "sha": "d3dfb13cc380d05113d3be3e44e4fd1f0d178b03",
+      "parents": [
+        "3d25861486d43eab58b2b74128e53bc38d526e72"
+      ],
+      "tree": "78d36f2ca2bf341b456cd99cb51d37acdceeb63e",
+      "authorDate": "2026-11-07T14:59:26Z",
+      "commitDate": "2026-11-07T14:59:26Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): define East Bender/UATSN order and Hlinaia homonym policy"
+    },
+    {
+      "sha": "3d25861486d43eab58b2b74128e53bc38d526e72",
+      "parents": [
+        "444c5ffbd23e7a858b86186667af6d652378131e"
+      ],
+      "tree": "46d9dc756a00dc656669e5b758947e16ef42dd54",
+      "authorDate": "2026-11-07T14:58:59Z",
+      "commitDate": "2026-11-07T14:58:59Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): restore English locale after East/NTS3 bilingual inspection"
+    },
+    {
+      "sha": "444c5ffbd23e7a858b86186667af6d652378131e",
+      "parents": [
+        "c34771ef410443834473323528e847449b3f452f"
+      ],
+      "tree": "cbbbe483ee6abd37bbb0bae5f3dd0f2543c435a8",
+      "authorDate": "2026-11-07T14:58:33Z",
+      "commitDate": "2026-11-07T14:58:33Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): inspect East Bender/UATSN 81 nodes and Hlinaia CUATM metadata in both languages"
+    },
+    {
+      "sha": "c34771ef410443834473323528e847449b3f452f",
+      "parents": [
+        "ce08cfcabf993034f8f825f8fbd27122b0d49cea"
+      ],
+      "tree": "1e2c75dbb889e5d2241c96bf11280fe8eb9e5fc7",
+      "authorDate": "2026-11-07T14:58:07Z",
+      "commitDate": "2026-11-07T14:58:07Z",
+      "author": "Ovidiu",
+      "subject": "test(east): verify 81 ADM8 sorting, 2 ADM4, duplicate Hlinaia, view invariants"
+    },
+    {
+      "sha": "ce08cfcabf993034f8f825f8fbd27122b0d49cea",
+      "parents": [
+        "e675a880ddc417c31a36988639a6264af2d5c330"
+      ],
+      "tree": "fb61be46a0cf68fcd44ea914ac1cf3ffd182e262",
+      "authorDate": "2026-11-07T14:56:44Z",
+      "commitDate": "2026-11-07T14:56:44Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): visually distinguish Hlinaia homonyms by CUATM 5029/7625 without renaming"
+    },
+    {
+      "sha": "e675a880ddc417c31a36988639a6264af2d5c330",
+      "parents": [
+        "f092d37e5f5e9f1627241b09af8496ac2237fecc"
+      ],
+      "tree": "2b2ff080a70151e82a7278cbc89fce388aa00dd2",
+      "authorDate": "2026-11-07T14:56:28Z",
+      "commitDate": "2026-11-07T14:56:28Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): order Bender first in East, city first in Bender, UATSN ADM8 alphabetically"
+    },
+    {
+      "sha": "7d9d087eecffe784caf62424117ff142ecc512c3",
+      "parents": [
+        "f3bae3610f2db995612f3497a227def5c0d4e710"
+      ],
+      "tree": "0935b1c2c475b7c6e5a1813c28f6db6276835278",
+      "authorDate": "2026-11-07T15:38:30Z",
+      "commitDate": "2026-11-07T15:38:30Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): update exact RO/EN changed-name counts for new Transnistria statistical label"
+    },
+    {
+      "sha": "f3bae3610f2db995612f3497a227def5c0d4e710",
+      "parents": [
+        "85931f6e1004342c7497d783342ef5e8362c9b26"
+      ],
+      "tree": "2aa4ed93c18d7892063fad26a6a1ec48ac7390f3",
+      "authorDate": "2026-11-07T15:37:17Z",
+      "commitDate": "2026-11-07T15:37:17Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): cite OSMB tags, CUATM 9800, English ATULBD source and MD121/MD120 caveat"
+    },
+    {
+      "sha": "85931f6e1004342c7497d783342ef5e8362c9b26",
+      "parents": [
+        "c510c2502e7699001001e1992c58962e6309629a"
+      ],
+      "tree": "7b901d984d230d2944980249ee7204737f8395ae",
+      "authorDate": "2026-11-07T15:36:35Z",
+      "commitDate": "2026-11-07T15:36:35Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify Transnistria NTS3, UATSN/ATULBD ADM4 and UATSN-before-Bender on desktop/mobile"
+    },
+    {
+      "sha": "c510c2502e7699001001e1992c58962e6309629a",
+      "parents": [
+        "38c9aa361711052effab38ac39139e695df4d4d2"
+      ],
+      "tree": "4147b49c115243525e4b69c642d875abb8793529",
+      "authorDate": "2026-11-07T15:35:40Z",
+      "commitDate": "2026-11-07T15:35:40Z",
+      "author": "Ovidiu",
+      "subject": "test(east): UATSN precedes Bender and statistical Transnistria remains distinct from Nistrenia"
+    },
+    {
+      "sha": "38c9aa361711052effab38ac39139e695df4d4d2",
+      "parents": [
+        "5fecbb84f77abc3f6ad9b61fe06f5cc0f5353c27"
+      ],
+      "tree": "dc2bbfad912417df2c33c16b7217c0cdc2b90607",
+      "authorDate": "2026-11-07T15:35:24Z",
+      "commitDate": "2026-11-07T15:35:24Z",
+      "author": "Ovidiu",
+      "subject": "test(east): retain OSMB source names while showing Transnistria and UATSN/ATULBD"
+    },
+    {
+      "sha": "5fecbb84f77abc3f6ad9b61fe06f5cc0f5353c27",
+      "parents": [
+        "bc4e6883bb5edbf9a6d8cb2b067aec24cdd7f38d"
+      ],
+      "tree": "e91a97a8be15fec29784082ddb27d1d3c8965eec",
+      "authorDate": "2026-11-07T15:35:12Z",
+      "commitDate": "2026-11-07T15:35:12Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): distinguish Transnistria NTS3 from UATSN/ATULBD ADM4 and retain MD121 provenance"
+    },
+    {
+      "sha": "bc4e6883bb5edbf9a6d8cb2b067aec24cdd7f38d",
+      "parents": [
+        "62acb1ea991ddc340cad8ae18e57791ed8510f47"
+      ],
+      "tree": "9d0fdfe44e04b6217a5bf1ac471594d43f84acd6",
+      "authorDate": "2026-11-07T15:34:38Z",
+      "commitDate": "2026-11-07T15:34:38Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): order UATSN before Bender under Transnistria NTS3"
+    },
+    {
+      "sha": "62acb1ea991ddc340cad8ae18e57791ed8510f47",
+      "parents": [
+        "8d6a140812af85ac66773548d02ec599f1d91c04"
+      ],
+      "tree": "cf460c02043661e5d54faaa451c41a5c1b1fd0f8",
+      "authorDate": "2026-11-07T15:34:24Z",
+      "commitDate": "2026-11-07T15:34:24Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): label statistical MD120 Transnistria and CUATM 9800 UATSN/ATULBD"
+    },
+    {
+      "sha": "e6bbfb8790ed4db1823b212947b95fd36f8b65f1",
+      "parents": [
+        "6119939663a398089c8286e389ec50453e5a7f87"
+      ],
+      "tree": "c27b5b735088baaa91c37734f2ca2f1943ccc97c",
+      "authorDate": "2026-11-07T16:04:44Z",
+      "commitDate": "2026-11-07T16:04:44Z",
+      "author": "Ovidiu",
+      "subject": "test(regression): replace obsolete Nistrenia alphabetical assertion with accepted south-to-north rule"
+    },
+    {
+      "sha": "6119939663a398089c8286e389ec50453e5a7f87",
+      "parents": [
+        "4bf6df4fc595249ff3cc3db40604d516148f56d7"
+      ],
+      "tree": "e17c029e95e87153a5be7f591619d7c4c4a73402",
+      "authorDate": "2026-11-07T16:04:41Z",
+      "commitDate": "2026-11-07T16:04:41Z",
+      "author": "Ovidiu",
+      "subject": "test(regression): replace obsolete Nistrenia alphabetical assertion with accepted south-to-north rule"
+    },
+    {
+      "sha": "4bf6df4fc595249ff3cc3db40604d516148f56d7",
+      "parents": [
+        "ad9a534b45ca0bf3c4fc96805bf03ea1ba262639"
+      ],
+      "tree": "cfb6d8f90b460b9d7d05e74c9e8f8246a8d3b9e8",
+      "authorDate": "2026-11-07T16:03:14Z",
+      "commitDate": "2026-11-07T16:03:14Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): record Nistrenia seven-ID order and no canonical reparenting"
+    },
+    {
+      "sha": "ad9a534b45ca0bf3c4fc96805bf03ea1ba262639",
+      "parents": [
+        "9f8f5e38aceeb94dfa260a17f6fd911ddfb5e329"
+      ],
+      "tree": "498179ef89528bb87c810249e2c96fc07871abac",
+      "authorDate": "2026-11-07T16:02:35Z",
+      "commitDate": "2026-11-07T16:02:35Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): assert exact Nistrenia fixed order RO/EN desktop/mobile and capture evidence"
+    },
+    {
+      "sha": "9f8f5e38aceeb94dfa260a17f6fd911ddfb5e329",
+      "parents": [
+        "81b95e083e11e3dce8468e6a2576eacc113cd3bc"
+      ],
+      "tree": "44d69deb80d7a4d7ff17fffa0be1e9fb3480219b",
+      "authorDate": "2026-11-07T16:02:14Z",
+      "commitDate": "2026-11-07T16:02:14Z",
+      "author": "Ovidiu",
+      "subject": "test(east): retain existing East invariants with accepted WEB-R3.15 Nistrenia order"
+    },
+    {
+      "sha": "81b95e083e11e3dce8468e6a2576eacc113cd3bc",
+      "parents": [
+        "612de1d25e24456688f22e7eb49beabc568f822a"
+      ],
+      "tree": "6066738565467eb6b613fae95581df9a1d942317",
+      "authorDate": "2026-11-07T16:01:55Z",
+      "commitDate": "2026-11-07T16:01:55Z",
+      "author": "Ovidiu",
+      "subject": "test(nistrenia): lock seven ADM5 IDs and south-to-north order across locales and views"
+    },
+    {
+      "sha": "612de1d25e24456688f22e7eb49beabc568f822a",
+      "parents": [
+        "542a7ee095397c70b723a2c6d9df52a4b9669431"
+      ],
+      "tree": "a9b23e791383c5024a6a5b79d2637f7ef3b1cd6b",
+      "authorDate": "2026-11-07T16:01:21Z",
+      "commitDate": "2026-11-07T16:01:21Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): update Nistrenia sibling-order invariant without changing MD parentage"
+    },
+    {
+      "sha": "542a7ee095397c70b723a2c6d9df52a4b9669431",
+      "parents": [
+        "21532c25c1306349b88321d36164ef7012fd85ea"
+      ],
+      "tree": "06a730973846ff4f4dba5c9fdbe30d9ff56db383",
+      "authorDate": "2026-11-07T16:00:48Z",
+      "commitDate": "2026-11-07T16:00:48Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.15: fixed Nistrenia Tiraspol/Bender then five raions south-to-north"
+    },
+    {
+      "sha": "a9dd39d862d839b5bccdd219779441f95f5507b9",
+      "parents": [
+        "e79d8bdcb911f91930a9bbf51511c431b33b5b2a"
+      ],
+      "tree": "71870d297bdc1aeb7e90c80ed7d5e160a99af102",
+      "authorDate": "2026-11-07T16:40:48Z",
+      "commitDate": "2026-11-07T16:40:48Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): record West Chișinău-first presentation with intact statistical and administrative parentage"
+    },
+    {
+      "sha": "e79d8bdcb911f91930a9bbf51511c431b33b5b2a",
+      "parents": [
+        "f156b9216c7a80efe4eb9a4e9b83a5a24ae200d5"
+      ],
+      "tree": "43afc429ffe87e1b26acaa8a8e4d3245d2d9ac98",
+      "authorDate": "2026-11-07T16:40:26Z",
+      "commitDate": "2026-11-07T16:40:26Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): assert West Chișinău-first order on desktop and mobile, capture screenshots"
+    },
+    {
+      "sha": "f156b9216c7a80efe4eb9a4e9b83a5a24ae200d5",
+      "parents": [
+        "f9a6b530075bcfd7ac38a992c13339bf8da00a37"
+      ],
+      "tree": "8110d77a082b43ed780707901f6d9c04b2548917",
+      "authorDate": "2026-11-07T16:40:07Z",
+      "commitDate": "2026-11-07T16:40:07Z",
+      "author": "Ovidiu",
+      "subject": "test(west): verify Chișinău first, five siblings and unchanged parents across locales/views"
+    },
+    {
+      "sha": "f9a6b530075bcfd7ac38a992c13339bf8da00a37",
+      "parents": [
+        "397bdac276024fe2a2fcf333536bf768c7af17ed"
+      ],
+      "tree": "8f0855ed2f3924484ec810a09dbdf59fc045a0f4",
+      "authorDate": "2026-11-07T16:39:42Z",
+      "commitDate": "2026-11-07T16:39:42Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.16: place Chișinău first under West without changing other siblings or canonical parents"
+    },
+    {
+      "sha": "35f5dc34c4b4a3df70ede91b7ff045eb85e0fc81",
+      "parents": [
+        "539c3fdd783e1553796ab29ffbc7e91bce4ab819"
+      ],
+      "tree": "117c6e946623b0ecbd724223975b4f399b237b8e",
+      "authorDate": "2026-11-07T17:17:19Z",
+      "commitDate": "2026-11-07T17:17:19Z",
+      "author": "Ovidiu",
+      "subject": "docs: record Moldova-only code-first sorting, 14 uncoded entities, four collisions and no reparenting"
+    },
+    {
+      "sha": "539c3fdd783e1553796ab29ffbc7e91bce4ab819",
+      "parents": [
+        "9b93eda8533b4bc927d8725ef4ede05cbf709fa5"
+      ],
+      "tree": "cbf3cc6ab0ae078dbf81a420a8c6c1b0fba72d7b",
+      "authorDate": "2026-11-07T17:15:40Z",
+      "commitDate": "2026-11-07T17:15:40Z",
+      "author": "Ovidiu",
+      "subject": "test(md): exhaustively verify NTS/CUATM sibling sorting, uncoded fallback and Romania unchanged"
+    },
+    {
+      "sha": "9b93eda8533b4bc927d8725ef4ede05cbf709fa5",
+      "parents": [
+        "151a232fdb50e8acb1930af19600777c0eb7b8fa"
+      ],
+      "tree": "805187c2100920c2d040c3a141ca56572c99a5ad",
+      "authorDate": "2026-11-07T17:14:26Z",
+      "commitDate": "2026-11-07T17:14:26Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify Moldova statistical/CUATM sibling order and separated Hlinaia badges"
+    },
+    {
+      "sha": "151a232fdb50e8acb1930af19600777c0eb7b8fa",
+      "parents": [
+        "920c633c016d6053af176cbfd08b1e4384f41270"
+      ],
+      "tree": "74463f1cf4c4d2c5d6ebe43f339dcbb12e301aef",
+      "authorDate": "2026-11-07T17:12:20Z",
+      "commitDate": "2026-11-07T17:12:20Z",
+      "author": "Ovidiu",
+      "subject": "test(nistrenia): preserve uncoded child order with Moldova sibling codes precedence"
+    },
+    {
+      "sha": "920c633c016d6053af176cbfd08b1e4384f41270",
+      "parents": [
+        "225bc3fe77955b0da7514d5eabfe70da4f113c9d"
+      ],
+      "tree": "207cf8361ad15f4c0c4e72bc21696c82cc20163b",
+      "authorDate": "2026-11-07T17:11:38Z",
+      "commitDate": "2026-11-07T17:11:38Z",
+      "author": "Ovidiu",
+      "subject": "test(nistrenia): preserve de-facto order and verify official East CUATM asc"
+    },
+    {
+      "sha": "225bc3fe77955b0da7514d5eabfe70da4f113c9d",
+      "parents": [
+        "418cab5a6308ff1f58337417de69fd7509d93813"
+      ],
+      "tree": "d8638beaa529b7ba2501cc3d70a2c2df046c5748",
+      "authorDate": "2026-11-07T17:11:27Z",
+      "commitDate": "2026-11-07T17:11:27Z",
+      "author": "Ovidiu",
+      "subject": "test(regions): enforce CUATM across 33 raions and 856 ADM8, retire residence-first invariants"
+    },
+    {
+      "sha": "418cab5a6308ff1f58337417de69fd7509d93813",
+      "parents": [
+        "dcbab4ad0220ebfbb53344d3a196755ee65680f1"
+      ],
+      "tree": "c646e952002bf29303ff9e75602f4883d9259383",
+      "authorDate": "2026-11-07T17:10:38Z",
+      "commitDate": "2026-11-07T17:10:38Z",
+      "author": "Ovidiu",
+      "subject": "test(gagauzia/chisinau): validate code-based sibling sorting and uncoded sector fallback"
+    },
+    {
+      "sha": "dcbab4ad0220ebfbb53344d3a196755ee65680f1",
+      "parents": [
+        "ad21c8833cc8f811dd4a6e6dac7e37b6b931b0c3"
+      ],
+      "tree": "23692aaec1614f58b19b32b08cdbdb1a340e6130",
+      "authorDate": "2026-11-07T17:10:15Z",
+      "commitDate": "2026-11-07T17:10:15Z",
+      "author": "Ovidiu",
+      "subject": "test(east): enforce Bender CUATM 0500 before UATSN 9800 and strict ADM8 code order"
+    },
+    {
+      "sha": "ad21c8833cc8f811dd4a6e6dac7e37b6b931b0c3",
+      "parents": [
+        "861833f4022fcff7544c7b45e96743f7910c97db"
+      ],
+      "tree": "cfc5fe39a7d08784d399dfb8afd6ce43b101cdd4",
+      "authorDate": "2026-11-07T17:09:56Z",
+      "commitDate": "2026-11-07T17:09:56Z",
+      "author": "Ovidiu",
+      "subject": "test(west): replace seat-first by NTS MD111–115 and sort sector siblings by CUATM"
+    },
+    {
+      "sha": "861833f4022fcff7544c7b45e96743f7910c97db",
+      "parents": [
+        "7f7e07f8a7bf0be07c44718426e71cbfb9072b6a"
+      ],
+      "tree": "b02864977b40990c3ed0796e434a5b5d029ffa71",
+      "authorDate": "2026-11-07T17:08:27Z",
+      "commitDate": "2026-11-07T17:08:27Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.17: sort Moldova siblings by statistical code then CUATM, keep uncoded fallback and Romania intact"
+    },
+    {
+      "sha": "16626e8150172af57225f33483d4f05c5a19a399",
+      "parents": [
+        "b508c46893987fad8c6dbf1f83b10205c923da98"
+      ],
+      "tree": "b82d3f40188f7811cd1103bebb0b322b3491251a",
+      "authorDate": "2026-11-07T17:43:56Z",
+      "commitDate": "2026-11-07T17:43:56Z",
+      "author": "Ovidiu",
+      "subject": "fix(ts): declare PMR cadastral seat-code module contract for App.tsx"
+    },
+    {
+      "sha": "b508c46893987fad8c6dbf1f83b10205c923da98",
+      "parents": [
+        "87a6e24319e90b7eb3b930a7bf5e8d4a621299fa"
+      ],
+      "tree": "6dd0b2d8902ad51f8ffa38829305b606c2996e4b",
+      "authorDate": "2026-11-07T17:42:26Z",
+      "commitDate": "2026-11-07T17:42:26Z",
+      "author": "Ovidiu",
+      "subject": "docs(audit): source, seven cadastral seat-code correspondences, card provenance and KLADR distinction"
+    },
+    {
+      "sha": "87a6e24319e90b7eb3b930a7bf5e8d4a621299fa",
+      "parents": [
+        "c892dd4890fcd5358a815e769a3df9a392156c86"
+      ],
+      "tree": "e09151be7d74f9c630ae7051bd0a2941693596f1",
+      "authorDate": "2026-11-07T17:41:44Z",
+      "commitDate": "2026-11-07T17:41:44Z",
+      "author": "Ovidiu",
+      "subject": "test(browser): construct dynamic row index/code expressions correctly"
+    },
+    {
+      "sha": "c892dd4890fcd5358a815e769a3df9a392156c86",
+      "parents": [
+        "4837a0efc498984f68440d65ce53fb9b3437377a"
+      ],
+      "tree": "de6fbb9f1de2af9090967f97593f725b9d7ed9a2",
+      "authorDate": "2026-11-07T17:41:07Z",
+      "commitDate": "2026-11-07T17:41:07Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): Nistrenia cadastral ordering and all seven detail cards with provenance on desktop; mobile tree"
+    },
+    {
+      "sha": "4837a0efc498984f68440d65ce53fb9b3437377a",
+      "parents": [
+        "36d7c2c3223fed15eaaa626fc4a0546e8aa280cf"
+      ],
+      "tree": "a1b5ff218a476961e46df18dd045d3bfe7e0c1f2",
+      "authorDate": "2026-11-07T17:39:40Z",
+      "commitDate": "2026-11-07T17:39:40Z",
+      "author": "Ovidiu",
+      "subject": "test(pmr): exact seven sourced cadastral codes, locale/view sorting and separate detail-card field"
+    },
+    {
+      "sha": "36d7c2c3223fed15eaaa626fc4a0546e8aa280cf",
+      "parents": [
+        "def855111f242dd4877814941ca9eb625f351b3a"
+      ],
+      "tree": "ce3497b0ed71df328b02fd50e266b32c908cb592",
+      "authorDate": "2026-11-07T17:38:42Z",
+      "commitDate": "2026-11-07T17:38:42Z",
+      "author": "Ovidiu",
+      "subject": "test: update Nistrenia seven-identity acceptance to sourced PMR cadastral ordering"
+    },
+    {
+      "sha": "def855111f242dd4877814941ca9eb625f351b3a",
+      "parents": [
+        "6e620ac6bf705e75c06bf7590b9128b3549dcfb7"
+      ],
+      "tree": "455b4195544cfa3daf7f5fe580cbf8d1c2d321e5",
+      "authorDate": "2026-11-07T17:38:39Z",
+      "commitDate": "2026-11-07T17:38:39Z",
+      "author": "Ovidiu",
+      "subject": "test: update Nistrenia seven-identity acceptance to sourced PMR cadastral ordering"
+    },
+    {
+      "sha": "6e620ac6bf705e75c06bf7590b9128b3549dcfb7",
+      "parents": [
+        "27f39af0b956ecbc3370f65d46e39325b95fbcfd"
+      ],
+      "tree": "728d0bd303c8cf8675269ceb78e9b6355c915a45",
+      "authorDate": "2026-11-07T17:38:36Z",
+      "commitDate": "2026-11-07T17:38:36Z",
+      "author": "Ovidiu",
+      "subject": "test: update Nistrenia seven-identity acceptance to sourced PMR cadastral ordering"
+    },
+    {
+      "sha": "27f39af0b956ecbc3370f65d46e39325b95fbcfd",
+      "parents": [
+        "c067343e7cdb0faddbe9b97cf57a02b4046e1bb6"
+      ],
+      "tree": "7dcb4358c87eaec0b15e3fbaab8063a55380747b",
+      "authorDate": "2026-11-07T17:38:33Z",
+      "commitDate": "2026-11-07T17:38:33Z",
+      "author": "Ovidiu",
+      "subject": "test: update Nistrenia seven-identity acceptance to sourced PMR cadastral ordering"
+    },
+    {
+      "sha": "c067343e7cdb0faddbe9b97cf57a02b4046e1bb6",
+      "parents": [
+        "e7e6463843c11d6c21d92176638d983aebb6c386"
+      ],
+      "tree": "5266d15c1d01f3b4044545baec80fea2d28870d0",
+      "authorDate": "2026-11-07T17:38:30Z",
+      "commitDate": "2026-11-07T17:38:30Z",
+      "author": "Ovidiu",
+      "subject": "test: update Nistrenia seven-identity acceptance to sourced PMR cadastral ordering"
+    },
+    {
+      "sha": "e7e6463843c11d6c21d92176638d983aebb6c386",
+      "parents": [
+        "ecc93e53ab096b09cc3d2c19c22998b7b64993af"
+      ],
+      "tree": "30aedda6f71183fdf65227494b9625dcde3a88c3",
+      "authorDate": "2026-11-07T17:37:31Z",
+      "commitDate": "2026-11-07T17:37:31Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.18: display separate PMR cadastral code and source in seven Nistrenia detail cards"
+    },
+    {
+      "sha": "ecc93e53ab096b09cc3d2c19c22998b7b64993af",
+      "parents": [
+        "0fd5cf131567a2322f0451ed6c4190edbd1098cf"
+      ],
+      "tree": "fa0919e0561f8f4cee98186ef663772a1b85ce06",
+      "authorDate": "2026-11-07T17:36:54Z",
+      "commitDate": "2026-11-07T17:36:54Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.18: order Nistrenia seven ADM5 children by their verified PMR cadastral seat codes"
+    },
+    {
+      "sha": "0fd5cf131567a2322f0451ed6c4190edbd1098cf",
+      "parents": [
+        "845ef2f49fcc07e8670217a1b8ce6dbae83a871a"
+      ],
+      "tree": "7fcc0fb470c3891126d350a7c88a795c65372593",
+      "authorDate": "2026-11-07T17:36:05Z",
+      "commitDate": "2026-11-07T17:36:05Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.18: source-backed PMR cadastral seat-code register, distinct from CUATM and KLADR"
+    },
+    {
+      "sha": "4e292a829aac3d9999108c05323f1e589a583371",
+      "parents": [
+        "682acf90e6842e1398b19c32550d84da8f34e89f"
+      ],
+      "tree": "a9def5074448f8f28b6bbb612c40b715b7f401ae",
+      "authorDate": "2026-11-07T11:16:16Z",
+      "commitDate": "2026-11-07T11:16:16Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): restore mixed tree after Administrative-level mobile ordering checks"
+    },
+    {
+      "sha": "682acf90e6842e1398b19c32550d84da8f34e89f",
+      "parents": [
+        "6d08f35f7864763dacd355ebe79d1dd408b401e9"
+      ],
+      "tree": "4a0def32343fa59ad05107ca47e44c1d0c93adfd",
+      "authorDate": "2026-11-07T11:13:23Z",
+      "commitDate": "2026-11-07T11:13:23Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): expose mobile Gagauzia/Chisinau tree state before asserting order"
+    },
+    {
+      "sha": "6d08f35f7864763dacd355ebe79d1dd408b401e9",
+      "parents": [
+        "d61b9d72b655d8087f0f49e5ec3db613ba9e3c82"
+      ],
+      "tree": "344fbbc04831098cfeafa3e882241364d91e0489",
+      "authorDate": "2026-11-07T11:10:08Z",
+      "commitDate": "2026-11-07T11:10:08Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify Romanian mobile subdivisions in Administrative tree view"
+    },
+    {
+      "sha": "d61b9d72b655d8087f0f49e5ec3db613ba9e3c82",
+      "parents": [
+        "0f0fe459f3733fe070e7a56aca528e9da0cd2e36"
+      ],
+      "tree": "cf1f432b1a6b7f27f9197e99f4dc791e9bbec2c5",
+      "authorDate": "2026-11-07T11:06:32Z",
+      "commitDate": "2026-11-07T11:06:32Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): explicitly select All tree view before Romanian mobile hierarchy audit"
+    },
+    {
+      "sha": "0f0fe459f3733fe070e7a56aca528e9da0cd2e36",
+      "parents": [
+        "83bf5cf341fa069f30988e7cff623f124ad330ad"
+      ],
+      "tree": "0754f1f2817c13eeb9f35b084cf479b69772bc73",
+      "authorDate": "2026-11-07T11:03:55Z",
+      "commitDate": "2026-11-07T11:03:55Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify Gagauzia and Chisinau child order in desktop mixed/admin and mobile RO"
+    },
+    {
+      "sha": "83bf5cf341fa069f30988e7cff623f124ad330ad",
+      "parents": [
+        "f8e4461590c94ad5b0dafa65411e86be2e77d4fd"
+      ],
+      "tree": "a027aecca652a2e5d6ad9911b39a01949bc23930",
+      "authorDate": "2026-11-07T11:02:25Z",
+      "commitDate": "2026-11-07T11:02:25Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): certify child group counts and short names of Gagauzia and Chisinau"
+    },
+    {
+      "sha": "f8e4461590c94ad5b0dafa65411e86be2e77d4fd",
+      "parents": [
+        "510fd5f523d8b207c1cdc2a492c2774b5ea0328e"
+      ],
+      "tree": "92e9f441b5469b84e12cbed355cf95bf11c4e3ff",
+      "authorDate": "2026-11-07T11:01:30Z",
+      "commitDate": "2026-11-07T11:01:30Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): group Gagauzia and Chisinau by ADM and strip redundant English Sector label"
+    },
+    {
+      "sha": "510fd5f523d8b207c1cdc2a492c2774b5ea0328e",
+      "parents": [
+        "1fa1381fa00b47a01c92cb3a01591edd05ae3e21"
+      ],
+      "tree": "267974f72cde926d313e2e08de8b98f5412a1cc4",
+      "authorDate": "2026-11-07T10:56:26Z",
+      "commitDate": "2026-11-07T10:56:26Z",
+      "author": "Ovidiu",
+      "subject": "test(audit): inventory Gagauzia and Chisinau child names and ordering"
+    },
+    {
+      "sha": "3daf9c68e751af497fedd5a6dedc1bd677a7980c",
+      "parents": [
+        "4ce2fc53f6726206d740f96b49f340d29779864e"
+      ],
+      "tree": "9347b1ecbc33fec84ca4538d360d20295d26cf9f",
+      "authorDate": "2026-11-07T08:31:05Z",
+      "commitDate": "2026-11-07T08:31:05Z",
+      "author": "Ovidiu",
+      "subject": "fix(legend): shorten country reference label to Romania, Moldova"
+    },
+    {
+      "sha": "fc7075de9c6299588e91c916afddb5d7350d638e",
+      "parents": [
+        "9e092934153b039b774d73c9671a4a74b437d7eb"
+      ],
+      "tree": "71fdc63c2dd5aa431477cd174ff19ec5d072d141",
+      "authorDate": "2026-11-07T09:55:02Z",
+      "commitDate": "2026-11-07T09:55:02Z",
+      "author": "Ovidiu",
+      "subject": "test(chromium): verify Nistrenia children ordering in mixed/admin desktop and Romanian mobile tree"
+    },
+    {
+      "sha": "9e092934153b039b774d73c9671a4a74b437d7eb",
+      "parents": [
+        "9c81763743ddfda8130cecf9345ed410f64396c4"
+      ],
+      "tree": "c572851b7ce8e08f754c4b5b73a0cb3e7c20a795",
+      "authorDate": "2026-11-07T09:52:56Z",
+      "commitDate": "2026-11-07T09:52:56Z",
+      "author": "Ovidiu",
+      "subject": "feat(tree): group Nistrenia raions before city councils, alphabetize short names per locale"
+    },
+    {
+      "sha": "9c81763743ddfda8130cecf9345ed410f64396c4",
+      "parents": [
+        "39899bf9eb373f3870ba5999139d759c4338c1af"
+      ],
+      "tree": "c7b440dcfd9f43e2968aeebad5fa9068d2ea0811",
+      "authorDate": "2026-11-07T09:47:38Z",
+      "commitDate": "2026-11-07T09:47:38Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): focus Nistrian Republic inventory on actual parent names"
+    },
+    {
+      "sha": "39899bf9eb373f3870ba5999139d759c4338c1af",
+      "parents": [
+        "431c66fb3fdc2ddd5ac1a867b5702b5ddf55ae9d"
+      ],
+      "tree": "de517d90c64a0723617e36a7b1896ceb4e0bdbce",
+      "authorDate": "2026-11-07T09:45:05Z",
+      "commitDate": "2026-11-07T09:45:05Z",
+      "author": "Ovidiu",
+      "subject": "test(tree): inventory PMR parent-child order and names from certified catalog"
+    },
+    {
+      "sha": "fb7ae4f3787a3836fbc73b4ad7f435d799059d14",
+      "parents": [
+        "19a5e765fc4c72c8ae884d31b53e02151853f805"
+      ],
+      "tree": "448dc83cd0a57dfa30b97e618ff34a0ffd6814c5",
+      "authorDate": "2026-11-08T11:51:26Z",
+      "commitDate": "2026-11-08T11:51:26Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2c: ensure WCAG AA 4.5:1 contrast for homonym context labels"
+    },
+    {
+      "sha": "19a5e765fc4c72c8ae884d31b53e02151853f805",
+      "parents": [
+        "ccd61c253ffeb05575fb2a3fdadec4cda03cffba"
+      ],
+      "tree": "cc89aa8e8915555e2b709f6563486fc0133c68ac",
+      "authorDate": "2026-11-08T11:47:10Z",
+      "commitDate": "2026-11-08T11:47:10Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2 audit: reconcile newly exposed Hlinaia homonym and update evidence register"
+    },
+    {
+      "sha": "ccd61c253ffeb05575fb2a3fdadec4cda03cffba",
+      "parents": [
+        "18d9cebbbc4b2952b909f40e7b67ce1959986ab4"
+      ],
+      "tree": "db1657bd739a5b3f3733de26d60059e2a3979fe3",
+      "authorDate": "2026-11-08T11:46:31Z",
+      "commitDate": "2026-11-08T11:46:31Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2 CI: align four historical regression assertions with verified display-only changes"
+    },
+    {
+      "sha": "18d9cebbbc4b2952b909f40e7b67ce1959986ab4",
+      "parents": [
+        "4eb6cd0dc30a42233abd8e02a8e5b71942e3d5f7"
+      ],
+      "tree": "62d12f9d6d713a124439799f6824c883c3fc5be6",
+      "authorDate": "2026-11-08T11:45:47Z",
+      "commitDate": "2026-11-08T11:45:47Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2 CI: handle newly homonymous Hlinaia; retain unique CUATM context without duplication"
+    },
+    {
+      "sha": "4eb6cd0dc30a42233abd8e02a8e5b71942e3d5f7",
+      "parents": [
+        "c3285b823b2fc69acfda2469daf7aa347c4a8090"
+      ],
+      "tree": "ecd26c4d7640d38580df71df893f207dc5f7b66e",
+      "authorDate": "2026-11-08T11:41:40Z",
+      "commitDate": "2026-11-08T11:41:40Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2d: record per-ID linguistic evidence and scope limitations"
+    },
+    {
+      "sha": "c3285b823b2fc69acfda2469daf7aa347c4a8090",
+      "parents": [
+        "0b976c35068b01241a007fb843d641d353b4ab18"
+      ],
+      "tree": "fbbc1569836124e3b802a0edbeb4c03535dd36d2",
+      "authorDate": "2026-11-08T11:40:34Z",
+      "commitDate": "2026-11-08T11:40:34Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2d: update exhaustive and Chromium EN assertions; verify role-specific context"
+    },
+    {
+      "sha": "0b976c35068b01241a007fb843d641d353b4ab18",
+      "parents": [
+        "10fa448e180dbf7838ed0b45c521f51517c50301"
+      ],
+      "tree": "c5618ecccf5a131de4c8f9a81d40ea3e0764d338",
+      "authorDate": "2026-11-08T11:39:51Z",
+      "commitDate": "2026-11-08T11:39:51Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2d: add jurisdiction-context explanations and grammatical Chisinau card title"
+    },
+    {
+      "sha": "10fa448e180dbf7838ed0b45c521f51517c50301",
+      "parents": [
+        "4d8d97e862424fba548368ddfa5306ad31739942"
+      ],
+      "tree": "95d91d1c05bbe5eeb64c63901a6a37464809b33e",
+      "authorDate": "2026-11-08T11:37:06Z",
+      "commitDate": "2026-11-08T11:37:06Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2c: distinguish homonymous siblings using verified types and immutable IDs"
+    },
+    {
+      "sha": "4d8d97e862424fba548368ddfa5306ad31739942",
+      "parents": [
+        "6d318e997678f78539e6a85eb352b5f656447096"
+      ],
+      "tree": "23a103d4e89b9024a8c23251e00cc5d65389f112",
+      "authorDate": "2026-11-08T11:35:21Z",
+      "commitDate": "2026-11-08T11:35:21Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2b: reconcile six left-bank place names; preserve source aliases and identities"
+    },
+    {
+      "sha": "6d318e997678f78539e6a85eb352b5f656447096",
+      "parents": [
+        "2429b65b5341d9a227a807f5f59aa030c146b5d3"
+      ],
+      "tree": "a5b38a2954847bf7c2a90ae658a4f6a153baa99c",
+      "authorDate": "2026-11-08T11:33:49Z",
+      "commitDate": "2026-11-08T11:33:49Z",
+      "author": "Ovidiu",
+      "subject": "EN-R2a: correct NUTS and Floresti-Stoenesti names; localize EN card navigation"
+    },
+    {
+      "sha": "0daf878d537b8abdc9b8811ad2112619a5eed247",
+      "parents": [
+        "f1ccb22a0e0eefd7f35fc54fc2fd16ccae137e31"
+      ],
+      "tree": "e24a900f465854ec19e7336238369d2368be6a80",
+      "authorDate": "2026-11-08T10:09:02Z",
+      "commitDate": "2026-11-08T10:09:02Z",
+      "author": "Ovidiu",
+      "subject": "test(browser): assert ASCII EN display while retaining accented search aliases"
+    },
+    {
+      "sha": "f1ccb22a0e0eefd7f35fc54fc2fd16ccae137e31",
+      "parents": [
+        "aa99cdfc563021ce0a50b2a1bd2e46669bdbe4c7"
+      ],
+      "tree": "dbd960a88d0bfd0d1c6baed9c4028452e403d644",
+      "authorDate": "2026-11-08T10:04:42Z",
+      "commitDate": "2026-11-08T10:04:42Z",
+      "author": "Ovidiu",
+      "subject": "fix(i18n): align accessible English labels and certified source assertions"
+    },
+    {
+      "sha": "aa99cdfc563021ce0a50b2a1bd2e46669bdbe4c7",
+      "parents": [
+        "c0569eb87674b144eb175ca368a7bc3dcda34470"
+      ],
+      "tree": "569fd21b5b039664de0505e2ea42875dfab1ed58",
+      "authorDate": "2026-11-08T10:04:39Z",
+      "commitDate": "2026-11-08T10:04:39Z",
+      "author": "Ovidiu",
+      "subject": "fix(i18n): align accessible English labels and certified source assertions"
+    },
+    {
+      "sha": "c0569eb87674b144eb175ca368a7bc3dcda34470",
+      "parents": [
+        "b7c2ac3aa6d8dfb5e960284072011c54acb6c17e"
+      ],
+      "tree": "93540c0c87119c4c6a402617ec466fbde1880c07",
+      "authorDate": "2026-11-08T10:04:36Z",
+      "commitDate": "2026-11-08T10:04:36Z",
+      "author": "Ovidiu",
+      "subject": "fix(i18n): align accessible English labels and certified source assertions"
+    },
+    {
+      "sha": "b7c2ac3aa6d8dfb5e960284072011c54acb6c17e",
+      "parents": [
+        "bcbc20565b4caf8867c95722325c730346d94ed3"
+      ],
+      "tree": "b5bc00f936fa22a82aa2fd566ef30f4b599dfe98",
+      "authorDate": "2026-11-08T10:04:34Z",
+      "commitDate": "2026-11-08T10:04:34Z",
+      "author": "Ovidiu",
+      "subject": "fix(i18n): align accessible English labels and certified source assertions"
+    },
+    {
+      "sha": "bcbc20565b4caf8867c95722325c730346d94ed3",
+      "parents": [
+        "1021862ca0620ad863e87fc828d6ab2f30015e68"
+      ],
+      "tree": "908ccd689833b3011a915cd5ffb57bdb31077899",
+      "authorDate": "2026-11-08T10:02:43Z",
+      "commitDate": "2026-11-08T10:02:43Z",
+      "author": "Ovidiu",
+      "subject": "test(i18n): exhaustive English labels and documented source policy"
+    },
+    {
+      "sha": "1021862ca0620ad863e87fc828d6ab2f30015e68",
+      "parents": [
+        "f16b227efc4e1d06031fe2bea972618a1567ce29"
+      ],
+      "tree": "af3dc56edff0d91bf4722a81bdb983972e8112d2",
+      "authorDate": "2026-11-08T10:02:41Z",
+      "commitDate": "2026-11-08T10:02:41Z",
+      "author": "Ovidiu",
+      "subject": "test(i18n): exhaustive English labels and documented source policy"
+    },
+    {
+      "sha": "f16b227efc4e1d06031fe2bea972618a1567ce29",
+      "parents": [
+        "55d816edc3df794047c420a4b9786dd73743cb37"
+      ],
+      "tree": "928f5a9827c2738b9c37d9e1104b1049c6da29d1",
+      "authorDate": "2026-11-08T10:01:37Z",
+      "commitDate": "2026-11-08T10:01:37Z",
+      "author": "Ovidiu",
+      "subject": "test(browser): verify translated EN territorial tree and cards on desktop/mobile"
+    },
+    {
+      "sha": "55d816edc3df794047c420a4b9786dd73743cb37",
+      "parents": [
+        "cf6b4a25793d7fcb928372f691a206730a1e6439"
+      ],
+      "tree": "b123320830762b7b72552d9e01c75210cb9a2291",
+      "authorDate": "2026-11-08T10:00:55Z",
+      "commitDate": "2026-11-08T10:00:55Z",
+      "author": "Ovidiu",
+      "subject": "test(i18n): retain Western NTS3 order with English place name"
+    },
+    {
+      "sha": "cf6b4a25793d7fcb928372f691a206730a1e6439",
+      "parents": [
+        "8385b5dd5a31429d84517d6d0fce1b2546d6a832"
+      ],
+      "tree": "8d5f780125eeceec39d7ff600fd7397eeeb4dd6c",
+      "authorDate": "2026-11-08T10:00:46Z",
+      "commitDate": "2026-11-08T10:00:46Z",
+      "author": "Ovidiu",
+      "subject": "test(i18n): update bilingual tree expectations for English labels"
+    },
+    {
+      "sha": "8385b5dd5a31429d84517d6d0fce1b2546d6a832",
+      "parents": [
+        "a5813b3612a499e9737e6c1548430eb1cb1b2263"
+      ],
+      "tree": "9b1b4cefa930ac507fd2e3e15347ab9dd0e3d508",
+      "authorDate": "2026-11-08T10:00:44Z",
+      "commitDate": "2026-11-08T10:00:44Z",
+      "author": "Ovidiu",
+      "subject": "test(i18n): update bilingual tree expectations for English labels"
+    },
+    {
+      "sha": "a5813b3612a499e9737e6c1548430eb1cb1b2263",
+      "parents": [
+        "31f86cf28129fbb429b6b8776137dbb17921367b"
+      ],
+      "tree": "2ab2837956715c06dc35ade98f1927e8f69780c9",
+      "authorDate": "2026-11-08T10:00:42Z",
+      "commitDate": "2026-11-08T10:00:42Z",
+      "author": "Ovidiu",
+      "subject": "test(i18n): update bilingual tree expectations for English labels"
+    },
+    {
+      "sha": "31f86cf28129fbb429b6b8776137dbb17921367b",
+      "parents": [
+        "7505818747bac2007392ce7ccde7a48e35148619"
+      ],
+      "tree": "fd7ea13fa01fbfd6bb646e99070ad431d6016a8c",
+      "authorDate": "2026-11-08T10:00:39Z",
+      "commitDate": "2026-11-08T10:00:39Z",
+      "author": "Ovidiu",
+      "subject": "test(i18n): update bilingual tree expectations for English labels"
+    },
+    {
+      "sha": "7505818747bac2007392ce7ccde7a48e35148619",
+      "parents": [
+        "0ad079c09598942646e6b9335680ff1f3d84ad76"
+      ],
+      "tree": "889c78b3cbea1ad7fcd74ba98a545fb4b170c84d",
+      "authorDate": "2026-11-08T09:58:39Z",
+      "commitDate": "2026-11-08T09:58:39Z",
+      "author": "Ovidiu",
+      "subject": "fix(i18n): English territorial labels without Romanian fallback"
+    },
+    {
+      "sha": "b29d36ab5e563a89537fb36b855721f46cc5b4e4",
+      "parents": [
+        "94daed95191e79a94d4d00301c87eb3f75a920d8"
+      ],
+      "tree": "df728bcdb955a3ed2c6bb08d792640fee16881b4",
+      "authorDate": "2026-11-07T00:34:11Z",
+      "commitDate": "2026-11-07T00:34:11Z",
+      "author": "Ovidiu",
+      "subject": "fix(map): align mobile scale bar with map bottom and guard attribution"
+    },
+    {
+      "sha": "5c356c739b659364e2c1e58f4933d8271f4f078b",
+      "parents": [
+        "ceebb71378c4d42ac88497904f5ef4ab5fdac059"
+      ],
+      "tree": "2a1a089804efbc64d1a638d4074c5fa59e67c277",
+      "authorDate": "2026-11-08T13:57:30Z",
+      "commitDate": "2026-11-08T13:57:30Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R4.8: replace emoji flags with bundled SVG and use de facto Pridnestrovie flag by exact ID"
+    },
+    {
+      "sha": "904bf137caf2893ae2f3db1d3a72eabd7f481525",
+      "parents": [
+        "eec4a56f71bad569f6bc1b7fe3a0a2eee7957b73"
+      ],
+      "tree": "6a933ee3d99e487121b839e9ef57ad3376171843",
+      "authorDate": "2026-11-07T19:55:07Z",
+      "commitDate": "2026-11-07T19:55:07Z",
+      "author": "Ovidiu",
+      "subject": "INFRA: preserve evidence of Pages lock/duplicate artifact and exact certification gate"
+    },
+    {
+      "sha": "eec4a56f71bad569f6bc1b7fe3a0a2eee7957b73",
+      "parents": [
+        "1a6b8065de004610a1453e713e53ff3673cb4c69"
+      ],
+      "tree": "f2c1024dbb6b9dac8fcba99ae8e9f46971f01260",
+      "authorDate": "2026-11-07T19:54:33Z",
+      "commitDate": "2026-11-07T19:54:33Z",
+      "author": "Ovidiu",
+      "subject": "INFRA: add deterministic regression gates for Pages deploy serialization"
+    },
+    {
+      "sha": "1a6b8065de004610a1453e713e53ff3673cb4c69",
+      "parents": [
+        "d824dde063cb0e1da5abf72d1ab9771f31a9a024"
+      ],
+      "tree": "cfc65dce6277fb1b4a4fbb5e236cd867f6f253e2",
+      "authorDate": "2026-11-07T19:54:18Z",
+      "commitDate": "2026-11-07T19:54:18Z",
+      "author": "Ovidiu",
+      "subject": "INFRA: serialize Pages deployments and use unique artifacts per run attempt"
+    },
+    {
+      "sha": "10083b106461e89df013b5544304a8821392c7e0",
+      "parents": [
+        "be7b1a033d7482e419a0aba0ed9cc8765b83ee87"
+      ],
+      "tree": "a799887540c6543e92e1280bee01fcc9d0893cc2",
+      "authorDate": "2026-11-10T07:50:41Z",
+      "commitDate": "2026-11-10T07:50:41Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-CLOSE-final-heraldic-audit-and-permanent-registers"
+    },
+    {
+      "sha": "76fb0e420bcc1669b7aaa278b9595226f0ea2ad0",
+      "parents": [
+        "0cff0e0f4f48674ceeac14ad86ec74d44f400ff0"
+      ],
+      "tree": "7700419bae8f6688d3ba24563e546b807619f8ef",
+      "authorDate": "2026-11-08T22:42:16Z",
+      "commitDate": "2026-11-08T22:42:16Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3: document and test 74-ID pragmatic symbol rollout"
+    },
+    {
+      "sha": "0cff0e0f4f48674ceeac14ad86ec74d44f400ff0",
+      "parents": [
+        "525b97b9c34270a20d7b6cbc0d1f9de38c9d9bef"
+      ],
+      "tree": "4bdb0c0d922fefcaa4599d6c11c34fa33250a6a2",
+      "authorDate": "2026-11-08T22:42:14Z",
+      "commitDate": "2026-11-08T22:42:14Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3: document and test 74-ID pragmatic symbol rollout"
+    },
+    {
+      "sha": "525b97b9c34270a20d7b6cbc0d1f9de38c9d9bef",
+      "parents": [
+        "3968f8dec001ec467404049528ff56068b5de58a"
+      ],
+      "tree": "8cbb7d72551dd719b2851643dea160b2de26fe8d",
+      "authorDate": "2026-11-08T22:41:13Z",
+      "commitDate": "2026-11-08T22:41:13Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3: responsive heraldry tiles and neutral fallback styling"
+    },
+    {
+      "sha": "3968f8dec001ec467404049528ff56068b5de58a",
+      "parents": [
+        "e448eaaf7bb03cd01a6144a9b9ebdd01928eb3ce"
+      ],
+      "tree": "18f98d8ae84f74653b8d60a8b9c84febed028f0c",
+      "authorDate": "2026-11-08T22:40:42Z",
+      "commitDate": "2026-11-08T22:40:42Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3: render entity-specific coats and flags in React tree and cards"
+    },
+    {
+      "sha": "e448eaaf7bb03cd01a6144a9b9ebdd01928eb3ce",
+      "parents": [
+        "a469da6be7c2ac3cfc9e2ceb29a9577754fae73b"
+      ],
+      "tree": "5a9f38b66e0f84e7df2c2d6b370c657f40fd86e1",
+      "authorDate": "2026-11-08T22:39:56Z",
+      "commitDate": "2026-11-08T22:39:56Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3: exact-ID heraldry types and graceful image fallback"
+    },
+    {
+      "sha": "a469da6be7c2ac3cfc9e2ceb29a9577754fae73b",
+      "parents": [
+        "1a64bce83817aaebd7397dca48762693d042322d"
+      ],
+      "tree": "6bbe1c6edabdb780a67ad00b5bd69e5805053e4b",
+      "authorDate": "2026-11-08T22:39:54Z",
+      "commitDate": "2026-11-08T22:39:54Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3: exact-ID heraldry types and graceful image fallback"
+    },
+    {
+      "sha": "1a64bce83817aaebd7397dca48762693d042322d",
+      "parents": [
+        "670062655577ebbcf82fdcd40d93a1646f8db5e3"
+      ],
+      "tree": "7c42b6ae9c30e8fda8e7554955974ac1b61a2a7c",
+      "authorDate": "2026-11-08T22:39:36Z",
+      "commitDate": "2026-11-08T22:39:36Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3: add exact-ID 74-entity editorial heraldry catalog"
+    },
+    {
+      "sha": "1b3d02b9c48021ba3f2630f07962bbf19ef10f48",
+      "parents": [
+        "142ba22c4d73692fce289096b6f8079063a4524a"
+      ],
+      "tree": "2148742f9ab4fd0666ec98ce7db1a1604a4306bf",
+      "authorDate": "2026-11-09T00:36:55Z",
+      "commitDate": "2026-11-09T00:36:55Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R4: label supplemental flags as preliminary candidates"
+    },
+    {
+      "sha": "142ba22c4d73692fce289096b6f8079063a4524a",
+      "parents": [
+        "3dfbfe31fbb770fdbefb27f11b849c3e579d0d63"
+      ],
+      "tree": "e31bda670b222f93be6eb7e6463137c4e3ef7398",
+      "authorDate": "2026-11-09T00:34:46Z",
+      "commitDate": "2026-11-09T00:34:46Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R4: select documented variants and correct source-holder conflicts"
+    },
+    {
+      "sha": "3dfbfe31fbb770fdbefb27f11b849c3e579d0d63",
+      "parents": [
+        "ed786a82272b5f962e7169460f8d9d14daa080c1"
+      ],
+      "tree": "e911162e46eac3a6ce97f2efe2b5be75a63d24e2",
+      "authorDate": "2026-11-09T00:29:08Z",
+      "commitDate": "2026-11-09T00:29:08Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R4: scope responsive symbol checks to the visible card"
+    },
+    {
+      "sha": "ed786a82272b5f962e7169460f8d9d14daa080c1",
+      "parents": [
+        "02a96733e919be8af4db4c2f7216eecd2dc9e1da"
+      ],
+      "tree": "9b71d3b35fbc7cfc2aa230005f9636d11d0f6343",
+      "authorDate": "2026-11-09T00:27:31Z",
+      "commitDate": "2026-11-09T00:27:31Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R4: populate exact-ID global territorial symbols and coverage registry"
+    },
+    {
+      "sha": "18d830d5c3da2cca8d07ba4426e7e74dd389ba9a",
+      "parents": [
+        "7288b44f2b0e355b4c4b585ee5b87e6574fae60b"
+      ],
+      "tree": "3c4ff531abf64d56b953e982d78eedfdb79579a1",
+      "authorDate": "2026-11-09T09:10:37Z",
+      "commitDate": "2026-11-09T09:10:37Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R5: audit exact symbol identities and apply documented corrections"
+    },
+    {
+      "sha": "ed9dc8718d33415ef14253c61960174ad611cfcc",
+      "parents": [
+        "ce078147bc8500f2454b409676f6f1fad622bdba"
+      ],
+      "tree": "00c57f5446b5b12613fab7ccbc5fdb20628d93ce",
+      "authorDate": "2026-11-09T15:41:25Z",
+      "commitDate": "2026-11-09T15:41:25Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R6: resolve Briceni annexes and document priority heraldic exceptions"
+    },
+    {
+      "sha": "9516ecced09efa455f4261008bf23b7e88854999",
+      "parents": [
+        "a816220bff382ab1bc57fa308540ac996392b5bd"
+      ],
+      "tree": "4928647ca0b780f03dfe38a4b72ce15335c623a0",
+      "authorDate": "2026-11-09T18:14:26Z",
+      "commitDate": "2026-11-09T18:14:26Z",
+      "author": "Ovidiu Deică",
+      "subject": "docs: record GitHub runner failure and retry protected CI"
+    },
+    {
+      "sha": "a816220bff382ab1bc57fa308540ac996392b5bd",
+      "parents": [
+        "690957d83508724ff6a38e65347c047e394cda40"
+      ],
+      "tree": "f3cd510001669c8557f910bbcadfef28e74fe15e",
+      "authorDate": "2026-11-09T18:06:21Z",
+      "commitDate": "2026-11-09T18:06:21Z",
+      "author": "Ovidiu Deică",
+      "subject": "fix: normalize SIM-R7 gzip headers across build platforms"
+    },
+    {
+      "sha": "690957d83508724ff6a38e65347c047e394cda40",
+      "parents": [
+        "18ced3d5942d775e6c6c1acebb88c8a50f415d9b"
+      ],
+      "tree": "54aaf8a9eb772d250d6bf17502cc13507b62bf6e",
+      "authorDate": "2026-11-09T18:02:39Z",
+      "commitDate": "2026-11-09T18:02:39Z",
+      "author": "Ovidiu Deică",
+      "subject": "feat: record SIM-R7 evidence and guard territorial symbol selection"
+    },
+    {
+      "sha": "18ced3d5942d775e6c6c1acebb88c8a50f415d9b",
+      "parents": [
+        "a71291c4ca46ecab85d42a11e75bc42e95f44590"
+      ],
+      "tree": "42716f385ae19ab70008b34bbe9cccf73c5c4470",
+      "authorDate": "2026-11-09T16:40:00Z",
+      "commitDate": "2026-11-09T16:40:00Z",
+      "author": "Ovidiu Deică",
+      "subject": "docs: confirm SIM-R6 integration and published status"
+    },
+    {
+      "sha": "edd67f52bcd64359837044d4b1263f91f1deb941",
+      "parents": [
+        "17d099fdc48afe068fb5e88466c1a54a072f6333"
+      ],
+      "tree": "62882b5aa1f5a12c2324d28bc72c742182622b79",
+      "authorDate": "2026-11-09T23:44:19Z",
+      "commitDate": "2026-11-09T23:44:19Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R8-validate-latest-main-with-274-passing-tests"
+    },
+    {
+      "sha": "17d099fdc48afe068fb5e88466c1a54a072f6333",
+      "parents": [
+        "cc3bce1977748f3b2b3f3d874c92a9cc2f804ba9",
+        "d6f3d48a94939da067b922e85dcb622522e61daa"
+      ],
+      "tree": "5f38bc1df5217aac819a616ba0e8234a9de17bfe",
+      "authorDate": "2026-11-09T23:35:59Z",
+      "commitDate": "2026-11-09T23:35:59Z",
+      "author": "Ovidiu Deică",
+      "subject": "Merge remote-tracking branch 'origin/main' into sim-r8-targeted-evidence-rights"
+    },
+    {
+      "sha": "cc3bce1977748f3b2b3f3d874c92a9cc2f804ba9",
+      "parents": [
+        "5dbfc53d1fdf98de1f9c4af6be2a81a41a6ce233"
+      ],
+      "tree": "588f1d5d3a2a741296cfb08f79af321f04f33e88",
+      "authorDate": "2026-11-09T23:32:56Z",
+      "commitDate": "2026-11-09T23:32:56Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R8: verify decoded normative assets and isolate reproducibility checks"
+    },
+    {
+      "sha": "5dbfc53d1fdf98de1f9c4af6be2a81a41a6ce233",
+      "parents": [
+        "133156f9ad0404dce80474cda07a74ae2eb34efc",
+        "96a57ccaf66765c8ab419c926ae06a070d9196e2"
+      ],
+      "tree": "86d5779938539fa15ed29abb73690c875eccccf6",
+      "authorDate": "2026-11-09T23:00:59Z",
+      "commitDate": "2026-11-09T23:00:59Z",
+      "author": "Ovidiu Deică",
+      "subject": "Merge remote-tracking branch 'origin/main' into sim-r8-targeted-evidence-rights"
+    },
+    {
+      "sha": "133156f9ad0404dce80474cda07a74ae2eb34efc",
+      "parents": [
+        "0208ec5f2f0f3d71805b64f8883231431adc6751"
+      ],
+      "tree": "fe7d9b4cebc0692b7da621f6d615ee81af28e53c",
+      "authorDate": "2026-11-09T23:00:20Z",
+      "commitDate": "2026-11-09T23:00:20Z",
+      "author": "Ovidiu Deică",
+      "subject": "SIM-R8: recover final normative annexes and replace three unclear reproductions"
+    },
+    {
+      "sha": "a320748a4e8c17302760419d5e3b9671ad6b5261",
+      "parents": [
+        "4e4677c6e75b811bf166d8b38f644f5b2cbbddcd"
+      ],
+      "tree": "58351acf93128992a30f90c6043a2339f5bb9191",
+      "authorDate": "2026-11-08T23:12:47Z",
+      "commitDate": "2026-11-08T23:12:47Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3.1: document full media audit and multilingual Wikipedia discovery policy"
+    },
+    {
+      "sha": "4e4677c6e75b811bf166d8b38f644f5b2cbbddcd",
+      "parents": [
+        "04c6251e47682350884ecfd678e315a4ac187370"
+      ],
+      "tree": "81b8e855c1cce289d9b6708f02a03039ce40eae5",
+      "authorDate": "2026-11-08T23:12:19Z",
+      "commitDate": "2026-11-08T23:12:19Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3.1: add offline registry/identity and source-policy regressions"
+    },
+    {
+      "sha": "04c6251e47682350884ecfd678e315a4ac187370",
+      "parents": [
+        "ab84cc40524a4efb25bdbf31938abdea8308535d"
+      ],
+      "tree": "3ee731e20582531394a4c601661b90391ecce6a6",
+      "authorDate": "2026-11-08T23:11:41Z",
+      "commitDate": "2026-11-08T23:11:41Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3.1: record 137 source checks and Commons file metadata per exact Atlas ID"
+    },
+    {
+      "sha": "ab84cc40524a4efb25bdbf31938abdea8308535d",
+      "parents": [
+        "17f5838e9e814a903b95cb07ed871877eb33e4c0"
+      ],
+      "tree": "dd416d83a14d1b959fbe380ca32a9e237ded4db0",
+      "authorDate": "2026-11-08T23:10:47Z",
+      "commitDate": "2026-11-08T23:10:47Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R3.1: Chromium spot-checks for desktop tree, card, mobile and neutral heraldry"
+    },
+    {
+      "sha": "9cdc71c6d4d02ec9835633b26e71d13fdfb5520f",
+      "parents": [
+        "75324712efaab0f7b97b25ebbfc404e37da1dd38"
+      ],
+      "tree": "7471c16283c6558535b320b718997d2a7a9e5da5",
+      "authorDate": "2026-11-09T06:27:23Z",
+      "commitDate": "2026-11-09T06:27:23Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: make inherited Chromium media assertions resilient to legitimate external image failures"
+    },
+    {
+      "sha": "a39fc40f2895cf5371cbcca479b78eefa191f0d0",
+      "parents": [
+        "af394446ab10a76b7d1ee6ea94ee7f2418ebce7f"
+      ],
+      "tree": "60c4bfe6db7fa8e6f180d2b7fd4d42e9cf206ca5",
+      "authorDate": "2026-11-09T06:19:18Z",
+      "commitDate": "2026-11-09T06:19:18Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: retain historical symbol tests with new coat-only header contract"
+    },
+    {
+      "sha": "af394446ab10a76b7d1ee6ea94ee7f2418ebce7f",
+      "parents": [
+        "5b52cb9b080fbe17181e9ebd0a8ad19a52a9aa47"
+      ],
+      "tree": "f2668af842ab6d5a7b49b422e17245baab40f55c",
+      "authorDate": "2026-11-09T06:19:16Z",
+      "commitDate": "2026-11-09T06:19:16Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: retain historical symbol tests with new coat-only header contract"
+    },
+    {
+      "sha": "5b52cb9b080fbe17181e9ebd0a8ad19a52a9aa47",
+      "parents": [
+        "f8a2af8802b7c77c22603b2c59e51ba9c8f21027"
+      ],
+      "tree": "dbcbaca4dda5812145596674ea8041d234050985",
+      "authorDate": "2026-11-09T06:18:45Z",
+      "commitDate": "2026-11-09T06:18:45Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: update legacy regression assertions to coat-only headings"
+    },
+    {
+      "sha": "f8a2af8802b7c77c22603b2c59e51ba9c8f21027",
+      "parents": [
+        "b4306ed79ed672ddd667da9dca3a27b37748880f"
+      ],
+      "tree": "0bc8a5248cd0d8b7e8b76e3ea33224ad7586bf33",
+      "authorDate": "2026-11-09T06:17:00Z",
+      "commitDate": "2026-11-09T06:17:00Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: move exact-ID coat regression assertion to shared presentation helper"
+    },
+    {
+      "sha": "b4306ed79ed672ddd667da9dca3a27b37748880f",
+      "parents": [
+        "6358fb6ebbc3287278c12fcbb58257158c9fac6c"
+      ],
+      "tree": "16a79bbafa08e91a2c26cef400a998c23d2f9665",
+      "authorDate": "2026-11-09T06:16:14Z",
+      "commitDate": "2026-11-09T06:16:14Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: Chromium compare national tree/card coats and separate flags on desktop and mobile"
+    },
+    {
+      "sha": "6358fb6ebbc3287278c12fcbb58257158c9fac6c",
+      "parents": [
+        "b07c8bd6fb5e89e0b94d15666b7680a19ad78d42"
+      ],
+      "tree": "c7b7f3bffc1d8ca327a078d13d3fc417fcfdc426",
+      "authorDate": "2026-11-09T06:15:09Z",
+      "commitDate": "2026-11-09T06:15:09Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: verify exact-ID coats for all 4283 entities and national header regression"
+    },
+    {
+      "sha": "b07c8bd6fb5e89e0b94d15666b7680a19ad78d42",
+      "parents": [
+        "dbacf2abbccc3bc7a9388888172138cbddd5e9c4"
+      ],
+      "tree": "ef299c507dfee56a299d9e4a274237c3497a6f8d",
+      "authorDate": "2026-11-09T06:14:02Z",
+      "commitDate": "2026-11-09T06:14:02Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: display shared coat in all tree rows and card headings, no country flag fallback"
+    },
+    {
+      "sha": "dbacf2abbccc3bc7a9388888172138cbddd5e9c4",
+      "parents": [
+        "219d42d4b47a39a5142ab6aed43f04418aa1f226"
+      ],
+      "tree": "2438a0224b6c68d12d58905d6bc8fd3de4dd594a",
+      "authorDate": "2026-11-09T06:13:35Z",
+      "commitDate": "2026-11-09T06:13:35Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: permit structurally typed Atlas territory IDs"
+    },
+    {
+      "sha": "219d42d4b47a39a5142ab6aed43f04418aa1f226",
+      "parents": [
+        "0feb305f95d171d307034c47c4e7351a338d2ee6"
+      ],
+      "tree": "97ca0c9c247a1579da51c020c477a463025d5c43",
+      "authorDate": "2026-11-09T06:13:23Z",
+      "commitDate": "2026-11-09T06:13:23Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: type the shared coat selection helper"
+    },
+    {
+      "sha": "0feb305f95d171d307034c47c4e7351a338d2ee6",
+      "parents": [
+        "a62d19bf15b2ff12e2cdec85cee1285d327d33fa"
+      ],
+      "tree": "774d77fd59bada20bc069e24949fff8d587d46fe",
+      "authorDate": "2026-11-09T06:13:21Z",
+      "commitDate": "2026-11-09T06:13:21Z",
+      "author": "Ovidiu",
+      "subject": "SIM-R4.1: centralize exact-ID coat selection without flag fallback"
+    },
+    {
+      "sha": "508e28683e7793b059f31ebf975e41eeb4d62c17",
+      "parents": [
+        "4b0853474998d9dd043ccdcca1302c6f1e399abe"
+      ],
+      "tree": "cc1a73d5109769b70ae0772fef04e6bc4dd781c1",
+      "authorDate": "2026-11-08T13:22:05Z",
+      "commitDate": "2026-11-08T13:22:05Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R4.7: align source-heading regression checks with unique toolbar titles"
+    },
+    {
+      "sha": "4b0853474998d9dd043ccdcca1302c6f1e399abe",
+      "parents": [
+        "25999fcdf32a145bf9a8d801fb0f61db4ad049f9"
+      ],
+      "tree": "75597ee4ba87d1ab5d2a70d77c1ba2f1bbd339d8",
+      "authorDate": "2026-11-08T13:20:28Z",
+      "commitDate": "2026-11-08T13:20:28Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R4.7: remove duplicate module/card headings and show Entity in toolbar"
+    },
+    {
+      "sha": "f045994d000e45fe06822f43d2c28f69060d7816",
+      "parents": [
+        "8317ff9a346fff871b74f4974cda4bc263d058ed"
+      ],
+      "tree": "d7c7d4f6e9c6ecccbd04caf3e65789dd8d1eb6d7",
+      "authorDate": "2026-11-08T12:40:37Z",
+      "commitDate": "2026-11-08T12:40:37Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R4.6: align Map tools above zoom and desktop panel close X"
+    },
+    {
+      "sha": "8236fb37b66412f9be871ed10a3cde33369a88cf",
+      "parents": [
+        "d1ff22c8844ea1b460a0fa9f822fc938e9eba624"
+      ],
+      "tree": "c21615c0e1deda52015e4d52e380f936feae185b",
+      "authorDate": "2026-11-10T11:25:33Z",
+      "commitDate": "2026-11-10T11:25:33Z",
+      "author": "Ovidiu Deică",
+      "subject": "WEB-AUDIT.5a-defer-unselected-remote-tree-originals"
+    },
+    {
+      "sha": "c9ddec982c2736c614e682e9bbb9ade778a8b763",
+      "parents": [
+        "82622896078bab8ce4ec25a7a8cac40c9bf6b87a"
+      ],
+      "tree": "5c6b9873ec0adc5a874849de40f5ad32a39b0293",
+      "authorDate": "2026-11-10T12:36:01Z",
+      "commitDate": "2026-11-10T12:36:01Z",
+      "author": "Ovidiu Deică",
+      "subject": "WEB-AUDIT.5b-accessibility-selective-recovery-and-map-controls"
+    },
+    {
+      "sha": "ceeff4955500a5d286622f50fd38f4837dfb54eb",
+      "parents": [
+        "b77c748b790aa96aaa41ba175cdcd45e247896e4"
+      ],
+      "tree": "d76c0c467690edadb00a3c10bcdd17bc43ec7ef2",
+      "authorDate": "2026-11-10T14:22:46Z",
+      "commitDate": "2026-11-10T14:22:46Z",
+      "author": "Ovidiu Deică",
+      "subject": "WEB-AUDIT.5c-live-certification-and-regression-evidence"
+    },
+    {
+      "sha": "b668eac2f3429034b2c18bcf117da0c20b2f1527",
+      "parents": [
+        "b52b38087900d08c23c3f7403a37233d09c233f0"
+      ],
+      "tree": "f47f7d85c03bdefda7590fdae002009e041dce49",
+      "authorDate": "2026-11-09T23:08:58Z",
+      "commitDate": "2026-11-09T23:08:58Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: update exact-source test assertions for locale-aware official names"
+    },
+    {
+      "sha": "b52b38087900d08c23c3f7403a37233d09c233f0",
+      "parents": [
+        "514e695c665011fd0aabfc07cd746189461de21c"
+      ],
+      "tree": "b7bb650888f017975da3a049d75fc45cd5648322",
+      "authorDate": "2026-11-09T23:08:55Z",
+      "commitDate": "2026-11-09T23:08:55Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: update exact-source test assertions for locale-aware official names"
+    },
+    {
+      "sha": "514e695c665011fd0aabfc07cd746189461de21c",
+      "parents": [
+        "0673290c06b07d4f8b5a30de7f00c0d5f1683cc0"
+      ],
+      "tree": "a0a2fd7e9d65542ad6e1597fe644b55330702321",
+      "authorDate": "2026-11-09T23:08:52Z",
+      "commitDate": "2026-11-09T23:08:52Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: update exact-source test assertions for locale-aware official names"
+    },
+    {
+      "sha": "0673290c06b07d4f8b5a30de7f00c0d5f1683cc0",
+      "parents": [
+        "f3ab9937e3f8ea41a778d82583b33f719dac1aae"
+      ],
+      "tree": "ae51657f7ad6f6e57df26ef014577910eb1c4a2e",
+      "authorDate": "2026-11-09T23:07:18Z",
+      "commitDate": "2026-11-09T23:07:18Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: Chromium test live RO/EN official name switching on desktop and mobile"
+    },
+    {
+      "sha": "f3ab9937e3f8ea41a778d82583b33f719dac1aae",
+      "parents": [
+        "bfc548f56a75194886f41d19642840507062e706"
+      ],
+      "tree": "86f692818372aa345f3759779861dfc65f7ec3f8",
+      "authorDate": "2026-11-09T23:06:35Z",
+      "commitDate": "2026-11-09T23:06:35Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: verify full official-name English presentation for catalog, types and canonical preservation"
+    },
+    {
+      "sha": "bfc548f56a75194886f41d19642840507062e706",
+      "parents": [
+        "01907f391a1694da4b744f01f418ca3d8ca027be"
+      ],
+      "tree": "61558ad07da9111fb805f4d1221b2cf8895d6a30",
+      "authorDate": "2026-11-09T23:06:01Z",
+      "commitDate": "2026-11-09T23:06:01Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: adapt legacy tree tests to locale-aware official name without mutating source"
+    },
+    {
+      "sha": "01907f391a1694da4b744f01f418ca3d8ca027be",
+      "parents": [
+        "e024a75a9c4694acba8fc7148184007a222376ea"
+      ],
+      "tree": "31af06567949ce6ab96882f1d08865c603de83d7",
+      "authorDate": "2026-11-09T23:05:14Z",
+      "commitDate": "2026-11-09T23:05:14Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: normalize Romanian diacritics in administrative-type translation rules"
+    },
+    {
+      "sha": "e024a75a9c4694acba8fc7148184007a222376ea",
+      "parents": [
+        "721d3d6da7cba690fd228acd71af8020f959fec9"
+      ],
+      "tree": "a792952606f1b80bd90c5080a50bd65c9fbd7234",
+      "authorDate": "2026-11-09T23:04:33Z",
+      "commitDate": "2026-11-09T23:04:33Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: localize official-name field while preserving original in hover and catalog"
+    },
+    {
+      "sha": "721d3d6da7cba690fd228acd71af8020f959fec9",
+      "parents": [
+        "e40151efd8cc0c01675c5970d12371dbe5821cf3"
+      ],
+      "tree": "26119b628466a5f8fbe5edd5480a94e4a6eb7183",
+      "authorDate": "2026-11-09T23:04:30Z",
+      "commitDate": "2026-11-09T23:04:30Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: localize official-name field while preserving original in hover and catalog"
+    },
+    {
+      "sha": "e40151efd8cc0c01675c5970d12371dbe5821cf3",
+      "parents": [
+        "96a57ccaf66765c8ab419c926ae06a070d9196e2"
+      ],
+      "tree": "3285d7ed9c442d6cf0de9740c4270cf78229b8ec",
+      "authorDate": "2026-11-09T23:04:02Z",
+      "commitDate": "2026-11-09T23:04:02Z",
+      "author": "Ovidiu",
+      "subject": "WEB-EN: provide full English renderings of entity official-name field without changing source names"
+    },
+    {
+      "sha": "0ce63887de7c074bc3739c869fc7c507fc417d9d",
+      "parents": [
+        "7125ff38126ced1eddb758d8d7f65d2db09938ff"
+      ],
+      "tree": "319a4742edc6e6519dca4603738b8f22b67d86ab",
+      "authorDate": "2026-11-09T22:44:05Z",
+      "commitDate": "2026-11-09T22:44:05Z",
+      "author": "Ovidiu",
+      "subject": "WEB-HEADER: align 390px no-selection assertion with 11px mobile padding"
+    },
+    {
+      "sha": "7125ff38126ced1eddb758d8d7f65d2db09938ff",
+      "parents": [
+        "e2217015f0d7121b393b40f87fb1a3a200683994"
+      ],
+      "tree": "c31ff51bf2d553711229c8c9d000a4a7b659f455",
+      "authorDate": "2026-11-09T22:40:41Z",
+      "commitDate": "2026-11-09T22:40:41Z",
+      "author": "Ovidiu",
+      "subject": "WEB-HEADER: regressions for right-aligned language and entity-details controls"
+    },
+    {
+      "sha": "e2217015f0d7121b393b40f87fb1a3a200683994",
+      "parents": [
+        "85e6111c25dd2f707dfd0d4162709867834b5fb4"
+      ],
+      "tree": "15a4dc8b703edd113194aee2466d6f6bd82d0571",
+      "authorDate": "2026-11-09T22:40:17Z",
+      "commitDate": "2026-11-09T22:40:17Z",
+      "author": "Ovidiu",
+      "subject": "WEB-HEADER: Chromium verify right-aligned equal-size entity opener at 1440/900/390/360"
+    },
+    {
+      "sha": "85e6111c25dd2f707dfd0d4162709867834b5fb4",
+      "parents": [
+        "9449d08b5436946b80c5d5f481a7e6e1d86a0565"
+      ],
+      "tree": "3cc9358326f494352cef6154e8c3a740a293c14d",
+      "authorDate": "2026-11-09T22:39:32Z",
+      "commitDate": "2026-11-09T22:39:32Z",
+      "author": "Ovidiu",
+      "subject": "WEB-HEADER: size header entity button like EN/RO on desktop and mobile"
+    },
+    {
+      "sha": "9449d08b5436946b80c5d5f481a7e6e1d86a0565",
+      "parents": [
+        "0208ec5f2f0f3d71805b64f8883231431adc6751"
+      ],
+      "tree": "8519df652280dac9cb5a690262c662093764f973",
+      "authorDate": "2026-11-09T22:39:03Z",
+      "commitDate": "2026-11-09T22:39:03Z",
+      "author": "Ovidiu",
+      "subject": "WEB-HEADER: group entity details control with language switcher on right"
+    },
+    {
+      "sha": "e688af3cd6f6c68ea072f88a426a7850ef9f2c6a",
+      "parents": [
+        "2980bf186b50393b987e36a78900958ce1026b7f"
+      ],
+      "tree": "7ca1f9a055e9aaae275579ae1b00b2d99fcbe6dc",
+      "authorDate": "2026-11-10T15:30:05Z",
+      "commitDate": "2026-11-10T15:30:05Z",
+      "author": "Ovidiu Deică",
+      "subject": "WEB-MAINTENANCE-certified-baseline-and-operational-stabilization"
+    },
+    {
+      "sha": "28e73a83bc018e899e62c0ef55975be05f344299",
+      "parents": [
+        "86f4a4e70b098eb32f558e0121214b66e5c39f57"
+      ],
+      "tree": "20af18902059b8716a26fcc69ad0448f28e71528",
+      "authorDate": "2026-11-07T19:22:17Z",
+      "commitDate": "2026-11-07T19:22:17Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19a: add noncanonical role contract and assertions"
+    },
+    {
+      "sha": "86f4a4e70b098eb32f558e0121214b66e5c39f57",
+      "parents": [
+        "bb5fe9ec6dbefd5c992844ff2310e182cf53bb31"
+      ],
+      "tree": "85059e561db279fde105d000a8e40b607d8bb234",
+      "authorDate": "2026-11-07T19:22:15Z",
+      "commitDate": "2026-11-07T19:22:15Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19a: add noncanonical role contract and assertions"
+    },
+    {
+      "sha": "bb5fe9ec6dbefd5c992844ff2310e182cf53bb31",
+      "parents": [
+        "b274cdf546c26a556c0034dca5e3c8f0a2918867"
+      ],
+      "tree": "de3680c1f48e88d646ee12974794b743b59b40f9",
+      "authorDate": "2026-11-07T19:22:13Z",
+      "commitDate": "2026-11-07T19:22:13Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19a: add noncanonical role contract and assertions"
+    },
+    {
+      "sha": "b274cdf546c26a556c0034dca5e3c8f0a2918867",
+      "parents": [
+        "9b301683d6848dd6ab815a205951fae14e7be254"
+      ],
+      "tree": "66ef614f310a5ac0d264e0fda3389f63f1d149c0",
+      "authorDate": "2026-11-07T19:22:11Z",
+      "commitDate": "2026-11-07T19:22:11Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19a: add noncanonical role contract and assertions"
+    },
+    {
+      "sha": "fa609250d1c0ff162b90f0289ee9ae2705d13fde",
+      "parents": [
+        "4971db035e66d3564e40d9ee7bf6d4a5c264ee46"
+      ],
+      "tree": "1d124965154f47b120a455c7fc34c46d474fa81b",
+      "authorDate": "2026-11-07T19:32:31Z",
+      "commitDate": "2026-11-07T19:32:31Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19b: Chromium desktop/mobile evidence for Bucharest numeric SIRUTA ordering"
+    },
+    {
+      "sha": "4971db035e66d3564e40d9ee7bf6d4a5c264ee46",
+      "parents": [
+        "151ea34fd69467902b035e1d77e41667abd24f9a"
+      ],
+      "tree": "b34c062e7a8b7933d069ef0b7198c5004f55ff7b",
+      "authorDate": "2026-11-07T19:29:00Z",
+      "commitDate": "2026-11-07T19:29:00Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19b: document code precedence, ties and regression gates"
+    },
+    {
+      "sha": "151ea34fd69467902b035e1d77e41667abd24f9a",
+      "parents": [
+        "60dd6580fe5719d0c0ff40a50c6322c6cfc5e212"
+      ],
+      "tree": "8e607278a06d7790ba4a285c9e8ba853bf3ed485",
+      "authorDate": "2026-11-07T19:28:31Z",
+      "commitDate": "2026-11-07T19:28:31Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19b: validate NUTS and SIRUTA sibling sorting exhaustively"
+    },
+    {
+      "sha": "60dd6580fe5719d0c0ff40a50c6322c6cfc5e212",
+      "parents": [
+        "018ea2151c0067097a90b68b97cfe24b27382caf"
+      ],
+      "tree": "aeaa2257ce6da6f29b92ac9f40b0e8500e9bb8f0",
+      "authorDate": "2026-11-07T19:28:05Z",
+      "commitDate": "2026-11-07T19:28:05Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19b: replace obsolete Romania-unchanged regression assertion"
+    },
+    {
+      "sha": "018ea2151c0067097a90b68b97cfe24b27382caf",
+      "parents": [
+        "f4a47140411f743ff6e2304def88efae1ad2e63e"
+      ],
+      "tree": "855b35ba85d244061c2473ccc6b7245d1757f2b5",
+      "authorDate": "2026-11-07T19:27:47Z",
+      "commitDate": "2026-11-07T19:27:47Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19b: compare SIRUTA as numeric strings"
+    },
+    {
+      "sha": "f4a47140411f743ff6e2304def88efae1ad2e63e",
+      "parents": [
+        "74f44457cc0622d8474b0c4e33c148d1855f1a74"
+      ],
+      "tree": "f46c23caf0c8e2198ce00b7ac8e0e1ef3a0ec969",
+      "authorDate": "2026-11-07T19:26:33Z",
+      "commitDate": "2026-11-07T19:26:33Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19b: declare Romanian official-code comparator"
+    },
+    {
+      "sha": "74f44457cc0622d8474b0c4e33c148d1855f1a74",
+      "parents": [
+        "cdf34c42b7ef6cd0b2d1d9420e27500c9cfa70b4"
+      ],
+      "tree": "cd84fd8d7c65c6e32315bc3ef7466812beb5e47f",
+      "authorDate": "2026-11-07T19:26:31Z",
+      "commitDate": "2026-11-07T19:26:31Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.19b: order Romanian siblings by NUTS then numeric SIRUTA"
+    },
+    {
+      "sha": "4873ed22d3254cb32ff92f6957e22dcd4dd03f04",
+      "parents": [
+        "3ab362923a7193219c99d26ff17122df774916c1"
+      ],
+      "tree": "9518aca2ac90de0ecfca117c391965fc59527563",
+      "authorDate": "2026-11-07T19:38:14Z",
+      "commitDate": "2026-11-07T19:38:14Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.20: document display-only capital nesting and access guarantees"
+    },
+    {
+      "sha": "3ab362923a7193219c99d26ff17122df774916c1",
+      "parents": [
+        "fec8c5defdf856bf0708198bef6f1cd9df3e021b"
+      ],
+      "tree": "2a9ca5d850ec131b105d06a170d21f773dfb9e82",
+      "authorDate": "2026-11-07T19:37:47Z",
+      "commitDate": "2026-11-07T19:37:47Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.20: Chromium desktop/mobile verify Chișinău city is concise but nested"
+    },
+    {
+      "sha": "fec8c5defdf856bf0708198bef6f1cd9df3e021b",
+      "parents": [
+        "adf36356b72f864012864883a93ab445e04af146"
+      ],
+      "tree": "87a926ab68d421014eda31ca975c13caf229079c",
+      "authorDate": "2026-11-07T19:37:25Z",
+      "commitDate": "2026-11-07T19:37:25Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.20: test Bucharest sectors, Chișinău distinct IDs, tree reachability and Nistrenia"
+    },
+    {
+      "sha": "adf36356b72f864012864883a93ab445e04af146",
+      "parents": [
+        "6156342ce535f5ab7cb85c5e3df2a04c909d9174"
+      ],
+      "tree": "ef3ddaaf827baec0380dda07f48f5460b9ee2365",
+      "authorDate": "2026-11-07T19:36:52Z",
+      "commitDate": "2026-11-07T19:36:52Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.20: enforce Chișinău municipality/city distinct display"
+    },
+    {
+      "sha": "6156342ce535f5ab7cb85c5e3df2a04c909d9174",
+      "parents": [
+        "6e29ec53b673d6754cf6e4bce505b6af9b221f5a"
+      ],
+      "tree": "8b498de9f262bfcb60091860c58ce9e48d5009d8",
+      "authorDate": "2026-11-07T19:36:49Z",
+      "commitDate": "2026-11-07T19:36:49Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.20: assert concise Chișinău city label without changing source name"
+    },
+    {
+      "sha": "6e29ec53b673d6754cf6e4bce505b6af9b221f5a",
+      "parents": [
+        "183fcae69b7b271cb7d680e9be9408031cc0ff0c"
+      ],
+      "tree": "a2617911d3584828fcd6e51134c9d8212573da31",
+      "authorDate": "2026-11-07T19:36:24Z",
+      "commitDate": "2026-11-07T19:36:24Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.20: keep Chișinău ADM8 accessible in search and assistive tree labels"
+    },
+    {
+      "sha": "183fcae69b7b271cb7d680e9be9408031cc0ff0c",
+      "parents": [
+        "d43903e0dc9c7dbb5d6da94318daae1bcdfa1d65"
+      ],
+      "tree": "d6a6beced2696d85980d0eb086f5c55b8912cf09",
+      "authorDate": "2026-11-07T19:36:21Z",
+      "commitDate": "2026-11-07T19:36:21Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.20: avoid duplicating Chișinău name in hierarchical tree"
+    },
+    {
+      "sha": "48f2d7a1ab3dd8d61c98c4235b450a56b8ba7907",
+      "parents": [
+        "a5dc1e39fcf8e76ecdb3a23750909049cd7bdf08"
+      ],
+      "tree": "5e033a9446ddd2021c7c1ec55874ccadf380ebff",
+      "authorDate": "2026-11-07T19:45:35Z",
+      "commitDate": "2026-11-07T19:45:35Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.21: assert OSM filters in responsible module, not App UI"
+    },
+    {
+      "sha": "a5dc1e39fcf8e76ecdb3a23750909049cd7bdf08",
+      "parents": [
+        "913c2f11c54f314b53a8e8f1839b4b0387873d4f"
+      ],
+      "tree": "f6ebd9fa94ea06329e82b3722289bf704aacbccf",
+      "authorDate": "2026-11-07T19:43:34Z",
+      "commitDate": "2026-11-07T19:43:34Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.21: document role-derived labels, geometry filters and test gates"
+    },
+    {
+      "sha": "913c2f11c54f314b53a8e8f1839b4b0387873d4f",
+      "parents": [
+        "480e1f04f54c1cd91d39f2210b77589bc6c0227f"
+      ],
+      "tree": "538e8244c83d1de39cd6eeae0bf466b9d40051da",
+      "authorDate": "2026-11-07T19:43:10Z",
+      "commitDate": "2026-11-07T19:43:10Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.21: check all role labels, Bucharest SIRUTA, Chișinău and OSM filters"
+    },
+    {
+      "sha": "480e1f04f54c1cd91d39f2210b77589bc6c0227f",
+      "parents": [
+        "a2177fd12226afbf88b9eaab6dc230ee5cc2d7da"
+      ],
+      "tree": "52007d34fe213784e84972130e359ac00e2d3716",
+      "authorDate": "2026-11-07T19:42:44Z",
+      "commitDate": "2026-11-07T19:42:44Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.21: Chromium checks statistic-first labels and SIRUTA explanation"
+    },
+    {
+      "sha": "a2177fd12226afbf88b9eaab6dc230ee5cc2d7da",
+      "parents": [
+        "929c4ba0f3c09da8fc3cdecb149e3c8577debb45"
+      ],
+      "tree": "3e0cbde0b7bab9cfb3866e8fc711a748be041364",
+      "authorDate": "2026-11-07T19:42:03Z",
+      "commitDate": "2026-11-07T19:42:03Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.21: render statistic-first multirole labels with SIRUTA/OSM clarification"
+    },
+    {
+      "sha": "929c4ba0f3c09da8fc3cdecb149e3c8577debb45",
+      "parents": [
+        "24f4816f654907888af7266366275f8b7742e6a0"
+      ],
+      "tree": "06619ffc2b9aa191bcecdcde37363a6eb7dec160",
+      "authorDate": "2026-11-07T19:42:00Z",
+      "commitDate": "2026-11-07T19:42:00Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.21: derive statistic-before-administrative labels from role model"
+    },
+    {
+      "sha": "24f4816f654907888af7266366275f8b7742e6a0",
+      "parents": [
+        "39e22edf19c1892bed59a189f16dd6a214197dbf"
+      ],
+      "tree": "1998dae253de4037b4c8774cc2505237a888c9bf",
+      "authorDate": "2026-11-07T19:41:58Z",
+      "commitDate": "2026-11-07T19:41:58Z",
+      "author": "Ovidiu",
+      "subject": "WEB-R3.21: derive statistic-before-administrative labels from role model"
+    },
+    {
+      "sha": "a4cd4fc6ca43499344a5851c8ccbaea456c40c24",
+      "parents": [
+        "dd83caeb2960490b29500f28fb835ddce061d6e7"
+      ],
+      "tree": "2c3c318f324194e02dff9e2252d92e3946d6cc9e",
+      "authorDate": "2026-11-07T20:59:10Z",
+      "commitDate": "2026-11-07T20:59:10Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.0): document entity card structure and semantic boundaries"
+    },
+    {
+      "sha": "dd83caeb2960490b29500f28fb835ddce061d6e7",
+      "parents": [
+        "f62d08b247c5adb3069df83f19942394a01637b0"
+      ],
+      "tree": "1258de866d0e24da4ffac3a452c2b2894c1f9730",
+      "authorDate": "2026-11-07T20:58:46Z",
+      "commitDate": "2026-11-07T20:58:46Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.0): protect entity-card sections, provenance and ACTUAL integrity"
+    },
+    {
+      "sha": "f62d08b247c5adb3069df83f19942394a01637b0",
+      "parents": [
+        "9d6bd9c57dacc5c903a8e54318417cdf47184730"
+      ],
+      "tree": "25d6602eaf8d8e2fab5224e6ef4447c79af37f80",
+      "authorDate": "2026-11-07T20:58:13Z",
+      "commitDate": "2026-11-07T20:58:13Z",
+      "author": "Ovidiu",
+      "subject": "style(WEB-R4.0): responsive entity cards with consistent grouped fields"
+    },
+    {
+      "sha": "9d6bd9c57dacc5c903a8e54318417cdf47184730",
+      "parents": [
+        "e656bd586c8d0e2c7fc8bf6d72a6fdbf28e05beb"
+      ],
+      "tree": "ebceb181d8e0776e559860a7d1afc2070b068784",
+      "authorDate": "2026-11-07T20:57:47Z",
+      "commitDate": "2026-11-07T20:57:47Z",
+      "author": "Ovidiu",
+      "subject": "feat(WEB-R4.0): reorganize entity detail fields by semantic responsibility"
+    },
+    {
+      "sha": "e656bd586c8d0e2c7fc8bf6d72a6fdbf28e05beb",
+      "parents": [
+        "ca96970dbb21eeda4be7a1ef5df5462e18f6972c"
+      ],
+      "tree": "743b5946b6a33ac287dbc1c51a607c4fbd195431",
+      "authorDate": "2026-11-07T20:56:55Z",
+      "commitDate": "2026-11-07T20:56:55Z",
+      "author": "Ovidiu",
+      "subject": "feat(WEB-R4.0): introduce reusable semantic sections for entity cards"
+    },
+    {
+      "sha": "cc5cc83ec563726f0aefbd79a4efb2ffb6d02043",
+      "parents": [
+        "43258af7096f8b9b518f5c284c91a837bc6f192f"
+      ],
+      "tree": "6d3b923302fb98746f426b5041be952e82184007",
+      "authorDate": "2026-11-07T21:59:33Z",
+      "commitDate": "2026-11-07T21:59:33Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.1): record Gagauzia ADM4/NTS3 dual role"
+    },
+    {
+      "sha": "43258af7096f8b9b518f5c284c91a837bc6f192f",
+      "parents": [
+        "4dac469fab121e2230cff2935a45f1fffb51241d"
+      ],
+      "tree": "ac019ed4d38e967d625c329b92ea27556a43e343",
+      "authorDate": "2026-11-07T21:59:11Z",
+      "commitDate": "2026-11-07T21:59:11Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.1): assert Gagauzia dual ADM4/NTS3 role from certified catalog"
+    },
+    {
+      "sha": "4dac469fab121e2230cff2935a45f1fffb51241d",
+      "parents": [
+        "4d66a86c6cbd70a5685555f2b489e1c1fbdbc159"
+      ],
+      "tree": "9bbbfdc15e8aa4cc713bbe4de30876f6dcae212b",
+      "authorDate": "2026-11-07T21:57:07Z",
+      "commitDate": "2026-11-07T21:57:07Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.1): preserve official-name invariant after compact card header"
+    },
+    {
+      "sha": "4d66a86c6cbd70a5685555f2b489e1c1fbdbc159",
+      "parents": [
+        "63cb38884e4d48e47c5358f3850c5b83aa2713a1"
+      ],
+      "tree": "00ff92c7b415a148e807a350dc7dd97bcee95de2",
+      "authorDate": "2026-11-07T21:56:07Z",
+      "commitDate": "2026-11-07T21:56:07Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.1): document semantics, role-aware cards and acceptance gate"
+    },
+    {
+      "sha": "63cb38884e4d48e47c5358f3850c5b83aa2713a1",
+      "parents": [
+        "b1ba727ade1d7a41ea194f8a248755a028a0a25f"
+      ],
+      "tree": "aad24077526f02c468f35515361cd1d6876ef308",
+      "authorDate": "2026-11-07T21:55:22Z",
+      "commitDate": "2026-11-07T21:55:22Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.1): add desktop/mobile visual card coverage for nine entity types"
+    },
+    {
+      "sha": "b1ba727ade1d7a41ea194f8a248755a028a0a25f",
+      "parents": [
+        "1ff92292899433e4c0144fdaa394f92a54cbebb7"
+      ],
+      "tree": "bcd85276032c9aede5bf1f4c41d40fcf962554b3",
+      "authorDate": "2026-11-07T21:53:57Z",
+      "commitDate": "2026-11-07T21:53:57Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.1): align R4.0 architecture assertion with presentation model"
+    },
+    {
+      "sha": "1ff92292899433e4c0144fdaa394f92a54cbebb7",
+      "parents": [
+        "9d3f953a0963bb96745cd3b5d32a12325c5feb72"
+      ],
+      "tree": "a5e753c2a66aac9362e602052d04ed9c54dc82b4",
+      "authorDate": "2026-11-07T21:53:45Z",
+      "commitDate": "2026-11-07T21:53:45Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.1): validate role-aware cards against all 4,283 source entities"
+    },
+    {
+      "sha": "9d3f953a0963bb96745cd3b5d32a12325c5feb72",
+      "parents": [
+        "86fe928d78b4049dcdae5b1e6eab414a00a07156"
+      ],
+      "tree": "6e468d3546e4dd5677751e19117d1fdca62ad703",
+      "authorDate": "2026-11-07T21:53:01Z",
+      "commitDate": "2026-11-07T21:53:01Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.1): open mobile entity drawer directly from valid permalink"
+    },
+    {
+      "sha": "86fe928d78b4049dcdae5b1e6eab414a00a07156",
+      "parents": [
+        "f10c8d1cd0872494cfe9332b2a949e06c3d38b7e"
+      ],
+      "tree": "cede4c6294e1d8f0aebb116a6bcaee28f7bdfd2f",
+      "authorDate": "2026-11-07T21:52:11Z",
+      "commitDate": "2026-11-07T21:52:11Z",
+      "author": "Ovidiu",
+      "subject": "style(WEB-R4.1): improve card headers, administrative role list and parent links"
+    },
+    {
+      "sha": "f10c8d1cd0872494cfe9332b2a949e06c3d38b7e",
+      "parents": [
+        "3a09d866bdf67ef8857504d3835dc95d946deeb1"
+      ],
+      "tree": "ac4ff3b69131b7e2ca96e13f1d39efc1484e2674",
+      "authorDate": "2026-11-07T21:51:42Z",
+      "commitDate": "2026-11-07T21:51:42Z",
+      "author": "Ovidiu",
+      "subject": "feat(WEB-R4.1): adapt cards to territorial roles and navigate verified parent references"
+    },
+    {
+      "sha": "3a09d866bdf67ef8857504d3835dc95d946deeb1",
+      "parents": [
+        "54a9b6cd5b3a56bbff96ddd5b03bb4d5de73e2a5"
+      ],
+      "tree": "e52d2515f10bc7d7e81f5ae1e8a7841021b796fa",
+      "authorDate": "2026-11-07T21:50:42Z",
+      "commitDate": "2026-11-07T21:50:42Z",
+      "author": "Ovidiu",
+      "subject": "types(WEB-R4.1): document presentational role and statistical-parent contracts"
+    },
+    {
+      "sha": "54a9b6cd5b3a56bbff96ddd5b03bb4d5de73e2a5",
+      "parents": [
+        "c629614d43a5a7bb942183674f5e7246f9f565b1"
+      ],
+      "tree": "9b04a1017b55fce21aa45c520c42aa3ce7e5a0b5",
+      "authorDate": "2026-11-07T21:50:33Z",
+      "commitDate": "2026-11-07T21:50:33Z",
+      "author": "Ovidiu",
+      "subject": "feat(WEB-R4.1): source-faithful administrative/statistical card role model"
+    },
+    {
+      "sha": "c629614d43a5a7bb942183674f5e7246f9f565b1",
+      "parents": [
+        "74b05b9e7ada0d778148d4b013da24b2199f5107"
+      ],
+      "tree": "baf5f95df750e235f41f0a1fe5de3784de468b58",
+      "authorDate": "2026-11-07T21:49:38Z",
+      "commitDate": "2026-11-07T21:49:38Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.1): archive preimplementation visual audit from published Chromium evidence"
+    },
+    {
+      "sha": "2082c23ec7cb65e996c52b6423885e1aa9c925af",
+      "parents": [
+        "80b1d36b90149a83a67c96df4f4af9bf3d7b05fb"
+      ],
+      "tree": "75fcd5463ba4c7e190842bee669cc7f607759927",
+      "authorDate": "2026-11-07T22:23:30Z",
+      "commitDate": "2026-11-07T22:23:30Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.2): specify card interaction, focus, progressive children and CI gates"
+    },
+    {
+      "sha": "80b1d36b90149a83a67c96df4f4af9bf3d7b05fb",
+      "parents": [
+        "45f3b02d08f349445878f8aec2b8cab9e1e5cd90"
+      ],
+      "tree": "f692f9cccaa5e3f2e07acfe3cf85185ea8db75a5",
+      "authorDate": "2026-11-07T22:22:41Z",
+      "commitDate": "2026-11-07T22:22:41Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.2): make child reveal focus selector robust in Chromium"
+    },
+    {
+      "sha": "45f3b02d08f349445878f8aec2b8cab9e1e5cd90",
+      "parents": [
+        "50c03b2330017ae4e39bf36b40e5e4de6ed373a4"
+      ],
+      "tree": "b4661db41eb973843f391b47afe351ab1e4f7789",
+      "authorDate": "2026-11-07T22:22:13Z",
+      "commitDate": "2026-11-07T22:22:13Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.2): Chromium desktop/mobile audit for card focus, child navigation and sticky toolbars"
+    },
+    {
+      "sha": "50c03b2330017ae4e39bf36b40e5e4de6ed373a4",
+      "parents": [
+        "06caa86f65ae6420b2015d5f156de22cbe7b7b75"
+      ],
+      "tree": "1cb8863b5fe78523c7287b8d39cd1a912058be74",
+      "authorDate": "2026-11-07T22:20:46Z",
+      "commitDate": "2026-11-07T22:20:46Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.2): make contextual dialog accessibility assertions exact"
+    },
+    {
+      "sha": "06caa86f65ae6420b2015d5f156de22cbe7b7b75",
+      "parents": [
+        "cbe743a1f2148f939f4c3b9345d8c9b269ae9585"
+      ],
+      "tree": "852789f37aea3ce331470e605683f9e3585bc41d",
+      "authorDate": "2026-11-07T22:20:20Z",
+      "commitDate": "2026-11-07T22:20:20Z",
+      "author": "Ovidiu",
+      "subject": "style(WEB-R4.2): show programmatic heading focus for keyboard and screen readers"
+    },
+    {
+      "sha": "cbe743a1f2148f939f4c3b9345d8c9b269ae9585",
+      "parents": [
+        "e4efb47e6533026d16f009bdd057d299545539fd"
+      ],
+      "tree": "a88e2f916b240b6d7dc89704724991bf251d3ed7",
+      "authorDate": "2026-11-07T22:20:11Z",
+      "commitDate": "2026-11-07T22:20:11Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.2): retain keyboard focus when progressively revealing children"
+    },
+    {
+      "sha": "e4efb47e6533026d16f009bdd057d299545539fd",
+      "parents": [
+        "413963820bac2f8707b3cde5c4f2d386cd1f24ec"
+      ],
+      "tree": "2fc68b6754f042f8eeaae1c9a18c9c192049c367",
+      "authorDate": "2026-11-07T22:19:09Z",
+      "commitDate": "2026-11-07T22:19:09Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.2): protect child navigation, focus restoration, panels and ACTUAL integrity"
+    },
+    {
+      "sha": "413963820bac2f8707b3cde5c4f2d386cd1f24ec",
+      "parents": [
+        "826553166800171b206b5ae462f6b4ba2a679ea5"
+      ],
+      "tree": "15d66b35293086d10536c7574645afafd32da4ee",
+      "authorDate": "2026-11-07T22:18:24Z",
+      "commitDate": "2026-11-07T22:18:24Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.2): update legacy assertions for accessible card heading and related navigation"
+    },
+    {
+      "sha": "826553166800171b206b5ae462f6b4ba2a679ea5",
+      "parents": [
+        "e783ebe2a74f399dafecf2bcead3980dbbb106b1"
+      ],
+      "tree": "01a68682012770a33168c3fe638fc0283737f0b4",
+      "authorDate": "2026-11-07T22:18:21Z",
+      "commitDate": "2026-11-07T22:18:21Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.2): update legacy assertions for accessible card heading and related navigation"
+    },
+    {
+      "sha": "e783ebe2a74f399dafecf2bcead3980dbbb106b1",
+      "parents": [
+        "90081931908dbe894cf23bf9bd4c68fc466fb469"
+      ],
+      "tree": "98c40e758879eb0353ecd7e2977ea4e7cffd1b9e",
+      "authorDate": "2026-11-07T22:18:08Z",
+      "commitDate": "2026-11-07T22:18:08Z",
+      "author": "Ovidiu",
+      "subject": "chore(WEB-R4.2): drop duplicate statistical-code formatter import"
+    },
+    {
+      "sha": "90081931908dbe894cf23bf9bd4c68fc466fb469",
+      "parents": [
+        "294c4ff2d10b165f23ec64af81d16dd15db81f8a"
+      ],
+      "tree": "5a3f0c1564a28c9386995f9253d4b102f093d647",
+      "authorDate": "2026-11-07T22:17:56Z",
+      "commitDate": "2026-11-07T22:17:56Z",
+      "author": "Ovidiu",
+      "subject": "feat(WEB-R4.2): support semantic child-navigation section in reusable entity card"
+    },
+    {
+      "sha": "294c4ff2d10b165f23ec64af81d16dd15db81f8a",
+      "parents": [
+        "9400cd77ae8f298964157b9051822f87ae6f795e"
+      ],
+      "tree": "dca2c720a80630c493ac4d95f6ff8004618f4ea4",
+      "authorDate": "2026-11-07T22:17:27Z",
+      "commitDate": "2026-11-07T22:17:27Z",
+      "author": "Ovidiu",
+      "subject": "style(WEB-R4.2): replace floating close with accessible sticky toolbars and improve card readability"
+    },
+    {
+      "sha": "9400cd77ae8f298964157b9051822f87ae6f795e",
+      "parents": [
+        "222bffa49a6b19f234b19ff7ebfc8d8ad54b2255"
+      ],
+      "tree": "0d650ee9ea6699fbf4fa30901210054e18b35f11",
+      "authorDate": "2026-11-07T22:16:45Z",
+      "commitDate": "2026-11-07T22:16:45Z",
+      "author": "Ovidiu",
+      "subject": "feat(WEB-R4.2): card child navigation, focus continuity and accessible panel toolbars"
+    },
+    {
+      "sha": "222bffa49a6b19f234b19ff7ebfc8d8ad54b2255",
+      "parents": [
+        "637493464c16af9c7e747b8d16aeb6071f0e1d86"
+      ],
+      "tree": "6688045a8d18c23dffca66018a68adbf1b12fad1",
+      "authorDate": "2026-11-07T22:15:41Z",
+      "commitDate": "2026-11-07T22:15:41Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.2): evidence-based preimplementation card UX/accessibility audit"
+    },
+    {
+      "sha": "4ccbdc2da7590cd9ff4bd7e94edf483b9a234212",
+      "parents": [
+        "3789cfff2ff4a8df88846a6e4e14aaf4a37ec90e"
+      ],
+      "tree": "f8a80558ded18c8155a494bfc61e6da245e6a59f",
+      "authorDate": "2026-11-07T22:31:08Z",
+      "commitDate": "2026-11-07T22:31:08Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.2): guard synchronous close and Escape focus restoration"
+    },
+    {
+      "sha": "3789cfff2ff4a8df88846a6e4e14aaf4a37ec90e",
+      "parents": [
+        "7192961420cb22554077b95f16906ffb51f426ad"
+      ],
+      "tree": "553e37e5b0afc5e5c017702bae905a1eb1991431",
+      "authorDate": "2026-11-07T22:30:50Z",
+      "commitDate": "2026-11-07T22:30:50Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.2): ensure global tools retain focus after rapid card transitions"
+    },
+    {
+      "sha": "7192961420cb22554077b95f16906ffb51f426ad",
+      "parents": [
+        "43d993304ad1b6ebb6a7e8d658d84e2eeb625b76"
+      ],
+      "tree": "08f73668faf923a7b8a8be4ba01ba5a5bc737d41",
+      "authorDate": "2026-11-07T22:30:28Z",
+      "commitDate": "2026-11-07T22:30:28Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.2): prevent deferred close-focus racing global tools"
+    },
+    {
+      "sha": "36c28f4a3275bc0cdc7fc5c3802db744908b5eed",
+      "parents": [
+        "e226f312a4f1bd35da582a7105244e9d4690ebac"
+      ],
+      "tree": "eddf9ea7e1f4a841f8975bad5226f437d72c5976",
+      "authorDate": "2026-11-07T23:03:05Z",
+      "commitDate": "2026-11-07T23:03:05Z",
+      "author": "Ovidiu",
+      "subject": "types(WEB-R4.3): declare contextual city card label for TypeScript"
+    },
+    {
+      "sha": "e226f312a4f1bd35da582a7105244e9d4690ebac",
+      "parents": [
+        "30e3ca0e0b2d7a5f396962bee4a074ce683de14a"
+      ],
+      "tree": "213c2e61b39da84d0656680a5a5cc1c7023b0e39",
+      "authorDate": "2026-11-07T23:02:21Z",
+      "commitDate": "2026-11-07T23:02:21Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.3): record visual city-label regression found during Chromium screenshot review"
+    },
+    {
+      "sha": "30e3ca0e0b2d7a5f396962bee4a074ce683de14a",
+      "parents": [
+        "6b13b417e0389b0877e4c00e405d31779530ff57"
+      ],
+      "tree": "27108c68b9f4664280e8a40148903d2fea97ae66",
+      "authorDate": "2026-11-07T23:02:17Z",
+      "commitDate": "2026-11-07T23:02:17Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.3): record visual city-label regression found during Chromium screenshot review"
+    },
+    {
+      "sha": "6b13b417e0389b0877e4c00e405d31779530ff57",
+      "parents": [
+        "6f3cc7f072e8c84d7a280509107b05a13da538e7"
+      ],
+      "tree": "aea760e51de375ea09793eca3ca769f3bf223df9",
+      "authorDate": "2026-11-07T23:01:57Z",
+      "commitDate": "2026-11-07T23:01:57Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): assert city of Chișinău card labels in RO and EN"
+    },
+    {
+      "sha": "6f3cc7f072e8c84d7a280509107b05a13da538e7",
+      "parents": [
+        "fee7553822bbdff8e094fabd9197f251417c90e6"
+      ],
+      "tree": "14f68c96b335ccb2e4f5bbe01a9effeffe989e88",
+      "authorDate": "2026-11-07T23:01:13Z",
+      "commitDate": "2026-11-07T23:01:13Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): verify explicit Chișinău city card label while preserving compact tree"
+    },
+    {
+      "sha": "fee7553822bbdff8e094fabd9197f251417c90e6",
+      "parents": [
+        "13036bc3ca57d5f2582e22aefd36893cb0d7f47d"
+      ],
+      "tree": "f6d7623ec6bfce1e8711f894983ba69716295006",
+      "authorDate": "2026-11-07T23:01:09Z",
+      "commitDate": "2026-11-07T23:01:09Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): verify explicit Chișinău city card label while preserving compact tree"
+    },
+    {
+      "sha": "13036bc3ca57d5f2582e22aefd36893cb0d7f47d",
+      "parents": [
+        "65b6fecf97d4bf04d9d17fc3ebea85988dbbd1aa"
+      ],
+      "tree": "7a8593d84730ce0aeb644dedaec854806f4d16ef",
+      "authorDate": "2026-11-07T23:01:05Z",
+      "commitDate": "2026-11-07T23:01:05Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): verify explicit Chișinău city card label while preserving compact tree"
+    },
+    {
+      "sha": "65b6fecf97d4bf04d9d17fc3ebea85988dbbd1aa",
+      "parents": [
+        "9ae80f59df3061291b7aac5664561ce99506e593"
+      ],
+      "tree": "d0c373667c914d4e557f59aa3894e1651aed9589",
+      "authorDate": "2026-11-07T23:01:01Z",
+      "commitDate": "2026-11-07T23:01:01Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): verify explicit Chișinău city card label while preserving compact tree"
+    },
+    {
+      "sha": "9ae80f59df3061291b7aac5664561ce99506e593",
+      "parents": [
+        "6f9dc0d7d67a17cbf30b643cd5c624cdfda645c9"
+      ],
+      "tree": "df87977ec9dfe9bea02b243e7955da00bdcc2067",
+      "authorDate": "2026-11-07T23:00:15Z",
+      "commitDate": "2026-11-07T23:00:15Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.3): use context-complete city names for card headings, breadcrumbs and dialogs"
+    },
+    {
+      "sha": "6f9dc0d7d67a17cbf30b643cd5c624cdfda645c9",
+      "parents": [
+        "c8944f94794a85291924f02bf2cdf48d616ff03a"
+      ],
+      "tree": "7d0efeff92e7c00aafc0bce15e2c5e72ead539c5",
+      "authorDate": "2026-11-07T22:59:56Z",
+      "commitDate": "2026-11-07T22:59:56Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.3): distinguish Chișinău city in cards while retaining compact tree label"
+    },
+    {
+      "sha": "c8944f94794a85291924f02bf2cdf48d616ff03a",
+      "parents": [
+        "e728795664c6b369ebd10c7f74defef4cf06da95"
+      ],
+      "tree": "665cba2bcf613d29aa2516791e9f4637fd26ebc2",
+      "authorDate": "2026-11-07T22:54:54Z",
+      "commitDate": "2026-11-07T22:54:54Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.3): record integrated release gates and explicit WCAG verification limits"
+    },
+    {
+      "sha": "e728795664c6b369ebd10c7f74defef4cf06da95",
+      "parents": [
+        "ab058da47dc329790f3cec6f3cb9b2a08e3feb82"
+      ],
+      "tree": "0d268e2f2ce950ee38d1ae098704e1b1ca77b6ff",
+      "authorDate": "2026-11-07T22:54:26Z",
+      "commitDate": "2026-11-07T22:54:26Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): bind computed-style reads safely in browser audit"
+    },
+    {
+      "sha": "ab058da47dc329790f3cec6f3cb9b2a08e3feb82",
+      "parents": [
+        "73086fc1ae235253fedcd79ec871ee8dfa05281b"
+      ],
+      "tree": "77e3e5d5cb09b0cb80db2d93fddb93146348e619",
+      "authorDate": "2026-11-07T22:54:05Z",
+      "commitDate": "2026-11-07T22:54:05Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): evaluate only visible public text, not hidden source records"
+    },
+    {
+      "sha": "73086fc1ae235253fedcd79ec871ee8dfa05281b",
+      "parents": [
+        "9e4c747d13ceead863a1b07b2d9711ad6c4a33c5"
+      ],
+      "tree": "3c3dc0babe9d614797640a168d9d2d80b91e5541",
+      "authorDate": "2026-11-07T22:53:40Z",
+      "commitDate": "2026-11-07T22:53:40Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): integrated RO/EN desktop/tablet/mobile acceptance incl. rendered contrast and card-map actions"
+    },
+    {
+      "sha": "9e4c747d13ceead863a1b07b2d9711ad6c4a33c5",
+      "parents": [
+        "3d14e31c2501d7bd8a5eb6b9b27b0cae630350cf"
+      ],
+      "tree": "28a81468e46b5eaafd0e853ea4eb7dfff936458b",
+      "authorDate": "2026-11-07T22:52:22Z",
+      "commitDate": "2026-11-07T22:52:22Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3): certify catalog, roles, hierarchy, AA text/focus contrast and bilingual card semantics"
+    },
+    {
+      "sha": "3d14e31c2501d7bd8a5eb6b9b27b0cae630350cf",
+      "parents": [
+        "6e7a60edf161bf3a4cfe9ddc69509cf2e50c99f3"
+      ],
+      "tree": "5cdd644d1514f0330cbce4f3f5830c08a32f1d29",
+      "authorDate": "2026-11-07T22:50:58Z",
+      "commitDate": "2026-11-07T22:50:58Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.3): raise card small-text contrast and focus-ring visibility to AA targets"
+    },
+    {
+      "sha": "6e7a60edf161bf3a4cfe9ddc69509cf2e50c99f3",
+      "parents": [
+        "52850d006061e21e027c27bf3e57bd5308276bc8"
+      ],
+      "tree": "7b3104b1ead190315191ca1fef4fe8aa4e5eab36",
+      "authorDate": "2026-11-07T22:49:51Z",
+      "commitDate": "2026-11-07T22:49:51Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.3): archive baseline UX, stability and WCAG contrast audit before fixes"
+    },
+    {
+      "sha": "0edb4a1b2efc4a195b3a773508036dfb282825c5",
+      "parents": [
+        "860654c5d9ae4da025155c2f4d032b3a651bcafa"
+      ],
+      "tree": "713bde51dfc047deb77062e07be61f853a2199df",
+      "authorDate": "2026-11-07T23:28:03Z",
+      "commitDate": "2026-11-07T23:28:03Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.3a): record narrowly scoped source-header dedup acceptance gates"
+    },
+    {
+      "sha": "860654c5d9ae4da025155c2f4d032b3a651bcafa",
+      "parents": [
+        "3ade1fbf51834218b73befd65d15ed19ffcb3650"
+      ],
+      "tree": "2b7100de364cfb90476897d5b09b469c23cc2899",
+      "authorDate": "2026-11-07T23:27:41Z",
+      "commitDate": "2026-11-07T23:27:41Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3a): Chromium confirms clean module/card headers and retained provenance RO/EN/mobile"
+    },
+    {
+      "sha": "3ade1fbf51834218b73befd65d15ed19ffcb3650",
+      "parents": [
+        "4c92f329695a6c623efe132ad71ca37cc2289b2d"
+      ],
+      "tree": "990d93a6074e6dbf649f3c1227157be73da9a555",
+      "authorDate": "2026-11-07T23:27:13Z",
+      "commitDate": "2026-11-07T23:27:13Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.3a): ensure no duplicated OSMB headers while source/date and ACTUAL integrity remain"
+    },
+    {
+      "sha": "4c92f329695a6c623efe132ad71ca37cc2289b2d",
+      "parents": [
+        "35235179fb1ffe18ed7d3d4659c7b07823f72f8d"
+      ],
+      "tree": "94bdd8e3a54af42917c0e94f42ffe5ab2fad8bcf",
+      "authorDate": "2026-11-07T23:26:51Z",
+      "commitDate": "2026-11-07T23:26:51Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.3a): remove duplicated OSMB snapshot from tree and entity headers"
+    },
+    {
+      "sha": "d1d5529b8dc3c74d6bb953b624c695adb708c5d0",
+      "parents": [
+        "951bd02f2144721580d8ec1302e374a869ba1005"
+      ],
+      "tree": "b8aac2819427e8fa49c5e4ca37526d9cf3225edf",
+      "authorDate": "2026-11-08T00:02:16Z",
+      "commitDate": "2026-11-08T00:02:16Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.4): update R4.2 regression boundary to the renamed camera-only comment"
+    },
+    {
+      "sha": "951bd02f2144721580d8ec1302e374a869ba1005",
+      "parents": [
+        "3c091a64167b417e04e8d479c554f56b906c8571"
+      ],
+      "tree": "cf4dfd861b27fb7ed9f973610c0dbe22dc40462f",
+      "authorDate": "2026-11-08T00:01:01Z",
+      "commitDate": "2026-11-08T00:01:01Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.4): acceptance protocol for module-local and map-global reset architecture"
+    },
+    {
+      "sha": "3c091a64167b417e04e8d479c554f56b906c8571",
+      "parents": [
+        "97a76f5f2b735868ef48797e4b4e914f0f656aee"
+      ],
+      "tree": "f2b010de43ced94d66e9a8512edab386de08a2e1",
+      "authorDate": "2026-11-08T00:00:31Z",
+      "commitDate": "2026-11-08T00:00:31Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.4): avoid synthetic controlled-input mutation during reset visual verification"
+    },
+    {
+      "sha": "97a76f5f2b735868ef48797e4b4e914f0f656aee",
+      "parents": [
+        "af612a36b4d21eacd3a1919e8801f8eb88504008"
+      ],
+      "tree": "20854c9e0732fb0ee430d10dedfb5cfbf21d43f4",
+      "authorDate": "2026-11-08T00:00:09Z",
+      "commitDate": "2026-11-08T00:00:09Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.4): real Chromium placement, scoped local/global resets and focus on desktop/mobile"
+    },
+    {
+      "sha": "af612a36b4d21eacd3a1919e8801f8eb88504008",
+      "parents": [
+        "b397b906f3dff36d737096655e7ff20d732a209f"
+      ],
+      "tree": "2edcb75e13222293bf48d9740e043455e62fe24c",
+      "authorDate": "2026-11-07T23:59:14Z",
+      "commitDate": "2026-11-07T23:59:14Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.4): retire obsolete module footer reset contract"
+    },
+    {
+      "sha": "b397b906f3dff36d737096655e7ff20d732a209f",
+      "parents": [
+        "01e1912f0340078446c873d8b27238079a9ebe74"
+      ],
+      "tree": "3b4b3267e735925d974ff6c5eb4a34ecf3e50267",
+      "authorDate": "2026-11-07T23:59:01Z",
+      "commitDate": "2026-11-07T23:59:01Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.4): certify module isolation, global reset, UI placement and ACTUAL checksum"
+    },
+    {
+      "sha": "01e1912f0340078446c873d8b27238079a9ebe74",
+      "parents": [
+        "fe48dc0f339c754d3b9768b87c9ae731ffdfded8"
+      ],
+      "tree": "afb5be602e7058b85ccc81b8f1474fa3da09f0cb",
+      "authorDate": "2026-11-07T23:58:09Z",
+      "commitDate": "2026-11-07T23:58:09Z",
+      "author": "Ovidiu",
+      "subject": "style(WEB-R4.4): 44px icon reset controls with accessible focus, mobile and desktop layouts"
+    },
+    {
+      "sha": "fe48dc0f339c754d3b9768b87c9ae731ffdfded8",
+      "parents": [
+        "1a58fe496030025162f9f250d0ca6d51d1dfe42f"
+      ],
+      "tree": "4bf1801500855b8287f7bbbbc616ee86017f6f2f",
+      "authorDate": "2026-11-07T23:57:48Z",
+      "commitDate": "2026-11-07T23:57:48Z",
+      "author": "Ovidiu",
+      "subject": "feat(WEB-R4.4): global reset below zoom and scoped reset beside each module close button"
+    },
+    {
+      "sha": "1a58fe496030025162f9f250d0ca6d51d1dfe42f",
+      "parents": [
+        "606b064c816feed8a854c53d7cdeffa05b9ad572"
+      ],
+      "tree": "9ab4bfc1e979d7987b27d3b37bd148b76819ead3",
+      "authorDate": "2026-11-07T23:56:44Z",
+      "commitDate": "2026-11-07T23:56:44Z",
+      "author": "Ovidiu",
+      "subject": "types(WEB-R4.4): declare module visibility and scoped reset contracts"
+    },
+    {
+      "sha": "606b064c816feed8a854c53d7cdeffa05b9ad572",
+      "parents": [
+        "fc553c765366958ea374f08aa912fc57b8b26c23"
+      ],
+      "tree": "ad6a549e09eac2c452cf55ac33e9e90b49124009",
+      "authorDate": "2026-11-07T23:56:38Z",
+      "commitDate": "2026-11-07T23:56:38Z",
+      "author": "Ovidiu",
+      "subject": "feat(WEB-R4.4): separate geometry ownership and reset behavior per module"
+    },
+    {
+      "sha": "5b1ceb98c7077e312b4d6c5b50c8d4cb512a0833",
+      "parents": [
+        "2490beaa782b6b1ae7db9d3885a3a3dda22f0766"
+      ],
+      "tree": "4ca3e3b0d54b246946be23f46845f681fb1ac2b2",
+      "authorDate": "2026-11-08T00:18:47Z",
+      "commitDate": "2026-11-08T00:18:47Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.5): refresh counts after removing generic city-label override"
+    },
+    {
+      "sha": "2490beaa782b6b1ae7db9d3885a3a3dda22f0766",
+      "parents": [
+        "0d8116c1075fbee3d5c816fb3d167aaf7fe29bc3"
+      ],
+      "tree": "3ed9e0f7528dc1db96c0464538345b75a31e570c",
+      "authorDate": "2026-11-08T00:17:34Z",
+      "commitDate": "2026-11-08T00:17:34Z",
+      "author": "Ovidiu",
+      "subject": "docs(WEB-R4.5): record cause, identity constraints and final acceptance for Chișinău tree label"
+    },
+    {
+      "sha": "0d8116c1075fbee3d5c816fb3d167aaf7fe29bc3",
+      "parents": [
+        "e09ffb18fb49dfbdefa3e4af8d95750dd2a4c0e2"
+      ],
+      "tree": "ec4b4413cb440fd284d12a94aa69c02b7bb54c9a",
+      "authorDate": "2026-11-08T00:17:05Z",
+      "commitDate": "2026-11-08T00:17:05Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.5): identify Chișinău ADM8 by geographic name without changing hierarchy or ACTUAL"
+    },
+    {
+      "sha": "e09ffb18fb49dfbdefa3e4af8d95750dd2a4c0e2",
+      "parents": [
+        "f7df87b37ebb240383dbc14a42fd297932334e48"
+      ],
+      "tree": "d24f1f4596c74a2b6c2840041c23728eb78995d4",
+      "authorDate": "2026-11-08T00:16:45Z",
+      "commitDate": "2026-11-08T00:16:45Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.5): Chromium verifies named Chișinău ADM8 row and unchanged five sectors, RO/EN"
+    },
+    {
+      "sha": "f7df87b37ebb240383dbc14a42fd297932334e48",
+      "parents": [
+        "932e948bca8c62e5f9e839d1f1475769b237b2df"
+      ],
+      "tree": "2bf32f64f0020d519beb4cfd762f3a8d2cd2d708",
+      "authorDate": "2026-11-08T00:16:31Z",
+      "commitDate": "2026-11-08T00:16:31Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.5): assert Chișinău ADM8 named consistently in both languages"
+    },
+    {
+      "sha": "932e948bca8c62e5f9e839d1f1475769b237b2df",
+      "parents": [
+        "7d18849b5717788089f1ee040fb7f33177bf158d"
+      ],
+      "tree": "ef01f219336ae39d2aa499548b6ce0f7e57880b3",
+      "authorDate": "2026-11-08T00:16:25Z",
+      "commitDate": "2026-11-08T00:16:25Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.5): assert Chișinău ADM8 named consistently in both languages"
+    },
+    {
+      "sha": "7d18849b5717788089f1ee040fb7f33177bf158d",
+      "parents": [
+        "2275441f5cf2a42cf26b9be83cc0ad5d0585ad84"
+      ],
+      "tree": "90ffbde34afbd5429d92a236907167e844b50332",
+      "authorDate": "2026-11-08T00:16:20Z",
+      "commitDate": "2026-11-08T00:16:20Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.5): assert Chișinău ADM8 named consistently in both languages"
+    },
+    {
+      "sha": "2275441f5cf2a42cf26b9be83cc0ad5d0585ad84",
+      "parents": [
+        "b88239ed233d49b05636a3bc0072ca1d38b475cf"
+      ],
+      "tree": "f8041afcb2fe401eab2c6e15e92e9a6632a1a235",
+      "authorDate": "2026-11-08T00:16:15Z",
+      "commitDate": "2026-11-08T00:16:15Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.5): assert Chișinău ADM8 named consistently in both languages"
+    },
+    {
+      "sha": "b88239ed233d49b05636a3bc0072ca1d38b475cf",
+      "parents": [
+        "e8bde03cd75e69fec4336b4733a5e5509e3e75c1"
+      ],
+      "tree": "16140419f819d64022041b08da8843f5bc73bfe5",
+      "authorDate": "2026-11-08T00:15:56Z",
+      "commitDate": "2026-11-08T00:15:56Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.5): show Chișinău rather than generic City/Oraș for ADM8 tree node"
+    },
+    {
+      "sha": "82d185abe39da62db7b95c73c335335d81490358",
+      "parents": [
+        "14b99a1c59148d97385273f8458bc1807f20ba8c"
+      ],
+      "tree": "60c0d8c935b5c9ad0b498a53d3c26cde77bcfd8f",
+      "authorDate": "2026-11-08T00:41:13Z",
+      "commitDate": "2026-11-08T00:41:13Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.6): keep public header free of internal phase while preserving brand and locale controls"
+    },
+    {
+      "sha": "14b99a1c59148d97385273f8458bc1807f20ba8c",
+      "parents": [
+        "34957224dafd04f37f0fc0f24d4d2c04a3e2f643"
+      ],
+      "tree": "925b2e018aea604f693b665bfd91333e16563a2c",
+      "authorDate": "2026-11-08T00:40:52Z",
+      "commitDate": "2026-11-08T00:40:52Z",
+      "author": "Ovidiu",
+      "subject": "test(WEB-R4.6): Chromium validates clean header, preserved branding and language alignment"
+    },
+    {
+      "sha": "34957224dafd04f37f0fc0f24d4d2c04a3e2f643",
+      "parents": [
+        "94e8a311a898c3d4bc59e5cdda5cc9e7ee5f6ea1"
+      ],
+      "tree": "da443afe7cc2aa7dceedbcd1c7e4b646674708b2",
+      "authorDate": "2026-11-08T00:40:32Z",
+      "commitDate": "2026-11-08T00:40:32Z",
+      "author": "Ovidiu",
+      "subject": "style(WEB-R4.6): preserve right-aligned language switcher after removing header phase label"
+    },
+    {
+      "sha": "94e8a311a898c3d4bc59e5cdda5cc9e7ee5f6ea1",
+      "parents": [
+        "ec9192b91897ed7cfd2cae291d3326cb06877129"
+      ],
+      "tree": "756ddbc595e68d2b45f3584bd4be2bef90979edc",
+      "authorDate": "2026-11-08T00:40:21Z",
+      "commitDate": "2026-11-08T00:40:21Z",
+      "author": "Ovidiu",
+      "subject": "fix(WEB-R4.6): remove internal Phase 5 banner from public header in both locales"
+    }
+  ]
+}
