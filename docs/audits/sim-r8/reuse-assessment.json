@@ -1,0 +1,21 @@
+{
+  "Romania": {
+    "source": "https://www.wipo.int/wipolex/en/law/neighboring_rights_romania",
+    "sha256": "6676a4d444d7123844c445cabf5d87638961b842a56298cadf4e59b715bdf03d",
+    "version": "Romanian text consolidated through Law69/2022; national current portal retrieval failed, no unsupported assertion of exhaustive amendment certification.",
+    "article": "9(b)(c), corroborated in publicly indexed2026 legal text;9(g) documentary photographs additionally distinguishes literal copy from artistic redraw.",
+    "scope": "Only literal colour annex copies to HG89/2015 and HG510/2026, published in the free official gazette; no new creative drawing or unrelated third-party artwork is copied.",
+    "gazetteTermsSource": "https://monitoruloficial.ro/e-monitor/",
+    "artist": "Official normative annex; individual annex illustrator not credited in published act.",
+    "verdict": "RIGHTS_CLEARED"
+  },
+  "Moldova": {
+    "source": "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+    "sha256": "71bbcb7850cb7d333dd2a0337a1feedf1a484503e6eba1135b8cb3e20d7686d9",
+    "article": "Law230/2022 article8(b)(c)(g)",
+    "scope": "Literal colour pages3 and5 of Decree241-IX/2021; no claim of clearing artistic institutional JPEGs. Informative use identifies district holder.",
+    "artist": "Iurie Caminschi credited by institutional source; normative reproduction not licensed as a new artistic drawing.",
+    "verdict": "RIGHTS_CLEARED"
+  },
+  "exclusions": "No general licence inferred for all symbols, all Commons reproductions, all institutional images or unpublished projects."
+}

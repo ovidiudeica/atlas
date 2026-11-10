@@ -1,0 +1,38 @@
+{
+  "upstream": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/",
+  "revision": 3793356,
+  "packageVersion": "2.14.0",
+  "declaredPublisher": "OneTap / wponetap",
+  "declaredLicence": "GPL-2.0-or-later",
+  "evidence": [
+    {
+      "file": "docs/audits/sim-r8/evidence/onetap-README.txt",
+      "sha256": "34706d5d163bf85a5587b665fccdde820839ed3d688c024ca3a07f1b3dcd6e80",
+      "bytes": 19488
+    },
+    {
+      "file": "docs/audits/sim-r8/evidence/onetap-LICENSE.txt",
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+      "bytes": 18091
+    },
+    {
+      "file": "docs/audits/sim-r8/evidence/onetap-accessibility-onetap.php",
+      "sha256": "39a5a7364cd00f55c1f7fe7f5596203cbf083934dbe0f0d50167624e5af3a036",
+      "bytes": 3028
+    },
+    {
+      "file": "docs/audits/sim-r8/evidence/onetap-icon.png",
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "bytes": 10748
+    }
+  ],
+  "exactBitmapSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+  "actualVisualContent": "Circular United States language icon,178x178",
+  "rightsVerdict": "RIGHTS_UNRESOLVED",
+  "reason": "Publisher package grant recovered, but original asset artist and image-specific scope/third-party chain not established. No blanket clearance inferred. The five territorial assignments stay invalidated.",
+  "historicalMetadataClarification": {
+    "atlasId": "osm-r14739043",
+    "kind": "flag",
+    "finding": "Exact same SHA256 as the four US language icons; prior R6 description as Romanian state arms is contradicted by actual bytes. Clarification only; removal and historical snapshot preserved."
+  }
+}

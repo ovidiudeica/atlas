@@ -1,0 +1,122 @@
+[
+  {
+    "atlasId": "osm-r10664180",
+    "kind": "coat",
+    "output": "public/symbols/sim-r8/campulung-coat.png",
+    "outputSHA256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae",
+    "sourcePDF": "docs/audits/sim-r8/evidence/mo-0141-2015.pdf",
+    "pdfSHA256": "b26de9f05d4a5ff82a84952588eb17f25059c935bddffad44b118045ce164875",
+    "page": 2,
+    "renderedPage": "work/campulung-annex-page.png",
+    "renderedPageSHA256": "ed0bcddd0f8b3b5e43039f01b7388f1372fe86ff0bf51522099616af2b0445a3",
+    "renderedDimensions": [
+      1272,
+      1800
+    ],
+    "crop": [
+      110,
+      995,
+      550,
+      1673
+    ],
+    "outputDimensions": [
+      415,
+      640
+    ],
+    "method": "Literal rectangular crop of Poppler-rendered normative annex; proportional downscale only; no recolouring, no generative drawing, no heraldic edits.",
+    "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+    "sourceType": "EXACT_NORMATIVE_ANNEX_REPRODUCTION",
+    "act": "HG89/2015",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r2248660",
+    "kind": "coat",
+    "output": "public/symbols/sim-r8/harghita-coat.png",
+    "outputSHA256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556",
+    "sourcePDF": "docs/audits/sim-r8/evidence/mo-0544-2026.pdf",
+    "pdfSHA256": "53ea0c0f7e48d27e11cd1f5868e5ddfb872a0ab8042cd3de42202508d9895e30",
+    "page": 52,
+    "renderedPage": "work/harghita-annex-page.png",
+    "renderedPageSHA256": "934798082e93188c52621a701757ae600aa498d75815bb94fdf8b2e48a33c4a1",
+    "renderedDimensions": [
+      1272,
+      1800
+    ],
+    "crop": [
+      52,
+      812,
+      610,
+      1442
+    ],
+    "outputDimensions": [
+      512,
+      578
+    ],
+    "method": "Literal rectangular crop of Poppler-rendered normative annex; proportional downscale only; no recolouring, no generative drawing, no heraldic edits.",
+    "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+    "sourceType": "EXACT_NORMATIVE_ANNEX_REPRODUCTION",
+    "act": "HG510/2026",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1699033",
+    "kind": "coat",
+    "output": "public/symbols/sim-r8/taraclia-coat.png",
+    "outputSHA256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698",
+    "sourcePDF": "docs/audits/sim-r8/evidence/taraclia-decree-241.pdf",
+    "pdfSHA256": "8624e3575fbfa0be50959ec41c151c05e444fb509223e2aae14422dc25701f6f",
+    "page": 3,
+    "renderedPage": "work/taraclia-page-03.png",
+    "renderedPageSHA256": "5a4e298ebdc4f2326ecf410a701b74116e8cc13531e478935e2638cd4ec61278",
+    "renderedDimensions": [
+      986,
+      1400
+    ],
+    "crop": [
+      275,
+      218,
+      778,
+      1008
+    ],
+    "outputDimensions": [
+      407,
+      640
+    ],
+    "method": "Literal rectangular crop of Poppler-rendered normative annex; proportional downscale only; no recolouring, no generative drawing, no heraldic edits.",
+    "url": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+    "sourceType": "EXACT_NORMATIVE_ANNEX_REPRODUCTION",
+    "act": "Decree241-IX/2021",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1699033",
+    "kind": "flag",
+    "output": "public/symbols/sim-r8/taraclia-flag.png",
+    "outputSHA256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e",
+    "sourcePDF": "docs/audits/sim-r8/evidence/taraclia-decree-241.pdf",
+    "pdfSHA256": "8624e3575fbfa0be50959ec41c151c05e444fb509223e2aae14422dc25701f6f",
+    "page": 5,
+    "renderedPage": "work/taraclia-color-flag.png",
+    "renderedPageSHA256": "154d2d0f3a3266bd04478e6ed56bf29e72a45f793969b40f78ac9f0b7cdf90a3",
+    "renderedDimensions": [
+      987,
+      1400
+    ],
+    "crop": [
+      219,
+      220,
+      866,
+      665
+    ],
+    "outputDimensions": [
+      512,
+      352
+    ],
+    "method": "Literal rectangular crop of Poppler-rendered normative annex; proportional downscale only; no recolouring, no generative drawing, no heraldic edits.",
+    "url": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+    "sourceType": "EXACT_NORMATIVE_ANNEX_REPRODUCTION",
+    "act": "Decree241-IX/2021",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  }
+]

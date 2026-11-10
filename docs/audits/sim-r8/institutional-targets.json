@@ -1,0 +1,10 @@
+{
+  "baselineRegistry": "docs/audits/sim-r7/institutional-recovery.json.gz",
+  "baselineCases": 907,
+  "crizbavNotRecounted": true,
+  "exhaustiveR8": false,
+  "cases": [],
+  "notReinvestigated": 907,
+  "notReinvestigatedState": "RETAIN_SIM_R7_RESULT_NO_NEW_DOCUMENTARY_LEAD",
+  "scope": "Only sources with a new observed endpoint were revisited; priority legislation is counted separately from the907-source register."
+}

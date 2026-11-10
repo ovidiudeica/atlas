@@ -1,0 +1,132 @@
+{
+  "stage": "SIM-R8",
+  "status": "EVIDENCE_COMPLETE_VALIDATION_AND_PUBLICATION_RECORDED_SEPARATELY",
+  "baseCommit": "0208ec5f2f0f3d71805b64f8883231431adc6751",
+  "checkedAt": "2026-11-09T22:51:04.470Z",
+  "initial": {
+    "entities": 4283,
+    "slots": 8566,
+    "coat": 1499,
+    "flag": 299,
+    "withoutImages": 2778,
+    "priorityExamined": 7,
+    "priorityResolved": 0,
+    "priorityPartiallyResolved": 2,
+    "priorityBlocked": 3,
+    "priorityDisputed": 2,
+    "newEnactedDocuments": 2,
+    "newConsultationDrafts": 1,
+    "newFinalGraphicAnnexes": 0,
+    "rightsExamined": 44,
+    "rightsCleared": 0,
+    "rightsRestricted": 0,
+    "rightsUnresolved": 44,
+    "institutionalCasesReinvestigated": 907,
+    "institutionalUnprocessed": 0,
+    "relevantInstitutionalSourcesRecovered": 1,
+    "institutionalStates": {
+      "BLOCKED_ACCESS": 44,
+      "NO_RELEVANT_DOCUMENT": 42,
+      "STILL_INACCESSIBLE": 800,
+      "REDIRECTED": 20,
+      "ARCHIVE_ONLY": 1
+    },
+    "institutionalOriginalHTTPResponses": 488,
+    "institutionalHostRestrictionSkips": 47,
+    "wikipediaArticlesRetrieved": 901,
+    "wikipediaCaseArticleLinksExamined": 907,
+    "sourceHolderEntities": 901,
+    "imagesAdded": 0,
+    "imagesReplaced": 0,
+    "imagesRemoved": 0,
+    "quarantinedNewCandidates": 18,
+    "historicalInvalidationsProtected": 31,
+    "duplicateGroupsFlagged": 2,
+    "statisticalOnlyRegions": 18
+  },
+  "results": {
+    "entities": 4283,
+    "slots": 8566,
+    "coat": 1500,
+    "flag": 299,
+    "withoutImages": 2778,
+    "priorityExamined": 7,
+    "priorityResolved": 1,
+    "priorityPartiallyResolved": 4,
+    "priorityBlocked": 1,
+    "priorityDisputed": 1,
+    "targetedCoatIssuesResolved": 3,
+    "newFinalNormativeGraphicAnnexes": 3,
+    "newPrimaryOfficialGazetteDocuments": 3,
+    "rightsExamined": 44,
+    "rightsClearedByReplacement": 3,
+    "oldArtisticFilesRetrospectivelyCleared": 0,
+    "rightsRestricted": 0,
+    "rightsUnresolved": 41,
+    "imagesAdded": 1,
+    "imagesReplaced": 3,
+    "imagesRemoved": 0,
+    "existingQuarantinePreserved": 18,
+    "historicalInvalidationsProtected": 31,
+    "newPositiveGraphicInvalidations": 1,
+    "institutional907CasesReinvestigated": 0,
+    "institutional907CasesNotReinvestigated": 907,
+    "newRelevantRecoveriesFrom907": 0,
+    "statisticalOnlyRegions": 18
+  },
+  "groups": {
+    "Moldova": {
+      "entities": 1004,
+      "coat": 190,
+      "flag": 186,
+      "withoutImages": 811,
+      "rightsExamined": 8,
+      "rightsClearedByReplacement": 2,
+      "rightsUnresolved": 6
+    },
+    "Gagauzia": {
+      "entities": 30,
+      "coat": 8,
+      "flag": 5,
+      "withoutImages": 22,
+      "rightsExamined": 1,
+      "rightsClearedByReplacement": 0,
+      "rightsUnresolved": 1
+    },
+    "Nistrenia_de_facto": {
+      "entities": 8,
+      "coat": 1,
+      "flag": 1,
+      "withoutImages": 7,
+      "rightsExamined": 0,
+      "rightsClearedByReplacement": 0,
+      "rightsUnresolved": 0
+    },
+    "Romania": {
+      "entities": 3241,
+      "coat": 1301,
+      "flag": 107,
+      "withoutImages": 1938,
+      "rightsExamined": 35,
+      "rightsClearedByReplacement": 1,
+      "rightsUnresolved": 34
+    }
+  },
+  "geographicIntegrity": {
+    "catalogSHA256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+    "unchanged": true,
+    "historicalManifest": "docs/audits/sim-r8/baseline.json"
+  },
+  "limitations": [
+    "Rights closure refers only to three selected replacements; the original44 artistic reproductions retain unresolved historical permissions.",
+    "Priority case status does not certify both coat and flag. Harghita/Vrancea coats resolved; independent flag evidence still incomplete.",
+    "Bucharest recovered project graphic is not presented as authenticated final adopted annex.",
+    "907-source first-pass results retained by reference. No new observed source in that register justified repeating its original request in this targeted stage; no new907 recovery claimed.",
+    "Not all methods across all archives or later legislative modifiers were exhaustively certified.",
+    "WIPO consolidated Romanian law through2022 and publicly indexed2026 article9 corroborate limited normative-copy reuse; national direct portal remained unavailable."
+  ],
+  "verification": {
+    "local": "See sim-r8/validation.json",
+    "integration": "Not asserted by reproducible pre-integration snapshot"
+  }
+}

@@ -1,5 +1,6 @@
+import {R8_INVALIDATIONS} from './symbolR8Invalidations.mjs';
 import {INVALIDATED_SYMBOL_REPRODUCTIONS} from './symbolInvalidations.mjs';
-export const SYMBOL_EXCLUSION_CATEGORIES=Object.freeze(['LANGUAGE_ICON','NATIONAL_SYMBOL_LEAKAGE','PARENT_ADMIN_SYMBOL','INSTITUTIONAL_WORDMARK','DECORATIVE_GRAPHIC','PHOTOGRAPH','UNRELATED_ENTITY','HOMONYM_COLLISION','INSUFFICIENT_IDENTITY_EVIDENCE']);
+export const SYMBOL_EXCLUSION_CATEGORIES=Object.freeze(['LANGUAGE_ICON','NATIONAL_SYMBOL_LEAKAGE','PARENT_ADMIN_SYMBOL','INSTITUTIONAL_WORDMARK','DECORATIVE_GRAPHIC','PHOTOGRAPH','UNRELATED_ENTITY','HOMONYM_COLLISION','INSUFFICIENT_IDENTITY_EVIDENCE','GRAPHIC_VERSION_CONTRADICTION']);
 const normalize=s=>String(s||'').normalize('NFC').replaceAll('_',' ').trim().replace(/^./u,c=>c.toUpperCase());
 export function symbolAssetIdentity(asset){
  if(!asset)return null;
@@ -18,7 +19,7 @@ export function symbolAssetIdentity(asset){
 }
 export function isInvalidatedSymbol(atlasId,kind,asset){
  if(!asset)return false;const identity=symbolAssetIdentity(asset);
- return !!INVALIDATED_SYMBOL_REPRODUCTIONS.find(r=>r.atlasId===atlasId&&r.kind===kind&&((r.sha256&&(asset.sha256||asset.imageSHA256)?r.sha256===(asset.sha256||asset.imageSHA256):symbolAssetIdentity(r.asset)===identity)));
+ return !![...INVALIDATED_SYMBOL_REPRODUCTIONS,...R8_INVALIDATIONS].find(r=>r.atlasId===atlasId&&r.kind===kind&&((r.sha256&&(asset.sha256||asset.imageSHA256)?r.sha256===(asset.sha256||asset.imageSHA256):symbolAssetIdentity(r.asset)===identity)));
 }
 const sourceURL=s=>{try{return ['https:','http:'].includes(new URL(s).protocol);}catch{return false;}};
 const sameJurisdiction=(a,b)=>a?.country===b?.country&&a?.authoritySystem===b?.authoritySystem;
@@ -26,7 +27,7 @@ export function assessSymbolCandidate(entity,candidate,{knownOwners=[]}={}){
  const reasons=[];const add=(code,detail,evidence)=>reasons.push({code,detail,source:evidence?.source||candidate.sourceUrl||candidate.source||null});
  const kind=candidate.symbolType||candidate.kind;
  if(!['coat','flag'].includes(kind)){add('INSUFFICIENT_IDENTITY_EVIDENCE','Separate coat/flag kind is required');return{decision:'QUARANTINE',reasons};}
- if(isInvalidatedSymbol(entity.id||entity.atlasId,kind,candidate)){const prior=INVALIDATED_SYMBOL_REPRODUCTIONS.find(r=>r.atlasId===(entity.id||entity.atlasId)&&r.kind===kind&&(symbolAssetIdentity(r.asset)===symbolAssetIdentity(candidate)||(r.sha256&&r.sha256===(candidate.sha256||candidate.imageSHA256))));add(prior?.category||'INSUFFICIENT_IDENTITY_EVIDENCE','Exact-ID historical invalidation cannot be regenerated: '+prior?.reason,{source:prior?.source});return{decision:'REJECT',reasons};}
+ if(isInvalidatedSymbol(entity.id||entity.atlasId,kind,candidate)){const prior=[...INVALIDATED_SYMBOL_REPRODUCTIONS,...R8_INVALIDATIONS].find(r=>r.atlasId===(entity.id||entity.atlasId)&&r.kind===kind&&(symbolAssetIdentity(r.asset)===symbolAssetIdentity(candidate)||(r.sha256&&r.sha256===(candidate.sha256||candidate.imageSHA256))));add(prior?.category||'INSUFFICIENT_IDENTITY_EVIDENCE','Exact-ID historical invalidation cannot be regenerated: '+prior?.reason,{source:prior?.source});return{decision:'REJECT',reasons};}
  const id=entity.id||entity.atlasId,holder=candidate.territorialHolder;
  const scope=candidate.scopeEvidence;
  const legitimateShared=scope?.reviewed===true&&scope.kind===kind&&sourceURL(scope.source)&&scope.atlasIds?.includes(id)&&scope.imageSHA256&&scope.imageSHA256===(candidate.sha256||candidate.imageSHA256);

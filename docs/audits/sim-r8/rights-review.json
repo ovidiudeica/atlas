@@ -1,0 +1,2260 @@
+[
+  {
+    "atlasId": "osm-r1699032",
+    "kind": "coat",
+    "entity": "Unitatea Teritorială Autonomă Găgăuzia",
+    "reportingGroup": "Gagauzia",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r1699032|coat",
+    "previousImage": {
+      "kind": "local",
+      "file": "gagauzia-coat.png",
+      "url": "symbols/gagauzia-coat.png",
+      "sourceUrl": "https://www.gagauzia.md/ato-gagauziya/simvolika.html"
+    },
+    "imageSHA256": "3b89e01629d8c5c20c5ed1518a0f37e017444e523b0a2af2480702408f9ba7a6",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "symbols/gagauzia-coat.png",
+      "source": "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r1699032|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "gagauzia-coat.png",
+      "url": "symbols/gagauzia-coat.png",
+      "sourceUrl": "https://www.gagauzia.md/ato-gagauziya/simvolika.html"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Institutional Gagauzia emblem; local raster retained. Official source and informative-use statutory exception examined.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Gagauzia.svg",
+    "newEvidence": [],
+    "sources": [
+      "https://www.gagauzia.md/ato-gagauziya/simvolika.html",
+      "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Gagauzia.svg"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Compare listed exact-holder alternative against the applicable final normative annex before considering any licence declaration.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1699033",
+    "kind": "coat",
+    "entity": "Taraclia",
+    "reportingGroup": "Moldova",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r1699033|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://raiontaraclia.md/wp-content/uploads/2022/01/taraclia_rai-modern-konec-1-scaled.jpg",
+      "sourceUrl": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "tier": "A"
+    },
+    "imageSHA256": "39bbca6a409e4452855b8fd2abc63b2d1e104b919ea29afa372382a9a19c5774",
+    "author": "Iurie CAMINSCHI",
+    "provenance": {
+      "artist": "Iurie CAMINSCHI",
+      "originalFile": "https://raiontaraclia.md/wp-content/uploads/2022/01/taraclia_rai-modern-konec-1-scaled.jpg",
+      "source": "https://raiontaraclia.md/wp-content/uploads/2022/01/taraclia_rai-modern-konec-1-scaled.jpg",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r1699033|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_CLEARED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "REPLACE_WITH_EXACT_NORMATIVE_ANNEX",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "taraclia-coat.png",
+      "url": "symbols/sim-r8/taraclia-coat.png",
+      "sourceUrl": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+      "tier": "A",
+      "sha256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698"
+    },
+    "impediment": "Original artistic file remains unclear; selected replacement is a literal normative-annex reproduction.",
+    "graphicFinding": "Taraclia district crowned lion coat, institutional JPEG, retained; authorship is recorded by source, informative use only.",
+    "probableRightsHolder": "Iurie CAMINSCHI",
+    "primaryAlternative": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+    "newEvidence": [
+      {
+        "source": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+        "sha256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698",
+        "scope": "Rights clear for replacement only; no permission inferred for original artistic file."
+      }
+    ],
+    "sources": [
+      "https://raiontaraclia.md/wp-content/uploads/2022/01/taraclia_rai-modern-konec-1-scaled.jpg",
+      "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "https://commons.wikimedia.org/wiki/File:Stema_Raionului_Taraclia.png",
+      "https://commons.wikimedia.org/wiki/File:Stema_Raionul_Taraclia.gif"
+    ],
+    "licence": "Normative annex, Law230/2022 article8(b)(c)(g), informative attribution to exact holder.",
+    "restrictions": "Informative territorial illustration with source/holder attribution; no endorsement or claim to permissions in the replaced artistic file.",
+    "missingEvidence": "No missing evidence for this limited normative-copy replacement; historical artistic authorisation remains unknown.",
+    "nextMethod": "Retain fixed hash and normative provenance; reassess only on a new applicable act.",
+    "reviewMethod": "NEW_FINAL_ANNEX_COMPARISON_AND_REPLACEMENT",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1699033",
+    "kind": "flag",
+    "entity": "Taraclia",
+    "reportingGroup": "Moldova",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r1699033|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://raiontaraclia.md/wp-content/uploads/2022/01/flag-1h6-modern-konec-bez-razmera--scaled.jpg",
+      "sourceUrl": "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "tier": "A"
+    },
+    "imageSHA256": "fdc48e70812e538dca923faa08231c98a7571b85d24f6c3e812817a1b5967352",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://raiontaraclia.md/wp-content/uploads/2022/01/flag-1h6-modern-konec-bez-razmera--scaled.jpg",
+      "source": "https://raiontaraclia.md/wp-content/uploads/2022/01/flag-1h6-modern-konec-bez-razmera--scaled.jpg",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r1699033|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_CLEARED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "REPLACE_WITH_EXACT_NORMATIVE_ANNEX",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "taraclia-flag.png",
+      "url": "symbols/sim-r8/taraclia-flag.png",
+      "sourceUrl": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+      "tier": "A",
+      "sha256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e"
+    },
+    "impediment": "Original artistic file remains unclear; selected replacement is a literal normative-annex reproduction.",
+    "graphicFinding": "Taraclia district red/yellow/green lion flag, institutional JPEG retained; not the city flag.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+    "newEvidence": [
+      {
+        "source": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+        "sha256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e",
+        "scope": "Rights clear for replacement only; no permission inferred for original artistic file."
+      }
+    ],
+    "sources": [
+      "https://raiontaraclia.md/wp-content/uploads/2022/01/flag-1h6-modern-konec-bez-razmera--scaled.jpg",
+      "https://raiontaraclia.md/ro/simbolica-raionului/",
+      "https://commons.wikimedia.org/wiki/File:Drapel_Raionul_Taraclia.png"
+    ],
+    "licence": "Normative annex, Law230/2022 article8(b)(c)(g), informative attribution to exact holder.",
+    "restrictions": "Informative territorial illustration with source/holder attribution; no endorsement or claim to permissions in the replaced artistic file.",
+    "missingEvidence": "No missing evidence for this limited normative-copy replacement; historical artistic authorisation remains unknown.",
+    "nextMethod": "Retain fixed hash and normative provenance; reassess only on a new applicable act.",
+    "reviewMethod": "NEW_FINAL_ANNEX_COMPARISON_AND_REPLACEMENT",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1748490",
+    "kind": "coat",
+    "entity": "municipiul Chișinău",
+    "reportingGroup": "Moldova",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r1748490|coat",
+    "previousImage": {
+      "kind": "local",
+      "file": "chisinau-coat.jpg",
+      "url": "symbols/chisinau-coat.jpg",
+      "sourceUrl": "https://cnh.prm.md/"
+    },
+    "imageSHA256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "symbols/chisinau-coat.jpg",
+      "source": "https://cnh.prm.md/",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r1748490|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "chisinau-coat.jpg",
+      "url": "symbols/chisinau-coat.jpg",
+      "sourceUrl": "https://cnh.prm.md/"
+    },
+    "impediment": "Current municipal source corroborates large arms, but neither the local CNH JPEG nor the alternative municipal JPEG has a demonstrated image-specific copyright grant or exact normative-annex provenance.",
+    "graphicFinding": "Municipal large coat with water-tower supporters, institutional CNH JPEG; not assigned to the separate city ID.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Chi%C8%99in%C4%83u_1991.svg",
+    "newEvidence": [
+      {
+        "source": "https://www.chisinau.md/ro/simbolurile-orasului-20376.html",
+        "comparisonRecord": "docs/audits/sim-r8/chisinau-comparison.json",
+        "scope": "New contemporary official reproduction corroborates the large municipal form; visual similarity does not establish the artistic permission chain."
+      }
+    ],
+    "sources": [
+      "https://cnh.prm.md/",
+      "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Chi%C8%99in%C4%83u_1991.svg",
+      "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "Registered full-colour normative annex identifying this drawing, or an original creator grant covering the exact JPEG and intermediate modifications.",
+    "nextMethod": "Compare listed exact-holder alternative against the applicable final normative annex before considering any licence declaration.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1813297",
+    "kind": "coat",
+    "entity": "Sectorul Buiucani",
+    "reportingGroup": "Moldova",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r1813297|coat",
+    "previousImage": {
+      "kind": "local",
+      "file": "chisinau-buiucani-coat.png",
+      "url": "symbols/chisinau-buiucani-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "imageSHA256": "dbf8d74d471f761c4320c8a78453f1793c16590b80ce76951a2adc471cc900c3",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "symbols/chisinau-buiucani-coat.png",
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r1813297|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "chisinau-buiucani-coat.png",
+      "url": "symbols/chisinau-buiucani-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Buiucani small sector coat, CNH-derived local crop.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://commons.wikimedia.org/wiki/File:COA_Buiucani.png",
+    "newEvidence": [],
+    "sources": [
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "https://commons.wikimedia.org/wiki/File:COA_Buiucani.png",
+      "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Buiucani.png"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Compare listed exact-holder alternative against the applicable final normative annex before considering any licence declaration.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1813306",
+    "kind": "coat",
+    "entity": "sectorul Botanica",
+    "reportingGroup": "Moldova",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r1813306|coat",
+    "previousImage": {
+      "kind": "local",
+      "file": "chisinau-botanica-coat.png",
+      "url": "symbols/chisinau-botanica-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "imageSHA256": "5fb05e8e73ab772b391312bc89fcf6b838a6d2e0429f0c597ee0c63f7b32a11b",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "symbols/chisinau-botanica-coat.png",
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r1813306|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "chisinau-botanica-coat.png",
+      "url": "symbols/chisinau-botanica-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Botanica small sector coat, CNH-derived local crop.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://commons.wikimedia.org/wiki/File:COA_Botanica.png",
+    "newEvidence": [],
+    "sources": [
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "https://commons.wikimedia.org/wiki/File:COA_Botanica.png",
+      "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Botanica.png"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Compare listed exact-holder alternative against the applicable final normative annex before considering any licence declaration.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1813315",
+    "kind": "coat",
+    "entity": "sectorul Ciocana",
+    "reportingGroup": "Moldova",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r1813315|coat",
+    "previousImage": {
+      "kind": "local",
+      "file": "chisinau-ciocana-coat.png",
+      "url": "symbols/chisinau-ciocana-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "imageSHA256": "c50c587f47af355bd3f7d114a24986a2d6d476d443b9e3431721794faa5a1f59",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "symbols/chisinau-ciocana-coat.png",
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r1813315|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "chisinau-ciocana-coat.png",
+      "url": "symbols/chisinau-ciocana-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Ciocana small sector coat, CNH-derived local crop; matches institutional description.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://commons.wikimedia.org/wiki/File:COA_Ciocana.png",
+    "newEvidence": [],
+    "sources": [
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "https://commons.wikimedia.org/wiki/File:COA_Ciocana.png",
+      "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Ciocana.png"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Compare listed exact-holder alternative against the applicable final normative annex before considering any licence declaration.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r1813316",
+    "kind": "coat",
+    "entity": "sectorul Rîșcani",
+    "reportingGroup": "Moldova",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r1813316|coat",
+    "previousImage": {
+      "kind": "local",
+      "file": "chisinau-riscani-coat.png",
+      "url": "symbols/chisinau-riscani-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "imageSHA256": "15088d1fbbc6e498f8e0a3c4a54f6f814ebd44de319f4ccae7fca812ad5ea526",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "symbols/chisinau-riscani-coat.png",
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r1813316|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "chisinau-riscani-coat.png",
+      "url": "symbols/chisinau-riscani-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Riscani small sector coat, CNH-derived local crop.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://commons.wikimedia.org/wiki/File:COA_R%C3%A2%C8%99cani.png",
+    "newEvidence": [],
+    "sources": [
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "https://commons.wikimedia.org/wiki/File:COA_R%C3%A2%C8%99cani.png",
+      "https://commons.wikimedia.org/wiki/File:Stema_sectorului_R%C3%A2%C8%99cani.png"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Compare listed exact-holder alternative against the applicable final normative annex before considering any licence declaration.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r58512",
+    "kind": "coat",
+    "entity": "Sectorul Centru",
+    "reportingGroup": "Moldova",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r58512|coat",
+    "previousImage": {
+      "kind": "local",
+      "file": "chisinau-centru-coat.png",
+      "url": "symbols/chisinau-centru-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "imageSHA256": "3492de568ecdfa2dc31539927c048867c1efdae0591729b4bf7beec32130e08a",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "symbols/chisinau-centru-coat.png",
+      "source": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r58512|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "chisinau-centru-coat.png",
+      "url": "symbols/chisinau-centru-coat.png",
+      "sourceUrl": "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Centru small sector coat, CNH-derived local crop.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://commons.wikimedia.org/wiki/File:COA_Centru.png",
+    "newEvidence": [],
+    "sources": [
+      "https://dgect.chisinau.md/simbolica-locala/procedura-de-obtinere-a-dreptului-de-utilizare-a-toponimicului-chisinau/",
+      "https://commons.wikimedia.org/wiki/File:COA_Centru.png",
+      "https://commons.wikimedia.org/wiki/File:Stema_sectorului_Centru.png"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Compare listed exact-holder alternative against the applicable final normative annex before considering any licence declaration.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r10488681",
+    "kind": "coat",
+    "entity": "Comuna Livada",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r10488681|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://livada-arad.ro/wp-content/uploads/2025/04/stema_ro-e1743708837136.png",
+      "sourceUrl": "https://livada-arad.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": null,
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://livada-arad.ro/wp-content/uploads/2025/04/stema_ro-e1743708837136.png",
+      "source": "https://livada-arad.ro/wp-content/uploads/2025/04/stema_ro-e1743708837136.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r10488681|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://livada-arad.ro/wp-content/uploads/2025/04/stema_ro-e1743708837136.png",
+      "sourceUrl": "https://livada-arad.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Current image request failed; no graphic or licence conclusion inferred from failure.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://livada-arad.ro/wp-content/uploads/2025/04/stema_ro-e1743708837136.png",
+      "https://livada-arad.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r10664180",
+    "kind": "coat",
+    "entity": "Municipiul Câmpulung",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r10664180|coat",
+    "previousImage": {
+      "kind": "commons",
+      "file": "ROU AG Campulung CoA.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+      "tier": "B"
+    },
+    "imageSHA256": "8f1891e39876515f3a2404b6ad86c05fba5e6deab26b92addf2fb92a461d4aee",
+    "author": "CosminN with artwork from Lions Club",
+    "provenance": {
+      "artist": "CosminN with artwork from Lions Club",
+      "originalFile": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "declaredLicence": "CC BY-SA 3.0",
+      "modificationChain": "Third-party contributions specifically unresolved",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r10664180|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_CLEARED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "REPLACE_WITH_EXACT_NORMATIVE_ANNEX",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "local",
+      "file": "campulung-coat.png",
+      "url": "symbols/sim-r8/campulung-coat.png",
+      "sourceUrl": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+      "tier": "A",
+      "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae"
+    },
+    "impediment": "Original artistic file remains unclear; selected replacement is a literal normative-annex reproduction.",
+    "graphicFinding": "Violet-field Campulung PNG with black upper eagle; conflicting blue-field legal description and partial Lions Club credit. Dispute retained.",
+    "probableRightsHolder": "CosminN with artwork from Lions Club",
+    "primaryAlternative": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+    "newEvidence": [
+      {
+        "source": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+        "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae",
+        "scope": "Rights clear for replacement only; no permission inferred for original artistic file."
+      }
+    ],
+    "sources": [
+      "https://upload.wikimedia.org/wikipedia/commons/7/73/ROU_AG_Campulung_CoA.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+      "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+      "https://commons.wikimedia.org/wiki/File:ROU_AG_C%C3%A2mpulung_CoA.svg",
+      "https://commons.wikimedia.org/wiki/File:ROU_AG_Campulung_CoA.png",
+      "https://commons.wikimedia.org/wiki/File:Interbelic_Campulung_CoA.png"
+    ],
+    "licence": "Literal adopted normative annex/public-authority symbol, Law8/1996 article9(b)(c), free official gazette display/reproduction conditions.",
+    "restrictions": "Informative territorial illustration with source/holder attribution; no endorsement or claim to permissions in the replaced artistic file.",
+    "missingEvidence": "No missing evidence for this limited normative-copy replacement; historical artistic authorisation remains unknown.",
+    "nextMethod": "Retain fixed hash and normative provenance; reassess only on a new applicable act.",
+    "reviewMethod": "NEW_FINAL_ANNEX_COMPARISON_AND_REPLACEMENT",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r10715725",
+    "kind": "coat",
+    "entity": "Comuna Letea Veche",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r10715725|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://primarialeteaveche.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "sourceUrl": "https://primarialeteaveche.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://primarialeteaveche.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "source": "https://primarialeteaveche.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r10715725|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://primarialeteaveche.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "sourceUrl": "https://primarialeteaveche.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Image visibly depicts the Romanian national coat, not Letea Veche arms.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://primarialeteaveche.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "https://primarialeteaveche.ro/",
+      "https://primarialeteaveche.ro/informatii-website/termeni-si-conditii-de-utilizare-a-site-ului/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r11321092",
+    "kind": "coat",
+    "entity": "Comuna Golăiești",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r11321092|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.golaiesti.ro/wp-content/uploads/2024/05/stema-golaiesti.webp",
+      "sourceUrl": "https://www.golaiesti.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "9d68ec92b69e0a7eab05d5435e4e9a740418cdcd95f6d094bb1bf9f37eeb65de",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.golaiesti.ro/wp-content/uploads/2024/05/stema-golaiesti.webp",
+      "source": "https://www.golaiesti.ro/wp-content/uploads/2024/05/stema-golaiesti.webp",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r11321092|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.golaiesti.ro/wp-content/uploads/2024/05/stema-golaiesti.webp",
+      "sourceUrl": "https://www.golaiesti.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Golaiesti castle coat retained; no explicit reproduction licence recovered.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://www.golaiesti.ro/wp-content/uploads/2024/05/stema-golaiesti.webp",
+      "https://www.golaiesti.ro/",
+      "https://www.golaiesti.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/",
+      "https://www.golaiesti.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r11349492",
+    "kind": "flag",
+    "entity": "Comuna Bucerdea Grânoasă",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r11349492|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.bucerdea-granoasa.ro/wp-content/plugins/Modul/assets/images/english.png",
+      "sourceUrl": "https://www.bucerdea-granoasa.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.bucerdea-granoasa.ro/wp-content/plugins/Modul/assets/images/english.png",
+      "source": "https://www.bucerdea-granoasa.ro/wp-content/plugins/Modul/assets/images/english.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r11349492|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.bucerdea-granoasa.ro/wp-content/plugins/Modul/assets/images/english.png",
+      "sourceUrl": "https://www.bucerdea-granoasa.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Circular United States flag from English-language plugin; not a Bucerdea Granoasa territorial flag.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/",
+    "newEvidence": [
+      {
+        "source": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/assets/images/english.png",
+        "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+        "finding": "Byte-identical178px US-language icon. Package README and PHP header declare GPL-2.0-or-later; ultimate asset authorship/scope not independently demonstrated. Historical removal remains in force. Dealu Morii prior national-coat wording corrected here without editing historical snapshot."
+      }
+    ],
+    "sources": [
+      "https://www.bucerdea-granoasa.ro/wp-content/plugins/Modul/assets/images/english.png",
+      "https://www.bucerdea-granoasa.ro/",
+      "https://www.bucerdea-granoasa.ro/termeni-si-conditii-de-utilizare/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "NEW_UPSTREAM_BYTE_IDENTITY_AND_PACKAGE_LICENCE_REVIEW",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r11670644",
+    "kind": "coat",
+    "entity": "Comuna Vetiș",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r11670644|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://vetis.ro/wp-content/uploads/2025/10/stema-satu-mare.webp",
+      "sourceUrl": "https://vetis.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "d35e42d5531632e77eb2ea9fb8e0a5f5bb4a2bc4a9288408150fd1ba3905be73",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://vetis.ro/wp-content/uploads/2025/10/stema-satu-mare.webp",
+      "source": "https://vetis.ro/wp-content/uploads/2025/10/stema-satu-mare.webp",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r11670644|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://vetis.ro/wp-content/uploads/2025/10/stema-satu-mare.webp",
+      "sourceUrl": "https://vetis.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Quartered stag/tree/tower/grapes Satu Mare county coat, not Vetis commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://vetis.ro/wp-content/uploads/2025/10/stema-satu-mare.webp",
+      "https://vetis.ro/",
+      "https://vetis.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/",
+      "https://vetis.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r12594180",
+    "kind": "coat",
+    "entity": "Comuna Hilișeu-Horia",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r12594180|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://hiliseu-horia.ro/wp-content/uploads/2025/10/hiliseu-horia-alb.svg",
+      "sourceUrl": "https://hiliseu-horia.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "5f8ec4a05e4cb456beff818131a3c9ab7f88e55381ac9cd5aa82699316ddce6f",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://hiliseu-horia.ro/wp-content/uploads/2025/10/hiliseu-horia-alb.svg",
+      "source": "https://hiliseu-horia.ro/wp-content/uploads/2025/10/hiliseu-horia-alb.svg",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r12594180|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://hiliseu-horia.ro/wp-content/uploads/2025/10/hiliseu-horia-alb.svg",
+      "sourceUrl": "https://hiliseu-horia.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "White COMUNA HILISEU-HORIA institutional wordmark with small emblem; selected reproduction is a logo, not a standalone territorial coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://hiliseu-horia.ro/wp-content/uploads/2025/10/hiliseu-horia-alb.svg",
+      "https://hiliseu-horia.ro/",
+      "https://hiliseu-horia.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/",
+      "https://hiliseu-horia.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r12709722",
+    "kind": "coat",
+    "entity": "Comuna Aușeu",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r12709722|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.auseu.ro/public/images/primaria_auseu.png",
+      "sourceUrl": "https://www.auseu.ro/public/",
+      "tier": "A"
+    },
+    "imageSHA256": "bdebc29926bf16ec942b597647ab1a3245bfc1ac49953ffc614f1495793cc537",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.auseu.ro/public/images/primaria_auseu.png",
+      "source": "https://www.auseu.ro/public/images/primaria_auseu.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r12709722|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.auseu.ro/public/images/primaria_auseu.png",
+      "sourceUrl": "https://www.auseu.ro/public/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Text-only Primaria Auseu institutional wordmark; no territorial coat in selected image.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://www.auseu.ro/public/images/primaria_auseu.png",
+      "https://www.auseu.ro/public/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r13137637",
+    "kind": "flag",
+    "entity": "Comuna Poienarii De Muscel",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r13137637|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://poienariidemuscel.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://poienariidemuscel.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://poienariidemuscel.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "source": "https://poienariidemuscel.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r13137637|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://poienariidemuscel.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://poienariidemuscel.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Circular United States flag used by English-language accessibility plugin; not Poienarii de Muscel flag.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/",
+    "newEvidence": [
+      {
+        "source": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/assets/images/english.png",
+        "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+        "finding": "Byte-identical178px US-language icon. Package README and PHP header declare GPL-2.0-or-later; ultimate asset authorship/scope not independently demonstrated. Historical removal remains in force. Dealu Morii prior national-coat wording corrected here without editing historical snapshot."
+      }
+    ],
+    "sources": [
+      "https://poienariidemuscel.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "https://poienariidemuscel.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "NEW_UPSTREAM_BYTE_IDENTITY_AND_PACKAGE_LICENCE_REVIEW",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r13833306",
+    "kind": "coat",
+    "entity": "Comuna Roseți",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r13833306|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://comunaroseti.ro/wp-content/uploads/2026/11/Logo_UAT_Roseti-1-edited.png",
+      "sourceUrl": "https://comunaroseti.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "e5f0e479d07ec65f1f4160dd4621ecdd6e83b6e0de7d3038e4ae2697cef1a743",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://comunaroseti.ro/wp-content/uploads/2026/11/Logo_UAT_Roseti-1-edited.png",
+      "source": "https://comunaroseti.ro/wp-content/uploads/2026/11/Logo_UAT_Roseti-1-edited.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r13833306|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://comunaroseti.ro/wp-content/uploads/2026/11/Logo_UAT_Roseti-1-edited.png",
+      "sourceUrl": "https://comunaroseti.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romania map in tricolour beside Primaria si Consiliul Local Roseti text; institutional lockup, not territorial coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://comunaroseti.ro/wp-content/uploads/2026/11/Logo_UAT_Roseti-1-edited.png",
+      "https://comunaroseti.ro/",
+      "https://comunaroseti.ro/situatia-drepturilor-salariale-stabilite-potrivit-legii-precum-si-alte-drepturi-prevazute-de-acte-nromative/",
+      "https://comunaroseti.ro/situatia-drepturilor-salariale-stabilite-potrivit-legii-precum-si-alte-drepturi-prevazute-de-acte-nromative/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r13834489",
+    "kind": "coat",
+    "entity": "Comuna Roșiori",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r13834489|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://primariarosiori-il.ro/wp-content/uploads/2026/09/rosiori-il-stema.webp",
+      "sourceUrl": "https://primariarosiori-il.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "1f8ef8e6678c0e1ea10e54253bb0c57445659e422d9fbc9941bc6aa04d7e2428",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://primariarosiori-il.ro/wp-content/uploads/2026/09/rosiori-il-stema.webp",
+      "source": "https://primariarosiori-il.ro/wp-content/uploads/2026/09/rosiori-il-stema.webp",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r13834489|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://primariarosiori-il.ro/wp-content/uploads/2026/09/rosiori-il-stema.webp",
+      "sourceUrl": "https://primariarosiori-il.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Rosiori shield with local charges retained; reproduction licence not documented.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://primariarosiori-il.ro/wp-content/uploads/2026/09/rosiori-il-stema.webp",
+      "https://primariarosiori-il.ro/",
+      "https://primariarosiori-il.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/",
+      "https://primariarosiori-il.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14194836",
+    "kind": "coat",
+    "entity": "Comuna Ardeoani",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14194836|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://comunaardeoani.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "sourceUrl": "https://comunaardeoani.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "e35d4e98d7ead6477311a726adee90c2eb71ef5b00eceb865c18aa8ac9a322c6",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://comunaardeoani.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "source": "https://comunaardeoani.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14194836|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://comunaardeoani.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "sourceUrl": "https://comunaardeoani.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national coat, not Ardeoani commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://comunaardeoani.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "https://comunaardeoani.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14194837",
+    "kind": "coat",
+    "entity": "Comuna Scorțeni",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14194837|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://comunascorteni.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "sourceUrl": "https://comunascorteni.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "4bad3ed6dfe361cf04b8a8b1b56179280c7fe46dca6966b4332726a2d4fa046a",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://comunascorteni.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "source": "https://comunascorteni.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14194837|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://comunascorteni.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "sourceUrl": "https://comunascorteni.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national coat, not Scorteni commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://comunascorteni.ro/continut/fisiere/2019/08/stema_orig_small-104x150.png",
+      "https://comunascorteni.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14701120",
+    "kind": "coat",
+    "entity": "Comuna Scorțoasa",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14701120|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://scortoasa.ro/_next/image?url=%2Fimages%2Fscortoasa-stema.png&w=384&q=75",
+      "sourceUrl": "https://scortoasa.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "3cdd5189c86de86bdcd183e8e596b464834a1b5b8d47a165b177dee5831dc375",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://scortoasa.ro/_next/image?url=%2Fimages%2Fscortoasa-stema.png&w=384&q=75",
+      "source": "https://scortoasa.ro/_next/image?url=%2Fimages%2Fscortoasa-stema.png&w=384&q=75",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14701120|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://scortoasa.ro/_next/image?url=%2Fimages%2Fscortoasa-stema.png&w=384&q=75",
+      "sourceUrl": "https://scortoasa.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Aerial/satellite silhouette of territorial outline; not a heraldic coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://scortoasa.ro/_next/image?url=%2Fimages%2Fscortoasa-stema.png&w=384&q=75",
+      "https://scortoasa.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14701730",
+    "kind": "coat",
+    "entity": "Comuna Predeal-Sărari",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14701730|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://i0.wp.com/primariapredeal-sarari.ro/wp-content/uploads/2019/01/stema.png?fit=69%2C100&ssl=1",
+      "sourceUrl": "https://primariapredeal-sarari.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "6658e2a42c9996aef379c709f02ab3ea5beb873f7adc665beed29a5a02aeacc3",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://i0.wp.com/primariapredeal-sarari.ro/wp-content/uploads/2019/01/stema.png?fit=69%2C100&ssl=1",
+      "source": "https://i0.wp.com/primariapredeal-sarari.ro/wp-content/uploads/2019/01/stema.png?fit=69%2C100&ssl=1",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14701730|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://i0.wp.com/primariapredeal-sarari.ro/wp-content/uploads/2019/01/stema.png?fit=69%2C100&ssl=1",
+      "sourceUrl": "https://primariapredeal-sarari.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national coat, not Predeal-Sarari commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://i0.wp.com/primariapredeal-sarari.ro/wp-content/uploads/2019/01/stema.png?fit=69%2C100&ssl=1",
+      "https://primariapredeal-sarari.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14701989",
+    "kind": "coat",
+    "entity": "Comuna Bisoca",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14701989|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.primariabisoca.ro/wp-content/uploads/primar-stemate-150x150.jpg",
+      "sourceUrl": "https://www.primariabisoca.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "85672982b384defe55d885525f72c2d1a17222e52117cf1cf8d7795fdebe605e",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.primariabisoca.ro/wp-content/uploads/primar-stemate-150x150.jpg",
+      "source": "https://www.primariabisoca.ro/wp-content/uploads/primar-stemate-150x150.jpg",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14701989|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.primariabisoca.ro/wp-content/uploads/primar-stemate-150x150.jpg",
+      "sourceUrl": "https://www.primariabisoca.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Portrait photograph of mayor with caption, not Bisoca coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://www.primariabisoca.ro/wp-content/uploads/primar-stemate-150x150.jpg",
+      "https://www.primariabisoca.ro/",
+      "https://www.primariabisoca.ro/informatii-de-interes-public/buget-si-executie-bugetara/aplicarea-legii-153-2017/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14735409",
+    "kind": "flag",
+    "entity": "Comuna Cârligele",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14735409|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.primariacirligele.ro/wp-content/themes/cirligele/assets/patrimoniu.webp",
+      "sourceUrl": "https://www.primariacirligele.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "d75e7f262830cc5a4b706fc93e7bba9eafef26ac1f6884a6acbe8718e160fcd0",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.primariacirligele.ro/wp-content/themes/cirligele/assets/patrimoniu.webp",
+      "source": "https://www.primariacirligele.ro/wp-content/themes/cirligele/assets/patrimoniu.webp",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14735409|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.primariacirligele.ro/wp-content/themes/cirligele/assets/patrimoniu.webp",
+      "sourceUrl": "https://www.primariacirligele.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Outdoor memorial/cross photograph with vegetation, not a territorial flag.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://www.primariacirligele.ro/wp-content/themes/cirligele/assets/patrimoniu.webp",
+      "https://www.primariacirligele.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14735435",
+    "kind": "coat",
+    "entity": "Comuna Ciorăști",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14735435|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://comunaciorasti.ro/wp-content/themes/primaria-moderna/assets/images/stema-romaniei-84.webp",
+      "sourceUrl": "https://comunaciorasti.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "a67792a4c6404cb69d2964957de2eab2253a42c522ad5f5525385bc05e203357",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://comunaciorasti.ro/wp-content/themes/primaria-moderna/assets/images/stema-romaniei-84.webp",
+      "source": "https://comunaciorasti.ro/wp-content/themes/primaria-moderna/assets/images/stema-romaniei-84.webp",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14735435|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://comunaciorasti.ro/wp-content/themes/primaria-moderna/assets/images/stema-romaniei-84.webp",
+      "sourceUrl": "https://comunaciorasti.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national coat, not Ciorasti commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://comunaciorasti.ro/wp-content/themes/primaria-moderna/assets/images/stema-romaniei-84.webp",
+      "https://comunaciorasti.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14739041",
+    "kind": "coat",
+    "entity": "Comuna Glăvănești",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14739041|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://glavanesti.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "sourceUrl": "https://glavanesti.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "161f244fd7bbafef92a3744963974df11b3d221fe34681e2fe160e1e825d687a",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://glavanesti.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "source": "https://glavanesti.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14739041|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://glavanesti.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "sourceUrl": "https://glavanesti.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national coat, not Glavanesti commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://glavanesti.ro/continut/fisiere/2020/07/stema_orig_small-104x150.png",
+      "https://glavanesti.ro/",
+      "https://glavanesti.ro/informatii-website/termeni-si-conditii-de-utilizare-a-site-ului/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14739043",
+    "kind": "flag",
+    "entity": "Comuna Dealu Morii",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14739043|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://dealumorii.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://dealumorii.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://dealumorii.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "source": "https://dealumorii.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14739043|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://dealumorii.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://dealumorii.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national coat used in plugin English image path; not Dealu Morii territorial flag. Actual pixels, not filename, determine this finding.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/",
+    "newEvidence": [
+      {
+        "source": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/assets/images/english.png",
+        "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+        "finding": "Byte-identical178px US-language icon. Package README and PHP header declare GPL-2.0-or-later; ultimate asset authorship/scope not independently demonstrated. Historical removal remains in force. Dealu Morii prior national-coat wording corrected here without editing historical snapshot."
+      }
+    ],
+    "sources": [
+      "https://dealumorii.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "https://dealumorii.ro/",
+      "https://dealumorii.ro/termeni-si-conditii/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "NEW_UPSTREAM_BYTE_IDENTITY_AND_PACKAGE_LICENCE_REVIEW",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14743203",
+    "kind": "coat",
+    "entity": "Comuna Bira",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14743203|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://bira.ro/wp-content/uploads/2024/12/Stema_Neamt.svg",
+      "sourceUrl": "https://bira.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://bira.ro/wp-content/uploads/2024/12/Stema_Neamt.svg",
+      "source": "https://bira.ro/wp-content/uploads/2024/12/Stema_Neamt.svg",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14743203|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://bira.ro/wp-content/uploads/2024/12/Stema_Neamt.svg",
+      "sourceUrl": "https://bira.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Neamt county coat (chamois/rock and grain), not Bira commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://bira.ro/wp-content/uploads/2024/12/Stema_Neamt.svg",
+      "https://bira.ro/",
+      "https://bira.ro/informatii-de-interes-public/buget-si-executie-bugetara/situatia-drepturilor-salariale/",
+      "https://bira.ro/informatii-de-interes-public/buget-si-executie-bugetara/situatia-drepturilor-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14743630",
+    "kind": "coat",
+    "entity": "Comuna Sirețel",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14743630|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.primariasiretel.ro/ari_afisare_imagine.php?image=3064",
+      "sourceUrl": "https://www.primariasiretel.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "8fad7a84634e1f9630aa1f52da37a623b63d238f6253d527a73af8629ae7296e",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.primariasiretel.ro/ari_afisare_imagine.php?image=3064",
+      "source": "https://www.primariasiretel.ro/ari_afisare_imagine.php?image=3064",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14743630|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.primariasiretel.ro/ari_afisare_imagine.php?image=3064",
+      "sourceUrl": "https://www.primariasiretel.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Public notice document thumbnail with header emblems and text, not Siretel territorial coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://www.primariasiretel.ro/ari_afisare_imagine.php?image=3064",
+      "https://www.primariasiretel.ro/",
+      "https://www.primariasiretel.ro/ari1_1214-situatia_drepturilor_salariale_si_alte_drepturi.html",
+      "https://www.primariasiretel.ro/ari1_1214-situatia_drepturilor_salariale_si_alte_drepturi.html"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14769372",
+    "kind": "flag",
+    "entity": "Comuna Durnești",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14769372|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.primariadurnesti.ro/wp-content/uploads/2020/04/steagul-romaniei-banner.jpg",
+      "sourceUrl": "https://www.primariadurnesti.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "b58680015be38e16455a05afa54d9c64bc0ecee148ac7278ef95b4782b623069",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.primariadurnesti.ro/wp-content/uploads/2020/04/steagul-romaniei-banner.jpg",
+      "source": "https://www.primariadurnesti.ro/wp-content/uploads/2020/04/steagul-romaniei-banner.jpg",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14769372|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.primariadurnesti.ro/wp-content/uploads/2020/04/steagul-romaniei-banner.jpg",
+      "sourceUrl": "https://www.primariadurnesti.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national tricolour banner, not Durnesti territorial flag.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://www.primariadurnesti.ro/wp-content/uploads/2020/04/steagul-romaniei-banner.jpg",
+      "https://www.primariadurnesti.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14769510",
+    "kind": "coat",
+    "entity": "Comuna Tudora",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14769510|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://comunatudora.ro/wp-content/uploads/2020/11/Stema_Oficiala_a_Romaniei-207x300.png",
+      "sourceUrl": "https://comunatudora.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "2d6ed56cb72d3330da59b941362ac164906617db86eb65bfbe99778d61da22eb",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://comunatudora.ro/wp-content/uploads/2020/11/Stema_Oficiala_a_Romaniei-207x300.png",
+      "source": "https://comunatudora.ro/wp-content/uploads/2020/11/Stema_Oficiala_a_Romaniei-207x300.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14769510|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://comunatudora.ro/wp-content/uploads/2020/11/Stema_Oficiala_a_Romaniei-207x300.png",
+      "sourceUrl": "https://comunatudora.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national coat, not Tudora commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://comunatudora.ro/wp-content/uploads/2020/11/Stema_Oficiala_a_Romaniei-207x300.png",
+      "https://comunatudora.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14776663",
+    "kind": "coat",
+    "entity": "Comuna Bălțătești",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14776663|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://primariabaltatesti.ro/wp-content/uploads/2025/05/Stema_Neamt.svg",
+      "sourceUrl": "https://primariabaltatesti.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "bbfc2529f0b976757e5fd11491adff8457aa53564fa0aea03c3742373d34c9b7",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://primariabaltatesti.ro/wp-content/uploads/2025/05/Stema_Neamt.svg",
+      "source": "https://primariabaltatesti.ro/wp-content/uploads/2025/05/Stema_Neamt.svg",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14776663|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://primariabaltatesti.ro/wp-content/uploads/2025/05/Stema_Neamt.svg",
+      "sourceUrl": "https://primariabaltatesti.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Neamt county coat, not Baltatesti commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://primariabaltatesti.ro/wp-content/uploads/2025/05/Stema_Neamt.svg",
+      "https://primariabaltatesti.ro/",
+      "https://primariabaltatesti.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/",
+      "https://primariabaltatesti.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14776666",
+    "kind": "coat",
+    "entity": "Comuna Poiana Teiului",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14776666|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://poianateiului.ro/wp-content/uploads/2025/01/stema-poiana-teiului.webp",
+      "sourceUrl": "https://poianateiului.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "29bbbf3d73645cd4a6af22448535887881565a63f4e6020e9e91a9439fd367b2",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://poianateiului.ro/wp-content/uploads/2025/01/stema-poiana-teiului.webp",
+      "source": "https://poianateiului.ro/wp-content/uploads/2025/01/stema-poiana-teiului.webp",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14776666|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://poianateiului.ro/wp-content/uploads/2025/01/stema-poiana-teiului.webp",
+      "sourceUrl": "https://poianateiului.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Poiana Teiului local shield retained; no explicit reproduction licence recovered.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://poianateiului.ro/wp-content/uploads/2025/01/stema-poiana-teiului.webp",
+      "https://poianateiului.ro/",
+      "https://poianateiului.ro/informatii-de-interes-public/buget-si-executie-bugetara/situatia-drepturilor-salariale/",
+      "https://poianateiului.ro/informatii-de-interes-public/buget-si-executie-bugetara/situatia-drepturilor-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14776668",
+    "kind": "coat",
+    "entity": "Comuna Ceahlău",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14776668|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://primariaceahlau.ro/wp-content/uploads/2025/08/Stema_Neamt-200x232-1.svg",
+      "sourceUrl": "https://primariaceahlau.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "1799c20cb40ec129bcf91041222a8d8b03f1a89120ff9403a2b1b7a3a9bfab63",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://primariaceahlau.ro/wp-content/uploads/2025/08/Stema_Neamt-200x232-1.svg",
+      "source": "https://primariaceahlau.ro/wp-content/uploads/2025/08/Stema_Neamt-200x232-1.svg",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14776668|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://primariaceahlau.ro/wp-content/uploads/2025/08/Stema_Neamt-200x232-1.svg",
+      "sourceUrl": "https://primariaceahlau.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Neamt county coat, not Ceahlau commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://primariaceahlau.ro/wp-content/uploads/2025/08/Stema_Neamt-200x232-1.svg",
+      "https://primariaceahlau.ro/",
+      "https://primariaceahlau.ro/category/drepturi-salariale/",
+      "https://primariaceahlau.ro/category/drepturi-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14777047",
+    "kind": "coat",
+    "entity": "Comuna Brusturi",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14777047|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://comunabrusturi.ro/wp-content/uploads/elementor/thumbs/semaBrusturi-51x70-1-rabzvvtcoqdzdazcohebul6535fxrepbhl22jo6uue.png",
+      "sourceUrl": "https://comunabrusturi.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "39efa6ff19697813e071e65f51a21158315a80f6d1a791b861ec262028653e83",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://comunabrusturi.ro/wp-content/uploads/elementor/thumbs/semaBrusturi-51x70-1-rabzvvtcoqdzdazcohebul6535fxrepbhl22jo6uue.png",
+      "source": "https://comunabrusturi.ro/wp-content/uploads/elementor/thumbs/semaBrusturi-51x70-1-rabzvvtcoqdzdazcohebul6535fxrepbhl22jo6uue.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14777047|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://comunabrusturi.ro/wp-content/uploads/elementor/thumbs/semaBrusturi-51x70-1-rabzvvtcoqdzdazcohebul6535fxrepbhl22jo6uue.png",
+      "sourceUrl": "https://comunabrusturi.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Brusturi small municipal-style shield retained; low resolution limits graphic assessment, licence unresolved.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://comunabrusturi.ro/wp-content/uploads/elementor/thumbs/semaBrusturi-51x70-1-rabzvvtcoqdzdazcohebul6535fxrepbhl22jo6uue.png",
+      "https://comunabrusturi.ro/",
+      "https://comunabrusturi.ro/category/buget-executie-bugetara/drepturi-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14786145",
+    "kind": "coat",
+    "entity": "Comuna Homoroade",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14786145|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://primariahomoroade.ro/wp-content/uploads/elementor/thumbs/Coat_of_arms_of_Romania-qbmeuxzws6lpg61e6dtpkf3yttd0a5th4dwe05vde2.png",
+      "sourceUrl": "https://primariahomoroade.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "3384e4c4ca071f936b9e7a9b3d7775f15fe4380d0d8e5b3eb36df75d1b4dc3d7",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://primariahomoroade.ro/wp-content/uploads/elementor/thumbs/Coat_of_arms_of_Romania-qbmeuxzws6lpg61e6dtpkf3yttd0a5th4dwe05vde2.png",
+      "source": "https://primariahomoroade.ro/wp-content/uploads/elementor/thumbs/Coat_of_arms_of_Romania-qbmeuxzws6lpg61e6dtpkf3yttd0a5th4dwe05vde2.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14786145|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://primariahomoroade.ro/wp-content/uploads/elementor/thumbs/Coat_of_arms_of_Romania-qbmeuxzws6lpg61e6dtpkf3yttd0a5th4dwe05vde2.png",
+      "sourceUrl": "https://primariahomoroade.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Romanian national coat, not Homoroade commune coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://primariahomoroade.ro/wp-content/uploads/elementor/thumbs/Coat_of_arms_of_Romania-qbmeuxzws6lpg61e6dtpkf3yttd0a5th4dwe05vde2.png",
+      "https://primariahomoroade.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r14867616",
+    "kind": "coat",
+    "entity": "Comuna Remetea Chioarului",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r14867616|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://remeteachioarului.ro/wp-content/uploads/2023/10/stema-remetea-chioarului.webp",
+      "sourceUrl": "https://remeteachioarului.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "d127ae3b393b80be6a524f68b9433dea2b246aad56800be0388161d708fb3693",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://remeteachioarului.ro/wp-content/uploads/2023/10/stema-remetea-chioarului.webp",
+      "source": "https://remeteachioarului.ro/wp-content/uploads/2023/10/stema-remetea-chioarului.webp",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r14867616|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://remeteachioarului.ro/wp-content/uploads/2023/10/stema-remetea-chioarului.webp",
+      "sourceUrl": "https://remeteachioarului.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Remetea Chioarului territorial shield retained; no explicit reproduction licence recovered.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://remeteachioarului.ro/wp-content/uploads/2023/10/stema-remetea-chioarului.webp",
+      "https://remeteachioarului.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r7960937",
+    "kind": "coat",
+    "entity": "București Sectorul 3",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r7960937|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.primarie3.ro/img/logo.png",
+      "sourceUrl": "https://www.primarie3.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "a2e5880d7689d78768ff726a7dde1ca3e39b181834a9829d0dc0810c0826da29",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.primarie3.ro/img/logo.png",
+      "source": "https://www.primarie3.ro/img/logo.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r7960937|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.primarie3.ro/img/logo.png",
+      "sourceUrl": "https://www.primarie3.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Primaria Sectorului 3 Bucuresti institutional wordmark/emblem lockup; not standalone territorial coat.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://www.primarie3.ro/img/logo.png",
+      "https://www.primarie3.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r9714843",
+    "kind": "flag",
+    "entity": "Orașul Strehaia",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r9714843|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.primariastrehaia.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://www.primariastrehaia.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.primariastrehaia.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "source": "https://www.primariastrehaia.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r9714843|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.primariastrehaia.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://www.primariastrehaia.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Circular United States flag from English-language plugin, not Strehaia flag.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/",
+    "newEvidence": [
+      {
+        "source": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/assets/images/english.png",
+        "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+        "finding": "Byte-identical178px US-language icon. Package README and PHP header declare GPL-2.0-or-later; ultimate asset authorship/scope not independently demonstrated. Historical removal remains in force. Dealu Morii prior national-coat wording corrected here without editing historical snapshot."
+      }
+    ],
+    "sources": [
+      "https://www.primariastrehaia.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "https://www.primariastrehaia.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "NEW_UPSTREAM_BYTE_IDENTITY_AND_PACKAGE_LICENCE_REVIEW",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r9714862",
+    "kind": "flag",
+    "entity": "Comuna Pătulele",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r9714862|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.primariapatulelemh.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://www.primariapatulelemh.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.primariapatulelemh.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "source": "https://www.primariapatulelemh.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r9714862|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.primariapatulelemh.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "sourceUrl": "https://www.primariapatulelemh.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Circular United States flag from English-language plugin, not Patulele flag.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/",
+    "newEvidence": [
+      {
+        "source": "https://plugins.svn.wordpress.org/accessibility-onetap/trunk/assets/images/english.png",
+        "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+        "finding": "Byte-identical178px US-language icon. Package README and PHP header declare GPL-2.0-or-later; ultimate asset authorship/scope not independently demonstrated. Historical removal remains in force. Dealu Morii prior national-coat wording corrected here without editing historical snapshot."
+      }
+    ],
+    "sources": [
+      "https://www.primariapatulelemh.ro/wp-content/plugins/accessibility-onetap/assets/images/english.png",
+      "https://www.primariapatulelemh.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "Image-specific upstream authorship and confirmation that package GPL grant covers this bitmap without excluded third-party rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "NEW_UPSTREAM_BYTE_IDENTITY_AND_PACKAGE_LICENCE_REVIEW",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r9748438",
+    "kind": "flag",
+    "entity": "Orașul Horezu",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r9748438|flag",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://www.orasul-horezu.ro/sites/default/files/romania.png",
+      "sourceUrl": "https://www.orasul-horezu.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "e2b716eeeabaecfc9d8fde42222dfc3f3ebefa2b0f910c5fc9497ef075d8fa36",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://www.orasul-horezu.ro/sites/default/files/romania.png",
+      "source": "https://www.orasul-horezu.ro/sites/default/files/romania.png",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r9748438|flag"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": false,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://www.orasul-horezu.ro/sites/default/files/romania.png",
+      "sourceUrl": "https://www.orasul-horezu.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Plain Romanian national tricolour, not Horezu territorial flag.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://www.orasul-horezu.ro/sites/default/files/romania.png",
+      "https://www.orasul-horezu.ro/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  },
+  {
+    "atlasId": "osm-r9964683",
+    "kind": "coat",
+    "entity": "Comuna Mogoșești",
+    "reportingGroup": "Romania",
+    "previousReviewRef": "docs/audits/sim-r7/rights-review.json#osm-r9964683|coat",
+    "previousImage": {
+      "kind": "official",
+      "url": "https://mogosesti-primaria.ro/wp-content/uploads/2025/09/stema-mogosesti-iasi.webp",
+      "sourceUrl": "https://mogosesti-primaria.ro/",
+      "tier": "A"
+    },
+    "imageSHA256": "9ca18f7f1b1719361ba1d2d5c955d2104f4820594abc113caf23791b672dfa1c",
+    "author": null,
+    "provenance": {
+      "artist": "NOT_ESTABLISHED",
+      "originalFile": "https://mogosesti-primaria.ro/wp-content/uploads/2025/09/stema-mogosesti-iasi.webp",
+      "source": "https://mogosesti-primaria.ro/wp-content/uploads/2025/09/stema-mogosesti-iasi.webp",
+      "declaredLicence": null,
+      "modificationChain": "Not independently established beyond prior metadata/history",
+      "priorMetadataRef": "docs/audits/sim-r7/rights-review.json#osm-r9964683|coat"
+    },
+    "verdictPrevious": "RIGHTS_UNRESOLVED",
+    "verdictCurrent": "RIGHTS_UNRESOLVED",
+    "originalReproductionVerdict": "RIGHTS_UNRESOLVED",
+    "resolutionMethod": "NO_NEW_GRANT_ESTABLISHED",
+    "currentlyDisplayed": true,
+    "currentImage": {
+      "kind": "official",
+      "url": "https://mogosesti-primaria.ro/wp-content/uploads/2025/09/stema-mogosesti-iasi.webp",
+      "sourceUrl": "https://mogosesti-primaria.ro/",
+      "tier": "A"
+    },
+    "impediment": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "graphicFinding": "Mogosesti Iasi local shield retained; no explicit reproduction licence recovered.",
+    "probableRightsHolder": "Original graphic creator; identity not established by institutional hosting",
+    "primaryAlternative": null,
+    "newEvidence": [],
+    "sources": [
+      "https://mogosesti-primaria.ro/wp-content/uploads/2025/09/stema-mogosesti-iasi.webp",
+      "https://mogosesti-primaria.ro/",
+      "https://mogosesti-primaria.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/",
+      "https://mogosesti-primaria.ro/informatii-de-interes-public/buget-si-executie-bugetara/drepturi-salariale/"
+    ],
+    "licence": null,
+    "restrictions": "Permission to redistribute the original file remains unproved; conservation is not an assertion of free reuse.",
+    "missingEvidence": "No identifiable artist-to-selected-file permission chain; official host or generic footer does not establish reproduction rights.",
+    "nextMethod": "Obtain original artwork provenance or an exact approved normative graphic; no repeated institutional homepage request.",
+    "reviewMethod": "TARGETED_GAP_REVIEW_OF_EXISTING_AUTHOR_METADATA_AND_ALTERNATIVE_CHAIN",
+    "checkedAt": "2026-11-09T22:51:04.470Z"
+  }
+]

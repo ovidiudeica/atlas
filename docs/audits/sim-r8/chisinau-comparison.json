@@ -1,0 +1,13 @@
+{
+  "atlasId": "osm-r1748490",
+  "newSource": "https://www.chisinau.md/files/simbol_oras_nou/Stema_oras_Chisinau.jpg",
+  "existingSource": "https://cnh.prm.md/wp-content/uploads/Stema-Chisinau.jpg",
+  "existingLocalSHA256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+  "newInstitutionalSHA256": "ccaaf12f56af4ebc99ddfd08c5ed74bde7e84e37184a85379bd81fed63cc11d5",
+  "byteIdentical": false,
+  "visualComparison": "New current municipal JPEG shows same large arms: eagle/aurochs central shield, seven-tower crown, two water-tower supporters and PRIN NOI INSINE motto. Distinct compressed files are not asserted byte-identical or licensed by visual similarity.",
+  "legalHolder": "Municipiul Chișinău",
+  "rights": "RIGHTS_UNRESOLVED",
+  "cityScope": "No separate city holder or common legal scope established; no transfer to osm-r1691801.",
+  "action": "KEEP_EXISTING_UNCONFIRMED"
+}

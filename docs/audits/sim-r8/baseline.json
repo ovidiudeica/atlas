@@ -1,0 +1,84 @@
+{
+  "baseCommit": "0208ec5f2f0f3d71805b64f8883231431adc6751",
+  "initial": {
+    "entities": 4283,
+    "slots": 8566,
+    "coat": 1499,
+    "flag": 299,
+    "withoutImages": 2778,
+    "priorityExamined": 7,
+    "priorityResolved": 0,
+    "priorityPartiallyResolved": 2,
+    "priorityBlocked": 3,
+    "priorityDisputed": 2,
+    "newEnactedDocuments": 2,
+    "newConsultationDrafts": 1,
+    "newFinalGraphicAnnexes": 0,
+    "rightsExamined": 44,
+    "rightsCleared": 0,
+    "rightsRestricted": 0,
+    "rightsUnresolved": 44,
+    "institutionalCasesReinvestigated": 907,
+    "institutionalUnprocessed": 0,
+    "relevantInstitutionalSourcesRecovered": 1,
+    "institutionalStates": {
+      "BLOCKED_ACCESS": 44,
+      "NO_RELEVANT_DOCUMENT": 42,
+      "STILL_INACCESSIBLE": 800,
+      "REDIRECTED": 20,
+      "ARCHIVE_ONLY": 1
+    },
+    "institutionalOriginalHTTPResponses": 488,
+    "institutionalHostRestrictionSkips": 47,
+    "wikipediaArticlesRetrieved": 901,
+    "wikipediaCaseArticleLinksExamined": 907,
+    "sourceHolderEntities": 901,
+    "imagesAdded": 0,
+    "imagesReplaced": 0,
+    "imagesRemoved": 0,
+    "quarantinedNewCandidates": 18,
+    "historicalInvalidationsProtected": 31,
+    "duplicateGroupsFlagged": 2,
+    "statisticalOnlyRegions": 18
+  },
+  "files": [
+    {
+      "path": "public/data/phase4/catalog.json.gz",
+      "sha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482"
+    },
+    {
+      "path": "public/data/symbols/registry-r7.json.gz",
+      "sha256": "90fddf3b4a2a69fdb934cd95fc64936acfb365a84ebf533abcc1a60f271fcd11"
+    },
+    {
+      "path": "public/data/symbols/audit-r7.json.gz",
+      "sha256": "e681b74801e8e3c278ff62f1e1ecd0668ddd310d6acd40f060b56b5be0b5dfa7"
+    },
+    {
+      "path": "src/data/symbolR7Selections.mjs",
+      "sha256": "f86ee03dc83cf22fef97157593051c6d692a223a6d0d3b3630c47432028b5bc9"
+    },
+    {
+      "path": "src/data/symbolInvalidations.mjs",
+      "sha256": "87b88ec07b65a5aba25213169bdef6fe44bba028a9d28b761d712fbfa6429471"
+    },
+    {
+      "path": "docs/audits/sim-r7/quarantine.json",
+      "sha256": "96bb25db5e2d93b98734a999bbe7463ad3b894e1931f099454c9aa2fe666f59f"
+    },
+    {
+      "path": "docs/audits/sim-r7/rights-review.json",
+      "sha256": "d63109dc781bde64a707b2fbc7449c0f0a1c11b3f0e2373eae429f42bc177a8f"
+    },
+    {
+      "path": "docs/audits/sim-r7/institutional-recovery.json.gz",
+      "sha256": "a093a5a890450e53cc5d35d964a4bd0d5c8b80b2824e3edb4551c1ad4a3e7b7b"
+    },
+    {
+      "path": "docs/audits/SIM-R7-RESULTS.json",
+      "sha256": "733e1a4b9a516a11ec259b4f4316fb9de3c05cacf4f4c72667d455381f284bfa"
+    }
+  ],
+  "integrationBaseCommit": "d6f3d48a94939da067b922e85dcb622522e61daa",
+  "continuityNote": "Main advanced during research through PR78 (header) and PR79 (localized official-name presentation); both were merged without changing certified names/catalog. Initial symbol/geographic baseline remains SIM-R7."
+}
