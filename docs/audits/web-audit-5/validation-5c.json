@@ -1,0 +1,151 @@
+{
+  "stage": "WEB-AUDIT.5c",
+  "applicationCommit": "b77c748b790aa96aaa41ba175cdcd45e247896e4",
+  "recordedAt": "2026-11-10T14:12:16.578Z",
+  "npmCi": {
+    "command": "npm ci --no-audit --no-fund",
+    "result": "PASS",
+    "packages": 96
+  },
+  "nodeTests": {
+    "command": "npm test",
+    "total": 290,
+    "pass": 290,
+    "fail": 0
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "PASS",
+    "windowsLinux": "windows-linux-build-equality.json"
+  },
+  "reproducibility": "reproducibility-5c.json",
+  "publicFullBrowser": {
+    "command": "ATLAS_SMOKE_SITE=https://ovidiudeica.github.io/atlas/ ATLAS_SMOKE_ARTIFACTS=artifacts/web-audit-5c-public-full-20261110-1258 node scripts/ci/browser-smoke.mjs",
+    "result": "PASS",
+    "logSHA256": "20663e58d52339e53f2fdfb28b1f8c041db544231ed1aae770b7194b8411c1c2",
+    "freshDownloadDirectory": "artifacts/web-audit-5c-public-full-20261110-1258",
+    "allOriginalAssertionsPreserved": true,
+    "originalFunctionSequencePreserved": true
+  },
+  "targetedPublic": {
+    "widths": [
+      360,
+      390,
+      700,
+      900,
+      1440
+    ],
+    "exactIDCards": 11,
+    "recoveryCases": 2,
+    "activeFiltersPreserved": true
+  },
+  "nativePublicZoom": {
+    "result": "PASS",
+    "samples": [
+      {
+        "outerWidth": 1440,
+        "innerWidth": 712,
+        "dpr": 2,
+        "visualScale": 1,
+        "overflow": 0,
+        "h1": "Atlas Teritorial",
+        "targets": [
+          {
+            "width": 141.75,
+            "height": 44
+          },
+          {
+            "width": 141.75,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "outerWidth": 720,
+        "innerWidth": 352,
+        "dpr": 2,
+        "visualScale": 1,
+        "overflow": 0,
+        "h1": "Atlas Teritorial",
+        "targets": [
+          {
+            "width": 135.1640625,
+            "height": 44
+          },
+          {
+            "width": 135.171875,
+            "height": 44
+          }
+        ]
+      }
+    ]
+  },
+  "publicPerformance": {
+    "trials": 6,
+    "unsolicitedOriginalRequests": 0,
+    "unavailableImageNeutral": true
+  },
+  "targetAreas": {
+    "states": 20,
+    "observations": 760,
+    "undersizedObservations": 120,
+    "spacingConflicts": 0
+  },
+  "exports": {
+    "realFiles": 4,
+    "scopes": [
+      "selected",
+      "visible"
+    ],
+    "formats": [
+      "csv",
+      "geojson"
+    ],
+    "sourceCoordinatesExactlyMatch": true,
+    "referenceDate": "2026-10-05"
+  },
+  "limitations": [
+    "No NVDA/VoiceOver session; not a full WCAG2.2AA conformance attestation.",
+    "Actual unthrottled timings are descriptive; no improvement percentage or historical7.17s/13.23s benchmark claim.",
+    "Selected remote originals may still load on explicit selection; no unverified thumbnails/derivatives.",
+    "Existing Vite bundle-size warning retained; no unrelated architecture rewrite."
+  ],
+  "logSHA256": [
+    {
+      "path": "work/npm-ci-5c.log",
+      "sha256": "67ea4481948bc2be648874ee9449862ca4a217af6021874029fa72fb3ec11588"
+    },
+    {
+      "path": "work/tests-5c.log",
+      "sha256": "e96a75b1e4f11ff955faf0ffcce5f7eb168225c8532f8250f175b12421690e12"
+    },
+    {
+      "path": "work/build-5c.log",
+      "sha256": "4b759324e0c0cf705da4a3273d169c7b297a03e5c13bee7a98e772c61e7285a4"
+    },
+    {
+      "path": "work/repro-5c.log",
+      "sha256": "133b326c34039b6f9c497fef6c1056d51a5e3daa285e922d6e4f8ddba5a06bac"
+    },
+    {
+      "path": "work/final-performance-local.log",
+      "sha256": "3d1c3c392ac6fa0076d517d8b81e4f0a3aaab5e36ae71890ac6f1512028d0935"
+    },
+    {
+      "path": "work/final-performance-public.log",
+      "sha256": "f16913c1b3b90e1137d0e61048519e50938f9987fdb72270b3ee9824ab8f9782"
+    },
+    {
+      "path": "work/accessibility-public-5c.log",
+      "sha256": "7cc13282637db63b6514e66832e9090b245b70fb7e70443e20c69f4e0c70376a"
+    },
+    {
+      "path": "work/native-zoom-public-5c.log",
+      "sha256": "85fe40f7b8381bf4073e2fba5de5634c7e9789598672938cae0ee9a834ab19ac"
+    },
+    {
+      "path": "work/exports-public-5c.log",
+      "sha256": "35095b151c636edd0b314c85937ed734c5abf3ce6c0870a8787f04c1e846e1c2"
+    }
+  ]
+}

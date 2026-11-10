@@ -10,8 +10,8 @@ import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 
 const root=fileURLToPath(new URL('../../',import.meta.url));
-const screenshots=resolve(root,'artifacts/browser-smoke');
-const site='http://127.0.0.1:4174/atlas/';
+const screenshots=resolve(root,process.env.ATLAS_SMOKE_ARTIFACTS||'artifacts/browser-smoke');
+const site=process.env.ATLAS_SMOKE_SITE||'http://127.0.0.1:4174/atlas/';
 const pause=ms=>new Promise(done=>setTimeout(done,ms));
 const runtimeErrors=[];
 let chrome, preview, profile, client;
@@ -1934,8 +1934,8 @@ async function simR5Audit(cdp){
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
-  preview=spawn(process.execPath,[resolve(root,'node_modules/vite/bin/vite.js'),'preview','--host','127.0.0.1','--port','4174','--strictPort'],{cwd:root,stdio:'inherit'});
-  await until(async()=>(await fetch(site)).ok,'Vite preview');
+  if(!process.env.ATLAS_SMOKE_SITE)preview=spawn(process.execPath,[resolve(root,'node_modules/vite/bin/vite.js'),'preview','--host','127.0.0.1','--port','4174','--strictPort'],{cwd:root,stdio:'inherit'});
+  if(!process.env.ATLAS_SMOKE_SITE)await until(async()=>(await fetch(site)).ok,'Vite preview');
   chrome=spawn(findChrome(),[
     '--headless=new','--no-sandbox','--disable-dev-shm-usage',
     '--enable-unsafe-swiftshader','--disable-gpu-sandbox',

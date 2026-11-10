@@ -42,12 +42,28 @@ jobs:
         run: npm run build
       - name: WEB-AUDIT.5 image request regression
         env:
-          AUDIT_LABEL: after
+          AUDIT_LABEL: ci-after
         run: node scripts/audit/web-audit-5/image-network.mjs
       - name: WEB-AUDIT.5 accessibility and recovery
+        env:
+          AUDIT_LABEL: ci
         run: node scripts/audit/web-audit-5/accessibility-resilience.mjs
       - name: WEB-AUDIT.5 native browser zoom200
+        env:
+          AUDIT_LABEL: ci
         run: node scripts/audit/web-audit-5/native-zoom.mjs
+      - name: WEB-AUDIT.5 final repeated performance and unavailable images
+        env:
+          AUDIT_LABEL: ci
+        run: node scripts/audit/web-audit-5/final-performance.mjs
+      - name: WEB-AUDIT.5 selected and visible original exports
+        env:
+          AUDIT_LABEL: ci
+        run: node scripts/audit/web-audit-5/verify-exports.mjs
+      - name: WEB-AUDIT.5 effective target areas and spacing
+        env:
+          AUDIT_LABEL: ci
+        run: node scripts/audit/web-audit-5/target-areas.mjs
       - name: Chromium desktop/mobile smoke
         run: node scripts/ci/browser-smoke.mjs
       - name: Store browser screenshots
@@ -63,9 +79,12 @@ jobs:
         with:
           name: web-audit-5-evidence-${{ github.event.pull_request.head.sha || github.sha }}
           path: |
-            docs/audits/web-audit-5/image-network-after.json
-            docs/audits/web-audit-5/accessibility-resilience-local.json
-            docs/audits/web-audit-5/native-zoom-local.json
+            docs/audits/web-audit-5/image-network-ci-after.json
+            docs/audits/web-audit-5/accessibility-resilience-ci.json
+            docs/audits/web-audit-5/native-zoom-ci.json
+            docs/audits/web-audit-5/final-performance-ci.json
+            docs/audits/web-audit-5/exports-ci.json
+            docs/audits/web-audit-5/target-areas-ci.json
           if-no-files-found: warn
       - name: Store build
         uses: actions/upload-artifact@v4
