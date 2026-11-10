@@ -949,7 +949,7 @@ export default function App() {
           onClick={()=>searchMatch?chooseSearch(node.id):choose(node.id)}>
           <span className="tree-label-heading">
             <TerritorialSymbolImage key={node.id+'-'+(treeSymbolSrc||'empty')}
-              src={treeSymbolSrc} alt="" className="tree-territorial-symbol" />
+              src={treeSymbolSrc} tree selected={selected===node.id} alt="" className="tree-territorial-symbol" />
             <span className="node-name">{rowLabel}</span>
           </span>
           <span className={'node-level'+(stat?' is-stat':'')} title={municipalRoleClarification(node,lang)||undefined}>{roleLabel(node)}{eastHlinaiaCode?' · CUATM '+eastHlinaiaCode:''}</span>

@@ -38,6 +38,10 @@ jobs:
         run: node scripts/audit/sim-r8/03-verify-reproducibility.mjs
       - name: Type-check and build
         run: npm run build
+      - name: WEB-AUDIT.5 image request regression
+        env:
+          AUDIT_LABEL: after
+        run: node scripts/audit/web-audit-5/image-network.mjs
       - name: Chromium desktop/mobile smoke
         run: node scripts/ci/browser-smoke.mjs
       - name: Store browser screenshots

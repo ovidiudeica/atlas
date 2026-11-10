@@ -1,0 +1,707 @@
+{
+  "baseCommit": "d1ff22c8844ea1b460a0fa9f822fc938e9eba624",
+  "conditions": {
+    "chrome": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "viewport": [
+      1440,
+      900
+    ],
+    "typingIntervalMs": 100,
+    "settleMs": 1000,
+    "network": "unthrottled actual network; no artificial image sizes; encoded transfer includes protocol/cache effects",
+    "trials": 3
+  },
+  "before": [
+    {
+      "trial": 0,
+      "coldMapReadyMs": 9740,
+      "cachedMapReadyMs": 4621,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 1312
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 3028
+        }
+      ],
+      "phases": {
+        "cold": {
+          "requests": 48,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 2740514,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "progressive-search": {
+          "requests": 58,
+          "imageRequests": 58,
+          "externalImageRequests": 52,
+          "encodedBytes": 21875750,
+          "imageEncodedBytes": 21875750,
+          "externalImageEncodedBytes": 20940437
+        },
+        "branch": {
+          "requests": 2,
+          "imageRequests": 2,
+          "externalImageRequests": 2,
+          "encodedBytes": 0,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "select-district": {
+          "requests": 12,
+          "imageRequests": 12,
+          "externalImageRequests": 9,
+          "encodedBytes": 293705,
+          "imageEncodedBytes": 293705,
+          "externalImageEncodedBytes": 67095
+        },
+        "cached": {
+          "requests": 48,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 485,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        }
+      },
+      "largestImages": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Stema_ora%C8%99ului_Taraclia%2C_Moldova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38098.16604,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 9859955,
+          "durationMs": 5672.807000002649
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Coat_of_Arms_of_Balti.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38113.255335,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 1699139,
+          "durationMs": 10941.886000000522
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Stema_Cioburciu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38113.299916,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 898643,
+          "durationMs": 10409.373999995296
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Stema_comuna_Bacioi%2C_Moldova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38113.255706,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 755817,
+          "durationMs": 8916.160999993735
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Stema_comuna_Cuhnesti%2C_Moldova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38097.85809,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 698889,
+          "durationMs": 2106.2109999984386
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "coldMapReadyMs": 26802,
+      "cachedMapReadyMs": 6079,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 960
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 8544
+        }
+      ],
+      "phases": {
+        "cold": {
+          "requests": 48,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 2741725,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "progressive-search": {
+          "requests": 68,
+          "imageRequests": 68,
+          "externalImageRequests": 62,
+          "encodedBytes": 23302695,
+          "imageEncodedBytes": 23302695,
+          "externalImageEncodedBytes": 22367382
+        },
+        "branch": {
+          "requests": 2,
+          "imageRequests": 2,
+          "externalImageRequests": 2,
+          "encodedBytes": 0,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "select-district": {
+          "requests": 12,
+          "imageRequests": 12,
+          "externalImageRequests": 9,
+          "encodedBytes": 99857,
+          "imageEncodedBytes": 99857,
+          "externalImageEncodedBytes": 99730
+        },
+        "cached": {
+          "requests": 52,
+          "imageRequests": 4,
+          "externalImageRequests": 4,
+          "encodedBytes": 485,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        }
+      },
+      "largestImages": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Stema_ora%C8%99ului_Taraclia%2C_Moldova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38172.896698,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 9859767,
+          "durationMs": 21394.835000006424
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Coat_of_Arms_of_Balti.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38199.726623,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 1699148,
+          "durationMs": 11660.167999994883
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Stema_Cioburciu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38199.855663,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 898635,
+          "durationMs": 10503.888999999617
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Stema_comuna_Bacioi%2C_Moldova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38199.726966,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 755844,
+          "durationMs": 11658.519999997225
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Stema_comuna_Cuhnesti%2C_Moldova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38172.66461,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 698693,
+          "durationMs": 1066.4800000013201
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "coldMapReadyMs": 14580,
+      "cachedMapReadyMs": 5736,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 2272
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 8704
+        }
+      ],
+      "phases": {
+        "cold": {
+          "requests": 48,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 2742165,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "progressive-search": {
+          "requests": 66,
+          "imageRequests": 66,
+          "externalImageRequests": 60,
+          "encodedBytes": 42062314,
+          "imageEncodedBytes": 42062314,
+          "externalImageEncodedBytes": 41127001
+        },
+        "branch": {
+          "requests": 2,
+          "imageRequests": 2,
+          "externalImageRequests": 2,
+          "encodedBytes": 0,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "select-district": {
+          "requests": 12,
+          "imageRequests": 12,
+          "externalImageRequests": 9,
+          "encodedBytes": 127,
+          "imageEncodedBytes": 127,
+          "externalImageEncodedBytes": 0
+        },
+        "cached": {
+          "requests": 62,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 485,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        }
+      },
+      "largestImages": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Stema_satului_Slobozia%2C_%C8%98tefan_Vod%C4%83%2C_Moldova.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38255.959283,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 18719937,
+          "durationMs": 8764.716000005137
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Stema_ora%C8%99ului_Taraclia%2C_Moldova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38244.178544,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 9859767,
+          "durationMs": 2137.353999998595
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Coat_of_Arms_of_Balti.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38255.958248,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 1699149,
+          "durationMs": 4875.717999995686
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Stema_Cioburciu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38257.134188,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 898644,
+          "durationMs": 3701.047999995353
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Stema_comuna_Bacioi%2C_Moldova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38255.959527,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 755817,
+          "durationMs": 2756.0230000017327
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "trial": 0,
+      "coldMapReadyMs": 7455,
+      "cachedMapReadyMs": 2777,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 356
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 1836
+        }
+      ],
+      "phases": {
+        "cold": {
+          "requests": 48,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 2741985,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "progressive-search": {
+          "requests": 6,
+          "imageRequests": 6,
+          "externalImageRequests": 0,
+          "encodedBytes": 935313,
+          "imageEncodedBytes": 935313,
+          "externalImageEncodedBytes": 0
+        },
+        "branch": {
+          "requests": 0,
+          "imageRequests": 0,
+          "externalImageRequests": 0,
+          "encodedBytes": 0,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "select-district": {
+          "requests": 1,
+          "imageRequests": 1,
+          "externalImageRequests": 0,
+          "encodedBytes": 226356,
+          "imageEncodedBytes": 226356,
+          "externalImageEncodedBytes": 0
+        },
+        "cached": {
+          "requests": 47,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 485,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        }
+      },
+      "largestImages": [
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/taraclia-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38342.386813,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 314968,
+          "durationMs": 319.2029999991064
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/taraclia-flag.png",
+          "type": "Image",
+          "phase": "select-district",
+          "started": 38351.736866,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 226356,
+          "durationMs": 336.56799999880604
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/harghita-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38344.512401,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 200649,
+          "durationMs": 14.454999996814877
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/gagauzia-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38342.386675,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 183185,
+          "durationMs": 233.49099999904865
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/chisinau-coat.jpg",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38344.290298,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 92393,
+          "durationMs": 180.0539999967441
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "coldMapReadyMs": 4298,
+      "cachedMapReadyMs": 4004,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 124
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 524
+        }
+      ],
+      "phases": {
+        "cold": {
+          "requests": 48,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 2743867,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "progressive-search": {
+          "requests": 6,
+          "imageRequests": 6,
+          "externalImageRequests": 0,
+          "encodedBytes": 935313,
+          "imageEncodedBytes": 935313,
+          "externalImageEncodedBytes": 0
+        },
+        "branch": {
+          "requests": 0,
+          "imageRequests": 0,
+          "externalImageRequests": 0,
+          "encodedBytes": 0,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "select-district": {
+          "requests": 1,
+          "imageRequests": 1,
+          "externalImageRequests": 0,
+          "encodedBytes": 226356,
+          "imageEncodedBytes": 226356,
+          "externalImageEncodedBytes": 0
+        },
+        "cached": {
+          "requests": 48,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 485,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        }
+      },
+      "largestImages": [
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/taraclia-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38366.27008,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 314968,
+          "durationMs": 209.52499999839347
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/taraclia-flag.png",
+          "type": "Image",
+          "phase": "select-district",
+          "started": 38375.55499,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 226356,
+          "durationMs": 576.2360000007902
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/harghita-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38368.348276,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 200649,
+          "durationMs": 299.97200000070734
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/gagauzia-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38366.269888,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 183185,
+          "durationMs": 145.06599999731407
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/chisinau-coat.jpg",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38368.120077,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 92393,
+          "durationMs": 29.608999997435603
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "coldMapReadyMs": 5423,
+      "cachedMapReadyMs": 2599,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 84
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 500
+        }
+      ],
+      "phases": {
+        "cold": {
+          "requests": 48,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 2742930,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "progressive-search": {
+          "requests": 6,
+          "imageRequests": 6,
+          "externalImageRequests": 0,
+          "encodedBytes": 935313,
+          "imageEncodedBytes": 935313,
+          "externalImageEncodedBytes": 0
+        },
+        "branch": {
+          "requests": 0,
+          "imageRequests": 0,
+          "externalImageRequests": 0,
+          "encodedBytes": 0,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        },
+        "select-district": {
+          "requests": 1,
+          "imageRequests": 1,
+          "externalImageRequests": 0,
+          "encodedBytes": 226356,
+          "imageEncodedBytes": 226356,
+          "externalImageEncodedBytes": 0
+        },
+        "cached": {
+          "requests": 47,
+          "imageRequests": 1,
+          "externalImageRequests": 1,
+          "encodedBytes": 485,
+          "imageEncodedBytes": 0,
+          "externalImageEncodedBytes": 0
+        }
+      },
+      "largestImages": [
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/taraclia-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38392.954067,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 314968,
+          "durationMs": 137.66400000167778
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/taraclia-flag.png",
+          "type": "Image",
+          "phase": "select-district",
+          "started": 38402.121178,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 226356,
+          "durationMs": 72.1689999991213
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/sim-r8/harghita-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38395.010988,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 200649,
+          "durationMs": 110.40399999910733
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/gagauzia-coat.png",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38392.953895,
+          "status": 200,
+          "cache": false,
+          "mime": "image/png",
+          "encodedBytes": 183185,
+          "durationMs": 78.05699999880744
+        },
+        {
+          "url": "http://127.0.0.1:4184/atlas/symbols/chisinau-coat.jpg",
+          "type": "Image",
+          "phase": "progressive-search",
+          "started": 38394.77977,
+          "status": 200,
+          "cache": false,
+          "mime": "image/jpeg",
+          "encodedBytes": 92393,
+          "durationMs": 26.695000000472646
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Actual unthrottled network; Windows background load varied. Timing samples are descriptive, not a causal speed claim.",
+    "CDP encodedDataLength is observed transfer, including cache and protocol effects; missing finish is not counted as zero-sized resource proof.",
+    "No new graphical derivatives or URL rewrites; external tree miniatures defer until explicit selection or decoded card reuse."
+  ]
+}
