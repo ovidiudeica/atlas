@@ -1,0 +1,23 @@
+{
+  "baseMain": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+  "checkedAt": "2026-11-10T17:26:51.706Z",
+  "scope": "Actual pre-merge file bytes, supplementing existing certified manifest; post-merge will be checked independently.",
+  "baselineTrackedFiles": 539,
+  "unchangedBaselineFiles": 538,
+  "authorizedExistingFileChanges": [
+    {
+      "path": "README.md",
+      "beforeSHA256": "3ae5085e6f0656beabda3183006d4b325d6c0941eb87a01efecce38006f41851",
+      "afterSHA256": "b3feef5a01c46c33893f6c9c858f3d52a46d38d62d6bb47547bbf4716447061a",
+      "reason": "Append current maintenance/cleanup navigation only."
+    }
+  ],
+  "deletedFiles": [],
+  "protectedManifest": "docs/audits/web-audit-5/integrity-5a.json",
+  "protectedManifestSHA256": "752c397841ca96b13e3afc270ab6f23743f3c83d24495d843a9dbf3fa171e19c",
+  "protectedFilesChecked": 273,
+  "allProtectedUnchanged": true,
+  "workflowUnchanged": true,
+  "dependenciesUnchanged": true,
+  "applicationUnchanged": true
+}

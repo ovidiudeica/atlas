@@ -1,0 +1,916 @@
+{
+  "stage": "REPO-CLEANUP",
+  "baseMain": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+  "status": "PRE_CLEANUP_VALIDATED_SUBJECT_TO_REMOTE_ARCHIVE_AND_FRESH_PER_REF_GATES",
+  "destructiveOperationsExecuted": 0,
+  "existingTags": [
+    {
+      "ref": "refs/tags/archive/2026-11-06/audit-exception-evidence-20261106",
+      "objectSHA": "e2df7808289b9b6b48fa786c6d7544e2daa4c0d2",
+      "type": "tag",
+      "peeledCommit": "b4914e47b8765b3c1da38e033e152cc35e2ee725",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/audit-official-boundary-acquisition-20261106",
+      "objectSHA": "580f0905016313c66a09fd7886792047c17dff00",
+      "type": "tag",
+      "peeledCommit": "0275d64985d449650ca087f8c28989207829a2fd",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/design-map-first-collapsible-workspace",
+      "objectSHA": "c987c817007a77daabab0d5bea6b3103e601d010",
+      "type": "tag",
+      "peeledCommit": "26908f4cf2dafcd957f60f0db205fb99b5b523b8",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/design-phase-1-interface-architecture",
+      "objectSHA": "fc52d99018c9c1f5e8e34d2f71bb113252b028b5",
+      "type": "tag",
+      "peeledCommit": "c0d5bad979c3c22dd2382ad0d237750f115befa4",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-osm-level-bulk-visibility",
+      "objectSHA": "37bf8e7734a1e48a093f55cac72d41b1265e7527",
+      "type": "tag",
+      "peeledCommit": "964a86c9da148d4bb58e1b6315351661836e15e6",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-phase-2-map-app",
+      "objectSHA": "66248ae8d0487d9d8d3129da422127bfed954b6a",
+      "type": "tag",
+      "peeledCommit": "603d93f337ca2ee7937e9bde210b9c22eb3a3c3b",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-phase-2-map-shell",
+      "objectSHA": "1374a5124a7c112fe0b07ea26768f23451defb6f",
+      "type": "tag",
+      "peeledCommit": "dbe7fe1bf4b5a3dcc982809aee981f0bbf581004",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-phase-3-administrative-data",
+      "objectSHA": "a960a56f8cf13ef7a06742546ebe019a8adc1a29",
+      "type": "tag",
+      "peeledCommit": "2301b34b5534686b04d2371f957ca9e3da9ff0cb",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-phase-4-live-territory-tree",
+      "objectSHA": "62b3021e7a6a0e9d06982113ed8c1329f1b1c5de",
+      "type": "tag",
+      "peeledCommit": "ed099726e6915be94a66eddbf02b17e3d49438bd",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-phase-5-navigation-export",
+      "objectSHA": "edec14ab981d953e99fed1db8b1134b6ea2a8614",
+      "type": "tag",
+      "peeledCommit": "598bad656ee3b64473ab8cca9cb35c19844674f7",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-reset-selected-geometries",
+      "objectSHA": "e1e4071975890a5199232fd815f0be274e58be5f",
+      "type": "tag",
+      "peeledCommit": "679f56eb61eb85428c95e0fa321f4bb2673909fe",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-statistical-level-filter",
+      "objectSHA": "53e4cca478cebca76835e2f237c2fe78c6cc2828",
+      "type": "tag",
+      "peeledCommit": "3082ea91647a51b978088ecc53e4a12f82ae4d3a",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/feat-unified-filters-panel",
+      "objectSHA": "20e74412f8179eceb40035b5fea1952be56ec2a1",
+      "type": "tag",
+      "peeledCommit": "273bb465c42c9252e66eaf667cb84f2e4010d767",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/fix-filters-ro-before-md",
+      "objectSHA": "ce11e2bb385d2a80c1b20e6eb81a4e79112f2497",
+      "type": "tag",
+      "peeledCommit": "a3f582ee511c93c3c3deb11fb73b9e6a16b6072e",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/fix-phase-2-map-container",
+      "objectSHA": "37c3a537582ec58f0c7f9574472a0d77de9b01ca",
+      "type": "tag",
+      "peeledCommit": "608d19bf8022672f12e79f36a6fd7125df90ae54",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/fix-phase-2-svg-outline",
+      "objectSHA": "62da621437593915b8b01429376dbd4e6ac38be5",
+      "type": "tag",
+      "peeledCommit": "b3c68ce2d1ea5798c6b12df701603f85f66ecc78",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/fix-phase-2-visual-overlay",
+      "objectSHA": "951c31be096e231c5ccc359eababed2a1390d4ef",
+      "type": "tag",
+      "peeledCommit": "db609b8b644dd83d97f16fd8e435267974f41b0e",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/maintenance-phase5-cleanup",
+      "objectSHA": "64673195457eeaf99429326a63beea88823830e6",
+      "type": "tag",
+      "peeledCommit": "ae842a5a04da9752048618c809b19a852ce83ccc",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/policy-accept-osmb-source-exceptions-20261106",
+      "objectSHA": "8c6a43a9abbff3fa4ce4d3b446e097c2f0fc7553",
+      "type": "tag",
+      "peeledCommit": "4315ae88e991ce872b9d1ff989509ef417575ef5",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/web-r3-1-retractable-panels",
+      "objectSHA": "224347b153e4157c9131967690ff3637d2dded78",
+      "type": "tag",
+      "peeledCommit": "c3798e39dea1787a7c2f00f38129b68d47fe6f08",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/web-r3-2-compact-map-controls",
+      "objectSHA": "5663c5528d9ef1ac0ebe126033d6a9296e2f9a84",
+      "type": "tag",
+      "peeledCommit": "aec7377b67fd4fda53a1fdeeb772898693eda8e1",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/web-r3-3-final-ux-acceptance",
+      "objectSHA": "af7c28f1c52f03252ac3969bcb7869e9c40f4c0f",
+      "type": "tag",
+      "peeledCommit": "d5afa7811e0e00dc900548c5944a46c3ec6013c4",
+      "remoteObjectVerified": true
+    },
+    {
+      "ref": "refs/tags/archive/2026-11-06/web-r3-3-postmerge-closure",
+      "objectSHA": "9821535a0fb65cf93d801145a52a3f5a476deef5",
+      "type": "tag",
+      "peeledCommit": "adbd5150e196829ca35ec9a375495d42efca62f7",
+      "remoteObjectVerified": true
+    }
+  ],
+  "existingReleases": [],
+  "eligibleBranches": [
+    {
+      "name": "feat/atlas-exhaustive-short-names-20261107",
+      "headSHA": "9fbd5f66e55cc7ce761af0a06e7369f246cb9488",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "431c66fb3fdc2ddd5ac1a867b5702b5ddf55ae9d",
+      "proofRecord": "branch-decisions.json#feat/atlas-exhaustive-short-names-20261107"
+    },
+    {
+      "name": "feat/atlas-gagauzia-chisinau-hierarchy-20261107",
+      "headSHA": "10abbf8c9900d264203c33d3eb3cb0b9b88f84c5",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "c7142b13e189147eae06fc7342ad419a325ed21b",
+      "proofRecord": "branch-decisions.json#feat/atlas-gagauzia-chisinau-hierarchy-20261107"
+    },
+    {
+      "name": "feat/atlas-global-map-tools-r34-20261107",
+      "headSHA": "72a2dc4c48b4a7b0d68e701ef801e2f3720eaaf6",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "e414b7b31a88b92fd8680a4ed8468bf6962830cb",
+      "proofRecord": "branch-decisions.json#feat/atlas-global-map-tools-r34-20261107"
+    },
+    {
+      "name": "feat/atlas-reference-and-level-styles-20261107",
+      "headSHA": "28d0558e231ffef3207f63995abdbd41f8c11359",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "828f0e2ed6f62bd59a253afb6e9d7eef98995e6d",
+      "proofRecord": "branch-decisions.json#feat/atlas-reference-and-level-styles-20261107"
+    },
+    {
+      "name": "feat/atlas-short-tree-names-20261107",
+      "headSHA": "f8ee6dca978d3c24e11ff21962bb7aba65e31eb9",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "41493d5495e9be146d8665698fabdc6b1c08a2af",
+      "proofRecord": "branch-decisions.json#feat/atlas-short-tree-names-20261107"
+    },
+    {
+      "name": "feat/atlas-tree-selector-adjacent-20261107",
+      "headSHA": "ad00d2815dfb978e34d937b51e7a5c03944a36d5",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "a1b01165639b6a1e1903572b61668b55cb963574",
+      "proofRecord": "branch-decisions.json#feat/atlas-tree-selector-adjacent-20261107"
+    },
+    {
+      "name": "feat/verified-territorial-symbols-pilot-20261108",
+      "headSHA": "733b5c390273461796d5d975cd2250f9ca18bb40",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "670062655577ebbcf82fdcd40d93a1646f8db5e3",
+      "proofRecord": "branch-decisions.json#feat/verified-territorial-symbols-pilot-20261108"
+    },
+    {
+      "name": "feat/web-r35-compact-map-tools-20261107",
+      "headSHA": "b451fd4389a56f4ebb1f3c37ce20eaf524eb3293",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "4ce2fc53f6726206d740f96b49f340d29779864e",
+      "proofRecord": "branch-decisions.json#feat/web-r35-compact-map-tools-20261107"
+    },
+    {
+      "name": "feat/web-r310-md-regional-tree-order-20261107",
+      "headSHA": "7bdbbd95a1288d95d0690d8b9fb26a4b90b04ed6",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "8584739fe31a89cc7bb0a86797aa797e55c50460",
+      "proofRecord": "branch-decisions.json#feat/web-r310-md-regional-tree-order-20261107"
+    },
+    {
+      "name": "feat/web-r311-chitcani-short-name-20261107",
+      "headSHA": "6bd8a03b87c07fcc9263fc7b6a4f161e53f2afda",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "6a693a124b4d1d9ddffdabaf12789b11287603ac",
+      "proofRecord": "branch-decisions.json#feat/web-r311-chitcani-short-name-20261107"
+    },
+    {
+      "name": "feat/web-r312-east-short-labels-20261107",
+      "headSHA": "d4d7dd64aa0fdca516c8fc76953b26a6875f14ad",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "f092d37e5f5e9f1627241b09af8496ac2237fecc",
+      "proofRecord": "branch-decisions.json#feat/web-r312-east-short-labels-20261107"
+    },
+    {
+      "name": "feat/web-r313-east-order-hlinaia-20261107",
+      "headSHA": "83d3df6dba928225760c2d16a87e380265ea2f97",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "8d6a140812af85ac66773548d02ec599f1d91c04",
+      "proofRecord": "branch-decisions.json#feat/web-r313-east-order-hlinaia-20261107"
+    },
+    {
+      "name": "feat/web-r314-east-transnistria-uatsn-atulbd-20261107",
+      "headSHA": "7d9d087eecffe784caf62424117ff142ecc512c3",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "21532c25c1306349b88321d36164ef7012fd85ea",
+      "proofRecord": "branch-decisions.json#feat/web-r314-east-transnistria-uatsn-atulbd-20261107"
+    },
+    {
+      "name": "feat/web-r315-nistrenia-fixed-order-20261107",
+      "headSHA": "e6bbfb8790ed4db1823b212947b95fd36f8b65f1",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "397bdac276024fe2a2fcf333536bf768c7af17ed",
+      "proofRecord": "branch-decisions.json#feat/web-r315-nistrenia-fixed-order-20261107"
+    },
+    {
+      "name": "feat/web-r316-west-chisinau-first-20261107",
+      "headSHA": "a9dd39d862d839b5bccdd219779441f95f5507b9",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "7f7e07f8a7bf0be07c44718426e71cbfb9072b6a",
+      "proofRecord": "branch-decisions.json#feat/web-r316-west-chisinau-first-20261107"
+    },
+    {
+      "name": "feat/web-r317-md-code-sibling-order-20261107",
+      "headSHA": "35f5dc34c4b4a3df70ede91b7ff045eb85e0fc81",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "845ef2f49fcc07e8670217a1b8ce6dbae83a871a",
+      "proofRecord": "branch-decisions.json#feat/web-r317-md-code-sibling-order-20261107"
+    },
+    {
+      "name": "feat/web-r318-pmr-cadastral-order-and-cards-20261107",
+      "headSHA": "16626e8150172af57225f33483d4f05c5a19a399",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "9b301683d6848dd6ab815a205951fae14e7be254",
+      "proofRecord": "branch-decisions.json#feat/web-r318-pmr-cadastral-order-and-cards-20261107"
+    },
+    {
+      "name": "fix/atlas-gagauzia-chisinau-tree-20261107",
+      "headSHA": "4e292a829aac3d9999108c05323f1e589a583371",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "42e3e90db1e38e035bb5abd0327381eec3da06f6",
+      "proofRecord": "branch-decisions.json#fix/atlas-gagauzia-chisinau-tree-20261107"
+    },
+    {
+      "name": "fix/atlas-legend-reference-label-20261107",
+      "headSHA": "3daf9c68e751af497fedd5a6dedc1bd677a7980c",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "13419b37222fcc4c65ed68fba1c80ea090de016e",
+      "proofRecord": "branch-decisions.json#fix/atlas-legend-reference-label-20261107"
+    },
+    {
+      "name": "fix/atlas-nistrian-children-order-20261107",
+      "headSHA": "fc7075de9c6299588e91c916afddb5d7350d638e",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "1fa1381fa00b47a01c92cb3a01591edd05ae3e21",
+      "proofRecord": "branch-decisions.json#fix/atlas-nistrian-children-order-20261107"
+    },
+    {
+      "name": "fix/en-r2-linguistic-remediation-20261108",
+      "headSHA": "fb7ae4f3787a3836fbc73b4ad7f435d799059d14",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "8317ff9a346fff871b74f4974cda4bc263d058ed",
+      "proofRecord": "branch-decisions.json#fix/en-r2-linguistic-remediation-20261108"
+    },
+    {
+      "name": "fix/en-territorial-display-names-20261108",
+      "headSHA": "0daf878d537b8abdc9b8811ad2112619a5eed247",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "2429b65b5341d9a227a807f5f59aa030c146b5d3",
+      "proofRecord": "branch-decisions.json#fix/en-territorial-display-names-20261108"
+    },
+    {
+      "name": "fix/mobile-scale-bottom-map-20261107",
+      "headSHA": "b29d36ab5e563a89537fb36b855721f46cc5b4e4",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "ac16c3ba110371dec256ae9f99ae318ec7a3e08c",
+      "proofRecord": "branch-decisions.json#fix/mobile-scale-bottom-map-20261107"
+    },
+    {
+      "name": "fix/territory-flags-svg-desktop-pridnestrovie-20261108",
+      "headSHA": "5c356c739b659364e2c1e58f4933d8271f4f078b",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "8a56ef47626e9739467e9e57d89e1fa8f9d7a541",
+      "proofRecord": "branch-decisions.json#fix/territory-flags-svg-desktop-pridnestrovie-20261108"
+    },
+    {
+      "name": "infra-web-r3-pages-serial-deploy",
+      "headSHA": "904bf137caf2893ae2f3db1d3a72eabd7f481525",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "ca96970dbb21eeda4be7a1ef5df5462e18f6972c",
+      "proofRecord": "branch-decisions.json#infra-web-r3-pages-serial-deploy"
+    },
+    {
+      "name": "sim-close-final-heraldic-audit",
+      "headSHA": "10083b106461e89df013b5544304a8821392c7e0",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "d1ff22c8844ea1b460a0fa9f822fc938e9eba624",
+      "proofRecord": "branch-decisions.json#sim-close-final-heraldic-audit"
+    },
+    {
+      "name": "sim-r3-territorial-symbols-20261108",
+      "headSHA": "76fb0e420bcc1669b7aaa278b9595226f0ea2ad0",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "17f5838e9e814a903b95cb07ed871877eb33e4c0",
+      "proofRecord": "branch-decisions.json#sim-r3-territorial-symbols-20261108"
+    },
+    {
+      "name": "sim-r4-global-symbols",
+      "headSHA": "1b3d02b9c48021ba3f2630f07962bbf19ef10f48",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "a62d19bf15b2ff12e2cdec85cee1285d327d33fa",
+      "proofRecord": "branch-decisions.json#sim-r4-global-symbols"
+    },
+    {
+      "name": "sim-r5-authenticity",
+      "headSHA": "18d830d5c3da2cca8d07ba4426e7e74dd389ba9a",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "ce078147bc8500f2454b409676f6f1fad622bdba",
+      "proofRecord": "branch-decisions.json#sim-r5-authenticity"
+    },
+    {
+      "name": "sim-r6-priority-heraldry",
+      "headSHA": "ed9dc8718d33415ef14253c61960174ad611cfcc",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "a71291c4ca46ecab85d42a11e75bc42e95f44590",
+      "proofRecord": "branch-decisions.json#sim-r6-priority-heraldry"
+    },
+    {
+      "name": "sim-r7-evidence-rights",
+      "headSHA": "9516ecced09efa455f4261008bf23b7e88854999",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "0208ec5f2f0f3d71805b64f8883231431adc6751",
+      "proofRecord": "branch-decisions.json#sim-r7-evidence-rights"
+    },
+    {
+      "name": "sim-r8-targeted-evidence-rights",
+      "headSHA": "edd67f52bcd64359837044d4b1263f91f1deb941",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+      "proofRecord": "branch-decisions.json#sim-r8-targeted-evidence-rights"
+    },
+    {
+      "name": "sim-r31-media-ux-20261108",
+      "headSHA": "a320748a4e8c17302760419d5e3b9671ad6b5261",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "02a96733e919be8af4db4c2f7216eecd2dc9e1da",
+      "proofRecord": "branch-decisions.json#sim-r31-media-ux-20261108"
+    },
+    {
+      "name": "sim-r41-stabilize-external-media-smoke-20261109",
+      "headSHA": "9cdc71c6d4d02ec9835633b26e71d13fdfb5520f",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "7288b44f2b0e355b4c4b585ee5b87e6574fae60b",
+      "proofRecord": "branch-decisions.json#sim-r41-stabilize-external-media-smoke-20261109"
+    },
+    {
+      "name": "sim-r41-unified-card-coats-20261109",
+      "headSHA": "a39fc40f2895cf5371cbcca479b78eefa191f0d0",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "75324712efaab0f7b97b25ebbfc404e37da1dd38",
+      "proofRecord": "branch-decisions.json#sim-r41-unified-card-coats-20261109"
+    },
+    {
+      "name": "ui/compact-module-entity-headers-20261108",
+      "headSHA": "508e28683e7793b059f31ebf975e41eeb4d62c17",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "ceebb71378c4d42ac88497904f5ef4ab5fdac059",
+      "proofRecord": "branch-decisions.json#ui/compact-module-entity-headers-20261108"
+    },
+    {
+      "name": "ui/map-tools-above-zoom-aligned-close-20261108",
+      "headSHA": "f045994d000e45fe06822f43d2c28f69060d7816",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "25999fcdf32a145bf9a8d801fb0f61db4ad049f9",
+      "proofRecord": "branch-decisions.json#ui/map-tools-above-zoom-aligned-close-20261108"
+    },
+    {
+      "name": "web-audit-5a-image-search-performance",
+      "headSHA": "8236fb37b66412f9be871ed10a3cde33369a88cf",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "82622896078bab8ce4ec25a7a8cac40c9bf6b87a",
+      "proofRecord": "branch-decisions.json#web-audit-5a-image-search-performance"
+    },
+    {
+      "name": "web-audit-5b-accessibility-resilience",
+      "headSHA": "c9ddec982c2736c614e682e9bbb9ade778a8b763",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "b77c748b790aa96aaa41ba175cdcd45e247896e4",
+      "proofRecord": "branch-decisions.json#web-audit-5b-accessibility-resilience"
+    },
+    {
+      "name": "web-audit-5c-final-certification",
+      "headSHA": "ceeff4955500a5d286622f50fd38f4837dfb54eb",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "2980bf186b50393b987e36a78900958ce1026b7f",
+      "proofRecord": "branch-decisions.json#web-audit-5c-final-certification"
+    },
+    {
+      "name": "web-entity-official-name-en-20261109",
+      "headSHA": "b668eac2f3429034b2c18bcf117da0c20b2f1527",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "d6f3d48a94939da067b922e85dcb622522e61daa",
+      "proofRecord": "branch-decisions.json#web-entity-official-name-en-20261109"
+    },
+    {
+      "name": "web-header-entity-button-right-20261109",
+      "headSHA": "0ce63887de7c074bc3739c869fc7c507fc417d9d",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "96a57ccaf66765c8ab419c926ae06a070d9196e2",
+      "proofRecord": "branch-decisions.json#web-header-entity-button-right-20261109"
+    },
+    {
+      "name": "web-maintenance-stabilization",
+      "headSHA": "e688af3cd6f6c68ea072f88a426a7850ef9f2c6a",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+      "proofRecord": "branch-decisions.json#web-maintenance-stabilization"
+    },
+    {
+      "name": "web-r3-19a-role-contract",
+      "headSHA": "28e73a83bc018e899e62c0ef55975be05f344299",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "cdf34c42b7ef6cd0b2d1d9420e27500c9cfa70b4",
+      "proofRecord": "branch-decisions.json#web-r3-19a-role-contract"
+    },
+    {
+      "name": "web-r3-19b-romania-nuts-siruta",
+      "headSHA": "fa609250d1c0ff162b90f0289ee9ae2705d13fde",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "d43903e0dc9c7dbb5d6da94318daae1bcdfa1d65",
+      "proofRecord": "branch-decisions.json#web-r3-19b-romania-nuts-siruta"
+    },
+    {
+      "name": "web-r3-20-capitals-tree-presentation",
+      "headSHA": "4873ed22d3254cb32ff92f6957e22dcd4dd03f04",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "39e22edf19c1892bed59a189f16dd6a214197dbf",
+      "proofRecord": "branch-decisions.json#web-r3-20-capitals-tree-presentation"
+    },
+    {
+      "name": "web-r3-21-multirole-tree-labels",
+      "headSHA": "48f2d7a1ab3dd8d61c98c4235b450a56b8ba7907",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "d824dde063cb0e1da5abf72d1ab9771f31a9a024",
+      "proofRecord": "branch-decisions.json#web-r3-21-multirole-tree-labels"
+    },
+    {
+      "name": "web-r40-entity-card-architecture",
+      "headSHA": "a4cd4fc6ca43499344a5851c8ccbaea456c40c24",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "74b05b9e7ada0d778148d4b013da24b2199f5107",
+      "proofRecord": "branch-decisions.json#web-r40-entity-card-architecture"
+    },
+    {
+      "name": "web-r41-entity-role-cards",
+      "headSHA": "cc5cc83ec563726f0aefbd79a4efb2ffb6d02043",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "637493464c16af9c7e747b8d16aeb6071f0e1d86",
+      "proofRecord": "branch-decisions.json#web-r41-entity-role-cards"
+    },
+    {
+      "name": "web-r42-entity-card-interaction-a11y",
+      "headSHA": "2082c23ec7cb65e996c52b6423885e1aa9c925af",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "43d993304ad1b6ebb6a7e8d658d84e2eeb625b76",
+      "proofRecord": "branch-decisions.json#web-r42-entity-card-interaction-a11y"
+    },
+    {
+      "name": "web-r42-focus-restoration-hotfix",
+      "headSHA": "4ccbdc2da7590cd9ff4bd7e94edf483b9a234212",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "52850d006061e21e027c27bf3e57bd5308276bc8",
+      "proofRecord": "branch-decisions.json#web-r42-focus-restoration-hotfix"
+    },
+    {
+      "name": "web-r43-final-card-acceptance",
+      "headSHA": "36c28f4a3275bc0cdc7fc5c3802db744908b5eed",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "35235179fb1ffe18ed7d3d4659c7b07823f72f8d",
+      "proofRecord": "branch-decisions.json#web-r43-final-card-acceptance"
+    },
+    {
+      "name": "web-r43a-source-heading-dedup",
+      "headSHA": "0edb4a1b2efc4a195b3a773508036dfb282825c5",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "fc553c765366958ea374f08aa912fc57b8b26c23",
+      "proofRecord": "branch-decisions.json#web-r43a-source-heading-dedup"
+    },
+    {
+      "name": "web-r44-scoped-module-global-reset",
+      "headSHA": "d1d5529b8dc3c74d6bb953b624c695adb708c5d0",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "e8bde03cd75e69fec4336b4733a5e5509e3e75c1",
+      "proofRecord": "branch-decisions.json#web-r44-scoped-module-global-reset"
+    },
+    {
+      "name": "web-r45-chisinau-adm8-tree-name",
+      "headSHA": "5b1ceb98c7077e312b4d6c5b50c8d4cb512a0833",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "ec9192b91897ed7cfd2cae291d3326cb06877129",
+      "proofRecord": "branch-decisions.json#web-r45-chisinau-adm8-tree-name"
+    },
+    {
+      "name": "web-r46-remove-phase-label-header",
+      "headSHA": "82d185abe39da62db7b95c73c335335d81490358",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "integrationCommit": "0ad079c09598942646e6b9335680ff1f3d84ad76",
+      "proofRecord": "branch-decisions.json#web-r46-remove-phase-label-header"
+    }
+  ],
+  "mustKeep": [
+    {
+      "name": "audit/official-territorial-symbols-20261108",
+      "headSHA": "cfc030e49973d472c66d62620293cf65ba0afa00",
+      "verdict": "UNIQUE_HISTORY_PRESERVE",
+      "reason": "Closed-unmerged PR; unique original audit documents absent at baseline main. Preserve branch and originals; do not integrate outdated code."
+    },
+    {
+      "name": "audit/sim-r2b1-county-district-evidence-20261108",
+      "headSHA": "a49374c07fab66a11c4bb8db8b8bbc71270f50ec",
+      "verdict": "UNIQUE_HISTORY_PRESERVE",
+      "reason": "Closed-unmerged PR; unique original audit documents absent at baseline main. Preserve branch and originals; do not integrate outdated code."
+    },
+    {
+      "name": "main",
+      "headSHA": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+      "verdict": "PROTECTED_KEEP",
+      "reason": "Protected operational branch; never delete."
+    }
+  ],
+  "archivePlan": {
+    "ref": "refs/tags/archive/repo-cleanup-2026-11-10",
+    "status": "PLANNED_NOT_YET_CREATED",
+    "existingTagWillNotBeReplaced": true,
+    "method": "After protected PR integration, create one annotated tag on a synthetic archival commit. Its tree equals integrated main; its parents are the independent audited heads plus cleanup PR head and final main. This anchors original DAGs without merging old application code into main or rewriting any history.",
+    "originalHeadsToConserve": [
+      {
+        "name": "audit/official-territorial-symbols-20261108",
+        "sha": "cfc030e49973d472c66d62620293cf65ba0afa00"
+      },
+      {
+        "name": "audit/sim-r2b1-county-district-evidence-20261108",
+        "sha": "a49374c07fab66a11c4bb8db8b8bbc71270f50ec"
+      },
+      {
+        "name": "feat/atlas-exhaustive-short-names-20261107",
+        "sha": "9fbd5f66e55cc7ce761af0a06e7369f246cb9488"
+      },
+      {
+        "name": "feat/atlas-gagauzia-chisinau-hierarchy-20261107",
+        "sha": "10abbf8c9900d264203c33d3eb3cb0b9b88f84c5"
+      },
+      {
+        "name": "feat/atlas-global-map-tools-r34-20261107",
+        "sha": "72a2dc4c48b4a7b0d68e701ef801e2f3720eaaf6"
+      },
+      {
+        "name": "feat/atlas-reference-and-level-styles-20261107",
+        "sha": "28d0558e231ffef3207f63995abdbd41f8c11359"
+      },
+      {
+        "name": "feat/atlas-short-tree-names-20261107",
+        "sha": "f8ee6dca978d3c24e11ff21962bb7aba65e31eb9"
+      },
+      {
+        "name": "feat/atlas-tree-selector-adjacent-20261107",
+        "sha": "ad00d2815dfb978e34d937b51e7a5c03944a36d5"
+      },
+      {
+        "name": "feat/verified-territorial-symbols-pilot-20261108",
+        "sha": "733b5c390273461796d5d975cd2250f9ca18bb40"
+      },
+      {
+        "name": "feat/web-r35-compact-map-tools-20261107",
+        "sha": "b451fd4389a56f4ebb1f3c37ce20eaf524eb3293"
+      },
+      {
+        "name": "feat/web-r310-md-regional-tree-order-20261107",
+        "sha": "7bdbbd95a1288d95d0690d8b9fb26a4b90b04ed6"
+      },
+      {
+        "name": "feat/web-r311-chitcani-short-name-20261107",
+        "sha": "6bd8a03b87c07fcc9263fc7b6a4f161e53f2afda"
+      },
+      {
+        "name": "feat/web-r312-east-short-labels-20261107",
+        "sha": "d4d7dd64aa0fdca516c8fc76953b26a6875f14ad"
+      },
+      {
+        "name": "feat/web-r313-east-order-hlinaia-20261107",
+        "sha": "83d3df6dba928225760c2d16a87e380265ea2f97"
+      },
+      {
+        "name": "feat/web-r314-east-transnistria-uatsn-atulbd-20261107",
+        "sha": "7d9d087eecffe784caf62424117ff142ecc512c3"
+      },
+      {
+        "name": "feat/web-r315-nistrenia-fixed-order-20261107",
+        "sha": "e6bbfb8790ed4db1823b212947b95fd36f8b65f1"
+      },
+      {
+        "name": "feat/web-r316-west-chisinau-first-20261107",
+        "sha": "a9dd39d862d839b5bccdd219779441f95f5507b9"
+      },
+      {
+        "name": "feat/web-r317-md-code-sibling-order-20261107",
+        "sha": "35f5dc34c4b4a3df70ede91b7ff045eb85e0fc81"
+      },
+      {
+        "name": "feat/web-r318-pmr-cadastral-order-and-cards-20261107",
+        "sha": "16626e8150172af57225f33483d4f05c5a19a399"
+      },
+      {
+        "name": "fix/atlas-gagauzia-chisinau-tree-20261107",
+        "sha": "4e292a829aac3d9999108c05323f1e589a583371"
+      },
+      {
+        "name": "fix/atlas-legend-reference-label-20261107",
+        "sha": "3daf9c68e751af497fedd5a6dedc1bd677a7980c"
+      },
+      {
+        "name": "fix/atlas-nistrian-children-order-20261107",
+        "sha": "fc7075de9c6299588e91c916afddb5d7350d638e"
+      },
+      {
+        "name": "fix/en-r2-linguistic-remediation-20261108",
+        "sha": "fb7ae4f3787a3836fbc73b4ad7f435d799059d14"
+      },
+      {
+        "name": "fix/en-territorial-display-names-20261108",
+        "sha": "0daf878d537b8abdc9b8811ad2112619a5eed247"
+      },
+      {
+        "name": "fix/mobile-scale-bottom-map-20261107",
+        "sha": "b29d36ab5e563a89537fb36b855721f46cc5b4e4"
+      },
+      {
+        "name": "fix/territory-flags-svg-desktop-pridnestrovie-20261108",
+        "sha": "5c356c739b659364e2c1e58f4933d8271f4f078b"
+      },
+      {
+        "name": "infra-web-r3-pages-serial-deploy",
+        "sha": "904bf137caf2893ae2f3db1d3a72eabd7f481525"
+      },
+      {
+        "name": "main",
+        "sha": "2b679e65ad2da2e964ee6ad91347a96f107eeab6"
+      },
+      {
+        "name": "sim-close-final-heraldic-audit",
+        "sha": "10083b106461e89df013b5544304a8821392c7e0"
+      },
+      {
+        "name": "sim-r3-territorial-symbols-20261108",
+        "sha": "76fb0e420bcc1669b7aaa278b9595226f0ea2ad0"
+      },
+      {
+        "name": "sim-r4-global-symbols",
+        "sha": "1b3d02b9c48021ba3f2630f07962bbf19ef10f48"
+      },
+      {
+        "name": "sim-r5-authenticity",
+        "sha": "18d830d5c3da2cca8d07ba4426e7e74dd389ba9a"
+      },
+      {
+        "name": "sim-r6-priority-heraldry",
+        "sha": "ed9dc8718d33415ef14253c61960174ad611cfcc"
+      },
+      {
+        "name": "sim-r7-evidence-rights",
+        "sha": "9516ecced09efa455f4261008bf23b7e88854999"
+      },
+      {
+        "name": "sim-r8-targeted-evidence-rights",
+        "sha": "edd67f52bcd64359837044d4b1263f91f1deb941"
+      },
+      {
+        "name": "sim-r31-media-ux-20261108",
+        "sha": "a320748a4e8c17302760419d5e3b9671ad6b5261"
+      },
+      {
+        "name": "sim-r41-stabilize-external-media-smoke-20261109",
+        "sha": "9cdc71c6d4d02ec9835633b26e71d13fdfb5520f"
+      },
+      {
+        "name": "sim-r41-unified-card-coats-20261109",
+        "sha": "a39fc40f2895cf5371cbcca479b78eefa191f0d0"
+      },
+      {
+        "name": "ui/compact-module-entity-headers-20261108",
+        "sha": "508e28683e7793b059f31ebf975e41eeb4d62c17"
+      },
+      {
+        "name": "ui/map-tools-above-zoom-aligned-close-20261108",
+        "sha": "f045994d000e45fe06822f43d2c28f69060d7816"
+      },
+      {
+        "name": "web-audit-5a-image-search-performance",
+        "sha": "8236fb37b66412f9be871ed10a3cde33369a88cf"
+      },
+      {
+        "name": "web-audit-5b-accessibility-resilience",
+        "sha": "c9ddec982c2736c614e682e9bbb9ade778a8b763"
+      },
+      {
+        "name": "web-audit-5c-final-certification",
+        "sha": "ceeff4955500a5d286622f50fd38f4837dfb54eb"
+      },
+      {
+        "name": "web-entity-official-name-en-20261109",
+        "sha": "b668eac2f3429034b2c18bcf117da0c20b2f1527"
+      },
+      {
+        "name": "web-header-entity-button-right-20261109",
+        "sha": "0ce63887de7c074bc3739c869fc7c507fc417d9d"
+      },
+      {
+        "name": "web-maintenance-stabilization",
+        "sha": "e688af3cd6f6c68ea072f88a426a7850ef9f2c6a"
+      },
+      {
+        "name": "web-r3-19a-role-contract",
+        "sha": "28e73a83bc018e899e62c0ef55975be05f344299"
+      },
+      {
+        "name": "web-r3-19b-romania-nuts-siruta",
+        "sha": "fa609250d1c0ff162b90f0289ee9ae2705d13fde"
+      },
+      {
+        "name": "web-r3-20-capitals-tree-presentation",
+        "sha": "4873ed22d3254cb32ff92f6957e22dcd4dd03f04"
+      },
+      {
+        "name": "web-r3-21-multirole-tree-labels",
+        "sha": "48f2d7a1ab3dd8d61c98c4235b450a56b8ba7907"
+      },
+      {
+        "name": "web-r40-entity-card-architecture",
+        "sha": "a4cd4fc6ca43499344a5851c8ccbaea456c40c24"
+      },
+      {
+        "name": "web-r41-entity-role-cards",
+        "sha": "cc5cc83ec563726f0aefbd79a4efb2ffb6d02043"
+      },
+      {
+        "name": "web-r42-entity-card-interaction-a11y",
+        "sha": "2082c23ec7cb65e996c52b6423885e1aa9c925af"
+      },
+      {
+        "name": "web-r42-focus-restoration-hotfix",
+        "sha": "4ccbdc2da7590cd9ff4bd7e94edf483b9a234212"
+      },
+      {
+        "name": "web-r43-final-card-acceptance",
+        "sha": "36c28f4a3275bc0cdc7fc5c3802db744908b5eed"
+      },
+      {
+        "name": "web-r43a-source-heading-dedup",
+        "sha": "0edb4a1b2efc4a195b3a773508036dfb282825c5"
+      },
+      {
+        "name": "web-r44-scoped-module-global-reset",
+        "sha": "d1d5529b8dc3c74d6bb953b624c695adb708c5d0"
+      },
+      {
+        "name": "web-r45-chisinau-adm8-tree-name",
+        "sha": "5b1ceb98c7077e312b4d6c5b50c8d4cb512a0833"
+      },
+      {
+        "name": "web-r46-remove-phase-label-header",
+        "sha": "82d185abe39da62db7b95c73c335335d81490358"
+      }
+    ],
+    "nonMainCommitCount": 310,
+    "verification": "Remote tag object SHA and peeled archive commit SHA must be verified; every audited head and cleanup head must be an ancestor of archive commit before any deletion."
+  },
+  "temporaryCleanupBranch": {
+    "name": "repo-cleanup-pre-historic",
+    "remoteAtBaseline": false,
+    "initialVerdict": "ACTIVE_WORK_KEEP",
+    "selfDeletion": "Only after protected merge, exact complete tree equality to its integration commit, remote archive ancestry, a supplementary explicit exact-SHA pre-deletion manifest published in the PR, and per-ref gates; delete it last. No future SHA or success is asserted here."
+  },
+  "deletionGates": [
+    "Protected merge and post-merge CI/Pages success",
+    "Committed manifest hash validated",
+    "Remote archive created and verified",
+    "Explicit name+auditedSHA allowlist only",
+    "Fresh remote HEAD/protection/openPR/worktree checks",
+    "Per-push pre-push hook checks the advertised oldOID equals auditedSHA",
+    "Normal Git delete oldOID transaction provides compare-and-swap rejection on concurrent ref changes",
+    "Per-branch result and final paginated inventory reconciled"
+  ],
+  "postCleanupEvidence": "branches-after.json, deletion-log.json, preservation confirmation and closure-report.md will be produced only after operations and published as a separate verifiable PR attestation; not fabricated in this initial commit.",
+  "proofFiles": [
+    {
+      "path": "docs/audits/repo-cleanup/baseline.json",
+      "sha256": "4519ac1eb8a26d61f035f4276fb3559c94846d5ba5b9d5fa76f2fc202c08ead3",
+      "bytes": 2830
+    },
+    {
+      "path": "docs/audits/repo-cleanup/branch-decisions.json",
+      "sha256": "3ac1aa27c51b1013407fd4849d022c7c53af8dbbb96f6279925c9f57d8798ace",
+      "bytes": 67222
+    },
+    {
+      "path": "docs/audits/repo-cleanup/branches-before.json",
+      "sha256": "385ed75d2e7b1e7e8a017b980020a4e57fd34478d0773a2637a9cca53b5a70a0",
+      "bytes": 216701
+    },
+    {
+      "path": "docs/audits/repo-cleanup/commit-index.json",
+      "sha256": "ee25788d423510fc35ca66a6888cc7b784d380da513feefb41c9d017c4223b22",
+      "bytes": 130547
+    },
+    {
+      "path": "docs/audits/repo-cleanup/guard-validation.json",
+      "sha256": "c8438ee67753a61286309dac7bfa57da249b47f3982a54d07a0cecae7bae2b7a",
+      "bytes": 580
+    },
+    {
+      "path": "docs/audits/repo-cleanup/integrity-validation.json",
+      "sha256": "431b753f238eead070c67ec2de82423c77359cd09eff6fdd8bb7753a650dbc0b",
+      "bytes": 972
+    },
+    {
+      "path": "docs/audits/repo-cleanup/local-validation.json",
+      "sha256": "f07d9003613b0711d19f0b5e25b33f2ace50f237dd350033dfd14721f940fbe7",
+      "bytes": 1748
+    },
+    {
+      "path": "docs/audits/repo-cleanup/repository-file-review.json",
+      "sha256": "680418122c9c8679cce2e80a9d430e67a6134f592e8f9bf436fc8428c9e902b2",
+      "bytes": 21399
+    },
+    {
+      "path": "docs/audits/repo-cleanup/tracked-files-before.json",
+      "sha256": "fc2085ada134c4a2898edf2766505955504a6b3f18cea49d1c686e1c30182a8b",
+      "bytes": 174116
+    },
+    {
+      "path": "docs/audits/repo-cleanup/worktree-review.json",
+      "sha256": "68ebc3ac027b4103cb3a79a704900fdaaf0d6d4c37239e8dd9123cbd15760370",
+      "bytes": 97838
+    },
+    {
+      "path": "scripts/audit/repo-cleanup/deletion-policy.mjs",
+      "sha256": "253d752a13eae41f4ba703d28a5dfb010ee13a733c4d03e8f1d61f4b989e4a83",
+      "bytes": 1867
+    },
+    {
+      "path": "scripts/audit/repo-cleanup/archive-and-validate.mjs",
+      "sha256": "e2402be5565f9e7c84ad6f1be56a464477ba999cff13eb4f4894cc887caecdec",
+      "bytes": 8573
+    },
+    {
+      "path": "scripts/audit/repo-cleanup/delete-eligible.mjs",
+      "sha256": "7f924ce269c7114f2d5d06fd302db8d07c2ccccb1f3e191d29355ad6446b5bf3",
+      "bytes": 11749
+    }
+  ],
+  "existingTagsVerifiedAt": "2026-11-10T17:17:25.413Z",
+  "remoteTagInventorySHA256": "7668c31aa3ca0b49321134ebc7d95a7704276d5b880d1d5ccf098b4c598741a0"
+}

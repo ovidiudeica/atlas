@@ -1,0 +1,1513 @@
+{
+  "baseMain": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+  "finalizedAt": "2026-11-10T17:08:49.253Z",
+  "classificationSemantics": "Exact graph ancestry is distinguished from single-parent replay. Squash versus rebase is not inferred from a one-parent graph alone; complete tree identity establishes content equivalence and an additional archive ref preserves original metadata/intermediate commits.",
+  "counts": {
+    "UNIQUE_HISTORY_PRESERVE": 2,
+    "SQUASH_RECONCILED_DELETE_ELIGIBLE": 56,
+    "PROTECTED_KEEP": 1
+  },
+  "branches": [
+    {
+      "name": "audit/official-territorial-symbols-20261108",
+      "headSHA": "cfc030e49973d472c66d62620293cf65ba0afa00",
+      "verdict": "UNIQUE_HISTORY_PRESERVE",
+      "proof": {
+        "originalTree": "c30861a026e7fa04c9ee7267a657e0292d809174",
+        "integratedTree": null,
+        "integrationCommit": null,
+        "mergedPR": null,
+        "headMatchesMergedPR": false,
+        "integratedCommitReachableFromMain": false,
+        "treeEquivalent": false,
+        "mainAncestor": false,
+        "mergeParents": [],
+        "method": "NO_INTEGRATED_EQUIVALENCE",
+        "verified": false
+      },
+      "reason": "Closed-unmerged PR; unique original audit documents absent at baseline main. Preserve branch and originals; do not integrate outdated code.",
+      "uniqueFileEvidence": [
+        {
+          "path": "docs/audits/ATLAS-SYMBOL-AUDIT-ALL-4283-2026-11-08.csv",
+          "branchObject": "100644 blob 0477778a4c659617e36b45faba3f73403c3f0778\tdocs/audits/ATLAS-SYMBOL-AUDIT-ALL-4283-2026-11-08.csv",
+          "mainObject": null,
+          "equal": false
+        },
+        {
+          "path": "docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md",
+          "branchObject": "100644 blob e67bbb0dbfe6813eca8fb83ceaee84bed786f1f6\tdocs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md",
+          "mainObject": null,
+          "equal": false
+        }
+      ],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "audit/sim-r2b1-county-district-evidence-20261108",
+      "headSHA": "a49374c07fab66a11c4bb8db8b8bbc71270f50ec",
+      "verdict": "UNIQUE_HISTORY_PRESERVE",
+      "proof": {
+        "originalTree": "2447ea70f0a092392fdcf44cc945681fb9c882f5",
+        "integratedTree": null,
+        "integrationCommit": null,
+        "mergedPR": null,
+        "headMatchesMergedPR": false,
+        "integratedCommitReachableFromMain": false,
+        "treeEquivalent": false,
+        "mainAncestor": false,
+        "mergeParents": [],
+        "method": "NO_INTEGRATED_EQUIVALENCE",
+        "verified": false
+      },
+      "reason": "Closed-unmerged PR; unique original audit documents absent at baseline main. Preserve branch and originals; do not integrate outdated code.",
+      "uniqueFileEvidence": [
+        {
+          "path": "docs/audits/SIM-R2B1-EVIDENCE-74.csv",
+          "branchObject": "100644 blob e47a46b5323d79842fe39ee2389687fe0ed7595b\tdocs/audits/SIM-R2B1-EVIDENCE-74.csv",
+          "mainObject": null,
+          "equal": false
+        },
+        {
+          "path": "docs/audits/SIM-R2B1-LEGAL-GRAPHIC-AUDIT.md",
+          "branchObject": "100644 blob 18ed6e21416e5c13b02d20e8e572e9d670090186\tdocs/audits/SIM-R2B1-LEGAL-GRAPHIC-AUDIT.md",
+          "mainObject": null,
+          "equal": false
+        },
+        {
+          "path": "docs/audits/SIM-R2B1-MANIFEST.json",
+          "branchObject": "100644 blob f1d3c98e616018f82fc5b8d81b216248a603b78f\tdocs/audits/SIM-R2B1-MANIFEST.json",
+          "mainObject": null,
+          "equal": false
+        }
+      ],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/atlas-exhaustive-short-names-20261107",
+      "headSHA": "9fbd5f66e55cc7ce761af0a06e7369f246cb9488",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "9f978b1869c7438f7b99b1a0c714511ddaf9822b",
+        "integratedTree": "9f978b1869c7438f7b99b1a0c714511ddaf9822b",
+        "integrationCommit": "431c66fb3fdc2ddd5ac1a867b5702b5ddf55ae9d",
+        "mergedPR": 31,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "41493d5495e9be146d8665698fabdc6b1c08a2af"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/atlas-gagauzia-chisinau-hierarchy-20261107",
+      "headSHA": "10abbf8c9900d264203c33d3eb3cb0b9b88f84c5",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "fc4d8ffe2614106eb72502939e723c3383d9be27",
+        "integratedTree": "fc4d8ffe2614106eb72502939e723c3383d9be27",
+        "integrationCommit": "c7142b13e189147eae06fc7342ad419a325ed21b",
+        "mergedPR": 34,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "42e3e90db1e38e035bb5abd0327381eec3da06f6"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/atlas-global-map-tools-r34-20261107",
+      "headSHA": "72a2dc4c48b4a7b0d68e701ef801e2f3720eaaf6",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "3f58e28793952ede09cf0222586f1093b4f71cab",
+        "integratedTree": "3f58e28793952ede09cf0222586f1093b4f71cab",
+        "integrationCommit": "e414b7b31a88b92fd8680a4ed8468bf6962830cb",
+        "mergedPR": 27,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "828f0e2ed6f62bd59a253afb6e9d7eef98995e6d"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/atlas-reference-and-level-styles-20261107",
+      "headSHA": "28d0558e231ffef3207f63995abdbd41f8c11359",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "2a45b3822088421ddc0355c32bb11fca21ed8fa5",
+        "integratedTree": "2a45b3822088421ddc0355c32bb11fca21ed8fa5",
+        "integrationCommit": "828f0e2ed6f62bd59a253afb6e9d7eef98995e6d",
+        "mergedPR": 26,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "a1b01165639b6a1e1903572b61668b55cb963574"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/atlas-short-tree-names-20261107",
+      "headSHA": "f8ee6dca978d3c24e11ff21962bb7aba65e31eb9",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "bfe9c3c918d2b14f1f33ee4966eaf3fd96b93187",
+        "integratedTree": "bfe9c3c918d2b14f1f33ee4966eaf3fd96b93187",
+        "integrationCommit": "41493d5495e9be146d8665698fabdc6b1c08a2af",
+        "mergedPR": 30,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "13419b37222fcc4c65ed68fba1c80ea090de016e"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/atlas-tree-selector-adjacent-20261107",
+      "headSHA": "ad00d2815dfb978e34d937b51e7a5c03944a36d5",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "59da346b255ba164b59f454b48cb8c0f2f1d9292",
+        "integratedTree": "59da346b255ba164b59f454b48cb8c0f2f1d9292",
+        "integrationCommit": "a1b01165639b6a1e1903572b61668b55cb963574",
+        "mergedPR": 25,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "ac16c3ba110371dec256ae9f99ae318ec7a3e08c"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/verified-territorial-symbols-pilot-20261108",
+      "headSHA": "733b5c390273461796d5d975cd2250f9ca18bb40",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "ce123c77f73124c4acb06fdb8b98a1dd4f3ae14f",
+        "integratedTree": "ce123c77f73124c4acb06fdb8b98a1dd4f3ae14f",
+        "integrationCommit": "670062655577ebbcf82fdcd40d93a1646f8db5e3",
+        "mergedPR": 65,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "8a56ef47626e9739467e9e57d89e1fa8f9d7a541"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r35-compact-map-tools-20261107",
+      "headSHA": "b451fd4389a56f4ebb1f3c37ce20eaf524eb3293",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "abd5fae3e805dcf743a4753c5a78eeaf0d7f450c",
+        "integratedTree": "abd5fae3e805dcf743a4753c5a78eeaf0d7f450c",
+        "integrationCommit": "4ce2fc53f6726206d740f96b49f340d29779864e",
+        "mergedPR": 28,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "e414b7b31a88b92fd8680a4ed8468bf6962830cb"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r310-md-regional-tree-order-20261107",
+      "headSHA": "7bdbbd95a1288d95d0690d8b9fb26a4b90b04ed6",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "1a7f2fde2fa22a820ef116b06a59d783f86dc6fe",
+        "integratedTree": "1a7f2fde2fa22a820ef116b06a59d783f86dc6fe",
+        "integrationCommit": "8584739fe31a89cc7bb0a86797aa797e55c50460",
+        "mergedPR": 35,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "c7142b13e189147eae06fc7342ad419a325ed21b"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r311-chitcani-short-name-20261107",
+      "headSHA": "6bd8a03b87c07fcc9263fc7b6a4f161e53f2afda",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "d26c8bbca978fa48161c4d15771c34a8690abc6a",
+        "integratedTree": "d26c8bbca978fa48161c4d15771c34a8690abc6a",
+        "integrationCommit": "6a693a124b4d1d9ddffdabaf12789b11287603ac",
+        "mergedPR": 36,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "8584739fe31a89cc7bb0a86797aa797e55c50460"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r312-east-short-labels-20261107",
+      "headSHA": "d4d7dd64aa0fdca516c8fc76953b26a6875f14ad",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "3d22326a2a86b884781d4f2b97fc7635adf173fb",
+        "integratedTree": "3d22326a2a86b884781d4f2b97fc7635adf173fb",
+        "integrationCommit": "f092d37e5f5e9f1627241b09af8496ac2237fecc",
+        "mergedPR": 37,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "6a693a124b4d1d9ddffdabaf12789b11287603ac"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r313-east-order-hlinaia-20261107",
+      "headSHA": "83d3df6dba928225760c2d16a87e380265ea2f97",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "6804a6d94c1fc2165d954de7b3461b119886a5ba",
+        "integratedTree": "6804a6d94c1fc2165d954de7b3461b119886a5ba",
+        "integrationCommit": "8d6a140812af85ac66773548d02ec599f1d91c04",
+        "mergedPR": 38,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "f092d37e5f5e9f1627241b09af8496ac2237fecc"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r314-east-transnistria-uatsn-atulbd-20261107",
+      "headSHA": "7d9d087eecffe784caf62424117ff142ecc512c3",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "0935b1c2c475b7c6e5a1813c28f6db6276835278",
+        "integratedTree": "0935b1c2c475b7c6e5a1813c28f6db6276835278",
+        "integrationCommit": "21532c25c1306349b88321d36164ef7012fd85ea",
+        "mergedPR": 39,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "8d6a140812af85ac66773548d02ec599f1d91c04"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r315-nistrenia-fixed-order-20261107",
+      "headSHA": "e6bbfb8790ed4db1823b212947b95fd36f8b65f1",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "c27b5b735088baaa91c37734f2ca2f1943ccc97c",
+        "integratedTree": "c27b5b735088baaa91c37734f2ca2f1943ccc97c",
+        "integrationCommit": "397bdac276024fe2a2fcf333536bf768c7af17ed",
+        "mergedPR": 40,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "21532c25c1306349b88321d36164ef7012fd85ea"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r316-west-chisinau-first-20261107",
+      "headSHA": "a9dd39d862d839b5bccdd219779441f95f5507b9",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "71870d297bdc1aeb7e90c80ed7d5e160a99af102",
+        "integratedTree": "71870d297bdc1aeb7e90c80ed7d5e160a99af102",
+        "integrationCommit": "7f7e07f8a7bf0be07c44718426e71cbfb9072b6a",
+        "mergedPR": 41,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "397bdac276024fe2a2fcf333536bf768c7af17ed"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r317-md-code-sibling-order-20261107",
+      "headSHA": "35f5dc34c4b4a3df70ede91b7ff045eb85e0fc81",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "117c6e946623b0ecbd724223975b4f399b237b8e",
+        "integratedTree": "117c6e946623b0ecbd724223975b4f399b237b8e",
+        "integrationCommit": "845ef2f49fcc07e8670217a1b8ce6dbae83a871a",
+        "mergedPR": 42,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "7f7e07f8a7bf0be07c44718426e71cbfb9072b6a"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "feat/web-r318-pmr-cadastral-order-and-cards-20261107",
+      "headSHA": "16626e8150172af57225f33483d4f05c5a19a399",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "b82d3f40188f7811cd1103bebb0b322b3491251a",
+        "integratedTree": "b82d3f40188f7811cd1103bebb0b322b3491251a",
+        "integrationCommit": "9b301683d6848dd6ab815a205951fae14e7be254",
+        "mergedPR": 43,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "845ef2f49fcc07e8670217a1b8ce6dbae83a871a"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "fix/atlas-gagauzia-chisinau-tree-20261107",
+      "headSHA": "4e292a829aac3d9999108c05323f1e589a583371",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "a9def5074448f8f28b6bbb612c40b715b7f401ae",
+        "integratedTree": "a9def5074448f8f28b6bbb612c40b715b7f401ae",
+        "integrationCommit": "42e3e90db1e38e035bb5abd0327381eec3da06f6",
+        "mergedPR": 33,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "1fa1381fa00b47a01c92cb3a01591edd05ae3e21"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "fix/atlas-legend-reference-label-20261107",
+      "headSHA": "3daf9c68e751af497fedd5a6dedc1bd677a7980c",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "9347b1ecbc33fec84ca4538d360d20295d26cf9f",
+        "integratedTree": "9347b1ecbc33fec84ca4538d360d20295d26cf9f",
+        "integrationCommit": "13419b37222fcc4c65ed68fba1c80ea090de016e",
+        "mergedPR": 29,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "4ce2fc53f6726206d740f96b49f340d29779864e"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "fix/atlas-nistrian-children-order-20261107",
+      "headSHA": "fc7075de9c6299588e91c916afddb5d7350d638e",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "71fdc63c2dd5aa431477cd174ff19ec5d072d141",
+        "integratedTree": "71fdc63c2dd5aa431477cd174ff19ec5d072d141",
+        "integrationCommit": "1fa1381fa00b47a01c92cb3a01591edd05ae3e21",
+        "mergedPR": 32,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "431c66fb3fdc2ddd5ac1a867b5702b5ddf55ae9d"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "fix/en-r2-linguistic-remediation-20261108",
+      "headSHA": "fb7ae4f3787a3836fbc73b4ad7f435d799059d14",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "448dc83cd0a57dfa30b97e618ff34a0ffd6814c5",
+        "integratedTree": "448dc83cd0a57dfa30b97e618ff34a0ffd6814c5",
+        "integrationCommit": "8317ff9a346fff871b74f4974cda4bc263d058ed",
+        "mergedPR": 60,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "2429b65b5341d9a227a807f5f59aa030c146b5d3"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "fix/en-territorial-display-names-20261108",
+      "headSHA": "0daf878d537b8abdc9b8811ad2112619a5eed247",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "e24a900f465854ec19e7336238369d2368be6a80",
+        "integratedTree": "e24a900f465854ec19e7336238369d2368be6a80",
+        "integrationCommit": "2429b65b5341d9a227a807f5f59aa030c146b5d3",
+        "mergedPR": 59,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "0ad079c09598942646e6b9335680ff1f3d84ad76"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "fix/mobile-scale-bottom-map-20261107",
+      "headSHA": "b29d36ab5e563a89537fb36b855721f46cc5b4e4",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "df728bcdb955a3ed2c6bb08d792640fee16881b4",
+        "integratedTree": "df728bcdb955a3ed2c6bb08d792640fee16881b4",
+        "integrationCommit": "ac16c3ba110371dec256ae9f99ae318ec7a3e08c",
+        "mergedPR": 24,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "94daed95191e79a94d4d00301c87eb3f75a920d8"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "fix/territory-flags-svg-desktop-pridnestrovie-20261108",
+      "headSHA": "5c356c739b659364e2c1e58f4933d8271f4f078b",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "2a1a089804efbc64d1a638d4074c5fa59e67c277",
+        "integratedTree": "2a1a089804efbc64d1a638d4074c5fa59e67c277",
+        "integrationCommit": "8a56ef47626e9739467e9e57d89e1fa8f9d7a541",
+        "mergedPR": 63,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "ceebb71378c4d42ac88497904f5ef4ab5fdac059"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "infra-web-r3-pages-serial-deploy",
+      "headSHA": "904bf137caf2893ae2f3db1d3a72eabd7f481525",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "6a933ee3d99e487121b839e9ef57ad3376171843",
+        "integratedTree": "6a933ee3d99e487121b839e9ef57ad3376171843",
+        "integrationCommit": "ca96970dbb21eeda4be7a1ef5df5462e18f6972c",
+        "mergedPR": 48,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "d824dde063cb0e1da5abf72d1ab9771f31a9a024"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "main",
+      "headSHA": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+      "verdict": "PROTECTED_KEEP",
+      "proof": {
+        "originalTree": "7ca1f9a055e9aaae275579ae1b00b2d99fcbe6dc",
+        "integratedTree": null,
+        "integrationCommit": null,
+        "mergedPR": null,
+        "headMatchesMergedPR": false,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": false,
+        "mainAncestor": true,
+        "mergeParents": [],
+        "method": "NO_INTEGRATED_EQUIVALENCE",
+        "verified": true
+      },
+      "reason": "Protected operational branch; never delete.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": true
+    },
+    {
+      "name": "sim-close-final-heraldic-audit",
+      "headSHA": "10083b106461e89df013b5544304a8821392c7e0",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "a799887540c6543e92e1280bee01fcc9d0893cc2",
+        "integratedTree": "a799887540c6543e92e1280bee01fcc9d0893cc2",
+        "integrationCommit": "d1ff22c8844ea1b460a0fa9f822fc938e9eba624",
+        "mergedPR": 81,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "be7b1a033d7482e419a0aba0ed9cc8765b83ee87"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": "286stat/index entries,286raw-byte-identical files,zeroGit content diffs; no worktree files/index reset or deleted.",
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r3-territorial-symbols-20261108",
+      "headSHA": "76fb0e420bcc1669b7aaa278b9595226f0ea2ad0",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "7700419bae8f6688d3ba24563e546b807619f8ef",
+        "integratedTree": "7700419bae8f6688d3ba24563e546b807619f8ef",
+        "integrationCommit": "17f5838e9e814a903b95cb07ed871877eb33e4c0",
+        "mergedPR": 70,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "670062655577ebbcf82fdcd40d93a1646f8db5e3"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r4-global-symbols",
+      "headSHA": "1b3d02b9c48021ba3f2630f07962bbf19ef10f48",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "2148742f9ab4fd0666ec98ce7db1a1604a4306bf",
+        "integratedTree": "2148742f9ab4fd0666ec98ce7db1a1604a4306bf",
+        "integrationCommit": "a62d19bf15b2ff12e2cdec85cee1285d327d33fa",
+        "mergedPR": 72,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "02a96733e919be8af4db4c2f7216eecd2dc9e1da"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r5-authenticity",
+      "headSHA": "18d830d5c3da2cca8d07ba4426e7e74dd389ba9a",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "3c4ff531abf64d56b953e982d78eedfdb79579a1",
+        "integratedTree": "3c4ff531abf64d56b953e982d78eedfdb79579a1",
+        "integrationCommit": "ce078147bc8500f2454b409676f6f1fad622bdba",
+        "mergedPR": 75,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "7288b44f2b0e355b4c4b585ee5b87e6574fae60b"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r6-priority-heraldry",
+      "headSHA": "ed9dc8718d33415ef14253c61960174ad611cfcc",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "00c57f5446b5b12613fab7ccbc5fdb20628d93ce",
+        "integratedTree": "00c57f5446b5b12613fab7ccbc5fdb20628d93ce",
+        "integrationCommit": "a71291c4ca46ecab85d42a11e75bc42e95f44590",
+        "mergedPR": 76,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "ce078147bc8500f2454b409676f6f1fad622bdba"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r7-evidence-rights",
+      "headSHA": "9516ecced09efa455f4261008bf23b7e88854999",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "4928647ca0b780f03dfe38a4b72ce15335c623a0",
+        "integratedTree": "4928647ca0b780f03dfe38a4b72ce15335c623a0",
+        "integrationCommit": "0208ec5f2f0f3d71805b64f8883231431adc6751",
+        "mergedPR": 77,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "a71291c4ca46ecab85d42a11e75bc42e95f44590"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r8-targeted-evidence-rights",
+      "headSHA": "edd67f52bcd64359837044d4b1263f91f1deb941",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "62882b5aa1f5a12c2324d28bc72c742182622b79",
+        "integratedTree": "62882b5aa1f5a12c2324d28bc72c742182622b79",
+        "integrationCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+        "mergedPR": 80,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "d6f3d48a94939da067b922e85dcb622522e61daa"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r31-media-ux-20261108",
+      "headSHA": "a320748a4e8c17302760419d5e3b9671ad6b5261",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "58351acf93128992a30f90c6043a2339f5bb9191",
+        "integratedTree": "58351acf93128992a30f90c6043a2339f5bb9191",
+        "integrationCommit": "02a96733e919be8af4db4c2f7216eecd2dc9e1da",
+        "mergedPR": 71,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "17f5838e9e814a903b95cb07ed871877eb33e4c0"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r41-stabilize-external-media-smoke-20261109",
+      "headSHA": "9cdc71c6d4d02ec9835633b26e71d13fdfb5520f",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "7471c16283c6558535b320b718997d2a7a9e5da5",
+        "integratedTree": "7471c16283c6558535b320b718997d2a7a9e5da5",
+        "integrationCommit": "7288b44f2b0e355b4c4b585ee5b87e6574fae60b",
+        "mergedPR": 74,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "75324712efaab0f7b97b25ebbfc404e37da1dd38"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "sim-r41-unified-card-coats-20261109",
+      "headSHA": "a39fc40f2895cf5371cbcca479b78eefa191f0d0",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "60c4bfe6db7fa8e6f180d2b7fd4d42e9cf206ca5",
+        "integratedTree": "60c4bfe6db7fa8e6f180d2b7fd4d42e9cf206ca5",
+        "integrationCommit": "75324712efaab0f7b97b25ebbfc404e37da1dd38",
+        "mergedPR": 73,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "a62d19bf15b2ff12e2cdec85cee1285d327d33fa"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "ui/compact-module-entity-headers-20261108",
+      "headSHA": "508e28683e7793b059f31ebf975e41eeb4d62c17",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "cc1a73d5109769b70ae0772fef04e6bc4dd781c1",
+        "integratedTree": "cc1a73d5109769b70ae0772fef04e6bc4dd781c1",
+        "integrationCommit": "ceebb71378c4d42ac88497904f5ef4ab5fdac059",
+        "mergedPR": 62,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "25999fcdf32a145bf9a8d801fb0f61db4ad049f9"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "ui/map-tools-above-zoom-aligned-close-20261108",
+      "headSHA": "f045994d000e45fe06822f43d2c28f69060d7816",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "d7c7d4f6e9c6ecccbd04caf3e65789dd8d1eb6d7",
+        "integratedTree": "d7c7d4f6e9c6ecccbd04caf3e65789dd8d1eb6d7",
+        "integrationCommit": "25999fcdf32a145bf9a8d801fb0f61db4ad049f9",
+        "mergedPR": 61,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "8317ff9a346fff871b74f4974cda4bc263d058ed"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-audit-5a-image-search-performance",
+      "headSHA": "8236fb37b66412f9be871ed10a3cde33369a88cf",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "c21615c0e1deda52015e4d52e380f936feae185b",
+        "integratedTree": "c21615c0e1deda52015e4d52e380f936feae185b",
+        "integrationCommit": "82622896078bab8ce4ec25a7a8cac40c9bf6b87a",
+        "mergedPR": 82,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "d1ff22c8844ea1b460a0fa9f822fc938e9eba624"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-audit-5b-accessibility-resilience",
+      "headSHA": "c9ddec982c2736c614e682e9bbb9ade778a8b763",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "5c6b9873ec0adc5a874849de40f5ad32a39b0293",
+        "integratedTree": "5c6b9873ec0adc5a874849de40f5ad32a39b0293",
+        "integrationCommit": "b77c748b790aa96aaa41ba175cdcd45e247896e4",
+        "mergedPR": 83,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "82622896078bab8ce4ec25a7a8cac40c9bf6b87a"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-audit-5c-final-certification",
+      "headSHA": "ceeff4955500a5d286622f50fd38f4837dfb54eb",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "d76c0c467690edadb00a3c10bcdd17bc43ec7ef2",
+        "integratedTree": "d76c0c467690edadb00a3c10bcdd17bc43ec7ef2",
+        "integrationCommit": "2980bf186b50393b987e36a78900958ce1026b7f",
+        "mergedPR": 84,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "b77c748b790aa96aaa41ba175cdcd45e247896e4"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-entity-official-name-en-20261109",
+      "headSHA": "b668eac2f3429034b2c18bcf117da0c20b2f1527",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "f47f7d85c03bdefda7590fdae002009e041dce49",
+        "integratedTree": "f47f7d85c03bdefda7590fdae002009e041dce49",
+        "integrationCommit": "d6f3d48a94939da067b922e85dcb622522e61daa",
+        "mergedPR": 79,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "96a57ccaf66765c8ab419c926ae06a070d9196e2"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-header-entity-button-right-20261109",
+      "headSHA": "0ce63887de7c074bc3739c869fc7c507fc417d9d",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "319a4742edc6e6519dca4603738b8f22b67d86ab",
+        "integratedTree": "319a4742edc6e6519dca4603738b8f22b67d86ab",
+        "integrationCommit": "96a57ccaf66765c8ab419c926ae06a070d9196e2",
+        "mergedPR": 78,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "0208ec5f2f0f3d71805b64f8883231431adc6751"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-maintenance-stabilization",
+      "headSHA": "e688af3cd6f6c68ea072f88a426a7850ef9f2c6a",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "7ca1f9a055e9aaae275579ae1b00b2d99fcbe6dc",
+        "integratedTree": "7ca1f9a055e9aaae275579ae1b00b2d99fcbe6dc",
+        "integrationCommit": "2b679e65ad2da2e964ee6ad91347a96f107eeab6",
+        "mergedPR": 85,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "2980bf186b50393b987e36a78900958ce1026b7f"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r3-19a-role-contract",
+      "headSHA": "28e73a83bc018e899e62c0ef55975be05f344299",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "20af18902059b8716a26fcc69ad0448f28e71528",
+        "integratedTree": "20af18902059b8716a26fcc69ad0448f28e71528",
+        "integrationCommit": "cdf34c42b7ef6cd0b2d1d9420e27500c9cfa70b4",
+        "mergedPR": 44,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "9b301683d6848dd6ab815a205951fae14e7be254"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r3-19b-romania-nuts-siruta",
+      "headSHA": "fa609250d1c0ff162b90f0289ee9ae2705d13fde",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "1d124965154f47b120a455c7fc34c46d474fa81b",
+        "integratedTree": "1d124965154f47b120a455c7fc34c46d474fa81b",
+        "integrationCommit": "d43903e0dc9c7dbb5d6da94318daae1bcdfa1d65",
+        "mergedPR": 45,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "cdf34c42b7ef6cd0b2d1d9420e27500c9cfa70b4"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r3-20-capitals-tree-presentation",
+      "headSHA": "4873ed22d3254cb32ff92f6957e22dcd4dd03f04",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "9518aca2ac90de0ecfca117c391965fc59527563",
+        "integratedTree": "9518aca2ac90de0ecfca117c391965fc59527563",
+        "integrationCommit": "39e22edf19c1892bed59a189f16dd6a214197dbf",
+        "mergedPR": 46,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "d43903e0dc9c7dbb5d6da94318daae1bcdfa1d65"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r3-21-multirole-tree-labels",
+      "headSHA": "48f2d7a1ab3dd8d61c98c4235b450a56b8ba7907",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "5e033a9446ddd2021c7c1ec55874ccadf380ebff",
+        "integratedTree": "5e033a9446ddd2021c7c1ec55874ccadf380ebff",
+        "integrationCommit": "d824dde063cb0e1da5abf72d1ab9771f31a9a024",
+        "mergedPR": 47,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "39e22edf19c1892bed59a189f16dd6a214197dbf"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r40-entity-card-architecture",
+      "headSHA": "a4cd4fc6ca43499344a5851c8ccbaea456c40c24",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "2c3c318f324194e02dff9e2252d92e3946d6cc9e",
+        "integratedTree": "2c3c318f324194e02dff9e2252d92e3946d6cc9e",
+        "integrationCommit": "74b05b9e7ada0d778148d4b013da24b2199f5107",
+        "mergedPR": 50,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "ca96970dbb21eeda4be7a1ef5df5462e18f6972c"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r41-entity-role-cards",
+      "headSHA": "cc5cc83ec563726f0aefbd79a4efb2ffb6d02043",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "6d3b923302fb98746f426b5041be952e82184007",
+        "integratedTree": "6d3b923302fb98746f426b5041be952e82184007",
+        "integrationCommit": "637493464c16af9c7e747b8d16aeb6071f0e1d86",
+        "mergedPR": 51,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "74b05b9e7ada0d778148d4b013da24b2199f5107"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r42-entity-card-interaction-a11y",
+      "headSHA": "2082c23ec7cb65e996c52b6423885e1aa9c925af",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "75fcd5463ba4c7e190842bee669cc7f607759927",
+        "integratedTree": "75fcd5463ba4c7e190842bee669cc7f607759927",
+        "integrationCommit": "43d993304ad1b6ebb6a7e8d658d84e2eeb625b76",
+        "mergedPR": 52,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "637493464c16af9c7e747b8d16aeb6071f0e1d86"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r42-focus-restoration-hotfix",
+      "headSHA": "4ccbdc2da7590cd9ff4bd7e94edf483b9a234212",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "f8a80558ded18c8155a494bfc61e6da245e6a59f",
+        "integratedTree": "f8a80558ded18c8155a494bfc61e6da245e6a59f",
+        "integrationCommit": "52850d006061e21e027c27bf3e57bd5308276bc8",
+        "mergedPR": 53,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "43d993304ad1b6ebb6a7e8d658d84e2eeb625b76"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r43-final-card-acceptance",
+      "headSHA": "36c28f4a3275bc0cdc7fc5c3802db744908b5eed",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "eddf9ea7e1f4a841f8975bad5226f437d72c5976",
+        "integratedTree": "eddf9ea7e1f4a841f8975bad5226f437d72c5976",
+        "integrationCommit": "35235179fb1ffe18ed7d3d4659c7b07823f72f8d",
+        "mergedPR": 54,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "52850d006061e21e027c27bf3e57bd5308276bc8"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r43a-source-heading-dedup",
+      "headSHA": "0edb4a1b2efc4a195b3a773508036dfb282825c5",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "713bde51dfc047deb77062e07be61f853a2199df",
+        "integratedTree": "713bde51dfc047deb77062e07be61f853a2199df",
+        "integrationCommit": "fc553c765366958ea374f08aa912fc57b8b26c23",
+        "mergedPR": 55,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "35235179fb1ffe18ed7d3d4659c7b07823f72f8d"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r44-scoped-module-global-reset",
+      "headSHA": "d1d5529b8dc3c74d6bb953b624c695adb708c5d0",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "b8aac2819427e8fa49c5e4ca37526d9cf3225edf",
+        "integratedTree": "b8aac2819427e8fa49c5e4ca37526d9cf3225edf",
+        "integrationCommit": "e8bde03cd75e69fec4336b4733a5e5509e3e75c1",
+        "mergedPR": 56,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "fc553c765366958ea374f08aa912fc57b8b26c23"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r45-chisinau-adm8-tree-name",
+      "headSHA": "5b1ceb98c7077e312b4d6c5b50c8d4cb512a0833",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "4ca3e3b0d54b246946be23f46845f681fb1ac2b2",
+        "integratedTree": "4ca3e3b0d54b246946be23f46845f681fb1ac2b2",
+        "integrationCommit": "ec9192b91897ed7cfd2cae291d3326cb06877129",
+        "mergedPR": 57,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "e8bde03cd75e69fec4336b4733a5e5509e3e75c1"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    },
+    {
+      "name": "web-r46-remove-phase-label-header",
+      "headSHA": "82d185abe39da62db7b95c73c335335d81490358",
+      "verdict": "SQUASH_RECONCILED_DELETE_ELIGIBLE",
+      "proof": {
+        "originalTree": "60c0d8c935b5c9ad0b498a53d3c26cde77bcfd8f",
+        "integratedTree": "60c0d8c935b5c9ad0b498a53d3c26cde77bcfd8f",
+        "integrationCommit": "0ad079c09598942646e6b9335680ff1f3d84ad76",
+        "mergedPR": 58,
+        "headMatchesMergedPR": true,
+        "integratedCommitReachableFromMain": true,
+        "treeEquivalent": true,
+        "mainAncestor": false,
+        "mergeParents": [
+          "ec9192b91897ed7cfd2cae291d3326cb06877129"
+        ],
+        "method": "SINGLE_PARENT_SNAPSHOT_REPLAY_SQUASH_OR_REBASE",
+        "verified": true
+      },
+      "reason": "Exact complete Git tree equals the matching merged PR integration snapshot, whose commit is reachable from main. Original replayed commit DAG must additionally be anchored before deletion.",
+      "uniqueFileEvidence": [],
+      "worktreeFinding": null,
+      "deleteOnlyAfterRemoteArchive": true,
+      "protected": false
+    }
+  ]
+}
