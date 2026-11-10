@@ -1,0 +1,65 @@
+{
+  "stage": "WEB-MAINTENANCE",
+  "status": "READY_FOR_PROTECTED_INTEGRATION",
+  "baseCommit": "2980bf186b50393b987e36a78900958ce1026b7f",
+  "certifiedCommit": "2980bf186b50393b987e36a78900958ce1026b7f",
+  "protectedInputs": {
+    "manifest": "docs/audits/web-audit-5/integrity-5a.json",
+    "sha256": "752c397841ca96b13e3afc270ab6f23743f3c83d24495d843a9dbf3fa171e19c",
+    "filesChecked": 273,
+    "allUnchanged": true
+  },
+  "workflowChanged": false,
+  "applicationChanged": false,
+  "dependenciesChanged": false,
+  "postMergeEvidenceInInitialCommit": false,
+  "expectedFinalVerdictAfterVerifiedMergeAndPublication": "WEB-MAINTENANCE CLOSED_WITH_ASSISTIVE_VALIDATION_PENDING",
+  "evidence": [
+    {
+      "path": "docs/audits/web-maintenance/assistive-technology-checklist.md",
+      "sha256": "b9dc88be1d49366a0422bdaffb41b8314d478b246aac3efe38f784b3567e5144",
+      "bytes": 5064
+    },
+    {
+      "path": "docs/audits/web-maintenance/baseline.json",
+      "sha256": "442c059b4fb52424e1a0bef6acb18da5845e1bb2d48a47fa2884bc8b74e6728e",
+      "bytes": 5405
+    },
+    {
+      "path": "docs/audits/web-maintenance/live-health.json",
+      "sha256": "58174174d9954755ece45b45eda1073beef327a3bf66cad57e5c64a454dd95f6",
+      "bytes": 38380
+    },
+    {
+      "path": "docs/audits/web-maintenance/maintenance-procedure.md",
+      "sha256": "957a9f3ee7ee4980dc5ceffee763f23fd76b81ad54bfb3e6dd448245f2b27225",
+      "bytes": 4707
+    },
+    {
+      "path": "docs/audits/web-maintenance/operational-health.json",
+      "sha256": "d8ed0d223afd64bb3acf0af00123db1e959942359a0a4601b9e6560a61439356",
+      "bytes": 4846
+    },
+    {
+      "path": "docs/audits/web-maintenance/publication.json",
+      "sha256": "6684235afb4d07a79c99195644818d9431a0ba706764eee6ae612a03a5c6a340",
+      "bytes": 5060
+    },
+    {
+      "path": "docs/audits/web-maintenance/validation.json",
+      "sha256": "6a21f8234dcc168005fe584a43c0ec4d78c9fc022661b3f9ffc4ad463bc5be51",
+      "bytes": 1846
+    },
+    {
+      "path": "docs/audits/web-maintenance/WEB-MAINTENANCE-FINAL-REPORT.md",
+      "sha256": "ffaad6f6226255541c35b331a7dc3e4cde9f2d6aa9a4b249c7de7f9416eb27c3",
+      "bytes": 5083
+    },
+    {
+      "path": "scripts/audit/web-maintenance/verify-live.mjs",
+      "sha256": "ba8e6b84ee274b0fd5024494af01d8534aa4d3580fbdce2888fdb49385272bdc",
+      "bytes": 17308
+    }
+  ],
+  "localValidation": "validation.json"
+}

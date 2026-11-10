@@ -1,0 +1,113 @@
+{
+  "stage": "WEB-MAINTENANCE",
+  "checkedAt": "2026-11-10T15:29:48.931Z",
+  "mainAtCheck": "2980bf186b50393b987e36a78900958ce1026b7f",
+  "liveEvidence": "live-health.json",
+  "publicationEvidence": "publication.json",
+  "assistiveTechnology": {
+    "status": "ASSISTIVE_TECH_VALIDATION_PENDING",
+    "screenReaderActuallyUsed": false,
+    "installationOrPersonalSettingsChanges": false,
+    "availabilityChecks": [
+      "No nvda process",
+      "No nvda command in PATH",
+      "No NVDA executable at either standard Program Files location",
+      "No NVDA/JAWS entries in inspected HKLM32/HKLM64/HKCU Uninstall records"
+    ],
+    "limitations": [
+      "An unregistered portable copy elsewhere is not ruled out.",
+      "No Apple/macOS/iOS environment for VoiceOver/Safari."
+    ],
+    "humanProtocol": "assistive-technology-checklist.md"
+  },
+  "fullWCAGConformanceClaim": false,
+  "workflow": {
+    "path": ".github/workflows/website.yml",
+    "sha256": "a60659514faa54a0faa89dd12b31a1a3ab77fe25ee61fe0bc260e4eb4b446778",
+    "unchangedFromCertifiedBuild": true,
+    "scheduledJobsAdded": 0,
+    "prDeploySkipIsExpectedAndNotExecuted": true
+  },
+  "integrity": {
+    "manifest": "docs/audits/web-audit-5/integrity-5a.json",
+    "filesChecked": 273,
+    "allUnchanged": true,
+    "noNewProtectedInputManifest": true
+  },
+  "findings": [
+    {
+      "id": "BASELINE_CONTINUITY",
+      "status": "VERIFIED_HEALTHY",
+      "evidence": "baseline.json; actual Git ancestry for all3merge commits",
+      "owner": "Release maintainer",
+      "severity": "NONE"
+    },
+    {
+      "id": "CI_AND_PAGES",
+      "status": "VERIFIED_HEALTHY",
+      "evidence": "baseline.json certifiedCI + publication.json; new PR/post-merge runs attested separately",
+      "owner": "Release maintainer",
+      "severity": "NONE"
+    },
+    {
+      "id": "TECHNICAL_ACCESSIBILITY",
+      "status": "VERIFIED_HEALTHY",
+      "evidence": "live-health.json widths; real key input/AX/DOM only; not speech validation",
+      "owner": "Interface maintainer",
+      "severity": "NONE"
+    },
+    {
+      "id": "ASSISTIVE_SPEECH_VALIDATION",
+      "status": "ASSISTIVE_TECH_VALIDATION_PENDING",
+      "evidence": "assistive-technology-checklist.md AT01–AT17; all observed fields unexecuted",
+      "owner": "Human assistive-technology tester",
+      "severity": "PENDING_NOT_A_DEMONSTRATED_DEFECT"
+    },
+    {
+      "id": "COMMONS_OUTAGE",
+      "status": "EXTERNAL_DEPENDENCY_LIMITATION",
+      "evidence": "live-health.json dependencies; synthetic503, neutral coat, no flag substitution, holder/source preserved",
+      "owner": "Operations maintainer",
+      "severity": "S3_IF_REALIZED"
+    },
+    {
+      "id": "OSM_TILE_OUTAGE",
+      "status": "EXTERNAL_DEPENDENCY_LIMITATION",
+      "evidence": "live-health.json dependencies; intercepted tile requests, local vectors source-ready; blank basemap remains possible without per-tile UI alert",
+      "owner": "Operations maintainer",
+      "severity": "S3_IF_REALIZED"
+    },
+    {
+      "id": "EXTERNAL_SOURCE_DOCUMENT",
+      "status": "EXTERNAL_DEPENDENCY_LIMITATION",
+      "evidence": "live-health.json dependencies.sourceDocument; synthetic503 in separate browsing context, source link and selected holder unchanged",
+      "owner": "Operations maintainer; SIM-CLOSE editorial owner for new rights evidence",
+      "severity": "S3_IF_REALIZED"
+    },
+    {
+      "id": "PROPORTIONATE_MONITORING",
+      "status": "NO_ACTION_REQUIRED",
+      "evidence": ".github/workflows/website.yml already checks PR and main; maintenance-procedure.md incident flow",
+      "owner": "Release maintainer",
+      "severity": "NONE"
+    },
+    {
+      "id": "CERTIFIED_INPUTS",
+      "status": "VERIFIED_HEALTHY",
+      "evidence": "Referenced WEB-AUDIT.5 integrity manifest; all273file hashes unchanged",
+      "owner": "Data custodian",
+      "severity": "NONE"
+    }
+  ],
+  "scriptCalibration": {
+    "applicationDefectsInferred": false,
+    "notes": [
+      "Early harness assumed selection changes location.search; certified app intentionally shares state through explicit permalinks. Final scenario checks exact selected coat and direct permalink separately.",
+      "Native button Enter includes carriage-return key text; module closed-state is awaited before activation. No application or historical test change.",
+      "Escape closes the foremost Entity panel before the module-only focus scenario.",
+      "English exact holder title is Talmaciu, distinct from Romanian spelling.",
+      "Invalid InterceptionId diagnostics are accepted only with matching actual Network.loadingFailed(canceled) evidence; application runtime exceptions must remain empty.",
+      "Foremost Entity is closed before the module-only Escape scenario. English holder spelling and canceled-request proof are recorded explicitly."
+    ]
+  }
+}

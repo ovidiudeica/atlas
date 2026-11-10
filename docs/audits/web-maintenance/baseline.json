@@ -1,0 +1,178 @@
+{
+  "stage": "WEB-MAINTENANCE",
+  "recordedAt": "2026-11-10T15:13:16.160Z",
+  "certifiedSHA": "2980bf186b50393b987e36a78900958ce1026b7f",
+  "mainAtStart": "2980bf186b50393b987e36a78900958ce1026b7f",
+  "prs": [
+    {
+      "number": 82,
+      "merged": true,
+      "mergeCommit": "82622896078bab8ce4ec25a7a8cac40c9bf6b87a",
+      "url": "https://github.com/ovidiudeica/atlas/pull/82"
+    },
+    {
+      "number": 83,
+      "merged": true,
+      "mergeCommit": "b77c748b790aa96aaa41ba175cdcd45e247896e4",
+      "url": "https://github.com/ovidiudeica/atlas/pull/83"
+    },
+    {
+      "number": 84,
+      "merged": true,
+      "mergeCommit": "2980bf186b50393b987e36a78900958ce1026b7f",
+      "url": "https://github.com/ovidiudeica/atlas/pull/84"
+    }
+  ],
+  "certificationManifest": "docs/audits/web-audit-5/certification-manifest.json",
+  "protectedInputsManifest": "docs/audits/web-audit-5/integrity-5a.json",
+  "historicalValidation": "docs/audits/web-audit-5/validation-5c.json",
+  "publicationAttestation": "https://github.com/ovidiudeica/atlas/pull/84",
+  "certifiedCI": {
+    "run": 42834709591,
+    "url": "https://github.com/ovidiudeica/atlas/actions/runs/42834709591",
+    "sha": "2980bf186b50393b987e36a78900958ce1026b7f",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 129893738041,
+        "name": "Build and verify website",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Install",
+            "conclusion": "success"
+          },
+          {
+            "name": "Static regression tests",
+            "conclusion": "success"
+          },
+          {
+            "name": "SIM-R7 deterministic evidence generation",
+            "conclusion": "success"
+          },
+          {
+            "name": "SIM-R8 deterministic targeted evidence generation",
+            "conclusion": "success"
+          },
+          {
+            "name": "SIM-CLOSE deterministic closure verification",
+            "conclusion": "success"
+          },
+          {
+            "name": "Type-check and build",
+            "conclusion": "success"
+          },
+          {
+            "name": "WEB-AUDIT.5 image request regression",
+            "conclusion": "success"
+          },
+          {
+            "name": "WEB-AUDIT.5 accessibility and recovery",
+            "conclusion": "success"
+          },
+          {
+            "name": "WEB-AUDIT.5 native browser zoom200",
+            "conclusion": "success"
+          },
+          {
+            "name": "WEB-AUDIT.5 final repeated performance and unavailable images",
+            "conclusion": "success"
+          },
+          {
+            "name": "WEB-AUDIT.5 selected and visible original exports",
+            "conclusion": "success"
+          },
+          {
+            "name": "WEB-AUDIT.5 effective target areas and spacing",
+            "conclusion": "success"
+          },
+          {
+            "name": "Chromium desktop/mobile smoke",
+            "conclusion": "success"
+          },
+          {
+            "name": "Store browser screenshots",
+            "conclusion": "success"
+          },
+          {
+            "name": "Store WEB-AUDIT.5 browser evidence",
+            "conclusion": "success"
+          },
+          {
+            "name": "Store build",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 129897090053,
+        "name": "Deploy GitHub Pages",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/configure-pages@v5",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/upload-pages-artifact@v3",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/deploy-pages@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "buildArtifact": {
+    "id": 13773237109,
+    "name": "website-dist",
+    "url": "https://api.github.com/repos/ovidiudeica/atlas/actions/artifacts/13773237109/zip",
+    "expiredAtCheck": false,
+    "createdAt": "2026-11-10T14:35:42Z"
+  },
+  "historicalTests": {
+    "total": 290,
+    "pass": 290,
+    "scope": "WEB-AUDIT.5 snapshot, not a permanent future test-count constraint"
+  },
+  "referenceDate": "2026-10-05",
+  "method": "GitHub API PR/run/job/artifact reads; git ancestry; existing certified manifests; fresh live CDP checks and independent published-byte comparisons. No replacement protected-input manifest."
+}

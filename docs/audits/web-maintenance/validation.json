@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-10T15:27:09.706Z",
+  "scope": "Actual local execution; exact-head CI, fresh CI npmci and post-merge/deployment are separately attested after execution.",
+  "node": "v24.21.0",
+  "platform": "win32",
+  "results": [
+    {
+      "name": "npm test",
+      "command": "npm.cmd test",
+      "exitCode": 0,
+      "logSHA256": "bdac8faf119b8afa84d520a91ea146caa3940e2857f48627d14646c7294eb886",
+      "tests": 292,
+      "pass": 292,
+      "fail": 0
+    },
+    {
+      "name": "SIM-R7 reproducibility",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/audit/sim-r7/12-verify-reproducibility.mjs",
+      "exitCode": 0,
+      "logSHA256": "b6fd1c659787e09897e7d9b44a5479edb6a7639357c1d190533b7ee3ee6feebd"
+    },
+    {
+      "name": "SIM-R8 reproducibility",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/audit/sim-r8/03-verify-reproducibility.mjs",
+      "exitCode": 0,
+      "logSHA256": "5e888eaf68ec51c733c326b11af9d0c7402582face0c436ab149a9411fda1c66"
+    },
+    {
+      "name": "SIM-CLOSE reproducibility",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/audit/sim-close/verify-reproducibility.mjs",
+      "exitCode": 0,
+      "logSHA256": "74b8ea89d4e0399f5502d1902cf384cb39a8c91732884d94eec418a15f6debb2"
+    },
+    {
+      "name": "TypeScript/Vite",
+      "command": "npm.cmd run build",
+      "exitCode": 0,
+      "logSHA256": "64ddc70e06e624f67805b24790697d8303aee2e3f0f05bbb4892bbd9066bb5e9"
+    }
+  ],
+  "windowsBuildMatchesCertifiedPublishedResources": 13,
+  "manualLiveCheck": {
+    "script": "scripts/audit/web-maintenance/verify-live.mjs",
+    "sha256": "ba8e6b84ee274b0fd5024494af01d8534aa4d3580fbdce2888fdb49385272bdc",
+    "result": "PASS",
+    "evidence": "live-health.json",
+    "logSHA256": "7b25593f2c4ebc6f28d1fb85034ea52770f1d4a9119cee20996f0fc5bdf83697"
+  }
+}
