@@ -1,0 +1,6 @@
+﻿id,display_name,start_date,end_date,geometry_verdict,polygon_parts_status,admin_level,source_tag,source_fixme,member_geometry_sha256,ohm_url
+2964078,Ukrainian SSR,1925-10-16,1939-11-01,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,NO,d1b78be5f9b30047acc2b10f6b3e04c7608eb540a5e79b176b7e15d55ddcafc4,https://www.openhistoricalmap.org/relation/2964078
+2964079,Republica Sovietică Federativă Socialistă Rusă,1925-10-16,1926,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,3,NO,YES,0dc18c59aa1f5ff62413cce365953fca09cef77d7d09f95eb23a5f457b3f4ba7,https://www.openhistoricalmap.org/relation/2964079
+2964455,Regatul Ungariei,1772,1779-04-22,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,b8d7763d359d22d4566ba03207fd2a8c7e4109edf04c6d7cfa2d31d8b641df3d,https://www.openhistoricalmap.org/relation/2964455
+2965978,Russian Empire,1864-05-21,1867,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,de31147f5a41d93336ea1edd0ccc46aff902501a42942e3ae8a19f46a3f3583e,https://www.openhistoricalmap.org/relation/2965978
+2965980,Russian Empire,1774-07-21,1778,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,3cfd53ba70fdc081542cb41b9e5d7e88c47c9c386519934d2ea95e11388468b8,https://www.openhistoricalmap.org/relation/2965980

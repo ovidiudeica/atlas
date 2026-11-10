@@ -1,0 +1,61 @@
+﻿id,display_name,start_date,end_date,geometry_verdict,polygon_parts_status,admin_level,source_tag,source_fixme,member_geometry_sha256,ohm_url
+2830461,Regatul Prusiei,1802-10-08,1803-04-27,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,2,NO,YES,4f5e2428c4001e129b8cf7e730b69b9693e4e6d9f9f62d9c98801262971af996,https://www.openhistoricalmap.org/relation/2830461
+2830855,Ostrogothic Kingdom,0508,0553,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,YES,NO,0de0b1e96dd8f6b1c7574c566a88c1d1b75938539a55574e1d67394c4795f965,https://www.openhistoricalmap.org/relation/2830855
+2831261,Imperiul Austriac,1807-10-10,1809-10-14,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,f3d165c9c4c49e7b2ea920937a618468c6001a8bdea50699eae47552ac1a0051,https://www.openhistoricalmap.org/relation/2831261
+2831267,Imperiul Austriac,1805-12-26,1807-10-10,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,192a2a5de776eb7f2619928f71cc8ce3a3f0fef6732e4cb573d555acc4355977,https://www.openhistoricalmap.org/relation/2831267
+2831338,Imperiul Roman de Răsărit,0395,0476-10-04,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,c2dce50c85d0ce70927194a60a95e88a795ff9b43daf1c6085ddb028b44fd590,https://www.openhistoricalmap.org/relation/2831338
+2831340,Gepizi,0454,0567,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,6bd4aafe50af84284406d404ac02ccad4a45292ffa38b28cbc384fa9975b8687,https://www.openhistoricalmap.org/relation/2831340
+2835817,Republica Venețiană,1510,1537,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,2,NO,YES,edd75740bae23c5d89f759ca47343183dbb1c49bdb7dde3debe53360bf543141,https://www.openhistoricalmap.org/relation/2835817
+2835824,Republic of Venice,1668,1684,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,2,NO,YES,e3d4bfeaf771ef2cc34eb8a17a72c40f9e9fb3a781011164c9fba47ec2319498,https://www.openhistoricalmap.org/relation/2835824
+2835825,Republica Venețiană,1572,1669,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,2,NO,YES,740cabe1a33111fac941db0bfd9e0620852a4cc17e35a2cdd4926b47d405cc1c,https://www.openhistoricalmap.org/relation/2835825
+2835929,Uniunea Europeană,2004-05-01,2006-04-04,OVERLAP_DRAFT,CLOSED_CHAINS,1,NO,YES,286f795776566dd9b9c5dd176273bbeef3cb7fa0bfc7280bb9c3655d05cadaf9,https://www.openhistoricalmap.org/relation/2835929
+2835940,Uniunea Europeană,2020-02-01,2021-01-20,OVERLAP_DRAFT,CLOSED_CHAINS,1,NO,NO,01d86efbac480acd0a3787a4f7cf05e52ae10e3da2506d1d9f12faa34e83c38f,https://www.openhistoricalmap.org/relation/2835940
+2835941,Uniunea Europeană,2013-07-01,2020-01-31,OVERLAP_DRAFT,CLOSED_CHAINS,1,NO,YES,dd47d0c534c26922cf5580dd9cbdafb544ada04c2a3b99f05eaf558dcbc3d5c1,https://www.openhistoricalmap.org/relation/2835941
+2835942,Uniunea Europeană,2007-01-01,2012-01-01,OVERLAP_DRAFT,CLOSED_CHAINS,1,NO,NO,814cf0be6a43c22f1bfd1aa3a6ab9d76a1a3a144c71edbf1632af56ec8cc7232,https://www.openhistoricalmap.org/relation/2835942
+2836112,Regatul Ungariei,1043,1102,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,691d551d40dde276a6bb6d7cd9caddb51318ed3f731e0677bec1704fdf1d89d8,https://www.openhistoricalmap.org/relation/2836112
+2836150,Marele Principat al Serbiei,1000,1216,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,YES,NO,3372e3acd28b1e0b1a8545531d9f08195886d715f57c75b4b1dd3a536b28780d,https://www.openhistoricalmap.org/relation/2836150
+2836151,Regatul Ungariei,1102,1400,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,91ddb2ca8bfe56a0dd57b572d07a64bac331e5bd040c5e0d328107e3e7e497ce,https://www.openhistoricalmap.org/relation/2836151
+2848214,Ukrainian SSR,1919-03-10,1922-12-30,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,NO,8af79599a0eadee339764b44a049bd57923f17d6276ee2870f1bfe305d129a4d,https://www.openhistoricalmap.org/relation/2848214
+2848215,Republica Sovietică Socialistă Ucraineană,1939-11-01,1940-06-28,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,038d79b67808e221d6e8c48129a33c6573758fa51e80aeffb002adc21a6dc72d,https://www.openhistoricalmap.org/relation/2848215
+2848241,Uniunea Republicilor Sovietice Socialiste,1939-10-28,1940-03-12,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,ee43e732e1bdb7af0d3d9e37481a31a99d3ba2768a0103c5f8da32bf511f1b33,https://www.openhistoricalmap.org/relation/2848241
+2848248,Uniunea Republicilor Sovietice Socialiste,1939-10-06,1939-10-28,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,ad6b67fe924bb7d41ee60f02d75ab9531914157465b1efc75a876f2a97046cbb,https://www.openhistoricalmap.org/relation/2848248
+2848256,Uniunea Republicilor Sovietice Socialiste,1940-08-03,1940-08-05,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,cd81a0ac5880b153bc285891d117fe337511b531631e7411c6630ba0048dbad5,https://www.openhistoricalmap.org/relation/2848256
+2848258,Uniunea Republicilor Sovietice Socialiste,1940-06-28,1940-08-03,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,dca027aeb3864007d770243fb84135d4f1a3a6451f772969320eeb0c72d960f3,https://www.openhistoricalmap.org/relation/2848258
+2848504,Imperiul colonial italian,1917,1920,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,YES,3a0468b2c837d4cbceb5c788bbf59eb879fa7eed836a393d82078668e9d740f4,https://www.openhistoricalmap.org/relation/2848504
+2848514,Imperiul colonial italian,1943-05-13,1943-09-08,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,YES,b040b2ad34a477b252d0ca3f7ae215c33f44ab53ea149e7e21e94016265de8bc,https://www.openhistoricalmap.org/relation/2848514
+2848515,Imperiul colonial italian,1941-11-27,1943-05-13,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,YES,68cd1e7cc9e0dc1b2bea7609669a0a3632943282d6da4ea9c0eee7cb61a001d8,https://www.openhistoricalmap.org/relation/2848515
+2848516,Imperiul colonial italian,1939-04-12,1940-06-24,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,YES,040db9139069ba63304b87562e964a7a533357e989ed7bf73899ad5c59b0e8ee,https://www.openhistoricalmap.org/relation/2848516
+2848811,Uniunea Republicilor Sovietice Socialiste,1940-08-05,1940-08-06,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,450bc0e04c1e5a473aac2ba9428e84c2adfe201f1e8864bdd9dbf8b75be3445a,https://www.openhistoricalmap.org/relation/2848811
+2848812,Uniunea Republicilor Sovietice Socialiste,1940-08-06,1941-07-17,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,221af7b7686eac408aa68b9ebea0d425eeb7f3670940a89c46e793d0f90a8c4f,https://www.openhistoricalmap.org/relation/2848812
+2848876,Republica Populară Bulgaria,1946-09-15,1990-11-15,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,ed89b0c5ed2b9232a5b7dde9adbb63a51c656a15e7270a742690b8806ea2b5d6,https://www.openhistoricalmap.org/relation/2848876
+2848877,Regatul Bulgariei,1944-08-26,1946-09-15,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,08c2f957f5ac5b0e09169adbf86c4a85a8ca34fae82ace4d286de7362b4889dd,https://www.openhistoricalmap.org/relation/2848877
+2848878,Regatul Bulgariei,1919-11-27,1940-09-07,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,0e2e215db2f7913827fab6bf82472f513f4609515dab9bb812e6792598767b40,https://www.openhistoricalmap.org/relation/2848878
+2849134,Imperiul Roman de Răsărit,0647,0680,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,6af7b9e42da84a30cbcf520528ebcac7f4b43789f538da1b8c030df82b825b6b,https://www.openhistoricalmap.org/relation/2849134
+2849135,Imperiul Roman de Răsărit,0476-10-04,0534,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,c2dce50c85d0ce70927194a60a95e88a795ff9b43daf1c6085ddb028b44fd590,https://www.openhistoricalmap.org/relation/2849135
+2849140,Imperiul Roman de Apus,0429,0439,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,4335d1f63efe9a6eed7d6b2cde3b5292a841f5d0338954b1766bbad1df7363c0,https://www.openhistoricalmap.org/relation/2849140
+2849141,Imperiul Roman,0270,0383,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,3f6e43f07d5c8814ede462fa74cd59ac4f692b87bb3524343d1cb91f248e4a6a,https://www.openhistoricalmap.org/relation/2849141
+2849142,Imperiul Roman,0042,0047,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,35797d7ca5e263c531b119662cc086eff4fac97788dec38728bafc6569022eb9,https://www.openhistoricalmap.org/relation/2849142
+2849151,Imperiul Roman de Răsărit,0698,0752,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,b979fe6b312646962a89aa2419c2c186584cd8ca41bcbd9647342dfda6acede0,https://www.openhistoricalmap.org/relation/2849151
+2849154,Imperiul Roman de Răsărit,1185,1204,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,591b7fa12fa30f923422043f59579aa5a0bd967da3144e77a251968552c10a51,https://www.openhistoricalmap.org/relation/2849154
+2849161,Imperiul Roman de Apus,0454,0465,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,f7e3a36f25a7a67a9c84eda8000440b4d0cab674b2c1d34500a5450b99b1830c,https://www.openhistoricalmap.org/relation/2849161
+2849185,Imperiul Roman de Răsărit,0961-03-06,1185,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,f3299db4fea2ef40009b9c5dd6b8d12bc1d12d88490d890604df6871c327b0be,https://www.openhistoricalmap.org/relation/2849185
+2849186,Imperiul Roman de Răsărit,0824,0831,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,db373491c9711a42a0a56063826f56662e8d19c52b8349da1970e68e4ae74901,https://www.openhistoricalmap.org/relation/2849186
+2849190,Imperiul Roman de Răsărit,0534,0535,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,e54fd03eb419d9c52c47a9edbfef8d77b759702a95911c22b0edc74abb86489d,https://www.openhistoricalmap.org/relation/2849190
+2849191,Imperiul Roman de Apus,0439,0454,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,3122cc50f3c1b58a4526a197399ecfa07892e0e81ee95cdd349a6af2a71326c4,https://www.openhistoricalmap.org/relation/2849191
+2849194,Imperiul Roman de Răsărit,0643,0647,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,51b7fbc0269c522641f05e927dc27932655e0173a641da8c53991820482c8878,https://www.openhistoricalmap.org/relation/2849194
+2849198,Imperiul Roman,0006,0042,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,cb7ab0ab1317a58d578a5849ce106465b2140d2e6a3a5aae42b6cac7787958c3,https://www.openhistoricalmap.org/relation/2849198
+2849321,Imperiul Roman de Apus,0407,0409,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,44a5c057e542dabc25cf935e1a11d6c29a1441e7acb7e9f3e1f578474f1f79e0,https://www.openhistoricalmap.org/relation/2849321
+2849322,Imperiul Roman,0383,0395,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,420365863c307889b426b12bf550f5f44c4ed7f3fcd8de95aaf3d2ebd3e33b20,https://www.openhistoricalmap.org/relation/2849322
+2849323,Imperiul Roman,0080,0106,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,a816d2744fdd052ad5e5c2202bfb9853d8dc82e86b5d502072dd9a55a70e659c,https://www.openhistoricalmap.org/relation/2849323
+2849324,Imperiul Roman,0047,0056,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,2d664f5d4ad132a1726ac758c74d7f8ccfb554dbb9d7337f56c1c1eae3cdcf1e,https://www.openhistoricalmap.org/relation/2849324
+2849326,Moesia II,0290,0680,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,2d03caca25dcf2137c768bf0ffce29a1b97919bfb709622748314ecff159022f,https://www.openhistoricalmap.org/relation/2849326
+2849327,Imperiul Roman de Răsărit,0680,0698,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,94eea7c5cc93d75747429d186a3d02f482958de39f665d73e62d2f6500f4dba6,https://www.openhistoricalmap.org/relation/2849327
+2849328,Scythia Minor,0290,0680,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,244ede849fcb43a6f72e63a502e156c8e82f1da92459b10feae24d77bb110768,https://www.openhistoricalmap.org/relation/2849328
+2849329,Imperiul Roman,0056,0080,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,b13bef04103bd60313133361c0aef0660ccc310c4131099a15dfdab1f6e5ff4a,https://www.openhistoricalmap.org/relation/2849329
+2849330,Moesia,-0027,0086,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,ee7c7f6680fc795595122aac9556acd2fb302235be35ece1db8d406beb9da8b7,https://www.openhistoricalmap.org/relation/2849330
+2849331,Moesia Inferior,0086,0290,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,6b841fdde2336fce676b268e8571a4a162c22a712665d5c3027c95f378958833,https://www.openhistoricalmap.org/relation/2849331
+2849332,Moesia I,0086,0271,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,7e3bcdc9fc354f351625079f64d79ec7979e7b23ca1dca83e54a18128791476b,https://www.openhistoricalmap.org/relation/2849332
+2849417,Imperiul Roman,-0014,0006,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,9b672308c6412dccfccacc54d54317a389318da32682891ba56c41d0b3dfa1c3,https://www.openhistoricalmap.org/relation/2849417
+2849467,Imperiul Roman de Răsărit,0902,0961-03-06,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,86d0398ed943f483601dc70449888644b9e27e25f94d5c9f855aa96c5c7be42a,https://www.openhistoricalmap.org/relation/2849467
+2849468,Imperiul Roman de Apus,0465,0471,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,fba6acf68b10be5cb9ad29dc3bedfbb6e792035f23a291feaaba0397daaa1994,https://www.openhistoricalmap.org/relation/2849468
+2849469,Imperiul Roman de Apus,0427,0429,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,4ff3a0a9668613f9d63b93f793facd5747f5d4cbda14515802f69b08f7436464,https://www.openhistoricalmap.org/relation/2849469

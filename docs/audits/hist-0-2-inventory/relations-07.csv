@@ -1,0 +1,61 @@
+﻿id,display_name,start_date,end_date,geometry_verdict,polygon_parts_status,admin_level,source_tag,source_fixme,member_geometry_sha256,ohm_url
+2829347,Borsod county,1824,1850-09-13,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,5506eb19c2ca8a3299032f005556f8e0ab3176be662807c3983c0e0a737fb817,https://www.openhistoricalmap.org/relation/2829347
+2829348,Borsod county,1860-10-20,1921-07-26,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,19c255cf9f465c0236ac5928d50c0ba89a885ab96329682326e5caa07f3407c2,https://www.openhistoricalmap.org/relation/2829348
+2829351,Comitatul Ugocea,1790-04-26,1850-09-12,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,a27e9d292cc17e6179a7e9c82b430667d8f83f66980b1cdd315de416a92cb706,https://www.openhistoricalmap.org/relation/2829351
+2829352,Comitatul Ugocea,1860-10-20,1920-06-03,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,af992a34a1e3f2a074cf0607dad27236160e376577d3812b845dab51363762de,https://www.openhistoricalmap.org/relation/2829352
+2829353,Comitatul Maramureș,1850-09-13,1860-10-19,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,4d758d7719b50d14f7e9603b814a8fd947b8efbcada5d90c4dac1d02cc3f0297,https://www.openhistoricalmap.org/relation/2829353
+2829354,Großwardein District,1850-09-13,1854-04-06,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,NO,ae3db3722703f8fc7ba0494c67d4142b6ca8a6a8ecbf97333eed157a407afc60,https://www.openhistoricalmap.org/relation/2829354
+2829355,Verwaltungsgebiet Kaschau,1854-04-06,1860-10-20,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,NO,344bbb6e54e68d1f5a78c7b5c2d2f2008fb32aa6c90340f002151c7749c95970,https://www.openhistoricalmap.org/relation/2829355
+2829356,Kaschau District,1850-09-13,1854-04-06,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,NO,344bbb6e54e68d1f5a78c7b5c2d2f2008fb32aa6c90340f002151c7749c95970,https://www.openhistoricalmap.org/relation/2829356
+2829357,Comitatul Maramureș,1860-10-20,1920-06-03,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,4818c73f04abddf2182781138a8f91da645125900267140d4bdc4a9b15742e04,https://www.openhistoricalmap.org/relation/2829357
+2829358,Comitatul Maramureș,1402,1850-09-13,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,9e7d496db7b84533e1fe7745372813bbecfd7483ecf4e36e202875a49eb58538,https://www.openhistoricalmap.org/relation/2829358
+2829379,Szabolcs county,1854-04-06,1860-10-20,OVERLAP_DRAFT,CLOSED_CHAINS,5,YES,NO,8979f9e64b8743386bcae7807f2d7946d99f7157a72ba1a610294ce113212a34,https://www.openhistoricalmap.org/relation/2829379
+2829380,Comitatul Sătmar,1699-01-26,1800,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,2f1b93f06defba73d8c8e1268b276748988fea57c9a07bab5fbeb2add29cbb75,https://www.openhistoricalmap.org/relation/2829380
+2829381,Comitatul Sătmar,1860-10-20,1876-06-19,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,14285b6156493e0fc52997a55d280ab699a9aa7f089c108e0acab0a6eaea6aff,https://www.openhistoricalmap.org/relation/2829381
+2829382,Comitatul Sătmar,1850-09-13,1860-10-20,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,841ddc8933308d4938f4ef974ca91fff0979c090981de52f415ea96eb9502519,https://www.openhistoricalmap.org/relation/2829382
+2829383,Comitatul Sătmar,1800,1850-09-13,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,8ac91f64451738f4308d34ea99ce7c44b659393e794d7c17dc77a63df780762f,https://www.openhistoricalmap.org/relation/2829383
+2829384,Transilvania,1851-05-12,1867-05-29,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,5a58a69145d4d36b7b3bbb9189aa8735959107f64905739fdfb3b5e14a613023,https://www.openhistoricalmap.org/relation/2829384
+2829392,Jazygia-Cumania,1860-10-20,1876-06-19,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,deff1ab06d1bed52126e45e73d9e4801d1e34800da76cb2fc16a7291421d077e,https://www.openhistoricalmap.org/relation/2829392
+2829393,Little Cumania,1745-05-06,1850-09-13,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,6,NO,YES,57f38da7fcc9e15085a7f21c5d6c7476b91580a5092b1cca29198a36ffde34d0,https://www.openhistoricalmap.org/relation/2829393
+2829394,Little Cumania,1850-09-13,1860-10-20,OVERLAP_DRAFT,CLOSED_CHAINS,6,NO,YES,8f149552749496149a3d99f9828d79663e3c73c0c54a76f38885147ab2260fd1,https://www.openhistoricalmap.org/relation/2829394
+2829395,Jazygia-Cumania,1850-09-13,1860-10-20,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,a669e3f79e382b5acece1d76dfee90ae19b068129543a2078950d5ee6bc245f5,https://www.openhistoricalmap.org/relation/2829395
+2829405,Regatul Ungariei,1751,1772,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,e650d1e9e7412fa5c2cb71e3c72195fb7eec67942495a147eb56a74989b93afa,https://www.openhistoricalmap.org/relation/2829405
+2829407,Comitatul Sălaj,1876-06-19,1921-07-26,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,3c858b3b02828e9b2741cc9dad0e770a2d6a0a39a3b3a001b59554869e4d969c,https://www.openhistoricalmap.org/relation/2829407
+2829444,Heves county,1902,1946-02-01,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,667a66d1c9c5b2371eb8461f3ad797e0d952b5e5f925024dd7b26bcc4c1da3fd,https://www.openhistoricalmap.org/relation/2829444
+2829445,Jász-Nagykun-Szolnok county,1902,1946-02-01,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,4548325daa125ff08f9ddf77ed0e8a18c318ca5115bcb3c2db9e02c23ad39db6,https://www.openhistoricalmap.org/relation/2829445
+2829450,Comitatul Bihor,1876-06-19,1921-07-26,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,d096b39c346941da9ad65f21cfa45139467453d329f96979f2a8f1845d337527,https://www.openhistoricalmap.org/relation/2829450
+2829451,Jász-Nagykun-Szolnok county,1876-06-19,1902,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,cc6e60543d0396250e7bba15c8e67df057d89ef3da9117d9a69a931d2499bbaa,https://www.openhistoricalmap.org/relation/2829451
+2829452,Heves county,1876-06-19,1902,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,8fe6dfd2b8782853959c5ba769bf0ba774f0567ed06714fbd0d26a0d91bf28e0,https://www.openhistoricalmap.org/relation/2829452
+2829460,Heves county,1860-10-20,1876-06-19,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,63a6a53ce55e93b7fc2e27e0f1090aaee2fa30524ebfda866431e8b3e6328859,https://www.openhistoricalmap.org/relation/2829460
+2829461,Zemplén county,1850-09-13,1860-10-20,OVERLAP_DRAFT,CLOSED_CHAINS,5,YES,NO,c8e17a6b4d46b756879a1426bbd336e7f1174ce4121b2550bd1b4baa3eb858ec,https://www.openhistoricalmap.org/relation/2829461
+2829504,Zemplén county,1860-10-20,1876-06-19,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,88b43660b7c28c933553079edab36cb3e115cc728985a6856a09f3d40bb8de88,https://www.openhistoricalmap.org/relation/2829504
+2829507,Zemplén county,1824,1850-09-13,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,9769a28050b1de4cef84718e01307bcde596bf693dd68e937aaef807d62ccd75,https://www.openhistoricalmap.org/relation/2829507
+2829508,Zemplén county,1910,1913,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,6f8aac34765ed71df8debb763c912503efecb85324b6469552657698fd1f4276,https://www.openhistoricalmap.org/relation/2829508
+2829509,Hajdú county,1876-06-19,1946-02-01,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,f121264fafe72aa2ce98a3634ee7dbf278245ac823d3caeda152abf8cd5ae032,https://www.openhistoricalmap.org/relation/2829509
+2829510,Szabolcs county,1876-06-19,1923,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,354771866c908d892773786431dc465c6a7c1595217f97eec85784843fbd6da8,https://www.openhistoricalmap.org/relation/2829510
+2829519,Județul Maramureș,1921,1940-08-29,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,50f99befe3fa797eb09e6a2ff13442c96819dbc6365d8652543a4d4ed4cd8a67,https://www.openhistoricalmap.org/relation/2829519
+2829528,Județul Timiș-Torontal,1920-06-04,1950-09-06,OVERLAP_DRAFT,CLOSED_CHAINS,5,YES,NO,2b7d9253d8fc135c6b4d4fc26428cd0446c91e53f8bbdd38ef0d1b508fc0e985,https://www.openhistoricalmap.org/relation/2829528
+2829529,Județul Arad,1921-07-26,1950-09-06,OVERLAP_DRAFT,CLOSED_CHAINS,5,YES,NO,6474e6a7fc336b7a1f5e1e6739c0ca58374c407cc29e44bbd997ab48f4e5f9aa,https://www.openhistoricalmap.org/relation/2829529
+2829532,Bereg county,1200,1850-09-13,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,fe5eecb8ef3c93cf538101a30d20a77b71fdc4be0a75489b632b2ead0f7c1dc3,https://www.openhistoricalmap.org/relation/2829532
+2829533,Bereg county,1876-06-19,1921-07-26,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,d671d59702ec086535117dbc1638e131dd2e88abac00f2b80ce5da9556e5e912,https://www.openhistoricalmap.org/relation/2829533
+2829534,Bereg-Ugocsa county,1850-09-13,1860-10-20,OVERLAP_DRAFT,CLOSED_CHAINS,5,YES,NO,7ba3547608b990b2c31161a6e9abdec19faed342d15b1c44cd0b508c04b43abb,https://www.openhistoricalmap.org/relation/2829534
+2829619,Circulus Cis-Tybiscanus,1824,1849-03-06,OVERLAP_DRAFT,CLOSED_CHAINS,4,YES,NO,75e077516039be8a6e9372b042dbc28cb4660bbbdf5b593438b1c319da88cd11,https://www.openhistoricalmap.org/relation/2829619
+2829711,Abaúj-Torna county,1850-09-13,1860-10-20,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,5,NO,NO,7efac7e13b6a5fbb325514bb726eceda78f8681e96d707c91f6dbc1774bbed0d,https://www.openhistoricalmap.org/relation/2829711
+2829714,Hajdú district,1609,1800,OVERLAP_DRAFT,CLOSED_CHAINS,6,NO,NO,d494e2caf5c3c561b6f6f2a1d03ce5721b923cfc1dad4704009f5c34971f752f,https://www.openhistoricalmap.org/relation/2829714
+2829716,Szabolcs county,1699-01-26,1800,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,bcf00550448798e0d4ce2b2015235d658831fa9528afb6c73be7959be61f7647,https://www.openhistoricalmap.org/relation/2829716
+2829717,Szabolcs county,1824,1850-09-13,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,0ecc86ceb1171c4f103046f6a553a51ac5d0aee46c38f2a00d60a461f40d1f4a,https://www.openhistoricalmap.org/relation/2829717
+2829718,Abaúj county,1824,1850-09-13,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,5,NO,NO,5622ed60f10a7f960577e725a244d3fb601f8ad6aa5be8040b9eb6e068515c2a,https://www.openhistoricalmap.org/relation/2829718
+2829719,Szabolcs county,1800,1824,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,261603124d89a62375a307ab1542329e7f3569fe847a974a09c3e011285b190e,https://www.openhistoricalmap.org/relation/2829719
+2829720,Borsod county,1050,1824,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,240f3c5b16ae3378c70e0ecb57366852b42d2991fb3bbebbfa1a60dac49682a4,https://www.openhistoricalmap.org/relation/2829720
+2829721,Zemplén county,1050,1800,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,7c16aa4a22b4c146abd9b80ac159b949da71c9ec5eaed4f86de9552dae4b961d,https://www.openhistoricalmap.org/relation/2829721
+2829722,Abaúj county,1790,1824,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,5,NO,NO,8c957ee6874e15b7df54ce1266a3e1c44438ebe8ce32b31fae6061576b02789d,https://www.openhistoricalmap.org/relation/2829722
+2829723,Circulus Trans-Tybiscanus,1800,1824,OVERLAP_DRAFT,CLOSED_CHAINS,4,YES,NO,8fd7665ce04e8f6cc2fc0eb329fc79a7c9d395c3b4dfc80c00546fbdfe02c3a6,https://www.openhistoricalmap.org/relation/2829723
+2829724,Circulus Cis-Tybiscanus,1800,1824,OVERLAP_DRAFT,CLOSED_CHAINS,4,YES,NO,a67a1c0fc9d11c526e6a13146a694396053cd565aff1e742ec43e1825fb918ce,https://www.openhistoricalmap.org/relation/2829724
+2829735,Hajdú district,1800,1850-09-13,OVERLAP_DRAFT,CLOSED_CHAINS,6,NO,NO,9a47b826c893ab884dcd126954db0234b70b1b9d28ebdf103a0907326f50b84e,https://www.openhistoricalmap.org/relation/2829735
+2829736,Circulus Trans-Tybiscanus,1779-04-23,1800,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,63bd8cabcaa5d169bbedbae31a7f2ac42c33579596c7ab74de26a377119f97b4,https://www.openhistoricalmap.org/relation/2829736
+2829737,Circulus Cis-Tybiscanus,1772-09-22,1800,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,b2307a07295e914f7c5072a10030bdd28e266eb88d51f2fdda32264e77c3ed2d,https://www.openhistoricalmap.org/relation/2829737
+2829738,Zemplén county,1800,1824,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,a6529fd33b25d5575e61513f9ab2a9b8661c792fa9a55f51eac8eb5de3011cb9,https://www.openhistoricalmap.org/relation/2829738
+2829740,Arad county,1790-04-26,1850-09-13,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,YES,4e1698100ea54501ef0c1cabed58086e4db47a3b4a600a5f9feac2bff843bbee,https://www.openhistoricalmap.org/relation/2829740
+2830029,Regatul Prusiei,1834-08-15,1835,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,fe9c57578ca4d971fe706e76ff2254198a67f3e19888797a057d13cf6be9e29b,https://www.openhistoricalmap.org/relation/2830029
+2830315,Czechoslovak Socialist Republic,1960-07-11,1990-03-29,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,5d53fdb4a9c93cf05ef77b59d2ba297193e0e5d78d590ff9c01d867788c3a726,https://www.openhistoricalmap.org/relation/2830315
+2830452,Regatul Prusiei,1791-12-02,1793-09-23,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,e6bf7e2d3eb109d8dc2f1adb9965c927b69e8a2ff724248789b5827b78370c7a,https://www.openhistoricalmap.org/relation/2830452

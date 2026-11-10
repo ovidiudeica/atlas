@@ -1,0 +1,61 @@
+﻿id,display_name,start_date,end_date,geometry_verdict,polygon_parts_status,admin_level,source_tag,source_fixme,member_geometry_sha256,ohm_url
+2693264,Generalbezirk Nikolajew,1941-09-01,1944-11-09,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,NO,8751c327fc6e98739746cc06e0b010a0511718abc59b5a93a0a6bc133695b447,https://www.openhistoricalmap.org/relation/2693264
+2693266,Generalbezirk Krim,1942-09-01,1944,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,4,NO,NO,88e1c79d22a89cba96a202e2ec61c40f7df8ccb4db074061314b2ec3bf57e702,https://www.openhistoricalmap.org/relation/2693266
+2693267,Reichskommissariat Ukraine,1941-09-01,1944-11-09,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,af199e8ac92b0dce3bcb029830a5f2ba99a301fb28622e3b847c59d110ae3e4b,https://www.openhistoricalmap.org/relation/2693267
+2693462,Kingdom of Hungary,1921-07-26,1921-11-10,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,2300572e4a487f0993edd39356697a72694d17a0a3eb6a3eb9ec28dd0c619c87,https://www.openhistoricalmap.org/relation/2693462
+2693463,"Regatul Sârbilor, Croaților și Slovenilor",1926-07-26,1929-10-03,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,91f8f4807f8fe3c18a1c773fb7189ae49f531e46ad292291815c9cd5c1dbfa09,https://www.openhistoricalmap.org/relation/2693463
+2693464,Regatul României,1919,1921,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,6903ea5d81812cae2f02e307f30d586935f2da7083ed4106c2d3b4e022e1b404,https://www.openhistoricalmap.org/relation/2693464
+2693465,Czechoslovakia,1920-05-19,1920-08-10,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,d8fdf0a790afc62963cd4e3d8e5136cb85648484825d47942a06cf22939d8f8e,https://www.openhistoricalmap.org/relation/2693465
+2693574,Confederația Germană de Nord,1867-07-01,1871-05-04,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,952e97e4d28a5afd735041221c017d92b491d33ef61a440073914c2c9c67af6a,https://www.openhistoricalmap.org/relation/2693574
+2693579,Regatul Prusiei,1867-07-01,1876-07-01,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,3,NO,YES,3e1310c483e7f36eeb75858269bfdb7ffbd0a854362dcd1e2c50fec961862cdc,https://www.openhistoricalmap.org/relation/2693579
+2693613,Regatul Prusiei,1907,1918-11-09,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,3,NO,YES,d047d332dbed2425fe10dd63feaffac5bebd5af6ed2fbdb8a612ba2c1cfe37b7,https://www.openhistoricalmap.org/relation/2693613
+2693946,Russian Empire,1795-10-24,1801-09-12,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,c738ec8579d37bffd79df5276d3a1c331c9cf74c019b43a8fdc6abfc6b74a2cd,https://www.openhistoricalmap.org/relation/2693946
+2693947,Russian Empire,1807-06-09,1809-09-17,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,b36b0cd6265739915f354e6836ee14e2d921b281abe1b9b5b1fe19097746b86c,https://www.openhistoricalmap.org/relation/2693947
+2693974,Uniunea statală polono-lituaniană,1637-03-10,1657-11-06,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,785ad35142a96b30d5fba4bb39f406592da95a940fb5e764b803f2c0cfa81e54,https://www.openhistoricalmap.org/relation/2693974
+2693975,Uniunea statală polono-lituaniană,1629-09-26,1637-03-10,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,ab386e6531299880d592b19c26cf4aeade9d695beb84cb97b78917310c32ff14,https://www.openhistoricalmap.org/relation/2693975
+2694007,Granița Militară,1822,1849-11-18,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,3,NO,YES,c0ee778322290780528a62cb333bd4df969802724ccc6e6a5dae1fcdc77eb0d2,https://www.openhistoricalmap.org/relation/2694007
+2694153,Gubernia Basarabia,1856-03-30,1878-07-13,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,b7eb2cb301a176652555c9374c050fe113435371998632924115276e5b15e08b,https://www.openhistoricalmap.org/relation/2694153
+2694154,Gubernia Basarabia,1878-07-13,1918,OVERLAP_DRAFT,CLOSED_CHAINS,4,YES,NO,72bd21b7f1f23e8c6303b2fb18c9ba2a8554ea5f8c8d424e54032d4e4616bb5d,https://www.openhistoricalmap.org/relation/2694154
+2694155,Imperiul Austriac,1859-11-10,1866-10-12,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,2,NO,YES,9a11b4e7f072e54679c0d9db0c991ea9591ee38c6c2fe93847f9bc2d654bcf69,https://www.openhistoricalmap.org/relation/2694155
+2694163,Țara Moldovei,1812-05-28,1856-03-30,OVERLAP_DRAFT,CLOSED_CHAINS,3,YES,NO,c198618f0687bab674743df24209565bd76921af1b493157ec96db9bc822b1a3,https://www.openhistoricalmap.org/relation/2694163
+2694164,Țara Românească,1417,1420,OVERLAP_DRAFT,CLOSED_CHAINS,3,YES,NO,761e004b909a365e3debc4420221b032f4d93ce6ae80b2dfc806e9f4e83843da,https://www.openhistoricalmap.org/relation/2694164
+2694165,Eialetul Bosnia,1851,1867,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,4,YES,NO,1967a209837f00a84fa4cc0f412f64013c3380606d595fa4c07a216b827bbfa8,https://www.openhistoricalmap.org/relation/2694165
+2694174,Silistria (1850),1840,1860,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,829e5c1da9efda5ccb887af1a0aa18b54d7da7d3026e63786543b34198fddc55,https://www.openhistoricalmap.org/relation/2694174
+2694176,Widdin,1840,1860,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,f890d88dc7bcb21eea53124baaec862b48e914ad216b396fb2f5f53a96ab4217,https://www.openhistoricalmap.org/relation/2694176
+2694212,Regatul Ungariei,1860-12-27,1867-05-29,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,111c3e58616c85743d4a61b71a5e3a076d34755994d3b702e2f0a32b53493ef5,https://www.openhistoricalmap.org/relation/2694212
+2694213,Regatul Ungariei,1849-03-07,1860-12-27,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,6ee1f98189dcf25c8c70edd9df8febbac6b6b6fe12f60fd6229aacad4669c5a6,https://www.openhistoricalmap.org/relation/2694213
+2694214,Regatul Slavoniei,1860-12-27,1868-09-26,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,3,NO,NO,282f9934d4a43b436a6256d7a96857c2b3b5e7b8cae00f7ff36b90da04586452,https://www.openhistoricalmap.org/relation/2694214
+2694215,Voivodina Sârbească și Banatul Timișan,1849-11-18,1860-12-27,OVERLAP_DRAFT,CLOSED_CHAINS,3,YES,NO,8f5113efc9bc091817336dccfb6e384257ef854398359fca19fb9d7d2d8ba190,https://www.openhistoricalmap.org/relation/2694215
+2694592,Regatul Prusiei,1866-10-01,1867-02-23,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,5e89574f49262a07a012913d796ae75fd72a6ecd088e30ae0f2a6a7b9e655423,https://www.openhistoricalmap.org/relation/2694592
+2694593,Regatul Prusiei,1815-06-09,1829-10-23,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,4bd386578766a04f621b37bfdae24c518140aac32d2892307acfcfb730245c59,https://www.openhistoricalmap.org/relation/2694593
+2694606,Regatul Prusiei,1850,1866-03-24,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,da11c6ff7df08b9f6eb1b61026c73e703a4730151321512816e6f320c6718841,https://www.openhistoricalmap.org/relation/2694606
+2694609,Regatul Prusiei,1835,1848-03-01,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,b98c5f8f63a4b8fd4fbaf35a62a6f065ba466aabc12a8ff641a693f24a2e5b4a,https://www.openhistoricalmap.org/relation/2694609
+2694624,Banat,1941-04-22,1944-10-20,OVERLAP_DRAFT,CLOSED_CHAINS,6,NO,YES,f49e94484bce16d09e0b5fafd5a724e24d90bd13ee7beb556ded8cda63dd92e2,https://www.openhistoricalmap.org/relation/2694624
+2694625,Pancsova,1902,1910,OVERLAP_DRAFT,CLOSED_CHAINS,9,NO,YES,8e7a262af1f02c9ff30f4762c8d6e3d661a5ff00bec489174d1900ab245bd2a7,https://www.openhistoricalmap.org/relation/2694625
+2694632,Serbia,1990-09-28,2006-06-05,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,c8a20e4cc0c5dd6ee41d6c0b0956d02f9d15a11320cd8fbbc400cbcbe83f13fe,https://www.openhistoricalmap.org/relation/2694632
+2694638,German Reich,1935-03-01,1936-07-03,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,032a110c81cb95ad1f7e31d698830c12b3b874ece93d971b78f0751622a097b0,https://www.openhistoricalmap.org/relation/2694638
+2694761,Voivodina,1968,1990-09-28,OVERLAP_DRAFT,CLOSED_CHAINS,6,NO,YES,59078cdfd2b59977cc42fca1275dfc5e7e3830571667a2efa4b360d46951a8bc,https://www.openhistoricalmap.org/relation/2694761
+2694777,RSS Moldovenească,1944,1991-05-22,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,ea64c70784f2847f0dadbeceab11a9177c51cfbd073465ff9f769fdf0bb54223,https://www.openhistoricalmap.org/relation/2694777
+2694778,Republic of Moldova,1991-05-23,1991-12-26,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,267b64bb944d9a751d0ec01c35bd87fd2f16c38e5406cd4146dd611f8dbdd6f0,https://www.openhistoricalmap.org/relation/2694778
+2694779,Republica Sovietică Socialistă Ucraineană,1954-04-26,1991-09-16,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,50597712c8acc2486e09fc5baffc84ac7872e44de9648912c3b07bd607172d59,https://www.openhistoricalmap.org/relation/2694779
+2694780,Ucraina,1991-09-17,1991-12-26,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,77e18f023badf8cabeaf32b9bf711d86f46cd0db636bd8a0c4c15827d7c38d13,https://www.openhistoricalmap.org/relation/2694780
+2694783,Regiunea Mykolaiv,1988-03-03,1991-08-24,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,NO,c0c85eceda2d568c97511c2ca2660d21f71a2418bfeb8ed37e99c96e8aad7de5,https://www.openhistoricalmap.org/relation/2694783
+2694784,Regiunea Mykolaiv,1954-02-17,1988-03-02,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,NO,cd8f56af236b417142ce175fcfd4c1edf6d122123f256d8010e837ba7ce7be2c,https://www.openhistoricalmap.org/relation/2694784
+2694806,Republica Sovietică Socialistă Ucraineană,1951-02-15,1954-04-25,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,50597712c8acc2486e09fc5baffc84ac7872e44de9648912c3b07bd607172d59,https://www.openhistoricalmap.org/relation/2694806
+2694807,Republica Sovietică Socialistă Ucraineană,1948,1951-02-14,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,c2717700fcbd7b0551c7d0c0bd9ef3282434aa7a41567dc59b1ec8c8fc0b3404,https://www.openhistoricalmap.org/relation/2694807
+2694811,Republica Sovietică Socialistă Ucraineană,1946-01-30,1948,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,fe64ae4073ab306647e910ba9d97477ebcaddcbeb1d8af228a80ce5e55bcc21a,https://www.openhistoricalmap.org/relation/2694811
+2694812,Slovacia,1969-01-01,1992-12-31,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,YES,94cb9fc67852fad2afb350160410af3ea8121e51d9b80ee3f791a537c963ecf2,https://www.openhistoricalmap.org/relation/2694812
+2694815,Ucraina,1918-02-09,1919-01-22,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,NO,ce93ffce17a5ea7443328bed1e3a2160f3cafa8de10d318d61f0553c7b11938a,https://www.openhistoricalmap.org/relation/2694815
+2695478,Regatul Bulgariei,1941-04-30,1943-07,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,5b011b190f8c89fefd0e0eec1aa396fd7d594fbe671ba0b80a42084f97129391,https://www.openhistoricalmap.org/relation/2695478
+2695633,Kingdom of Hungary,1921-11-10,1938-11-02,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,4c799dda0488fd3ef16f3ec14e4d017fb7917030ef1744dd75473cd597862c97,https://www.openhistoricalmap.org/relation/2695633
+2695821,Nova Odesa Raion (1962—1973),1962-12-30,1973-09-25,OVERLAP_DRAFT,CLOSED_CHAINS,6,NO,NO,6e3a2a336edfdf487275719a353aa50a709248ae902b38449b3bfa481488ea1b,https://www.openhistoricalmap.org/relation/2695821
+2695822,Nova Odesa Raion (1973—2020),1973-09-25,2020-07-19,OVERLAP_DRAFT,CLOSED_CHAINS,6,NO,NO,f4cdeadddf115a43f7f1158d7d9c2e13120d42cdab96d161e5f9886a6235df83,https://www.openhistoricalmap.org/relation/2695822
+2696309,Coroana Regatului Poloniei,1569-07-01,1773-09-18,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,3,NO,YES,41b0c8ad8718639aeffcb61e0da4b7d398a906d90ed7adabb3f4edcf3bb19a02,https://www.openhistoricalmap.org/relation/2696309
+2696427,Bracław Voivodeship,1566,1793,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,NO,40b7e08c8c04a8abc8855d6a959604de872111bf045d8e90b92cd51ea52a3563,https://www.openhistoricalmap.org/relation/2696427
+2696428,Volhynian Voivodeship,1569,1773-09-18,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,0ae5f4fe93234238b7803e64f6d58494e12ebe30d48d1f3362cb19618089299d,https://www.openhistoricalmap.org/relation/2696428
+2696429,voievodatul Podolia,1434,1772-08-05,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,NO,2ffea0c134fc61689cf033aea2627b5369f683e33259282f81469e3fc0d014c8,https://www.openhistoricalmap.org/relation/2696429
+2696431,Ruthenian Voivodeship,1434,1773-09-18,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,15090c8a49407dc31a9b04e3ddd9f9b0b149541c4902ef77c58b337810525ea0,https://www.openhistoricalmap.org/relation/2696431
+2696482,Generalbezirk Kiew,1942,1944,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,4,NO,NO,f8cdd738269c4a271a018b9d4288be0acdd2d04057bd517efff2281899db5f3e,https://www.openhistoricalmap.org/relation/2696482
+2696487,Volhynia Governorate,1796,1921,OVERLAP_DRAFT,CLOSED_CHAINS,4,NO,YES,7112ad833fac2bfc971bf72b63383d054f63722844f7d18bc78f36e607439227,https://www.openhistoricalmap.org/relation/2696487
+2696515,German Reich,1922-06-20,1935-03-01,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,78a2c0dc84ac1dc0ab7949c8cc833f8028e4e328decb3346e0d506d0dd021a10,https://www.openhistoricalmap.org/relation/2696515
+2696516,German Reich,1920-12-24,1922-06-20,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,f16c664f1513e6bc591fb942787ff6de9dd4ef92b649f1bd6b8ca3dab44d2a25,https://www.openhistoricalmap.org/relation/2696516
