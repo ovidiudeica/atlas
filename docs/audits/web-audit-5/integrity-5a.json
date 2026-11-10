@@ -1,0 +1,1371 @@
+{
+  "baseCommit": "d1ff22c8844ea1b460a0fa9f822fc938e9eba624",
+  "files": [
+    {
+      "path": "data/candidates/phase3/actual/catalog-v1.json",
+      "sha256": "f4d83b5ffdf4b4971d3ed9e9d981249388c0ded99ef2b8fa14ed8ba3e16bbae4",
+      "bytes": 4698839
+    },
+    {
+      "path": "data/candidates/phase3/actual/catalog-v2.json",
+      "sha256": "e427469ad376cb111ba36758d47286232d291a483c113749be277a9013ac9eed",
+      "bytes": 4794789
+    },
+    {
+      "path": "data/candidates/phase3/actual/manifest-v1.json",
+      "sha256": "8ca48709958f68c802a54ae02e1cefa3fd71f4275773399c33bbaf716ba45815",
+      "bytes": 16709
+    },
+    {
+      "path": "data/candidates/phase3/actual/manifest-v2.json",
+      "sha256": "122b2176162c7eeb94f5584626d2a201514b0f261fce606f44385d01b7295fb3",
+      "bytes": 1650
+    },
+    {
+      "path": "data/candidates/phase3/actual/manifest-v3.json",
+      "sha256": "1c159f9b4df4152cfaa548eef061529cf7a00c960316cd1b532c3f1e77b59bea",
+      "bytes": 8953
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-administrative-simplified-v1.geojson.gz",
+      "sha256": "30dbaca4bf2b26c49bc8bbbdf17d05f8ab964fd831d48540205260a2d6c82b7c",
+      "bytes": 1396510
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-administrative-v1.geojson.gz",
+      "sha256": "97251a70da54b84d352d6616d10ff8d9c57c113161b65ca648d60224386a2140",
+      "bytes": 2559768
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-administrative-v2.geojson.gz",
+      "sha256": "8d5ed9f140af07bac8e5babc4ee33de53474e77f75be1f6a22512c7432a929b2",
+      "bytes": 2686670
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-cuatm-180-reconciliation.json",
+      "sha256": "49c4e6e247fea5b15ace3642b49f6d2743e009f8805422ee76f92928694ea4d5",
+      "bytes": 36993
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-cuatm-source-collisions.json",
+      "sha256": "e0e51d76c13409b61298435339140692bf9dabd45451d5488882a4d77ee71430",
+      "bytes": 567
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-statistical-simplified-v1.geojson.gz",
+      "sha256": "58c18bada84fa0db2aa226369775c3d92d56997a4542cc83a9eee7d7e1d73473",
+      "bytes": 245875
+    },
+    {
+      "path": "data/candidates/phase3/actual/md-statistical-v2.geojson.gz",
+      "sha256": "444f4e47b9d21abfb440a132a9a8e12897b299b046f92fa0cbfafe4c3349bf93",
+      "bytes": 366565
+    },
+    {
+      "path": "data/candidates/phase3/actual/ro-administrative-simplified-v1.geojson.gz",
+      "sha256": "97958728eb457ac25dff44a3a6e31becc0589b3724f724169fc9d77f5276ae23",
+      "bytes": 6317638
+    },
+    {
+      "path": "data/candidates/phase3/actual/ro-administrative-v1.geojson.gz",
+      "sha256": "9b52cb8f6187440c2b613726c578b49885d2f0e7f67635b0782678afb4a6e120",
+      "bytes": 12575973
+    },
+    {
+      "path": "data/candidates/phase3/actual/ro-administrative-v2.geojson.gz",
+      "sha256": "9b52cb8f6187440c2b613726c578b49885d2f0e7f67635b0782678afb4a6e120",
+      "bytes": 12575973
+    },
+    {
+      "path": "data/candidates/phase3/actual/ro-statistical-simplified-v1.geojson.gz",
+      "sha256": "c1f0e41ce05aa20e80618c427883c15425496b9d17cc4b97d41e2cc527de6197",
+      "bytes": 615948
+    },
+    {
+      "path": "data/candidates/phase3/actual/ro-statistical-v2.geojson.gz",
+      "sha256": "e970bdf9abcee4725a4d49e429ccfcc0b730a92721ddd169d94781e676579b2e",
+      "bytes": 1245533
+    },
+    {
+      "path": "data/candidates/phase3/actual/simplification-overlaps-v1.json",
+      "sha256": "b331db036999d3be37a82bbf069fa64bee6243308b462ecd987a46b18b8bcb8c",
+      "bytes": 3093
+    },
+    {
+      "path": "data/candidates/phase3/actual/simplification-parent-cover-v1.json",
+      "sha256": "f3c4107368fb5b3a8efd9061d16e47eec2489df8036ae171c056db54df73921c",
+      "bytes": 41352
+    },
+    {
+      "path": "data/candidates/phase3/actual/simplification-qa-v1.json",
+      "sha256": "dc4d2cc250b3032b749306a3bca7c01af9d1d735dba96036ec4bdec12dc57e2e",
+      "bytes": 3303
+    },
+    {
+      "path": "data/candidates/phase3/actual/source-exception-decisions-v1.json",
+      "sha256": "c25ab60f45a1fd3d8b8affe10d5f3afb1325b23139f84356124a6045da1ad8ee",
+      "bytes": 5211
+    },
+    {
+      "path": "data/candidates/phase3/actual/validation-v1.json",
+      "sha256": "ea022aa6b62716022ea6a7f741cbb3dc22ad1a241202eea0d29c0eed537ae1cc",
+      "bytes": 13958
+    },
+    {
+      "path": "data/candidates/phase3/actual/validation-v2.json",
+      "sha256": "cf6eb8503001027ccf97becf8eaf58f16c04d3c8cb2f623097236ebc937af97c",
+      "bytes": 1913
+    },
+    {
+      "path": "data/candidates/phase3/sources/cuatm-2025.json.gz",
+      "sha256": "2c7387592c72dc29935367582943e95fbc87a606f3b1081dd18523dba0687374",
+      "bytes": 59933
+    },
+    {
+      "path": "data/candidates/phase3/sources/edge-match-evidence.json",
+      "sha256": "0cc7795dba931f717aa71fba84037e83fdf9160fe49b84d79aeaa9b737962020",
+      "bytes": 7501
+    },
+    {
+      "path": "data/candidates/phase3/sources/md-admin-additional.geojson.gz",
+      "sha256": "8a64f94f2868d4fbe68f1851fc95fcd17d13ce2e550eb25707ec206860152c3a",
+      "bytes": 132546
+    },
+    {
+      "path": "data/candidates/phase3/sources/mdstat-additional.geojson.gz",
+      "sha256": "47285250c5f45e96b685e1799559fb6db5ea7a0a505e4a32327c39b3057e7d31",
+      "bytes": 422642
+    },
+    {
+      "path": "data/candidates/phase3/sources/nuts-md-2017.json",
+      "sha256": "e50b59d1fa04a44374c8e5e8aec97f98a3642ab14de86d45c2019c7e4709f5de",
+      "bytes": 2269
+    },
+    {
+      "path": "data/candidates/phase3/sources/nuts-ro-2024.json",
+      "sha256": "2fc75c8748d2ee6f6b61a39961105381f2b1bcb96aae4559091923a5e00c83af",
+      "bytes": 5370
+    },
+    {
+      "path": "data/candidates/phase3/sources/rostat-additional.geojson.gz",
+      "sha256": "31f87f67f13323d47124daf8403414a74d6ca78ca95aefadb1a4ce19614f461f",
+      "bytes": 1249187
+    },
+    {
+      "path": "data/candidates/phase3/sources/siruta-2026.json.gz",
+      "sha256": "5a5096fabccae8abbf58d614060d7a2927597f4e0d5d95097b66cba63fe40f18",
+      "bytes": 286729
+    },
+    {
+      "path": "data/candidates/phase3/sources/tag-match-evidence.json",
+      "sha256": "8b3d740ea4e35f59eaff9299ad5a22b4fc1f24c248b85a2e4c8dccc0195aedc6",
+      "bytes": 4545
+    },
+    {
+      "path": "docs/audits/SIM-CLOSE-FINAL-REPORT.md",
+      "sha256": "49030ec31758be516323993301a2d211b7ac0139c010370f58a014ca261a0129",
+      "bytes": 13027
+    },
+    {
+      "path": "docs/audits/SIM-R2A-EVIDENCE.json",
+      "sha256": "6bf2919535d2464e85dde821fd5afe6ab4620bb2d8023786ebfc94b09c252bc8",
+      "bytes": 5029
+    },
+    {
+      "path": "docs/audits/SIM-R2A-VERIFIED-SYMBOL-PILOT.md",
+      "sha256": "3419b5dac7394e695e64d25a8da07fb3ad681a7ef414366bd66c413f360d02e8",
+      "bytes": 4612
+    },
+    {
+      "path": "docs/audits/SIM-R3-EDITORIAL-SYMBOLS.md",
+      "sha256": "0dae3615ce8e35d5a87480d8938cb2a3ca040687f50c10e82464b417707ea69c",
+      "bytes": 6480
+    },
+    {
+      "path": "docs/audits/SIM-R31-ASSET-CHECK-20261108.json",
+      "sha256": "28d01516f89003adc7c6e49292ac11fa5bbfd56d4e8c86d7909bc4a30e68ac15",
+      "bytes": 83643
+    },
+    {
+      "path": "docs/audits/SIM-R4-COVERAGE.json",
+      "sha256": "33cb883b565895052ba65d4578c812346c79ad86dc88ab6de2cb8e15b5a0802f",
+      "bytes": 416449
+    },
+    {
+      "path": "docs/audits/SIM-R4-GLOBAL-SYMBOLS.md",
+      "sha256": "46b06e0224036c150c2601bdcbc9d9bd4d414a2f1b0b01da647e3739b349b792",
+      "bytes": 4610
+    },
+    {
+      "path": "docs/audits/SIM-R4-IDENTITIES.json",
+      "sha256": "0107bf9545d2e29853bd2046af731243e0506f953f74a1624ca182627efc1d7b",
+      "bytes": 273121
+    },
+    {
+      "path": "docs/audits/SIM-R5-AUTHENTICITY.md",
+      "sha256": "2fad5249c69a1f916acb1415d0c2bcdb1f060c4976dd90418832523445c03c20",
+      "bytes": 17120
+    },
+    {
+      "path": "docs/audits/SIM-R5-RESULTS.json",
+      "sha256": "4f97c41c66454e29751d84b2e77fd7d0087ad65d350b17b4d6afd1194d899908",
+      "bytes": 31643
+    },
+    {
+      "path": "docs/audits/SIM-R6-PRIORITY-EXCEPTIONS.md",
+      "sha256": "3bfc9949c9841b4f9864cdece29030ee9dcd580856f6253e8fcbf6298692c042",
+      "bytes": 24755
+    },
+    {
+      "path": "docs/audits/SIM-R6-RESULTS.json",
+      "sha256": "c85cde9eb5c06b95bcb23f89fa35c320208acaa7b93a71c79ec45d490845584d",
+      "bytes": 35434
+    },
+    {
+      "path": "docs/audits/SIM-R7-EVIDENCE-AND-RIGHTS.md",
+      "sha256": "cdea762cf3a8089937ba33928e3eac677183fa410098273bedf833ec61106c1f",
+      "bytes": 10880
+    },
+    {
+      "path": "docs/audits/SIM-R7-RESULTS.json",
+      "sha256": "733e1a4b9a516a11ec259b4f4316fb9de3c05cacf4f4c72667d455381f284bfa",
+      "bytes": 6691
+    },
+    {
+      "path": "docs/audits/SIM-R8-RESULTS.json",
+      "sha256": "4e013439df26c15dbab39f7b68526100ae3c42c1acef676be52cffce0c5d3707",
+      "bytes": 4403
+    },
+    {
+      "path": "docs/audits/SIM-R8-TARGETED-EVIDENCE.md",
+      "sha256": "364b09b52f968432fe128e60ef9149b5e715dc809ef850525afea7ec50f13f7d",
+      "bytes": 9118
+    },
+    {
+      "path": "docs/audits/sim-close/closure-manifest.json",
+      "sha256": "1bbf0ce5a7b706f1eb7ebbe2191895f151948d5a4a64f6c543e5340dfc770066",
+      "bytes": 45833
+    },
+    {
+      "path": "docs/audits/sim-close/exceptions-ledger.json",
+      "sha256": "4ef77f657437a1ff8c8d481b6cecf8f13bcffe74a3bb912ed6f4a02347f37d61",
+      "bytes": 73173
+    },
+    {
+      "path": "docs/audits/sim-close/reconciliation.json",
+      "sha256": "6a24ff19fd72f7203524caac5d46ae2f1cbb5e69a8052c22d305b5bbbebbc7fe",
+      "bytes": 13727
+    },
+    {
+      "path": "docs/audits/sim-close/reopening-policy.md",
+      "sha256": "daac4607d8200e644d83f2479b05ea374125619e1e848198ef2eec2e2d990616",
+      "bytes": 3105
+    },
+    {
+      "path": "docs/audits/sim-close/rights-ledger.json",
+      "sha256": "3c68667d704997b8d87b32359091ac148220ba15e98c6ca5f749a2bf9b9b201a",
+      "bytes": 184448
+    },
+    {
+      "path": "docs/audits/sim-close/scope-verification.json",
+      "sha256": "1162e0dc6e7027089b8e813e1438eeb484fe32d40f5fc16e33e2e38c69857b45",
+      "bytes": 1160
+    },
+    {
+      "path": "docs/audits/sim-close/source-index.json",
+      "sha256": "2eb125af63a95aaa6d7915bcfadff9208b1cd71f282ae501cf3669dc986fadf1",
+      "bytes": 37257
+    },
+    {
+      "path": "docs/audits/sim-close/technical-backlog.json",
+      "sha256": "462f694ee46133ffcf169e0cde08af35937b71582e60f611d04d76f8d87a953c",
+      "bytes": 32574
+    },
+    {
+      "path": "docs/audits/sim-close/validation.json",
+      "sha256": "689e27ed36bbc73fe2ff3885491bf4561e3ae85749d5a25f0dcd93034aa15206",
+      "bytes": 5633
+    },
+    {
+      "path": "docs/audits/sim-r5/access-reinvestigation.json.gz",
+      "sha256": "04f518311a751a651e8e9dee19e69b0e393143ce4b73ee1b29a97f45c57f619d",
+      "bytes": 88086
+    },
+    {
+      "path": "docs/audits/sim-r5/annex-visual-reviews.json",
+      "sha256": "7f01a7791339bb0662f706ba4a8918e0b233f3fd56473e387367c62d32650132",
+      "bytes": 42951
+    },
+    {
+      "path": "docs/audits/sim-r5/article-history.json.gz",
+      "sha256": "a60e029e9a0f93180ae5294fb20d10a85b876e41c44751ec8e785cafad25ad0d",
+      "bytes": 355600
+    },
+    {
+      "path": "docs/audits/sim-r5/campulung-sources.json",
+      "sha256": "10e30047cd12c06ffb2782e0a706b000c8d205e937b9523ca7cb633b2f42645c",
+      "bytes": 1477
+    },
+    {
+      "path": "docs/audits/sim-r5/document-searches.json.gz",
+      "sha256": "99792f19a7191caaca63ad891ae91ad4aecf1f420d93e8f6f0e902e936b1d5d0",
+      "bytes": 442745
+    },
+    {
+      "path": "docs/audits/sim-r5/documentary-sources.json.gz",
+      "sha256": "a835b2ce91b6e3b7f7babc1599c440fb639dedc0ea5519e1051dd6cc91ce6708",
+      "bytes": 107868
+    },
+    {
+      "path": "docs/audits/sim-r5/graphic-checks.json",
+      "sha256": "6461bb4f233eba3e60d288bbaef0d2689d583805807923e97a129d33e5cf4896",
+      "bytes": 653
+    },
+    {
+      "path": "docs/audits/sim-r5/historical-warning-sources.json",
+      "sha256": "ba2e72a42adb6c4b3fdd40845256704ffd04710da3bc7f02f21e29a6243b117b",
+      "bytes": 3275
+    },
+    {
+      "path": "docs/audits/sim-r5/identity-warning-review.json",
+      "sha256": "da4699913ba087f9f98131dfffd08521cb3bc3a7917a8a531531aae630bcd6bc",
+      "bytes": 10052
+    },
+    {
+      "path": "docs/audits/sim-r5/image-checksums.json",
+      "sha256": "0db99c491afe05b848608bf0e7e0da5620717d5b29130203edfedb338da312a5",
+      "bytes": 961278
+    },
+    {
+      "path": "docs/audits/sim-r5/initial-inventory.json",
+      "sha256": "57102082421ecbc058a9bdefec6866fa39bf40cae9041449eda2e579b87439d5",
+      "bytes": 928404
+    },
+    {
+      "path": "docs/audits/sim-r5/local-source-comparisons.json",
+      "sha256": "a237cee66b453fad6460ba71f5531ec120f216286eae365cff7447680603c5ad",
+      "bytes": 834
+    },
+    {
+      "path": "docs/audits/sim-r5/manual-decisions.json",
+      "sha256": "11959bf9cc4005461130cbda85ef25f806d24d2c4716820102bbe21bb2d63a48",
+      "bytes": 117823
+    },
+    {
+      "path": "docs/audits/sim-r5/per-symbol-verdicts.csv",
+      "sha256": "c4a95596c6762df936e5bb5ed49ae50c099861b631758eea96d6b9509057b0f6",
+      "bytes": 2077777
+    },
+    {
+      "path": "docs/audits/sim-r5/primary-linked-sources.json.gz",
+      "sha256": "9d8dadc1e4aca3fc89389ce77f29933f15c7942147656ea4b81abde2114eafd4",
+      "bytes": 16080
+    },
+    {
+      "path": "docs/audits/sim-r5/primary-pdf-text.json.gz",
+      "sha256": "e03222b20b09fa80963a55fa12c1f7f1201c0e934bd9053bf6ca4c797f84fc37",
+      "bytes": 68476
+    },
+    {
+      "path": "docs/audits/sim-r5/protected-files.json",
+      "sha256": "c3cb39d9ef02b990a2007581ed04e108d36388fca48c62c18280329c7b7174a3",
+      "bytes": 12408
+    },
+    {
+      "path": "docs/audits/sim-r5/replacement-provenance.json",
+      "sha256": "b7bb499659b586ef30762556e062a4da870841f0252c4a111dccbd76fd79cefe",
+      "bytes": 1194
+    },
+    {
+      "path": "docs/audits/sim-r5/reuse-primary-sources.json",
+      "sha256": "40e290804dc28e5ae906bf5d7745a23286ad6694a048507e660a5c3df4251ffb",
+      "bytes": 1561
+    },
+    {
+      "path": "docs/audits/sim-r5/romania-flag-inspected.svg",
+      "sha256": "57e1c4d27feec8e7a459e2dc522b9e6ec3eec996d9504733a9a17d9b4fce3026",
+      "bytes": 297
+    },
+    {
+      "path": "docs/audits/sim-r5/source-metadata.json.gz",
+      "sha256": "cb70338bb0de49107ca5e4d86f09a5e511acbb7d7b4544248acb4da383924e24",
+      "bytes": 24915546
+    },
+    {
+      "path": "docs/audits/sim-r6/access-recovery.json.gz",
+      "sha256": "690dd404a6c9ede776be807534eb9e7b7af5521eef4cf66eb170dcc2d63f88f9",
+      "bytes": 27696
+    },
+    {
+      "path": "docs/audits/sim-r6/baseline.json",
+      "sha256": "5df5e3a5baa66eaa7d39b77a983ddf765eca04002475e9d8de35f24900852d49",
+      "bytes": 540992
+    },
+    {
+      "path": "docs/audits/sim-r6/browser-source-attempts.json",
+      "sha256": "7d876ec8e2e86f7a68390ce6794a7a008e5f58bdaf97f6b81906c9b0f45b6a04",
+      "bytes": 897
+    },
+    {
+      "path": "docs/audits/sim-r6/browser-source-http1-attempts.json",
+      "sha256": "1c3c630d233883222e4a418c6e7deb74df644301d7050e8d5fae2928dbba10a9",
+      "bytes": 960
+    },
+    {
+      "path": "docs/audits/sim-r6/documents.json",
+      "sha256": "066a794516628c474768ecb83925911fe4f88ee81e08b09719537bb51bfe021b",
+      "bytes": 7967
+    },
+    {
+      "path": "docs/audits/sim-r6/gagauzia-flag-rights.json",
+      "sha256": "24f24110063a809745ef4b77f74deb501e96976cdd931eb7d8529ae7410b9f40",
+      "bytes": 864
+    },
+    {
+      "path": "docs/audits/sim-r6/historical-files.json",
+      "sha256": "b2b2e4bb2913d35745f22a8b607ff60759ffcf8be568f8a99531725f73822990",
+      "bytes": 986
+    },
+    {
+      "path": "docs/audits/sim-r6/image-metadata.json",
+      "sha256": "ef8c2913c30cec313d23f99580327e20064ec2f6f1dbdd2be6b79d518c6bb082",
+      "bytes": 31588
+    },
+    {
+      "path": "docs/audits/sim-r6/priority-media.json",
+      "sha256": "68a27f4f470b86979c00d8729f09b84588647bf1eebc7f031910d36386fd4ec6",
+      "bytes": 15561
+    },
+    {
+      "path": "docs/audits/sim-r6/priority-visual-findings.json",
+      "sha256": "23c27df196629606900da1b083d52966e65753c05965e94c0dfba472b50a32c7",
+      "bytes": 5185
+    },
+    {
+      "path": "docs/audits/sim-r6/replacement-provenance.json",
+      "sha256": "d42788d53b96f04479f538522f6277b01d77f4cde5df9e2b9d0cd318b3ef283c",
+      "bytes": 1163
+    },
+    {
+      "path": "docs/audits/sim-r6/rights-investigation.json",
+      "sha256": "326e9da994cb9627ab28c1ce4a956d2205d74976fdd41c7e236c9a32b1aa0614",
+      "bytes": 72570
+    },
+    {
+      "path": "docs/audits/sim-r6/rights-review.json",
+      "sha256": "b57c87b77cd68d4bf13af670c319055f86b0b538b773fdb65092e19c47fdf9fd",
+      "bytes": 153689
+    },
+    {
+      "path": "docs/audits/sim-r6/rights-visual-findings.json",
+      "sha256": "60bb6dc886e8c98fccced45e58d1336bc5cef050e7463550e3340e964dfd6fb1",
+      "bytes": 11100
+    },
+    {
+      "path": "docs/audits/sim-r7/baseline.json",
+      "sha256": "6a71a21d725bca7ec1a404d3dcba31419faea1f61f3ed00aeee01237df489a36",
+      "bytes": 903346
+    },
+    {
+      "path": "docs/audits/sim-r7/changes.json",
+      "sha256": "cebfedcae65ee121389827761ae0b548cb2d7aa19d801fedca2f2046d5036c03",
+      "bytes": 106
+    },
+    {
+      "path": "docs/audits/sim-r7/chisinau-additional-documents.json",
+      "sha256": "8327d652025e8be9d2637fe237f3f1171644ac777081e88476b4d5df11969d00",
+      "bytes": 2363
+    },
+    {
+      "path": "docs/audits/sim-r7/ci-platform-retry.json",
+      "sha256": "5427b41b992340d2884f7b49c525cd1f71e651de66b7932c7bbcd2acd5af750f",
+      "bytes": 742
+    },
+    {
+      "path": "docs/audits/sim-r7/commons-api-retry.json",
+      "sha256": "858a909d567440ce9918fe41a77a83fb25651152672a3d0039f9dd193f11aaea",
+      "bytes": 2465
+    },
+    {
+      "path": "docs/audits/sim-r7/duplicate-review.json",
+      "sha256": "7b97ba696930a6a32d7727aeba1e0179700faeba35cc8f274daead538616c5cf",
+      "bytes": 969
+    },
+    {
+      "path": "docs/audits/sim-r7/evidence/chisinau-disposition-537d-2020.pdf",
+      "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+      "bytes": 7254116
+    },
+    {
+      "path": "docs/audits/sim-r7/evidence/harghita-hcj6-2026.pdf",
+      "sha256": "7cb5a3ac6d1860f2f3188d7c9d3fc38cd632a15a896d9144a56beb4524f7a397",
+      "bytes": 102732
+    },
+    {
+      "path": "docs/audits/sim-r7/gzip-platform-investigation.json",
+      "sha256": "5bdb2628442a9af04e618207b56e49905428fc0627aaa2808e1799a238af40e7",
+      "bytes": 772
+    },
+    {
+      "path": "docs/audits/sim-r7/historical-files.json",
+      "sha256": "c3f30237dd2f370c3fb75e1249e5aa1fabc4d3f3e8e4eaf64f700edbaf6615dc",
+      "bytes": 1441
+    },
+    {
+      "path": "docs/audits/sim-r7/image-metadata.json",
+      "sha256": "fa6172d7faf3b00d9417dbdee85ab40941701842f5eb46821117d7668181acb0",
+      "bytes": 35680
+    },
+    {
+      "path": "docs/audits/sim-r7/institutional-recovery-reviewed.json.gz",
+      "sha256": "5b09a3f39890bc0d359f88cc6be6d9de11bbf68d34930c2933d152dcdab33229",
+      "bytes": 399788
+    },
+    {
+      "path": "docs/audits/sim-r7/institutional-recovery.json.gz",
+      "sha256": "a093a5a890450e53cc5d35d964a4bd0d5c8b80b2824e3edb4551c1ad4a3e7b7b",
+      "bytes": 399841
+    },
+    {
+      "path": "docs/audits/sim-r7/institutional-wikipedia-followup.json",
+      "sha256": "e62da7c6e5923cf3b3e93638c7f30eb9b315cc29202ed589223e13619249bb47",
+      "bytes": 3382483
+    },
+    {
+      "path": "docs/audits/sim-r7/pdf-structure-checks.json",
+      "sha256": "11f0326b3e8d118c157e24f67e4292fde4203de5e9ad2c700064926e25014251",
+      "bytes": 809
+    },
+    {
+      "path": "docs/audits/sim-r7/primary-fallback-attempts.json",
+      "sha256": "a8ab2eee4e74655dc21f20e273a41af19303a87b13d08f571032637dd106efb7",
+      "bytes": 781
+    },
+    {
+      "path": "docs/audits/sim-r7/priority-commons-check.json",
+      "sha256": "27035188690bfc814638992a791b1796646bfd6267b3491bd70ac922d132132a",
+      "bytes": 52012
+    },
+    {
+      "path": "docs/audits/sim-r7/priority-documents.json",
+      "sha256": "c65bc754d37b4c8eb6cc2a97b2d791062bcd4f8936a204a74529396d112f83dd",
+      "bytes": 6155
+    },
+    {
+      "path": "docs/audits/sim-r7/priority-exceptions.json",
+      "sha256": "c0afc81c3cc2cd4e5cafcbde39551661e13ee4426da3b2280856f8ca7aa6ea12",
+      "bytes": 155458
+    },
+    {
+      "path": "docs/audits/sim-r7/quarantine.json",
+      "sha256": "96bb25db5e2d93b98734a999bbe7463ad3b894e1931f099454c9aa2fe666f59f",
+      "bytes": 28988
+    },
+    {
+      "path": "docs/audits/sim-r7/recovered-document-evidence.json",
+      "sha256": "c9efb7de886490f28b4568463d7c31b712a06462e2a5d18d8d92ae541ad92967",
+      "bytes": 3771
+    },
+    {
+      "path": "docs/audits/sim-r7/rights-review.json",
+      "sha256": "d63109dc781bde64a707b2fbc7449c0f0a1c11b3f0e2373eae429f42bc177a8f",
+      "bytes": 329324
+    },
+    {
+      "path": "docs/audits/sim-r7/rights-source-investigation.json",
+      "sha256": "7448400addcb7035c4a8d75dd70bab319630b91c0dd7b3ef07760d97df7def77",
+      "bytes": 268217
+    },
+    {
+      "path": "docs/audits/sim-r7/search-0.json",
+      "sha256": "02b56a2daf618dc87a33146402a6d1ba5412dedad64cf2cf8ab522456d5111d7",
+      "bytes": 3907
+    },
+    {
+      "path": "docs/audits/sim-r7/search-1.json",
+      "sha256": "0687d90cf0d89b28d034ddf4f876f576f99a7deb2d28f424e1384ec9e7c54716",
+      "bytes": 12553
+    },
+    {
+      "path": "docs/audits/sim-r7/search-2.json",
+      "sha256": "2c476e33c72d50525f594c6e035b81b5014209929c7891224916cab0f290ec51",
+      "bytes": 13544
+    },
+    {
+      "path": "docs/audits/sim-r7/search-3.json",
+      "sha256": "3a21fe412e038672deb04c2c2bc4ef415dab9c85dfd81948a4a8ad3fda1b3841",
+      "bytes": 7943
+    },
+    {
+      "path": "docs/audits/sim-r7/sim-r6-publication-confirmation.json",
+      "sha256": "c77ea9a086be83660f293bff1429e977f8bee969542d3953a3049aa5d3022cde",
+      "bytes": 719
+    },
+    {
+      "path": "docs/audits/sim-r7/sim-r6-results-baseline.json",
+      "sha256": "273a05e2e7bb97528c1a38969f73d93a8d8b105a2583c40b0ddc5d1d4ef259be",
+      "bytes": 35447
+    },
+    {
+      "path": "docs/audits/sim-r7/validation.json",
+      "sha256": "5144039f08549cadd74ad246028bc452808aa33ce06804a2be597d1a355d7c00",
+      "bytes": 2057
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-0.json",
+      "sha256": "302f2d31ad46c387159527c9756b84d866f7f1bcf1fbb16096e35dc9ed1fb21b",
+      "bytes": 16273
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-120.json",
+      "sha256": "2e1da06aa9a591fb75eed456cff6ebbb8ef27c2de15b18a55b715fa1c9987e41",
+      "bytes": 17466
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-150.json",
+      "sha256": "45cbf68fa97adc54f23c0845d939f10377ba520148e29ea42e60c95b7f061020",
+      "bytes": 18098
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-180.json",
+      "sha256": "858772a6fd30762820e1e4cb0c00f7cf547960785a3cafd74779aef76b59584e",
+      "bytes": 18047
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-210.json",
+      "sha256": "5d676d6e938ed00a5a4faa032a7842f488e349953033cdfb890ed71eef30ec56",
+      "bytes": 17807
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-240.json",
+      "sha256": "2ca0246ab560678d07a897698b12d3635472171f07cbf105e32adbeaa98d9461",
+      "bytes": 19372
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-270.json",
+      "sha256": "9e81524210a06275c47117ee16f54f13971637b2bda4d1bded1e2633611f1918",
+      "bytes": 18503
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-30.json",
+      "sha256": "42c900852ac51c6ddb92e52ea0cb8ea6b8f53ce6e89836a10bc6bc38ac3f14e3",
+      "bytes": 17272
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-300.json",
+      "sha256": "f1e4b5e474302292b1730fd4c1e4ee9809af3d8b74e172030b4795036c787ca1",
+      "bytes": 19732
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-330.json",
+      "sha256": "e7f92012b6ac9ab3fe97298a6682143063d57ff0e38f051b3f88b9f6ae902e97",
+      "bytes": 20621
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-360.json",
+      "sha256": "ea294cacdedfd9b5e9a6c061baad3ee59b52c35fedcc8867acfcfabfecc6349f",
+      "bytes": 19802
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-390.json",
+      "sha256": "e3d841f3aa22d5dfb10286881b8817b753428cda3e2477658be3224a1569cbe8",
+      "bytes": 23214
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-420.json",
+      "sha256": "4a4a9665bfc600b2ed658dab7fabd621fdda3cb421a709de748cd29029057dc4",
+      "bytes": 19106
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-450.json",
+      "sha256": "676365fbabd2cf2ca8bdd2fdafe92e96093faebc6f9e914dbff52b220014d3ed",
+      "bytes": 17152
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-480.json",
+      "sha256": "463448744adaac4cfe36f083840e6a316bfa2193d01fe4bf19f1b78134c865cc",
+      "bytes": 16596
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-510.json",
+      "sha256": "0697fe86b2f2989817884ce49f2f1997748e496249801bc58c8bd840d890ed19",
+      "bytes": 18614
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-540.json",
+      "sha256": "1b7f07889c96a2d9501c769fdfad1ff5fba0180aa76f4681be9ce9bbb88b59cb",
+      "bytes": 16553
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-570.json",
+      "sha256": "98aaf9d676a7f3287eafea6de9e6892c5f43245e146a8ee61547ae388c3239fc",
+      "bytes": 18900
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-60.json",
+      "sha256": "40148105e2f136de7f653a7a0af7a6aacdf0d3fba23bb763b52a266256cb2392",
+      "bytes": 18748
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-600.json",
+      "sha256": "8ea2fbb8b35cfc779ef4471356e6bd8bf0d193752f97589b632bc8a6c9cd7cd2",
+      "bytes": 18927
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-630.json",
+      "sha256": "fe1c230917dc5a80f618991d4f1d5e6fe45231ed117b0177a5da02d372a45fbf",
+      "bytes": 18208
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-660.json",
+      "sha256": "9acddd41337913558d88e582cf0ab80138882ed028b120d492d7f438ac4b59e2",
+      "bytes": 19095
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-690.json",
+      "sha256": "183be72567153188530eed36f1a31b33ec3cdffcbba69126de4a02e665582aa2",
+      "bytes": 18861
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-720.json",
+      "sha256": "36424c9da87064c53d0fd34d08400bd3168c31685b853e0baa5b8bc07fe3c522",
+      "bytes": 18277
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-750.json",
+      "sha256": "6a912692eff5228b7124bcba3d4fe35e042b68a6cb80dc5ac701969afd70b39c",
+      "bytes": 20013
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-780.json",
+      "sha256": "4d679f118456d0da9df07f0f3e23fa9f17ac5910a3734e5fcfe0769cc231d8c7",
+      "bytes": 16553
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-810.json",
+      "sha256": "96d8cf5682f5151283aca52d63de4efaa1e771c62ea7d867d3175a4a7e794252",
+      "bytes": 18192
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-840.json",
+      "sha256": "548395e9223ce31101b3baa96c51345ebd8efaae1ac29e492301e77ed9d01167",
+      "bytes": 17102
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-870.json",
+      "sha256": "93163a307f1250bb4fec1e19df468b711f532147bebdea6e6b4aa9f7e194e1f1",
+      "bytes": 20008
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-90.json",
+      "sha256": "a397fae69193575d41c275428a99f87bb002e19134bb428a6be0e1a640a11186",
+      "bytes": 15681
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-900.json",
+      "sha256": "ac126e1fd694645358c042b88f9057981bb712ec0f6a19bbc5615f99dc8204d3",
+      "bytes": 5615
+    },
+    {
+      "path": "docs/audits/sim-r8/baseline.json",
+      "sha256": "38200ab517e464fd429ad1759340eba9ff74de61d1c0e35503aec72fc2aadb19",
+      "bytes": 2934
+    },
+    {
+      "path": "docs/audits/sim-r8/bucharest-agenda-context.json",
+      "sha256": "3568ad53906e5371015a0aed354010762cfa0534f717d17fef4bbe31b12fa01b",
+      "bytes": 392
+    },
+    {
+      "path": "docs/audits/sim-r8/changes.json",
+      "sha256": "aadadb16a11154f47e2efe32b0c631d398ded38377ea00e909d2a728a890a50e",
+      "bytes": 4145
+    },
+    {
+      "path": "docs/audits/sim-r8/chisinau-comparison.json",
+      "sha256": "8cad5afdbf38101c80e2a773c64ffae74ef4449210b715fa32a6216d584c8dc0",
+      "bytes": 907
+    },
+    {
+      "path": "docs/audits/sim-r8/documents.json",
+      "sha256": "9a28d2390a2953b3bafa80667bde5715b85bf7ba53bf397927951e1e5dbdbee4",
+      "bytes": 5991
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/bucharest-project-11888.pdf",
+      "sha256": "447be46223ff004954706facaf683253a50800f8f8bee6855275a347ed047395",
+      "bytes": 1718018
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/chisinau-current-coat.jpg",
+      "sha256": "ccaaf12f56af4ebc99ddfd08c5ed74bde7e84e37184a85379bd81fed63cc11d5",
+      "bytes": 166748
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/chisinau-symbols.html",
+      "sha256": "245e19651907c6a5930f7a32abed7120343aea610455336651cd163c6418f5e1",
+      "bytes": 77918
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/harghita-register.pdf",
+      "sha256": "fd49760570c73123c42b5ffe4a65e46e1a8b7d52d8b195c89783e30d885d6411",
+      "bytes": 603233
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0141-2015.pdf",
+      "sha256": "b26de9f05d4a5ff82a84952588eb17f25059c935bddffad44b118045ce164875",
+      "bytes": 890777
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0315-2026.pdf",
+      "sha256": "2e0e91b46e31eb567ae43fed2723021f395489f3eb22855cbf469aa1d044947c",
+      "bytes": 948082
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0544-2026.pdf",
+      "sha256": "53ea0c0f7e48d27e11cd1f5868e5ddfb872a0ab8042cd3de42202508d9895e30",
+      "bytes": 24766026
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/onetap-LICENSE.txt",
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+      "bytes": 18091
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/onetap-README.txt",
+      "sha256": "34706d5d163bf85a5587b665fccdde820839ed3d688c024ca3a07f1b3dcd6e80",
+      "bytes": 19488
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/onetap-accessibility-onetap.php",
+      "sha256": "39a5a7364cd00f55c1f7fe7f5596203cbf083934dbe0f0d50167624e5af3a036",
+      "bytes": 3028
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/onetap-icon.png",
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "bytes": 10748
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/romania-wipo-law.html",
+      "sha256": "6676a4d444d7123844c445cabf5d87638961b842a56298cadf4e59b715bdf03d",
+      "bytes": 790930
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/taraclia-decree-241.pdf",
+      "sha256": "8624e3575fbfa0be50959ec41c151c05e444fb509223e2aae14422dc25701f6f",
+      "bytes": 2024580
+    },
+    {
+      "path": "docs/audits/sim-r8/institutional-targets.json",
+      "sha256": "a393c0cca72dccc451bf195ec2ef45dd3760e0f0836f52536b2cd554ea015d1c",
+      "bytes": 421
+    },
+    {
+      "path": "docs/audits/sim-r8/official-gazettes.json",
+      "sha256": "6fc6263237f089080fc3fc8b3c0f3e59af21919de94e8c6bb8e6a957a5af55dd",
+      "bytes": 2908
+    },
+    {
+      "path": "docs/audits/sim-r8/priority-exceptions.json",
+      "sha256": "7b4c458aad1bee9141095a6fe618b66a6975559768b66347630037e6eec20e57",
+      "bytes": 23500
+    },
+    {
+      "path": "docs/audits/sim-r8/replacement-provenance.json",
+      "sha256": "de8bad5fb03e17b078badd64d819a13f7be5f196a31f266b8c7cdb486da76711",
+      "bytes": 4251
+    },
+    {
+      "path": "docs/audits/sim-r8/retrieval-attempts.json",
+      "sha256": "57e84e7ec896eb9841dd924c7bbe33861dcaf1420c58a80f0372d896912b70f1",
+      "bytes": 31992
+    },
+    {
+      "path": "docs/audits/sim-r8/reuse-assessment.json",
+      "sha256": "c17bcc840b82f557febcbba7a137de5942b87324cf2fc03b93e563465080c578",
+      "bytes": 1613
+    },
+    {
+      "path": "docs/audits/sim-r8/rights-review.json",
+      "sha256": "26a8ad5b3ddf3c5e8d7b4b0cfb8df9151d05d560de8bd9fee4aa9c4a080a3544",
+      "bytes": 125704
+    },
+    {
+      "path": "docs/audits/sim-r8/selection-reviews.json",
+      "sha256": "d046c284f2c257f06a482df32c5093577174175153533ca9ca48c8416de48725",
+      "bytes": 6394
+    },
+    {
+      "path": "docs/audits/sim-r8/upstream-icon-provenance.json",
+      "sha256": "d52716ecbb483e70ec8680fd23e661aeebf21d252d8ed1018cc3cc2f5d79c268",
+      "bytes": 1700
+    },
+    {
+      "path": "docs/audits/sim-r8/validation.json",
+      "sha256": "001da5017dce578db63d2ca8f9e85b8d11be39c38196d4c81b7a5bc4bfebd815",
+      "bytes": 4127
+    },
+    {
+      "path": "public/data/phase4/catalog.json.gz",
+      "sha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+      "bytes": 353966
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-00-detailed.geojson.gz",
+      "sha256": "54c1b5a9315a5a51fe820883e87bf55921862508395ca44daa414d32af213840",
+      "bytes": 471115
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-00-simplified.geojson.gz",
+      "sha256": "c6c139acca92a4974856acb8ae28bbbdeb95ef145d7e32a908804fe7d74a0bf3",
+      "bytes": 252915
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-01-detailed.geojson.gz",
+      "sha256": "09b029f7742e64c7211d82323f4b9bbdfe5638cbd98e61cda2161e5f3cac8c80",
+      "bytes": 205488
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-01-simplified.geojson.gz",
+      "sha256": "2f41c355a48120655c247c326071d20a0d262f640801cabc664d2df9a8fa5fef",
+      "bytes": 98143
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-02-detailed.geojson.gz",
+      "sha256": "139ec7f8754215186f7414e49e59d118ee060acc67d92f7fd962489187fce0a4",
+      "bytes": 384041
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-02-simplified.geojson.gz",
+      "sha256": "cffecfe42947ad8acbebf1706f85a99876a04b2105410c6403693e9d85442edd",
+      "bytes": 209710
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-03-detailed.geojson.gz",
+      "sha256": "4283e23a3228fe30033e45d9dd2ff715b7d007b3e462ae7612f268a52ef0385e",
+      "bytes": 559881
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-03-simplified.geojson.gz",
+      "sha256": "4a92c7d2561d2da7f5f74a916545851de5637921909627048776bf1d6a9f8dc7",
+      "bytes": 313610
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-04-detailed.geojson.gz",
+      "sha256": "0960a6f7cb85f85c95c5a66ab8d69c1fda71a7652c812e092c556beb8d18b5d8",
+      "bytes": 248482
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-04-simplified.geojson.gz",
+      "sha256": "bccbbbc95b39cef0c5621b58b6e065b447200bdf4a0dfb8d34dcedab31ed5743",
+      "bytes": 129668
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-05-detailed.geojson.gz",
+      "sha256": "3aac20bbc0e137a24effa03bcf409bb8d79f481ba30e5823d11796a817555673",
+      "bytes": 731473
+    },
+    {
+      "path": "public/data/phase4/geometry/md-adm-05-simplified.geojson.gz",
+      "sha256": "49238eff8be7cb1eff147cf653aa98e3fdaf34746a547c4bc086c6e516a65df2",
+      "bytes": 336983
+    },
+    {
+      "path": "public/data/phase4/geometry/md-stat-detailed.geojson.gz",
+      "sha256": "5501e9d3eafaf2177975a3030606982c9ce4ba0197fba8c94a02849d60f35187",
+      "bytes": 367077
+    },
+    {
+      "path": "public/data/phase4/geometry/md-stat-simplified.geojson.gz",
+      "sha256": "9a84ad5cf9c205ece36735bac73ff7df722cc65d9ebeef69cd223aa34fd102d7",
+      "bytes": 247231
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-00-detailed.geojson.gz",
+      "sha256": "cbe7da6489536205b9184f4ad35c296e30f9cb3cf38c343fd34ef96f000106fa",
+      "bytes": 735413
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-00-simplified.geojson.gz",
+      "sha256": "77db6a9072b9e28b16d67150ffc6e963708d27e5cb98ab226235e67431956ede",
+      "bytes": 416369
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-01-detailed.geojson.gz",
+      "sha256": "ce1c8c41c90d6589d72a697777853fc1022fdf19daa745b2966708d84e537e68",
+      "bytes": 622261
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-01-simplified.geojson.gz",
+      "sha256": "c607f769016bfaddb38f6d4682b93f6243308c5f58c1a2e4734af36909d232e2",
+      "bytes": 344324
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-02-detailed.geojson.gz",
+      "sha256": "5c4c510dc6b519035053cd9c5b0f6183ccfa7b45e98fbeb5cd29bb5809b82450",
+      "bytes": 2036857
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-02-simplified.geojson.gz",
+      "sha256": "fb128952f5901bfd471895159b83c4743c26a42b151d48653546d9cdecd79133",
+      "bytes": 844495
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-03-detailed.geojson.gz",
+      "sha256": "f6af8d2a1e5ebcfba6b3392c52d944b7e2797cd09b9c6ee69607c737d4584074",
+      "bytes": 642451
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-03-simplified.geojson.gz",
+      "sha256": "b3d67c5f47f3c948455f93e148c37d66aecbf1bfebad7a3d627891341ef6cc3b",
+      "bytes": 355559
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-04-detailed.geojson.gz",
+      "sha256": "326768573f43d6e538f052707fd2610d7deba95bec655feac779034a3f5c0597",
+      "bytes": 397568
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-04-simplified.geojson.gz",
+      "sha256": "8bb95c395e015a152e9814b366020a39deaf5aeefcdf95c2c615718a5eaf3bf8",
+      "bytes": 207804
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-05-detailed.geojson.gz",
+      "sha256": "2dcc68884d41be1bb9c3c965374e4655c9bca9bab63d96ce2749de35a176f9b6",
+      "bytes": 707193
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-05-simplified.geojson.gz",
+      "sha256": "3d0065240d13eaae73853488e20a2a90e4fca5e8514839d183c3a0db01ca9f5d",
+      "bytes": 355079
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-06-detailed.geojson.gz",
+      "sha256": "faa72c878e7b975fab45224ba390f56d54454caa4dd8f1c71eff6406da96e5de",
+      "bytes": 1739725
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-06-simplified.geojson.gz",
+      "sha256": "3e1b1eb0214e1eeaba804b28ac02fa9a93b6cbe40febc466db70281e37b336cc",
+      "bytes": 756676
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-07-detailed.geojson.gz",
+      "sha256": "9f6f6d5de009e07fc8b6e69bc6dec6ce8ffa683af9ec1a397d0d5965f86d0439",
+      "bytes": 1041693
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-07-simplified.geojson.gz",
+      "sha256": "794ee40231da53b3d1cdd975f5fe9c4b69b823a14de9a98274633b023e69178f",
+      "bytes": 578949
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-08-detailed.geojson.gz",
+      "sha256": "d754b9da5eb486d2d5c7c8529417e8efdbf9bee0b1ae151c47255bfa8e12b1eb",
+      "bytes": 922805
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-08-simplified.geojson.gz",
+      "sha256": "023ca4ec89cd390a9fd2536ac2918547f569556087a2b0edde5f34a0f3486d2f",
+      "bytes": 535470
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-09-detailed.geojson.gz",
+      "sha256": "07463d7f4dcb685cf7858b134f48f721cd388bb4a23e85f9e03d0355a555aba8",
+      "bytes": 1729704
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-09-simplified.geojson.gz",
+      "sha256": "7cff6b6818a9b8d950aa6b1b9d93427557e8b26a8e5a095057b155075bd9dbf5",
+      "bytes": 842048
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-10-detailed.geojson.gz",
+      "sha256": "9f6cf221a9b54dbc96a1142da590a7f93668678f1c27d99107eccd36453b533b",
+      "bytes": 1058248
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-10-simplified.geojson.gz",
+      "sha256": "42dca1e1f002b15924a03ecaa9f1f6bc55b38947b618a01909f1d5319e9d289a",
+      "bytes": 529609
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-11-detailed.geojson.gz",
+      "sha256": "015a3cceb8f8268e4edf89d1d0a4fbf41901e2ea28b7f7bfea1f126e02f00ebb",
+      "bytes": 826258
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-adm-11-simplified.geojson.gz",
+      "sha256": "9cd4a19a605ff731c70b41d632b4aff946b498fe30fbf7d1c7b059d69e580924",
+      "bytes": 502928
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-stat-detailed.geojson.gz",
+      "sha256": "3219b740b68965ffdece02518450aa6b2e25fb6fda37b473bc487fe1d554ada2",
+      "bytes": 1243233
+    },
+    {
+      "path": "public/data/phase4/geometry/ro-stat-simplified.geojson.gz",
+      "sha256": "959d79dd0d007d803a9e8e6636ab0b255cd135ac033763660ddc99e9bf5f3bb2",
+      "bytes": 614223
+    },
+    {
+      "path": "public/data/phase4/geometry/roots-detailed.geojson.gz",
+      "sha256": "5326ee99502662a391474c75ca5e2edc72b22b0dda6d7f1ffda1111b5dca0038",
+      "bytes": 249889
+    },
+    {
+      "path": "public/data/phase4/geometry/roots-simplified.geojson.gz",
+      "sha256": "7da1ee01a214acb1f74d37485e1f5d5ada383f51be932fa8f40874e3bbab7fad",
+      "bytes": 155792
+    },
+    {
+      "path": "public/data/phase4/manifest.json",
+      "sha256": "47ffb86a361e8df09f1b0506ab421b420d7b86e90a9eb505494a334c0076a5eb",
+      "bytes": 9527
+    },
+    {
+      "path": "public/data/symbols/audit-initial.json.gz",
+      "sha256": "dd7a10ecde0718faf62380ba0f83d21f85ff4f40cf7d9d4eeec1db2db65fe521",
+      "bytes": 380993
+    },
+    {
+      "path": "public/data/symbols/audit-r6.json.gz",
+      "sha256": "6fbd0df36d3b2860f14bc4c00259fb3519205150c3b5490b1ab1582cd6964e8f",
+      "bytes": 2535533
+    },
+    {
+      "path": "public/data/symbols/audit-r7.json.gz",
+      "sha256": "e681b74801e8e3c278ff62f1e1ecd0668ddd310d6acd40f060b56b5be0b5dfa7",
+      "bytes": 2576834
+    },
+    {
+      "path": "public/data/symbols/audit-r8.json.gz",
+      "sha256": "ffe699b225a1fac484918761c4e539dbb1058979fadcbecb4b246e0f94c977b8",
+      "bytes": 2584275
+    },
+    {
+      "path": "public/data/symbols/audit.json.gz",
+      "sha256": "ff1f6cddbe151d9cc44092a6e4fdfd8c97d232e7368d1c1edec398352cfe0d8d",
+      "bytes": 2531876
+    },
+    {
+      "path": "public/data/symbols/registry-current.json.gz",
+      "sha256": "3edc8235aec684c91da5f349dd3e1e20af3b140439c420f097752c4d63f1c8a4",
+      "bytes": 2945475
+    },
+    {
+      "path": "public/data/symbols/registry-r6.json.gz",
+      "sha256": "8bd6dbeec849e9a6cc8b6855af8b33fa985aaf3587a90a08d6350f9b1cdb6781",
+      "bytes": 2940863
+    },
+    {
+      "path": "public/data/symbols/registry-r7.json.gz",
+      "sha256": "90fddf3b4a2a69fdb934cd95fc64936acfb365a84ebf533abcc1a60f271fcd11",
+      "bytes": 2941301
+    },
+    {
+      "path": "public/data/symbols/registry-r8.json.gz",
+      "sha256": "e6fe731e54b35dc872801e8c8f915a0ec70c7674c402c3fbca41760b099f1ba1",
+      "bytes": 2941806
+    },
+    {
+      "path": "public/data/symbols/registry.json.gz",
+      "sha256": "e75fe4eb8a49f5dbb4bcb5827d725fa585cc9f1837083b3cdd1d3a15c0b16892",
+      "bytes": 2945143
+    },
+    {
+      "path": "public/flags/moldova.svg",
+      "sha256": "267604cb305206bdcc7856d49dab197ea4b1515fd4d200c29cdbdb07045055c8",
+      "bytes": 34587
+    },
+    {
+      "path": "public/flags/pridnestrovie.svg",
+      "sha256": "9b9c57450d7ef68c0dbc5146d9a03e4d709ccbfbdb4b832844c6d8363b1eb765",
+      "bytes": 1394
+    },
+    {
+      "path": "public/flags/romania.svg",
+      "sha256": "57e1c4d27feec8e7a459e2dc522b9e6ec3eec996d9504733a9a17d9b4fce3026",
+      "bytes": 297
+    },
+    {
+      "path": "public/symbols/chisinau-botanica-coat.png",
+      "sha256": "5fb05e8e73ab772b391312bc89fcf6b838a6d2e0429f0c597ee0c63f7b32a11b",
+      "bytes": 67625
+    },
+    {
+      "path": "public/symbols/chisinau-buiucani-coat.png",
+      "sha256": "dbf8d74d471f761c4320c8a78453f1793c16590b80ce76951a2adc471cc900c3",
+      "bytes": 75959
+    },
+    {
+      "path": "public/symbols/chisinau-centru-coat.png",
+      "sha256": "3492de568ecdfa2dc31539927c048867c1efdae0591729b4bf7beec32130e08a",
+      "bytes": 86483
+    },
+    {
+      "path": "public/symbols/chisinau-ciocana-coat.png",
+      "sha256": "c50c587f47af355bd3f7d114a24986a2d6d476d443b9e3431721794faa5a1f59",
+      "bytes": 69461
+    },
+    {
+      "path": "public/symbols/chisinau-coat.jpg",
+      "sha256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+      "bytes": 92125
+    },
+    {
+      "path": "public/symbols/chisinau-riscani-coat.png",
+      "sha256": "15088d1fbbc6e498f8e0a3c4a54f6f814ebd44de319f4ccae7fca812ad5ea526",
+      "bytes": 84530
+    },
+    {
+      "path": "public/symbols/gagauzia-coat.png",
+      "sha256": "3b89e01629d8c5c20c5ed1518a0f37e017444e523b0a2af2480702408f9ba7a6",
+      "bytes": 182916
+    },
+    {
+      "path": "public/symbols/gagauzia-flag.svg",
+      "sha256": "42d70a80a73497ca343f885e828d822c9b73cdbab2f6e34c57b3d803c6cdc83f",
+      "bytes": 714
+    },
+    {
+      "path": "public/symbols/sim-r5/copanca-flag.png",
+      "sha256": "539f61bce17608d616cfd479de89fbbd9f90862ad823001e5acefd0bbe957f92",
+      "bytes": 314306
+    },
+    {
+      "path": "public/symbols/sim-r5/valcinet-flag.png",
+      "sha256": "cfe729a24ebe5c30cd8a3bbd45353086453ec5dc6c59ede9abe15c67db583bcb",
+      "bytes": 294163
+    },
+    {
+      "path": "public/symbols/sim-r6/briceni-coat.png",
+      "sha256": "d3d03e70331f83b3cd4de50d7ad715f41e3564c6babec319ec4d424a59b90efa",
+      "bytes": 786455
+    },
+    {
+      "path": "public/symbols/sim-r6/briceni-flag.png",
+      "sha256": "2c287a687e074c50e30504c38151d79d38cafc12e925f5d47b6015c3ac7c0278",
+      "bytes": 425838
+    },
+    {
+      "path": "public/symbols/sim-r8/campulung-coat.png",
+      "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae",
+      "bytes": 247969
+    },
+    {
+      "path": "public/symbols/sim-r8/harghita-coat.png",
+      "sha256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556",
+      "bytes": 200380
+    },
+    {
+      "path": "public/symbols/sim-r8/taraclia-coat.png",
+      "sha256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698",
+      "bytes": 314699
+    },
+    {
+      "path": "public/symbols/sim-r8/taraclia-flag.png",
+      "sha256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e",
+      "bytes": 226087
+    },
+    {
+      "path": "src/data/entityCoat.d.mts",
+      "sha256": "425d16d1567902a5e8e555f1f82d91a3b47a61c00c71bcafb5203bafb77b283c",
+      "bytes": 146
+    },
+    {
+      "path": "src/data/entityCoat.mjs",
+      "sha256": "edcf588f39f0ed08a8e7725b34e34f64f53c4d515a84f789d7748e125307c7e6",
+      "bytes": 789
+    },
+    {
+      "path": "src/data/globalSymbolSelections.d.mts",
+      "sha256": "623b6e310bf6515113ee21aaf9cf24781c17fefdb756108b3c1cd2ffad4b00ba",
+      "bytes": 238
+    },
+    {
+      "path": "src/data/globalSymbolSelections.mjs",
+      "sha256": "6846da61fce788fe97b80c0f2b6439b197f309ea3feebc8f629b87a71c4b8fec",
+      "bytes": 688423
+    },
+    {
+      "path": "src/data/globalSymbols.d.mts",
+      "sha256": "52446ed92fbf87d42f522840017f56b88b9ab3ae2d2c0c57f1bf1ba8a6238503",
+      "bytes": 329
+    },
+    {
+      "path": "src/data/globalSymbols.mjs",
+      "sha256": "5b858a16d13211104b7d91693d075965acc8da4e292454d6ace1555001305591",
+      "bytes": 772
+    },
+    {
+      "path": "src/data/officialSymbols.d.mts",
+      "sha256": "e456bd9072fc9c7434c571726e6b575b71ed0818300980186889324ece463410",
+      "bytes": 472
+    },
+    {
+      "path": "src/data/officialSymbols.mjs",
+      "sha256": "c09b8b7fcc05959910988385272f5b4cc5c02ce43b98d9735f98ba5df13c9402",
+      "bytes": 2284
+    },
+    {
+      "path": "src/data/symbolAudit.d.mts",
+      "sha256": "0e005e4363c92657ae07a33735828ba74d04cb1446ef0c195c1c022e464e6fcd",
+      "bytes": 490
+    },
+    {
+      "path": "src/data/symbolAudit.mjs",
+      "sha256": "355535aacf1b8eb347c3d60e638efa399f36bf31f4eac36b1d3783cbaf0f4c70",
+      "bytes": 1005
+    },
+    {
+      "path": "src/data/symbolAuditSelections.mjs",
+      "sha256": "1da239ad80de7768c7187ae435b4d6c99afcc7db0b371a2d73bae8d242acee54",
+      "bytes": 593272
+    },
+    {
+      "path": "src/data/symbolInvalidations.mjs",
+      "sha256": "87b88ec07b65a5aba25213169bdef6fe44bba028a9d28b761d712fbfa6429471",
+      "bytes": 15137
+    },
+    {
+      "path": "src/data/symbolR6Selections.mjs",
+      "sha256": "93146f6254b1afecb7190431a95bb9cd1e20dc51bcc6ea8ce0cd3fa6ceed6fab",
+      "bytes": 22825
+    },
+    {
+      "path": "src/data/symbolR7Selections.mjs",
+      "sha256": "f86ee03dc83cf22fef97157593051c6d692a223a6d0d3b3630c47432028b5bc9",
+      "bytes": 32827
+    },
+    {
+      "path": "src/data/symbolR8Invalidations.mjs",
+      "sha256": "52d20e098fa657fc85fd66268a425111d0e062929f3e17e48f7c1473b6086116",
+      "bytes": 563
+    },
+    {
+      "path": "src/data/symbolR8Selections.mjs",
+      "sha256": "08457ecc5c2201feff66c7ba5d39bd5077647114cb3b6afc938cf6ea1546eaf2",
+      "bytes": 12453
+    },
+    {
+      "path": "src/data/symbolSelectionPolicy.mjs",
+      "sha256": "894b5cf32aae725309361de3a2db0d486cd0959cdf2a2d089fb26134a55fa65f",
+      "bytes": 7105
+    },
+    {
+      "path": "src/data/territorialSymbols.d.mts",
+      "sha256": "8f4e007594bd1d019c79878ff1b62d55b6b79db8091d9249f3cdca53e15bbf5a",
+      "bytes": 934
+    },
+    {
+      "path": "src/data/territorialSymbols.mjs",
+      "sha256": "74d67bd08788cada0e643bd4f182ba6f4355e2432b0aa0c28b8955aaa2359538",
+      "bytes": 23107
+    }
+  ],
+  "allUnchanged": true
+}
