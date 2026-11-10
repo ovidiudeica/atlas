@@ -1,0 +1,118 @@
+{
+  "site": "https://ovidiudeica.github.io/atlas/",
+  "conditions": {
+    "trialsPerViewport": 3,
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "network": "Actual unthrottled network; isolated profile; cache cleared before cold; warm reload retains HTTP cache. Atlas preferences reset before each navigation for consistent detailed default.",
+    "typingMs": 75,
+    "querySettleMs": 250,
+    "meaning": "Map timings measure application source-ready state, not a GPU-idle claim. Scripted phase durations include explicit typing/settling. Transfer totals cover completed requests; unfinished requests remain unknown. No comparison to historical single7.17s/13.23s sample.",
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/157.0.8103.50",
+      "revision": "@049750111b1e5c11565c792b2aeed5541f332bad",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+      "jsVersion": "15.7.112.23"
+    },
+    "node": "v24.21.0",
+    "platform": "win32",
+    "softwareRendering": true
+  },
+  "publicTimings": [
+    {
+      "width": 1440,
+      "trials": 3,
+      "coldSourceReadyMs": [
+        7329,
+        3615,
+        5515
+      ],
+      "warmSourceReadyMs": [
+        3446,
+        3327,
+        3214
+      ],
+      "coldMedianMs": 5515,
+      "warmMedianMs": 3327,
+      "coldFCPMs": [
+        2628,
+        524,
+        1060
+      ],
+      "warmFCPMs": [
+        236,
+        232,
+        396
+      ],
+      "geometrySwitchMs": [
+        239,
+        1451,
+        626
+      ],
+      "largeBranchChildren": [
+        67,
+        67,
+        67
+      ],
+      "unsolicitedOriginalRequests": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "width": 390,
+      "trials": 3,
+      "coldSourceReadyMs": [
+        2134,
+        2120,
+        1831
+      ],
+      "warmSourceReadyMs": [
+        1736,
+        897,
+        1204
+      ],
+      "coldMedianMs": 2120,
+      "warmMedianMs": 1204,
+      "coldFCPMs": [
+        484,
+        476,
+        444
+      ],
+      "warmFCPMs": [
+        336,
+        144,
+        160
+      ],
+      "geometrySwitchMs": [
+        230,
+        421,
+        267
+      ],
+      "largeBranchChildren": [
+        67,
+        67,
+        67
+      ],
+      "unsolicitedOriginalRequests": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "localTimingsCaveat": "Local6flow samples were recorded while the separate full public regression could be active; no causal timing comparison with them or the historical single sample.",
+  "baseline": "performance-5a.json",
+  "publicRaw": "final-performance-public.json",
+  "localRaw": "final-performance-local.json"
+}

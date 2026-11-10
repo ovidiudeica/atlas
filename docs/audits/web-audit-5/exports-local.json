@@ -1,0 +1,110 @@
+{
+  "stage": "WEB-AUDIT.5c",
+  "site": "http://127.0.0.1:4188/atlas/",
+  "checkedAt": "2026-11-10T13:47:31.370Z",
+  "artifactDirectory": "artifacts/web-audit-5c-exports-ttKvue",
+  "displayGeometryMode": "simplified",
+  "files": [
+    {
+      "filename": "territorial-atlas-2026-10-05-selected.csv",
+      "scope": "selected",
+      "format": "csv",
+      "bytes": 317,
+      "sha256": "825881424442fae3fe8d5fa29c852ec14e56dae3da5cf95cc8618db5ed2b7c7f",
+      "expectedIDs": [
+        "osm-r1699033"
+      ],
+      "actualIDs": [
+        "osm-r1699033"
+      ],
+      "codesParentsSnapshotMatch": true
+    },
+    {
+      "filename": "territorial-atlas-2026-10-05-selected.geojson",
+      "scope": "selected",
+      "format": "geojson",
+      "bytes": 166124,
+      "sha256": "443de2de43aea1cc36479c23e0a017cf24819c886ca49d4c2f23a5dab751b438",
+      "expectedIDs": [
+        "osm-r1699033"
+      ],
+      "actualIDs": [
+        "osm-r1699033"
+      ],
+      "sourceSnapshot": "2026-10-05",
+      "geometryMode": "detailed",
+      "geometry": [
+        {
+          "atlasID": "osm-r1699033",
+          "source": "public/data/phase4/geometry/md-adm-00-detailed.geojson.gz",
+          "geometrySHA256": "8adc20e0e4427a9a423f9e78765e06260daab266f194f2a89e09639f2910a5cf",
+          "matchesOriginal": true
+        }
+      ]
+    },
+    {
+      "filename": "territorial-atlas-2026-10-05-visible.csv",
+      "scope": "visible",
+      "format": "csv",
+      "bytes": 503,
+      "sha256": "a8affc26ca59ca6bf7f9d84f53cb4a838aa7cd5f445d42246086cab4cf11a7b5",
+      "expectedIDs": [
+        "osm-r90689",
+        "osm-r58974",
+        "osm-r1699033"
+      ],
+      "actualIDs": [
+        "osm-r90689",
+        "osm-r58974",
+        "osm-r1699033"
+      ],
+      "codesParentsSnapshotMatch": true
+    },
+    {
+      "filename": "territorial-atlas-2026-10-05-visible.geojson",
+      "scope": "visible",
+      "format": "geojson",
+      "bytes": 2640001,
+      "sha256": "8fb6e5a919c2f5504b72ac0dd7a9a036115e434c62e5a6dd03f3717b0718ee64",
+      "expectedIDs": [
+        "osm-r90689",
+        "osm-r58974",
+        "osm-r1699033"
+      ],
+      "actualIDs": [
+        "osm-r90689",
+        "osm-r58974",
+        "osm-r1699033"
+      ],
+      "sourceSnapshot": "2026-10-05",
+      "geometryMode": "detailed",
+      "geometry": [
+        {
+          "atlasID": "osm-r90689",
+          "source": "public/data/phase4/geometry/roots-detailed.geojson.gz",
+          "geometrySHA256": "a7b281279164f5749b97c572d1f90ab364b230bc3dcca55d69e7063b347a3964",
+          "matchesOriginal": true
+        },
+        {
+          "atlasID": "osm-r58974",
+          "source": "public/data/phase4/geometry/roots-detailed.geojson.gz",
+          "geometrySHA256": "129354977ec30c251b08dde8362e3d237b15a75a6e9e568656526500968e5602",
+          "matchesOriginal": true
+        },
+        {
+          "atlasID": "osm-r1699033",
+          "source": "public/data/phase4/geometry/md-adm-00-detailed.geojson.gz",
+          "geometrySHA256": "8adc20e0e4427a9a423f9e78765e06260daab266f194f2a89e09639f2910a5cf",
+          "matchesOriginal": true
+        }
+      ]
+    }
+  ],
+  "geometryRequests": [
+    "http://127.0.0.1:4188/atlas/data/phase4/geometry/roots-simplified.geojson.gz",
+    "http://127.0.0.1:4188/atlas/data/phase4/geometry/md-adm-00-simplified.geojson.gz",
+    "http://127.0.0.1:4188/atlas/data/phase4/geometry/md-adm-00-detailed.geojson.gz",
+    "http://127.0.0.1:4188/atlas/data/phase4/geometry/roots-detailed.geojson.gz"
+  ],
+  "resetClearsSelectionAndPermalink": true
+}

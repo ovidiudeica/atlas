@@ -1,0 +1,525 @@
+{
+  "stage": "WEB-AUDIT.5",
+  "recordedAt": "2026-11-10",
+  "scope": "Actually verified5a/5b exact-head and post-merge runs;5c lifecycle is attested separately.",
+  "runs": [
+    {
+      "stage": "5a",
+      "kind": "PR",
+      "id": 42807696004,
+      "headSHA": "8236fb37b66412f9be871ed10a3cde33369a88cf",
+      "url": "https://github.com/ovidiudeica/atlas/actions/runs/42807696004",
+      "conclusion": "success",
+      "event": "pull_request",
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 129800998645,
+          "name": "Build and verify website",
+          "url": "https://github.com/ovidiudeica/atlas/actions/runs/42807696004/job/129800998645",
+          "conclusion": "success",
+          "executed": true,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Static regression tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-R7 deterministic evidence generation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-R8 deterministic targeted evidence generation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Type-check and build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WEB-AUDIT.5 image request regression",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium desktop/mobile smoke",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store browser screenshots",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 129802895576,
+          "name": "Deploy GitHub Pages",
+          "url": "https://github.com/ovidiudeica/atlas/actions/runs/42807696004/job/129802895576",
+          "conclusion": "skipped",
+          "executed": false,
+          "steps": []
+        }
+      ]
+    },
+    {
+      "stage": "5a",
+      "kind": "POST_MERGE",
+      "id": 42808340688,
+      "headSHA": "82622896078bab8ce4ec25a7a8cac40c9bf6b87a",
+      "url": "https://github.com/ovidiudeica/atlas/actions/runs/42808340688",
+      "conclusion": "success",
+      "event": "push",
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 129803149394,
+          "name": "Build and verify website",
+          "url": "https://github.com/ovidiudeica/atlas/actions/runs/42808340688/job/129803149394",
+          "conclusion": "success",
+          "executed": true,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Static regression tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-R7 deterministic evidence generation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-R8 deterministic targeted evidence generation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Type-check and build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WEB-AUDIT.5 image request regression",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium desktop/mobile smoke",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store browser screenshots",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 129805119420,
+          "name": "Deploy GitHub Pages",
+          "url": "https://github.com/ovidiudeica/atlas/actions/runs/42808340688/job/129805119420",
+          "conclusion": "success",
+          "executed": true,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/configure-pages@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-pages-artifact@v3",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/deploy-pages@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "5b",
+      "kind": "PR",
+      "id": 42817224872,
+      "headSHA": "c9ddec982c2736c614e682e9bbb9ade778a8b763",
+      "url": "https://github.com/ovidiudeica/atlas/actions/runs/42817224872",
+      "conclusion": "success",
+      "event": "pull_request",
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 129833266206,
+          "name": "Build and verify website",
+          "url": "https://github.com/ovidiudeica/atlas/actions/runs/42817224872/job/129833266206",
+          "conclusion": "success",
+          "executed": true,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Static regression tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-R7 deterministic evidence generation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-R8 deterministic targeted evidence generation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-CLOSE deterministic closure verification",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Type-check and build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WEB-AUDIT.5 image request regression",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WEB-AUDIT.5 accessibility and recovery",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WEB-AUDIT.5 native browser zoom200",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium desktop/mobile smoke",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store browser screenshots",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store WEB-AUDIT.5 browser evidence",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 129836075064,
+          "name": "Deploy GitHub Pages",
+          "url": "https://github.com/ovidiudeica/atlas/actions/runs/42817224872/job/129836075064",
+          "conclusion": "skipped",
+          "executed": false,
+          "steps": []
+        }
+      ]
+    },
+    {
+      "stage": "5b",
+      "kind": "POST_MERGE",
+      "id": 42818468090,
+      "headSHA": "b77c748b790aa96aaa41ba175cdcd45e247896e4",
+      "url": "https://github.com/ovidiudeica/atlas/actions/runs/42818468090",
+      "conclusion": "success",
+      "event": "push",
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 129837537419,
+          "name": "Build and verify website",
+          "url": "https://github.com/ovidiudeica/atlas/actions/runs/42818468090/job/129837537419",
+          "conclusion": "success",
+          "executed": true,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Static regression tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-R7 deterministic evidence generation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-R8 deterministic targeted evidence generation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "SIM-CLOSE deterministic closure verification",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Type-check and build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WEB-AUDIT.5 image request regression",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WEB-AUDIT.5 accessibility and recovery",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "WEB-AUDIT.5 native browser zoom200",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Chromium desktop/mobile smoke",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store browser screenshots",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store WEB-AUDIT.5 browser evidence",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Store build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 129840126193,
+          "name": "Deploy GitHub Pages",
+          "url": "https://github.com/ovidiudeica/atlas/actions/runs/42818468090/job/129840126193",
+          "conclusion": "success",
+          "executed": true,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/configure-pages@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-pages-artifact@v3",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/deploy-pages@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

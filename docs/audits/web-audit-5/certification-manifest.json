@@ -1,0 +1,194 @@
+{
+  "stage": "WEB-AUDIT.5",
+  "applicationVerdict": "WEB-AUDIT.5 CERTIFIED",
+  "initialMain": "d1ff22c8844ea1b460a0fa9f822fc938e9eba624",
+  "functionalApplicationCommit": "b77c748b790aa96aaa41ba175cdcd45e247896e4",
+  "referenceDate": "2026-10-05",
+  "scope": "Runtime/application evidence for already integrated and live5b; certification-document CI/integration/publication are separately attested in its PR. No anticipated final-commit CI success is asserted here.",
+  "fullWCAGConformanceClaim": false,
+  "counts": {
+    "entities": 4283,
+    "slots": 8566,
+    "coats": 1500,
+    "flags": 299,
+    "noImages": 2778
+  },
+  "protectedInputs": {
+    "manifest": "docs/audits/web-audit-5/integrity-5a.json",
+    "manifestSHA256": "752c397841ca96b13e3afc270ab6f23743f3c83d24495d843a9dbf3fa171e19c",
+    "filesChecked": 273,
+    "allUnchanged": true
+  },
+  "applicationEditsDuring5c": 0,
+  "noOldAssertionsWeakened": true,
+  "publishedBuild": {
+    "evidence": "docs/audits/web-audit-5/publication-5b.json",
+    "files": 11,
+    "allHashesMatch": true
+  },
+  "measurements": {
+    "publicRepeatedSamples": 6,
+    "unsolicitedOriginalRequests": 0,
+    "viewports": [
+      360,
+      390,
+      700,
+      900,
+      1440
+    ],
+    "realExportFiles": 4,
+    "targetStates": 20,
+    "targetObservations": 760,
+    "unresolvedComputedSpacingConflicts": 0
+  },
+  "proofFiles": [
+    {
+      "path": "docs/audits/web-audit-5/WEB-AUDIT-5-FINAL-REPORT.md",
+      "sha256": "18003f72a425de1b6c3ef03eac7a52630aca82b4d176e2ca51307ccc1843f571",
+      "bytes": 9279
+    },
+    {
+      "path": "docs/audits/web-audit-5/issues.json",
+      "sha256": "404f24b5588e06b33fcfc803729f1fa341850c4cf78150dd62795511776b5b5f",
+      "bytes": 4835
+    },
+    {
+      "path": "docs/audits/web-audit-5/not-reproduced.json",
+      "sha256": "e382f01b5ea464a6b3643e8eed47ad57f5ff8742e26711ba192ec3bf33b6833a",
+      "bytes": 962
+    },
+    {
+      "path": "docs/audits/web-audit-5/performance-5a.json",
+      "sha256": "6cb727e741cd141f56bd50cf931dbd154559812e64e735ade3721d54abcbff2f",
+      "bytes": 22458
+    },
+    {
+      "path": "docs/audits/web-audit-5/performance-summary-final.json",
+      "sha256": "32b02a75a731995d83b0da834ecbcb0a77e087ac14f053fb12e7020f6357532a",
+      "bytes": 2772
+    },
+    {
+      "path": "docs/audits/web-audit-5/image-network-before.json",
+      "sha256": "de5e3bb21cedaf759f88f35aca74a163ce387af22f5fab19948fe7d0af4a86ed",
+      "bytes": 201226
+    },
+    {
+      "path": "docs/audits/web-audit-5/image-network-after.json",
+      "sha256": "5f60015281bfb9426529f3d553f19fb4370cc971de6d4be80af251368ce06540",
+      "bytes": 104325
+    },
+    {
+      "path": "docs/audits/web-audit-5/final-performance-local.json",
+      "sha256": "7e4c79f6dcfa962097bd990a057a9802c6a1298bc0044cb06e950ac58051eaec",
+      "bytes": 290394
+    },
+    {
+      "path": "docs/audits/web-audit-5/final-performance-public.json",
+      "sha256": "c24e6b48d0101104a9ee8eb0ddbcd10cb22fbadde7b6b69d4fc5816e601a6d7a",
+      "bytes": 284110
+    },
+    {
+      "path": "docs/audits/web-audit-5/accessibility-resilience-public.json",
+      "sha256": "f371c67959fb78b7f46771dbf3189285631457661b83bd3ce00c2fb034af04f4",
+      "bytes": 97665
+    },
+    {
+      "path": "docs/audits/web-audit-5/target-areas-public.json",
+      "sha256": "74342f625b4999fddd87b5bc5b3f02caff0d9e55ebbb7937bdc54b30b3491be6",
+      "bytes": 371888
+    },
+    {
+      "path": "docs/audits/web-audit-5/native-zoom-public.json",
+      "sha256": "b7ecced486f77ed6b1e8f69e901fb3deb7f3ba9d25a19b1d69e8595e019529a3",
+      "bytes": 1112
+    },
+    {
+      "path": "docs/audits/web-audit-5/exports-public.json",
+      "sha256": "5a526b8f6354e34ffa9449e1b7532b1c9ee0993fb65a490c0524c62e45d2c7f8",
+      "bytes": 3576
+    },
+    {
+      "path": "docs/audits/web-audit-5/exports-local.json",
+      "sha256": "8af76f351f295c3838d6baed7a30f6ea7cced51acb13d573195e052fba39414f",
+      "bytes": 3536
+    },
+    {
+      "path": "docs/audits/web-audit-5/ci-5ab.json",
+      "sha256": "b9e1cf316bc0697dd68b1726f9794c58a30632553cbe906087d72218d4d2d0f2",
+      "bytes": 16228
+    },
+    {
+      "path": "docs/audits/web-audit-5/publication-5a.json",
+      "sha256": "2c6dea1e011690576ea1e154cbd9ab4c0b3195b7a12288f7951d8c821d8676a3",
+      "bytes": 3817
+    },
+    {
+      "path": "docs/audits/web-audit-5/publication-5b.json",
+      "sha256": "a5a3f4b803e7a283283a255aa85d4b5ec63300c8ae6510c7ec6d685ed6fcd417",
+      "bytes": 4138
+    },
+    {
+      "path": "docs/audits/web-audit-5/windows-linux-build-equality.json",
+      "sha256": "7e619a1d9eef76a89c1c3c3c90d2ec51e6e523e4c800895478e8478d38401cbf",
+      "bytes": 2131
+    },
+    {
+      "path": "docs/audits/web-audit-5/certification-scope.json",
+      "sha256": "13f2d0b447e861e0f765e712bc49e9e27d7de7bc242bc9d7745385cb22171b78",
+      "bytes": 597
+    },
+    {
+      "path": "docs/audits/web-audit-5/reproducibility-5c.json",
+      "sha256": "c2e24dbd981d62acc1085b2c0c2323d28188fa9dbf7cb6f677c2b13519159e25",
+      "bytes": 785
+    },
+    {
+      "path": "docs/audits/web-audit-5/validation-5c.json",
+      "sha256": "e896c5624328d6bc7c351cace7a893ccb50722669388473e73a4ee8fbb66bc3e",
+      "bytes": 4160
+    }
+  ],
+  "testToolSHA256": [
+    {
+      "path": "scripts/audit/web-audit-5/accessibility-resilience.mjs",
+      "sha256": "460fd5ff3dfaee3db017995f1424f5ec2aab37cbfe753ca7d43d20c332c3d528"
+    },
+    {
+      "path": "scripts/audit/web-audit-5/final-performance.mjs",
+      "sha256": "2f9e84cce5ab484443c34fcd683e1b0e315ca9a449258a831b78745998dbdd77"
+    },
+    {
+      "path": "scripts/audit/web-audit-5/image-network.mjs",
+      "sha256": "97429b91d73c21205e8527ea065e611862ee3741960bef2982dc63068d54684d"
+    },
+    {
+      "path": "scripts/audit/web-audit-5/native-zoom.mjs",
+      "sha256": "1e9bb0ca546e266a9a74a93d8e0666d654e1f3d5a5d1c6c4f53b7c4808dc24cd"
+    },
+    {
+      "path": "scripts/audit/web-audit-5/target-areas.mjs",
+      "sha256": "3bcda4eed7bcc5e75e70159e97415b32d8e521bd8068d922441f73260f8f0151"
+    },
+    {
+      "path": "scripts/audit/web-audit-5/verify-exports.mjs",
+      "sha256": "b517fd89404158d0b0535337177d5e69e4ec72b29f8d4b059fc7600f978537e6"
+    },
+    {
+      "path": "scripts/audit/web-audit-5/verify-publication.mjs",
+      "sha256": "06b2484523e48d8f9a5d348812eb6e8af7c7a050d22fc8809b51ed01dd57c83c"
+    },
+    {
+      "path": "scripts/ci/browser-smoke.mjs",
+      "sha256": "c1dae397c5a09b285ea3345dc70b704a56b8e0b49b8710fe7fc2740f627c7cb3"
+    },
+    {
+      "path": ".github/workflows/website.yml",
+      "sha256": "a60659514faa54a0faa89dd12b31a1a3ab77fe25ee61fe0bc260e4eb4b446778"
+    },
+    {
+      "path": "tests/web-audit-5c-certificate.test.mjs",
+      "sha256": "2c541de781f9bb00d51c69c05c47644c0888542e00c0cae59361b6fbbf4cab9a"
+    }
+  ],
+  "separatePostMergeAttestation": "Corresponding web-audit-5c-final-certification PR body and outputs/WEB-AUDIT.5/WEB-AUDIT-5-ATTESTATION.json"
+}

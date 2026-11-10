@@ -1,0 +1,13 @@
+{
+  "baseCommit": "b77c748b790aa96aaa41ba175cdcd45e247896e4",
+  "noApplicationDataOrHeraldicEdits": true,
+  "allExistingBrowserAssertionsPreserved": true,
+  "assertionLineCount": 333,
+  "fullExistingBrowserFunctionSequenceUnchanged": true,
+  "existingTrackedChanges": [
+    ".github/workflows/website.yml",
+    "docs/audits/web-audit-5/issues.json",
+    "scripts/ci/browser-smoke.mjs"
+  ],
+  "reason": "Test tooling permits the identical assertions against live Pages and isolated fresh download directories; repeated measurements/exports are additional evidence, not new application features."
+}

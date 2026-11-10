@@ -72,6 +72,24 @@
       "verdict": "BLOCKED_WITH_EVIDENCE",
       "conclusion": "No NVDA/VoiceOver session available; AX tree, keyboard and visual checks are not full WCAG2.2AA certification. No claim of complete WCAG conformance.",
       "evidence": "accessibility-resilience-local.json"
+    },
+    {
+      "id": "EFFECTIVE_SMALL_TARGET_SPACING",
+      "verdict": "NO_DEFECT_CONFIRMED",
+      "conclusion": "760semantic-target observations in20responsive states, including120undersized observations: zero computed spacing conflicts. Associated labels count as actual click area; no blanket full-WCAG claim.",
+      "evidence": "target-areas-public.json"
+    },
+    {
+      "id": "REAL_VISIBLE_EXPORT_CONTENT",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "Certification coverage completed: selected/visible CSV and original detailed GeoJSON downloaded live and compared against exact IDs/codes/parentage/source coordinates in simplified display.",
+      "evidence": "exports-public.json"
+    },
+    {
+      "id": "EXISTING_BUNDLE_WARNING",
+      "verdict": "DEFERRED_WITH_JUSTIFICATION",
+      "conclusion": "Existing Vite large-chunk warning remains. This mission fixes demonstrated unsolicited original-image traffic; broader map/library splitting would require separate profiling and justified scope, not an unrequested architecture change.",
+      "evidence": "validation-5c.json"
     }
   ]
 }

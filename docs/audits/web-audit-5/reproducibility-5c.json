@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-10T12:58:16.715Z",
+  "results": [
+    {
+      "stage": "SIM-R7",
+      "command": "node scripts/audit/sim-r7/12-verify-reproducibility.mjs",
+      "result": "PASS",
+      "output": "SIM-R7 reproducibility:7 generated outputs match byte-for-byte"
+    },
+    {
+      "stage": "SIM-R8",
+      "command": "node scripts/audit/sim-r8/03-verify-reproducibility.mjs",
+      "result": "PASS",
+      "output": "SIM-R8 reproducibility:6 isolated outputs match byte-for-byte; canonical gzip OS255; source snapshots untouched"
+    },
+    {
+      "stage": "SIM-CLOSE",
+      "command": "node scripts/audit/sim-close/verify-reproducibility.mjs",
+      "result": "PASS",
+      "output": "SIM-CLOSE:6 isolated outputs reproduce byte-for-byte; archives untouched."
+    }
+  ]
+}
