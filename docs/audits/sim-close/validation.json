@@ -1,0 +1,163 @@
+{
+  "stage": "SIM-CLOSE",
+  "checkedAt": "2026-11-10T07:47:01.941Z",
+  "platform": "win32",
+  "node": "v24.21.0",
+  "baseCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+  "tests": {
+    "full": {
+      "passed": 282,
+      "failed": 0,
+      "skipped": 0
+    },
+    "closureSubset": {
+      "passed": 8,
+      "failed": 0
+    }
+  },
+  "typeScriptVite": "PASS",
+  "Chromium": {
+    "fullSuite": "PASS",
+    "viewports": [
+      1440,
+      900,
+      390,
+      360
+    ],
+    "uncaughtBrowserExceptions": 0
+  },
+  "reproducibility": {
+    "SIM_R7": "PASS_7_OUTPUTS",
+    "SIM_R8": "PASS_6_ISOLATED_OUTPUTS",
+    "SIM_CLOSE": "PASS_6_ISOLATED_OUTPUTS"
+  },
+  "compiledWebsiteIdenticalToVerifiedR8": {
+    "reference": "SIM-R8 Pages verification for be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+    "files": [
+      {
+        "file": "index.html",
+        "sha256": "648c7c2e0669dfc1e26803ded0907c66c122b5e4b0a8c285bb3a8089fdd44fbe"
+      },
+      {
+        "file": "assets/index-BlVGy-X6.js",
+        "sha256": "09b14ba7234f1147885595462dcdf715cac9522e4582909a334595b3adb73016"
+      },
+      {
+        "file": "assets/index-C1LH5SUY.css",
+        "sha256": "bbf880a4db30662d566939f1ee8abeaf82dcf670f9163ec1e98929d8d1fc9430"
+      },
+      {
+        "file": "data/symbols/registry-r8.json.gz",
+        "sha256": "e6fe731e54b35dc872801e8c8f915a0ec70c7674c402c3fbca41760b099f1ba1"
+      },
+      {
+        "file": "data/symbols/audit-r8.json.gz",
+        "sha256": "ffe699b225a1fac484918761c4e539dbb1058979fadcbecb4b246e0f94c977b8"
+      },
+      {
+        "file": "symbols/sim-r8/campulung-coat.png",
+        "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae"
+      },
+      {
+        "file": "symbols/sim-r8/harghita-coat.png",
+        "sha256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556"
+      },
+      {
+        "file": "symbols/sim-r8/taraclia-coat.png",
+        "sha256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698"
+      },
+      {
+        "file": "symbols/sim-r8/taraclia-flag.png",
+        "sha256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e"
+      },
+      {
+        "file": "data/phase4/catalog.json.gz",
+        "sha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482"
+      }
+    ]
+  },
+  "scopeVerification": {
+    "baseCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+    "method": "Actual git diff against base plus nonignored new files; only closure documentation, auxiliary audit scripts and closure tests permitted.",
+    "paths": [
+      "docs/audits/SIM-CLOSE-FINAL-REPORT.md",
+      "docs/audits/sim-close/closure-manifest.json",
+      "docs/audits/sim-close/exceptions-ledger.json",
+      "docs/audits/sim-close/reconciliation.json",
+      "docs/audits/sim-close/reopening-policy.md",
+      "docs/audits/sim-close/rights-ledger.json",
+      "docs/audits/sim-close/scope-verification.json",
+      "docs/audits/sim-close/source-index.json",
+      "docs/audits/sim-close/technical-backlog.json",
+      "docs/audits/sim-close/validation.json",
+      "scripts/audit/sim-close/README.md",
+      "scripts/audit/sim-close/generate.mjs",
+      "scripts/audit/sim-close/reopening-policy.mjs",
+      "scripts/audit/sim-close/verify-reproducibility.mjs",
+      "scripts/audit/sim-close/verify-scope.mjs",
+      "tests/sim-close-registers.test.mjs"
+    ],
+    "forbidden": [],
+    "geographicChanges": 0,
+    "publishedImageChanges": 0,
+    "functionalApplicationCodeChanges": 0,
+    "legacyTestOrWorkflowChanges": 0
+  },
+  "sourceFiles": [
+    {
+      "path": "scripts/audit/sim-close/generate.mjs",
+      "sha256": "4c16e453d90e191ad84b87d8208e1a0185fb0639c966aa15481e6caf6c760c73"
+    },
+    {
+      "path": "scripts/audit/sim-close/reopening-policy.mjs",
+      "sha256": "cf53e950270f767eb36f21de62f3395f55233a497bd6555f193af18e7444db40"
+    },
+    {
+      "path": "scripts/audit/sim-close/verify-reproducibility.mjs",
+      "sha256": "3d09501c1bd8f6b9f5cefe3db465eee786855e89e212cda2770cbb99fac0b7f3"
+    },
+    {
+      "path": "scripts/audit/sim-close/verify-scope.mjs",
+      "sha256": "d402bd06fe6d77faef7f353b34eceec4e2ec0fbb20349cb037752efad28e3e32"
+    },
+    {
+      "path": "tests/sim-close-registers.test.mjs",
+      "sha256": "d84972f1171068af40966161343d9e2be0da48f1fe47ab0cc79190c99f4b194b"
+    },
+    {
+      "path": "docs/audits/sim-close/reopening-policy.md",
+      "sha256": "daac4607d8200e644d83f2479b05ea374125619e1e848198ef2eec2e2d990616"
+    },
+    {
+      "path": "docs/audits/sim-close/source-index.json",
+      "sha256": "2eb125af63a95aaa6d7915bcfadff9208b1cd71f282ae501cf3669dc986fadf1"
+    }
+  ],
+  "logHashes": [
+    {
+      "localLog": "work/all-tests.log",
+      "sha256": "c0bc4df9d87038f1866e64a363af8214628b6da0fbadbf0e653a915ae2226aca"
+    },
+    {
+      "localLog": "work/close-tests-final.log",
+      "sha256": "039c149605043380686f60148171f7b2ce57607a8eedc76e500f41d776624ee2"
+    },
+    {
+      "localLog": "work/r7-repro.log",
+      "sha256": "82a85d49811c4567f8eaae6c70f60e332a3a08f389697e97fc886f6b3642347c"
+    },
+    {
+      "localLog": "work/r8-repro.log",
+      "sha256": "bca5085b1c546bdef40e3771d3553812d7a85e3b211151547f84710882c2ebfa"
+    },
+    {
+      "localLog": "work/build.log",
+      "sha256": "11040992734f5e5d0355b918b6f020dcb155c6a809adf287e8b5e7d4b30ca470"
+    },
+    {
+      "localLog": "work/browser.log",
+      "sha256": "170c0dc4b7c77930cec57559cba75489635edf77121c914f053dc72438fd92ba"
+    }
+  ],
+  "integrationAndPublication": "NOT_ASSERTED_IN_THIS_PREINTEGRATION_RECORD; exact-SHA CI and separate post-merge attestation required."
+}

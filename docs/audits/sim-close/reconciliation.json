@@ -1,0 +1,358 @@
+{
+  "authorityOrder": [
+    "Exact selected R8 image and its normative replacement provenance",
+    "R8 latest per-slot verdict and individual selected-copy rights assessment",
+    "Earlier stages as immutable as-of evidence, never silently substituted for later conclusions"
+  ],
+  "stages": [
+    {
+      "stage": "SIM-R1",
+      "status": "CLOSED_DRAFT_NOT_MERGED_EVIDENCE_TRIAGE_ONLY",
+      "ref": "https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md",
+      "result": "4283 identity inventory declared;800/2123 QIDs examined; not legal certification."
+    },
+    {
+      "stage": "SIM-R2",
+      "status": "IMPLEMENTED_SUBSTAGE_SIM_R2A",
+      "ref": "docs/audits/SIM-R2A-VERIFIED-SYMBOL-PILOT.md",
+      "result": "Seven exact-ID holder mappings; source review and later reproduction-rights conclusions remain separate. No distinct R2b execution is asserted."
+    },
+    {
+      "stage": "SIM-R3",
+      "status": "INTEGRATED_EDITORIAL_DISPLAY_WITH_R3_1_MEDIA_CHECK",
+      "ref": "docs/audits/SIM-R3-EDITORIAL-SYMBOLS.md",
+      "result": "74 ADM4 holders;70 coat/67 flag references,135 Commons records checked; media existence is not final legal approval."
+    },
+    {
+      "stage": "SIM-R4",
+      "status": "HISTORICAL_INTEGRATED_SNAPSHOT",
+      "ref": "docs/audits/SIM-R4-COVERAGE.json",
+      "result": {
+        "entities": 4283,
+        "coat": 1518,
+        "flag": 306,
+        "source": "public/data/symbols/registry.json.gz"
+      }
+    },
+    {
+      "stage": "SIM-R5",
+      "status": "HISTORICAL_INTEGRATED_SNAPSHOT",
+      "ref": "docs/audits/SIM-R5-RESULTS.json",
+      "result": {
+        "slots": 8566,
+        "examined": 1824,
+        "coats": 1518,
+        "flags": 306,
+        "verdicts": {
+          "MISSING": 6742,
+          "SOURCE_CORROBORATED": 1132,
+          "CANDIDATE_UNVERIFIED": 683,
+          "OUTDATED_VERSION": 2,
+          "VERIFIED_OFFICIAL": 3,
+          "HISTORICAL_ONLY": 1,
+          "DISPUTED": 2,
+          "MISATTRIBUTED": 1
+        },
+        "verifiedCoats": 2,
+        "verifiedFlags": 1,
+        "rightsUnclear": 45,
+        "needsFurtherReview": 1821,
+        "removed": 1,
+        "replaced": 3,
+        "currentCoats": 1517,
+        "currentFlags": 306,
+        "currentUnconfirmed": 1818,
+        "currentVerifiedCoats": 2,
+        "currentVerifiedFlags": 3
+      }
+    },
+    {
+      "stage": "SIM-R6",
+      "status": "HISTORICAL_INTEGRATED_SNAPSHOT",
+      "ref": "docs/audits/SIM-R6-RESULTS.json",
+      "result": {
+        "entities": 4283,
+        "slots": 8566,
+        "coat": 1499,
+        "flag": 299,
+        "rightsExamined": 45,
+        "rightsCleared": 1,
+        "rightsUnresolved": 44,
+        "rightsRestricted": 0,
+        "imagesAdded": 2,
+        "imagesReplaced": 0,
+        "attributionsRemoved": 27,
+        "additionalInstitutionalSourcesRecovered": 0,
+        "inaccessible": 907,
+        "verdicts": {
+          "MISSING": 6740,
+          "SOURCE_CORROBORATED": 1133,
+          "CANDIDATE_UNVERIFIED": 656,
+          "VERIFIED_OFFICIAL": 7,
+          "DISPUTED": 2,
+          "MISATTRIBUTED": 28
+        },
+        "withBoth": 293,
+        "withoutImages": 2778
+      }
+    },
+    {
+      "stage": "SIM-R7",
+      "status": "HISTORICAL_INTEGRATED_SNAPSHOT",
+      "ref": "docs/audits/SIM-R7-RESULTS.json",
+      "result": {
+        "entities": 4283,
+        "slots": 8566,
+        "coat": 1499,
+        "flag": 299,
+        "withoutImages": 2778,
+        "priorityExamined": 7,
+        "priorityResolved": 0,
+        "priorityPartiallyResolved": 2,
+        "priorityBlocked": 3,
+        "priorityDisputed": 2,
+        "newEnactedDocuments": 2,
+        "newConsultationDrafts": 1,
+        "newFinalGraphicAnnexes": 0,
+        "rightsExamined": 44,
+        "rightsCleared": 0,
+        "rightsRestricted": 0,
+        "rightsUnresolved": 44,
+        "institutionalCasesReinvestigated": 907,
+        "institutionalUnprocessed": 0,
+        "relevantInstitutionalSourcesRecovered": 1,
+        "institutionalStates": {
+          "BLOCKED_ACCESS": 44,
+          "NO_RELEVANT_DOCUMENT": 42,
+          "STILL_INACCESSIBLE": 800,
+          "REDIRECTED": 20,
+          "ARCHIVE_ONLY": 1
+        },
+        "institutionalOriginalHTTPResponses": 488,
+        "institutionalHostRestrictionSkips": 47,
+        "wikipediaArticlesRetrieved": 901,
+        "wikipediaCaseArticleLinksExamined": 907,
+        "sourceHolderEntities": 901,
+        "imagesAdded": 0,
+        "imagesReplaced": 0,
+        "imagesRemoved": 0,
+        "quarantinedNewCandidates": 18,
+        "historicalInvalidationsProtected": 31,
+        "duplicateGroupsFlagged": 2,
+        "statisticalOnlyRegions": 18
+      }
+    },
+    {
+      "stage": "SIM-R8",
+      "status": "HISTORICAL_INTEGRATED_SNAPSHOT",
+      "ref": "docs/audits/SIM-R8-RESULTS.json",
+      "result": {
+        "entities": 4283,
+        "slots": 8566,
+        "coat": 1500,
+        "flag": 299,
+        "withoutImages": 2778,
+        "priorityExamined": 7,
+        "priorityResolved": 1,
+        "priorityPartiallyResolved": 4,
+        "priorityBlocked": 1,
+        "priorityDisputed": 1,
+        "targetedCoatIssuesResolved": 3,
+        "newFinalNormativeGraphicAnnexes": 3,
+        "newPrimaryOfficialGazetteDocuments": 3,
+        "rightsExamined": 44,
+        "rightsClearedByReplacement": 3,
+        "oldArtisticFilesRetrospectivelyCleared": 0,
+        "rightsRestricted": 0,
+        "rightsUnresolved": 41,
+        "imagesAdded": 1,
+        "imagesReplaced": 3,
+        "imagesRemoved": 0,
+        "existingQuarantinePreserved": 18,
+        "historicalInvalidationsProtected": 31,
+        "newPositiveGraphicInvalidations": 1,
+        "institutional907CasesReinvestigated": 0,
+        "institutional907CasesNotReinvestigated": 907,
+        "newRelevantRecoveriesFrom907": 0,
+        "statisticalOnlyRegions": 18
+      }
+    }
+  ],
+  "reconciliations": [
+    {
+      "id": "R1-ARCHIVE-STATUS",
+      "finding": "R1 is an evidence-only closed draft PR64, not a main-integrated legal certification. Main R2a relative reference is completed by the immutable GitHub permalink; no historical file is rewritten.",
+      "authority": "https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md"
+    },
+    {
+      "id": "COUNTRY-GROUPING",
+      "finding": "R1 Moldova1042 includes the later disjoint groups Moldova1004, Gagauzia30 and Nistrenia_de_facto8; no geographic reclassification is inferred.",
+      "authority": "docs/audits/SIM-R8-RESULTS.json"
+    },
+    {
+      "id": "SELECTED-VS-ORIGINAL-RIGHTS",
+      "finding": "Three selected replacements are clear for the evaluated normative-copy scope; all44 original artistic files retain unresolved historical permissions.41 current dossiers remain open.",
+      "authority": "docs/audits/sim-r8/rights-review.json"
+    },
+    {
+      "id": "DEALU-MORII-PIXELS",
+      "finding": "R8 byte identity corrects the older description of a national coat: the exact bitmap is the same US-language icon as four other assignments. Historical documents and exclusion remain unchanged.",
+      "authority": "docs/audits/sim-r8/upstream-icon-provenance.json"
+    },
+    {
+      "id": "CAMPULUNG-DATES",
+      "finding": "audit-r8 approvalDate retains the local2013-05-30 proposal date while selected act is HG89/2015. Final gazette identifies national adoption2015-02-10.",
+      "authority": "docs/audits/sim-r8/evidence/mo-0141-2015.pdf"
+    },
+    {
+      "id": "VRANCEA-ASOF-LIMITATIONS",
+      "finding": "Older inherited limitation says graphic retrieval failed; SIM-R8 final annex recovery and VERIFIED_OFFICIAL coat verdict supersede that old retrieval state.",
+      "authority": "docs/audits/sim-r8/evidence/mo-0315-2026.pdf"
+    },
+    {
+      "id": "GAGAUZIA-FLAG-LICENCE",
+      "finding": "Earlier general public-domain wording does not replace R6 byte-identical Commons licence provenance and attribution requirements. The R6 specific CC BY-SA2.5 assessment remains separate from unresolved coat rights.",
+      "authority": "docs/audits/sim-r6/gagauzia-flag-rights.json"
+    },
+    {
+      "id": "COAT-NOT-FLAG",
+      "finding": "Campulung targeted coat resolution and Harghita/Vrancea final coat annexes do not certify the independent flags. The7 case verdicts and14 slot verdicts are preserved.",
+      "authority": "docs/audits/sim-r8/priority-exceptions.json"
+    }
+  ],
+  "normalizedSelectedVerdicts": [
+    {
+      "atlasId": "osm-r1216705",
+      "kind": "flag",
+      "predecessorVerdict": "OUTDATED_VERSION",
+      "selectedVerdict": "VERIFIED_OFFICIAL",
+      "identityProof": "EXACT_SELECTED_RECOMMENDED_IMAGE_OBJECT_MATCH",
+      "source": "public/data/symbols/audit-r8.json.gz"
+    },
+    {
+      "atlasId": "osm-r19095396",
+      "kind": "flag",
+      "predecessorVerdict": "OUTDATED_VERSION",
+      "selectedVerdict": "VERIFIED_OFFICIAL",
+      "identityProof": "EXACT_SELECTED_RECOMMENDED_IMAGE_OBJECT_MATCH",
+      "source": "public/data/symbols/audit-r8.json.gz"
+    },
+    {
+      "atlasId": "osm-r10494274",
+      "kind": "coat",
+      "predecessorVerdict": "HISTORICAL_ONLY",
+      "selectedVerdict": "SOURCE_CORROBORATED",
+      "identityProof": "EXACT_SELECTED_RECOMMENDED_IMAGE_OBJECT_MATCH",
+      "source": "public/data/symbols/audit-r8.json.gz"
+    }
+  ],
+  "evidenceInventory": [
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0141-2015.pdf",
+      "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+      "sha256": "b26de9f05d4a5ff82a84952588eb17f25059c935bddffad44b118045ce164875",
+      "pages": [
+        2
+      ],
+      "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+      "classification": "FINAL_OFFICIAL_EVIDENCE",
+      "newlyRecoveredInClose": false
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0315-2026.pdf",
+      "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--315--2026.html",
+      "sha256": "2e0e91b46e31eb567ae43fed2723021f395489f3eb22855cbf469aa1d044947c",
+      "pages": [
+        10
+      ],
+      "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+      "classification": "FINAL_OFFICIAL_EVIDENCE",
+      "newlyRecoveredInClose": false
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0544-2026.pdf",
+      "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+      "sha256": "53ea0c0f7e48d27e11cd1f5868e5ddfb872a0ab8042cd3de42202508d9895e30",
+      "pages": [
+        52
+      ],
+      "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+      "classification": "FINAL_OFFICIAL_EVIDENCE",
+      "newlyRecoveredInClose": false
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/bucharest-project-11888.pdf",
+      "url": "https://doc.pmb.ro/consiliu/sedinte/516/oz/11888.pdf",
+      "sha256": "447be46223ff004954706facaf683253a50800f8f8bee6855275a347ed047395",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "sourceType": "PRIMARY_INSTITUTIONAL_PROJECT",
+      "classification": "INSTITUTIONAL_EVIDENCE_NOT_SUFFICIENT_ALONE_FOR_FINAL_APPROVAL",
+      "newlyRecoveredInClose": false
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/taraclia-decree-241.pdf",
+      "url": "https://presedinte.md/app/webroot/Decrete/241.pdf",
+      "sha256": "8624e3575fbfa0be50959ec41c151c05e444fb509223e2aae14422dc25701f6f",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sourceType": "PRIMARY_NORMATIVE_ALREADY_RECOVERED",
+      "classification": "FINAL_OFFICIAL_EVIDENCE",
+      "newlyRecoveredInClose": false
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/harghita-register.pdf",
+      "url": "https://hargitamegye.ro/wp-content/uploads/2026/10/Lista-Hotararilor-Adoptate-29.10.2026.pdf",
+      "sha256": "fd49760570c73123c42b5ffe4a65e46e1a8b7d52d8b195c89783e30d885d6411",
+      "pages": [],
+      "sourceType": "PRIMARY_INSTITUTIONAL_REGISTER",
+      "classification": "INSTITUTIONAL_EVIDENCE_NOT_SUFFICIENT_ALONE_FOR_FINAL_APPROVAL",
+      "newlyRecoveredInClose": false
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/chisinau-symbols.html",
+      "url": "https://www.chisinau.md/ro/simbolurile-orasului-20376.html",
+      "sha256": "245e19651907c6a5930f7a32abed7120343aea610455336651cd163c6418f5e1",
+      "pages": [],
+      "sourceType": "PRIMARY_CURRENT_INSTITUTIONAL_PAGE",
+      "classification": "INSTITUTIONAL_EVIDENCE_NOT_SUFFICIENT_ALONE_FOR_FINAL_APPROVAL",
+      "newlyRecoveredInClose": false
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/chisinau-current-coat.jpg",
+      "url": "https://www.chisinau.md/files/simbol_oras_nou/Stema_oras_Chisinau.jpg",
+      "sha256": "ccaaf12f56af4ebc99ddfd08c5ed74bde7e84e37184a85379bd81fed63cc11d5",
+      "pages": [],
+      "sourceType": "PRIMARY_INSTITUTIONAL_REPRODUCTION",
+      "classification": "INSTITUTIONAL_EVIDENCE_NOT_SUFFICIENT_ALONE_FOR_FINAL_APPROVAL",
+      "newlyRecoveredInClose": false
+    }
+  ],
+  "classificationNotes": {
+    "historical": "Historical-only/invalidated candidates remain evidence, not current selections.",
+    "reuse": "RIGHTS_CLEARED is scoped to the selected reproduction and purpose; DOCUMENTED_DECLARATION is not independent legal clearance.",
+    "quarantine": "18 SIM-R7 alternatives remain unselected;31 historical invalidations plus1 R8 graphic-version invalidation are retained."
+  },
+  "institutionalRecovery": {
+    "cases": 907,
+    "authoritativeRegistry": "docs/audits/sim-r7/institutional-recovery.json.gz",
+    "newRequestsInClose": 0,
+    "newRecoveriesInClose": 0,
+    "crizbavRecounted": false
+  }
+}

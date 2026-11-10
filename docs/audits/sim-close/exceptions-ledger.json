@@ -1,0 +1,1440 @@
+{
+  "stage": "SIM-CLOSE",
+  "snapshotCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+  "summary": {
+    "cases": 7,
+    "slots": 14,
+    "resolvedTargetedCases": 1,
+    "partiallyResolved": 4,
+    "blocked": 1,
+    "disputed": 1,
+    "openPriorityDossiers": 6
+  },
+  "cases": [
+    {
+      "caseId": "HERALDRY:osm-r377733",
+      "atlasId": "osm-r377733",
+      "entity": "București",
+      "certifiedType": "county",
+      "verdictSIMR8": "PARTIALLY_RESOLVED",
+      "verdictAtClose": "PARTIALLY_RESOLVED",
+      "administrativeState": "ADMINISTRATIVELY_CLOSED",
+      "evidenceState": "OPEN_EVIDENCE_ONLY",
+      "scope": "Separate coat/flag slots; a confirmed coat does not close independent flag questions.",
+      "finding": "Recovered exact CGMB agenda item54 project11888,10 pages; page4 depicts the monastic saint with cathedral and staff, matching changed description. It is a proposed annex, not a separately authenticated adopted annex. No contemporary flag act established. Both nulls conserved.",
+      "blocker": "Authenticated annex adopted with HCGMB47/2024 or explicit institutional confirmation identifying this exact project graphic as adopted; independent flag act.",
+      "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+      "responsibleRole": "Heraldic documentary editor / institutional archive",
+      "secondaryCategories": [],
+      "symbols": [
+        {
+          "caseId": "HERALDRY:osm-r377733:coat",
+          "atlasId": "osm-r377733",
+          "symbolType": "coat",
+          "selectedImage": null,
+          "imageSHA256": null,
+          "legalHolder": {
+            "documentaryName": "București",
+            "exactAtlasId": "osm-r377733",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Municipiul București"
+          },
+          "verdictSIMR8": "MISSING",
+          "graphicVersionSIMR8": "MISSING",
+          "rightsSIMR8": {
+            "verdict": "NOT_APPLICABLE",
+            "licence": null,
+            "source": null,
+            "limitation": null
+          },
+          "actsAvailable": {
+            "description": "HCGMB 47/31 January 2024 amending 76/1993",
+            "applicableActDate": "2024-01-31",
+            "legacyApprovalDate": "2024-01-31",
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "url": "https://doc.pmb.ro/consiliu/sedinte/516/oz/11888.pdf",
+              "sourceType": "PRIMARY_INSTITUTIONAL_PROJECT",
+              "localFile": "docs/audits/sim-r8/evidence/bucharest-project-11888.pdf",
+              "sha256": "447be46223ff004954706facaf683253a50800f8f8bee6855275a347ed047395",
+              "bytes": 1718018,
+              "page": 4,
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "graphicAnnex": false,
+              "newDocumentToSIMR8": true,
+              "correspondence": "New project support graphic with monastic saint; draft and stamped departmental image are not a separately authenticated final adopted annex.",
+              "scopeForThisSlot": "DRAFT_NOT_AUTHENTICATED_AS_ADOPTED_ANNEX"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r377733",
+              "kind": "coat"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Authenticated graphic annex actually adopted with HCGMB47/31January2024, or explicit primary confirmation binding the project11888 graphic to the adopted act.",
+          "graphicConcordance": "MISSING",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r377733",
+              "kind": "coat"
+            }
+          },
+          "currentEvidenceFinding": "Recovered exact CGMB agenda item54 project11888,10 pages; page4 depicts the monastic saint with cathedral and staff, matching changed description. It is a proposed annex, not a separately authenticated adopted annex. No contemporary flag act established. Both nulls conserved.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Authenticated graphic annex actually adopted with HCGMB47/31January2024, or explicit primary confirmation binding the project11888 graphic to the adopted act. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r377733",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r377733",
+                "kind": "coat"
+              }
+            }
+          ]
+        },
+        {
+          "caseId": "HERALDRY:osm-r377733:flag",
+          "atlasId": "osm-r377733",
+          "symbolType": "flag",
+          "selectedImage": null,
+          "imageSHA256": null,
+          "legalHolder": {
+            "documentaryName": "București",
+            "exactAtlasId": "osm-r377733",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Municipiul București"
+          },
+          "verdictSIMR8": "MISSING",
+          "graphicVersionSIMR8": "MISSING",
+          "rightsSIMR8": {
+            "verdict": "NOT_APPLICABLE",
+            "licence": null,
+            "source": null,
+            "limitation": null
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "url": "https://doc.pmb.ro/consiliu/sedinte/516/oz/11888.pdf",
+              "sourceType": "PRIMARY_INSTITUTIONAL_PROJECT",
+              "localFile": "docs/audits/sim-r8/evidence/bucharest-project-11888.pdf",
+              "sha256": "447be46223ff004954706facaf683253a50800f8f8bee6855275a347ed047395",
+              "bytes": 1718018,
+              "page": 4,
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "graphicAnnex": false,
+              "newDocumentToSIMR8": true,
+              "correspondence": "New project support graphic with monastic saint; draft and stamped departmental image are not a separately authenticated final adopted annex.",
+              "scopeForThisSlot": "DRAFT_NOT_AUTHENTICATED_AS_ADOPTED_ANNEX"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r377733",
+              "kind": "flag"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Independent applicable municipal flag approval and its graphic; coat amendment is not flag adoption.",
+          "graphicConcordance": "MISSING",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r377733",
+              "kind": "flag"
+            }
+          },
+          "currentEvidenceFinding": "Recovered exact CGMB agenda item54 project11888,10 pages; page4 depicts the monastic saint with cathedral and staff, matching changed description. It is a proposed annex, not a separately authenticated adopted annex. No contemporary flag act established. Both nulls conserved.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Independent applicable municipal flag approval and its graphic; coat amendment is not flag adoption. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r377733",
+                "kind": "flag"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r377733",
+                "kind": "flag"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "HERALDRY:osm-r2248660",
+      "atlasId": "osm-r2248660",
+      "entity": "Harghita",
+      "certifiedType": "county",
+      "verdictSIMR8": "PARTIALLY_RESOLVED",
+      "verdictAtClose": "PARTIALLY_RESOLVED",
+      "administrativeState": "ADMINISTRATIVELY_CLOSED",
+      "evidenceState": "OPEN_EVIDENCE_ONLY",
+      "scope": "Separate coat/flag slots; a confirmed coat does not close independent flag questions.",
+      "finding": "Final official gazette544/2July2026 page52 recovered and visually reviewed: four red Byzantine crosses and eight stars, not the five-cross/twelve-star proposal. Coat resolved and added from literal final-annex crop. Existing flag retained and evaluated independently; final coat approval does not approve the flag.",
+      "blocker": "Coat resolved. Flag adoption/current model still not independently established.",
+      "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+      "responsibleRole": "Heraldic documentary editor / institutional archive",
+      "secondaryCategories": [],
+      "symbols": [
+        {
+          "caseId": "HERALDRY:osm-r2248660:coat",
+          "atlasId": "osm-r2248660",
+          "symbolType": "coat",
+          "selectedImage": {
+            "kind": "local",
+            "file": "harghita-coat.png",
+            "url": "symbols/sim-r8/harghita-coat.png",
+            "sourceUrl": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+            "tier": "A",
+            "sha256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556"
+          },
+          "imageSHA256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556",
+          "legalHolder": {
+            "documentaryName": "Harghita",
+            "exactAtlasId": "osm-r2248660",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Județul Harghita"
+          },
+          "verdictSIMR8": "VERIFIED_OFFICIAL",
+          "graphicVersionSIMR8": "CURRENT_REPRESENTATION_CONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "RIGHTS_CLEARED",
+            "licence": "Only literal colour annex copies to HG89/2015 and HG510/2026, published in the free official gazette; no new creative drawing or unrelated third-party artwork is copied. 9(b)(c), corroborated in publicly indexed2026 legal text;9(g) documentary photographs additionally distinguishes literal copy from artistic redraw.",
+            "source": "https://www.wipo.int/wipolex/en/law/neighboring_rights_romania",
+            "limitation": "Informative exact-holder normative annex reproduction"
+          },
+          "actsAvailable": {
+            "description": "HG510/2026",
+            "applicableActDate": "2026-06-26",
+            "legacyApprovalDate": "2026-06-26",
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "atlasId": "osm-r2248660",
+              "date": "2026-07-02",
+              "issue": "544",
+              "year": "2026",
+              "act": "HG510/26June2026",
+              "file": "mo-0544-2026.pdf",
+              "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+              "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+              "method": "Documented free e-monitor calendar POST with XHR header, followed by observed issue link using newly issued anonymous visitor session; no authentication, no payment.",
+              "reasonForNewMethod": "R7 did not use the normal free official gazette visitor workflow; prior stateless HTML redirects were not considered recovery.",
+              "checkedAt": "2026-11-09T22:30:57.176Z",
+              "sha256": "53ea0c0f7e48d27e11cd1f5868e5ddfb872a0ab8042cd3de42202508d9895e30",
+              "bytes": 24766026,
+              "localFile": "docs/audits/sim-r8/evidence/mo-0544-2026.pdf",
+              "graphicValidation": "ACT_AND_FINAL_ANNEX_VISUALLY_INSPECTED",
+              "cookiesStored": false,
+              "newDocumentToSIMR8": true,
+              "page": 52,
+              "graphicAnnex": true,
+              "recoveryState": "RECOVERED_PRIMARY",
+              "scopeForThisSlot": "FINAL_NORMATIVE_COAT_ANNEX"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r2248660",
+              "kind": "coat"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": true,
+          "missingEvidence": null,
+          "graphicConcordance": "FINAL_NORMATIVE_ANNEX_COMPARISON_CONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r2248660",
+              "kind": "coat"
+            }
+          },
+          "currentEvidenceFinding": "Final official gazette544/2July2026 page52 recovered and visually reviewed: four red Byzantine crosses and eight stars, not the five-cross/twelve-star proposal. Coat resolved and added from literal final-annex crop. Existing flag retained and evaluated independently; final coat approval does not approve the flag.",
+          "closureScopeStatus": "CLOSED_TARGETED_COAT_QUESTION",
+          "operationalCategory": null,
+          "secondaryCategories": [],
+          "reopeningCondition": "New primary evidence of an applicable replacement/revocation or a source-specific contradiction; preserve the current hash and historical predecessor.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r2248660",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r2248660",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "docs/audits/sim-r8/replacement-provenance.json",
+              "selector": {
+                "atlasId": "osm-r2248660",
+                "kind": "coat"
+              }
+            }
+          ]
+        },
+        {
+          "caseId": "HERALDRY:osm-r2248660:flag",
+          "atlasId": "osm-r2248660",
+          "symbolType": "flag",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "Flag of Harghita County.gif",
+            "tier": "B",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Harghita_County.gif",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Harghita_County.gif"
+          },
+          "imageSHA256": "ef0e43cf51867502f93fa518fcaace23948d030cb0789836e645cd33a72540a1",
+          "legalHolder": {
+            "documentaryName": "Harghita",
+            "exactAtlasId": "osm-r2248660",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Județul Harghita"
+          },
+          "verdictSIMR8": "SOURCE_CORROBORATED",
+          "graphicVersionSIMR8": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "Public domain",
+            "source": "https://commons.wikimedia.org/wiki/File%3AFlag_of_Harghita_County.gif",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "atlasId": "osm-r2248660",
+              "date": "2026-07-02",
+              "issue": "544",
+              "year": "2026",
+              "act": "HG510/26June2026",
+              "file": "mo-0544-2026.pdf",
+              "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+              "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+              "method": "Documented free e-monitor calendar POST with XHR header, followed by observed issue link using newly issued anonymous visitor session; no authentication, no payment.",
+              "reasonForNewMethod": "R7 did not use the normal free official gazette visitor workflow; prior stateless HTML redirects were not considered recovery.",
+              "checkedAt": "2026-11-09T22:30:57.176Z",
+              "sha256": "53ea0c0f7e48d27e11cd1f5868e5ddfb872a0ab8042cd3de42202508d9895e30",
+              "bytes": 24766026,
+              "localFile": "docs/audits/sim-r8/evidence/mo-0544-2026.pdf",
+              "graphicValidation": "ACT_AND_FINAL_ANNEX_VISUALLY_INSPECTED",
+              "cookiesStored": false,
+              "newDocumentToSIMR8": true,
+              "page": 52,
+              "graphicAnnex": true,
+              "recoveryState": "RECOVERED_PRIMARY",
+              "scopeForThisSlot": "COAT_ONLY_NOT_FLAG_APPROVAL"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r2248660",
+              "kind": "flag"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Independent county flag adoption/current-model act and graphic; the2026 coat act does not approve or replace the flag.",
+          "graphicConcordance": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r2248660",
+              "kind": "flag"
+            }
+          },
+          "currentEvidenceFinding": "Final official gazette544/2July2026 page52 recovered and visually reviewed: four red Byzantine crosses and eight stars, not the five-cross/twelve-star proposal. Coat resolved and added from literal final-annex crop. Existing flag retained and evaluated independently; final coat approval does not approve the flag.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Independent county flag adoption/current-model act and graphic; the2026 coat act does not approve or replace the flag. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r2248660",
+                "kind": "flag"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r2248660",
+                "kind": "flag"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "HERALDRY:osm-r2260187",
+      "atlasId": "osm-r2260187",
+      "entity": "Vrancea",
+      "certifiedType": "county",
+      "verdictSIMR8": "PARTIALLY_RESOLVED",
+      "verdictAtClose": "PARTIALLY_RESOLVED",
+      "administrativeState": "ADMINISTRATIVELY_CLOSED",
+      "evidenceState": "OPEN_EVIDENCE_ONLY",
+      "scope": "Separate coat/flag slots; a confirmed coat does not close independent flag questions.",
+      "finding": "Final official gazette315/21April2026 page10 recovered. Existing coat matches field divisions, gold eagle/cross/red beak and claws, sun/moon; silver aurochs with eight-point star/rose/moon; barrel with five grape clusters and five vine leaves. Lower-resolution drawing differs in linework, not demonstrated heraldic content. Coat preserved; flag approval remains independent and unconfirmed.",
+      "blocker": "Coat graphic comparison complete; no independent final flag act recovered.",
+      "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+      "responsibleRole": "Heraldic documentary editor / institutional archive",
+      "secondaryCategories": [],
+      "symbols": [
+        {
+          "caseId": "HERALDRY:osm-r2260187:coat",
+          "atlasId": "osm-r2260187",
+          "symbolType": "coat",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "ROU VN VRANCEA COA.png",
+            "tier": "B",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ROU_VN_VRANCEA_COA.png",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_VN_VRANCEA_COA.png"
+          },
+          "imageSHA256": "69e17cef8566be1efa92b62fcde72f0e0e06ae39d039b0827508b27a1767a686",
+          "legalHolder": {
+            "documentaryName": "Vrancea",
+            "exactAtlasId": "osm-r2260187",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Județul Vrancea"
+          },
+          "verdictSIMR8": "VERIFIED_OFFICIAL",
+          "graphicVersionSIMR8": "CURRENT_REPRESENTATION_CONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "Public domain",
+            "source": "https://commons.wikimedia.org/wiki/File%3AROU_VN_VRANCEA_COA.png",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": "HG 228/16 April 2026",
+            "applicableActDate": "2026-04-16",
+            "legacyApprovalDate": "2026-04-16",
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "atlasId": "osm-r2260187",
+              "date": "2026-04-21",
+              "issue": "315",
+              "year": "2026",
+              "act": "HG228/16April2026",
+              "file": "mo-0315-2026.pdf",
+              "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--315--2026.html",
+              "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+              "method": "Documented free e-monitor calendar POST with XHR header, followed by observed issue link using newly issued anonymous visitor session; no authentication, no payment.",
+              "reasonForNewMethod": "R7 did not use the normal free official gazette visitor workflow; prior stateless HTML redirects were not considered recovery.",
+              "checkedAt": "2026-11-09T22:30:46.903Z",
+              "sha256": "2e0e91b46e31eb567ae43fed2723021f395489f3eb22855cbf469aa1d044947c",
+              "bytes": 948082,
+              "localFile": "docs/audits/sim-r8/evidence/mo-0315-2026.pdf",
+              "graphicValidation": "ACT_AND_FINAL_ANNEX_VISUALLY_INSPECTED",
+              "cookiesStored": false,
+              "newDocumentToSIMR8": true,
+              "page": 10,
+              "graphicAnnex": true,
+              "recoveryState": "RECOVERED_PRIMARY",
+              "scopeForThisSlot": "FINAL_NORMATIVE_COAT_ANNEX"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r2260187",
+              "kind": "coat"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": true,
+          "missingEvidence": null,
+          "graphicConcordance": "FINAL_NORMATIVE_ANNEX_COMPARISON_CONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r2260187",
+              "kind": "coat"
+            }
+          },
+          "currentEvidenceFinding": "Final official gazette315/21April2026 page10 recovered. Existing coat matches field divisions, gold eagle/cross/red beak and claws, sun/moon; silver aurochs with eight-point star/rose/moon; barrel with five grape clusters and five vine leaves. Lower-resolution drawing differs in linework, not demonstrated heraldic content. Coat preserved; flag approval remains independent and unconfirmed.",
+          "closureScopeStatus": "CLOSED_TARGETED_COAT_QUESTION",
+          "operationalCategory": null,
+          "secondaryCategories": [],
+          "reopeningCondition": "New primary evidence of an applicable replacement/revocation or a source-specific contradiction; preserve the current hash and historical predecessor.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r2260187",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r2260187",
+                "kind": "coat"
+              }
+            }
+          ]
+        },
+        {
+          "caseId": "HERALDRY:osm-r2260187:flag",
+          "atlasId": "osm-r2260187",
+          "symbolType": "flag",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "Vrancea flag.webp",
+            "tier": "B",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vrancea_flag.webp",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vrancea_flag.webp"
+          },
+          "imageSHA256": "f1d3b065eaf765b8b973a9bd4fbc640e10edc6f8e8f43e7b0c5af059dbd0cf5e",
+          "legalHolder": {
+            "documentaryName": "Vrancea",
+            "exactAtlasId": "osm-r2260187",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Județul Vrancea"
+          },
+          "verdictSIMR8": "CANDIDATE_UNVERIFIED",
+          "graphicVersionSIMR8": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "CC0",
+            "source": "https://commons.wikimedia.org/wiki/File%3AVrancea_flag.webp",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "atlasId": "osm-r2260187",
+              "date": "2026-04-21",
+              "issue": "315",
+              "year": "2026",
+              "act": "HG228/16April2026",
+              "file": "mo-0315-2026.pdf",
+              "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--315--2026.html",
+              "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+              "method": "Documented free e-monitor calendar POST with XHR header, followed by observed issue link using newly issued anonymous visitor session; no authentication, no payment.",
+              "reasonForNewMethod": "R7 did not use the normal free official gazette visitor workflow; prior stateless HTML redirects were not considered recovery.",
+              "checkedAt": "2026-11-09T22:30:46.903Z",
+              "sha256": "2e0e91b46e31eb567ae43fed2723021f395489f3eb22855cbf469aa1d044947c",
+              "bytes": 948082,
+              "localFile": "docs/audits/sim-r8/evidence/mo-0315-2026.pdf",
+              "graphicValidation": "ACT_AND_FINAL_ANNEX_VISUALLY_INSPECTED",
+              "cookiesStored": false,
+              "newDocumentToSIMR8": true,
+              "page": 10,
+              "graphicAnnex": true,
+              "recoveryState": "RECOVERED_PRIMARY",
+              "scopeForThisSlot": "COAT_ONLY_NOT_FLAG_APPROVAL"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r2260187",
+              "kind": "flag"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Independent county flag adoption/current-model act and graphic; the2026 coat act does not approve or replace the flag.",
+          "graphicConcordance": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r2260187",
+              "kind": "flag"
+            }
+          },
+          "currentEvidenceFinding": "Final official gazette315/21April2026 page10 recovered. Existing coat matches field divisions, gold eagle/cross/red beak and claws, sun/moon; silver aurochs with eight-point star/rose/moon; barrel with five grape clusters and five vine leaves. Lower-resolution drawing differs in linework, not demonstrated heraldic content. Coat preserved; flag approval remains independent and unconfirmed.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Independent county flag adoption/current-model act and graphic; the2026 coat act does not approve or replace the flag. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r2260187",
+                "kind": "flag"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r2260187",
+                "kind": "flag"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "HERALDRY:osm-r1748490",
+      "atlasId": "osm-r1748490",
+      "entity": "Municipiul Chișinău",
+      "certifiedType": "municipality_or_city_uat",
+      "verdictSIMR8": "PARTIALLY_RESOLVED",
+      "verdictAtClose": "PARTIALLY_RESOLVED",
+      "administrativeState": "ADMINISTRATIVELY_CLOSED",
+      "evidenceState": "OPEN_EVIDENCE_ONLY",
+      "scope": "Separate coat/flag slots; a confirmed coat does not close independent flag questions.",
+      "finding": "Current municipal symbols page dated17July2026 explicitly describes adjusted municipal arms/flag and links a municipal JPEG. Large and small arms are forms of the same municipal holder, not proof of two Atlas legal holders. Municipality coat local JPEG authorisation chain and normative colour annex remain unproved. Existing images preserved.",
+      "blocker": "Adopted colour annexes to CMC5/2 and Decree1475-VIII plus image-specific reproduction chain for selected local JPEG.",
+      "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+      "responsibleRole": "Heraldic documentary editor / institutional archive",
+      "secondaryCategories": [
+        "RIGHTS_EVIDENCE_REQUIRED"
+      ],
+      "symbols": [
+        {
+          "caseId": "HERALDRY:osm-r1748490:coat",
+          "atlasId": "osm-r1748490",
+          "symbolType": "coat",
+          "selectedImage": {
+            "kind": "local",
+            "file": "chisinau-coat.jpg",
+            "url": "symbols/chisinau-coat.jpg",
+            "sourceUrl": "https://cnh.prm.md/"
+          },
+          "imageSHA256": "9197951cea05f4593f113eb721e16ab3b0c0da418749a71fae99e825d2478014",
+          "legalHolder": {
+            "documentaryName": "Municipiul Chișinău",
+            "exactAtlasId": "osm-r1748490",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "municipiul Chișinău"
+          },
+          "verdictSIMR8": "SOURCE_CORROBORATED",
+          "graphicVersionSIMR8": "COMPARISON_WITH_LIMITATIONS",
+          "rightsSIMR8": {
+            "verdict": "RIGHTS_UNRESOLVED",
+            "licence": null,
+            "source": "https://cnh.prm.md/",
+            "limitation": "Reproduction licence unresolved; statutory permission to illustrate the symbol is a separate assessment."
+          },
+          "actsAvailable": {
+            "description": "Decree 1475-VIII/2 March 2020; council decision 5/2/19 December 2019",
+            "applicableActDate": "2020-03-02",
+            "legacyApprovalDate": "2020-03-02",
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "name": "Chișinău municipal symbols17July2026",
+              "url": "https://www.chisinau.md/ro/simbolurile-orasului-20376.html",
+              "sourceType": "PRIMARY_CURRENT_INSTITUTIONAL_PAGE",
+              "localFile": "docs/audits/sim-r8/evidence/chisinau-symbols.html",
+              "sha256": "245e19651907c6a5930f7a32abed7120343aea610455336651cd163c6418f5e1",
+              "bytes": 77918,
+              "graphicAnnex": false,
+              "newDocumentToSIMR8": true,
+              "scope": "Corroborating source, not a final normative graphic annex.",
+              "scopeForThisSlot": "INSTITUTIONAL_CORROBORATION_NOT_NORMATIVE_APPROVAL"
+            },
+            {
+              "name": "Current municipal coat alternative",
+              "url": "https://www.chisinau.md/files/simbol_oras_nou/Stema_oras_Chisinau.jpg",
+              "sourceType": "PRIMARY_INSTITUTIONAL_REPRODUCTION",
+              "localFile": "docs/audits/sim-r8/evidence/chisinau-current-coat.jpg",
+              "sha256": "ccaaf12f56af4ebc99ddfd08c5ed74bde7e84e37184a85379bd81fed63cc11d5",
+              "bytes": 166748,
+              "graphicAnnex": false,
+              "newDocumentToSIMR8": true,
+              "scope": "Corroborating source, not a final normative graphic annex.",
+              "scopeForThisSlot": "INSTITUTIONAL_CORROBORATION_NOT_NORMATIVE_APPROVAL"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r1748490",
+              "kind": "coat"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Registered full-colour coat annex to CMC5/2/19December2019 and Decree1475-VIII/2March2020; exact selected JPEG reproduction-rights chain separately.",
+          "graphicConcordance": "COMPARISON_WITH_LIMITATIONS",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r1748490",
+              "kind": "coat"
+            }
+          },
+          "currentEvidenceFinding": "Current municipal symbols page dated17July2026 explicitly describes adjusted municipal arms/flag and links a municipal JPEG. Large and small arms are forms of the same municipal holder, not proof of two Atlas legal holders. Municipality coat local JPEG authorisation chain and normative colour annex remain unproved. Existing images preserved.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+          "secondaryCategories": [
+            "RIGHTS_EVIDENCE_REQUIRED"
+          ],
+          "reopeningCondition": "Registered full-colour coat annex to CMC5/2/19December2019 and Decree1475-VIII/2March2020; exact selected JPEG reproduction-rights chain separately. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r1748490",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r1748490",
+                "kind": "coat"
+              }
+            }
+          ]
+        },
+        {
+          "caseId": "HERALDRY:osm-r1748490:flag",
+          "atlasId": "osm-r1748490",
+          "symbolType": "flag",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "Drapel Municipiul Chisinau.jpg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Drapel_Municipiul_Chisinau.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Drapel_Municipiul_Chisinau.jpg",
+            "tier": "B"
+          },
+          "imageSHA256": "8e60933d88f208625e105b40c40db12dd51daf0c30feb6e4dae0e565a9a722d3",
+          "legalHolder": {
+            "documentaryName": "Municipiul Chișinău",
+            "exactAtlasId": "osm-r1748490",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "municipiul Chișinău"
+          },
+          "verdictSIMR8": "SOURCE_CORROBORATED",
+          "graphicVersionSIMR8": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "Public domain",
+            "source": "https://commons.wikimedia.org/wiki/File%3ADrapel_Municipiul_Chisinau.jpg",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "name": "Chișinău municipal symbols17July2026",
+              "url": "https://www.chisinau.md/ro/simbolurile-orasului-20376.html",
+              "sourceType": "PRIMARY_CURRENT_INSTITUTIONAL_PAGE",
+              "localFile": "docs/audits/sim-r8/evidence/chisinau-symbols.html",
+              "sha256": "245e19651907c6a5930f7a32abed7120343aea610455336651cd163c6418f5e1",
+              "bytes": 77918,
+              "graphicAnnex": false,
+              "newDocumentToSIMR8": true,
+              "scope": "Corroborating source, not a final normative graphic annex.",
+              "scopeForThisSlot": "INSTITUTIONAL_CORROBORATION_NOT_NORMATIVE_APPROVAL"
+            },
+            {
+              "name": "Current municipal coat alternative",
+              "url": "https://www.chisinau.md/files/simbol_oras_nou/Stema_oras_Chisinau.jpg",
+              "sourceType": "PRIMARY_INSTITUTIONAL_REPRODUCTION",
+              "localFile": "docs/audits/sim-r8/evidence/chisinau-current-coat.jpg",
+              "sha256": "ccaaf12f56af4ebc99ddfd08c5ed74bde7e84e37184a85379bd81fed63cc11d5",
+              "bytes": 166748,
+              "graphicAnnex": false,
+              "newDocumentToSIMR8": true,
+              "scope": "Corroborating source, not a final normative graphic annex.",
+              "scopeForThisSlot": "INSTITUTIONAL_CORROBORATION_NOT_NORMATIVE_APPROVAL"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r1748490",
+              "kind": "flag"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Registered municipal flag annex and fidelity comparison; Commons attribution is not the normative annex.",
+          "graphicConcordance": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r1748490",
+              "kind": "flag"
+            }
+          },
+          "currentEvidenceFinding": "Current municipal symbols page dated17July2026 explicitly describes adjusted municipal arms/flag and links a municipal JPEG. Large and small arms are forms of the same municipal holder, not proof of two Atlas legal holders. Municipality coat local JPEG authorisation chain and normative colour annex remain unproved. Existing images preserved.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Registered municipal flag annex and fidelity comparison; Commons attribution is not the normative annex. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r1748490",
+                "kind": "flag"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r1748490",
+                "kind": "flag"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "HERALDRY:osm-r1691801",
+      "atlasId": "osm-r1691801",
+      "entity": "Orașul Chișinău",
+      "certifiedType": "level_2_municipality",
+      "verdictSIMR8": "BLOCKED_EVIDENCE",
+      "verdictAtClose": "BLOCKED_EVIDENCE",
+      "administrativeState": "ADMINISTRATIVELY_CLOSED",
+      "evidenceState": "OPEN_EVIDENCE_ONLY",
+      "scope": "Separate coat/flag slots; a confirmed coat does not close independent flag questions.",
+      "finding": "New current institutional page uses city wording in title but municipal holder in substantive text. That does not prove an independent city heraldic proprietor or a lawful shared scope across the two Atlas administrative identities. No transfer, no geographic edits.",
+      "blocker": "Explicit legal explanation or act identifying independent city holder or documented common scope for both Atlas identities.",
+      "operationalCategory": "DISPUTED_OR_UNCONFIRMED",
+      "responsibleRole": "Heraldic identity editor",
+      "secondaryCategories": [],
+      "symbols": [
+        {
+          "caseId": "HERALDRY:osm-r1691801:coat",
+          "atlasId": "osm-r1691801",
+          "symbolType": "coat",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "Coat of Arms of Chișinău.svg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg",
+            "tier": "B"
+          },
+          "imageSHA256": "7f2c805fcab071d6e926a54fa67a47b42f2c991beab4e95718166414de9b4840",
+          "legalHolder": {
+            "documentaryName": "NOT_SEPARATELY_ESTABLISHED",
+            "exactAtlasId": "osm-r1691801",
+            "identityStatus": "INDEPENDENT_HERALDIC_HOLDER_NOT_ESTABLISHED",
+            "certifiedGeographicName": "Chișinău"
+          },
+          "verdictSIMR8": "CANDIDATE_UNVERIFIED",
+          "graphicVersionSIMR8": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "Public domain",
+            "source": "https://commons.wikimedia.org/wiki/File%3ACoat_of_Arms_of_Chi%C8%99in%C4%83u.svg",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "name": "Chișinău municipal symbols17July2026",
+              "url": "https://www.chisinau.md/ro/simbolurile-orasului-20376.html",
+              "sourceType": "PRIMARY_CURRENT_INSTITUTIONAL_PAGE",
+              "localFile": "docs/audits/sim-r8/evidence/chisinau-symbols.html",
+              "sha256": "245e19651907c6a5930f7a32abed7120343aea610455336651cd163c6418f5e1",
+              "bytes": 77918,
+              "graphicAnnex": false,
+              "newDocumentToSIMR8": true,
+              "scope": "Corroborating source, not a final normative graphic annex.",
+              "scopeForThisSlot": "INSTITUTIONAL_CORROBORATION_NOT_NORMATIVE_APPROVAL"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r1691801",
+              "kind": "coat"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Primary act or institutional legal explanation identifying an independent city holder or documented common scope across the two exact Atlas identities; no automatic municipal transfer.",
+          "graphicConcordance": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r1691801",
+              "kind": "coat"
+            }
+          },
+          "currentEvidenceFinding": "New current institutional page uses city wording in title but municipal holder in substantive text. That does not prove an independent city heraldic proprietor or a lawful shared scope across the two Atlas administrative identities. No transfer, no geographic edits.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "DISPUTED_OR_UNCONFIRMED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Primary act or institutional legal explanation identifying an independent city holder or documented common scope across the two exact Atlas identities; no automatic municipal transfer. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r1691801",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r1691801",
+                "kind": "coat"
+              }
+            }
+          ]
+        },
+        {
+          "caseId": "HERALDRY:osm-r1691801:flag",
+          "atlasId": "osm-r1691801",
+          "symbolType": "flag",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "Flag of Chișinău.svg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Flag_of_Chi%C8%99in%C4%83u.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Chi%C8%99in%C4%83u.svg",
+            "tier": "B"
+          },
+          "imageSHA256": "7c3d4c07394042aee03150c272426ddb6120b650177302745dbbbb78816ad639",
+          "legalHolder": {
+            "documentaryName": "NOT_SEPARATELY_ESTABLISHED",
+            "exactAtlasId": "osm-r1691801",
+            "identityStatus": "INDEPENDENT_HERALDIC_HOLDER_NOT_ESTABLISHED",
+            "certifiedGeographicName": "Chișinău"
+          },
+          "verdictSIMR8": "CANDIDATE_UNVERIFIED",
+          "graphicVersionSIMR8": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "Public domain",
+            "source": "https://commons.wikimedia.org/wiki/File%3AFlag_of_Chi%C8%99in%C4%83u.svg",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "name": "Chișinău municipal symbols17July2026",
+              "url": "https://www.chisinau.md/ro/simbolurile-orasului-20376.html",
+              "sourceType": "PRIMARY_CURRENT_INSTITUTIONAL_PAGE",
+              "localFile": "docs/audits/sim-r8/evidence/chisinau-symbols.html",
+              "sha256": "245e19651907c6a5930f7a32abed7120343aea610455336651cd163c6418f5e1",
+              "bytes": 77918,
+              "graphicAnnex": false,
+              "newDocumentToSIMR8": true,
+              "scope": "Corroborating source, not a final normative graphic annex.",
+              "scopeForThisSlot": "INSTITUTIONAL_CORROBORATION_NOT_NORMATIVE_APPROVAL"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r1691801",
+              "kind": "flag"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Primary act or institutional legal explanation identifying an independent city holder or documented common scope across the two exact Atlas identities; no automatic municipal transfer.",
+          "graphicConcordance": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r1691801",
+              "kind": "flag"
+            }
+          },
+          "currentEvidenceFinding": "New current institutional page uses city wording in title but municipal holder in substantive text. That does not prove an independent city heraldic proprietor or a lawful shared scope across the two Atlas administrative identities. No transfer, no geographic edits.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "DISPUTED_OR_UNCONFIRMED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Primary act or institutional legal explanation identifying an independent city holder or documented common scope across the two exact Atlas identities; no automatic municipal transfer. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r1691801",
+                "kind": "flag"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r1691801",
+                "kind": "flag"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "HERALDRY:osm-r10664180",
+      "atlasId": "osm-r10664180",
+      "entity": "Câmpulung",
+      "certifiedType": "municipality",
+      "verdictSIMR8": "RESOLVED",
+      "verdictAtClose": "RESOLVED",
+      "administrativeState": "ADMINISTRATIVELY_CLOSED",
+      "evidenceState": "CLOSED_TARGETED_COAT_QUESTION",
+      "scope": "The targeted disputed coat is resolved; the independent flag remains unconfirmed and is not certified by this case closure.",
+      "finding": "Final official gazette141/25February2015 page2 contains HG89/10February2015 and colour annex. Blue field, silver helmet with black crosses, gold eagle on helmet and black cross-bearing eagle above five-tower crown. Existing2010 violet-field PNG contradicts the final field; alternative SVG omits upper eagle. Replace coat with literal normative annex crop; old artistic permissions are not retrospectively cleared. Separate flag not certified by this coat act.",
+      "blocker": "Targeted coat dispute resolved. Flag has no new certification in this stage.",
+      "operationalCategory": null,
+      "responsibleRole": "Archive custodian",
+      "secondaryCategories": [],
+      "symbols": [
+        {
+          "caseId": "HERALDRY:osm-r10664180:coat",
+          "atlasId": "osm-r10664180",
+          "symbolType": "coat",
+          "selectedImage": {
+            "kind": "local",
+            "file": "campulung-coat.png",
+            "url": "symbols/sim-r8/campulung-coat.png",
+            "sourceUrl": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+            "tier": "A",
+            "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae"
+          },
+          "imageSHA256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae",
+          "legalHolder": {
+            "documentaryName": "Câmpulung",
+            "exactAtlasId": "osm-r10664180",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Municipiul Câmpulung"
+          },
+          "verdictSIMR8": "VERIFIED_OFFICIAL",
+          "graphicVersionSIMR8": "CURRENT_REPRESENTATION_CONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "RIGHTS_CLEARED",
+            "licence": "Only literal colour annex copies to HG89/2015 and HG510/2026, published in the free official gazette; no new creative drawing or unrelated third-party artwork is copied. 9(b)(c), corroborated in publicly indexed2026 legal text;9(g) documentary photographs additionally distinguishes literal copy from artistic redraw.",
+            "source": "https://www.wipo.int/wipolex/en/law/neighboring_rights_romania",
+            "limitation": "Informative exact-holder normative annex reproduction"
+          },
+          "actsAvailable": {
+            "description": "HG89/2015",
+            "applicableActDate": "2015-02-10",
+            "legacyApprovalDate": "2013-05-30",
+            "localProposalDate": "2013-05-30"
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "atlasId": "osm-r10664180",
+              "date": "2015-02-25",
+              "issue": "141",
+              "year": "2015",
+              "act": "HG89/10February2015",
+              "file": "mo-0141-2015.pdf",
+              "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+              "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+              "method": "Documented free e-monitor calendar POST with XHR header, followed by observed issue link using newly issued anonymous visitor session; no authentication, no payment.",
+              "reasonForNewMethod": "R7 did not use the normal free official gazette visitor workflow; prior stateless HTML redirects were not considered recovery.",
+              "checkedAt": "2026-11-09T22:30:43.212Z",
+              "sha256": "b26de9f05d4a5ff82a84952588eb17f25059c935bddffad44b118045ce164875",
+              "bytes": 890777,
+              "localFile": "docs/audits/sim-r8/evidence/mo-0141-2015.pdf",
+              "graphicValidation": "ACT_AND_FINAL_ANNEX_VISUALLY_INSPECTED",
+              "cookiesStored": false,
+              "newDocumentToSIMR8": true,
+              "page": 2,
+              "graphicAnnex": true,
+              "recoveryState": "RECOVERED_PRIMARY",
+              "scopeForThisSlot": "FINAL_NORMATIVE_COAT_ANNEX"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r10664180",
+              "kind": "coat"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": true,
+          "missingEvidence": null,
+          "graphicConcordance": "FINAL_NORMATIVE_ANNEX_COMPARISON_CONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r10664180",
+              "kind": "coat"
+            }
+          },
+          "currentEvidenceFinding": "Final official gazette141/25February2015 page2 contains HG89/10February2015 and colour annex. Blue field, silver helmet with black crosses, gold eagle on helmet and black cross-bearing eagle above five-tower crown. Existing2010 violet-field PNG contradicts the final field; alternative SVG omits upper eagle. Replace coat with literal normative annex crop; old artistic permissions are not retrospectively cleared. Separate flag not certified by this coat act.",
+          "closureScopeStatus": "CLOSED_TARGETED_COAT_QUESTION",
+          "operationalCategory": null,
+          "secondaryCategories": [],
+          "reopeningCondition": "New primary evidence of an applicable replacement/revocation or a source-specific contradiction; preserve the current hash and historical predecessor.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r10664180",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r10664180",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "docs/audits/sim-r8/replacement-provenance.json",
+              "selector": {
+                "atlasId": "osm-r10664180",
+                "kind": "coat"
+              }
+            }
+          ]
+        },
+        {
+          "caseId": "HERALDRY:osm-r10664180:flag",
+          "atlasId": "osm-r10664180",
+          "symbolType": "flag",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "Steagul Oficial Al Campulungului.png",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Steagul_Oficial_Al_Campulungului.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steagul_Oficial_Al_Campulungului.png",
+            "tier": "B"
+          },
+          "imageSHA256": null,
+          "legalHolder": {
+            "documentaryName": "Câmpulung",
+            "exactAtlasId": "osm-r10664180",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Municipiul Câmpulung"
+          },
+          "verdictSIMR8": "CANDIDATE_UNVERIFIED",
+          "graphicVersionSIMR8": "COMPARISON_WITH_LIMITATIONS",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File%3ASteagul_Oficial_Al_Campulungului.png",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [
+            {
+              "atlasId": "osm-r10664180",
+              "date": "2015-02-25",
+              "issue": "141",
+              "year": "2015",
+              "act": "HG89/10February2015",
+              "file": "mo-0141-2015.pdf",
+              "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+              "sourceType": "PRIMARY_OFFICIAL_GAZETTE",
+              "method": "Documented free e-monitor calendar POST with XHR header, followed by observed issue link using newly issued anonymous visitor session; no authentication, no payment.",
+              "reasonForNewMethod": "R7 did not use the normal free official gazette visitor workflow; prior stateless HTML redirects were not considered recovery.",
+              "checkedAt": "2026-11-09T22:30:43.212Z",
+              "sha256": "b26de9f05d4a5ff82a84952588eb17f25059c935bddffad44b118045ce164875",
+              "bytes": 890777,
+              "localFile": "docs/audits/sim-r8/evidence/mo-0141-2015.pdf",
+              "graphicValidation": "ACT_AND_FINAL_ANNEX_VISUALLY_INSPECTED",
+              "cookiesStored": false,
+              "newDocumentToSIMR8": true,
+              "page": 2,
+              "graphicAnnex": true,
+              "recoveryState": "RECOVERED_PRIMARY",
+              "scopeForThisSlot": "COAT_ONLY_NOT_FLAG_APPROVAL"
+            }
+          ],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r10664180",
+              "kind": "flag"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Independent final territorial flag approval and graphic; HG89/2015 concerns the coat, not the selected flag.",
+          "graphicConcordance": "COMPARISON_WITH_LIMITATIONS",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r10664180",
+              "kind": "flag"
+            }
+          },
+          "currentEvidenceFinding": "Final official gazette141/25February2015 page2 contains HG89/10February2015 and colour annex. Blue field, silver helmet with black crosses, gold eagle on helmet and black cross-bearing eagle above five-tower crown. Existing2010 violet-field PNG contradicts the final field; alternative SVG omits upper eagle. Replace coat with literal normative annex crop; old artistic permissions are not retrospectively cleared. Separate flag not certified by this coat act.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Independent final territorial flag approval and graphic; HG89/2015 concerns the coat, not the selected flag. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r10664180",
+                "kind": "flag"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r10664180",
+                "kind": "flag"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "HERALDRY:osm-r9982547",
+      "atlasId": "osm-r9982547",
+      "entity": "Tălmaciu",
+      "certifiedType": "town",
+      "verdictSIMR8": "DISPUTED",
+      "verdictAtClose": "DISPUTED",
+      "administrativeState": "ADMINISTRATIVELY_CLOSED",
+      "evidenceState": "OPEN_EVIDENCE_ONLY",
+      "scope": "Separate coat/flag slots; a confirmed coat does not close independent flag questions.",
+      "finding": "New public WordPress content search for drapel yields no item; steag yields only traditions page describing national tricolours carried in a village procession, not approval of municipal flag. Targeted approval-act search finds no applicable act. Prior before1918 Commons description and2021 consultation remain insufficient for legal readoption. Flag preserved as disputed.",
+      "blocker": "Final local/national flag approval or explicit historical readoption act and associated graphic.",
+      "operationalCategory": "DISPUTED_OR_UNCONFIRMED",
+      "responsibleRole": "Heraldic identity editor",
+      "secondaryCategories": [],
+      "symbols": [
+        {
+          "caseId": "HERALDRY:osm-r9982547:coat",
+          "atlasId": "osm-r9982547",
+          "symbolType": "coat",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "ROU SB Talmaciu CoA.jpg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/ROU_SB_Talmaciu_CoA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROU_SB_Talmaciu_CoA.jpg",
+            "tier": "B"
+          },
+          "imageSHA256": null,
+          "legalHolder": {
+            "documentaryName": "Tălmaciu",
+            "exactAtlasId": "osm-r9982547",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Orașul Tălmaciu"
+          },
+          "verdictSIMR8": "SOURCE_CORROBORATED",
+          "graphicVersionSIMR8": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "Public domain",
+            "source": "https://commons.wikimedia.org/wiki/File%3AROU_SB_Talmaciu_CoA.jpg",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r9982547",
+              "kind": "coat"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Preserve existing source-corroborated coat and its R8 limitations; no additional coat certification is undertaken in SIM-CLOSE.",
+          "graphicConcordance": "PRIMARY_GRAPHIC_FIDELITY_UNCONFIRMED",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r9982547",
+              "kind": "coat"
+            }
+          },
+          "currentEvidenceFinding": "New public WordPress content search for drapel yields no item; steag yields only traditions page describing national tricolours carried in a village procession, not approval of municipal flag. Targeted approval-act search finds no applicable act. Prior before1918 Commons description and2021 consultation remain insufficient for legal readoption. Flag preserved as disputed.",
+          "closureScopeStatus": "SOURCE_CORROBORATED_NO_NEW_COAT_CERTIFICATION",
+          "operationalCategory": "EXTERNAL_EVIDENCE_REQUIRED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Preserve existing source-corroborated coat and its R8 limitations; no additional coat certification is undertaken in SIM-CLOSE. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r9982547",
+                "kind": "coat"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r9982547",
+                "kind": "coat"
+              }
+            }
+          ]
+        },
+        {
+          "caseId": "HERALDRY:osm-r9982547:flag",
+          "atlasId": "osm-r9982547",
+          "symbolType": "flag",
+          "selectedImage": {
+            "kind": "commons",
+            "file": "Flag of Talmesh before 1918.jpg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Talmesh_before_1918.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg",
+            "tier": "B"
+          },
+          "imageSHA256": "ab557bdcad6a24a97ab63c2d00714987268c5ad5d546ee0e5a1da3f2f85e647b",
+          "legalHolder": {
+            "documentaryName": "Tălmaciu",
+            "exactAtlasId": "osm-r9982547",
+            "identityStatus": "EXACT_HOLDER_FROM_EXISTING_DOCUMENTATION",
+            "certifiedGeographicName": "Orașul Tălmaciu"
+          },
+          "verdictSIMR8": "DISPUTED",
+          "graphicVersionSIMR8": "COMPARISON_WITH_LIMITATIONS",
+          "rightsSIMR8": {
+            "verdict": "DOCUMENTED_DECLARATION",
+            "licence": "CC BY-SA 3.0",
+            "source": "https://commons.wikimedia.org/wiki/File%3AFlag_of_Talmesh_before_1918.jpg",
+            "limitation": "Commons uploader declaration recorded; this is not independent legal clearance."
+          },
+          "actsAvailable": {
+            "description": null,
+            "applicableActDate": null,
+            "legacyApprovalDate": null,
+            "localProposalDate": null
+          },
+          "availableDocumentaryEvidence": [],
+          "priorEvidenceRef": {
+            "path": "docs/audits/sim-r7/priority-exceptions.json",
+            "selector": {
+              "atlasId": "osm-r9982547",
+              "kind": "flag"
+            }
+          },
+          "finalNormativeCoatAnnexRecovered": false,
+          "missingEvidence": "Final contemporary flag approval or legal historical readoption act and corresponding graphic; the2021 consultation and before1918 description are insufficient.",
+          "graphicConcordance": "COMPARISON_WITH_LIMITATIONS",
+          "historicalLimitationsRetainedByReference": {
+            "path": "public/data/symbols/audit-r8.json.gz",
+            "selector": {
+              "atlasId": "osm-r9982547",
+              "kind": "flag"
+            }
+          },
+          "currentEvidenceFinding": "New public WordPress content search for drapel yields no item; steag yields only traditions page describing national tricolours carried in a village procession, not approval of municipal flag. Targeted approval-act search finds no applicable act. Prior before1918 Commons description and2021 consultation remain insufficient for legal readoption. Flag preserved as disputed.",
+          "closureScopeStatus": "OPEN_EVIDENCE_ONLY",
+          "operationalCategory": "DISPUTED_OR_UNCONFIRMED",
+          "secondaryCategories": [],
+          "reopeningCondition": "Final contemporary flag approval or legal historical readoption act and corresponding graphic; the2021 consultation and before1918 description are insufficient. Reopen only this exact symbol slot on a relevant new source or verifiable new method.",
+          "actionPermitted": "CONSERVE_R8_IMAGE_NULL_AND_UNCERTAINTY_WITHOUT_NEW_ASSIGNMENT",
+          "evidenceRefs": [
+            {
+              "path": "docs/audits/sim-r8/priority-exceptions.json",
+              "selector": {
+                "atlasId": "osm-r9982547",
+                "kind": "flag"
+              }
+            },
+            {
+              "path": "public/data/symbols/audit-r8.json.gz",
+              "selector": {
+                "atlasId": "osm-r9982547",
+                "kind": "flag"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

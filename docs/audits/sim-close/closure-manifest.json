@@ -1,0 +1,1273 @@
+{
+  "stage": "SIM-CLOSE",
+  "administrativeVerdict": "SYSTEMATIC_HERALDIC_AUDIT_SERIES_CLOSED_ADMINISTRATIVELY",
+  "legalVerdict": "NO_CERTIFICATION_OF_UNRESOLVED_CASES",
+  "baseCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+  "checkedAt": "2026-11-10T07:05:26.521Z",
+  "sourceIndexRef": "docs/audits/sim-close/source-index.json",
+  "sourceIndexSHA256": "2eb125af63a95aaa6d7915bcfadff9208b1cd71f282ae501cf3669dc986fadf1",
+  "sourceArchives": [
+    {
+      "path": "docs/audits/SIM-R2A-EVIDENCE.json",
+      "sha256": "6bf2919535d2464e85dde821fd5afe6ab4620bb2d8023786ebfc94b09c252bc8",
+      "bytes": 5029,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R2A-VERIFIED-SYMBOL-PILOT.md",
+      "sha256": "3419b5dac7394e695e64d25a8da07fb3ad681a7ef414366bd66c413f360d02e8",
+      "bytes": 4612,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R3-EDITORIAL-SYMBOLS.md",
+      "sha256": "0dae3615ce8e35d5a87480d8938cb2a3ca040687f50c10e82464b417707ea69c",
+      "bytes": 6480,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R31-ASSET-CHECK-20261108.json",
+      "sha256": "28d01516f89003adc7c6e49292ac11fa5bbfd56d4e8c86d7909bc4a30e68ac15",
+      "bytes": 83643,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R4-COVERAGE.json",
+      "sha256": "33cb883b565895052ba65d4578c812346c79ad86dc88ab6de2cb8e15b5a0802f",
+      "bytes": 416449,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R4-GLOBAL-SYMBOLS.md",
+      "sha256": "46b06e0224036c150c2601bdcbc9d9bd4d414a2f1b0b01da647e3739b349b792",
+      "bytes": 4610,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R4-IDENTITIES.json",
+      "sha256": "0107bf9545d2e29853bd2046af731243e0506f953f74a1624ca182627efc1d7b",
+      "bytes": 273121,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R5-AUTHENTICITY.md",
+      "sha256": "2fad5249c69a1f916acb1415d0c2bcdb1f060c4976dd90418832523445c03c20",
+      "bytes": 17120,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R5-RESULTS.json",
+      "sha256": "4f97c41c66454e29751d84b2e77fd7d0087ad65d350b17b4d6afd1194d899908",
+      "bytes": 31643,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R6-PRIORITY-EXCEPTIONS.md",
+      "sha256": "3bfc9949c9841b4f9864cdece29030ee9dcd580856f6253e8fcbf6298692c042",
+      "bytes": 24755,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R6-RESULTS.json",
+      "sha256": "c85cde9eb5c06b95bcb23f89fa35c320208acaa7b93a71c79ec45d490845584d",
+      "bytes": 35434,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R7-EVIDENCE-AND-RIGHTS.md",
+      "sha256": "cdea762cf3a8089937ba33928e3eac677183fa410098273bedf833ec61106c1f",
+      "bytes": 10880,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R7-RESULTS.json",
+      "sha256": "733e1a4b9a516a11ec259b4f4316fb9de3c05cacf4f4c72667d455381f284bfa",
+      "bytes": 6691,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R8-RESULTS.json",
+      "sha256": "4e013439df26c15dbab39f7b68526100ae3c42c1acef676be52cffce0c5d3707",
+      "bytes": 4403,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/SIM-R8-TARGETED-EVIDENCE.md",
+      "sha256": "364b09b52f968432fe128e60ef9149b5e715dc809ef850525afea7ec50f13f7d",
+      "bytes": 9118,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/access-reinvestigation.json.gz",
+      "sha256": "04f518311a751a651e8e9dee19e69b0e393143ce4b73ee1b29a97f45c57f619d",
+      "bytes": 88086,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/annex-visual-reviews.json",
+      "sha256": "7f01a7791339bb0662f706ba4a8918e0b233f3fd56473e387367c62d32650132",
+      "bytes": 42951,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/article-history.json.gz",
+      "sha256": "a60e029e9a0f93180ae5294fb20d10a85b876e41c44751ec8e785cafad25ad0d",
+      "bytes": 355600,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/campulung-sources.json",
+      "sha256": "10e30047cd12c06ffb2782e0a706b000c8d205e937b9523ca7cb633b2f42645c",
+      "bytes": 1477,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/document-searches.json.gz",
+      "sha256": "99792f19a7191caaca63ad891ae91ad4aecf1f420d93e8f6f0e902e936b1d5d0",
+      "bytes": 442745,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/documentary-sources.json.gz",
+      "sha256": "a835b2ce91b6e3b7f7babc1599c440fb639dedc0ea5519e1051dd6cc91ce6708",
+      "bytes": 107868,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/graphic-checks.json",
+      "sha256": "6461bb4f233eba3e60d288bbaef0d2689d583805807923e97a129d33e5cf4896",
+      "bytes": 653,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/historical-warning-sources.json",
+      "sha256": "ba2e72a42adb6c4b3fdd40845256704ffd04710da3bc7f02f21e29a6243b117b",
+      "bytes": 3275,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/identity-warning-review.json",
+      "sha256": "da4699913ba087f9f98131dfffd08521cb3bc3a7917a8a531531aae630bcd6bc",
+      "bytes": 10052,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/image-checksums.json",
+      "sha256": "0db99c491afe05b848608bf0e7e0da5620717d5b29130203edfedb338da312a5",
+      "bytes": 961278,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/initial-inventory.json",
+      "sha256": "57102082421ecbc058a9bdefec6866fa39bf40cae9041449eda2e579b87439d5",
+      "bytes": 928404,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/local-source-comparisons.json",
+      "sha256": "a237cee66b453fad6460ba71f5531ec120f216286eae365cff7447680603c5ad",
+      "bytes": 834,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/manual-decisions.json",
+      "sha256": "11959bf9cc4005461130cbda85ef25f806d24d2c4716820102bbe21bb2d63a48",
+      "bytes": 117823,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/per-symbol-verdicts.csv",
+      "sha256": "c4a95596c6762df936e5bb5ed49ae50c099861b631758eea96d6b9509057b0f6",
+      "bytes": 2077777,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/primary-linked-sources.json.gz",
+      "sha256": "9d8dadc1e4aca3fc89389ce77f29933f15c7942147656ea4b81abde2114eafd4",
+      "bytes": 16080,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/primary-pdf-text.json.gz",
+      "sha256": "e03222b20b09fa80963a55fa12c1f7f1201c0e934bd9053bf6ca4c797f84fc37",
+      "bytes": 68476,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/protected-files.json",
+      "sha256": "c3cb39d9ef02b990a2007581ed04e108d36388fca48c62c18280329c7b7174a3",
+      "bytes": 12408,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/replacement-provenance.json",
+      "sha256": "b7bb499659b586ef30762556e062a4da870841f0252c4a111dccbd76fd79cefe",
+      "bytes": 1194,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/reuse-primary-sources.json",
+      "sha256": "40e290804dc28e5ae906bf5d7745a23286ad6694a048507e660a5c3df4251ffb",
+      "bytes": 1561,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/romania-flag-inspected.svg",
+      "sha256": "57e1c4d27feec8e7a459e2dc522b9e6ec3eec996d9504733a9a17d9b4fce3026",
+      "bytes": 297,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r5/source-metadata.json.gz",
+      "sha256": "cb70338bb0de49107ca5e4d86f09a5e511acbb7d7b4544248acb4da383924e24",
+      "bytes": 24915546,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/access-recovery.json.gz",
+      "sha256": "690dd404a6c9ede776be807534eb9e7b7af5521eef4cf66eb170dcc2d63f88f9",
+      "bytes": 27696,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/baseline.json",
+      "sha256": "5df5e3a5baa66eaa7d39b77a983ddf765eca04002475e9d8de35f24900852d49",
+      "bytes": 540992,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/browser-source-attempts.json",
+      "sha256": "7d876ec8e2e86f7a68390ce6794a7a008e5f58bdaf97f6b81906c9b0f45b6a04",
+      "bytes": 897,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/browser-source-http1-attempts.json",
+      "sha256": "1c3c630d233883222e4a418c6e7deb74df644301d7050e8d5fae2928dbba10a9",
+      "bytes": 960,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/documents.json",
+      "sha256": "066a794516628c474768ecb83925911fe4f88ee81e08b09719537bb51bfe021b",
+      "bytes": 7967,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/gagauzia-flag-rights.json",
+      "sha256": "24f24110063a809745ef4b77f74deb501e96976cdd931eb7d8529ae7410b9f40",
+      "bytes": 864,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/historical-files.json",
+      "sha256": "b2b2e4bb2913d35745f22a8b607ff60759ffcf8be568f8a99531725f73822990",
+      "bytes": 986,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/image-metadata.json",
+      "sha256": "ef8c2913c30cec313d23f99580327e20064ec2f6f1dbdd2be6b79d518c6bb082",
+      "bytes": 31588,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/priority-media.json",
+      "sha256": "68a27f4f470b86979c00d8729f09b84588647bf1eebc7f031910d36386fd4ec6",
+      "bytes": 15561,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/priority-visual-findings.json",
+      "sha256": "23c27df196629606900da1b083d52966e65753c05965e94c0dfba472b50a32c7",
+      "bytes": 5185,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/replacement-provenance.json",
+      "sha256": "d42788d53b96f04479f538522f6277b01d77f4cde5df9e2b9d0cd318b3ef283c",
+      "bytes": 1163,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/rights-investigation.json",
+      "sha256": "326e9da994cb9627ab28c1ce4a956d2205d74976fdd41c7e236c9a32b1aa0614",
+      "bytes": 72570,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/rights-review.json",
+      "sha256": "b57c87b77cd68d4bf13af670c319055f86b0b538b773fdb65092e19c47fdf9fd",
+      "bytes": 153689,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r6/rights-visual-findings.json",
+      "sha256": "60bb6dc886e8c98fccced45e58d1336bc5cef050e7463550e3340e964dfd6fb1",
+      "bytes": 11100,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/baseline.json",
+      "sha256": "6a71a21d725bca7ec1a404d3dcba31419faea1f61f3ed00aeee01237df489a36",
+      "bytes": 903346,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/changes.json",
+      "sha256": "cebfedcae65ee121389827761ae0b548cb2d7aa19d801fedca2f2046d5036c03",
+      "bytes": 106,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/chisinau-additional-documents.json",
+      "sha256": "8327d652025e8be9d2637fe237f3f1171644ac777081e88476b4d5df11969d00",
+      "bytes": 2363,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/ci-platform-retry.json",
+      "sha256": "5427b41b992340d2884f7b49c525cd1f71e651de66b7932c7bbcd2acd5af750f",
+      "bytes": 742,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/commons-api-retry.json",
+      "sha256": "858a909d567440ce9918fe41a77a83fb25651152672a3d0039f9dd193f11aaea",
+      "bytes": 2465,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/duplicate-review.json",
+      "sha256": "7b97ba696930a6a32d7727aeba1e0179700faeba35cc8f274daead538616c5cf",
+      "bytes": 969,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/evidence/chisinau-disposition-537d-2020.pdf",
+      "sha256": "3332bca338a2c7bb9bfb0d976c6ed08f24a6141779f4f4ff68fff796b4db5918",
+      "bytes": 7254116,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/evidence/harghita-hcj6-2026.pdf",
+      "sha256": "7cb5a3ac6d1860f2f3188d7c9d3fc38cd632a15a896d9144a56beb4524f7a397",
+      "bytes": 102732,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/gzip-platform-investigation.json",
+      "sha256": "5bdb2628442a9af04e618207b56e49905428fc0627aaa2808e1799a238af40e7",
+      "bytes": 772,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/historical-files.json",
+      "sha256": "c3f30237dd2f370c3fb75e1249e5aa1fabc4d3f3e8e4eaf64f700edbaf6615dc",
+      "bytes": 1441,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/image-metadata.json",
+      "sha256": "fa6172d7faf3b00d9417dbdee85ab40941701842f5eb46821117d7668181acb0",
+      "bytes": 35680,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/institutional-recovery-reviewed.json.gz",
+      "sha256": "5b09a3f39890bc0d359f88cc6be6d9de11bbf68d34930c2933d152dcdab33229",
+      "bytes": 399788,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/institutional-recovery.json.gz",
+      "sha256": "a093a5a890450e53cc5d35d964a4bd0d5c8b80b2824e3edb4551c1ad4a3e7b7b",
+      "bytes": 399841,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/institutional-wikipedia-followup.json",
+      "sha256": "e62da7c6e5923cf3b3e93638c7f30eb9b315cc29202ed589223e13619249bb47",
+      "bytes": 3382483,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/pdf-structure-checks.json",
+      "sha256": "11f0326b3e8d118c157e24f67e4292fde4203de5e9ad2c700064926e25014251",
+      "bytes": 809,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/primary-fallback-attempts.json",
+      "sha256": "a8ab2eee4e74655dc21f20e273a41af19303a87b13d08f571032637dd106efb7",
+      "bytes": 781,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/priority-commons-check.json",
+      "sha256": "27035188690bfc814638992a791b1796646bfd6267b3491bd70ac922d132132a",
+      "bytes": 52012,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/priority-documents.json",
+      "sha256": "c65bc754d37b4c8eb6cc2a97b2d791062bcd4f8936a204a74529396d112f83dd",
+      "bytes": 6155,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/priority-exceptions.json",
+      "sha256": "c0afc81c3cc2cd4e5cafcbde39551661e13ee4426da3b2280856f8ca7aa6ea12",
+      "bytes": 155458,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/quarantine.json",
+      "sha256": "96bb25db5e2d93b98734a999bbe7463ad3b894e1931f099454c9aa2fe666f59f",
+      "bytes": 28988,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/recovered-document-evidence.json",
+      "sha256": "c9efb7de886490f28b4568463d7c31b712a06462e2a5d18d8d92ae541ad92967",
+      "bytes": 3771,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/rights-review.json",
+      "sha256": "d63109dc781bde64a707b2fbc7449c0f0a1c11b3f0e2373eae429f42bc177a8f",
+      "bytes": 329324,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/rights-source-investigation.json",
+      "sha256": "7448400addcb7035c4a8d75dd70bab319630b91c0dd7b3ef07760d97df7def77",
+      "bytes": 268217,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/search-0.json",
+      "sha256": "02b56a2daf618dc87a33146402a6d1ba5412dedad64cf2cf8ab522456d5111d7",
+      "bytes": 3907,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/search-1.json",
+      "sha256": "0687d90cf0d89b28d034ddf4f876f576f99a7deb2d28f424e1384ec9e7c54716",
+      "bytes": 12553,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/search-2.json",
+      "sha256": "2c476e33c72d50525f594c6e035b81b5014209929c7891224916cab0f290ec51",
+      "bytes": 13544,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/search-3.json",
+      "sha256": "3a21fe412e038672deb04c2c2bc4ef415dab9c85dfd81948a4a8ad3fda1b3841",
+      "bytes": 7943,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/sim-r6-publication-confirmation.json",
+      "sha256": "c77ea9a086be83660f293bff1429e977f8bee969542d3953a3049aa5d3022cde",
+      "bytes": 719,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/sim-r6-results-baseline.json",
+      "sha256": "273a05e2e7bb97528c1a38969f73d93a8d8b105a2583c40b0ddc5d1d4ef259be",
+      "bytes": 35447,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/validation.json",
+      "sha256": "5144039f08549cadd74ad246028bc452808aa33ce06804a2be597d1a355d7c00",
+      "bytes": 2057,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-0.json",
+      "sha256": "302f2d31ad46c387159527c9756b84d866f7f1bcf1fbb16096e35dc9ed1fb21b",
+      "bytes": 16273,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-120.json",
+      "sha256": "2e1da06aa9a591fb75eed456cff6ebbb8ef27c2de15b18a55b715fa1c9987e41",
+      "bytes": 17466,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-150.json",
+      "sha256": "45cbf68fa97adc54f23c0845d939f10377ba520148e29ea42e60c95b7f061020",
+      "bytes": 18098,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-180.json",
+      "sha256": "858772a6fd30762820e1e4cb0c00f7cf547960785a3cafd74779aef76b59584e",
+      "bytes": 18047,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-210.json",
+      "sha256": "5d676d6e938ed00a5a4faa032a7842f488e349953033cdfb890ed71eef30ec56",
+      "bytes": 17807,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-240.json",
+      "sha256": "2ca0246ab560678d07a897698b12d3635472171f07cbf105e32adbeaa98d9461",
+      "bytes": 19372,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-270.json",
+      "sha256": "9e81524210a06275c47117ee16f54f13971637b2bda4d1bded1e2633611f1918",
+      "bytes": 18503,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-30.json",
+      "sha256": "42c900852ac51c6ddb92e52ea0cb8ea6b8f53ce6e89836a10bc6bc38ac3f14e3",
+      "bytes": 17272,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-300.json",
+      "sha256": "f1e4b5e474302292b1730fd4c1e4ee9809af3d8b74e172030b4795036c787ca1",
+      "bytes": 19732,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-330.json",
+      "sha256": "e7f92012b6ac9ab3fe97298a6682143063d57ff0e38f051b3f88b9f6ae902e97",
+      "bytes": 20621,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-360.json",
+      "sha256": "ea294cacdedfd9b5e9a6c061baad3ee59b52c35fedcc8867acfcfabfecc6349f",
+      "bytes": 19802,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-390.json",
+      "sha256": "e3d841f3aa22d5dfb10286881b8817b753428cda3e2477658be3224a1569cbe8",
+      "bytes": 23214,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-420.json",
+      "sha256": "4a4a9665bfc600b2ed658dab7fabd621fdda3cb421a709de748cd29029057dc4",
+      "bytes": 19106,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-450.json",
+      "sha256": "676365fbabd2cf2ca8bdd2fdafe92e96093faebc6f9e914dbff52b220014d3ed",
+      "bytes": 17152,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-480.json",
+      "sha256": "463448744adaac4cfe36f083840e6a316bfa2193d01fe4bf19f1b78134c865cc",
+      "bytes": 16596,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-510.json",
+      "sha256": "0697fe86b2f2989817884ce49f2f1997748e496249801bc58c8bd840d890ed19",
+      "bytes": 18614,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-540.json",
+      "sha256": "1b7f07889c96a2d9501c769fdfad1ff5fba0180aa76f4681be9ce9bbb88b59cb",
+      "bytes": 16553,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-570.json",
+      "sha256": "98aaf9d676a7f3287eafea6de9e6892c5f43245e146a8ee61547ae388c3239fc",
+      "bytes": 18900,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-60.json",
+      "sha256": "40148105e2f136de7f653a7a0af7a6aacdf0d3fba23bb763b52a266256cb2392",
+      "bytes": 18748,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-600.json",
+      "sha256": "8ea2fbb8b35cfc779ef4471356e6bd8bf0d193752f97589b632bc8a6c9cd7cd2",
+      "bytes": 18927,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-630.json",
+      "sha256": "fe1c230917dc5a80f618991d4f1d5e6fe45231ed117b0177a5da02d372a45fbf",
+      "bytes": 18208,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-660.json",
+      "sha256": "9acddd41337913558d88e582cf0ab80138882ed028b120d492d7f438ac4b59e2",
+      "bytes": 19095,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-690.json",
+      "sha256": "183be72567153188530eed36f1a31b33ec3cdffcbba69126de4a02e665582aa2",
+      "bytes": 18861,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-720.json",
+      "sha256": "36424c9da87064c53d0fd34d08400bd3168c31685b853e0baa5b8bc07fe3c522",
+      "bytes": 18277,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-750.json",
+      "sha256": "6a912692eff5228b7124bcba3d4fe35e042b68a6cb80dc5ac701969afd70b39c",
+      "bytes": 20013,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-780.json",
+      "sha256": "4d679f118456d0da9df07f0f3e23fa9f17ac5910a3734e5fcfe0769cc231d8c7",
+      "bytes": 16553,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-810.json",
+      "sha256": "96d8cf5682f5151283aca52d63de4efaa1e771c62ea7d867d3175a4a7e794252",
+      "bytes": 18192,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-840.json",
+      "sha256": "548395e9223ce31101b3baa96c51345ebd8efaae1ac29e492301e77ed9d01167",
+      "bytes": 17102,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-870.json",
+      "sha256": "93163a307f1250bb4fec1e19df468b711f532147bebdea6e6b4aa9f7e194e1f1",
+      "bytes": 20008,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-90.json",
+      "sha256": "a397fae69193575d41c275428a99f87bb002e19134bb428a6be0e1a640a11186",
+      "bytes": 15681,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r7/wiki-evidence/rowiki-900.json",
+      "sha256": "ac126e1fd694645358c042b88f9057981bb712ec0f6a19bbc5615f99dc8204d3",
+      "bytes": 5615,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/baseline.json",
+      "sha256": "38200ab517e464fd429ad1759340eba9ff74de61d1c0e35503aec72fc2aadb19",
+      "bytes": 2934,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/bucharest-agenda-context.json",
+      "sha256": "3568ad53906e5371015a0aed354010762cfa0534f717d17fef4bbe31b12fa01b",
+      "bytes": 392,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/changes.json",
+      "sha256": "aadadb16a11154f47e2efe32b0c631d398ded38377ea00e909d2a728a890a50e",
+      "bytes": 4145,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/chisinau-comparison.json",
+      "sha256": "8cad5afdbf38101c80e2a773c64ffae74ef4449210b715fa32a6216d584c8dc0",
+      "bytes": 907,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/documents.json",
+      "sha256": "9a28d2390a2953b3bafa80667bde5715b85bf7ba53bf397927951e1e5dbdbee4",
+      "bytes": 5991,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/bucharest-project-11888.pdf",
+      "sha256": "447be46223ff004954706facaf683253a50800f8f8bee6855275a347ed047395",
+      "bytes": 1718018,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/chisinau-current-coat.jpg",
+      "sha256": "ccaaf12f56af4ebc99ddfd08c5ed74bde7e84e37184a85379bd81fed63cc11d5",
+      "bytes": 166748,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/chisinau-symbols.html",
+      "sha256": "245e19651907c6a5930f7a32abed7120343aea610455336651cd163c6418f5e1",
+      "bytes": 77918,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/harghita-register.pdf",
+      "sha256": "fd49760570c73123c42b5ffe4a65e46e1a8b7d52d8b195c89783e30d885d6411",
+      "bytes": 603233,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0141-2015.pdf",
+      "sha256": "b26de9f05d4a5ff82a84952588eb17f25059c935bddffad44b118045ce164875",
+      "bytes": 890777,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0315-2026.pdf",
+      "sha256": "2e0e91b46e31eb567ae43fed2723021f395489f3eb22855cbf469aa1d044947c",
+      "bytes": 948082,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/mo-0544-2026.pdf",
+      "sha256": "53ea0c0f7e48d27e11cd1f5868e5ddfb872a0ab8042cd3de42202508d9895e30",
+      "bytes": 24766026,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/onetap-LICENSE.txt",
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+      "bytes": 18091,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/onetap-README.txt",
+      "sha256": "34706d5d163bf85a5587b665fccdde820839ed3d688c024ca3a07f1b3dcd6e80",
+      "bytes": 19488,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/onetap-accessibility-onetap.php",
+      "sha256": "39a5a7364cd00f55c1f7fe7f5596203cbf083934dbe0f0d50167624e5af3a036",
+      "bytes": 3028,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/onetap-icon.png",
+      "sha256": "21995835b08851bf63d79875b5921730a30d6cd5a1405ca09042b52a584ac0af",
+      "bytes": 10748,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/romania-wipo-law.html",
+      "sha256": "6676a4d444d7123844c445cabf5d87638961b842a56298cadf4e59b715bdf03d",
+      "bytes": 790930,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/evidence/taraclia-decree-241.pdf",
+      "sha256": "8624e3575fbfa0be50959ec41c151c05e444fb509223e2aae14422dc25701f6f",
+      "bytes": 2024580,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/institutional-targets.json",
+      "sha256": "a393c0cca72dccc451bf195ec2ef45dd3760e0f0836f52536b2cd554ea015d1c",
+      "bytes": 421,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/official-gazettes.json",
+      "sha256": "6fc6263237f089080fc3fc8b3c0f3e59af21919de94e8c6bb8e6a957a5af55dd",
+      "bytes": 2908,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/priority-exceptions.json",
+      "sha256": "7b4c458aad1bee9141095a6fe618b66a6975559768b66347630037e6eec20e57",
+      "bytes": 23500,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/replacement-provenance.json",
+      "sha256": "de8bad5fb03e17b078badd64d819a13f7be5f196a31f266b8c7cdb486da76711",
+      "bytes": 4251,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/retrieval-attempts.json",
+      "sha256": "57e84e7ec896eb9841dd924c7bbe33861dcaf1420c58a80f0372d896912b70f1",
+      "bytes": 31992,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/reuse-assessment.json",
+      "sha256": "c17bcc840b82f557febcbba7a137de5942b87324cf2fc03b93e563465080c578",
+      "bytes": 1613,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/rights-review.json",
+      "sha256": "26a8ad5b3ddf3c5e8d7b4b0cfb8df9151d05d560de8bd9fee4aa9c4a080a3544",
+      "bytes": 125704,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/selection-reviews.json",
+      "sha256": "d046c284f2c257f06a482df32c5093577174175153533ca9ca48c8416de48725",
+      "bytes": 6394,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/upstream-icon-provenance.json",
+      "sha256": "d52716ecbb483e70ec8680fd23e661aeebf21d252d8ed1018cc3cc2f5d79c268",
+      "bytes": 1700,
+      "immutableHistorical": true
+    },
+    {
+      "path": "docs/audits/sim-r8/validation.json",
+      "sha256": "001da5017dce578db63d2ca8f9e85b8d11be39c38196d4c81b7a5bc4bfebd815",
+      "bytes": 4127,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/audit-initial.json.gz",
+      "sha256": "dd7a10ecde0718faf62380ba0f83d21f85ff4f40cf7d9d4eeec1db2db65fe521",
+      "bytes": 380993,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/audit-r6.json.gz",
+      "sha256": "6fbd0df36d3b2860f14bc4c00259fb3519205150c3b5490b1ab1582cd6964e8f",
+      "bytes": 2535533,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/audit-r7.json.gz",
+      "sha256": "e681b74801e8e3c278ff62f1e1ecd0668ddd310d6acd40f060b56b5be0b5dfa7",
+      "bytes": 2576834,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/audit-r8.json.gz",
+      "sha256": "ffe699b225a1fac484918761c4e539dbb1058979fadcbecb4b246e0f94c977b8",
+      "bytes": 2584275,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/audit.json.gz",
+      "sha256": "ff1f6cddbe151d9cc44092a6e4fdfd8c97d232e7368d1c1edec398352cfe0d8d",
+      "bytes": 2531876,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/registry-current.json.gz",
+      "sha256": "3edc8235aec684c91da5f349dd3e1e20af3b140439c420f097752c4d63f1c8a4",
+      "bytes": 2945475,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/registry-r6.json.gz",
+      "sha256": "8bd6dbeec849e9a6cc8b6855af8b33fa985aaf3587a90a08d6350f9b1cdb6781",
+      "bytes": 2940863,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/registry-r7.json.gz",
+      "sha256": "90fddf3b4a2a69fdb934cd95fc64936acfb365a84ebf533abcc1a60f271fcd11",
+      "bytes": 2941301,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/registry-r8.json.gz",
+      "sha256": "e6fe731e54b35dc872801e8c8f915a0ec70c7674c402c3fbca41760b099f1ba1",
+      "bytes": 2941806,
+      "immutableHistorical": true
+    },
+    {
+      "path": "public/data/symbols/registry.json.gz",
+      "sha256": "e75fe4eb8a49f5dbb4bcb5827d725fa585cc9f1837083b3cdd1d3a15c0b16892",
+      "bytes": 2945143,
+      "immutableHistorical": true
+    }
+  ],
+  "currentControlsAtClosure": [
+    {
+      "path": "public/data/phase4/catalog.json.gz",
+      "sha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+      "bytes": 353966,
+      "immutableHistorical": false
+    },
+    {
+      "path": "src/data/entityCoat.mjs",
+      "sha256": "edcf588f39f0ed08a8e7725b34e34f64f53c4d515a84f789d7748e125307c7e6",
+      "bytes": 789,
+      "immutableHistorical": false
+    },
+    {
+      "path": "src/data/globalSymbols.mjs",
+      "sha256": "5b858a16d13211104b7d91693d075965acc8da4e292454d6ace1555001305591",
+      "bytes": 772,
+      "immutableHistorical": false
+    },
+    {
+      "path": "src/data/symbolAudit.mjs",
+      "sha256": "355535aacf1b8eb347c3d60e638efa399f36bf31f4eac36b1d3783cbaf0f4c70",
+      "bytes": 1005,
+      "immutableHistorical": false
+    },
+    {
+      "path": "src/data/symbolInvalidations.mjs",
+      "sha256": "87b88ec07b65a5aba25213169bdef6fe44bba028a9d28b761d712fbfa6429471",
+      "bytes": 15137,
+      "immutableHistorical": false
+    },
+    {
+      "path": "src/data/symbolR8Invalidations.mjs",
+      "sha256": "52d20e098fa657fc85fd66268a425111d0e062929f3e17e48f7c1473b6086116",
+      "bytes": 563,
+      "immutableHistorical": false
+    },
+    {
+      "path": "src/data/symbolSelectionPolicy.mjs",
+      "sha256": "894b5cf32aae725309361de3a2db0d486cd0959cdf2a2d089fb26134a55fa65f",
+      "bytes": 7105,
+      "immutableHistorical": false
+    },
+    {
+      "path": "scripts/audit/sim-r7/11-generate-results.mjs",
+      "sha256": "7e4f0ade6505c496ac425472d349dfcbc2679bc681c7f492c43ab9d49eccf179",
+      "bytes": 17526,
+      "immutableHistorical": false,
+      "scope": "Control observed at closure, not a freeze of future functional development."
+    },
+    {
+      "path": "scripts/audit/sim-r7/12-verify-reproducibility.mjs",
+      "sha256": "3d9e2e852d553b70ee9d29f15d34a64feb2184be0d0fca02f479e18273572d6e",
+      "bytes": 858,
+      "immutableHistorical": false,
+      "scope": "Control observed at closure, not a freeze of future functional development."
+    },
+    {
+      "path": "scripts/audit/sim-r7/reproducible-gzip.mjs",
+      "sha256": "65c2859ffddf3b78d6b681bccdbcb21e8987abe39556d38c05d66046c96630ac",
+      "bytes": 305,
+      "immutableHistorical": false,
+      "scope": "Control observed at closure, not a freeze of future functional development."
+    },
+    {
+      "path": "scripts/audit/sim-r8/02-generate-results.mjs",
+      "sha256": "157670f1b68a1500676f9fcbfac1a620365293a264aaedbd7481c2a77e008513",
+      "bytes": 15771,
+      "immutableHistorical": false,
+      "scope": "Control observed at closure, not a freeze of future functional development."
+    },
+    {
+      "path": "scripts/audit/sim-r8/03-verify-reproducibility.mjs",
+      "sha256": "38f8e6fcd7c01fd07ea9135bb520aefb4a03d036c7121ec057cd0e39c074c47f",
+      "bytes": 1230,
+      "immutableHistorical": false,
+      "scope": "Control observed at closure, not a freeze of future functional development."
+    }
+  ],
+  "externalArchives": [
+    {
+      "stage": "SIM-R1",
+      "pullRequest": 64,
+      "state": "closed",
+      "draft": true,
+      "merged": false,
+      "headSHA": "cfc030e49973d472c66d62620293cf65ba0afa00",
+      "report": {
+        "url": "https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/SIM-R1-OFFICIAL-TERRITORIAL-SYMBOLS-20261108.md",
+        "blobSHA1": "e67bbb0dbfe6813eca8fb83ceaee84bed786f1f6",
+        "contentRead": true
+      },
+      "inventory": {
+        "url": "https://github.com/ovidiudeica/atlas/blob/cfc030e49973d472c66d62620293cf65ba0afa00/docs/audits/ATLAS-SYMBOL-AUDIT-ALL-4283-2026-11-08.csv",
+        "blobSHA1": "0477778a4c659617e36b45faba3f73403c3f0778",
+        "rowsDeclared": 4283,
+        "downloadedInClose": false
+      },
+      "scope": "Exhaustive identity inventory and evidence triage,800/2123 QIDs examined; not exhaustive juridical authentication. Draft closed/unmerged; no retroactive integration claimed."
+    }
+  ],
+  "counts": {
+    "entities": 4283,
+    "slots": 8566,
+    "coat": 1500,
+    "flag": 299,
+    "withoutImages": 2778,
+    "statisticalOnlyRegions": 18,
+    "rightsCases": 44,
+    "rightsSelectedReplacementCleared": 3,
+    "rightsUnresolved": 41,
+    "activeRightsUncertainty": 14,
+    "archivalRightsUncertaintyCases": 6,
+    "uniquePublishedRightsRiskCases": 19,
+    "priorityCases": 7,
+    "priorityResolvedTargeted": 1,
+    "priorityOpen": 6,
+    "evidenceOnlyDossiers": 47,
+    "distinctOpenHolderIds": 46,
+    "quarantinedAlternatives": 18,
+    "historicalInvalidations": 31,
+    "r8AdditionalInvalidations": 1,
+    "imagesChangedInClose": 0,
+    "institutionalSourcesReinvestigated": 0,
+    "newHeraldicResearchRequests": 0
+  },
+  "groups": {
+    "Moldova": {
+      "entities": 1004,
+      "coat": 190,
+      "flag": 186,
+      "withoutImages": 811
+    },
+    "Gagauzia": {
+      "entities": 30,
+      "coat": 8,
+      "flag": 5,
+      "withoutImages": 22
+    },
+    "Nistrenia_de_facto": {
+      "entities": 8,
+      "coat": 1,
+      "flag": 1,
+      "withoutImages": 7
+    },
+    "Romania": {
+      "entities": 3241,
+      "coat": 1301,
+      "flag": 107,
+      "withoutImages": 1938
+    }
+  },
+  "snapshotOnly": true,
+  "futureLegitimateIndividualAdditionsPermitted": true,
+  "noNewSystematicSIMStage": true,
+  "noPublishedImageOrFunctionalCodeChanges": true,
+  "policy": {
+    "path": "docs/audits/sim-close/reopening-policy.md",
+    "sha256": "daac4607d8200e644d83f2479b05ea374125619e1e848198ef2eec2e2d990616",
+    "validator": "scripts/audit/sim-close/reopening-policy.mjs"
+  },
+  "generatedArtifacts": [
+    {
+      "path": "docs/audits/sim-close/rights-ledger.json",
+      "sha256": "3c68667d704997b8d87b32359091ac148220ba15e98c6ca5f749a2bf9b9b201a"
+    },
+    {
+      "path": "docs/audits/sim-close/exceptions-ledger.json",
+      "sha256": "4ef77f657437a1ff8c8d481b6cecf8f13bcffe74a3bb912ed6f4a02347f37d61"
+    },
+    {
+      "path": "docs/audits/sim-close/technical-backlog.json",
+      "sha256": "462f694ee46133ffcf169e0cde08af35937b71582e60f611d04d76f8d87a953c"
+    },
+    {
+      "path": "docs/audits/sim-close/reconciliation.json",
+      "sha256": "6a24ff19fd72f7203524caac5d46ae2f1cbb5e69a8052c22d305b5bbbebbc7fe"
+    },
+    {
+      "path": "docs/audits/SIM-CLOSE-FINAL-REPORT.md",
+      "sha256": "49030ec31758be516323993301a2d211b7ac0139c010370f58a014ca261a0129"
+    }
+  ],
+  "priorStageVerification": {
+    "source": "docs/audits/sim-r8/validation.json",
+    "localTests": {
+      "passed": 274,
+      "failed": 0,
+      "skipped": 0
+    },
+    "changesDocumented": 4,
+    "reuseAssessmentRef": "docs/audits/sim-r8/reuse-assessment.json",
+    "licenceScopes": [
+      "Romania",
+      "Moldova",
+      "exclusions"
+    ]
+  },
+  "validation": {
+    "actualLocalExecution": {
+      "record": "docs/audits/sim-close/validation.json",
+      "sha256": "689e27ed36bbc73fe2ff3885491bf4561e3ae85749d5a25f0dcd93034aa15206",
+      "stage": "SIM-CLOSE",
+      "checkedAt": "2026-11-10T07:47:01.941Z",
+      "platform": "win32",
+      "node": "v24.21.0",
+      "baseCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+      "tests": {
+        "full": {
+          "passed": 282,
+          "failed": 0,
+          "skipped": 0
+        },
+        "closureSubset": {
+          "passed": 8,
+          "failed": 0
+        }
+      },
+      "typeScriptVite": "PASS",
+      "Chromium": {
+        "fullSuite": "PASS",
+        "viewports": [
+          1440,
+          900,
+          390,
+          360
+        ],
+        "uncaughtBrowserExceptions": 0
+      },
+      "reproducibility": {
+        "SIM_R7": "PASS_7_OUTPUTS",
+        "SIM_R8": "PASS_6_ISOLATED_OUTPUTS",
+        "SIM_CLOSE": "PASS_6_ISOLATED_OUTPUTS"
+      },
+      "compiledWebsiteIdenticalToVerifiedR8": {
+        "reference": "SIM-R8 Pages verification for be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+        "files": [
+          {
+            "file": "index.html",
+            "sha256": "648c7c2e0669dfc1e26803ded0907c66c122b5e4b0a8c285bb3a8089fdd44fbe"
+          },
+          {
+            "file": "assets/index-BlVGy-X6.js",
+            "sha256": "09b14ba7234f1147885595462dcdf715cac9522e4582909a334595b3adb73016"
+          },
+          {
+            "file": "assets/index-C1LH5SUY.css",
+            "sha256": "bbf880a4db30662d566939f1ee8abeaf82dcf670f9163ec1e98929d8d1fc9430"
+          },
+          {
+            "file": "data/symbols/registry-r8.json.gz",
+            "sha256": "e6fe731e54b35dc872801e8c8f915a0ec70c7674c402c3fbca41760b099f1ba1"
+          },
+          {
+            "file": "data/symbols/audit-r8.json.gz",
+            "sha256": "ffe699b225a1fac484918761c4e539dbb1058979fadcbecb4b246e0f94c977b8"
+          },
+          {
+            "file": "symbols/sim-r8/campulung-coat.png",
+            "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae"
+          },
+          {
+            "file": "symbols/sim-r8/harghita-coat.png",
+            "sha256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556"
+          },
+          {
+            "file": "symbols/sim-r8/taraclia-coat.png",
+            "sha256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698"
+          },
+          {
+            "file": "symbols/sim-r8/taraclia-flag.png",
+            "sha256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e"
+          },
+          {
+            "file": "data/phase4/catalog.json.gz",
+            "sha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482"
+          }
+        ]
+      },
+      "scopeVerification": {
+        "baseCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+        "method": "Actual git diff against base plus nonignored new files; only closure documentation, auxiliary audit scripts and closure tests permitted.",
+        "paths": [
+          "docs/audits/SIM-CLOSE-FINAL-REPORT.md",
+          "docs/audits/sim-close/closure-manifest.json",
+          "docs/audits/sim-close/exceptions-ledger.json",
+          "docs/audits/sim-close/reconciliation.json",
+          "docs/audits/sim-close/reopening-policy.md",
+          "docs/audits/sim-close/rights-ledger.json",
+          "docs/audits/sim-close/scope-verification.json",
+          "docs/audits/sim-close/source-index.json",
+          "docs/audits/sim-close/technical-backlog.json",
+          "docs/audits/sim-close/validation.json",
+          "scripts/audit/sim-close/README.md",
+          "scripts/audit/sim-close/generate.mjs",
+          "scripts/audit/sim-close/reopening-policy.mjs",
+          "scripts/audit/sim-close/verify-reproducibility.mjs",
+          "scripts/audit/sim-close/verify-scope.mjs",
+          "tests/sim-close-registers.test.mjs"
+        ],
+        "forbidden": [],
+        "geographicChanges": 0,
+        "publishedImageChanges": 0,
+        "functionalApplicationCodeChanges": 0,
+        "legacyTestOrWorkflowChanges": 0
+      },
+      "sourceFiles": [
+        {
+          "path": "scripts/audit/sim-close/generate.mjs",
+          "sha256": "4c16e453d90e191ad84b87d8208e1a0185fb0639c966aa15481e6caf6c760c73"
+        },
+        {
+          "path": "scripts/audit/sim-close/reopening-policy.mjs",
+          "sha256": "cf53e950270f767eb36f21de62f3395f55233a497bd6555f193af18e7444db40"
+        },
+        {
+          "path": "scripts/audit/sim-close/verify-reproducibility.mjs",
+          "sha256": "3d09501c1bd8f6b9f5cefe3db465eee786855e89e212cda2770cbb99fac0b7f3"
+        },
+        {
+          "path": "scripts/audit/sim-close/verify-scope.mjs",
+          "sha256": "d402bd06fe6d77faef7f353b34eceec4e2ec0fbb20349cb037752efad28e3e32"
+        },
+        {
+          "path": "tests/sim-close-registers.test.mjs",
+          "sha256": "d84972f1171068af40966161343d9e2be0da48f1fe47ab0cc79190c99f4b194b"
+        },
+        {
+          "path": "docs/audits/sim-close/reopening-policy.md",
+          "sha256": "daac4607d8200e644d83f2479b05ea374125619e1e848198ef2eec2e2d990616"
+        },
+        {
+          "path": "docs/audits/sim-close/source-index.json",
+          "sha256": "2eb125af63a95aaa6d7915bcfadff9208b1cd71f282ae501cf3669dc986fadf1"
+        }
+      ],
+      "logHashes": [
+        {
+          "localLog": "work/all-tests.log",
+          "sha256": "c0bc4df9d87038f1866e64a363af8214628b6da0fbadbf0e653a915ae2226aca"
+        },
+        {
+          "localLog": "work/close-tests-final.log",
+          "sha256": "039c149605043380686f60148171f7b2ce57607a8eedc76e500f41d776624ee2"
+        },
+        {
+          "localLog": "work/r7-repro.log",
+          "sha256": "82a85d49811c4567f8eaae6c70f60e332a3a08f389697e97fc886f6b3642347c"
+        },
+        {
+          "localLog": "work/r8-repro.log",
+          "sha256": "bca5085b1c546bdef40e3771d3553812d7a85e3b211151547f84710882c2ebfa"
+        },
+        {
+          "localLog": "work/build.log",
+          "sha256": "11040992734f5e5d0355b918b6f020dcb155c6a809adf287e8b5e7d4b30ca470"
+        },
+        {
+          "localLog": "work/browser.log",
+          "sha256": "170c0dc4b7c77930cec57559cba75489635edf77121c914f053dc72438fd92ba"
+        }
+      ],
+      "integrationAndPublication": "NOT_ASSERTED_IN_THIS_PREINTEGRATION_RECORD; exact-SHA CI and separate post-merge attestation required."
+    },
+    "record": "docs/audits/sim-close/validation.json",
+    "meaning": "Actual local execution is recorded separately; post-merge CI/Pages attestation is independent and must identify the exact final SHA."
+  },
+  "nextStage": "WEB-AUDIT"
+}

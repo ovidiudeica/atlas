@@ -1,0 +1,27 @@
+{
+  "baseCommit": "be7b1a033d7482e419a0aba0ed9cc8765b83ee87",
+  "method": "Actual git diff against base plus nonignored new files; only closure documentation, auxiliary audit scripts and closure tests permitted.",
+  "paths": [
+    "docs/audits/SIM-CLOSE-FINAL-REPORT.md",
+    "docs/audits/sim-close/closure-manifest.json",
+    "docs/audits/sim-close/exceptions-ledger.json",
+    "docs/audits/sim-close/reconciliation.json",
+    "docs/audits/sim-close/reopening-policy.md",
+    "docs/audits/sim-close/rights-ledger.json",
+    "docs/audits/sim-close/scope-verification.json",
+    "docs/audits/sim-close/source-index.json",
+    "docs/audits/sim-close/technical-backlog.json",
+    "docs/audits/sim-close/validation.json",
+    "scripts/audit/sim-close/README.md",
+    "scripts/audit/sim-close/generate.mjs",
+    "scripts/audit/sim-close/reopening-policy.mjs",
+    "scripts/audit/sim-close/verify-reproducibility.mjs",
+    "scripts/audit/sim-close/verify-scope.mjs",
+    "tests/sim-close-registers.test.mjs"
+  ],
+  "forbidden": [],
+  "geographicChanges": 0,
+  "publishedImageChanges": 0,
+  "functionalApplicationCodeChanges": 0,
+  "legacyTestOrWorkflowChanges": 0
+}
