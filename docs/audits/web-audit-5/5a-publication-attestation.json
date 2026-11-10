@@ -1,0 +1,44 @@
+{
+  "stage": "WEB-AUDIT.5a",
+  "pullRequest": 82,
+  "head": "8236fb37b66412f9be871ed10a3cde33369a88cf",
+  "integratedCommit": "82622896078bab8ce4ec25a7a8cac40c9bf6b87a",
+  "exactHeadCI": {
+    "run": 42807696004,
+    "conclusion": "success"
+  },
+  "postMergeCI": {
+    "run": 42808340688,
+    "verifyJob": 129803149394,
+    "deployJob": 129805119420,
+    "conclusion": "success"
+  },
+  "publication": "publication-5a.json",
+  "liveBrowser": [
+    {
+      "trial": 0,
+      "selected": {
+        "header": "https://ovidiudeica.github.io/atlas/symbols/sim-r8/taraclia-coat.png",
+        "overflow": 0
+      },
+      "unselectedExternalRequests": 0
+    },
+    {
+      "trial": 1,
+      "selected": {
+        "header": "https://ovidiudeica.github.io/atlas/symbols/sim-r8/taraclia-coat.png",
+        "overflow": 0
+      },
+      "unselectedExternalRequests": 0
+    },
+    {
+      "trial": 2,
+      "selected": {
+        "header": "https://ovidiudeica.github.io/atlas/symbols/sim-r8/taraclia-coat.png",
+        "overflow": 0
+      },
+      "unselectedExternalRequests": 0
+    }
+  ],
+  "attestationScope": "Separate post-merge evidence recorded in subsequent5b documentation; not part of the5a initial commit"
+}

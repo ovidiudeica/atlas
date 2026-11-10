@@ -59,6 +59,7 @@ type FeatureSet = FeatureCollection<Geometry, TerritoryFeature['properties']>;
 
 const base = import.meta.env.BASE_URL + 'data/phase4/';
 const shardCache = new Map<string, Promise<Map<string, TerritoryFeature>>>();
+const failedShards = new Map<string,{shard:string;mode:GeometryMode}>();
 
 export async function readGzipJSON<T>(file: string): Promise<T> {
   const response = await fetch(base + file, { cache: 'force-cache' });
@@ -98,14 +99,24 @@ export function loadGeometryShard(shard: string, mode: GeometryMode): Promise<Ma
         if (features.has(feature.properties.atlasId)) throw new Error('Duplicate Atlas polygon ID');
         features.set(feature.properties.atlasId, feature as TerritoryFeature);
       }
+      failedShards.delete(key);
       return features;
     })
     .catch(err => {
       shardCache.delete(key);
+      failedShards.set(key,{shard,mode});
       throw err;
     });
   shardCache.set(key, promise);
   return promise;
+}
+
+/** Retry only failed, currently required shards. Successful and pending loads keep
+ * their existing promise cache; no source bytes or selected IDs are changed. */
+export async function retryFailedGeometryShards(required:string[],mode:GeometryMode):Promise<void>{
+  const needed=new Set(required);
+  await Promise.all([...failedShards.values()].filter(f=>f.mode===mode&&needed.has(f.shard))
+    .map(f=>loadGeometryShard(f.shard,f.mode)));
 }
 
 export function normalize(value: string): string {

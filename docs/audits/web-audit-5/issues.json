@@ -1,0 +1,77 @@
+{
+  "stage": "WEB-AUDIT.5",
+  "issues": [
+    {
+      "id": "EXCESSIVE_TREE_ORIGINALS",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "5a: remote tree originals require exact-ID selection or reuse; zero unselected external search/branch requests in3after trials and3live trials.",
+      "evidence": "performance-5a.json"
+    },
+    {
+      "id": "SEARCH_HINT_CONTRAST",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "Computed foreground/background contrast >=4.5 at all5widths.",
+      "evidence": "accessibility-resilience-local.json"
+    },
+    {
+      "id": "TREE_LEVEL_CONTRAST",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "Administrative/statistical label colors darkened without palette redesign; computed ratios recorded.",
+      "evidence": "accessibility-resilience-local.json"
+    },
+    {
+      "id": "TREE_FOOTNOTE_CONTRAST",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "Footer foreground darkened; actual computed ratios recorded.",
+      "evidence": "accessibility-resilience-local.json"
+    },
+    {
+      "id": "MISSING_SEMANTIC_H1",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "One accessible site h1; visual brand hidden from AT to avoid duplicate title; real panel h2 and existing entity h3/section h4.",
+      "evidence": "accessibility-resilience-local.json"
+    },
+    {
+      "id": "CARD_AND_BREADCRUMB_TARGETS",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "44CSS-pixel card controls and breadcrumbs;5viewports and actual native200% zoom. Disabled controls are not treated as normal contrast failures.",
+      "evidence": "native-zoom-local.json"
+    },
+    {
+      "id": "KEYBOARD_FOCUS_AND_EXPORTS",
+      "verdict": "NO_DEFECT_CONFIRMED",
+      "conclusion": "Complete existing Chromium suite passed: Escape/focus return, Tab/ShiftTab, filters, CSV/GeoJSON content, original geometry in simplified mode, resets and permalink. Existing behavior retained.",
+      "evidence": "scripts/ci/browser-smoke.mjs"
+    },
+    {
+      "id": "GEOMETRY_RECOVERY",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "Dedicated EN/RO retry; only failed currently-required shard/mode; existing successful/pending cache retained. Root and exact Harghita shard HTTP503 recovered with active ADM filters and one request from doubleRetry.",
+      "evidence": "accessibility-resilience-local.json"
+    },
+    {
+      "id": "ENTITY_MAP_CONTROL_OVERLAP",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "Desktop stack moves left of340px card only while card is present; hit tests verify exposed controls at900/1440; attribution and scale remain beside their overlay panels; mobile modal remains intentional.",
+      "evidence": "accessibility-resilience-local.json"
+    },
+    {
+      "id": "FAVICON_BASE_PATH",
+      "verdict": "FIXED_AND_VERIFIED",
+      "conclusion": "Local decorative atlas ring favicon and Vite BASE_URL; actual /atlas/favicon.svg HTTP200. Domain-root /favicon.ico is not a resource under this Pages project.",
+      "evidence": "accessibility-resilience-local.json"
+    },
+    {
+      "id": "NATIVE_BROWSER_ZOOM",
+      "verdict": "NO_DEFECT_CONFIRMED",
+      "conclusion": "Actual default host zoom200% validated by CSS viewport/DPR2/visualScale1 with no emulated device metrics; no horizontal overflow.",
+      "evidence": "native-zoom-local.json"
+    },
+    {
+      "id": "FULL_SCREEN_READER_CONFORMANCE",
+      "verdict": "BLOCKED_WITH_EVIDENCE",
+      "conclusion": "No NVDA/VoiceOver session available; AX tree, keyboard and visual checks are not full WCAG2.2AA certification. No claim of complete WCAG conformance.",
+      "evidence": "accessibility-resilience-local.json"
+    }
+  ]
+}

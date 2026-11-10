@@ -25,7 +25,7 @@ import { buildPermalink, clearGeometryPermalink, idsForScope, makeDetailedCollec
   type ExportScope } from './data/phase5.mjs';
 import {
   asDisplayFeatures, bboxOfGeometry, EMPTY_FEATURES, labelOf, loadCatalog,
-  loadGeometryShard, lookupKeys, normalize, ROOT_IDS,
+  loadGeometryShard, retryFailedGeometryShards, lookupKeys, normalize, ROOT_IDS,
   type GeometryMode, type Locale, type Territory, type TerritoryFeature
 } from './data/territories';
 
@@ -81,7 +81,8 @@ const WORDS = {
     dataRole: 'Administrative and statistical roles', noCode: 'Not available in the verified source',
     sourceBoundary: 'OSM-Boundaries', detailNote: 'Source records are preserved unchanged. Spatial correspondence with OpenStreetMap does not establish legal boundary status.',
     relationshipNote: 'This OSM geometry shares a CUATM reference with another source representation; it does not imply a second independent legal unit.',
-    dataError: 'Geometry loading failed. Retry by toggling the entity.',
+    dataError: 'Geometry loading failed. Your selections are preserved.',
+    retryGeometry: 'Retry geometry', retryGeometryBusy: 'Retrying geometry…',
     expand: 'Expand', collapse: 'Collapse',
     path: 'Territorial path', previous: 'Previous sibling', next: 'Next sibling',
     fitVisible: 'Fit visible territories', fitSelected: 'Fit selected territory', navigationLoading: 'Fitting…',
@@ -155,7 +156,8 @@ const WORDS = {
     dataRole: 'Roluri administrative și statistice', noCode: 'Nedisponibil în sursa verificată',
     sourceBoundary: 'OSM-Boundaries', detailNote: 'Înregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.',
     relationshipNote: 'Această geometrie OSM reutilizează un cod CUATM asociat altei reprezentări. Nu rezultă că există două unități juridice independente.',
-    dataError: 'Încărcarea geometriei a eșuat. Reîncearcă schimbând vizibilitatea entității.',
+    dataError: 'Încărcarea geometriilor a eșuat. Selecțiile sunt păstrate.',
+    retryGeometry: 'Reîncearcă geometriile', retryGeometryBusy: 'Se reîncearcă geometriile…',
     expand: 'Extinde', collapse: 'Restrânge',
     path: 'Traseu teritorial', previous: 'Entitatea precedentă', next: 'Entitatea următoare',
     fitVisible: 'Încadrează teritoriile vizibile', fitSelected: 'Încadrează entitatea selectată', navigationLoading: 'Se încadrează…',
@@ -280,6 +282,11 @@ export default function App() {
   const [rootsLoaded,setRootsLoaded] = useState(false);
   const [geomLoading,setGeomLoading] = useState(false);
   const [geomError,setGeomError] = useState(false);
+  const [rootGeomError,setRootGeomError] = useState(false);
+  const [geometryRetryEpoch,setGeometryRetryEpoch] = useState(0);
+  const [geometryRetryBusy,setGeometryRetryBusy] = useState(false);
+  const geometryRetryInFlight=useRef(false);
+  const failedNavigation=useRef<{kind:'locate'|'visible';id?:string;mode:GeometryMode}|null>(null);
   const [drawer,setDrawer] = useState<Drawer>(()=>
     SHARED_STATE.entity&&window.innerWidth<=700?'detail':null);
   const [toolsOpen,setToolsOpen] = useState(false);
@@ -300,6 +307,7 @@ export default function App() {
 
   const t=WORDS[lang];
   const mode:GeometryMode=simplified?'simplified':'detailed';
+  const geometryModeRef=useRef(mode);geometryModeRef.current=mode;
   const nodes = useMemo(()=>new Map(catalog.map(n=>[n.id,n])),[catalog]);
   const englishSiblingHints=useMemo(()=>englishSiblingQualifiers(catalog),[catalog]);
   const statisticalIndex = useMemo(()=>statisticalCodeIndex(catalog),[catalog]);
@@ -625,10 +633,10 @@ export default function App() {
       if(!active||!mapRef.current)return;
       const source=mapRef.current.getSource('borders') as GeoJSONSource | undefined;
       source?.setData(mapCountryFeatures(shapes));
-      setRootsLoaded(true);
-    }).catch(()=>{if(active)setGeomError(true);});
+      setRootsLoaded(true);setRootGeomError(false);
+    }).catch(()=>{if(active)setRootGeomError(true);});
     return ()=>{active=false;};
-  },[catalog.length,mode,ready]);
+  },[catalog.length,mode,ready,geometryRetryEpoch]);
 
   useEffect(()=>{
     if(!ready||!catalog.length||!mapRef.current)return;
@@ -659,7 +667,7 @@ export default function App() {
       setGeomLoading(false);
     }).catch(()=>{if(active){setGeomLoading(false);setGeomError(true);}});
     return ()=>{active=false;};
-  },[catalog.length,mode,nodes,ready,mapVisible,adminFilters,statFilters]);
+  },[catalog.length,mode,nodes,ready,mapVisible,adminFilters,statFilters,geometryRetryEpoch]);
 
   useEffect(()=>{
     if(!ready||!mapRef.current)return;
@@ -847,7 +855,7 @@ export default function App() {
       if(Number.isFinite(left))mapRef.current?.fitBounds([[left,bottom],[right,top]],{
         padding:window.innerWidth<700?38:85,duration:650,maxZoom:11
       });
-    }catch{if(request===navigationEpoch.current)setGeomError(true);}
+    }catch{if(request===navigationEpoch.current){failedNavigation.current={kind:'visible',mode};setGeomError(true);}}
     finally{if(request===navigationEpoch.current)setNavBusy(false);}
   }
   function downloadText(content:string,filename:string,mime:string){
@@ -898,7 +906,23 @@ export default function App() {
       const feature=features.get(id);
       if(!feature)throw Error('Missing Atlas geometry for '+id);
       mapRef.current.fitBounds(bboxOfGeometry(feature.geometry),{padding:window.innerWidth<700?36:85,duration:650,maxZoom:10});
-    }catch{if(request===navigationEpoch.current)setGeomError(true);}
+    }catch{if(request===navigationEpoch.current){failedNavigation.current={kind:'locate',id,mode};setGeomError(true);}}
+  }
+  async function retryGeometry(){
+    if(geometryRetryInFlight.current)return;
+    geometryRetryInFlight.current=true;setGeometryRetryBusy(true);
+    const navigation=failedNavigation.current;
+    const navigationAtRetry=navigationEpoch.current;
+    const required=['roots',...mapVisible.map(id=>nodes.get(id)?.geometryShard).filter((s):s is string=>!!s)];
+    if(navigation?.mode===mode&&navigation.id){const shard=nodes.get(navigation.id)?.geometryShard;if(shard)required.push(shard);}
+    try{
+      await retryFailedGeometryShards(required,mode);
+      if(geometryModeRef.current!==mode)return;
+      setGeomError(false);setRootGeomError(false);setGeometryRetryEpoch(n=>n+1);
+      failedNavigation.current=null;
+      if(navigationEpoch.current===navigationAtRetry&&navigation?.mode===mode){if(navigation.kind==='locate'&&navigation.id)await locate(navigation.id);else await fitVisible();}
+    }catch{setGeomError(true);}
+    finally{geometryRetryInFlight.current=false;setGeometryRetryBusy(false);}
   }
   function chooseSearch(id:string){
     choose(id);setSearch('');
@@ -1447,7 +1471,8 @@ export default function App() {
   return <div className="app">
     <header className="site-header">
       <div className="brand-symbol" aria-hidden="true">◎</div>
-      <div className="brand"><strong>{t.title}</strong><small>{t.tagline}</small></div>
+      <h1 className="sr-only">{t.title}</h1>
+      <div className="brand-visual" aria-hidden="true"><div className="brand"><strong>{t.title}</strong><small>{t.tagline}</small></div></div>
       <div className="header-actions">
         <div className="language" aria-label="Language">
           <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
@@ -1473,6 +1498,7 @@ export default function App() {
           <span className="module-short">{item[lang].split(' ')[0].slice(0,8)}</span>
         </button>)}</nav>
       {modulePanelOpen&&<aside id="atlas-module-panel" className="tree-sidebar" aria-label={MODULES.find(x=>x.id===module)?.[lang]}>
+        <h2 className="sr-only">{MODULES.find(x=>x.id===module)?.[lang]}</h2>
         <div className="pane-toolbar">
           <span aria-hidden="true">{MODULES.find(x=>x.id===module)?.[lang]}</span>
           <div className="module-pane-actions">
@@ -1513,12 +1539,14 @@ export default function App() {
           </button>
         </div>
         {toolsOpen&&globalTools}
-        {(geomLoading||geomError)&&<div className="atlas-map-status" role={geomError?'alert':'status'}>
-          {geomError?t.dataError:t.mapLoading}
+        {(geomLoading||geomError||rootGeomError||geometryRetryBusy)&&<div className="atlas-map-status" role={geomError||rootGeomError?'alert':'status'}>
+          <span>{geometryRetryBusy?t.retryGeometryBusy:geomError||rootGeomError?t.dataError:t.mapLoading}</span>
+          {(geomError||rootGeomError||geometryRetryBusy)&&<button type="button" className="geometry-retry" disabled={geometryRetryBusy} onClick={retryGeometry}>{t.retryGeometry}</button>}
         </div>}
       </main>
       {currentNode&&detailPanelOpen&&<aside className="detail-sidebar"
         aria-label={t.details+': '+cardNameOf(currentNode,lang)}>
+        <h2 className="sr-only">{t.details}</h2>
         <div className="pane-toolbar">
           <span aria-hidden="true">{t.details}</span>
           <button type="button" className="pane-close" aria-label={t.close} title={t.close}
@@ -1534,6 +1562,8 @@ export default function App() {
         aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
           t.details+(currentNode?': '+cardNameOf(currentNode,lang):'')}
         onClick={e=>e.stopPropagation()}>
+        <h2 className="sr-only">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
+            t.details}</h2>
         <div className="drawer-toolbar">
           <span aria-hidden="true">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
             t.details}</span>

@@ -1,0 +1,21 @@
+{
+  "cases": [
+    {
+      "id": "EXACT_OLD_COLD_TIMES",
+      "verdict": "DEFERRED_WITH_JUSTIFICATION",
+      "reason": "Historical single7.17s FCP/13.23s map sample has different uncontrolled conditions; no absolute threshold or direct percentage comparison.",
+      "evidence": "performance-5a.json"
+    },
+    {
+      "id": "TEST_SETUP_GEOMETRY_URL",
+      "verdict": "NO_DEFECT_CONFIRMED",
+      "reason": "Earlier simulation assumed ro-adm-04; certified exact Harghita holder uses ro-adm-03. Final test derives shard from catalogue; no geography changed."
+    },
+    {
+      "id": "EARLY_NATIVE_ZOOM_SETUP",
+      "verdict": "NO_DEFECT_CONFIRMED",
+      "reason": "A scalar preference was ignored; actual Chromium source requires partition dictionary key x. Final measured DPR2/CSS viewport confirms200% native zoom.",
+      "source": "https://raw.githubusercontent.com/chromium/chromium/main/chrome/browser/ui/zoom/chrome_zoom_level_prefs.cc"
+    }
+  ]
+}
