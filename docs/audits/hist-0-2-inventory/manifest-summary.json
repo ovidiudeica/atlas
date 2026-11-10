@@ -1,0 +1,110 @@
+{
+  "phase": "HIST-0.2-inventory-geometric-qualification",
+  "date": "2026-11-10",
+  "perimeter_status": "DRAFT_NOT_CERTIFIED",
+  "counts": {
+    "OHM_relations_in_broad_bbox": 2919,
+    "provisional_BBOX_candidates_805": 805,
+    "additional_global_dateline_references": 100,
+    "geometry_checked": 905,
+    "closed_or_usable_approximate": 861,
+    "GEOMETRY_REQUIRES_REVIEW": 44,
+    "PROVISIONAL_GEOMETRIC_OVERLAP": 643,
+    "BBOX_FALSE_POSITIVE_FOR_DRAFT": 218,
+    "nominal_groups": 364
+  },
+  "evidence_local_dir": "C:/Users/ovidi/Documents/Atlas-OHM-Inventory-2026-11-10/geometry-evidence",
+  "evidence_total_files": 106,
+  "evidence_total_bytes": 366215820,
+  "raw_source": "https://overpass-api.openhistoricalmap.org/api/interpreter",
+  "parts": [
+    {
+      "name": "relations-01.csv",
+      "count": 60,
+      "bytes": 12196
+    },
+    {
+      "name": "relations-02.csv",
+      "count": 60,
+      "bytes": 12356
+    },
+    {
+      "name": "relations-03.csv",
+      "count": 60,
+      "bytes": 12292
+    },
+    {
+      "name": "relations-04.csv",
+      "count": 60,
+      "bytes": 12484
+    },
+    {
+      "name": "relations-05.csv",
+      "count": 60,
+      "bytes": 12435
+    },
+    {
+      "name": "relations-06.csv",
+      "count": 60,
+      "bytes": 12113
+    },
+    {
+      "name": "relations-07.csv",
+      "count": 60,
+      "bytes": 12005
+    },
+    {
+      "name": "relations-08.csv",
+      "count": 60,
+      "bytes": 12237
+    },
+    {
+      "name": "relations-09.csv",
+      "count": 60,
+      "bytes": 12138
+    },
+    {
+      "name": "relations-10.csv",
+      "count": 60,
+      "bytes": 12940
+    },
+    {
+      "name": "relations-11.csv",
+      "count": 60,
+      "bytes": 12263
+    },
+    {
+      "name": "relations-12.csv",
+      "count": 60,
+      "bytes": 12218
+    },
+    {
+      "name": "relations-13.csv",
+      "count": 60,
+      "bytes": 12227
+    },
+    {
+      "name": "relations-14.csv",
+      "count": 60,
+      "bytes": 12705
+    },
+    {
+      "name": "relations-15.csv",
+      "count": 60,
+      "bytes": 12145
+    },
+    {
+      "name": "relations-16.csv",
+      "count": 5,
+      "bytes": 1158
+    }
+  ],
+  "limits": [
+    "Screening uses a DRAFT 92-node noncanonical area, not accepted natural frontier",
+    "OHM polygon ways were not edited or clipped",
+    "No legal/geospatial precision certification",
+    "No names were semantically deduplicated",
+    "No module tree/UI was designed",
+    "No ACTUAL data touched"
+  ]
+}

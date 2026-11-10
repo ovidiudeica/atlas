@@ -1,0 +1,61 @@
+﻿id,display_name,start_date,end_date,geometry_verdict,polygon_parts_status,admin_level,source_tag,source_fixme,member_geometry_sha256,ohm_url
+2961790,Imperiul colonial german,1884-07-05,1884-08-07,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,4b0b31a7bdf36a80c52eee285c1b4cab6592c12f47201be630ed78d594ee1fbf,https://www.openhistoricalmap.org/relation/2961790
+2961791,Imperiul colonial german,1914-08-26,1914-08-29,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,0351d43c85a5c09fe722043b083063f0e0e27a2968c492f19367c4fd424c4138,https://www.openhistoricalmap.org/relation/2961791
+2961792,Imperiul colonial german,1916-07-20,1918-11-11,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,5fba759be2b9280cdafb8b970acc362a00e868095044b0cda43c0909853d6d45,https://www.openhistoricalmap.org/relation/2961792
+2961793,Imperiul colonial german,1911-11-04,1914-08-26,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,ccba544ce2cc9cbbc9a5a927152fe7cb07c8428dfcd20e192bb0649de6b389e9,https://www.openhistoricalmap.org/relation/2961793
+2961794,Imperiul colonial german,1884-08-17,1884-11-03,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,b0ef15df8baa0e6a9346129a9bfe4b0ce2bf98d8787490638948ae8af9e15b67,https://www.openhistoricalmap.org/relation/2961794
+2961795,Imperiul colonial german,1916-06-17,1916-07-20,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,851b4d645f199139eedd3dac5511ef90418ab12cba15fcea2676579d7c060019,https://www.openhistoricalmap.org/relation/2961795
+2961796,Imperiul colonial german,1919-06-28,1920-01-10,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,fba1fb68a034359356928ee0ef4d68b7c2d1bb07f5106a9ede619e61b3a9d246,https://www.openhistoricalmap.org/relation/2961796
+2961797,Imperiul colonial german,1890-07-01,1891,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,26a6c3e83351384e4832933689b2c4f2d36ec265227336fadbce149080030ccb,https://www.openhistoricalmap.org/relation/2961797
+2961798,Imperiul colonial german,1915-07-09,1916-06-17,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,f32f1de9e5a7476687a55cf05a70e2cdf672292f78439962077e60a43b4fa632,https://www.openhistoricalmap.org/relation/2961798
+2961799,Imperiul colonial german,1884-08-07,1884-08-17,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,7a71f12a86577b40f3394e2e636e04426d1b08bf04fc337b5418ea5db17b1d62,https://www.openhistoricalmap.org/relation/2961799
+2961800,Imperiul colonial german,1914-11-06,1915-07-09,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,f31dd87d536b026d92179ca7330e5cfac060060f0c5fa69dd3ad02efd58375f2,https://www.openhistoricalmap.org/relation/2961800
+2961801,Imperiul colonial german,1886-03-06,1890-07-01,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,39ccd06a21f8a1ef5e1c0dae399ec94620dd2f0efc8c2450078682ad190447c9,https://www.openhistoricalmap.org/relation/2961801
+2961802,Imperiul colonial german,1885-08-29,1886-03-06,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,3fc09beb181afa6db42ec2183e76fc6736107313f5a6e16c0f9663e674883b1b,https://www.openhistoricalmap.org/relation/2961802
+2961803,Imperiul colonial german,1914-10-21,1914-11-06,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,b4442979b60b54cceb435f53b7df51aaf193dcc75726e41cdc6817ea068d4375,https://www.openhistoricalmap.org/relation/2961803
+2961804,Imperiul colonial german,1914-09,1914-10-21,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,2bb33012cfe1480f337825350c7e1bada4265e542dfbf53d5976965a5ef51f33,https://www.openhistoricalmap.org/relation/2961804
+2961805,Imperiul colonial german,1900-02-16,1900-03-01,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,5457dcf422bfcc96b4c0222486863cfb9f27399fe45b888ec1dbcd37b1123e53,https://www.openhistoricalmap.org/relation/2961805
+2961806,Imperiul colonial german,1899-02-12,1900-02-16,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,47a3fbf9fdd247388840d392e092949a2b496f4843e8a46301925fdc1b8636b7,https://www.openhistoricalmap.org/relation/2961806
+2961807,Imperiul colonial german,1891,1899-02-12,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,62d2dc87cc8422992a367e62a965e4f7cf4edabd1be541946d5426f82c2a7b50,https://www.openhistoricalmap.org/relation/2961807
+2961808,Imperiul colonial german,1885-04,1885-05-27,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,e8744d82faa65faa561e1d9ec4971243af534cbcd5b041d67d452c1221fc5e04,https://www.openhistoricalmap.org/relation/2961808
+2961848,Imperiul colonial german,1918-11-11,1919-06-28,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,cf4d4c02156c82923715568fb1b236b1e97e1b59cc66c0a04b807e371697fa1a,https://www.openhistoricalmap.org/relation/2961848
+2961849,Imperiul colonial german,1884-11-03,1885-04,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,1,NO,NO,992c79481a25bb1ebee49017028c2dd2b387ebbf1ae11e84cf405d3fbeab7bae,https://www.openhistoricalmap.org/relation/2961849
+2962354,Litinsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,62f787dd8afb3efecfb9537b2332832d505eec81393e5b915b9241d7a1866129,https://www.openhistoricalmap.org/relation/2962354
+2962355,Vinnitsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,c0f3ae86f3274aa673e877d2b79fae6fdc84b3b450a1835f598b0846bedf029a,https://www.openhistoricalmap.org/relation/2962355
+2962356,Berdichevsky uezd,1797,1923,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,6,YES,NO,0367c2a686f3b513d7c5f5d9e5e87c90a888a0596f1a954cc5bb05eefd7f67a0,https://www.openhistoricalmap.org/relation/2962356
+2962360,Lipovetsky uezd,1797,1923,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,6,YES,NO,1716f73084d55506de4eb490f49d92e3b515091ae36a2b37108046d623278df8,https://www.openhistoricalmap.org/relation/2962360
+2962361,Bratslavsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,630d4c5c6d817a748e4d3e6b5e94a002f26ae69bc7cdda32d3df83685664f130,https://www.openhistoricalmap.org/relation/2962361
+2962362,Yampolsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,f258afe4c0e99bb15eda22568fac384d6fcea44123fdb186e981f5e44b060bd5,https://www.openhistoricalmap.org/relation/2962362
+2962363,Olgopolsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,1f7f59dadf9ea5c51ed4392d774c59c0315cfaa85bd997cf272829932fa41571,https://www.openhistoricalmap.org/relation/2962363
+2962364,Gaysinsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,94199f9baa21c744345738b8722d1be75ffba47cf448b3196f117505cd822376,https://www.openhistoricalmap.org/relation/2962364
+2962367,Baltsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,7018b6b91cf6f00e8568f40ec85b3d9ca574a30185f3d8e727a256a4f089954f,https://www.openhistoricalmap.org/relation/2962367
+2962368,Yelisavetgradsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,fdc0b3381617ce979e8663370cd879853b7bd3a8a69d27be5fcfa0436243893c,https://www.openhistoricalmap.org/relation/2962368
+2962376,Letichevsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,3b8ac8900ae1a36a19f638787a7fbaea5fa33c3cdb2307a7a05c5d6fedff355f,https://www.openhistoricalmap.org/relation/2962376
+2962377,Ushitsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,5e6773afbb0965da37c0c7605a2c7a3d68e07d20814e770f4be7e72d00cecf63,https://www.openhistoricalmap.org/relation/2962377
+2962378,Mogilevsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,31198736511fd2978f023bd2fcfdf992a1098add7d0b30c4fd875dbb2461a69a,https://www.openhistoricalmap.org/relation/2962378
+2962379,Soroksky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,49eab5f1f1fcdc9fe723848bae06420a5a41a0fc5aeb236efcea75583e24a784,https://www.openhistoricalmap.org/relation/2962379
+2962380,Orgeyevsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,33ce19d21cc9c0d2f72b9a9fbddd2528d5e90f2fbb091037f6126d496ca47902,https://www.openhistoricalmap.org/relation/2962380
+2962381,Ananyevsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,07fece6473c814f50144ba73f51fe4bc1b15c28a74948db048a2303a26b6ae7f,https://www.openhistoricalmap.org/relation/2962381
+2962382,Tiraspolsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,926c0f0739887f48594eaed0e73f4779c395eb566843c197dd9928bfbe35438a,https://www.openhistoricalmap.org/relation/2962382
+2962383,Biletsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,c281ada6e7cacfb3685efc176228a82e96020e3830406d2a22539a3b93a6d577,https://www.openhistoricalmap.org/relation/2962383
+2962384,Kishinevsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,6eba882a3d410a942a111d4b8958f901134125e1fffa746cab25cbd09660a370,https://www.openhistoricalmap.org/relation/2962384
+2962385,Bendersky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,98dc99c2a56a19fa8f6acb47dc5a93bc1519a4723006bb15658a397a814f7a3f,https://www.openhistoricalmap.org/relation/2962385
+2962386,Izmailsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,d0fc32bfc94a78c7b0a829312065d0d6b79fb40e65446a4691a9eb62a3444ca7,https://www.openhistoricalmap.org/relation/2962386
+2962387,Akkermansky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,348baa5cd0bd56a3a4e39c9836cb79045dc4f4247d4b467b9e52ca2ef1eba976,https://www.openhistoricalmap.org/relation/2962387
+2962388,Odessky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,ee98f64332de4d759c5ddb0a72e7fd95a702b95e2c974444c8ff2c121b54ff17,https://www.openhistoricalmap.org/relation/2962388
+2962396,Proskurovsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,628cab790495986a9294e078bc4cd2aa8efc05a4eff9f314710a4e7dfdab08d2,https://www.openhistoricalmap.org/relation/2962396
+2962397,Kamenets-Podolsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,204466172ec29fd4d58d46fa80b3f3bebdaacadd5ea16c8b72754c1ff9a71e0a,https://www.openhistoricalmap.org/relation/2962397
+2962398,Khotinsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,be183d5165c18d85ee979b2c78b7ed90a96274f679882596484646d6a04b97c9,https://www.openhistoricalmap.org/relation/2962398
+2962409,Khersonsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,f38f29280dbe088adaa67bb43b5f6ff2fefb9992567661c96118b8ecb110b40f,https://www.openhistoricalmap.org/relation/2962409
+2962411,Dneprovsky uezd,1797,1923,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,6,YES,NO,a7f6f94ffcc55106182ed4f2ce290607eb4540b11ece2a4b93a362557b0362a8,https://www.openhistoricalmap.org/relation/2962411
+2962419,Starokonstantinovsky uezd,1797,1923,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,5228cdd9c6726f2980cef87004949aa33bbd6fb7ed26a5aaa179ffb5e5dbf0dc,https://www.openhistoricalmap.org/relation/2962419
+2963067,Imperiul Otoman,1500-12,1516-08-24,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,NO,a381d6f387a9e8657b3bedcff95256b122b1ce71fa15e0b811eacc284c20d7f3,https://www.openhistoricalmap.org/relation/2963067
+2963068,Imperiul Otoman,1478,1479,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,6b5840765a48cdf98e70e71f974b95f4bac96b7399885c57fc0893b527565fac,https://www.openhistoricalmap.org/relation/2963068
+2963069,Imperiul Otoman,1482,1500-12,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,NO,4428b58fb6e5dcec1014f215fc4ef42aa99db32620f8da3bf4086666055682d5,https://www.openhistoricalmap.org/relation/2963069
+2963070,Imperiul Otoman,1684,1699-01-26,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,2160be6d36ab300d6c709c612ce0d500bbde7a05ed17fb8260fea02b5e974675,https://www.openhistoricalmap.org/relation/2963070
+2963071,Republic of Venice,1684,1699-01-26,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,2,NO,YES,a8254cfd1ee7daa024f7630cbfaf557ab8aa0318cf482cd1ab750f10e65ae371,https://www.openhistoricalmap.org/relation/2963071
+2963075,Imperiul Otoman,1715,1718-07-21,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,3e97f52eda2b7f03a202ecb01a8e2d3e2d3c2e769467eee31b7557c244cf3242,https://www.openhistoricalmap.org/relation/2963075
+2963076,Imperiul Otoman,1537,1538,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,4e5eba18aa7631d76d62ae9ce55f2d623ce390f54b3ac4f87d884dfa08f1afaf,https://www.openhistoricalmap.org/relation/2963076
+2963078,Republica Venețiană,1537,1538,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,2,NO,YES,998e46f7ea3d8701766eaf3fb02aa385ce87b74b58c8045c053a09baa741e6ed,https://www.openhistoricalmap.org/relation/2963078
+2963079,Republic of Venice,1715,1718-07-21,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,2,NO,YES,2d6c47400558e3afcdf63b36ff2d4b95669138b9b6cb5f3940183ec7bff00053,https://www.openhistoricalmap.org/relation/2963079
+2963080,Imperiul Otoman,1669,1684,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,7bd93e1bba4fd19ce39188aa48169adcc622e2d91ff24a00fd9886a63e96fbbb,https://www.openhistoricalmap.org/relation/2963080

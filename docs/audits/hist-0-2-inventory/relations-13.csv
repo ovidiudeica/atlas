@@ -1,0 +1,61 @@
+﻿id,display_name,start_date,end_date,geometry_verdict,polygon_parts_status,admin_level,source_tag,source_fixme,member_geometry_sha256,ohm_url
+2930998,Bezirk Horodenka,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,ee2ca8f72dca2cb0e6abcc2ec2f3b239e8e3df61eff0e2a2858c8144071005c1,https://www.openhistoricalmap.org/relation/2930998
+2930999,Bezirk Growozdziec,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,46c28298b5eaa743af71222f138102e19ee30b8761dd8e77fc7943f61e2a932b,https://www.openhistoricalmap.org/relation/2930999
+2931000,Bezirk Sniatyn,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,8601cbba77ed53faa79c4b33bc9a7dfd07d0165c8457ae5482552483a446e713,https://www.openhistoricalmap.org/relation/2931000
+2931003,Bezirk Kossów,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,85260c547e5772ca440ac9aeb589c6035562b41326560c551f64859f867a427d,https://www.openhistoricalmap.org/relation/2931003
+2931004,Bezirk Kutty,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,ad158aa52781b2ff536fd1f079d33530586b152eda8e20c43976136a618c866b,https://www.openhistoricalmap.org/relation/2931004
+2931006,Stadt Magistrat Czernowitz,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,55db97f4b00c30661b854c3ab4f352a61ce2ac119fd2f77dc74c7333e21f4d87,https://www.openhistoricalmap.org/relation/2931006
+2931007,Bezirk Kotzmann,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,b995ca6af0d1034b2cea5d692ed10435d1a90c2406106166d85bfb99c05688f3,https://www.openhistoricalmap.org/relation/2931007
+2931008,Bezirk Zastawna,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,f23fac6c11e3fcd764612be59f7f8994ad1a767d99188c2b800d32a03bfd3d87,https://www.openhistoricalmap.org/relation/2931008
+2931009,Bezirk Sadagura,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,eea7b5db91dff0a8e314c216dfe58cc7327f00a416203de049465b6f37f52884,https://www.openhistoricalmap.org/relation/2931009
+2931103,Bezirk Czernowitz (Umgebung),1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,fa4c5799383763bf98207befe36a673927b75d0e0b9b80d5ea0518daf7e59676,https://www.openhistoricalmap.org/relation/2931103
+2931104,Bezirk Waskoutz am Czeremosz,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,4ca6865eea0fea1719a3831f2231eb1dc42a75aca08da5fd1d6f9c791d232376,https://www.openhistoricalmap.org/relation/2931104
+2931106,Bezirk Sereth,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,a7a9307b52b466036bb4a38f0564b339a0c3c2c95dff9954b8effed6b53efbba,https://www.openhistoricalmap.org/relation/2931106
+2931107,Bezirk Suczawa,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,d891e813801f1e26d67a584e5413b12af7f0f0fe6d91b995c6b3b89909c5a56e,https://www.openhistoricalmap.org/relation/2931107
+2931109,Bezirk Solka,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,76552916a9c6b5a0cd3bd5fc182fe6e319b5f8872fb53989c9e504fbb9b16b14,https://www.openhistoricalmap.org/relation/2931109
+2931110,Bezirk Gurahumora,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,521a65af104651f66cd30ac0fd8ad2ef56c219b406e8c55a5f4095466b396742,https://www.openhistoricalmap.org/relation/2931110
+2931115,Bezirk Storoschinetz,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,13983c6a554d4211ec7250976adb9728beba58b5bb3041ca833fcbfb3797b8f9,https://www.openhistoricalmap.org/relation/2931115
+2931139,Bezirk Putilla,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,0136e094ce9b34cadef934dbd2fcf5f36ceaf0b2fbd51a4a619e55cffab1cf67,https://www.openhistoricalmap.org/relation/2931139
+2931140,Bezirk Wysznitz,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,42388430398ba49d5e89602fd870ea2efb57e5f026c8a995f8f37d3cc1a0a5ad,https://www.openhistoricalmap.org/relation/2931140
+2931165,Bezirk Kimpolung,1854-05-29,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,2d9d091732e9c09e13ae00eacafc13e2d2c1081f45ac3db0b2d960c3262da1c5,https://www.openhistoricalmap.org/relation/2931165
+2931166,Bezirk Radautz,1860-08-01,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,c867d821721caaf16b20470dc434251f9d826655f749788830bd3eb9fc51c150,https://www.openhistoricalmap.org/relation/2931166
+2931167,Bezirk Radautz,1854-05-29,1860-07-31,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,d9ce708dbdd33f2d156c0c83368747c8763d5f8854c65c2a424db3b7d6ec70a8,https://www.openhistoricalmap.org/relation/2931167
+2931168,Bezirk Dorna,1860-08-01,1867-01-23,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,dd47aa7e76b88d76371638906df4c76cc9952b6544e29fcbc683addde1d7d738,https://www.openhistoricalmap.org/relation/2931168
+2931169,Bezirk Dorna,1854-05-29,1860-07-31,OVERLAP_DRAFT,CLOSED_CHAINS,6,YES,NO,8b065013a32031da273ac0cd7cecafdc39b64b1a2f3d6ae5b6a12a807c484878,https://www.openhistoricalmap.org/relation/2931169
+2937885,Dorohoi County,1859,,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,,YES,NO,516bf5791c5e4bc88e6a38d0571b3319375aa41ea8c307a54b2b7a4db18f6c42,https://www.openhistoricalmap.org/relation/2937885
+2937887,Dorohoi County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,,NO,NO,a10018bf9730b9fa597c3dec0dffb91440be16b161cd5eca12a7ca35942d15d7,https://www.openhistoricalmap.org/relation/2937887
+2940712,Botoșani County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,4cd99af2c39880ec0f185e84860cca76fa010a7fbcaf11d7daec8e612db4775a,https://www.openhistoricalmap.org/relation/2940712
+2940721,Suceava County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,,NO,NO,b60a00c6c7e57f2036266bfd1182d01a7a05ee126f57437b829ed46bbd39d2d2,https://www.openhistoricalmap.org/relation/2940721
+2943485,Neamț County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,,NO,NO,9d220fce5920e94c0128bcece79e923d4f6b354a07f9fdd4be8063424734c7f9,https://www.openhistoricalmap.org/relation/2943485
+2943493,Iași County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,aab47897df300df47bc5d279104a7e8fc76a452abf55eb0f64c140598e7998e3,https://www.openhistoricalmap.org/relation/2943493
+2943496,Roman County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,7c6546e9ba2ebe05ba079ca83b302cce29a6ee8444bae902ffed6f7d66d1fcda,https://www.openhistoricalmap.org/relation/2943496
+2943619,Bacău County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,2bf53f01e2fba205da630d01880b3c8eb1d4008d8666884f7c2a7674db9349a4,https://www.openhistoricalmap.org/relation/2943619
+2943652,Putna County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,18321f0a4f16caa2e9f96d09323d8f4f82eece98f8623fb053461eb52f6a5bec,https://www.openhistoricalmap.org/relation/2943652
+2943670,Vaslui County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,9d8f2b74a21603fcf187018a9cd404a8a15e14a701aac7f37f56448f9402e738,https://www.openhistoricalmap.org/relation/2943670
+2943671,Fălciu County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,dd527a766d9b0a21e6767ae4dd1f15d2d5e9e789234a44abf584f7f9891707b4,https://www.openhistoricalmap.org/relation/2943671
+2943762,Iugoslavia,1986-05-05,1991-06-25,OVERLAP_DRAFT,CLOSED_CHAINS,2,YES,NO,4e3fca448300e719e80451bfd44ffbd4a8987889eb9383310fc5d990be365dc1,https://www.openhistoricalmap.org/relation/2943762
+2945087,Tecuci County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,4cefab4b6786cbeccf5e00db0706f630580043a3123866e8291b39056194bb69,https://www.openhistoricalmap.org/relation/2945087
+2945088,Covurlui County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,28eb0cba0428551de60151a3fd2cf63eb8cf9d47b154bc5c85e947660d333337,https://www.openhistoricalmap.org/relation/2945088
+2945089,Tutova County,1859,,OVERLAP_DRAFT,CLOSED_CHAINS,5,NO,NO,4f9c8b0626457bb0d7c551b30145d5a50c41ce4da3268c85be6710bdefaefa59,https://www.openhistoricalmap.org/relation/2945089
+2952970,Principatul Serbiei,1833,1867-04-18,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,3,NO,YES,83cf5b2efb85c42d93ca4eac33d33c313461d42530885c7694b5df6dd96ba73b,https://www.openhistoricalmap.org/relation/2952970
+2952971,Principatul Serbiei,1867-04-18,1878-07-13,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,db930dd15b769b781749bb1993d40dd69e91f55c425bce64786a4a5f6c2cb48e,https://www.openhistoricalmap.org/relation/2952971
+2952983,Niš Eyalet,1846,1864,OVERLAP_DRAFT,CLOSED_CHAINS,4,YES,NO,168fe038dc547e86a534f4fb1f70ec031dcd83adc588dd6f8ef78a6436700f3b,https://www.openhistoricalmap.org/relation/2952983
+2952988,Eyaletul Rumelia,1670,1826,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,4,YES,NO,7f75ef0cf56a3facd2df0491dc10ae3665dedb197e1f2e231121788bcc04a4e9,https://www.openhistoricalmap.org/relation/2952988
+2952989,Eyaletul Rumelia,1826,1833,GEOMETRY_UNRESOLVED,OPEN_OR_MISSING,4,YES,NO,23b297c41aa1fff000f5a4e815a241804368d276ec5c9fff806ca97425c20afd,https://www.openhistoricalmap.org/relation/2952989
+2952990,Eyaletul Rumelia,1833,1846,OVERLAP_DRAFT,CLOSED_CHAINS,4,YES,NO,2a78644b95e1e1c0659260d14edf30b6cd9f8421b24c3d58f31128038e25ab86,https://www.openhistoricalmap.org/relation/2952990
+2952992,Eialetul Adrianopol,1826,1864,OVERLAP_DRAFT,CLOSED_CHAINS,4,YES,NO,9d75785e7ee1260912ad6f132556f92e618c753b869dcc5553e990ba5d23e287,https://www.openhistoricalmap.org/relation/2952992
+2953188,Eyaletul Vidin,1846,1864,OVERLAP_DRAFT,CLOSED_CHAINS,4,YES,NO,cb30dbd051480f9a3344974dc3ed791d6b8fe1760ce8a5ea02c8a87b374148ae,https://www.openhistoricalmap.org/relation/2953188
+2956696,Russian Empire,1809-09-17,1809-10-14,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,e075352f0076c9c1f2c35e7a12a692e2fa2936690f5171eda34973ccbcc62e52,https://www.openhistoricalmap.org/relation/2956696
+2957450,Republica Sovietică Federativă Socialistă Rusă,1919-03-10,1920,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,dfd70eae5bbdce47088f398c65112ad2b738cd5ef810553cbcb40725c19fafe0,https://www.openhistoricalmap.org/relation/2957450
+2957451,Ukrainian SSR,1922-12-30,1925-10-16,OVERLAP_DRAFT,CLOSED_CHAINS,3,NO,NO,f5fc6e1e5dd227ed179f47febe4b0e00e92858a2f964df1a12021f179a1b2af7,https://www.openhistoricalmap.org/relation/2957451
+2957452,Republica Sovietică Federativă Socialistă Rusă,1918-04-22,1918-08-31,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,dfd91345ba0cd59fc17090c1754df00af460326dda56bc63ec3c5e47788596f2,https://www.openhistoricalmap.org/relation/2957452
+2957457,Republica Sovietică Federativă Socialistă Rusă,1922-03-12,1922-11-15,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,1fb394d32c8943121ec6835b05435ff1dddcbb0763edea1c01418c878f9954d9,https://www.openhistoricalmap.org/relation/2957457
+2957458,Republica Sovietică Federativă Socialistă Rusă,1920-04-28,1920-10-14,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,ad4eea040c014ce4cca64543f9995e4e1dc67f195494d969a1e9f62b2c07cf39,https://www.openhistoricalmap.org/relation/2957458
+2957466,Iugoslavia,1963-04-07,1986-05-05,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,NO,dfb0eef9b091145c8f37bc62d9f36c96b27311c78d7caf3905febba741dea491,https://www.openhistoricalmap.org/relation/2957466
+2957467,Republica Sovietică Federativă Socialistă Rusă,1936-12-05,1940-03-12,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,3,NO,YES,d3efb72cd3cb1f7719720ca5364093d23ef2c5a126de471ee38053b31eb9088c,https://www.openhistoricalmap.org/relation/2957467
+2957470,Republica Sovietică Federativă Socialistă Rusă,1921-08-14,1922-03-12,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,5ba28b92860c777a562aa09085c8741c748d72d7ef698a538e81fe1943726d94,https://www.openhistoricalmap.org/relation/2957470
+2957471,Republica Sovietică Federativă Socialistă Rusă,1944-10-11,1945-01-16,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,3,NO,NO,c97124bdda6c08f4259ad5a49e8f3f86c6e0f51da442727effed64a342a53168,https://www.openhistoricalmap.org/relation/2957471
+2957472,Uniunea Republicilor Sovietice Socialiste,1944-10-11,1945-08-01,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,NO,3b229db060318e602bb8326dfbe5fcd173b239dbb3b075ca6ae9ee30b8672666,https://www.openhistoricalmap.org/relation/2957472
+2958035,Republica Sovietică Federativă Socialistă Rusă,1922-11-15,1922-12-30,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,4cfcc08158f583520ffd0dba8c4e5d69410d5f0bebe620fdbf8773ae09359315,https://www.openhistoricalmap.org/relation/2958035
+2958036,Republica Sovietică Federativă Socialistă Rusă,1920-04-06,1920-04-28,BBOX_FALSE_POSITIVE_DRAFT,CLOSED_CHAINS,2,NO,YES,1fa35248e2350b8c894fb0704d8e16f889e276239955abb16622eb5f859e646c,https://www.openhistoricalmap.org/relation/2958036
+2958046,Russian Empire,1878-03-03,1878-07-13,OVERLAP_DRAFT,CLOSED_CHAINS,2,NO,YES,dc0c94a7ae8013f054ab7108d6ffa122057b850772c73a0900e6a3e7ec7b22cf,https://www.openhistoricalmap.org/relation/2958046
