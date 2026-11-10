@@ -12,7 +12,7 @@ import assert from 'node:assert/strict';
 const outputRoot=fileURLToPath(new URL('../../../',import.meta.url));
 const root=process.env.ATLAS_AUDIT_BASELINE_ROOT||outputRoot;
 const screenshots=resolve(root,'artifacts/browser-smoke');
-const site='http://127.0.0.1:4184/atlas/';
+const site=process.env.ATLAS_AUDIT_SITE||'http://127.0.0.1:4184/atlas/';
 const pause=ms=>new Promise(done=>setTimeout(done,ms));
 const runtimeErrors=[];
 let chrome, preview, profile, client;
@@ -108,14 +108,14 @@ for(let trial=0;trial<3;trial++){
  phase='select-district';await set('Taraclia');await p.wait("[...document.querySelectorAll('.tree-line')].some(e=>e.textContent.includes('Taraclia'))",'Taraclia');await p.eval("[...document.querySelectorAll('.tree-line')].find(e=>e.textContent.includes('Taraclia')&&e.textContent.includes('ADM 4'))?.querySelector('.tree-label').click()");await pause(2000);
  const selected=await p.eval("({header:document.querySelector('.entity-title img')?.src||null,overflow:document.documentElement.scrollWidth-innerWidth})");assert(selected.overflow<=1);assert(selected.header?.includes('taraclia-coat.png'),'Exact district card local coat');
  phase='cached';const cachedStart=Date.now();await p.call('Page.reload');await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",'cached map ready');const cachedReadyMs=Date.now()-cachedStart;await pause(500);
- if(process.env.AUDIT_LABEL==='after'){const unnecessary=[...requests.values()].filter(r=>['progressive-search','branch'].includes(r.phase)&&r.type==='Image'&&!r.url.startsWith('http://127.0.0.1'));assert.deepEqual(unnecessary,[],'Unselected transient/expanded tree must not request external originals');}samples.push({trial,readyMs,cachedReadyMs,paint,selected,requests:[...requests.values()]});await p.snap('web-audit-5a-'+(process.env.AUDIT_LABEL||'sample')+'-'+trial+'.png');await p.close();}
-const report={stage:'WEB-AUDIT.5a',label:process.env.AUDIT_LABEL||'sample',testedAt:new Date().toISOString(),conditions:{chrome:findChrome(),viewport:[1440,900],typingIntervalMs:100,settleMs:1000,network:'unthrottled actual network; no artificial image sizes; encoded transfer includes protocol/cache effects',trials:3},samples};await mkdir(resolve(outputRoot,'docs/audits/web-audit-5'),{recursive:true});await writeFile(resolve(outputRoot,'docs/audits/web-audit-5/image-network-'+report.label+'.json'),JSON.stringify(report,null,2)+'\n');console.log('Network samples recorded',report.label,samples.map(s=>({readyMs:s.readyMs,requests:s.requests.length,externalImages:s.requests.filter(r=>r.type==='Image'&&!r.url.startsWith('http://127.0.0.1')).length,imageEncodedBytes:s.requests.filter(r=>r.type==='Image').reduce((a,r)=>a+(r.encodedBytes||0),0)})));}
+ if(/after$/.test(process.env.AUDIT_LABEL||'')){const unnecessary=[...requests.values()].filter(r=>['progressive-search','branch'].includes(r.phase)&&r.type==='Image'&&!r.url.startsWith(new URL(site).origin+'/'));assert.deepEqual(unnecessary,[],'Unselected transient/expanded tree must not request external originals');}samples.push({trial,readyMs,cachedReadyMs,paint,selected,requests:[...requests.values()]});await p.snap('web-audit-5a-'+(process.env.AUDIT_LABEL||'sample')+'-'+trial+'.png');await p.close();}
+const report={stage:'WEB-AUDIT.5a',label:process.env.AUDIT_LABEL||'sample',testedAt:new Date().toISOString(),conditions:{chrome:findChrome(),viewport:[1440,900],typingIntervalMs:100,settleMs:1000,network:'unthrottled actual network; no artificial image sizes; encoded transfer includes protocol/cache effects',trials:3},samples};await mkdir(resolve(outputRoot,'docs/audits/web-audit-5'),{recursive:true});await writeFile(resolve(outputRoot,'docs/audits/web-audit-5/image-network-'+report.label+'.json'),JSON.stringify(report,null,2)+'\n');console.log('Network samples recorded',report.label,samples.map(s=>({readyMs:s.readyMs,requests:s.requests.length,externalImages:s.requests.filter(r=>r.type==='Image'&&!r.url.startsWith(new URL(site).origin+'/')).length,imageEncodedBytes:s.requests.filter(r=>r.type==='Image').reduce((a,r)=>a+(r.encodedBytes||0),0)})));}
 
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
-  preview=spawn(process.execPath,[resolve(root,'node_modules/vite/bin/vite.js'),'preview','--host','127.0.0.1','--port','4184','--strictPort'],{cwd:root,stdio:'inherit'});
-  await until(async()=>(await fetch(site)).ok,'Vite preview');
+  if(!process.env.ATLAS_AUDIT_SITE)preview=spawn(process.execPath,[resolve(root,'node_modules/vite/bin/vite.js'),'preview','--host','127.0.0.1','--port','4184','--strictPort'],{cwd:root,stdio:'inherit'});
+  if(!process.env.ATLAS_AUDIT_SITE)await until(async()=>(await fetch(site)).ok,'Vite preview');
   chrome=spawn(findChrome(),[
     '--headless=new','--no-sandbox','--disable-dev-shm-usage',
     '--enable-unsafe-swiftshader','--disable-gpu-sandbox',

@@ -1,0 +1,44 @@
+{
+  "site": "http://127.0.0.1:4186/atlas/",
+  "checkedAt": "2026-11-10T12:28:36.579Z",
+  "primarySource": "https://raw.githubusercontent.com/chromium/chromium/main/chrome/browser/ui/zoom/chrome_zoom_level_prefs.cc",
+  "method": "Fresh isolated Chrome profile with partition.default_zoom_level.x=log(2)/log(1.2); no device metrics emulation. Native window sizes compared to actual CSS viewport, DPR and visualViewport.scale.",
+  "samples": [
+    {
+      "outerWidth": 1440,
+      "innerWidth": 712,
+      "dpr": 2,
+      "visualScale": 1,
+      "overflow": 0,
+      "h1": "Atlas Teritorial",
+      "targets": [
+        {
+          "width": 141.75,
+          "height": 44
+        },
+        {
+          "width": 141.75,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "outerWidth": 720,
+      "innerWidth": 352,
+      "dpr": 2,
+      "visualScale": 1,
+      "overflow": 0,
+      "h1": "Atlas Teritorial",
+      "targets": [
+        {
+          "width": 135.1640625,
+          "height": 44
+        },
+        {
+          "width": 135.171875,
+          "height": 44
+        }
+      ]
+    }
+  ]
+}

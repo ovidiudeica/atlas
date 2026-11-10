@@ -1,0 +1,3420 @@
+{
+  "stage": "WEB-AUDIT.5b",
+  "site": "http://127.0.0.1:4185/atlas/",
+  "testedAt": "2026-11-10T12:21:06.626Z",
+  "widths": [
+    {
+      "width": 360,
+      "readyMs": 6393,
+      "info": {
+        "h1": [
+          "Atlas Teritorial"
+        ],
+        "overflow": 0,
+        "targets": [
+          {
+            "text": "Moldova",
+            "width": 53.640625,
+            "height": 44,
+            "left": 47.8125,
+            "right": 101.453125,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Vest",
+            "width": 44,
+            "height": 44,
+            "left": 114.9375,
+            "right": 158.9375,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 172.421875,
+            "right": 216.421875,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Taraclia",
+            "width": 50.546875,
+            "height": 44,
+            "left": 229.90625,
+            "right": 280.453125,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "‹ Entitatea precedentă",
+            "width": 143.09375,
+            "height": 44,
+            "left": 47.8125,
+            "right": 190.90625,
+            "top": 260,
+            "bottom": 304
+          },
+          {
+            "text": "Afișează pe hartă",
+            "width": 142.59375,
+            "height": 44,
+            "left": 47.8125,
+            "right": 190.40625,
+            "top": 314,
+            "bottom": 358
+          },
+          {
+            "text": "Încadrează teritoriul",
+            "width": 142.59375,
+            "height": 44,
+            "left": 198.40625,
+            "right": 341,
+            "top": 314,
+            "bottom": 358
+          },
+          {
+            "text": "Moldova",
+            "width": 49.78125,
+            "height": 44,
+            "left": 175.703125,
+            "right": 225.484375,
+            "top": 1069.90625,
+            "bottom": 1113.90625
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 175.703125,
+            "right": 219.703125,
+            "top": 1132.90625,
+            "bottom": 1176.90625
+          }
+        ],
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "left": 306,
+            "right": 350,
+            "top": 72,
+            "bottom": 116,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 307,
+            "right": 351,
+            "top": 126,
+            "bottom": 170,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 307,
+            "right": 351,
+            "top": 170,
+            "bottom": 214,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 307,
+            "right": 351,
+            "top": 214,
+            "bottom": 258,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 306,
+            "right": 350,
+            "top": 268,
+            "bottom": 312,
+            "uncovered": false
+          }
+        ],
+        "favicon": "http://127.0.0.1:4185/atlas/favicon.svg",
+        "heading2": "Entitate",
+        "accessibleHeadings": [
+          {
+            "name": "Atlas Teritorial",
+            "level": 1
+          },
+          {
+            "name": "Entitate",
+            "level": 2
+          },
+          {
+            "name": "Taraclia",
+            "level": 3
+          },
+          {
+            "name": "Identitate",
+            "level": 4
+          },
+          {
+            "name": "Simboluri teritoriale",
+            "level": 4
+          },
+          {
+            "name": "Administrativ și registru",
+            "level": 4
+          },
+          {
+            "name": "Ierarhie teritorială",
+            "level": 4
+          },
+          {
+            "name": "Subunități în acest arbore (15)",
+            "level": 4
+          },
+          {
+            "name": "Geometrie și proveniență",
+            "level": 4
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "selector": "search-tip",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            220,
+            235,
+            225
+          ],
+          "ratio": 5.405427952079188
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "tree-footnote",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "search-tip",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            220,
+            235,
+            225
+          ],
+          "ratio": 5.405427952079188
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "tree-footnote",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        }
+      ],
+      "visualZoom2x": {
+        "scale": 2,
+        "viewport": 180,
+        "documentOverflow": 0
+      }
+    },
+    {
+      "width": 390,
+      "readyMs": 2031,
+      "info": {
+        "h1": [
+          "Atlas Teritorial"
+        ],
+        "overflow": 0,
+        "targets": [
+          {
+            "text": "Moldova",
+            "width": 53.640625,
+            "height": 44,
+            "left": 50.203125,
+            "right": 103.84375,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Vest",
+            "width": 44,
+            "height": 44,
+            "left": 117.328125,
+            "right": 161.328125,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 174.8125,
+            "right": 218.8125,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Taraclia",
+            "width": 50.546875,
+            "height": 44,
+            "left": 232.296875,
+            "right": 282.84375,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "‹ Entitatea precedentă",
+            "width": 156.890625,
+            "height": 44,
+            "left": 50.203125,
+            "right": 207.09375,
+            "top": 260,
+            "bottom": 304
+          },
+          {
+            "text": "Afișează pe hartă",
+            "width": 156.390625,
+            "height": 44,
+            "left": 50.203125,
+            "right": 206.59375,
+            "top": 314,
+            "bottom": 358
+          },
+          {
+            "text": "Încadrează teritoriul",
+            "width": 156.40625,
+            "height": 44,
+            "left": 214.59375,
+            "right": 371,
+            "top": 314,
+            "bottom": 358
+          },
+          {
+            "text": "Moldova",
+            "width": 49.78125,
+            "height": 44,
+            "left": 189.953125,
+            "right": 239.734375,
+            "top": 1053.796875,
+            "bottom": 1097.796875
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 189.953125,
+            "right": 233.953125,
+            "top": 1116.796875,
+            "bottom": 1160.796875
+          }
+        ],
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "left": 336,
+            "right": 380,
+            "top": 72,
+            "bottom": 116,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 337,
+            "right": 381,
+            "top": 126,
+            "bottom": 170,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 337,
+            "right": 381,
+            "top": 170,
+            "bottom": 214,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 337,
+            "right": 381,
+            "top": 214,
+            "bottom": 258,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 336,
+            "right": 380,
+            "top": 268,
+            "bottom": 312,
+            "uncovered": false
+          }
+        ],
+        "favicon": "http://127.0.0.1:4185/atlas/favicon.svg",
+        "heading2": "Entitate",
+        "accessibleHeadings": [
+          {
+            "name": "Atlas Teritorial",
+            "level": 1
+          },
+          {
+            "name": "Entitate",
+            "level": 2
+          },
+          {
+            "name": "Taraclia",
+            "level": 3
+          },
+          {
+            "name": "Identitate",
+            "level": 4
+          },
+          {
+            "name": "Simboluri teritoriale",
+            "level": 4
+          },
+          {
+            "name": "Administrativ și registru",
+            "level": 4
+          },
+          {
+            "name": "Ierarhie teritorială",
+            "level": 4
+          },
+          {
+            "name": "Subunități în acest arbore (15)",
+            "level": 4
+          },
+          {
+            "name": "Geometrie și proveniență",
+            "level": 4
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "selector": "search-tip",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            220,
+            235,
+            225
+          ],
+          "ratio": 5.405427952079188
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "tree-footnote",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "search-tip",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            220,
+            235,
+            225
+          ],
+          "ratio": 5.405427952079188
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "tree-footnote",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        }
+      ],
+      "visualZoom2x": {
+        "scale": 2,
+        "viewport": 195,
+        "documentOverflow": 0
+      }
+    },
+    {
+      "width": 700,
+      "readyMs": 2263,
+      "info": {
+        "h1": [
+          "Atlas Teritorial"
+        ],
+        "overflow": 0,
+        "targets": [
+          {
+            "text": "Moldova",
+            "width": 53.640625,
+            "height": 44,
+            "left": 359,
+            "right": 412.640625,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Vest",
+            "width": 44,
+            "height": 44,
+            "left": 426.125,
+            "right": 470.125,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 483.609375,
+            "right": 527.609375,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "Taraclia",
+            "width": 50.546875,
+            "height": 44,
+            "left": 541.09375,
+            "right": 591.640625,
+            "top": 197,
+            "bottom": 241
+          },
+          {
+            "text": "‹ Entitatea precedentă",
+            "width": 157.5,
+            "height": 44,
+            "left": 359,
+            "right": 516.5,
+            "top": 260,
+            "bottom": 304
+          },
+          {
+            "text": "Afișează pe hartă",
+            "width": 157,
+            "height": 44,
+            "left": 359,
+            "right": 516,
+            "top": 314,
+            "bottom": 358
+          },
+          {
+            "text": "Încadrează teritoriul",
+            "width": 157,
+            "height": 44,
+            "left": 524,
+            "right": 681,
+            "top": 314,
+            "bottom": 358
+          },
+          {
+            "text": "Moldova",
+            "width": 49.78125,
+            "height": 44,
+            "left": 499.265625,
+            "right": 549.046875,
+            "top": 1078.796875,
+            "bottom": 1122.796875
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 499.265625,
+            "right": 543.265625,
+            "top": 1141.796875,
+            "bottom": 1185.796875
+          }
+        ],
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "left": 646,
+            "right": 690,
+            "top": 72,
+            "bottom": 116,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 647,
+            "right": 691,
+            "top": 126,
+            "bottom": 170,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 647,
+            "right": 691,
+            "top": 170,
+            "bottom": 214,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 647,
+            "right": 691,
+            "top": 214,
+            "bottom": 258,
+            "uncovered": false
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 646,
+            "right": 690,
+            "top": 268,
+            "bottom": 312,
+            "uncovered": false
+          }
+        ],
+        "favicon": "http://127.0.0.1:4185/atlas/favicon.svg",
+        "heading2": "Entitate",
+        "accessibleHeadings": [
+          {
+            "name": "Atlas Teritorial",
+            "level": 1
+          },
+          {
+            "name": "Entitate",
+            "level": 2
+          },
+          {
+            "name": "Taraclia",
+            "level": 3
+          },
+          {
+            "name": "Identitate",
+            "level": 4
+          },
+          {
+            "name": "Simboluri teritoriale",
+            "level": 4
+          },
+          {
+            "name": "Administrativ și registru",
+            "level": 4
+          },
+          {
+            "name": "Ierarhie teritorială",
+            "level": 4
+          },
+          {
+            "name": "Subunități în acest arbore (15)",
+            "level": 4
+          },
+          {
+            "name": "Geometrie și proveniență",
+            "level": 4
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "selector": "search-tip",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            220,
+            235,
+            225
+          ],
+          "ratio": 5.405427952079188
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "tree-footnote",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "search-tip",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            220,
+            235,
+            225
+          ],
+          "ratio": 5.405427952079188
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "tree-footnote",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        }
+      ],
+      "visualZoom2x": {
+        "scale": 2,
+        "viewport": 350,
+        "documentOverflow": 0
+      }
+    },
+    {
+      "width": 900,
+      "readyMs": 2906,
+      "info": {
+        "h1": [
+          "Atlas Teritorial"
+        ],
+        "overflow": 0,
+        "targets": [
+          {
+            "text": "Moldova",
+            "width": 53.640625,
+            "height": 44,
+            "left": 581,
+            "right": 634.640625,
+            "top": 203,
+            "bottom": 247
+          },
+          {
+            "text": "Vest",
+            "width": 44,
+            "height": 44,
+            "left": 648.125,
+            "right": 692.125,
+            "top": 203,
+            "bottom": 247
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 705.609375,
+            "right": 749.609375,
+            "top": 203,
+            "bottom": 247
+          },
+          {
+            "text": "Taraclia",
+            "width": 50.546875,
+            "height": 44,
+            "left": 763.09375,
+            "right": 813.640625,
+            "top": 203,
+            "bottom": 247
+          },
+          {
+            "text": "‹ Entitatea precedentă",
+            "width": 138.5,
+            "height": 44,
+            "left": 581,
+            "right": 719.5,
+            "top": 266,
+            "bottom": 310
+          },
+          {
+            "text": "Afișează pe hartă",
+            "width": 138,
+            "height": 44,
+            "left": 581,
+            "right": 719,
+            "top": 320,
+            "bottom": 364
+          },
+          {
+            "text": "Încadrează teritoriul",
+            "width": 138,
+            "height": 44,
+            "left": 727,
+            "right": 865,
+            "top": 320,
+            "bottom": 364
+          },
+          {
+            "text": "Moldova",
+            "width": 49.78125,
+            "height": 44,
+            "left": 704.9375,
+            "right": 754.71875,
+            "top": 1115.40625,
+            "bottom": 1159.40625
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 704.9375,
+            "right": 748.9375,
+            "top": 1178.40625,
+            "bottom": 1222.40625
+          }
+        ],
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "left": 500,
+            "right": 544,
+            "top": 86,
+            "bottom": 130,
+            "uncovered": true
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 501,
+            "right": 545,
+            "top": 140,
+            "bottom": 184,
+            "uncovered": true
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 501,
+            "right": 545,
+            "top": 184,
+            "bottom": 228,
+            "uncovered": true
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 501,
+            "right": 545,
+            "top": 228,
+            "bottom": 272,
+            "uncovered": true
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 500,
+            "right": 544,
+            "top": 282,
+            "bottom": 326,
+            "uncovered": true
+          }
+        ],
+        "favicon": "http://127.0.0.1:4185/atlas/favicon.svg",
+        "heading2": "Entitate",
+        "accessibleHeadings": [
+          {
+            "name": "Atlas Teritorial",
+            "level": 1
+          },
+          {
+            "name": "Entitate",
+            "level": 2
+          },
+          {
+            "name": "Taraclia",
+            "level": 3
+          },
+          {
+            "name": "Identitate",
+            "level": 4
+          },
+          {
+            "name": "Simboluri teritoriale",
+            "level": 4
+          },
+          {
+            "name": "Administrativ și registru",
+            "level": 4
+          },
+          {
+            "name": "Ierarhie teritorială",
+            "level": 4
+          },
+          {
+            "name": "Subunități în acest arbore (15)",
+            "level": 4
+          },
+          {
+            "name": "Geometrie și proveniență",
+            "level": 4
+          }
+        ],
+        "attributionBesideCard": {
+          "right": 550,
+          "panelLeft": 560
+        },
+        "scaleBesideTree": {
+          "scaleLeft": 366,
+          "treeRight": 356
+        }
+      },
+      "contrast": [
+        {
+          "selector": "search-tip",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            220,
+            235,
+            225
+          ],
+          "ratio": 5.405427952079188
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "tree-footnote",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        }
+      ],
+      "visualZoom2x": {
+        "scale": 2,
+        "viewport": 450,
+        "documentOverflow": 0
+      }
+    },
+    {
+      "width": 1440,
+      "readyMs": 5212,
+      "info": {
+        "h1": [
+          "Atlas Teritorial"
+        ],
+        "overflow": 0,
+        "targets": [
+          {
+            "text": "Moldova",
+            "width": 53.640625,
+            "height": 44,
+            "left": 1121,
+            "right": 1174.640625,
+            "top": 203,
+            "bottom": 247
+          },
+          {
+            "text": "Vest",
+            "width": 44,
+            "height": 44,
+            "left": 1188.125,
+            "right": 1232.125,
+            "top": 203,
+            "bottom": 247
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 1245.609375,
+            "right": 1289.609375,
+            "top": 203,
+            "bottom": 247
+          },
+          {
+            "text": "Taraclia",
+            "width": 50.546875,
+            "height": 44,
+            "left": 1303.09375,
+            "right": 1353.640625,
+            "top": 203,
+            "bottom": 247
+          },
+          {
+            "text": "‹ Entitatea precedentă",
+            "width": 138.5,
+            "height": 44,
+            "left": 1121,
+            "right": 1259.5,
+            "top": 266,
+            "bottom": 310
+          },
+          {
+            "text": "Afișează pe hartă",
+            "width": 138,
+            "height": 44,
+            "left": 1121,
+            "right": 1259,
+            "top": 320,
+            "bottom": 364
+          },
+          {
+            "text": "Încadrează teritoriul",
+            "width": 138,
+            "height": 44,
+            "left": 1267,
+            "right": 1405,
+            "top": 320,
+            "bottom": 364
+          },
+          {
+            "text": "Moldova",
+            "width": 49.78125,
+            "height": 44,
+            "left": 1244.9375,
+            "right": 1294.71875,
+            "top": 1115.40625,
+            "bottom": 1159.40625
+          },
+          {
+            "text": "Sud",
+            "width": 44,
+            "height": 44,
+            "left": 1244.9375,
+            "right": 1288.9375,
+            "top": 1178.40625,
+            "bottom": 1222.40625
+          }
+        ],
+        "controls": [
+          {
+            "width": 44,
+            "height": 44,
+            "left": 1040,
+            "right": 1084,
+            "top": 86,
+            "bottom": 130,
+            "uncovered": true
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 1041,
+            "right": 1085,
+            "top": 140,
+            "bottom": 184,
+            "uncovered": true
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 1041,
+            "right": 1085,
+            "top": 184,
+            "bottom": 228,
+            "uncovered": true
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 1041,
+            "right": 1085,
+            "top": 228,
+            "bottom": 272,
+            "uncovered": true
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "left": 1040,
+            "right": 1084,
+            "top": 282,
+            "bottom": 326,
+            "uncovered": true
+          }
+        ],
+        "favicon": "http://127.0.0.1:4185/atlas/favicon.svg",
+        "heading2": "Entitate",
+        "accessibleHeadings": [
+          {
+            "name": "Atlas Teritorial",
+            "level": 1
+          },
+          {
+            "name": "Entitate",
+            "level": 2
+          },
+          {
+            "name": "Taraclia",
+            "level": 3
+          },
+          {
+            "name": "Identitate",
+            "level": 4
+          },
+          {
+            "name": "Simboluri teritoriale",
+            "level": 4
+          },
+          {
+            "name": "Administrativ și registru",
+            "level": 4
+          },
+          {
+            "name": "Ierarhie teritorială",
+            "level": 4
+          },
+          {
+            "name": "Subunități în acest arbore (15)",
+            "level": 4
+          },
+          {
+            "name": "Geometrie și proveniență",
+            "level": 4
+          }
+        ],
+        "attributionBesideCard": {
+          "right": 1090,
+          "panelLeft": 1100
+        },
+        "scaleBesideTree": {
+          "scaleLeft": 386,
+          "treeRight": 376
+        }
+      },
+      "contrast": [
+        {
+          "selector": "search-tip",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            220,
+            235,
+            225
+          ],
+          "ratio": 5.405427952079188
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level is-stat",
+          "color": "rgb(98, 87, 144)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.392041475077888
+        },
+        {
+          "selector": "node-level",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        },
+        {
+          "selector": "tree-footnote",
+          "color": "rgb(72, 98, 83)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.671912791416587
+        }
+      ],
+      "visualZoom2x": {
+        "scale": 2,
+        "viewport": 720,
+        "documentOverflow": 0
+      }
+    }
+  ],
+  "recovery": [
+    {
+      "scenario": {
+        "lang": "ro",
+        "id": "osm-r1699033",
+        "shard": "roots-detailed",
+        "root": true
+      },
+      "attemptsBeforeRetry": 1,
+      "attemptsAfterRetry": 2,
+      "manualRetryRequests": 1,
+      "elapsedMs": 694,
+      "before": {
+        "url": "http://127.0.0.1:4185/atlas/?entity=osm-r1699033&lang=ro&simple=0",
+        "language": "ro",
+        "title": "Taraclia",
+        "checked": [
+          [
+            "OSM 2",
+            true
+          ],
+          [
+            "OSM 3",
+            false
+          ],
+          [
+            "OSM 4",
+            false
+          ],
+          [
+            "OSM 5",
+            false
+          ],
+          [
+            "OSM 7",
+            false
+          ],
+          [
+            "OSM 8",
+            false
+          ],
+          [
+            "OSM 9",
+            false
+          ],
+          [
+            "NUTS 1",
+            false
+          ],
+          [
+            "NUTS 2",
+            false
+          ],
+          [
+            "NUTS 3",
+            false
+          ],
+          [
+            "NTS 1",
+            false
+          ],
+          [
+            "NTS 2",
+            false
+          ],
+          [
+            "NTS 3",
+            false
+          ],
+          [
+            "Afișează geometria: România",
+            true
+          ],
+          [
+            "Afișează geometria: Moldova",
+            true
+          ],
+          [
+            "Afișează geometria: Vest",
+            false
+          ],
+          [
+            "Afișează geometria: Nord",
+            false
+          ],
+          [
+            "Afișează geometria: Centru",
+            false
+          ],
+          [
+            "Afișează geometria: Sud",
+            false
+          ],
+          [
+            "Afișează geometria: Basarabeasca",
+            false
+          ],
+          [
+            "Afișează geometria: Cahul",
+            false
+          ],
+          [
+            "Afișează geometria: Cantemir",
+            false
+          ],
+          [
+            "Afișează geometria: Căușeni",
+            false
+          ],
+          [
+            "Afișează geometria: Cimișlia",
+            false
+          ],
+          [
+            "Afișează geometria: Leova",
+            false
+          ],
+          [
+            "Afișează geometria: Ștefan Vodă",
+            false
+          ],
+          [
+            "Afișează geometria: Taraclia",
+            false
+          ],
+          [
+            "Afișează geometria: Găgăuzia",
+            false
+          ],
+          [
+            "Afișează geometria: Chișinău",
+            false
+          ],
+          [
+            "Afișează geometria: Est",
+            false
+          ],
+          [
+            "Afișează geometria: Nistrenia",
+            false
+          ]
+        ],
+        "message": "Încărcarea geometriilor a eșuat. Selecțiile sunt păstrate.Reîncearcă geometriile"
+      },
+      "after": {
+        "url": "http://127.0.0.1:4185/atlas/?entity=osm-r1699033&lang=ro&simple=0",
+        "language": "ro",
+        "title": "Taraclia",
+        "checked": [
+          [
+            "OSM 2",
+            true
+          ],
+          [
+            "OSM 3",
+            false
+          ],
+          [
+            "OSM 4",
+            false
+          ],
+          [
+            "OSM 5",
+            false
+          ],
+          [
+            "OSM 7",
+            false
+          ],
+          [
+            "OSM 8",
+            false
+          ],
+          [
+            "OSM 9",
+            false
+          ],
+          [
+            "NUTS 1",
+            false
+          ],
+          [
+            "NUTS 2",
+            false
+          ],
+          [
+            "NUTS 3",
+            false
+          ],
+          [
+            "NTS 1",
+            false
+          ],
+          [
+            "NTS 2",
+            false
+          ],
+          [
+            "NTS 3",
+            false
+          ],
+          [
+            "Afișează geometria: România",
+            true
+          ],
+          [
+            "Afișează geometria: Moldova",
+            true
+          ],
+          [
+            "Afișează geometria: Vest",
+            false
+          ],
+          [
+            "Afișează geometria: Nord",
+            false
+          ],
+          [
+            "Afișează geometria: Centru",
+            false
+          ],
+          [
+            "Afișează geometria: Sud",
+            false
+          ],
+          [
+            "Afișează geometria: Basarabeasca",
+            false
+          ],
+          [
+            "Afișează geometria: Cahul",
+            false
+          ],
+          [
+            "Afișează geometria: Cantemir",
+            false
+          ],
+          [
+            "Afișează geometria: Căușeni",
+            false
+          ],
+          [
+            "Afișează geometria: Cimișlia",
+            false
+          ],
+          [
+            "Afișează geometria: Leova",
+            false
+          ],
+          [
+            "Afișează geometria: Ștefan Vodă",
+            false
+          ],
+          [
+            "Afișează geometria: Taraclia",
+            false
+          ],
+          [
+            "Afișează geometria: Găgăuzia",
+            false
+          ],
+          [
+            "Afișează geometria: Chișinău",
+            false
+          ],
+          [
+            "Afișează geometria: Est",
+            false
+          ],
+          [
+            "Afișează geometria: Nistrenia",
+            false
+          ]
+        ]
+      }
+    },
+    {
+      "scenario": {
+        "lang": "en",
+        "id": "osm-r2248660",
+        "shard": "ro-adm-03-detailed",
+        "root": false
+      },
+      "attemptsBeforeRetry": 2,
+      "attemptsAfterRetry": 3,
+      "manualRetryRequests": 1,
+      "elapsedMs": 9288,
+      "before": {
+        "url": "http://127.0.0.1:4185/atlas/?entity=osm-r2248660&lang=en&simple=0",
+        "language": "en",
+        "title": "Harghita",
+        "checked": [
+          [
+            "OSM 2",
+            false
+          ],
+          [
+            "OSM 3",
+            false
+          ],
+          [
+            "OSM 4",
+            true
+          ],
+          [
+            "OSM 5",
+            false
+          ],
+          [
+            "OSM 7",
+            false
+          ],
+          [
+            "OSM 8",
+            false
+          ],
+          [
+            "OSM 9",
+            false
+          ],
+          [
+            "NUTS 1",
+            false
+          ],
+          [
+            "NUTS 2",
+            false
+          ],
+          [
+            "NUTS 3",
+            false
+          ],
+          [
+            "NTS 1",
+            false
+          ],
+          [
+            "NTS 2",
+            false
+          ],
+          [
+            "NTS 3",
+            false
+          ],
+          [
+            "Display geometry: Romania",
+            true
+          ],
+          [
+            "Display geometry: Macroregion One",
+            false
+          ],
+          [
+            "Display geometry: North-West",
+            false
+          ],
+          [
+            "Display geometry: Centre",
+            false
+          ],
+          [
+            "Display geometry: Alba",
+            false
+          ],
+          [
+            "Display geometry: Brasov",
+            false
+          ],
+          [
+            "Display geometry: Covasna",
+            false
+          ],
+          [
+            "Display geometry: Harghita",
+            true
+          ],
+          [
+            "Display geometry: Mures",
+            false
+          ],
+          [
+            "Display geometry: Sibiu",
+            false
+          ],
+          [
+            "Display geometry: Macroregion Two",
+            false
+          ],
+          [
+            "Display geometry: Macroregion Three",
+            false
+          ],
+          [
+            "Display geometry: Macroregion Four",
+            false
+          ],
+          [
+            "Display geometry: Moldova",
+            true
+          ]
+        ],
+        "message": "Geometry loading failed. Your selections are preserved.Retry geometry"
+      },
+      "after": {
+        "url": "http://127.0.0.1:4185/atlas/?entity=osm-r2248660&lang=en&simple=0",
+        "language": "en",
+        "title": "Harghita",
+        "checked": [
+          [
+            "OSM 2",
+            false
+          ],
+          [
+            "OSM 3",
+            false
+          ],
+          [
+            "OSM 4",
+            true
+          ],
+          [
+            "OSM 5",
+            false
+          ],
+          [
+            "OSM 7",
+            false
+          ],
+          [
+            "OSM 8",
+            false
+          ],
+          [
+            "OSM 9",
+            false
+          ],
+          [
+            "NUTS 1",
+            false
+          ],
+          [
+            "NUTS 2",
+            false
+          ],
+          [
+            "NUTS 3",
+            false
+          ],
+          [
+            "NTS 1",
+            false
+          ],
+          [
+            "NTS 2",
+            false
+          ],
+          [
+            "NTS 3",
+            false
+          ],
+          [
+            "Display geometry: Romania",
+            true
+          ],
+          [
+            "Display geometry: Macroregion One",
+            false
+          ],
+          [
+            "Display geometry: North-West",
+            false
+          ],
+          [
+            "Display geometry: Centre",
+            false
+          ],
+          [
+            "Display geometry: Alba",
+            false
+          ],
+          [
+            "Display geometry: Brasov",
+            false
+          ],
+          [
+            "Display geometry: Covasna",
+            false
+          ],
+          [
+            "Display geometry: Harghita",
+            true
+          ],
+          [
+            "Display geometry: Mures",
+            false
+          ],
+          [
+            "Display geometry: Sibiu",
+            false
+          ],
+          [
+            "Display geometry: Macroregion Two",
+            false
+          ],
+          [
+            "Display geometry: Macroregion Three",
+            false
+          ],
+          [
+            "Display geometry: Macroregion Four",
+            false
+          ],
+          [
+            "Display geometry: Moldova",
+            true
+          ]
+        ]
+      }
+    }
+  ],
+  "cards": [
+    {
+      "id": "osm-r90689",
+      "identity": "Denumire oficialăRomâniaȚarăRomânia",
+      "text": "România\nADM 2\nRomânia\n‹ Entitatea precedentă\nEntitatea următoare ›\nAscunde de pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nRomânia\nȚară\nRomânia\nSimboluri teritoriale\nStemă\nImagine candidat · de verificat\nSursa și licența ↗\nSurse coroborate · certificare incompletă\nDrapel\nSursa și licența ↗\nIdentitate, act și reprezentare confirmate\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 2\nGeometrie administrativă OSM\nSubunități în acest arbore (4)\nMacroregiunea Unu\nNUTS 1\nMacroregiunea Doi\nNUTS 1\nMacroregiunea Trei\nNUTS 1\nMacroregiunea Patru\nNUTS 1\nGeometrie și proveniență\nNivel administrativ OSM\n2\nID OSM\n90689 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "https://upload.wikimedia.org/wikipedia/commons/7/70/Coat_of_arms_of_Romania.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "gallery": [
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Coat_of_arms_of_Romania.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Romania.svg",
+            "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Romania.svg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Romania.svg",
+            "https://legislatie.just.ro/Public/DetaliiDocumentAfis/279161",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "SOURCE_CORROBORATED",
+        "VERIFIED_OFFICIAL"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r58974",
+      "identity": "Denumire oficialăRepublica MoldovaȚarăRepublica Moldova",
+      "text": "Moldova\nNTS 1 · ADM 2\nMoldova\n‹ Entitatea precedentă\nEntitatea următoare ›\nAscunde de pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nRepublica Moldova\nȚară\nRepublica Moldova\nSimboluri teritoriale\nStemă\nImagine candidat · de verificat\nSursa și licența ↗\nSurse coroborate · certificare incompletă\nDrapel\nImagine candidat · de verificat\nSursa și licența ↗\nSurse coroborate · certificare incompletă\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 2\nGeometrie administrativă OSM\nRoluri statistice\nNTS 1\nMD1\nVersiune: 2017\nSubunități în acest arbore (3)\nVest\nNTS 2\nEst\nNTS 2\nNistrenia\nADM 3\nGeometrie și proveniență\nNivel administrativ OSM\n2\nID OSM\n58974 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Coat_of_arms_of_Moldova.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "gallery": [
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Coat_of_arms_of_Moldova.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Moldova.svg",
+            "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Moldova.svg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Moldova.svg",
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Moldova.svg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "SOURCE_CORROBORATED",
+        "SOURCE_CORROBORATED"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r377733",
+      "identity": "Denumire oficialăMunicipiul BucureștiȚarăRomânia",
+      "text": "◇\nBucurești\nNUTS 3 · ADM 4 · ADM 8\nRomânia\n›\nMacroregiunea Trei\n›\nBucureşti-Ilfov\n›\nBucurești\n‹ Entitatea precedentă\nEntitatea următoare ›\nAfișează pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nMunicipiul București\nȚară\nRomânia\nSimboluri teritoriale\n◇\nStemă\nImagine neatribuită\n◇\nDrapel\nImagine neatribuită\nDocument de referință ↗\n\nNu se afișează stema anterioară modificării din 2024.\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 4\nGeometrie administrativă OSM\nRegistru oficial: SIRUTA 403\nADM 8\nRol din registrul național; fără contur OSM separat\nRegistru oficial: SIRUTA 179132\nCod părinte din registru: 403\n\nADM 4 este nivelul OSM real; ADM 8 este rolul municipal SIRUTA, fără geometrie OSM ADM 8 distinctă.\n\nRoluri statistice\nNUTS 3\nRO321\nVersiune: 2024\nCod părinte statistic: RO32\nIerarhie teritorială\nPărinte administrativ\nRomânia\nPărinte în arbore\nBucureşti-Ilfov\nPărinte statistic (RO32)\nBucureşti-Ilfov\nSubunități în acest arbore (6)\nSector 1\nADM 9\nSector 2\nADM 9\nSector 3\nADM 9\nSector 4\nADM 9\nSector 5\nADM 9\nSector 6\nADM 9\nGeometrie și proveniență\nNivel administrativ OSM\n4\nID OSM\n377733 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": null,
+      "gallery": [
+        {
+          "image": null,
+          "neutral": true,
+          "source": [
+            "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": null,
+          "neutral": true,
+          "source": [
+            "https://doc.pmb.ro/legis/acteinterne/2024/45550/h047_24.pdf",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "MISSING",
+        "MISSING"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r1748490",
+      "identity": "Denumire oficialămunicipiul ChișinăuȚarăRepublica Moldova",
+      "text": "Orașul Chișinău\nADM 8\nMoldova\n›\nVest\n›\nChișinău\n›\nOrașul Chișinău\n‹ Entitatea precedentă\nEntitatea următoare ›\nAfișează pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nmunicipiul Chișinău\nȚară\nRepublica Moldova\nSimboluri teritoriale\nStemă\nSurse coroborate · certificare incompletă\nDrapel\nImagine candidat · de verificat\nSursa imaginii ↗\nSurse coroborate · certificare incompletă\n\nDeținător: Municipiul Chișinău\n\nDecizia CMC nr. 5/2 din 19.12.2019; Decretul nr. 1475-VIII din 02.03.2020\n\nActul și sursa oficială ↗\n\nReproducere strict informativă; simbolul nu este sigla atlasului.\n\nAdministrativ și registru\nADM 8\nGeometrie administrativă OSM\nRegistru oficial: CUATM 0100\n\nAceastă geometrie OSM reutilizează un cod CUATM asociat altei reprezentări. Nu rezultă că există două unități juridice independente.\n\nIerarhie teritorială\nPărinte administrativ\nChișinău\nPărinte în arbore\nChișinău\nSubunități în acest arbore (5)\nBotanica\nADM 7\nBuiucani\nADM 7\nCiocana\nADM 7\nRîșcani\nADM 7\nCentru\nADM 7\nGeometrie și proveniență\nNivel administrativ OSM\n8\nID OSM\n1748490 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "http://127.0.0.1:4185/atlas/symbols/chisinau-coat.jpg",
+      "gallery": [
+        {
+          "image": "http://127.0.0.1:4185/atlas/symbols/chisinau-coat.jpg",
+          "neutral": false,
+          "source": [
+            "https://cnh.prm.md/",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Drapel_Municipiul_Chisinau.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Drapel_Municipiul_Chisinau.jpg",
+            "https://commons.wikimedia.org/wiki/File:Drapel_Municipiul_Chisinau.jpg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "SOURCE_CORROBORATED",
+        "SOURCE_CORROBORATED"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r1691801",
+      "identity": "Denumire oficialăChișinăuȚarăRepublica Moldova",
+      "text": "Chișinău\nNTS 3 · ADM 4\nMoldova\n›\nVest\n›\nChișinău\n‹ Entitatea precedentă\nEntitatea următoare ›\nAfișează pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nChișinău\nȚară\nRepublica Moldova\nSimboluri teritoriale\nStemă\nImagine candidat · de verificat\nSursa și licența ↗\nImagine neconfirmată\nDrapel\nImagine candidat · de verificat\nSursa și licența ↗\nImagine neconfirmată\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 4\nGeometrie administrativă OSM\nRegistru oficial: CUATM 0100\n\nAceastă geometrie OSM reutilizează un cod CUATM asociat altei reprezentări. Nu rezultă că există două unități juridice independente.\n\nRoluri statistice\nNTS 3\nMD115\nVersiune: 2017\nCod părinte statistic: MD11\nIerarhie teritorială\nPărinte administrativ\nMoldova\nPărinte în arbore\nVest\nPărinte statistic (MD11)\nVest\nSubunități în acest arbore (19)\nOrașul Chișinău\nADM 8\nSîngera\nADM 8\nDurlești\nADM 8\nVatra\nADM 8\nCondrița\nADM 8\nGhidighici\nADM 8\nCodru\nADM 8\nVadul lui Vodă\nADM 8\nBubuieci\nADM 8\nCruzești\nADM 8\nTohatin\nADM 8\nColonița\nADM 8\nAfișează încă 12 · 12 / 19\nGeometrie și proveniență\nNivel administrativ OSM\n4\nID OSM\n1691801 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "gallery": [
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg",
+            "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Chi%C8%99in%C4%83u.svg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Flag_of_Chi%C8%99in%C4%83u.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Chi%C8%99in%C4%83u.svg",
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Chi%C8%99in%C4%83u.svg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "CANDIDATE_UNVERIFIED",
+        "CANDIDATE_UNVERIFIED"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r2248660",
+      "identity": "Denumire oficialăJudețul HarghitaȚarăRomânia",
+      "text": "Harghita\nNUTS 3 · ADM 4\nRomânia\n›\nMacroregiunea Unu\n›\nCentru\n›\nHarghita\n‹ Entitatea precedentă\nEntitatea următoare ›\nAscunde de pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nJudețul Harghita\nȚară\nRomânia\nSimboluri teritoriale\nStemă\nSursa instituțională ↗\nIdentitate, act și reprezentare confirmate\nDrapel\nSursa și licența ↗\nSurse coroborate · certificare incompletă\nDocument de referință ↗\n\nStema anterioară este exclusă; se aplică HG 510/2026.\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 4\nGeometrie administrativă OSM\nRegistru oficial: SIRUTA 190\nRoluri statistice\nNUTS 3\nRO124\nVersiune: 2024\nCod părinte statistic: RO12\nIerarhie teritorială\nPărinte administrativ\nRomânia\nPărinte în arbore\nCentru\nPărinte statistic (RO12)\nCentru\nSubunități în acest arbore (67)\nOdorheiu Secuiesc\nADM 8\nBrădești\nADM 8\nFeliceni\nADM 8\nMiercurea Ciuc\nADM 8\nPăuleni-Ciuc\nADM 8\nBăile Tușnad\nADM 8\nBălan\nADM 8\nBorsec\nADM 8\nCristuru Secuiesc\nADM 8\nGheorgheni\nADM 8\nToplița\nADM 8\nVlăhița\nADM 8\nAfișează încă 12 · 12 / 67\nGeometrie și proveniență\nNivel administrativ OSM\n4\nID OSM\n2248660 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "http://127.0.0.1:4185/atlas/symbols/sim-r8/harghita-coat.png",
+      "gallery": [
+        {
+          "image": "http://127.0.0.1:4185/atlas/symbols/sim-r8/harghita-coat.png",
+          "neutral": false,
+          "source": [
+            "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+            "https://www.wipo.int/wipolex/en/law/neighboring_rights_romania",
+            "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Harghita_County.gif",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Harghita_County.gif",
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Harghita_County.gif",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "VERIFIED_OFFICIAL",
+        "SOURCE_CORROBORATED"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r2260187",
+      "identity": "Denumire oficialăJudețul VranceaȚarăRomânia",
+      "text": "Vrancea\nNUTS 3 · ADM 4\nRomânia\n›\nMacroregiunea Doi\n›\nSud-Est\n›\nVrancea\n‹ Entitatea precedentă\nEntitatea următoare ›\nAfișează pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nJudețul Vrancea\nȚară\nRomânia\nSimboluri teritoriale\nStemă\nSursa și licența ↗\nIdentitate, act și reprezentare confirmate\nDrapel\nSursa și licența ↗\nImagine neconfirmată\nDocument de referință ↗\n\nStema este o reproducere Commons atribuită CJ Vrancea, datată 2026.\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 4\nGeometrie administrativă OSM\nRegistru oficial: SIRUTA 396\nRoluri statistice\nNUTS 3\nRO226\nVersiune: 2024\nCod părinte statistic: RO22\nIerarhie teritorială\nPărinte administrativ\nRomânia\nPărinte în arbore\nSud-Est\nPărinte statistic (RO22)\nSud-Est\nSubunități în acest arbore (73)\nFocșani\nADM 8\nCâmpineanca\nADM 8\nGolești\nADM 8\nAdjud\nADM 8\nMărășești\nADM 8\nOdobești\nADM 8\nPanciu\nADM 8\nAndreiașu de Jos\nADM 8\nBălești\nADM 8\nBârsești\nADM 8\nBoghești\nADM 8\nBolotești\nADM 8\nAfișează încă 12 · 12 / 73\nGeometrie și proveniență\nNivel administrativ OSM\n4\nID OSM\n2260187 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "https://commons.wikimedia.org/wiki/Special:FilePath/ROU_VN_VRANCEA_COA.png",
+      "gallery": [
+        {
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ROU_VN_VRANCEA_COA.png",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:ROU_VN_VRANCEA_COA.png",
+            "https://commons.wikimedia.org/wiki/File:ROU_VN_VRANCEA_COA.png",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vrancea_flag.webp",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Vrancea_flag.webp",
+            "https://commons.wikimedia.org/wiki/File:Vrancea_flag.webp",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "VERIFIED_OFFICIAL",
+        "CANDIDATE_UNVERIFIED"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r10664180",
+      "identity": "Denumire oficialăMunicipiul CâmpulungȚarăRomânia",
+      "text": "Câmpulung\nADM 8\nRomânia\n›\nMacroregiunea Trei\n›\nSud-Muntenia\n›\nArgeș\n›\nCâmpulung\n‹ Entitatea precedentă\nEntitatea următoare ›\nAfișează pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nMunicipiul Câmpulung\nȚară\nRomânia\nSimboluri teritoriale\nStemă\nSursa instituțională ↗\nIdentitate, act și reprezentare confirmate\nDrapel\nImagine candidat · de verificat\nSursa și licența ↗\nImagine neconfirmată\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 8\nGeometrie administrativă OSM\nRegistru oficial: SIRUTA 13490\nIerarhie teritorială\nPărinte administrativ\nArgeș\nPărinte în arbore\nArgeș\nGeometrie și proveniență\nNivel administrativ OSM\n8\nID OSM\n10664180 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "http://127.0.0.1:4185/atlas/symbols/sim-r8/campulung-coat.png",
+      "gallery": [
+        {
+          "image": "http://127.0.0.1:4185/atlas/symbols/sim-r8/campulung-coat.png",
+          "neutral": false,
+          "source": [
+            "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+            "https://www.wipo.int/wipolex/en/law/neighboring_rights_romania",
+            "https://monitoruloficial.ro/Monitorul-Oficial--PI--141--2015.html",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Steagul_Oficial_Al_Campulungului.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Steagul_Oficial_Al_Campulungului.png",
+            "https://commons.wikimedia.org/wiki/File:Steagul_Oficial_Al_Campulungului.png",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "VERIFIED_OFFICIAL",
+        "CANDIDATE_UNVERIFIED"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r1699033",
+      "identity": "Denumire oficialăTaracliaȚarăRepublica Moldova",
+      "text": "Taraclia\nADM 4\nMoldova\n›\nVest\n›\nSud\n›\nTaraclia\n‹ Entitatea precedentă\nEntitatea următoare ›\nAfișează pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nTaraclia\nȚară\nRepublica Moldova\nSimboluri teritoriale\nStemă\nSursa instituțională ↗\nIdentitate, act și reprezentare confirmate\nDrapel\nSursa instituțională ↗\nIdentitate, act și reprezentare confirmate\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 4\nGeometrie administrativă OSM\nRegistru oficial: CUATM 8700\nIerarhie teritorială\nPărinte administrativ\nMoldova\nPărinte în arbore\nSud\nSubunități în acest arbore (15)\nTaraclia\nADM 8\nAlbota de Jos\nADM 8\nAlbota de Sus\nADM 8\nAluatu\nADM 8\nBalabanu\nADM 8\nBudăi\nADM 8\nCairaclia\nADM 8\nCealîc\nADM 8\nCorten\nADM 8\nMusaitu\nADM 8\nNovosiolovca\nADM 8\nSalcia\nADM 8\nAfișează încă 12 · 12 / 15\nGeometrie și proveniență\nNivel administrativ OSM\n4\nID OSM\n1699033 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "http://127.0.0.1:4185/atlas/symbols/sim-r8/taraclia-coat.png",
+      "gallery": [
+        {
+          "image": "http://127.0.0.1:4185/atlas/symbols/sim-r8/taraclia-coat.png",
+          "neutral": false,
+          "source": [
+            "https://presedinte.md/app/webroot/Decrete/241.pdf",
+            "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+            "https://presedinte.md/app/webroot/Decrete/241.pdf",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "http://127.0.0.1:4185/atlas/symbols/sim-r8/taraclia-flag.png",
+          "neutral": false,
+          "source": [
+            "https://presedinte.md/app/webroot/Decrete/241.pdf",
+            "https://www.agepi.md/sites/default/files/law/national/l_230-2022_en.pdf",
+            "https://presedinte.md/app/webroot/Decrete/241.pdf",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "VERIFIED_OFFICIAL",
+        "VERIFIED_OFFICIAL"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r9982547",
+      "identity": "Denumire oficialăOrașul TălmaciuȚarăRomânia",
+      "text": "Tălmaciu\nADM 8\nRomânia\n›\nMacroregiunea Unu\n›\nCentru\n›\nSibiu\n›\nTălmaciu\n‹ Entitatea precedentă\nEntitatea următoare ›\nAfișează pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nOrașul Tălmaciu\nȚară\nRomânia\nSimboluri teritoriale\nStemă\nImagine candidat · de verificat\nSursa și licența ↗\nSurse coroborate · certificare incompletă\nDrapel\nImagine candidat · de verificat\nSursa și licența ↗\nSurse contradictorii\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 8\nGeometrie administrativă OSM\nRegistru oficial: SIRUTA 145827\nIerarhie teritorială\nPărinte administrativ\nSibiu\nPărinte în arbore\nSibiu\nGeometrie și proveniență\nNivel administrativ OSM\n8\nID OSM\n9982547 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": "https://upload.wikimedia.org/wikipedia/commons/9/9a/ROU_SB_Talmaciu_CoA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "gallery": [
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/ROU_SB_Talmaciu_CoA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:ROU_SB_Talmaciu_CoA.jpg",
+            "https://commons.wikimedia.org/wiki/File:ROU_SB_Talmaciu_CoA.jpg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Talmesh_before_1918.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "neutral": false,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg",
+            "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        }
+      ],
+      "audit": [
+        "SOURCE_CORROBORATED",
+        "DISPUTED"
+      ],
+      "overflow": 0
+    },
+    {
+      "id": "osm-r14772859",
+      "identity": "Denumire oficialăComuna FăureiȚarăRomânia",
+      "text": "◇\nFăurei\nADM 8\nRomânia\n›\nMacroregiunea Doi\n›\nNord-Est\n›\nNeamț\n›\nFăurei\n‹ Entitatea precedentă\nEntitatea următoare ›\nAfișează pe hartă\nÎncadrează teritoriul\nExportă entitatea\nIdentitate\nDenumire oficială\nComuna Făurei\nȚară\nRomânia\nSimboluri teritoriale\n◇\nStemă\nAtribuire greșită eliminată\n◇\nDrapel\n\nReproduceri ilustrative, atribuite exclusiv acestei entități. Nivelul B indică o imagine documentată, nu un desen-etalon certificat. Imaginile indisponibile au substitut neutru.\n\nAdministrativ și registru\nADM 8\nGeometrie administrativă OSM\nRegistru oficial: SIRUTA 122613\nIerarhie teritorială\nPărinte administrativ\nNeamț\nPărinte în arbore\nNeamț\nGeometrie și proveniență\nNivel administrativ OSM\n8\nID OSM\n14772859 ↗\nSursă\nOSM-Boundaries\nOriginal\n2026-10-05\n\nÎnregistrările-sursă sunt păstrate nemodificate. Concordanța cu OpenStreetMap nu dovedește statutul juridic al limitelor.\n\nÎnregistrări originale",
+      "header": null,
+      "gallery": [
+        {
+          "image": null,
+          "neutral": true,
+          "source": [
+            "https://commons.wikimedia.org/wiki/File:ROU_BR_Faurei_CoA.jpg",
+            "http://127.0.0.1:4185/atlas/data/symbols/audit-r8.json.gz"
+          ]
+        },
+        {
+          "image": null,
+          "neutral": true,
+          "source": []
+        }
+      ],
+      "audit": [
+        "MISATTRIBUTED"
+      ],
+      "overflow": 0
+    }
+  ],
+  "limitations": [
+    "No NVDA/VoiceOver session was available; no full WCAG conformance claim.",
+    "CDP visual zoom2x and narrow CSS viewport reflow are recorded separately from a native browser chrome zoom audit."
+  ]
+}

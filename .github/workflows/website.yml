@@ -36,12 +36,18 @@ jobs:
         run: node scripts/audit/sim-r7/12-verify-reproducibility.mjs
       - name: SIM-R8 deterministic targeted evidence generation
         run: node scripts/audit/sim-r8/03-verify-reproducibility.mjs
+      - name: SIM-CLOSE deterministic closure verification
+        run: node scripts/audit/sim-close/verify-reproducibility.mjs
       - name: Type-check and build
         run: npm run build
       - name: WEB-AUDIT.5 image request regression
         env:
           AUDIT_LABEL: after
         run: node scripts/audit/web-audit-5/image-network.mjs
+      - name: WEB-AUDIT.5 accessibility and recovery
+        run: node scripts/audit/web-audit-5/accessibility-resilience.mjs
+      - name: WEB-AUDIT.5 native browser zoom200
+        run: node scripts/audit/web-audit-5/native-zoom.mjs
       - name: Chromium desktop/mobile smoke
         run: node scripts/ci/browser-smoke.mjs
       - name: Store browser screenshots
@@ -50,6 +56,16 @@ jobs:
         with:
           name: browser-smoke-${{ github.event.pull_request.head.sha || github.sha }}
           path: artifacts/browser-smoke/*.png
+          if-no-files-found: warn
+      - name: Store WEB-AUDIT.5 browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-audit-5-evidence-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            docs/audits/web-audit-5/image-network-after.json
+            docs/audits/web-audit-5/accessibility-resilience-local.json
+            docs/audits/web-audit-5/native-zoom-local.json
           if-no-files-found: warn
       - name: Store build
         uses: actions/upload-artifact@v4

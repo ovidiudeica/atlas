@@ -1,0 +1,141 @@
+{
+  "baseCommit": "82622896078bab8ce4ec25a7a8cac40c9bf6b87a",
+  "scope": "Actual local verification; exact-head and post-merge CI/Pages require subsequent attestation.",
+  "recordedAt": "2026-11-10T12:35:33.987Z",
+  "npmCi": "96 locked packages installed during5a; lockfile/dependencies unchanged in5b",
+  "tests": {
+    "total": 288,
+    "pass": 288,
+    "fail": 0,
+    "command": "npm test"
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "PASS"
+  },
+  "fullBrowser": {
+    "command": "node scripts/ci/browser-smoke.mjs",
+    "result": "PASS",
+    "widths": [
+      1440,
+      900,
+      390,
+      360
+    ]
+  },
+  "targetedBrowser": {
+    "result": "PASS",
+    "widths": [
+      360,
+      390,
+      700,
+      900,
+      1440
+    ],
+    "controlledRecoveryScenarios": 2,
+    "exactIDCards": 11
+  },
+  "nativeZoom": {
+    "result": "PASS",
+    "samples": [
+      {
+        "outerWidth": 1440,
+        "innerWidth": 712,
+        "dpr": 2,
+        "visualScale": 1,
+        "overflow": 0,
+        "h1": "Atlas Teritorial",
+        "targets": [
+          {
+            "width": 141.75,
+            "height": 44
+          },
+          {
+            "width": 141.75,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "outerWidth": 720,
+        "innerWidth": 352,
+        "dpr": 2,
+        "visualScale": 1,
+        "overflow": 0,
+        "h1": "Atlas Teritorial",
+        "targets": [
+          {
+            "width": 135.1640625,
+            "height": 44
+          },
+          {
+            "width": 135.171875,
+            "height": 44
+          }
+        ]
+      }
+    ]
+  },
+  "reproducibility": "reproducibility-5b.json",
+  "protectedInputs": "integrity-5a.json",
+  "sourceSHA256": [
+    {
+      "path": "src/App.tsx",
+      "sha256": "00cea08b2a58d6740d3a2902632a63f6a46ee6ddc260b6b3f3e595bd47471433"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "a13663bcc7c2b19e07579478b02b3c85c055d56ec0065f690c5577ae90458ffb"
+    },
+    {
+      "path": "src/data/territories.ts",
+      "sha256": "f1f84b052af66824905bd7e4ae55744c2257103a01d0825b519bf2262ece808c"
+    },
+    {
+      "path": "index.html",
+      "sha256": "4ed194a51494b59792e15be67de9a2ec381d71bf95f00d5287f82bea9537b7ea"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "16618eabae5d3bf21f55640444727607a36ad6b15ae3a48bbd55c04363f79dfc"
+    },
+    {
+      "path": ".github/workflows/website.yml",
+      "sha256": "2c9766814974c2472a2daae9626771438f50ace4009c4d928abd4e24788520c0"
+    },
+    {
+      "path": "tests/web-audit-5b-resilience.test.mjs",
+      "sha256": "737a21ab7976953ec121c849ad9e9b7f04a8757756d5f3af47122105f19e0077"
+    },
+    {
+      "path": "scripts/audit/web-audit-5/accessibility-resilience.mjs",
+      "sha256": "460fd5ff3dfaee3db017995f1424f5ec2aab37cbfe753ca7d43d20c332c3d528"
+    },
+    {
+      "path": "scripts/audit/web-audit-5/native-zoom.mjs",
+      "sha256": "1e9bb0ca546e266a9a74a93d8e0666d654e1f3d5a5d1c6c4f53b7c4808dc24cd"
+    }
+  ],
+  "logSHA256": [
+    {
+      "path": "work/tests-5b.log",
+      "sha256": "865ab687858511a2f660888d367c6d52c1a78d19efcc9ae970c6ebdedfa41e63"
+    },
+    {
+      "path": "work/build-5b.log",
+      "sha256": "1e0ef120771f4cb1869145bb69cb378abb746fd63338befc4b1a667fcbc8529e"
+    },
+    {
+      "path": "work/browser-5b-full-final.log",
+      "sha256": "170c0dc4b7c77930cec57559cba75489635edf77121c914f053dc72438fd92ba"
+    },
+    {
+      "path": "work/browser-5b-targeted.log",
+      "sha256": "49d73f6d866db1b2feb5ba3da8a4eefda12b0cfd77980e7bbd0d1a110a2eab2a"
+    },
+    {
+      "path": "work/native-zoom.log",
+      "sha256": "5ece23239b0e56396b681bfe276cef97235c40948e1c8eee5cbe9893a96caf50"
+    }
+  ]
+}
