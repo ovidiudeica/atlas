@@ -1,0 +1,1477 @@
+{
+  "stage": "WEB-MAINTENANCE",
+  "site": "https://ovidiudeica.github.io/atlas/",
+  "checkedAt": "2026-11-10T15:28:51.392Z",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.50",
+    "revision": "@049750111b1e5c11565c792b2aeed5541f332bad",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.23"
+  },
+  "method": "Fresh isolated headless Chromium; real CDP key input, DOM and Accessibility tree; controlled synthetic503 before external network, not actual service outage.",
+  "assistiveTechnology": "ASSISTIVE_TECH_VALIDATION_PENDING",
+  "screenReaderActuallyUsed": false,
+  "widths": [
+    {
+      "width": 1440,
+      "language": "ro",
+      "title": "Atlas Teritorial",
+      "moduleNames": [
+        "Administrativ",
+        "Istoric",
+        "Comunități istorice românești",
+        "Regiuni istorice",
+        "Zone etnografice",
+        "Reformă administrativ-teritorială"
+      ],
+      "languages": [
+        {
+          "text": "EN",
+          "pressed": "false"
+        },
+        {
+          "text": "RO",
+          "pressed": "true"
+        }
+      ],
+      "entity": "?entity=osm-r1699033&lang=ro",
+      "card": {
+        "title": "Harghita",
+        "headings": [
+          "Harghita",
+          "Identity",
+          "Territorial symbols",
+          "Administrative & registry",
+          "Statistical roles",
+          "Territorial hierarchy",
+          "Subterritories in this tree view (67)",
+          "Geometry & provenance"
+        ],
+        "metadata": [
+          "Official name",
+          "Harghita County",
+          "Country",
+          "Romania",
+          "Administrative parent",
+          "Romania",
+          "Tree parent",
+          "Centre",
+          "Statistical parent (RO12)",
+          "Centre",
+          "OSM administrative level",
+          "4",
+          "OSM ID",
+          "2248660 ↗",
+          "Source",
+          "OSM-Boundaries",
+          "Original",
+          "2026-10-05",
+          "siruta",
+          "190",
+          "name",
+          "JUDEȚUL HARGHITA",
+          "parent_siruta",
+          "1",
+          "type_code",
+          "40",
+          "level",
+          "1",
+          "county_code",
+          "19",
+          "county_name",
+          "",
+          "legal_type",
+          "",
+          "postal_code",
+          "0",
+          "environment",
+          "0",
+          "region",
+          "7",
+          "nuts",
+          "RO124",
+          "parent_name",
+          "",
+          "admin_level",
+          "4",
+          "boundary",
+          "administrative",
+          "ISO3166-2",
+          "RO-HR",
+          "name",
+          "Harghita",
+          "name:en",
+          "Harghita",
+          "name:hu",
+          "Hargita megye",
+          "name:ru",
+          "Харгита",
+          "name:sr",
+          "Харгита",
+          "name:sr-Latn",
+          "Hargita",
+          "name:zh",
+          "哈尔吉塔县",
+          "place",
+          "county",
+          "place:ro",
+          "județ",
+          "ref:nuts",
+          "RO124",
+          "ref:nuts:3",
+          "RO124",
+          "type",
+          "boundary",
+          "wikidata",
+          "Q190702"
+        ],
+        "symbols": [
+          {
+            "caption": "Coat of arms",
+            "alt": "Coat of arms · Harghita"
+          },
+          {
+            "caption": "Flag",
+            "alt": "Flag · Harghita"
+          }
+        ],
+        "sourceLinks": [
+          {
+            "text": "Institutional source ↗",
+            "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html"
+          },
+          {
+            "text": "Source and license ↗",
+            "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Harghita_County.gif"
+          },
+          {
+            "text": "Reference document ↗",
+            "url": "https://legislatie.just.ro/Public/DetaliiDocument/311970"
+          }
+        ],
+        "warnings": [
+          "Identity, act and representation confirmedThe previous version was replaced using documented sources.Current representation confirmed by documented comparison.Source licence declaration: Only literal colour annex copies to HG89/2015 and HG510/2026, published in the free official gazette; no new creative drawing or unrelated third-party artwork is copied. 9(b)(c), corroborated in publicly indexed2026 legal text;9(g) documentary photographs additionally distinguishes literal copy from artistic redraw. · Official normative annex; individual annex illustrator not credited in published act.Previously missing final4-cross/8-star annex recovered.Evidence / examined source ↗SIM-R8 register (gzip JSON)",
+          "Corroborated sources · incomplete certificationGraphic fidelity has verification limits; consult the audit register.Source licence declaration: Final official gazette544/2July2026 page52 recovered and visually reviewed: four red Byzantine crosses and eight stars, not the five-cross/twelve-star proposal. Coat resolved and added from literal final-annex crop. Existing flag retained and evaluated independently; final coat approval does not approve the flag.Evidence / examined source ↗SIM-R8 register (gzip JSON)"
+        ]
+      },
+      "initialRomanianMetadata": [
+        "Denumire oficială",
+        "Taraclia",
+        "Țară",
+        "Republica Moldova",
+        "Părinte administrativ",
+        "Moldova",
+        "Părinte în arbore",
+        "Sud",
+        "Nivel administrativ OSM",
+        "4",
+        "ID OSM",
+        "1699033 ↗",
+        "Sursă",
+        "OSM-Boundaries",
+        "Original",
+        "2026-10-05",
+        "code",
+        "8700",
+        "parent_code",
+        "",
+        "statistical_code",
+        "8700000",
+        "parent_statistical_code",
+        "",
+        "status_code",
+        "2",
+        "name",
+        "Taraclia",
+        "name_ru",
+        "Тараклия",
+        "normalized_name",
+        "taraclia",
+        "sheet",
+        "Sheet 1",
+        "row",
+        "1385",
+        "parent_name",
+        "",
+        "admin_level",
+        "4",
+        "boundary",
+        "administrative",
+        "ISO3166-2",
+        "MD-TA",
+        "name",
+        "Raionul Taraclia",
+        "name:bg",
+        "Тараклийски район",
+        "name:de",
+        "Rajon Taraclia",
+        "name:en",
+        "Taraclia District",
+        "name:gag",
+        "Taraklı dolayı",
+        "name:ro",
+        "Raionul Taraclia",
+        "name:ru",
+        "Тараклийский район",
+        "name:uk",
+        "Тараклійський район",
+        "place",
+        "district",
+        "place:ro",
+        "raion",
+        "ref",
+        "TR",
+        "ref:cuatm:codstatistic",
+        "8700000",
+        "ref:cuatm:codunic",
+        "8700",
+        "ref:cuatm:statut",
+        "2",
+        "ref:nuts:1",
+        "MD1",
+        "ref:nuts:2",
+        "MD11",
+        "ref:nuts:3",
+        "MD113",
+        "type",
+        "boundary",
+        "wikidata",
+        "Q865884",
+        "wikipedia",
+        "en:Taraclia District"
+      ],
+      "nameSearchResults": [
+        "Harghita"
+      ],
+      "searchExactID": "osm-r2248660",
+      "expandedControls": [
+        {
+          "name": "Administrativ",
+          "id": "atlas-module-panel",
+          "exists": true
+        }
+      ],
+      "headings": [
+        {
+          "name": "Atlas Teritorial",
+          "level": 1
+        },
+        {
+          "name": "Administrativ",
+          "level": 2
+        }
+      ],
+      "checkboxStates": [
+        {
+          "name": "Afișează geometria: România",
+          "checked": "true"
+        },
+        {
+          "name": "Afișează geometria: Moldova",
+          "checked": "true"
+        },
+        {
+          "name": "Afișează geometria: Macroregiunea Unu",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Macroregiunea Doi",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Macroregiunea Trei",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Macroregiunea Patru",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Vest",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Est",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Nistrenia",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Nord-Vest",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Centru",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Nord",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Centru",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Sud",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Găgăuzia",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Chișinău",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Alba",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Brașov",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Covasna",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Harghita",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Mureș",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Sibiu",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Basarabeasca",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Cahul",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Cantemir",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Căușeni",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Cimișlia",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Leova",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Ștefan Vodă",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Taraclia",
+          "checked": "false"
+        }
+      ],
+      "tabFocus": {
+        "tag": "BUTTON",
+        "name": "Istoric"
+      },
+      "shiftTabFocus": {
+        "tag": "BUTTON",
+        "name": "Administrativ"
+      },
+      "escapeFocusReturned": true,
+      "cardAccessibleControls": [
+        {
+          "role": "button",
+          "name": "Details"
+        },
+        {
+          "role": "button",
+          "name": "EN"
+        },
+        {
+          "role": "button",
+          "name": "RO"
+        },
+        {
+          "role": "button",
+          "name": "Administrative"
+        },
+        {
+          "role": "button",
+          "name": "Historical"
+        },
+        {
+          "role": "button",
+          "name": "Historical Romanian Communities"
+        },
+        {
+          "role": "button",
+          "name": "Historical Regions"
+        },
+        {
+          "role": "button",
+          "name": "Ethnographic Areas"
+        },
+        {
+          "role": "button",
+          "name": "Administrative-Territorial Reform"
+        },
+        {
+          "role": "button",
+          "name": "Map tools"
+        },
+        {
+          "role": "button",
+          "name": "Reset all module selections · Romania + Moldova"
+        },
+        {
+          "role": "button",
+          "name": "Close"
+        },
+        {
+          "role": "button",
+          "name": "‹ Previous sibling"
+        },
+        {
+          "role": "button",
+          "name": "Next sibling ›"
+        },
+        {
+          "role": "button",
+          "name": "Show on map"
+        },
+        {
+          "role": "button",
+          "name": "Zoom to territory"
+        },
+        {
+          "role": "button",
+          "name": "Zoom in"
+        },
+        {
+          "role": "button",
+          "name": "Zoom out"
+        },
+        {
+          "role": "button",
+          "name": "Reset map extent"
+        },
+        {
+          "role": "button",
+          "name": "Romania"
+        },
+        {
+          "role": "button",
+          "name": "Macroregion One"
+        },
+        {
+          "role": "button",
+          "name": "Centre"
+        },
+        {
+          "role": "button",
+          "name": "Harghita"
+        },
+        {
+          "role": "link",
+          "name": "Reference document ↗"
+        },
+        {
+          "role": "button",
+          "name": "Show next 12 · 12 / 67"
+        },
+        {
+          "role": "image",
+          "name": "Coat of arms · Harghita"
+        },
+        {
+          "role": "link",
+          "name": "Institutional source ↗"
+        },
+        {
+          "role": "image",
+          "name": "Flag · Harghita"
+        },
+        {
+          "role": "link",
+          "name": "Source and license ↗"
+        },
+        {
+          "role": "button",
+          "name": "Open parent entity: Romania"
+        },
+        {
+          "role": "button",
+          "name": "Open parent entity: Centre"
+        },
+        {
+          "role": "button",
+          "name": "Open parent entity: Centre"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Odorheiu Secuiesc"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Bradesti"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Feliceni"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Miercurea Ciuc"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Pauleni-Ciuc"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Baile Tusnad"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Balan"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Borsec"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Cristuru Secuiesc"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Gheorgheni"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Toplita"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Vlahita"
+        },
+        {
+          "role": "link",
+          "name": "2248660 ↗"
+        }
+      ],
+      "dialogs": [],
+      "permalinkRestored": true
+    },
+    {
+      "width": 390,
+      "language": "ro",
+      "title": "Atlas Teritorial",
+      "moduleNames": [
+        "Administrativ",
+        "Istoric",
+        "Comunități istorice românești",
+        "Regiuni istorice",
+        "Zone etnografice",
+        "Reformă administrativ-teritorială"
+      ],
+      "languages": [
+        {
+          "text": "EN",
+          "pressed": "false"
+        },
+        {
+          "text": "RO",
+          "pressed": "true"
+        }
+      ],
+      "entity": "?entity=osm-r1699033&lang=ro",
+      "card": {
+        "title": "Harghita",
+        "headings": [
+          "Harghita",
+          "Identity",
+          "Territorial symbols",
+          "Administrative & registry",
+          "Statistical roles",
+          "Territorial hierarchy",
+          "Subterritories in this tree view (67)",
+          "Geometry & provenance"
+        ],
+        "metadata": [
+          "Official name",
+          "Harghita County",
+          "Country",
+          "Romania",
+          "Administrative parent",
+          "Romania",
+          "Tree parent",
+          "Centre",
+          "Statistical parent (RO12)",
+          "Centre",
+          "OSM administrative level",
+          "4",
+          "OSM ID",
+          "2248660 ↗",
+          "Source",
+          "OSM-Boundaries",
+          "Original",
+          "2026-10-05",
+          "siruta",
+          "190",
+          "name",
+          "JUDEȚUL HARGHITA",
+          "parent_siruta",
+          "1",
+          "type_code",
+          "40",
+          "level",
+          "1",
+          "county_code",
+          "19",
+          "county_name",
+          "",
+          "legal_type",
+          "",
+          "postal_code",
+          "0",
+          "environment",
+          "0",
+          "region",
+          "7",
+          "nuts",
+          "RO124",
+          "parent_name",
+          "",
+          "admin_level",
+          "4",
+          "boundary",
+          "administrative",
+          "ISO3166-2",
+          "RO-HR",
+          "name",
+          "Harghita",
+          "name:en",
+          "Harghita",
+          "name:hu",
+          "Hargita megye",
+          "name:ru",
+          "Харгита",
+          "name:sr",
+          "Харгита",
+          "name:sr-Latn",
+          "Hargita",
+          "name:zh",
+          "哈尔吉塔县",
+          "place",
+          "county",
+          "place:ro",
+          "județ",
+          "ref:nuts",
+          "RO124",
+          "ref:nuts:3",
+          "RO124",
+          "type",
+          "boundary",
+          "wikidata",
+          "Q190702"
+        ],
+        "symbols": [
+          {
+            "caption": "Coat of arms",
+            "alt": "Coat of arms · Harghita"
+          },
+          {
+            "caption": "Flag",
+            "alt": "Flag · Harghita"
+          }
+        ],
+        "sourceLinks": [
+          {
+            "text": "Institutional source ↗",
+            "url": "https://monitoruloficial.ro/Monitorul-Oficial--PI--544--2026.html"
+          },
+          {
+            "text": "Source and license ↗",
+            "url": "https://commons.wikimedia.org/wiki/File:Flag_of_Harghita_County.gif"
+          },
+          {
+            "text": "Reference document ↗",
+            "url": "https://legislatie.just.ro/Public/DetaliiDocument/311970"
+          }
+        ],
+        "warnings": [
+          "Identity, act and representation confirmedThe previous version was replaced using documented sources.Current representation confirmed by documented comparison.Source licence declaration: Only literal colour annex copies to HG89/2015 and HG510/2026, published in the free official gazette; no new creative drawing or unrelated third-party artwork is copied. 9(b)(c), corroborated in publicly indexed2026 legal text;9(g) documentary photographs additionally distinguishes literal copy from artistic redraw. · Official normative annex; individual annex illustrator not credited in published act.Previously missing final4-cross/8-star annex recovered.Evidence / examined source ↗SIM-R8 register (gzip JSON)",
+          "Corroborated sources · incomplete certificationGraphic fidelity has verification limits; consult the audit register.Source licence declaration: Final official gazette544/2July2026 page52 recovered and visually reviewed: four red Byzantine crosses and eight stars, not the five-cross/twelve-star proposal. Coat resolved and added from literal final-annex crop. Existing flag retained and evaluated independently; final coat approval does not approve the flag.Evidence / examined source ↗SIM-R8 register (gzip JSON)"
+        ]
+      },
+      "initialRomanianMetadata": [
+        "Denumire oficială",
+        "Taraclia",
+        "Țară",
+        "Republica Moldova",
+        "Părinte administrativ",
+        "Moldova",
+        "Părinte în arbore",
+        "Sud",
+        "Nivel administrativ OSM",
+        "4",
+        "ID OSM",
+        "1699033 ↗",
+        "Sursă",
+        "OSM-Boundaries",
+        "Original",
+        "2026-10-05",
+        "code",
+        "8700",
+        "parent_code",
+        "",
+        "statistical_code",
+        "8700000",
+        "parent_statistical_code",
+        "",
+        "status_code",
+        "2",
+        "name",
+        "Taraclia",
+        "name_ru",
+        "Тараклия",
+        "normalized_name",
+        "taraclia",
+        "sheet",
+        "Sheet 1",
+        "row",
+        "1385",
+        "parent_name",
+        "",
+        "admin_level",
+        "4",
+        "boundary",
+        "administrative",
+        "ISO3166-2",
+        "MD-TA",
+        "name",
+        "Raionul Taraclia",
+        "name:bg",
+        "Тараклийски район",
+        "name:de",
+        "Rajon Taraclia",
+        "name:en",
+        "Taraclia District",
+        "name:gag",
+        "Taraklı dolayı",
+        "name:ro",
+        "Raionul Taraclia",
+        "name:ru",
+        "Тараклийский район",
+        "name:uk",
+        "Тараклійський район",
+        "place",
+        "district",
+        "place:ro",
+        "raion",
+        "ref",
+        "TR",
+        "ref:cuatm:codstatistic",
+        "8700000",
+        "ref:cuatm:codunic",
+        "8700",
+        "ref:cuatm:statut",
+        "2",
+        "ref:nuts:1",
+        "MD1",
+        "ref:nuts:2",
+        "MD11",
+        "ref:nuts:3",
+        "MD113",
+        "type",
+        "boundary",
+        "wikidata",
+        "Q865884",
+        "wikipedia",
+        "en:Taraclia District",
+        "Denumire oficială",
+        "Taraclia",
+        "Țară",
+        "Republica Moldova",
+        "Părinte administrativ",
+        "Moldova",
+        "Părinte în arbore",
+        "Sud",
+        "Nivel administrativ OSM",
+        "4",
+        "ID OSM",
+        "1699033 ↗",
+        "Sursă",
+        "OSM-Boundaries",
+        "Original",
+        "2026-10-05",
+        "code",
+        "8700",
+        "parent_code",
+        "",
+        "statistical_code",
+        "8700000",
+        "parent_statistical_code",
+        "",
+        "status_code",
+        "2",
+        "name",
+        "Taraclia",
+        "name_ru",
+        "Тараклия",
+        "normalized_name",
+        "taraclia",
+        "sheet",
+        "Sheet 1",
+        "row",
+        "1385",
+        "parent_name",
+        "",
+        "admin_level",
+        "4",
+        "boundary",
+        "administrative",
+        "ISO3166-2",
+        "MD-TA",
+        "name",
+        "Raionul Taraclia",
+        "name:bg",
+        "Тараклийски район",
+        "name:de",
+        "Rajon Taraclia",
+        "name:en",
+        "Taraclia District",
+        "name:gag",
+        "Taraklı dolayı",
+        "name:ro",
+        "Raionul Taraclia",
+        "name:ru",
+        "Тараклийский район",
+        "name:uk",
+        "Тараклійський район",
+        "place",
+        "district",
+        "place:ro",
+        "raion",
+        "ref",
+        "TR",
+        "ref:cuatm:codstatistic",
+        "8700000",
+        "ref:cuatm:codunic",
+        "8700",
+        "ref:cuatm:statut",
+        "2",
+        "ref:nuts:1",
+        "MD1",
+        "ref:nuts:2",
+        "MD11",
+        "ref:nuts:3",
+        "MD113",
+        "type",
+        "boundary",
+        "wikidata",
+        "Q865884",
+        "wikipedia",
+        "en:Taraclia District"
+      ],
+      "nameSearchResults": [
+        "Harghita"
+      ],
+      "searchExactID": "osm-r2248660",
+      "expandedControls": [
+        {
+          "name": "Administrativ",
+          "id": "atlas-module-panel",
+          "exists": true
+        }
+      ],
+      "headings": [
+        {
+          "name": "Atlas Teritorial",
+          "level": 1
+        },
+        {
+          "name": "Administrativ",
+          "level": 2
+        }
+      ],
+      "checkboxStates": [
+        {
+          "name": "Afișează geometria: România",
+          "checked": "true"
+        },
+        {
+          "name": "Afișează geometria: Moldova",
+          "checked": "true"
+        },
+        {
+          "name": "Afișează geometria: Macroregiunea Unu",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Macroregiunea Doi",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Macroregiunea Trei",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Macroregiunea Patru",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Vest",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Est",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Nistrenia",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Nord-Vest",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Centru",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Nord",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Centru",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Sud",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Găgăuzia",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Chișinău",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Alba",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Brașov",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Covasna",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Harghita",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Mureș",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Sibiu",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Basarabeasca",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Cahul",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Cantemir",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Căușeni",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Cimișlia",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Leova",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Ștefan Vodă",
+          "checked": "false"
+        },
+        {
+          "name": "Afișează geometria: Taraclia",
+          "checked": "false"
+        }
+      ],
+      "tabFocus": {
+        "tag": "INPUT",
+        "name": "Caută nume, ID OSM, coduri SIRUTA, CUATM sau NUTS"
+      },
+      "shiftTabFocus": {
+        "tag": "BUTTON",
+        "name": "Închide"
+      },
+      "escapeFocusReturned": true,
+      "cardAccessibleControls": [
+        {
+          "role": "button",
+          "name": "Details"
+        },
+        {
+          "role": "button",
+          "name": "EN"
+        },
+        {
+          "role": "button",
+          "name": "RO"
+        },
+        {
+          "role": "button",
+          "name": "Administrative"
+        },
+        {
+          "role": "button",
+          "name": "Historical"
+        },
+        {
+          "role": "button",
+          "name": "Historical Romanian Communities"
+        },
+        {
+          "role": "button",
+          "name": "Historical Regions"
+        },
+        {
+          "role": "button",
+          "name": "Ethnographic Areas"
+        },
+        {
+          "role": "button",
+          "name": "Administrative-Territorial Reform"
+        },
+        {
+          "role": "button",
+          "name": "Close"
+        },
+        {
+          "role": "button",
+          "name": "‹ Previous sibling"
+        },
+        {
+          "role": "button",
+          "name": "Next sibling ›"
+        },
+        {
+          "role": "button",
+          "name": "Show on map"
+        },
+        {
+          "role": "button",
+          "name": "Zoom to territory"
+        },
+        {
+          "role": "button",
+          "name": "Map tools"
+        },
+        {
+          "role": "button",
+          "name": "Reset all module selections · Romania + Moldova"
+        },
+        {
+          "role": "button",
+          "name": "Romania"
+        },
+        {
+          "role": "button",
+          "name": "Macroregion One"
+        },
+        {
+          "role": "button",
+          "name": "Centre"
+        },
+        {
+          "role": "button",
+          "name": "Harghita"
+        },
+        {
+          "role": "link",
+          "name": "Reference document ↗"
+        },
+        {
+          "role": "button",
+          "name": "Show next 12 · 12 / 67"
+        },
+        {
+          "role": "button",
+          "name": "Zoom in"
+        },
+        {
+          "role": "button",
+          "name": "Zoom out"
+        },
+        {
+          "role": "button",
+          "name": "Reset map extent"
+        },
+        {
+          "role": "image",
+          "name": "Coat of arms · Harghita"
+        },
+        {
+          "role": "link",
+          "name": "Institutional source ↗"
+        },
+        {
+          "role": "image",
+          "name": "Flag · Harghita"
+        },
+        {
+          "role": "link",
+          "name": "Source and license ↗"
+        },
+        {
+          "role": "button",
+          "name": "Open parent entity: Romania"
+        },
+        {
+          "role": "button",
+          "name": "Open parent entity: Centre"
+        },
+        {
+          "role": "button",
+          "name": "Open parent entity: Centre"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Odorheiu Secuiesc"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Bradesti"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Feliceni"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Miercurea Ciuc"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Pauleni-Ciuc"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Baile Tusnad"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Balan"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Borsec"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Cristuru Secuiesc"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Gheorgheni"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Toplita"
+        },
+        {
+          "role": "button",
+          "name": "Open child entity: Vlahita"
+        },
+        {
+          "role": "link",
+          "name": "2248660 ↗"
+        }
+      ],
+      "dialogs": [
+        {
+          "name": "Entity: Harghita",
+          "modal": "true"
+        }
+      ],
+      "permalinkRestored": true
+    }
+  ],
+  "dependencies": {
+    "canceledIntercepts": [],
+    "canceledNetworkIDs": [],
+    "syntheticHTTPStatus": 503,
+    "requests": [
+      {
+        "url": "https://tile.openstreetmap.org/7/73/45.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/72/45.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/73/46.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/73/44.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/72/46.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/72/44.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/74/45.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/71/45.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/74/46.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/74/44.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/71/46.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/71/44.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/73/47.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/72/47.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/73/43.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/72/43.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/75/45.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/74/47.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/74/43.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/71/47.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/71/43.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/70/45.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/75/46.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/75/44.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/70/46.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/70/44.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/75/47.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/75/43.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/70/47.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/70/43.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/76/45.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/69/45.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/7/76/46.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/36/22.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/36/23.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/35/22.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/37/22.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/35/23.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/37/23.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/36/21.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/35/21.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/6/37/21.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/ROU_SB_Talmaciu_CoA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "resourceType": "Image"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Talmesh_before_1918.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "resourceType": "Image"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/5/18/11.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/5/17/11.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/5/18/10.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/5/17/10.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/4/9/5.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/4/8/5.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/3/4/2.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/2/2/1.png",
+        "resourceType": "XHR"
+      },
+      {
+        "url": "https://tile.openstreetmap.org/1/1/0.png",
+        "resourceType": "XHR"
+      }
+    ],
+    "selectedHolder": {
+      "search": "?entity=osm-r9982547&lang=en",
+      "title": "Talmaciu",
+      "neutral": true,
+      "headerImage": null,
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:ROU_SB_Talmaciu_CoA.jpg",
+        "https://commons.wikimedia.org/wiki/File:Flag_of_Talmesh_before_1918.jpg"
+      ],
+      "mapReady": "true",
+      "geometryError": false
+    },
+    "sourceDocument": {
+      "url": "https://commons.wikimedia.org/wiki/File:ROU_SB_Talmaciu_CoA.jpg",
+      "syntheticStatus": 503
+    },
+    "neutralCoatNoFlagSubstitution": true,
+    "localVectorCatalogUnaffected": true
+  },
+  "limitations": [
+    "No NVDA/VoiceOver session. AX/DOM and key input are distinct from speech output.",
+    "Tile failure may leave a blank basemap; source-ready certifies local vector availability, not tile completion."
+  ]
+}

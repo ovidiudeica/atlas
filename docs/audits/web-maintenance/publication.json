@@ -1,0 +1,119 @@
+{
+  "stage": "WEB-AUDIT.5",
+  "label": "maintenance",
+  "integratedCommit": "2980bf186b50393b987e36a78900958ce1026b7f",
+  "checkedAt": "2026-11-10T15:17:54.989Z",
+  "buildSource": "work/published-5c-ci-build",
+  "files": [
+    {
+      "file": "index.html",
+      "url": "https://ovidiudeica.github.io/atlas/index.html?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "174d8b3c941cf62f369df3f2088c6f61dc2e87edfeb8210493b2ecd5c8c804e5",
+      "bytes": 580,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "assets/index-BHYl-Xhl.css",
+      "url": "https://ovidiudeica.github.io/atlas/assets/index-BHYl-Xhl.css?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "d8c514f7cf6c001538b2b1315ed44c506422d3e033d0142b7ade447311464c88",
+      "bytes": 113725,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "assets/index-DHaIyMiU.js",
+      "url": "https://ovidiudeica.github.io/atlas/assets/index-DHaIyMiU.js?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "e448619f13958d526a2bdeef234d2056d1401fa775e1280ff93ae98329a93203",
+      "bytes": 2702331,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "data/symbols/registry-r8.json.gz",
+      "url": "https://ovidiudeica.github.io/atlas/data/symbols/registry-r8.json.gz?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "e6fe731e54b35dc872801e8c8f915a0ec70c7674c402c3fbca41760b099f1ba1",
+      "bytes": 2941806,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "data/symbols/audit-r8.json.gz",
+      "url": "https://ovidiudeica.github.io/atlas/data/symbols/audit-r8.json.gz?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "ffe699b225a1fac484918761c4e539dbb1058979fadcbecb4b246e0f94c977b8",
+      "bytes": 2584275,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "symbols/sim-r8/campulung-coat.png",
+      "url": "https://ovidiudeica.github.io/atlas/symbols/sim-r8/campulung-coat.png?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "fd1a2b0c6082b66d649e20c6a75fa6127a5e79368d3176f549981180a4e3e0ae",
+      "bytes": 247969,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "symbols/sim-r8/harghita-coat.png",
+      "url": "https://ovidiudeica.github.io/atlas/symbols/sim-r8/harghita-coat.png?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "d8678e3764663e407de59d3cf1968210a8ee0e0aefb78a237e391d151525b556",
+      "bytes": 200380,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "symbols/sim-r8/taraclia-coat.png",
+      "url": "https://ovidiudeica.github.io/atlas/symbols/sim-r8/taraclia-coat.png?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "62bd016fa3556dcdb30dd1be6da88b59abeb885968f3e5d6d0b3b3c007fd6698",
+      "bytes": 314699,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "symbols/sim-r8/taraclia-flag.png",
+      "url": "https://ovidiudeica.github.io/atlas/symbols/sim-r8/taraclia-flag.png?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "2c71bc2acb6f115db2934597d2a06f1cc4663fd6ef211df3da89da1f8bce471e",
+      "bytes": 226087,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "data/phase4/catalog.json.gz",
+      "url": "https://ovidiudeica.github.io/atlas/data/phase4/catalog.json.gz?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+      "bytes": 353966,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "favicon.svg",
+      "url": "https://ovidiudeica.github.io/atlas/favicon.svg?web-audit-5=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "sha256": "16618eabae5d3bf21f55640444727607a36ad6b15ae3a48bbd55c04363f79dfc",
+      "bytes": 275,
+      "matchesVerifiedCIBuild": true
+    }
+  ],
+  "allHashesMatch": true,
+  "baseGeometry": [
+    {
+      "file": "data/phase4/geometry/roots-detailed.geojson.gz",
+      "url": "https://ovidiudeica.github.io/atlas/data/phase4/geometry/roots-detailed.geojson.gz?maintenance=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "bytes": 249889,
+      "sha256": "5326ee99502662a391474c75ca5e2edc72b22b0dda6d7f1ffda1111b5dca0038",
+      "features": 2,
+      "matchesVerifiedCIBuild": true
+    },
+    {
+      "file": "data/phase4/geometry/roots-simplified.geojson.gz",
+      "url": "https://ovidiudeica.github.io/atlas/data/phase4/geometry/roots-simplified.geojson.gz?maintenance=2980bf186b50393b987e36a78900958ce1026b7f",
+      "status": 200,
+      "bytes": 155792,
+      "sha256": "7da1ee01a214acb1f74d37485e1f5d5ada383f51be932fa8f40874e3bbab7fad",
+      "features": 2,
+      "matchesVerifiedCIBuild": true
+    }
+  ],
+  "baseGeometryCheckedAt": "2026-11-10T15:18:27.234Z"
+}
