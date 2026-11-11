@@ -1,0 +1,144 @@
+{
+  "phase": "HIST-0.4g",
+  "audit_date": "2026-11-11",
+  "qualification_levels": [
+    "ARCHIVAL_FACSIMILE_OBTAINED",
+    "PRIMARY_LAW_TEXT_TRANSCRIBED",
+    "ACADEMIC_SOURCE_CATALOGUED",
+    "CATALOG_ONLY",
+    "CONTEXTUAL_GEOREFERENCED",
+    "UNVERIFIED"
+  ],
+  "sources": [
+    {
+      "id": "MNL-S75-82",
+      "type": "ARCHIVAL_FACSIMILE_OBTAINED",
+      "institution": "Magyar Nemzeti Levéltár",
+      "shelfmark": "MNL OL, Térképtár, Nyomtatott térképek (S 75), No. 82",
+      "title": "Administrativ Karte des Grossfürstenthums Siebenbürgen nach der neuesten Landeseintheilung 1859",
+      "map_reference_year": 1859,
+      "facsimile_year": 1861,
+      "links": [
+        "https://mnl.gov.hu/mnl/ol/hirek/erdely_terkep_amely_a_kormanyra_nezve_valosagos_kincset_kepezett"
+      ],
+      "access": "14/14 high-resolution JPEG gallery items individually retrieved and SHA-256 checked; 444622163 bytes total",
+      "observed_map_legend": [
+        "Landesgrenzen",
+        "Kreisgrenzen",
+        "Bezirksgrenzen",
+        "Gemeindegrenzen"
+      ],
+      "limitation": "Fourteen photographed images do not prove completeness/equivalence to all 24 series sheets. No sheet-to-OHM registration, ground control points or border trace. Rights for public republication unclear."
+    },
+    {
+      "id": "HIM-BIX-A719",
+      "type": "CATALOG_ONLY",
+      "institution": "Hadtörténeti Intézet és Múzeum / Military History Map Collection",
+      "shelfmark": "B IX a 719",
+      "title": "Administrativ-Karte ... Siebenbürgen, 1861 from 1859 divisions",
+      "sheets": 24,
+      "scale": "1:144000",
+      "url": "https://m.militaria.hu/hadtorteneti-intezet-es-muzeum/terkeptar/a-terkeptar-gyujtemenye",
+      "limitation": "Do not infer 14 MNL gallery JPEGs correspond to 14 exact HIM sheets, or that the two institutional copies are bibliographically identical."
+    },
+    {
+      "id": "OSZK-TK1131-TK1175",
+      "type": "ACADEMIC_SOURCE_CATALOGUED",
+      "institution": "Országos Széchényi Könyvtár",
+      "shelfmarks": [
+        "TK 1 131 H.",
+        "TK 1 175 H."
+      ],
+      "title": "Manuscript series of 1:144000 24-sheet Transylvania administrative map, completed 1861",
+      "source": "Jankó Annamária, Catastrum 11 (2024) 1, pp. 3–24",
+      "url": "https://epa.oszk.hu/04300/04359/00039/pdf/EPA04359_catastrum_2024_01.pdf",
+      "limitation": "Manuscript original not obtained; academic catalogue statement is not direct visual inspection."
+    },
+    {
+      "id": "MNL-S67-9",
+      "type": "ACADEMIC_SOURCE_CATALOGUED",
+      "institution": "Magyar Nemzeti Levéltár",
+      "shelfmark": "S 67, Falitérképek No. 9",
+      "title": "Printed copy of 1861 Transylvania administrative series",
+      "source": "Jankó Annamária, Catastrum (2024), footnote 68",
+      "url": "https://epa.oszk.hu/04300/04359/00039/pdf/EPA04359_catastrum_2024_01.pdf",
+      "limitation": "No direct JPEG from this shelfmark independently inspected."
+    },
+    {
+      "id": "HIM-BIX-A711-1863",
+      "type": "ACADEMIC_SOURCE_CATALOGUED",
+      "institution": "Hadtörténeti Térképtár",
+      "shelfmark": "B IX a 711",
+      "title": "General-Karte ... 1863 (four sheets) reflecting Partium association with Hungary in 1861",
+      "url": "https://epa.oszk.hu/04300/04359/00039/pdf/EPA04359_catastrum_2024_01.pdf",
+      "limitation": "The 1863 source is not direct evidence of exact date/sheet borders without the 1863 map and 1861 juridical act."
+    },
+    {
+      "id": "EHARTA-1862",
+      "type": "CONTEXTUAL_GEOREFERENCED",
+      "institution": "geo-spatial.org",
+      "title": "Karte des Grossfürstentums Siebenbürgen, 1862 fourth edition",
+      "url": "https://geo-spatial.org/vechi/download/karte-des-grossfuerstentums-siebenbuergen-harta-marelui-principat-al-transilvaniei",
+      "sha256": "584c02b98939b0d4416babc0fc7fd50da2f8de042e877bc50e8fc1a8da8fe181",
+      "projection": "EPSG:31700",
+      "limitation": "Prior HIST-0.4f geometric overlay covered OHM ways but did not establish authenticated Landes border 82/82. 1861 map vs 1862 map lineage may be related, not necessarily independent."
+    },
+    {
+      "id": "LAW-1876-XXXIII",
+      "type": "PRIMARY_LAW_TEXT_TRANSCRIBED",
+      "law": "1876:XXXIII",
+      "section": [
+        "§1, item 2(c)",
+        "§5",
+        "§22",
+        "§25"
+      ],
+      "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87600033.TV",
+      "digital_html_sha256": "9f753133800cd84d1992552d79e6e71e7ef1475581879f3e97eb84e2d031accf",
+      "conclusions": "Allocation principle Chioar to Szolnok-Doboka and Szatmár; ministry authorized to finalize boundaries; continuity provisions",
+      "limitation": "Does not enumerate all 91 communities and cannot alone fix exact line coordinates or administrative execution date."
+    },
+    {
+      "id": "LAW-1877-I",
+      "type": "PRIMARY_LAW_TEXT_TRANSCRIBED",
+      "law": "1877:I",
+      "section": [
+        "§2, item 2(c)",
+        "§2, item 3",
+        "§3"
+      ],
+      "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+      "digital_html_sha256": "fe53fb8e1dd8f93b64130127b97a533ec918d920354d667cceff63120ed2e038",
+      "names_total": 91,
+      "names_by_successor_county": {
+        "Szolnok-Doboka": 48,
+        "Szatmár": 43
+      },
+      "limitation": "Named commune allocation only; none of the 91 names has an independently sourced historic commune polygon in this audit. Modern identifications remain unverified."
+    },
+    {
+      "id": "MNL-KOVAR-954",
+      "type": "CATALOG_ONLY",
+      "institution": "Magyar Nemzeti Levéltár",
+      "fonds": [
+        "954 (1861–1876)",
+        "951 (1867–1876)",
+        "1001–1004",
+        "1051–1055"
+      ],
+      "url": "https://mnl.gov.hu/mnl/szszbml/hirek/kutass_online_5_szatmar_varmegye?theme=mnlvakbarat",
+      "limitation": "Source collection indexed, individual records and boundary decisions not retrieved."
+    },
+    {
+      "id": "KSH-GAZETTEERS-1873-1877",
+      "type": "CATALOG_ONLY",
+      "institution": "KSH Könyvtár",
+      "title": "Official gazetteers 1873 (pre-reform) and 1877 (post-reform)",
+      "url": "https://web.kshkonyvtar.hu/article/56/959/helysegnevtarak",
+      "limitation": "Catalog access confirmed only; place-name crosswalk and historic municipality polygons not reconstructed."
+    }
+  ],
+  "copyright_policy": "Public internet access is not a blanket right to redistribute institutionally published JPEGs or modern transcriptions; only factual derived metadata and counts may be committed; copy of 14 images and 2024 PDF remain local.",
+  "payment_or_orders": false,
+  "conclusion": "NEW_1861_ARCHIVAL_JPEG_SOURCE_PLUS_1877_NOMINAL_SUCCESSOR_REGISTER_VERIFIED; NO_FULL_INDEPENDENT_BORDER_TRACE"
+}
