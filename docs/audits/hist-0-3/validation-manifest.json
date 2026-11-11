@@ -1,0 +1,149 @@
+{
+  "phase": "HIST-0.3",
+  "date": "2026-11-11",
+  "source_main": "7f49e880c971e6e18bf05071b883dcf8a701c977",
+  "parts": [
+    {
+      "name": "editorial-01.csv",
+      "rows": 45,
+      "sha256": "4ef5d873ad1105ebe0463b31109efd99ebd9783131e6acf2c21fd947e8f1f5f9",
+      "bytes": 15314
+    },
+    {
+      "name": "editorial-02.csv",
+      "rows": 45,
+      "sha256": "858c2eeedf86aa6a8366e5b4527aec35f23cec0785a7d0924fd807bf05701211",
+      "bytes": 15383
+    },
+    {
+      "name": "editorial-03.csv",
+      "rows": 45,
+      "sha256": "4a7c8487b676d2eff7a48378133f6ff8d3ede0ac97c69bd267c21b9e86a6f846",
+      "bytes": 15308
+    },
+    {
+      "name": "editorial-04.csv",
+      "rows": 45,
+      "sha256": "55ae8519c664c5e2d4c59eff824fd750efee977731750f18c6f9a2dcdcd12368",
+      "bytes": 15644
+    },
+    {
+      "name": "editorial-05.csv",
+      "rows": 45,
+      "sha256": "0cf9a0c6bff305310989c4a8d97c5c4e83b110f0d1de4130bc6ea77312ccfad3",
+      "bytes": 15780
+    },
+    {
+      "name": "editorial-06.csv",
+      "rows": 45,
+      "sha256": "a30baf85ab305276d3794b72f5113b08060d06a21bd9c45101a673a57b76deaa",
+      "bytes": 15699
+    },
+    {
+      "name": "editorial-07.csv",
+      "rows": 45,
+      "sha256": "a3033cc61ec6b801a823fb8b8cfceb4aeb90531e0a1a9c1e5c54421486eaf0a0",
+      "bytes": 15354
+    },
+    {
+      "name": "editorial-08.csv",
+      "rows": 45,
+      "sha256": "b3dc189cc259ef5b18fb9f368c648a19508a26d96f1146b59327b47c7087f986",
+      "bytes": 14765
+    },
+    {
+      "name": "editorial-09.csv",
+      "rows": 45,
+      "sha256": "be53b72938c7d7474f177a3fc1a4aeed873b532727c2d193c519ef961a070830",
+      "bytes": 14309
+    },
+    {
+      "name": "editorial-10.csv",
+      "rows": 45,
+      "sha256": "8ed8b237124d3b2c2116fe3a069854f53c6164fc9e18308fe5e613d546d7a3c5",
+      "bytes": 15314
+    },
+    {
+      "name": "editorial-11.csv",
+      "rows": 45,
+      "sha256": "9f1c797fa284fefa578490a0500f2958f9aba455136808ed50abf7cbcb60f8a3",
+      "bytes": 14298
+    },
+    {
+      "name": "editorial-12.csv",
+      "rows": 45,
+      "sha256": "63807647539f0b41291b3290e9e92e7012426e916693d40b274e4ccc03af4269",
+      "bytes": 16072
+    },
+    {
+      "name": "editorial-13.csv",
+      "rows": 45,
+      "sha256": "c4f9d7044c1f5b46b12770fe5fa195afec8e28449d6c5022ee6859cdbbd628ab",
+      "bytes": 18140
+    },
+    {
+      "name": "editorial-14.csv",
+      "rows": 45,
+      "sha256": "8c75649ff49f63b0b2f7a78585633555c2781fcf60a9ce4bad20edc5d5f79892",
+      "bytes": 15531
+    },
+    {
+      "name": "editorial-15.csv",
+      "rows": 45,
+      "sha256": "28fe0637bcf0b366195ff0d574fac8aaf1684713a944566faa3da805ba485b1c",
+      "bytes": 14134
+    },
+    {
+      "name": "editorial-16.csv",
+      "rows": 45,
+      "sha256": "3819ba79e5631a7eb45b34f2bb7b4b80bc44c3bd43008ebd926105c7920ad1e2",
+      "bytes": 13013
+    },
+    {
+      "name": "editorial-17.csv",
+      "rows": 45,
+      "sha256": "44d108ca1f11ddd31a0ce93ad1649d79ad9b3798191c67250b1a4d911f356834",
+      "bytes": 13300
+    },
+    {
+      "name": "editorial-18.csv",
+      "rows": 45,
+      "sha256": "5518d568fddb433f00cadc9242c0b7b9d7628d7e93ce1c87e70dd685b89d580a",
+      "bytes": 19686
+    },
+    {
+      "name": "editorial-19.csv",
+      "rows": 45,
+      "sha256": "64bf66c120f34210ec5299c7a32e13bf12a7e5b2815c1a494eae7b5ccc28fe7f",
+      "bytes": 16119
+    },
+    {
+      "name": "editorial-20.csv",
+      "rows": 45,
+      "sha256": "69c7776353b521c67255fa08bc45a52163f053f34ac98783379399a697221c18",
+      "bytes": 13880
+    },
+    {
+      "name": "editorial-21.csv",
+      "rows": 5,
+      "sha256": "779cd503dd8b6340318b47765dc46d2267845c24bd72949180edcb07ff3e0a9b",
+      "bytes": 2264
+    }
+  ],
+  "reg_count": 905,
+  "namegroups": 364,
+  "thematic_groups": 37,
+  "selected": 0,
+  "geometry_edits": 0,
+  "tree_changes": 0,
+  "read_only_source": true,
+  "review_only": true,
+  "source_archive_local": "Documents/Atlas-OHM-Inventory-2026-11-10/",
+  "verification": {
+    "unique_ids": 905,
+    "all_UNDECIDED": true,
+    "all_have_source_URL": true,
+    "basic_metadata_checked": true,
+    "not_temporally_validated_against_legal_sources": true
+  }
+}

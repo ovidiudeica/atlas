@@ -1,0 +1,271 @@
+{
+  "phase": "HIST-0.3",
+  "date": "2026-11-11",
+  "source_snapshot": "OHM 2026-11-10T19:18:52Z",
+  "base_main": "7f49e880c971e6e18bf05071b883dcf8a701c977",
+  "status": "EDITORIAL_INDEX_DRAFT_SELECTION_PENDING",
+  "total": 905,
+  "categories": 30,
+  "name_groups": 364,
+  "wikidata_shared_across_labels": 26,
+  "same_label_different_wikidata": 10,
+  "same_label_year_range_overlap": 30,
+  "topics": 37,
+  "topics_not_found": [
+    "Dobrogea regională",
+    "Bugeacul ca regiune",
+    "RASS Moldovenească",
+    "Guvernământul Transnistriei ca întreg"
+  ],
+  "category_summary": [
+    {
+      "category": "NECLASIFICAT",
+      "variants": 177,
+      "draft_overlap": 117,
+      "draft_nonoverlap": 57,
+      "geometry_review": 3
+    },
+    {
+      "category": "IMPERIU",
+      "variants": 153,
+      "draft_overlap": 122,
+      "draft_nonoverlap": 23,
+      "geometry_review": 8
+    },
+    {
+      "category": "COMITAT_JUDET",
+      "variants": 115,
+      "draft_overlap": 102,
+      "draft_nonoverlap": 11,
+      "geometry_review": 2
+    },
+    {
+      "category": "REGAT",
+      "variants": 81,
+      "draft_overlap": 52,
+      "draft_nonoverlap": 22,
+      "geometry_review": 7
+    },
+    {
+      "category": "STAT_NESPECIFICAT",
+      "variants": 76,
+      "draft_overlap": 47,
+      "draft_nonoverlap": 25,
+      "geometry_review": 4
+    },
+    {
+      "category": "DISTRICT",
+      "variants": 66,
+      "draft_overlap": 61,
+      "draft_nonoverlap": 5,
+      "geometry_review": 0
+    },
+    {
+      "category": "STATUT_NECALIFICAT",
+      "variants": 47,
+      "draft_overlap": 21,
+      "draft_nonoverlap": 18,
+      "geometry_review": 8
+    },
+    {
+      "category": "OBLAST",
+      "variants": 33,
+      "draft_overlap": 23,
+      "draft_nonoverlap": 10,
+      "geometry_review": 0
+    },
+    {
+      "category": "UEZD",
+      "variants": 29,
+      "draft_overlap": 26,
+      "draft_nonoverlap": 3,
+      "geometry_review": 0
+    },
+    {
+      "category": "REPUBLICA_SOVIETICA_FEDERATIVA",
+      "variants": 27,
+      "draft_overlap": 5,
+      "draft_nonoverlap": 22,
+      "geometry_review": 0
+    },
+    {
+      "category": "REPUBLICA",
+      "variants": 21,
+      "draft_overlap": 0,
+      "draft_nonoverlap": 12,
+      "geometry_review": 9
+    },
+    {
+      "category": "PROVINCIE",
+      "variants": 12,
+      "draft_overlap": 4,
+      "draft_nonoverlap": 8,
+      "geometry_review": 0
+    },
+    {
+      "category": "PRINCIPAT",
+      "variants": 9,
+      "draft_overlap": 8,
+      "draft_nonoverlap": 0,
+      "geometry_review": 1
+    },
+    {
+      "category": "REPUBLICA_SOVIETICA",
+      "variants": 9,
+      "draft_overlap": 9,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "VOIEVODAT",
+      "variants": 8,
+      "draft_overlap": 8,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "CERC",
+      "variants": 8,
+      "draft_overlap": 8,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "EIALET",
+      "variants": 7,
+      "draft_overlap": 4,
+      "draft_nonoverlap": 1,
+      "geometry_review": 2
+    },
+    {
+      "category": "DUCAT",
+      "variants": 4,
+      "draft_overlap": 3,
+      "draft_nonoverlap": 1,
+      "geometry_review": 0
+    },
+    {
+      "category": "OBIECT_ISTORIC_NETERITORIAL",
+      "variants": 4,
+      "draft_overlap": 4,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "FORMAȚIUNE_IPOTETICA",
+      "variants": 3,
+      "draft_overlap": 3,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "HANAT",
+      "variants": 3,
+      "draft_overlap": 3,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "GUBERNIE",
+      "variants": 2,
+      "draft_overlap": 2,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "BANAT",
+      "variants": 2,
+      "draft_overlap": 2,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "MARE_PRINCIPAT",
+      "variants": 2,
+      "draft_overlap": 2,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "STAT_NATIUNE",
+      "variants": 2,
+      "draft_overlap": 2,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "ADMINISTRATIE_DE_OCUPATIE",
+      "variants": 1,
+      "draft_overlap": 1,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "REGIUNE_NECALIFICATA",
+      "variants": 1,
+      "draft_overlap": 1,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "SANGEAC",
+      "variants": 1,
+      "draft_overlap": 1,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "DISTRICT_MILITAR",
+      "variants": 1,
+      "draft_overlap": 1,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    },
+    {
+      "category": "ORAS",
+      "variants": 1,
+      "draft_overlap": 1,
+      "draft_nonoverlap": 0,
+      "geometry_review": 0
+    }
+  ],
+  "epoch_summary": [
+    {
+      "epoch": "ANTICHITATE",
+      "variants": 62,
+      "overlap_DRAFT": 42
+    },
+    {
+      "epoch": "EVUL_MEDIU",
+      "variants": 74,
+      "overlap_DRAFT": 54
+    },
+    {
+      "epoch": "EPOCA_MODERNA_TIMPURIE",
+      "variants": 108,
+      "overlap_DRAFT": 77
+    },
+    {
+      "epoch": "1790_1918",
+      "variants": 465,
+      "overlap_DRAFT": 351
+    },
+    {
+      "epoch": "1919_1945",
+      "variants": 292,
+      "overlap_DRAFT": 199
+    },
+    {
+      "epoch": "1946_1991",
+      "variants": 95,
+      "overlap_DRAFT": 85
+    },
+    {
+      "epoch": "1992_2026",
+      "variants": 30,
+      "overlap_DRAFT": 28
+    }
+  ],
+  "limit": "OHM labels are source tags, not historical assertions. No identity merges. Epochs are editorial buckets and may overlap per relation. DRAFT geographic screen is not a final natural boundary. OHM relation source missing does not mean member source absent. No user selection, no polygons modified, no tree/UI.",
+  "thematic_review": "Corrected to avoid grouping the Moldavian SSR with the Principality of Moldavia or German occupation units with Romanian-administered Transnistria"
+}
