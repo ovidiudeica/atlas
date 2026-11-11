@@ -1,0 +1,65 @@
+{
+  "addendum_id": "S19-ADDENDUM-CHIOAR-2005",
+  "phase": "HIST-0.4c",
+  "date": "2026-11-11",
+  "context_main": "fa550a7dbaf52ccb97861078810eb617abe7042f",
+  "source": {
+    "author": "Lucia-Augusta Șerdan",
+    "title": "Tipuri de instrumente contemporane de evidență și informare existente în tezaurul arhivistic clujean",
+    "publisher": "Arhivele Naționale ale României",
+    "journal": "Buletin de informare și documentare arhivistică",
+    "year": 2005,
+    "printed_pages": "45–46",
+    "url": "https://biblioteca-digitala.ro/reviste/buletin-informare-documentare-arhivistic/buletin-informare-documentare-arhivistica_2005.pdf",
+    "retrieval": "WEB_INDEX_TEXT_ONLY",
+    "visual_pdf_verification": "FAILED",
+    "local_download": "HTTP_403",
+    "original_doc_consultation": false,
+    "verified_sha256": null
+  },
+  "ohm_relations": [
+    2747434,
+    2747435
+  ],
+  "shelfmarks": [
+    {
+      "fund": "Districtul Chioar",
+      "number": "10/1851",
+      "description": "Buteasa administrative register"
+    },
+    {
+      "fund": "Districtul Chioar",
+      "number": "126/1861",
+      "description": "Berchez civil cases register"
+    },
+    {
+      "fund": "Districtul Chioar",
+      "number": "206/1863",
+      "description": "district presidential register"
+    },
+    {
+      "fund": "Districtul Chioar",
+      "number": "425/1875",
+      "description": "engineer's index/register"
+    },
+    {
+      "fund": "Districtul Chioar",
+      "number": "427/1876",
+      "description": "engineer's index/register"
+    }
+  ],
+  "interpretation": "Institutional documentary lead only; 3517-day missing OHM coverage and precise outline unresolved.",
+  "P0_unblocked": 0,
+  "geometries_imported": 0,
+  "geometry_modified": false,
+  "updated_original_registry": false,
+  "additional_control": {
+    "prior_files_hash_checked": 6,
+    "prior_dossiers": 37,
+    "prior_P0": 3,
+    "prior_P1": 25,
+    "prior_P2": 9,
+    "original_source_records": 18,
+    "unique_URLs": 17
+  }
+}
