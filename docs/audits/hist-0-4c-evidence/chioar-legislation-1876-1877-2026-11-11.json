@@ -1,0 +1,37 @@
+{
+  "phase": "HIST-0.4c",
+  "addendum": "S20-S21-CHIOAR-1876-1877-LEGAL",
+  "date": "2026-11-11",
+  "ohm_relations": [
+    2747435,
+    2747434
+  ],
+  "docs": [
+    {
+      "id": "S20-ADDENDUM",
+      "title": "1876. évi XXXIII. törvénycikk",
+      "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87600033.TV",
+      "article": "1 § 2(c)",
+      "role": "Szolnok-Doboka includes former Kővár district area adjoining Belső-Szolnok",
+      "type": "PRIMARY_LEGISLATION_DIGITAL_REPRODUCTION",
+      "map_line_proven": false
+    },
+    {
+      "id": "S21-ADDENDUM",
+      "title": "1877. évi I. törvénycikk",
+      "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+      "article": "2 § 2(c), 3",
+      "role": "enumerates former Kővár district localities assigned to Szolnok-Doboka and Szatmár",
+      "type": "PRIMARY_LEGISLATION_DIGITAL_REPRODUCTION",
+      "map_line_proven": false
+    }
+  ],
+  "legal_redistribution_supported": true,
+  "precise_border_certified": false,
+  "OHM_member_ways_sourced": false,
+  "P0_cases_closed": 0,
+  "geometries_changed": 0,
+  "import_approved": 0,
+  "earlier_1851_1860_gap_filled": false,
+  "notes": "Separate 1876 legal framework from 1877 definitive village enumeration; do not apply resultant geography retroactively."
+}
