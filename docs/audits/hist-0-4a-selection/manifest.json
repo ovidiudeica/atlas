@@ -1,0 +1,139 @@
+{
+  "phase": "HIST-0.4a-history-family-selection",
+  "date": "2026-11-11",
+  "source_main": "1eb65a4f5c77dfa8c233e33d0fa3597dfac9576a",
+  "source_OHM_snapshot": "2026-11-10T19:18:52Z",
+  "scope": "Historic families Tisa–Carpathians–Southern Bug–Dniester–Danube–Balkans–Black Sea. OHM original geometry unmodified.",
+  "primary_families": 11,
+  "primary_variants_selected_in_catalog": 37,
+  "secondary_family_groups": 10,
+  "by_selection_status": {
+    "UNREVIEWED_NOT_ADMITTED": 591,
+    "SELECTED_PRIMARY_FAMILY_CATALOG": 37,
+    "SUBORDINATE_BOUNDARY_SCOPE_REVIEW": 30,
+    "PRESELECTED_SUBORDINATE_CATALOG": 242,
+    "SUBORDINATE_GEOMETRY_REVIEW": 5
+  },
+  "secondary_family_details": [
+    {
+      "family_id": "comitate_judete",
+      "family": "Comitate și județe istorice, clasificare OHM",
+      "stage": "SUBORDINATE",
+      "versions_found": 115,
+      "provisional_overlap": 102,
+      "provisional_nonoverlap": 11,
+      "geometry_unresolved": 2,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "judete_moldova_1859",
+      "family": "Județe istorice moldovenești cu border_type nedeclarat",
+      "stage": "SUBORDINATE",
+      "versions_found": 14,
+      "provisional_overlap": 13,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 1,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "districte",
+      "family": "Districte administrative și de frontieră",
+      "stage": "SUBORDINATE",
+      "versions_found": 63,
+      "provisional_overlap": 58,
+      "provisional_nonoverlap": 5,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "uezds",
+      "family": "Uezduri imperiale ruse",
+      "stage": "SUBORDINATE",
+      "versions_found": 29,
+      "provisional_overlap": 26,
+      "provisional_nonoverlap": 3,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "cercuri",
+      "family": "Cercuri administrative istorice",
+      "stage": "SUBORDINATE",
+      "versions_found": 8,
+      "provisional_overlap": 8,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "regiuni_oblast",
+      "family": "Regiuni/oblasturi istorice",
+      "stage": "SUBORDINATE",
+      "versions_found": 32,
+      "provisional_overlap": 22,
+      "provisional_nonoverlap": 10,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "eialete",
+      "family": "Eialete otomane",
+      "stage": "SUBORDINATE",
+      "versions_found": 7,
+      "provisional_overlap": 4,
+      "provisional_nonoverlap": 1,
+      "geometry_unresolved": 2,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "voievodate",
+      "family": "Voievodate istorice",
+      "stage": "SUBORDINATE",
+      "versions_found": 3,
+      "provisional_overlap": 3,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "județe_1941_44",
+      "family": "Județele administrației românești de la est de Nistru (1941–1944)",
+      "stage": "SUBORDINATE",
+      "versions_found": 3,
+      "provisional_overlap": 3,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "gubernii",
+      "family": "Alte gubernii și guvernorate",
+      "stage": "SUBORDINATE",
+      "versions_found": 3,
+      "provisional_overlap": 3,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    }
+  ],
+  "import_status": "NO_IMPORT_NO_EDIT_NO_TREE",
+  "caveats": [
+    "DRAFT study mask: not legally or geographically certified",
+    "Selection concerns historical families in a catalog, not geometric/legal acceptance",
+    "Time frames are OHM labels, not independent source qualification",
+    "Missing relations in 905 subset do not imply absent OHM globally",
+    "No parent-child edges were asserted",
+    "Some secondary families only touch/cross preliminary Tisa/mountain boundary; review scope before incorporation",
+    "Romanian 1941-1944 administrative counties and occupation district labels must not be conflated"
+  ]
+}
