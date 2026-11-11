@@ -1,0 +1,65 @@
+{
+  "phase": "HIST-0.4h",
+  "audit_date": "2026-11-11",
+  "base_main": "b7bf7836ac89ac244f1170e661b89553caf77dcd",
+  "source_acquisition": {
+    "official_KSH_1873": {
+      "pages": 1004,
+      "bytes": 162329617,
+      "sha256": "25ce833a6f15fbac76cafbdb120649c944609bb59bc94d1bc5bc3425efc1590f",
+      "text_layer": false
+    },
+    "official_KSH_1877": {
+      "pages": 787,
+      "bytes": 133619304,
+      "sha256": "274ce1624c5779e75ae382d9acd525529f5424cd57da4650b6046e1c1a759d2d",
+      "text_layer": false
+    },
+    "public_secondary_1877_ocr": {
+      "pages": 794,
+      "bytes": 67062008,
+      "sha256": "f3d32e0f4c6a37fc8d31a63bacc806c9ed36e11beb056c990fa7c6a5faa3d03a",
+      "source": "Burgenland Bunch / Google Books digitization of the 1877 gazetteer",
+      "status": "RESEARCH_ONLY_OCR"
+    }
+  },
+  "controls": {
+    "MNL_1861_photo_count": 14,
+    "source_original_photo_sha256_verified_in_hist04g": true,
+    "initial_41_SIFT_inliers_disqualified_due_to_one_target_reference_point": true,
+    "valid_independent_GCP_count": 0,
+    "qualified_georeferences": 0,
+    "gazetteer_law_names": 91,
+    "ocr_normalized_candidates": 58,
+    "ocr_fuzzy_candidates": 14,
+    "ocr_unresolved": 19,
+    "official_1873_per_name_reconciliations": 0,
+    "relation_ids": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "historic_boundaries_certified": 0,
+    "variants_admitted": 0
+  },
+  "validator": "PASS on direct repository artifact snapshot after correction; 14/91/37 all counts fail closed",
+  "reproducibility": {
+    "gazetteer_crosswalk_two_runs_identical_sha256": "35de581213ca18536805a4b17f3a433279f3ef731dde81feaba8cb45b5ec05e6",
+    "source_PDFs_published": false,
+    "archival_images_published": false,
+    "generated_georeferenced_1861_raster_published": false,
+    "source_rights_cleared": false,
+    "payments_and_orders": false
+  },
+  "repo_artifact_sha256": {
+    "README.md": "4cd11b1a7e214b606cd7a6088b6ca32829d3edac30b24c8e9007af8e987d6baf",
+    "1861-folio-degeneracy-gate.json": "6e36d86e947da649210cd000761a93eef746d1ce62c4a6d8542108b50f7a2dc8",
+    "photo8-degenerate-match-rejection.json": "e7d4e531a0ae85b7899d2dd26e3c5601d0645688ab5edc26fc80ec1deebbf4b2",
+    "chioar-91-legal-gazetteer-crosswalk.json": "35de581213ca18536805a4b17f3a433279f3ef731dde81feaba8cb45b5ec05e6",
+    "individual-qualification-37.json": "8b4d38397e09c951d12b36964a03ddc4f5d8cd54e62cc3c41296963461dc2f4e",
+    "validate-evidence.mjs": "2f25446031cad3097ca7150bfe0a3a5b277b34f9f7c4c9c411458287f7cdf401",
+    "scripts/exploratory-1861-to-1862-sift.py": "ce7e6afe78cb3c46e48dfd0af038fdcd9d16a32ab8926c63637fbe79ddb425f1",
+    "scripts/crosswalk-1877-ocr-to-law.mjs": "836223e7f61cf2c8e5fc3cdf6631ad1e32762eec6b1715023edf50f44e60c065"
+  },
+  "conclusion": "HIST04H_SOURCE_GATHERING_AND_PRELIMINARY_NAME_CROSSWALK_PASS__INDEPENDENT_GEOREFERENCE_FAILED__NO_ADMISSIONS",
+  "next_gate": "Original source sheets toponym/landmark GCP selection with geographic validation and independent check points; inspect original KSH 1873 pages and validate 1877 OCR variants per named commune before historical ID matches"
+}

@@ -1,0 +1,20 @@
+{
+  "phase": "HIST-0.4h",
+  "audit_date": "2026-11-11",
+  "source_photo": "hu_mnl_ol_s_0075_no_0082_8.jpg",
+  "source_sha256": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe",
+  "reference": "eHarta Karte des Grossfuerstentums Siebenbuergen 1862, EPSG:31700",
+  "initial_ratio_matches": 51,
+  "ransac_inlier_count": 41,
+  "independent_GCPs": 0,
+  "training_subset_homography_constructible": false,
+  "reference_point_unique_count": 1,
+  "reference_convex_hull_area_px2": 0,
+  "observed_initial_inlier_rmse_reference_thumbnail_px": 0.4074100852012634,
+  "why_initially_deceptive": "41 photo features mapped to a single 1862 reference feature. RANSAC fit-residual appears small but does not represent geographically dispersed ground control; subgroup homography is singular.",
+  "valid_geo_transform": null,
+  "valid_epsg31700_corners": null,
+  "holdout_geospatial_RMS_m": null,
+  "recommended_usage": "REJECT_AS_GEOREFERENCE_OR_OHM_BORDER_EVIDENCE",
+  "rejected": true
+}

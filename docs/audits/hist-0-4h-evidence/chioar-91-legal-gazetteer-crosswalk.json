@@ -1,0 +1,3303 @@
+{
+  "phase": "HIST-0.4h",
+  "date": "2026-11-11",
+  "source_official_gazetteer_1873": "KSH original PDF 1004 image-only pages (no selectable text)",
+  "source_official_gazetteer_1877": "KSH original PDF 787 image-only pages",
+  "source_ocr_1877": "secondary digitization of 1877 official gazetteer (794 pages), Google OCR, not official KSH OCR",
+  "source_ocr_sha256": "f3d32e0f4c6a37fc8d31a63bacc806c9ed36e11beb056c990fa7c6a5faa3d03a",
+  "matched_official_1877_county_index_pages": {
+    "Szatmár": [
+      53,
+      54
+    ],
+    "Szolnok-Doboka": [
+      56,
+      57
+    ]
+  },
+  "count": 91,
+  "county_counts": {
+    "Szolnok-Doboka": 48,
+    "Szatmár": 43
+  },
+  "status_counts": {
+    "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY": 58,
+    "UNRESOLVED_OCR": 19,
+    "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED": 14
+  },
+  "county_ocr_lengths": {
+    "Szatmár": 4328,
+    "Szolnok-Doboka": 4761
+  },
+  "warning": "OCR matches are research leads and require photographic page verification; exact normalized strings may refer to homonymous places. 1873 gazetteer remains unverified; no 19th century commune polygon is derived.",
+  "records": [
+    {
+      "name_1877_law": "Csokmány",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Csokmány",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Csokmány",
+          "score": 1
+        },
+        {
+          "name": "Ormány",
+          "score": 0.625
+        },
+        {
+          "name": "Csokotes",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Aranymező",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Nagymezo",
+        "score": 0.6666666666666667
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Nagymezo",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Ispánmezo",
+          "score": 0.5555555555555556
+        },
+        {
+          "name": "Oroszmezo",
+          "score": 0.5555555555555556
+        },
+        {
+          "name": "Macskamezô",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Poinicza",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Pojnica",
+        "score": 0.75
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Pojnica",
+          "score": 0.75
+        },
+        {
+          "name": "Pontinásza",
+          "score": 0.6
+        },
+        {
+          "name": "Toplica",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Pirosa",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Pirosa",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Pirosa",
+          "score": 1
+        },
+        {
+          "name": "Mikola",
+          "score": 0.5
+        },
+        {
+          "name": "Girolt",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kucsulát",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Kucsulát",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kucsulát",
+          "score": 1
+        },
+        {
+          "name": "Csula",
+          "score": 0.625
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kis-Solymos",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Krisztolc (Kis-)",
+        "score": 0.5
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Krisztolc (Kis-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kozla",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Kozla",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kozla",
+          "score": 1
+        },
+        {
+          "name": "Lózna (Кб-)",
+          "score": 0.6
+        },
+        {
+          "name": "Közfalu",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Blózsa",
+          "score": 0.5
+        },
+        {
+          "name": "Kozárvár",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Csula",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Csula",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Csula",
+          "score": 1
+        },
+        {
+          "name": "Kucsulát",
+          "score": 0.625
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Letka",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Létka",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Létka",
+          "score": 1
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Lemény",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Lemény",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Lemény",
+          "score": 1
+        },
+        {
+          "name": "Keménye",
+          "score": 0.7142857142857143
+        },
+        {
+          "name": "Semesnye",
+          "score": 0.625
+        },
+        {
+          "name": "Kétely",
+          "score": 0.5
+        },
+        {
+          "name": "Ormány",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Toplicza",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Toplica",
+        "score": 0.875
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Toplica",
+          "score": 0.875
+        },
+        {
+          "name": "Pojnica",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Purkáriu",
+      "alias_1877_law": "Purkerecz",
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Purkurec",
+        "score": 0.7777777777777778
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Purkurec",
+          "score": 0.7777777777777778
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Dióspatak",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Dióspatak",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Dióspatak",
+          "score": 1
+        },
+        {
+          "name": "Büdöspataka",
+          "score": 0.6363636363636364
+        },
+        {
+          "name": "Disznópataka",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Dánpataka",
+          "score": 0.5555555555555556
+        },
+        {
+          "name": "Kohpataka",
+          "score": 0.5555555555555556
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kis-Nyires",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Boncnyires",
+        "score": 0.6
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Boncnyires",
+          "score": 0.6
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Resztolcz",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Resztolcs",
+        "score": 0.8888888888888888
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Resztolcs",
+          "score": 0.8888888888888888
+        },
+        {
+          "name": "Krisztolc (Kis-)",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Krisztolc (Nagy-)",
+          "score": 0.5384615384615384
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Révkörtvélyes",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Kortvélyes (Rév-)",
+        "score": 0.5384615384615384
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kortvélyes (Rév-)",
+          "score": 0.5384615384615384
+        },
+        {
+          "name": "Kortvélyes (Kis-J",
+          "score": 0.5
+        },
+        {
+          "name": "Kortvélyes (Alsó-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Büdöspataka",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Büdöspataka",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Büdöspataka",
+          "score": 1
+        },
+        {
+          "name": "Dióspatak",
+          "score": 0.6363636363636364
+        },
+        {
+          "name": "Dánpataka",
+          "score": 0.6363636363636364
+        },
+        {
+          "name": "Kohpataka",
+          "score": 0.6363636363636364
+        },
+        {
+          "name": "Horgaspataka",
+          "score": 0.5833333333333333
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Mályán",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Mályán",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Mályán",
+          "score": 1
+        },
+        {
+          "name": "Manya",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Kaplyon",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Kalyán (Kis-)",
+          "score": 0.5555555555555556
+        },
+        {
+          "name": "Dalmár",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kis-Berszó",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": null,
+      "candidate_OCR_matches": [],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Ilonda-Pataka",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "llondapataka",
+        "score": 0.9166666666666666
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "llondapataka",
+          "score": 0.9166666666666666
+        },
+        {
+          "name": "Tormapataka",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Dánpataka",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Disznópataka",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Kohpataka",
+          "score": 0.5833333333333333
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Szakatura",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Szakatura",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Szakatura",
+          "score": 1
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Sásza",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Szásza",
+        "score": 0.8333333333333334
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Szásza",
+          "score": 0.8333333333333334
+        },
+        {
+          "name": "Császári",
+          "score": 0.625
+        },
+        {
+          "name": "Zsugásztra",
+          "score": 0.5
+        },
+        {
+          "name": "Sárvár",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Nagy-Buny",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Nagymezo",
+        "score": 0.5
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Nagymezo",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Frinkfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Frinkfalva",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Frinkfalva",
+          "score": 1
+        },
+        {
+          "name": "Frinkfalva (Ko-)",
+          "score": 0.8333333333333334
+        },
+        {
+          "name": "Brébfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Csernefalva",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Karulyfalva",
+          "score": 0.5454545454545454
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Zsugásztra",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Zsugásztra",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Zsugásztra",
+          "score": 1
+        },
+        {
+          "name": "Szásza",
+          "score": 0.5
+        },
+        {
+          "name": "Császári",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Románfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Románfalva",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Románfalva",
+          "score": 1
+        },
+        {
+          "name": "Lábfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Kozépfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Csernefalva",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Kosztafalva",
+          "score": 0.5454545454545454
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Szelnicze",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Szelnice",
+        "score": 0.8888888888888888
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Szelnice",
+          "score": 0.8888888888888888
+        },
+        {
+          "name": "Szeleske",
+          "score": 0.5555555555555556
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Drága-Vilma",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Drágavilma",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Drágavilma",
+          "score": 1
+        },
+        {
+          "name": "Dragyia",
+          "score": 0.6
+        },
+        {
+          "name": "Tordavilma",
+          "score": 0.6
+        },
+        {
+          "name": "51 Larga",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Groppa",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Groppa",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Groppa",
+          "score": 1
+        },
+        {
+          "name": "Rogma",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Preluka",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Preluka",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Preluka",
+          "score": 1
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Magura",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Magúra",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Magúra",
+          "score": 1
+        },
+        {
+          "name": "Magura",
+          "score": 1
+        },
+        {
+          "name": "Guga",
+          "score": 0.5
+        },
+        {
+          "name": "Manya",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Russor",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Rusor",
+        "score": 0.8333333333333334
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Rusor",
+          "score": 0.8333333333333334
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Brébfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Brébfalva",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Brébfalva",
+          "score": 1
+        },
+        {
+          "name": "Lábfalva",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Frinkfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Négerfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Kozépfalva",
+          "score": 0.6
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Csernefalva",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Csernefalva",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Csernefalva",
+          "score": 1
+        },
+        {
+          "name": "Frinkfalva",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Románfalva",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Brébfalva",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Négerfalva",
+          "score": 0.5454545454545454
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kápolnok-Monostor",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Kápolnok (Monostor-)",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kápolnok (Monostor-)",
+          "score": 1
+        },
+        {
+          "name": "Kápolnok (Kavás-)",
+          "score": 0.5625
+        },
+        {
+          "name": "Kápolnok (Szurdok-)",
+          "score": 0.5625
+        },
+        {
+          "name": "Monostorszeg",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Szt.-Kápolnok",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Kápolnok (Szurdok-)",
+        "score": 0.6666666666666667
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kápolnok (Szurdok-)",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Szent-Katolna (Dorna-)",
+          "score": 0.6470588235294117
+        },
+        {
+          "name": "Kápolnok (Kavás-)",
+          "score": 0.6153846153846154
+        },
+        {
+          "name": "Kápolnok (Monostor-)",
+          "score": 0.5625
+        },
+        {
+          "name": "Szent-Miklós",
+          "score": 0.5384615384615384
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Vaád",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Vaád",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Vaád",
+          "score": 1
+        },
+        {
+          "name": "Vaád",
+          "score": 1
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Fonácz",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Fonác",
+        "score": 0.8333333333333334
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Fonác",
+          "score": 0.8333333333333334
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Laczkonya",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Lackonya",
+        "score": 0.8888888888888888
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Lackonya",
+          "score": 0.8888888888888888
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Berencze",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Keménye",
+        "score": 0.5
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Keménye",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kis-Körtvélyes",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Kortvélyes (Rév-)",
+        "score": 0.5384615384615384
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kortvélyes (Rév-)",
+          "score": 0.5384615384615384
+        },
+        {
+          "name": "Kortvélyes (Kis-J",
+          "score": 0.5
+        },
+        {
+          "name": "Kortvélyes (Alsó-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Garbonácz",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Garbonác",
+        "score": 0.8888888888888888
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Garbonác",
+          "score": 0.8888888888888888
+        },
+        {
+          "name": "Gorbó (Csáki-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Gyertyános",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Gyertyános",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Gyertyános",
+          "score": 1
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kovács-Kápolnok",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Kápolnok (Kavás-)",
+        "score": 0.8571428571428572
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kápolnok (Kavás-)",
+          "score": 0.8571428571428572
+        },
+        {
+          "name": "Kápolnok (Monostor-)",
+          "score": 0.5625
+        },
+        {
+          "name": "Kápolnok (Szurdok-)",
+          "score": 0.5333333333333333
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Csokotés",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Csokotes",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Csokotes",
+          "score": 1
+        },
+        {
+          "name": "Csokmány",
+          "score": 0.5
+        },
+        {
+          "name": "Tökes",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kötelesmező",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Kotelesmezo",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kotelesmezo",
+          "score": 1
+        },
+        {
+          "name": "Kortvélyes (Felso-)",
+          "score": 0.6
+        },
+        {
+          "name": "Kortvélyes (Alsó-)",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Hollómezö",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Sósmezo",
+          "score": 0.5454545454545454
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Plopis",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Ploppis",
+        "score": 0.8571428571428572
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Ploppis",
+          "score": 0.8571428571428572
+        },
+        {
+          "name": "Iklod (Kis-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Blózsa",
+      "alias_1877_law": null,
+      "destination_county": "Szolnok-Doboka",
+      "law_section": "1877:I §2, point 2(c)",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        56,
+        57
+      ],
+      "matched_OCR_token": {
+        "name": "Blózsa",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Blózsa",
+          "score": 1
+        },
+        {
+          "name": "Lózna (Кб-)",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Lozsárd",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Kalocsa",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Kozla",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kapnik-Bánya",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Kapnikbánya",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kapnikbánya",
+          "score": 1
+        },
+        {
+          "name": "Kapnik (Alsó-)",
+          "score": 0.6363636363636364
+        },
+        {
+          "name": "Láposbánya",
+          "score": 0.6363636363636364
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Karullya",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Károlya",
+        "score": 0.75
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Károlya",
+          "score": 0.75
+        },
+        {
+          "name": "Sállyi",
+          "score": 0.5
+        },
+        {
+          "name": "Daruta",
+          "score": 0.5
+        },
+        {
+          "name": "Váralja",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Szakállasfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Szakálosfalu",
+        "score": 0.7142857142857143
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Szakálosfalu",
+          "score": 0.7142857142857143
+        },
+        {
+          "name": "Pállalva",
+          "score": 0.5
+        },
+        {
+          "name": "Magosfalva",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kölcse",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Kölcse",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kölcse",
+          "score": 1
+        },
+        {
+          "name": "Kölcse",
+          "score": 1
+        },
+        {
+          "name": "Kicse",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Kolcér",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Kolcs (Kis-)",
+          "score": 0.625
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kovás",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Kovás",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kovás",
+          "score": 1
+        },
+        {
+          "name": "Hodász",
+          "score": 0.5
+        },
+        {
+          "name": "Kölcse",
+          "score": 0.5
+        },
+        {
+          "name": "Kölcse",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Remete",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Remete",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Remete",
+          "score": 1
+        },
+        {
+          "name": "Reszege",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Pete",
+          "score": 0.5
+        },
+        {
+          "name": "Réztelek",
+          "score": 0.5
+        },
+        {
+          "name": "Remete (Koszeg-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Berkeszpatak",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Berkeszpatak",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Berkeszpatak",
+          "score": 1
+        },
+        {
+          "name": "Sebespatak",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Berek (Száraz-)",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Berkesz",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Berek (Tiszta-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Butyásza",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Butyásza",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Butyásza",
+          "score": 1
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kis-Buny",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Misztbánya",
+        "score": 0.5
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Misztbánya",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Váralja",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Váralja",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Váralja",
+          "score": 1
+        },
+        {
+          "name": "Károlya",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Pállalva",
+          "score": 0.5
+        },
+        {
+          "name": "Szinyér-Váralja",
+          "score": 0.5
+        },
+        {
+          "name": "Dánfalva",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Fericse",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Feríese",
+        "score": 0.8571428571428572
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Feríese",
+          "score": 0.8571428571428572
+        },
+        {
+          "name": "Kicse",
+          "score": 0.5714285714285714
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Durusa",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Daruta",
+        "score": 0.6666666666666667
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Daruta",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Derzs",
+          "score": 0.5
+        },
+        {
+          "name": "Dará",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Nagy-Körtvélyes",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Kortvélyes",
+        "score": 0.7142857142857143
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kortvélyes",
+          "score": 0.7142857142857143
+        },
+        {
+          "name": "Kortvélyes",
+          "score": 0.7142857142857143
+        },
+        {
+          "name": "Nagy-Károly",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Györtelek",
+          "score": 0.5714285714285714
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Gaura",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Dará",
+        "score": 0.6
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Dará",
+          "score": 0.6
+        },
+        {
+          "name": "Nábrád",
+          "score": 0.5
+        },
+        {
+          "name": "Daruta",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Stezser",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Sztezser",
+        "score": 0.875
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Sztezser",
+          "score": 0.875
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Hovrilla",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Hovrilla",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Hovrilla",
+          "score": 1
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Somkutpatak",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Somkutpatak",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Somkutpatak",
+          "score": 1
+        },
+        {
+          "name": "Somkut (Nagy-)",
+          "score": 0.6363636363636364
+        },
+        {
+          "name": "Sebespatak",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Berkeszpatak",
+          "score": 0.5
+        },
+        {
+          "name": "Szappanpatak",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Jeder",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Jeder",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Jeder",
+          "score": 1
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Gyökeres",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Gyokeres",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Gyokeres",
+          "score": 1
+        },
+        {
+          "name": "Geres",
+          "score": 0.625
+        },
+        {
+          "name": "Györtelek",
+          "score": 0.5555555555555556
+        },
+        {
+          "name": "Genes",
+          "score": 0.5
+        },
+        {
+          "name": "Györkefalu",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "N.-Nyires",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Nyires (Nagy-)",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Nyires (Nagy-)",
+          "score": 1
+        },
+        {
+          "name": "Szekeres (Nagy-)",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Dobos (Nagy-)",
+          "score": 0.5
+        },
+        {
+          "name": "Ar (Nagy-)",
+          "score": 0.5
+        },
+        {
+          "name": "Géc (Nagy-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Tölgyes",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Tölgyes",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Tölgyes",
+          "score": 1
+        },
+        {
+          "name": "Tôkés",
+          "score": 0.5714285714285714
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Törökfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Törökfalva",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Törökfalva",
+          "score": 1
+        },
+        {
+          "name": "Magosfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Pribékfalva",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Porcsalma",
+          "score": 0.5
+        },
+        {
+          "name": "Oroszfalu",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Csolt",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Csolt",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Csolt",
+          "score": 1
+        },
+        {
+          "name": "Csaholc",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Csegöld",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Rápolt",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "N.-Somkut",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Somkut (Nagy-)",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Somkut (Nagy-)",
+          "score": 1
+        },
+        {
+          "name": "Somkutpatak",
+          "score": 0.6363636363636364
+        },
+        {
+          "name": "S/okond (Nagy-)",
+          "score": 0.6
+        },
+        {
+          "name": "Csomaköz",
+          "score": 0.5
+        },
+        {
+          "name": "Dobos (Nagy-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Berkesz",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Berkesz",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Berkesz",
+          "score": 1
+        },
+        {
+          "name": "Berkeszpatak",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Geres",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Berend",
+          "score": 0.5714285714285714
+        },
+        {
+          "name": "Feríese",
+          "score": 0.5714285714285714
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "N.-Fentős",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Fentos (Nagy-)",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Fentos (Nagy-)",
+          "score": 1
+        },
+        {
+          "name": "Dobos (Nagy-)",
+          "score": 0.6
+        },
+        {
+          "name": "Hodos (Nagy-)",
+          "score": 0.6
+        },
+        {
+          "name": "Fentos (Kis-)",
+          "score": 0.6
+        },
+        {
+          "name": "Szekeres (Nagy-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "P.-Fentős",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Feutos (Puszta-)",
+        "score": 0.9166666666666666
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Feutos (Puszta-)",
+          "score": 0.9166666666666666
+        },
+        {
+          "name": "Daróc (Puszta-)",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Pusztatelek",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Fentos (Kis-)",
+          "score": 0.5833333333333333
+        },
+        {
+          "name": "Fentos (Nagy-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Fehérszék",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Fehérszék",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Fehérszék",
+          "score": 1
+        },
+        {
+          "name": "Penészlek",
+          "score": 0.5555555555555556
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Lukácsfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Lacfalu",
+        "score": 0.5454545454545454
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Lacfalu",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Dánfalva",
+          "score": 0.5454545454545454
+        },
+        {
+          "name": "Magosfalva",
+          "score": 0.5454545454545454
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Dánfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Dánfalva",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Dánfalva",
+          "score": 1
+        },
+        {
+          "name": "Pállalva",
+          "score": 0.625
+        },
+        {
+          "name": "Magosfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Danyád",
+          "score": 0.5
+        },
+        {
+          "name": "Panyola",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Pribékfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Pribékfalva",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Pribékfalva",
+          "score": 1
+        },
+        {
+          "name": "Törökfalva",
+          "score": 0.5454545454545454
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Magosfalva",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Magosfalva",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Magosfalva",
+          "score": 1
+        },
+        {
+          "name": "Máté-Szalka",
+          "score": 0.6
+        },
+        {
+          "name": "Dánfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Törökfalva",
+          "score": 0.6
+        },
+        {
+          "name": "Magosliget",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Hosszufalu",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Hosszufalu",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Hosszufalu",
+          "score": 1
+        },
+        {
+          "name": "Oroszfalu",
+          "score": 0.6
+        },
+        {
+          "name": "Oroszfalu",
+          "score": 0.6
+        },
+        {
+          "name": "Szinfalu",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kis-Fentős",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": null,
+      "candidate_OCR_matches": [],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Szappanpataka",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_FUZZY_STRONG_CANDIDATE_NOT_VERIFIED",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Szappanpatak",
+        "score": 0.9230769230769231
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Szappanpatak",
+          "score": 0.9230769230769231
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Erdőaranyos",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Medgyes (Aranyos-)",
+        "score": 0.5714285714285714
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Medgyes (Aranyos-)",
+          "score": 0.5714285714285714
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Koltó-Katalin",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": null,
+      "candidate_OCR_matches": [],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Hagymás-Lápos",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": null,
+      "candidate_OCR_matches": [],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Puszta-Hidegkut",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Pusztatelek",
+        "score": 0.5714285714285714
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Pusztatelek",
+          "score": 0.5714285714285714
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kolcér",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Kolcér",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Kolcér",
+          "score": 1
+        },
+        {
+          "name": "Kölcse",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Kölcse",
+          "score": 0.6666666666666667
+        },
+        {
+          "name": "Kér",
+          "score": 0.5
+        },
+        {
+          "name": "Kolcs (Kis-)",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Kis-Bozinta",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Bozinta (O-)",
+        "score": 0.6
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Bozinta (O-)",
+          "score": 0.6
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Ó-Bozinta",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "UNRESOLVED_OCR",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Bozinta (O-)",
+        "score": 0.75
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Bozinta (O-)",
+          "score": 0.75
+        },
+        {
+          "name": "Bozinta (Kis-)",
+          "score": 0.6
+        },
+        {
+          "name": "Ököritö",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": false,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    },
+    {
+      "name_1877_law": "Szaszar",
+      "alias_1877_law": null,
+      "destination_county": "Szatmár",
+      "law_section": "1877:I §2, point 3",
+      "gazetteer_1877_OCR_status": "OCR_EXACT_NORMALIZED_IN_ASSIGNED_COUNTY",
+      "gazetteer_1877_pages_1_indexed": [
+        53,
+        54
+      ],
+      "matched_OCR_token": {
+        "name": "Szaszár",
+        "score": 1
+      },
+      "candidate_OCR_matches": [
+        {
+          "name": "Szaszár",
+          "score": 1
+        },
+        {
+          "name": "Csaszári",
+          "score": 0.625
+        },
+        {
+          "name": "Szaniszló",
+          "score": 0.5555555555555556
+        },
+        {
+          "name": "Szamosszeg",
+          "score": 0.5
+        },
+        {
+          "name": "Sztezser",
+          "score": 0.5
+        }
+      ],
+      "ocr_exact_across_county_text": true,
+      "gazetteer_1873_status": "ORIGINAL_SCAN_ACQUIRED_NO_PAGE_ENTRY_VERIFIED",
+      "edition_relationship": "OCR republication of 1877 official gazetteer, not legally authenticated municipality polygon",
+      "modern_locality_id": null,
+      "coordinate": null,
+      "historical_administrative_boundary": null,
+      "approved_match": false
+    }
+  ]
+}
