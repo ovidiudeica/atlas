@@ -1,0 +1,54 @@
+{
+  "phase": "HIST-0.4d",
+  "audit_date": "2026-11-11",
+  "main_base": "3e8209b90b230b7287af77bdd2c4f26608e77ebd",
+  "scope": "cartographic provenance and independent P0 geometry; preservation of 34 earlier P1/P2 decisions",
+  "result": "INDEPENDENT_OHM_GEOMETRIC_RECHECK_PASS_CARTOGRAPHIC_ADMISSION_BLOCKED",
+  "distinct_relation_ids": 37,
+  "priority_counts": {
+    "P0": 3,
+    "P1": 25,
+    "P2": 9
+  },
+  "P0_independently_geometric_reproduced": 3,
+  "P1_P2_unmodified_carried_from_hist04c": 34,
+  "technical_P0_rings_closed": 3,
+  "transylvania_ways": 78,
+  "chioar_ways_each": 15,
+  "chioar_way_ids_and_coordinates_exactly_identical": true,
+  "historic_original_map_scans_acquired": 0,
+  "editorial_facsimiles_retrieved_hashed_and_visually_inspected": 2,
+  "historic_georeferences_accepted": 0,
+  "georeferencing_GCPs_accepted": 0,
+  "independent_check_points_accepted": 0,
+  "historical_ways_compared_to_authenticated_map": 0,
+  "independently_certified_historical_boundaries": 0,
+  "variants_admitted_to_import": 0,
+  "OHM_raw_modified": false,
+  "ACTUAL_OSMB_modified": false,
+  "tree_UI_code_CI_modified": false,
+  "copyright_permissions_reuse_confirmed": 0,
+  "paid_orders_placed": 0,
+  "emails_sent": 0,
+  "local_source_pdf_sha256": {
+    "Bendefy_1976_vol_II": "a1af589393436c6c2d1f9c169817a682f1f84b3b118c23f23b70cbacde2b2eb9",
+    "Brukenthal_2017_catalog": "0e67aac712d44ab77f382f4aae250fc724b39fc5169cafe30a383a6c8837b7b7"
+  },
+  "local_raw_OHM_relation_gzip_sha256": {
+    "2747433": "3c0700f038847cc46b0c6492a90bbd46bad7db242d108c379318e65f5fbbc2b4",
+    "2747434": "37ad34749bb2c8d7a2f15ab1284699c09ddb17818030eb1d61584118f580b2e1",
+    "2747435": "c489c9f80139a8d01d4c69ead195cf24f24639da2d486b278c4d34b37c3539d4"
+  },
+  "repo_artifact_sha256_verified_by_downloading_published_GitHub_raw_file": {
+    "README.md": "c08c9623b62c7d73b1ca314f0f8c0261b9577ff754ec1d3d0b811149afa28db4",
+    "independent-p0-geometric-control.json": "052251fcc8b8043bba04904066cef749898a74a3e03424bc8b1b4305cd5d5bdf",
+    "recompute-p0.mjs": "f6aa1f2f1b073d7c4bacd8236ae4b31429defd8d6aa8b06b472c714d18f8b790",
+    "qualification-gate-per-id-37.json": "e0e79c0df5313a283506111562d6eaf7a9c9a3e6177a261fabe6a4de36e6b897",
+    "cartographic-provenance-rights.json": "69bc8f5a4dccf99ff3a7db1f15905afe581e3a8e3830d1dd644cb32078b983f2",
+    "archival-inquiries-unsent.md": "9a90dda440ab377e02ac0d8ed786f7d67825f75f9b843f3518c52408cfeb3fe7"
+  },
+  "reproducibility": "2 independent consecutive executions on original local inputs produced identical SHA256 output (Node v24.21.0, geographiclib-geodesic 2.2.0, @turf/area 7.4.0)",
+  "retention": "Source facsimile PDFs, rendered images and full original OHM data remain in authorized local research archive and are not committed due to access/licensing and archive size.",
+  "external_original_access": "Only identifying metadata and editorial reproductions acquired; distinct originals at OSZK TK 2274 and MNB XV/633 not acquired.",
+  "gate": "P0_OPEN_DO_NOT_GEOREFERENCE_OR_IMPORT_UNTIL_ORIGINAL_SCAN_PROVENANCE_RIGHTS_AND_INDEPENDENT_CONTROL_POINTS_VALIDATED"
+}
