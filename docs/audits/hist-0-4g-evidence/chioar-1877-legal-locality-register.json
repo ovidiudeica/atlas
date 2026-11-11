@@ -1,0 +1,852 @@
+{
+  "phase": "HIST-0.4g",
+  "audit_date": "2026-11-11",
+  "source": "1877:I law §2, division 2(c) and division 3",
+  "source_url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+  "source_type": "DIGITAL_TRANSCRIPTION_OF_ORIGINAL_1877_LAW_NOT_ORIGINAL_PRINTED_GAZETTE",
+  "source_html_sha256": "fe53fb8e1dd8f93b64130127b97a533ec918d920354d667cceff63120ed2e038",
+  "count_total": 91,
+  "by_county": {
+    "Szolnok-Doboka": 48,
+    "Szatmár": 43
+  },
+  "duplicate_spelling_count": 0,
+  "alias_count": 1,
+  "archival_names": [
+    {
+      "old_spelling": "Csokmány",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 1,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Aranymező",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 2,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Poinicza",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 3,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Pirosa",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 4,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kucsulát",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 5,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kis-Solymos",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 6,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kozla",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 7,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Csula",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 8,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Letka",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 9,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Lemény",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 10,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Toplicza",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 11,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Purkáriu",
+      "alias": "Purkerecz",
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 12,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Dióspatak",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 13,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kis-Nyires",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 14,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Resztolcz",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 15,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Révkörtvélyes",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 16,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Büdöspataka",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 17,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Mályán",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 18,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kis-Berszó",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 19,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Ilonda-Pataka",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 20,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Szakatura",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 21,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Sásza",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 22,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Nagy-Buny",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 23,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Frinkfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 24,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Zsugásztra",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 25,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Románfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 26,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Szelnicze",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 27,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Drága-Vilma",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 28,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Groppa",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 29,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Preluka",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 30,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Magura",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 31,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Russor",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 32,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Brébfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 33,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Csernefalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 34,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kápolnok-Monostor",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 35,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Szt.-Kápolnok",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 36,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Vaád",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 37,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Fonácz",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 38,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Laczkonya",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 39,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Berencze",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 40,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kis-Körtvélyes",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 41,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Garbonácz",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 42,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Gyertyános",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 43,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kovács-Kápolnok",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 44,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Csokotés",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 45,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kötelesmező",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 46,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Plopis",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 47,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Blózsa",
+      "alias": null,
+      "county_assigned_in_1877": "Szolnok-Doboka",
+      "order_in_clause": 48,
+      "clause": "1877:I §2, point 2(c)",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kapnik-Bánya",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 1,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Karullya",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 2,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Szakállasfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 3,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kölcse",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 4,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kovás",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 5,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Remete",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 6,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Berkeszpatak",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 7,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Butyásza",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 8,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kis-Buny",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 9,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Váralja",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 10,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Fericse",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 11,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Durusa",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 12,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Nagy-Körtvélyes",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 13,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Gaura",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 14,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Stezser",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 15,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Hovrilla",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 16,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Somkutpatak",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 17,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Jeder",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 18,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Gyökeres",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 19,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "N.-Nyires",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 20,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Tölgyes",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 21,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Törökfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 22,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Csolt",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 23,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "N.-Somkut",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 24,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Berkesz",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 25,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "N.-Fentős",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 26,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "P.-Fentős",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 27,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Fehérszék",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 28,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Lukácsfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 29,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Dánfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 30,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Pribékfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 31,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Magosfalva",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 32,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Hosszufalu",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 33,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kis-Fentős",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 34,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Szappanpataka",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 35,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Erdőaranyos",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 36,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Koltó-Katalin",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 37,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Hagymás-Lápos",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 38,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Puszta-Hidegkut",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 39,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kolcér",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 40,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Kis-Bozinta",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 41,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Ó-Bozinta",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 42,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    },
+    {
+      "old_spelling": "Szaszar",
+      "alias": null,
+      "county_assigned_in_1877": "Szatmár",
+      "order_in_clause": 43,
+      "clause": "1877:I §2, point 3",
+      "modern_identification": "UNVERIFIED",
+      "geometry_join": "UNVERIFIED"
+    }
+  ],
+  "law_1876_context": {
+    "citation": "1876:XXXIII §1(2), §5, §22, §25",
+    "source_url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87600033.TV",
+    "observation": "The 1876 law allocates parts bordering Belső-Szolnok to the new Szolnok-Doboka and remaining Chioar localities to Szatmár; it delegates definitive boundaries to the interior minister and transitional administration rules.",
+    "promulgation": "1876-06-20 (according to digital transcription note)",
+    "cannot_infer_exact_commune_boundary_coordinates": true
+  },
+  "law_1877_context": {
+    "citation": "1877:I §2(2c), §2(3), §3",
+    "promulgation": "1877-03-16 (lower house), 1877-03-17 (upper house), per digital transcription note",
+    "observation": "Names final localities allocated to both counties and assigns attached non-community areas with their administrative parent communities.",
+    "cannot_infer_former_district_dissolution_effective_date": true
+  },
+  "source_restrictions": "Names of places are historical facts; village IDs, coordinates, legal polygon boundaries, and equivalence to OHM ways are not asserted.",
+  "individually_certified_historical_boundary": 0,
+  "import_authorized": false
+}
