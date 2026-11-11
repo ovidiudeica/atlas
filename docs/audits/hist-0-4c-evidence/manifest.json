@@ -1,0 +1,31 @@
+{
+  "phase": "HIST-0.4c",
+  "audit_date": "2026-11-11",
+  "base_main": "d8f63ee2256c2bd171e35f726c2e94a1a9179471",
+  "original_OHM_evidence": "HIST-0.4b / HIST-0.2 immutable",
+  "relations": 37,
+  "priority_origins": {
+    "P1_SOURCE_OR_CHRONOLOGY_REVIEW": 25,
+    "P2_SOURCE_RELEVANCE_REVIEW": 9,
+    "P0_TARGETED_EVIDENCE_REQUIRED": 3
+  },
+  "independently_contextualized_variants": 37,
+  "P0_with_independent_relevant_context": 3,
+  "documentary_sources_registered": 18,
+  "validated_historical_geometric_boundaries": 0,
+  "admitted_variants": 0,
+  "geometry_changes": 0,
+  "tree_changes": 0,
+  "application_changes": 0,
+  "assessment": "TARGETED_DOCUMENTARY_RESEARCH_COMPLETED_ALL_37 / 3_P0_NOT_LEGALLY_OR_GEOMETRICALLY_CLOSED / FINAL_IMPORT_BLOCKED",
+  "evidence_policy": "Independent sources corroborate specific events / administrative existence but do not validate exact OHM polygons; absence of way source cannot be replaced by approximate map.",
+  "caveat": "Web search evidence can lack direct access to full publication for some sources (PDF screenshots failed); source verification status is per-source.",
+  "artifact_sha256": {
+    "qualification-targeted-per-id-37.csv": "442f6e4c1bd1c0731acba4c6c98587561b811851fd3a827267710f6a4d5780fc",
+    "external-source-register-18.json": "14972bbe211a4ef93addb40825a124cbe1ae091b45c8be84970c09540dd4f84c",
+    "p0-targeted-findings-3.json": "3b64bc4c503fabc87d9b673a54c3f5e2e49abf7a26d82c06927e7308019e42f2",
+    "family-status-11.csv": "b931f16c3b1f3310034116c0d03331960464a67475695e951f06c173228bd9b3",
+    "exceptions-persisting-7.json": "2dde500bb99e3992e21eb122abf2e86ae1672ce3ec1b288adf302b9042f07c97",
+    "README.md": "229c11381402f6a171877bfdaf655f9964ea0c5484ed44b64b04e83951d3c4f5"
+  }
+}

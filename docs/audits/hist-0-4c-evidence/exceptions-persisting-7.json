@@ -1,0 +1,156 @@
+[
+  {
+    "id": "H04C-P0-1",
+    "severity": "P0",
+    "relation_ids": [
+      2747433
+    ],
+    "state": "OPEN_DOCUMENTARY_CONTRADICTION_CONFIRMED",
+    "issue": "end_event=1867 cannot explain 1732 end_date; no OHM edit performed",
+    "sources": [
+      "S04"
+    ]
+  },
+  {
+    "id": "H04C-P0-2",
+    "severity": "P0",
+    "relation_ids": [
+      2747435,
+      2747434
+    ],
+    "state": "PARTIAL_HISTORICAL_EXISTENCE_EVIDENCE_GEOMETRY_UNPROVEN",
+    "issue": "archival book covers 1849–1860 and 1876; source for 15 OHM ways absent and 3517-day gap remains",
+    "sources": [
+      "S05",
+      "S06",
+      "S17"
+    ]
+  },
+  {
+    "id": "H04C-1856-1878",
+    "severity": "P1",
+    "relation_ids": [
+      2694163,
+      2746689,
+      2694153,
+      2694154,
+      2746400,
+      2692354
+    ],
+    "state": "TREATY_EVENT_DOCS_FOUND_LINE_NOT_MATCHED",
+    "issue": "1856 Paris articles XX–XXI and 1878 Berlin art XLV; need boundary commission maps and delineation",
+    "sources": [
+      "S01",
+      "S02",
+      "S03"
+    ]
+  },
+  {
+    "id": "H04C-1751",
+    "severity": "P1",
+    "relation_ids": [
+      2746573,
+      2747562,
+      2746839
+    ],
+    "state": "ADMINISTRATIVE_SPLIT_EVIDENCED_RESIDUAL_UNRESOLVED",
+    "issue": "civil/military division 1751 with progressive formation; ~7.09km2 OHM residual",
+    "sources": [
+      "S07",
+      "S16"
+    ]
+  },
+  {
+    "id": "H04C-1941-1944",
+    "severity": "P1",
+    "relation_ids": [
+      2693256,
+      2693255
+    ],
+    "state": "OCCUPATION_VS_SOVEREIGNTY_SEPARATED",
+    "issue": "USHMM demonstrates occupied Transnistria non-annexed; OHM kingdom polygon needs semantic qualification",
+    "sources": [
+      "S13",
+      "S12"
+    ]
+  },
+  {
+    "id": "H04C-1944-1945",
+    "severity": "P1",
+    "relation_ids": [
+      2693255,
+      2877966
+    ],
+    "state": "CHRONOLOGICAL_GAP_UNRESOLVED",
+    "issue": "342 day gap in OHM variants; wartime and postwar instruments not line-matched",
+    "sources": [
+      "S12",
+      "S14"
+    ]
+  },
+  {
+    "id": "H04C-MAP-SOURCES",
+    "severity": "CROSS_CUTTING",
+    "relation_ids": [
+      2746573,
+      2747562,
+      2684081,
+      2746379,
+      2746380,
+      2746401,
+      2746744,
+      2746745,
+      2746839,
+      2746840,
+      2746841,
+      2694153,
+      2694154,
+      2692354,
+      2746400,
+      2692219,
+      2693255,
+      2693256,
+      2693257,
+      2693258,
+      2693259,
+      2693260,
+      2693464,
+      2877966,
+      2747434,
+      2747435,
+      2694163,
+      2746689,
+      2694164,
+      2929115,
+      2929116,
+      2929117,
+      2690518,
+      2747433,
+      2829384,
+      2878295,
+      2694215
+    ],
+    "state": "GEOMETRIC_HISTORY_NOT_CERTIFIED",
+    "issue": "source URL or official act is not segment-by-segment georeferencing proof",
+    "sources": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18"
+    ]
+  }
+]
