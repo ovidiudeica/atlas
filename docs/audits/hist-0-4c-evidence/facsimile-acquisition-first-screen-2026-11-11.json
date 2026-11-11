@@ -1,0 +1,118 @@
+{
+  "phase": "HIST-0.4c",
+  "substep": "FACSIMILE_ACQUISITION_AND_FIRST_AREA_SCREEN",
+  "date": "2026-11-11",
+  "base_main": "8ad28bf4e183c6425c6c98b0b2b525d9937b432b",
+  "provenance_policy": "LOCAL_RESEARCH_ONLY; hashes for exact downloaded facsimile bytes; no original-paper authentication; no claim of exact boundary mapping",
+  "storage_relative": "Documents/Atlas-OHM-Inventory-2026-11-10/hist-0-4c-cartography-originals/",
+  "sources": [
+    {
+      "id": "MAP-A",
+      "title": "László Bendefy, Mikoviny Sámuel megyei térképei, vol. II, 1976",
+      "url": "https://real-eod.mtak.hu/112/2/KIADV_072.pdf",
+      "local_file": "Bendefy_1976_Vol_II_24_plates.pdf",
+      "bytes": 144687931,
+      "sha256": "a1af589393436c6c2d1f9c169817a682f1f84b3b118c23f23b70cbacde2b2eb9",
+      "pdf_pages": 41,
+      "map_plate": "12",
+      "pdf_page_number_1_based": 28,
+      "plate_title": "Kővár-vidék és Kraszna vármegye",
+      "historical_original_owner": "Országos Széchényi Könyvtár (OSZK)",
+      "historical_original_shelfmark": "TK 2274",
+      "historic_map_title": "Mappa Districtus Kővár et C[omitatus] Kraszna",
+      "prior_historical_shelfmark": "No 21 S.P.",
+      "verification": "DIGITAL_1976_BOOK_FULL_BYTES_ACQUIRED_SHA256_AND_PLATE_12_RENDERED_VISUALLY_INSPECTED; ORIGINAL_OSZK_SHEET_NOT_OBTAINED",
+      "limitations": "Printed reproduction encompasses Kővár and Kraszna; no independently established georeference or exact district boundary digitization; reproduction rights not cleared for public use"
+    },
+    {
+      "id": "MAP-B",
+      "title": "Iulia Mesea, Secvențe din Transilvania secolului al XVIII-lea, Brukenthal National Museum, 2017",
+      "url": "https://www.brukenthalmuseum.ro/pdf/catalog%20secvente%20ro%20eng.pdf",
+      "local_file": "Brukenthal_2017_catalog_Homann_XV-633.pdf",
+      "bytes": 14602688,
+      "sha256": "0e67aac712d44ab77f382f4aae250fc724b39fc5169cafe30a383a6c8837b7b7",
+      "pdf_pages": 96,
+      "pdf_page_number_1_based": 45,
+      "plate": "II/1",
+      "original_author": "Johann Baptist Homann",
+      "original_date_as_catalogued": "1717",
+      "historic_original_shelfmark": "MNB XV/633",
+      "verification": "DIGITAL_MUSEUM_CATALOG_FULL_BYTES_ACQUIRED_SHA256_AND_PAGE_45_RENDERED_VISUALLY_INSPECTED; ORIGINAL_MUSEUM_SHEET_NOT_OBTAINED",
+      "limitations": "Small printed reproduction insufficient for segmented border-georeferencing; original printing not personally inspected; reproduction rights not cleared for public use"
+    }
+  ],
+  "rendered_local_derivatives": [
+    {
+      "source": "MAP-A",
+      "file": "page-28.jpg",
+      "sha256": "aaf093e0d83cafa02906c05e26c7a9e9b267dab7cc57fa69d6c9317da792e89c",
+      "bytes": 262571,
+      "page_1_based": 28,
+      "type": "JPG local research evidence (NOT committed)"
+    },
+    {
+      "source": "MAP-B",
+      "file": "page-45.jpg",
+      "sha256": "73284057270531aa10cdbe340065cf346c50db1e11e826fca8c6eb1dd1ce3de6",
+      "bytes": 336633,
+      "page_1_based": 45,
+      "type": "JPG local research evidence (NOT committed)"
+    }
+  ],
+  "renderer": {
+    "node": "24.21.0",
+    "pdfjs_dist": "6.5.438",
+    "napi_rs_canvas": "1.1.0",
+    "script": "pdf-render/render.mjs",
+    "visual_pages_inspected": [
+      28,
+      45
+    ],
+    "offline_rasterization": true
+  },
+  "historic_source_context": {
+    "reference": "Bendefy, vol. I (1976), §34, Kővár-vidék és Kraszna vármegye",
+    "url": "https://real-eod.mtak.hu/112/1/KIADV_071.pdf",
+    "historic_district_area_km2_reported_approx": 1089,
+    "map_scale_approx": "1:360000",
+    "limitation": "General bibliographic descriptive values; not a vector perimeter certificate and not a specific dated OHM snapshot"
+  },
+  "ohm_area_screen": {
+    "source": "HIST-0.4b original local geometry-qualified-per-id.json; values not recomputed here",
+    "ids": [
+      2747435,
+      2747434
+    ],
+    "area_km2_each": 1028.9582945865902,
+    "member_ways_each": 15,
+    "member_way_source_count_each": 0,
+    "absolute_difference_from_bendefy_km2": 60.04170541340977,
+    "percentage_of_reported_bendefy_area": 5.513471571479318,
+    "classification": "DESCRIPTIVE_NUMERICAL_DIFFERENCE_NOT_PROVEN_BOUNDARY_ERROR",
+    "reason": "Different cartographic epochs, scope and measurement methods; image not georeferenced; original admin district not matched segment-by-segment"
+  },
+  "transylvania_p0": {
+    "ohm_relation_id": 2747433,
+    "ohm_interval": "1711-04-29/1732-12-31",
+    "end_event_claim": "Austro-Hungarian Compromise (1867)",
+    "verification": "Historic 1717 map visually present in museum catalogue; contradiction 1732 vs 1867 remains",
+    "map_boundary_segments_certified": 0
+  },
+  "counts_unchanged": {
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "total": 37
+  },
+  "p0_remaining_open": [
+    2747433,
+    2747434,
+    2747435
+  ],
+  "original_ohm_files_modified": 0,
+  "app_files_modified": 0,
+  "imported_geometries": 0,
+  "historical_geometries_certified": 0,
+  "next_gate": "OBTAIN_HISTORIC_ORIGINAL_HIGH_RES_FROM_OSZK_AND_BRUKENTHAL_IF_ACCESSIBLE; verify rights; georeference with documented control points and distortion; compare each OHM way with contemporaneous verified boundary; no interpolation",
+  "verdict": "FACSIMILE_COPIES_VERIFIED / P0_OPEN / NO_GEOMETRIC_ADMISSION"
+}
