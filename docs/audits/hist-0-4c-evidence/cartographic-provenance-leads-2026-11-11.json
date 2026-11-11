@@ -1,0 +1,131 @@
+{
+  "phase": "HIST-0.4c",
+  "artifact": "cartographic-provenance-addendum",
+  "date": "2026-11-11",
+  "base_main_at_branch_creation": "10aff6f8c46c6a93c89f9a540953e3c881b85f01",
+  "append_only": true,
+  "core_manifest_untouched": true,
+  "counts_unchanged": {
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "total": 37
+  },
+  "new_sources": 7,
+  "independently_certified_historical_boundaries": 0,
+  "import_authorized": 0,
+  "geometry_modified": false,
+  "application_modified": false,
+  "cartographic_provenance_leads": [
+    {
+      "source_id": "HIST04C-MAP01",
+      "family": "Transilvania",
+      "ohm_ids": [
+        "2747433"
+      ],
+      "title": "Johann Baptist Homann, Harta Principatului Transilvaniei (Nürnberg, 1717)",
+      "source_kind": "HISTORIC_MAP_MUSEUM_COLLECTION",
+      "institution": "Muzeul Național Brukenthal",
+      "shelfmark": "MNB XV/633",
+      "date": "1717",
+      "url": "https://www.brukenthalmuseum.ro/pdf/catalog%20secvente%20ro%20eng.pdf",
+      "verification": "MUSEUM_CATALOG_METADATA_AND_REPRODUCED_IMAGE_DESCRIBED; PDF_PAGE_VISUAL_CAPTURE_FAILED",
+      "interpretation": "Contemporană variantei OHM 1711–1732; distinge unități și regiuni istorice, dar nu explică end_date=1732 ori end_event=1867.",
+      "limit": "Originalul muzeal și liniile de frontieră nu au fost confruntate la scară cu cele 78 ways OHM. Doar catalog și reproduceri editoriale."
+    },
+    {
+      "source_id": "HIST04C-MAP02",
+      "family": "Transilvania",
+      "ohm_ids": [
+        "2747433"
+      ],
+      "title": "Matthäus Seutter, Transylvaniae, Moldaviae, Walachiae, Bulgariae, nova et accuratissima delineatio",
+      "source_kind": "HISTORIC_MAP_LIBRARY_CATALOG",
+      "institution": "Stanford University Libraries (catalog AGSL GeoDiscovery)",
+      "shelfmark": "purl.stanford.edu/hm001wb9376",
+      "date": "1730 (catalog)",
+      "url": "https://geodiscovery.uwm.edu/catalog/stanford-hm001wb9376",
+      "verification": "LIBRARY_CATALOG_METADATA_VERIFIED; MAP_NOT_GEOREFERENCED",
+      "interpretation": "Hartă datată în catalog în 1730, în interiorul intervalului OHM 1711–1732.",
+      "limit": "Nu certifică hotarul OHM și nu rezolvă contradicția metadatelor temporale."
+    },
+    {
+      "source_id": "HIST04C-MAP03",
+      "family": "Țara Chioarului",
+      "ohm_ids": [
+        "2747435",
+        "2747434"
+      ],
+      "title": "Samuel Mikoviny, Mappa Districtus Kővár et C[omitatus] Kraszna",
+      "source_kind": "HISTORIC_MAP_WITH_ARCHIVAL_SHELFMARK",
+      "institution": "Országos Széchényi Könyvtár (OSZK); identificare în Bendefy, Mikoviny Sámuel megyei térképei, 1976, vol. I, secțiunea 34",
+      "shelfmark": "OSZK TK 2274; fost No 21 S.P.",
+      "date": "Secolul XVIII; data originală exactă neconfirmată",
+      "url": "https://real-eod.mtak.hu/112/1/KIADV_071.pdf",
+      "verification": "ACADEMIC_CATALOG_TEXT_INDEXED; ORIGINAL_MAP_UNINSPECTED; LARGE_PDF_VISUAL_CAPTURE_UNAVAILABLE",
+      "interpretation": "Reper concret pentru delimitarea istorică a districtului Kővár, de confruntat prioritar cu OHM 2747435 (1650–1851).",
+      "limit": "Este nerelevantă direct ca dovadă a conturului 1860–1876 și nu se poate transfera automat între perioade; nu a fost inspectată georeferențiat."
+    },
+    {
+      "source_id": "HIST04C-DOC04",
+      "family": "Țara Chioarului",
+      "ohm_ids": [
+        "2747435",
+        "2747434"
+      ],
+      "title": "Pesty Frigyes, manuscrisul toponimic Kővár vidék / Kraszna, 1864–1865; ediție critică 2023",
+      "source_kind": "CONTEMPORARY_LOCAL_GAZETTEER_IN_MODERN_SCHOLARLY_TRANSCRIPTION",
+      "institution": "Országos Széchényi Könyvtár, manuscrise; Debreceni Egyetemi Kiadó, ediția 2023",
+      "shelfmark": "OSZK Fol. Hung. 1114/23 pp. 1–245 (Kővár); 1114/26 pp. 1–126 (Kraszna)",
+      "date": "1864–1865 (documente), 2023 (ediție)",
+      "url": "https://mnhp.unideb.hu/kiadvanyok/pesty/pesty_kovar-kraszna.pdf",
+      "verification": "UNIVERSITY_EDITION_TEXT_AND_PDF_COVER_VISUALLY_INSPECTED; ORIGINAL_MANUSCRIPTS_NOT_INSPECTED",
+      "interpretation": "Consemnează localități și apartenențe administrative datate, util pentru verificarea localitate-cu-localitate a districtului, mai ales 1860–1876.",
+      "limit": "Hărțile din ediția 2023 sunt reconstrucții bazate pe GISta Hungarorum, NU hărți originale din 1864 și NU dovezi pentru cele 15 ways OHM."
+    },
+    {
+      "source_id": "HIST04C-MAP05",
+      "family": "Țara Moldovei / Gubernia Basarabia",
+      "ohm_ids": [
+        "2694163"
+      ],
+      "title": "V. P. Piadyshev, General Map of Bessarabia, 1821",
+      "source_kind": "CONTEMPORARY_DIGITIZED_HISTORIC_MAP",
+      "institution": "Library of Congress / colecția National Library of Russia",
+      "shelfmark": "Library of Congress control number 2018688650",
+      "date": "1821",
+      "url": "https://www.loc.gov/item/2018688650/",
+      "verification": "LIBRARY_OF_CONGRESS_BIBLIOGRAPHIC_METADATA_VERIFIED; SCAN_NOT_CARTOGRAPHICALLY_COMPARED",
+      "interpretation": "Prezintă frontiere regionale/provinciale și localități în 1821; relevantă pentru seria ante-1856.",
+      "limit": "Nu poate valida prin ea însăși delimitările din 1856/1878 ori fiecare way din relația 2694163."
+    },
+    {
+      "source_id": "HIST04C-MAP06",
+      "family": "Țara Moldovei / Gubernia Basarabia / Principatele Unite",
+      "ohm_ids": [],
+      "title": "James Wyld, Treaty map shewing the boundaries of Russia & the Eastern European states, 25 februarie 1856",
+      "source_kind": "CONTEMPORARY_PRE_TREATY_PROPOSAL_MAP",
+      "institution": "Library of Congress, Geography and Map Division",
+      "shelfmark": "G7001.F2 1856 .W9; LCCN 2015591079",
+      "date": "1856-02-25",
+      "url": "https://www.loc.gov/item/2015591079/",
+      "verification": "LIBRARY_OF_CONGRESS_CATALOG_METADATA_VERIFIED; SCAN_NOT_COMPARED",
+      "interpretation": "Sursă cartografică despre propunerile de frontieră în contextul conferințelor de la Paris.",
+      "limit": "Tipărită ÎNAINTE de tratatul din 30 martie 1856: propunerea de pe hartă NU este automat frontiera finală ratificată."
+    },
+    {
+      "source_id": "HIST04C-CAT07",
+      "family": "Țara Chioarului / Transilvania / Banat",
+      "ohm_ids": [],
+      "title": "Magyar Nemzeti Levéltár, bazele cadastrale S78/S79",
+      "source_kind": "INSTITUTIONAL_COLLECTION_CATALOG_NOT_SPECIFIC_MAP",
+      "institution": "Magyar Nemzeti Levéltár",
+      "shelfmark": "Seriile S78/S79 (catalog general)",
+      "date": "Secolele XIX–XX, variabil",
+      "url": "https://aol.mnl.gov.hu/adatbazis/kataszteri-telekkonyvek/informacio",
+      "verification": "INSTITUTIONAL_COLLECTION_DESCRIPTION_ONLY",
+      "interpretation": "Pistă pentru identificarea planurilor cadastrale de comparație, dacă există foi pentru localitățile cercetate.",
+      "limit": "Existența unui fond cadastral general NU dovedește că arhiva deține foi pentru districtul Chioar ori că acoperă un an OHM anume."
+    }
+  ]
+}
