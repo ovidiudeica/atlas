@@ -1,0 +1,255 @@
+{
+  "phase": "HIST-0.4a-history-family-selection",
+  "date": "2026-11-11",
+  "source_main": "1eb65a4f5c77dfa8c233e33d0fa3597dfac9576a",
+  "source_OHM_snapshot": "2026-11-10T19:18:52Z",
+  "scope": "Historic families Tisa–Carpathians–Southern Bug–Dniester–Danube–Balkans–Black Sea. OHM original geometry unmodified.",
+  "primary_families": 11,
+  "primary_variants_selected_in_catalog": 37,
+  "secondary_family_groups": 10,
+  "by_selection_status": {
+    "UNREVIEWED_NOT_ADMITTED": 591,
+    "SELECTED_PRIMARY_FAMILY_CATALOG": 37,
+    "SUBORDINATE_BOUNDARY_SCOPE_REVIEW": 30,
+    "PRESELECTED_SUBORDINATE_CATALOG": 242,
+    "SUBORDINATE_GEOMETRY_REVIEW": 5
+  },
+  "secondary_family_details": [
+    {
+      "family_id": "comitate_judete",
+      "family": "Comitate și județe istorice, clasificare OHM",
+      "stage": "SUBORDINATE",
+      "versions_found": 115,
+      "provisional_overlap": 102,
+      "provisional_nonoverlap": 11,
+      "geometry_unresolved": 2,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "judete_moldova_1859",
+      "family": "Județe istorice moldovenești cu border_type nedeclarat",
+      "stage": "SUBORDINATE",
+      "versions_found": 14,
+      "provisional_overlap": 13,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 1,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "districte",
+      "family": "Districte administrative și de frontieră",
+      "stage": "SUBORDINATE",
+      "versions_found": 63,
+      "provisional_overlap": 58,
+      "provisional_nonoverlap": 5,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "uezds",
+      "family": "Uezduri imperiale ruse",
+      "stage": "SUBORDINATE",
+      "versions_found": 29,
+      "provisional_overlap": 26,
+      "provisional_nonoverlap": 3,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "cercuri",
+      "family": "Cercuri administrative istorice",
+      "stage": "SUBORDINATE",
+      "versions_found": 8,
+      "provisional_overlap": 8,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "regiuni_oblast",
+      "family": "Regiuni/oblasturi istorice",
+      "stage": "SUBORDINATE",
+      "versions_found": 32,
+      "provisional_overlap": 22,
+      "provisional_nonoverlap": 10,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "eialete",
+      "family": "Eialete otomane",
+      "stage": "SUBORDINATE",
+      "versions_found": 7,
+      "provisional_overlap": 4,
+      "provisional_nonoverlap": 1,
+      "geometry_unresolved": 2,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "voievodate",
+      "family": "Voievodate istorice",
+      "stage": "SUBORDINATE",
+      "versions_found": 3,
+      "provisional_overlap": 3,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "județe_1941_44",
+      "family": "Județele administrației românești de la est de Nistru (1941–1944)",
+      "stage": "SUBORDINATE",
+      "versions_found": 3,
+      "provisional_overlap": 3,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    },
+    {
+      "family_id": "gubernii",
+      "family": "Alte gubernii și guvernorate",
+      "stage": "SUBORDINATE",
+      "versions_found": 3,
+      "provisional_overlap": 3,
+      "provisional_nonoverlap": 0,
+      "geometry_unresolved": 0,
+      "editorial_selection": "FAMILY_PRESELECTED_UNTIL_SCOPE_AND_SOURCES_REVIEW",
+      "tree_relation": "NOT_ESTABLISHED"
+    }
+  ],
+  "import_status": "NO_IMPORT_NO_EDIT_NO_TREE",
+  "caveats": [
+    "DRAFT study mask: not legally or geographically certified",
+    "Selection concerns historical families in a catalog, not geometric/legal acceptance",
+    "Time frames are OHM labels, not independent source qualification",
+    "Missing relations in 905 subset do not imply absent OHM globally",
+    "No parent-child edges were asserted",
+    "Some secondary families only touch/cross preliminary Tisa/mountain boundary; review scope before incorporation",
+    "Romanian 1941-1944 administrative counties and occupation district labels must not be conflated"
+  ],
+  "github_chunks": [
+    {
+      "file": "selections-01.csv",
+      "rows": 45,
+      "sha256": "04bdd8e7b4583f7ec43d70aca7238228928d6afadb59fdd3fd7942290a53741a"
+    },
+    {
+      "file": "selections-02.csv",
+      "rows": 45,
+      "sha256": "954b96e8a647bedc65fe2bd5d330f65bbb1241f426dc777ed27d972f28da95ef"
+    },
+    {
+      "file": "selections-03.csv",
+      "rows": 45,
+      "sha256": "06e916b6e96a6ceb5aec83d3128b281def51a2ab7deedbb4189eb594891f896f"
+    },
+    {
+      "file": "selections-04.csv",
+      "rows": 45,
+      "sha256": "ad45b27d2c4912c37d7459a265cc8a659f9025e9dc439ce00a4dfb78e11e5feb"
+    },
+    {
+      "file": "selections-05.csv",
+      "rows": 45,
+      "sha256": "a173301c6db6fd3fd6efd8d97c3f4ce908fbad3cde9530fbcd4dc2ab0206ad9e"
+    },
+    {
+      "file": "selections-06.csv",
+      "rows": 45,
+      "sha256": "b9fc340eaf7834d925412df87280930b4937225899c3c8ffc6ef22e1e9199de9"
+    },
+    {
+      "file": "selections-07.csv",
+      "rows": 45,
+      "sha256": "f7c89b39edf55f7adc25329538faeacc2b80d033e4e9d4b0e44cd8806613c9eb"
+    },
+    {
+      "file": "selections-08.csv",
+      "rows": 45,
+      "sha256": "a9e869d16a6e00e04ff2220b4a96aa517d12cd9edc24ba98111ea53d659dee57"
+    },
+    {
+      "file": "selections-09.csv",
+      "rows": 45,
+      "sha256": "7b7ec5a41210b4bf363bf9af9a06c7eb7b5740a2fa7de3f60c573951d759bbeb"
+    },
+    {
+      "file": "selections-10.csv",
+      "rows": 45,
+      "sha256": "0e628248581cbf6ec7e003622e2ccfdde155d887ecc90ed4d73e7cc75e655e0f"
+    },
+    {
+      "file": "selections-11.csv",
+      "rows": 45,
+      "sha256": "36839175978457dddfb498c2d89877286955cd5263d88ab1910769f3369ad1d5"
+    },
+    {
+      "file": "selections-12.csv",
+      "rows": 45,
+      "sha256": "e017ef37d3e74b5c4cb158f84a66cf6398a4a095aa1c2bb7f0c2443ce79c7cb2"
+    },
+    {
+      "file": "selections-13.csv",
+      "rows": 45,
+      "sha256": "5f865c16c81c4294cfe20519d81d9a56b0427a2284c1f9e238b8b83e50517cb1"
+    },
+    {
+      "file": "selections-14.csv",
+      "rows": 45,
+      "sha256": "5bf78ac48302b7c612a8f8ff655403b162f1a55f472dd068f4541e3c8a5b4af1"
+    },
+    {
+      "file": "selections-15.csv",
+      "rows": 45,
+      "sha256": "62e2b1bd4c62cd23cc5c61b577800b404d4b718022fcb6131daec4ee1d8b7684"
+    },
+    {
+      "file": "selections-16.csv",
+      "rows": 45,
+      "sha256": "9eb02acde2a38910c1186ccd8b8b13d86594eb89d39429ba87533a6fa1eef8c5"
+    },
+    {
+      "file": "selections-17.csv",
+      "rows": 45,
+      "sha256": "4976643eb990690f73dd4425bd2e8887933566dbda1bd8350493bbea0f43346c"
+    },
+    {
+      "file": "selections-18.csv",
+      "rows": 45,
+      "sha256": "7375504a153ed050eb9dffbf9470e0c6ec06ab5298beafb3b14cfb42e8e34aba"
+    },
+    {
+      "file": "selections-19.csv",
+      "rows": 45,
+      "sha256": "91ef84ac84e181a170e08ee865014496fe5c9a0f5e7328c7c9050cfbb88ca201"
+    },
+    {
+      "file": "selections-20.csv",
+      "rows": 45,
+      "sha256": "2b8ee14678f558f04475ee5b7cbfe5b90469a40c7a12f953e94ae9647be20ce2"
+    },
+    {
+      "file": "selections-21.csv",
+      "rows": 5,
+      "sha256": "d901f184d6257778942b0bbac1394a6ec53153b9ed3fa54308ebc2cbe8fd3f20"
+    }
+  ],
+  "validation": {
+    "per_id_unique": 905,
+    "primary_selected": 37,
+    "secondary_provisional": 242,
+    "secondary_boundary_review": 30,
+    "secondary_geometry_review": 5,
+    "unreviewed": 591,
+    "all_imports_unauthorized": true
+  }
+}
