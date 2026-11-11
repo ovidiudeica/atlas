@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-const dir=path.dirname(new URL(import.meta.url).pathname);
+import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url));
 const read=(name)=>JSON.parse(fs.readFileSync(path.join(dir,name),'utf8'));
 const gate=read('individual-admission-per-id-37.json');
 const sources=read('source-register.json');
