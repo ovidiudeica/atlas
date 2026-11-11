@@ -1,0 +1,115 @@
+[
+  {
+    "id": "H04B-TIME-001",
+    "severity": "HIGH",
+    "relation_ids": [
+      2747433
+    ],
+    "description": "OHM end_event says Austro-Hungarian Compromise for variant ending 1732-12-31; Compromise was 1867.",
+    "evidence": "OHM end_event vs Encyclopaedia Britannica / 1911 Encyclopaedia Britannica",
+    "action": "Verify historical record and OHM metadata separately. No automatic edit."
+  },
+  {
+    "id": "H04B-TIME-002",
+    "severity": "HIGH",
+    "relation_ids": [
+      2747435,
+      2747434
+    ],
+    "description": "Unrepresented interval of 3517 days between 1851-05-12 and 1860-12-27; both OHM polygons identical.",
+    "evidence": "OHM interval and geometric XOR=0",
+    "action": "Acquire missing historic period documentary evidence; do not interpolate years."
+  },
+  {
+    "id": "H04B-TIME-003",
+    "severity": "HIGH",
+    "relation_ids": [
+      2693255,
+      2877966
+    ],
+    "description": "Check interval between 1944-04-01 and 1945-03-09; relation overlap/control context in WWII also unsettled.",
+    "evidence": "OHM start/end date metadata",
+    "action": "Find 1944-1945 political and military administrative documents and distinguish territorial control from sovereign borders."
+  },
+  {
+    "id": "H04B-SRC-004",
+    "severity": "HIGH",
+    "relation_ids": [
+      2747435,
+      2747434
+    ],
+    "description": "Neither relation nor member way has source tags.",
+    "evidence": "OHM source survey of 15 way member refs each",
+    "action": "Locate independent historic map or documents; preserve as blocked."
+  },
+  {
+    "id": "H04B-SRC-005",
+    "severity": "HIGH",
+    "relation_ids": [
+      2694164,
+      2929115,
+      2929116,
+      2747433,
+      2746573
+    ],
+    "description": "Historical map source years after earlier geometry dates (e.g., 1850 cartography for 1417–1420 Wallachia); newer cartography does not prove earlier political frontier.",
+    "evidence": "OHM way source:date tags",
+    "action": "Require date-appropriate maps and independent legal sources for historical line position."
+  },
+  {
+    "id": "H04B-SRC-006",
+    "severity": "HIGH",
+    "relation_ids": [
+      2693464,
+      2693259,
+      2693258,
+      2693257,
+      2693256,
+      2693255,
+      2877966
+    ],
+    "description": "Multiple WWII/interwar historical boundaries cite LSIB version 2024 / present geodata proxies; source currency is not historical authenticity.",
+    "evidence": "OHM member way source tags",
+    "action": "Qualify maps and treaty descriptions contemporary to each variant."
+  },
+  {
+    "id": "H04B-GEO-007",
+    "severity": "OBSERVATION",
+    "relation_ids": [
+      2694163,
+      2746689,
+      2694153,
+      2694154
+    ],
+    "description": "Moldavia gain 1856 and Bessarabia gain 1878 geometrically coincide exactly in OHM: ~10025.49 km²; no historical legal certification implied.",
+    "evidence": "Exact polygon operations on original OHM members + 1878 Berlin Treaty",
+    "action": "Retain independent primary treaty and border-map checks."
+  },
+  {
+    "id": "H04B-GEO-008",
+    "severity": "OBSERVATION",
+    "relation_ids": [
+      2746573,
+      2747562,
+      2746839
+    ],
+    "description": "1751 civil Banat and Military Frontier reconstruct pre-1751 Banat to within ~7.09 km²; intersection between partitions 0 km².",
+    "evidence": "Exact boolean operations on original OHM geometry",
+    "action": "Investigate residual 7 km² and 1751 historical administrative acts."
+  },
+  {
+    "id": "H04B-GEO-009",
+    "severity": "OBSERVATION",
+    "relation_ids": [
+      2690518,
+      2878295,
+      2747435,
+      2747434,
+      2746380,
+      2746401
+    ],
+    "description": "1765 Transylvania status changed without OHM geometric change; Chioar both versions identical; Bukovina two endpoints differ ~4.07 km².",
+    "evidence": "OHM XOR geometric comparison",
+    "action": "Do not collapse historical variants solely due to identical geometry."
+  }
+]
