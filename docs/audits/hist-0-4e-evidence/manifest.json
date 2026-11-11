@@ -1,0 +1,46 @@
+{
+  "phase": "HIST-0.4e",
+  "audit_date": "2026-11-11",
+  "base_main": "c202b3140c663a269dec40a0eb729986c730b9a8",
+  "audit_scope": "diversified Arcanum, eHarta and private Google Drive evidence with per-ID eligibility gate",
+  "source_catalog_entries": 12,
+  "sources_are_independent_primary_map_sheets_only": false,
+  "unique_ohm_relations": 37,
+  "priorities": {
+    "P0": 3,
+    "P1": 25,
+    "P2": 9
+  },
+  "relations_with_additional_research_leads": 19,
+  "relations_without_new_relevant_research_leads": 18,
+  "individually_certified_historical_boundaries": 0,
+  "approximate_historical_boundaries_admitted": 0,
+  "variants_authorized_for_import": 0,
+  "application_code_changed": false,
+  "current_actual_geometries_changed": false,
+  "ohm_geometry_changed": false,
+  "tree_or_ui_changed": false,
+  "private_drive_assets_published": false,
+  "licensed_arcanum_tiles_downloaded_or_published": false,
+  "paid_orders_or_subscriptions": false,
+  "independently_verified_controls": {
+    "validator": "PASS 37/37 unique, 3/25/9, 12 source IDs, 19 candidates, 0 admissions, Chioar IoU, EPSG:31700",
+    "chioar_kmz_vs_ohm_spatial_comparison": "PASS, independently recomputed two identical executions",
+    "published_raw_repo_artifact_checks": "7/7 SHA256 exact raw Github HTTP bytes"
+  },
+  "acquired_source_hashes": {
+    "private_drive_admin_kmz": "7b5f799a41bd6e133bb2b61e187e86504d049a929512c90f606966aadeaf427b",
+    "geo_spatial_1862_georeferenced_geotiff": "584c02b98939b0d4416babc0fc7fd50da2f8de042e877bc50e8fc1a8da8fe181"
+  },
+  "publication_policy": "Only process descriptions, bibliographic links and derived metrics in GitHub; no private Drive original KMZ/JPG, full GeoTIFF, Arcanum tiles or copyright-unclear reproductions.",
+  "artifacts_sha256": {
+    "README.md": "3fbcacb65ad88d16d5fe8dacebefb7549f038bfc441c8d3447e3849dc37a6800",
+    "source-register.json": "a54c748e0abb39f974aed1d8cd3d93ac6bedc2cdcd6c33218c16a939bbcc5e17",
+    "individual-admission-per-id-37.json": "b797fde705bb993dbbc62a8b7a5b1fb699cb4f763ea36a1f9f669288c6a49e63",
+    "chioar-drive-kmz-vs-ohm-geometry.json": "a438d9693f454e9f90bf3df35593cfe7bf3f966321d74535bbad2fbcd62400b7",
+    "transylvania-1862-geotiff-technical-metadata.json": "d3bc27e65b4121a74b3e610160a6a54909409096f0613711f1c27cb6fd2722e4",
+    "compare-chioar-kmz-to-ohm.mjs": "0ff65f37f52a2c6426858f00ffba5e21ce91b3d91cb81e738a26b0c45e2bb837",
+    "validate-evidence.mjs": "73ad91e561f8a98424318380da71d1abe38b864818a27e15963ab0ea45c8d10c"
+  },
+  "verdict": "DIVERSIFIED_SOURCE_DISCOVERY_PASS_INDIVIDUAL_ADMISSION_GATE_ESTABLISHED_ZERO_IMPORTS"
+}
