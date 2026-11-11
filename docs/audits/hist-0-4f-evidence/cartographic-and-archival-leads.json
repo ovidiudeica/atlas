@@ -1,0 +1,122 @@
+{
+  "phase": "HIST-0.4f",
+  "audit_date": "2026-11-11",
+  "qualification_basis": "Only public institutional indexes and already obtained sources are cataloged. Titles, shelfmarks and legal references do not prove the traced border.",
+  "sources": [
+    {
+      "id": "EH01-1862",
+      "organization": "geo-spatial.org / eHarta",
+      "title": "Karte des Grossfürstentums Siebenbürgen, fourth edition, Hermannstadt, 1862",
+      "url": "https://geo-spatial.org/vechi/download/karte-des-grossfuerstentums-siebenbuergen-harta-marelui-principat-al-transilvaniei",
+      "map_year": 1862,
+      "geotiff_sha256": "584c02b98939b0d4416babc0fc7fd50da2f8de042e877bc50e8fc1a8da8fe181",
+      "file_bytes": 76917140,
+      "dimensions": [
+        5472,
+        4369
+      ],
+      "projection": "EPSG:31700",
+      "legend_categories": [
+        "Landes",
+        "Kreis",
+        "Bezirk",
+        "Comitats"
+      ],
+      "assessed": "Raster acquired/inspected; 82 OHM ways fully geographically inside image; six manually selected border-line pixel locations in NW examined",
+      "not_assessed": "No complete independent 1862 Landes frontier line vector digitized. No georeferencing residual (RMS) verified. No legally certified historical correspondence for any way.",
+      "original_archive": "Haáz Rezső Museum via Hungarian Electronic Library per geo-spatial.org",
+      "copyright": "Downloading permitted; permission to republish this precise georeferenced derivative in Atlas Teritorial not established.",
+      "status": "PROVISIONAL_MAP_CROSSCHECK_ONLY"
+    },
+    {
+      "id": "MNL-KOVAR-954",
+      "organization": "Magyar Nemzeti Levéltár, Szabolcs-Szatmár-Bereg",
+      "title": "Kővár Vidék Levéltárának iratai, 1861–1876",
+      "url": "https://mnl.gov.hu/mnl/szszbml/hirek/kutass_online_5_szatmar_varmegye?theme=mnlvakbarat",
+      "fond": "954",
+      "documentary_period": "1861–1876",
+      "assessed": "Official archival inventory confirms records collection indexed for district Kővár in this period",
+      "not_assessed": "No individual record or maps downloaded, dated per-community border descriptions not extracted",
+      "copyright": "Consultation and reproduction permissions not qualified",
+      "status": "ARCHIVAL_FINDING_AID_ONLY"
+    },
+    {
+      "id": "MNL-KOVAR-1001-1055",
+      "organization": "Magyar Nemzeti Levéltár, Szabolcs-Szatmár-Bereg",
+      "title": "Kővár district administration, captaincy and courts 1861–1876",
+      "url": "https://mnl.gov.hu/mnl/szszbml/hirek/kutass_online_5_szatmar_varmegye?theme=mnlvakbarat",
+      "fonds": [
+        "1001 (1863–1866)",
+        "1002 (1862–1866)",
+        "1003 (1862–1866)",
+        "1051 (1867–1876)",
+        "1052 (1867–1876)",
+        "1053 (1861–1871)",
+        "1054 (1867–1872)",
+        "1055 (1874–1876)"
+      ],
+      "assessed": "Published archival inventory consulted",
+      "not_assessed": "Documents not read, no juridical 1876 border segmentation",
+      "status": "ARCHIVAL_FINDING_AID_ONLY"
+    },
+    {
+      "id": "HIM-BIXA719",
+      "organization": "Hadtörténeti Intézet és Múzeum, Térképtár",
+      "title": "Erdélyi Fejedelemség közigazgatási térképe, based on 1859 survey (1861), 24 sheets 1:144,000",
+      "url": "https://militaria.hu/hadtorteneti-intezet-es-muzeum/terkeptar",
+      "shelfmark": "B IX a 719",
+      "map_date": 1861,
+      "assessed": "Official historical military map archive catalog confirms administrative cartographic series",
+      "not_assessed": "Actual 24 original sheets not acquired, map georeference not done, 82 OHM ways not compared",
+      "status": "PRIORITY_INDEPENDENT_ADMINISTRATIVE_MAP_LEAD"
+    },
+    {
+      "id": "AT-ARCHIVE-719",
+      "organization": "Österreichisches Staatsarchiv, archival map catalogue",
+      "title": "Administrativkarte des Großfürstentums Siebenbürgen (1861-02-01)",
+      "url": "https://www.archivinformationssystem.at/archivplansuche.aspx?ID=6201811",
+      "catalog_item": "719",
+      "assessed": "Catalogue listing for specific administrative map and date verified",
+      "not_assessed": "Original sheet image and provenance link relative to HIM B IX a 719 not established",
+      "status": "ARCHIVE_CATALOG_ONLY"
+    },
+    {
+      "id": "BOROVSZKY-1876",
+      "organization": "OSZK / Magyar Elektronikus Könyvtár",
+      "title": "Borovszky, Magyarország vármegyéi és városai, commentary on Kővárvidék incorporation in 1876",
+      "url": "https://www.mek.oszk.hu/09500/09536/html/0020/19.html",
+      "legislative_reference": "1876: XXXIII. t.-cz.",
+      "assertion": "Secondary source records dissolution and attribution of 43 communities to Szatmár County",
+      "assessed": "Bibliographic historical text read",
+      "not_assessed": "Actual official statute not directly verified and no full district border traced from named communities",
+      "status": "SECONDARY_HISTORICAL_CONTEXT_NOT_LEGAL_CERTIFICATE"
+    },
+    {
+      "id": "MERSICH-1859",
+      "organization": "Taylor & Francis / Journal of Maps",
+      "title": "Creating a digital historical map of the German-inhabited areas in southern Transylvania in 1848",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/17445647.2023.2227214",
+      "mapping_reference": "1806 Lipszky map and 1859 Andreas Mersich administrative map",
+      "assessed": "Peer-reviewed map methodology identifies alternative contemporary archival source for Saxon seats",
+      "not_assessed": "No full province border corroborated; map does not cover entirety of Transylvania",
+      "status": "PARTIAL_REGIONAL_CROSSCHECK_LEAD"
+    },
+    {
+      "id": "ARCANUM-RESEARCH",
+      "organization": "Arcanum Maps",
+      "title": "Historic Habsburg military and cadastral georeferenced surveys",
+      "url": "https://maps.arcanum.com/",
+      "assessed": "Availability of historic georeferenced map collections established",
+      "not_assessed": "No authoritative border polygon extracted or exact Arcanum sheet dated/compared against OHM ways in HIST-0.4f; no reuse rights",
+      "status": "CONTEXTUAL_GEOSPATIAL_LAYER_ONLY"
+    }
+  ],
+  "access_protection": {
+    "arcanum_tiles_downloaded_or_redistributed": false,
+    "historical_images_added_to_git": false,
+    "private_drive_kmz_added_to_git": false,
+    "orders_placed": false,
+    "payments_made": false,
+    "original_museum_images_acquired": false
+  }
+}

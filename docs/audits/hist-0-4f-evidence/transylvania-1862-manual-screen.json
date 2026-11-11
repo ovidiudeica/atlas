@@ -1,0 +1,132 @@
+{
+  "phase": "HIST-0.4f",
+  "audit_date": "2026-11-11",
+  "source": "1862 Siebenbürgen georeferenced GeoTIFF (raster; archive identifier EH01)",
+  "target": "North-western differing boundary arc between OHM 2829384 and 2878295",
+  "new_way": 200503147,
+  "old_ways": [
+    200503149,
+    200503150,
+    200503151
+  ],
+  "method": "Six non-blind manually selected provisional points on a visually identifiable dashed Landes-style line in the 1862 map crop, with prior awareness of both OHM variants. Projected via raster georeference EPSG:31700; point-to-arc shortest planar distances. Subject to observer-selection bias, map symbol width and unknown warp residuals. Screening only, NOT an independent exact boundary trace or historic georeferencing RMSE.",
+  "crop_origin_raster_px": [
+    450,
+    400
+  ],
+  "crop_display_scale": 2.5,
+  "original_raster_resolution_m_per_pixel": 70.17647800000002,
+  "manual_digitization_uncertainty": "Not formally calibrated; map georeferencing residual and symbol line width unknown",
+  "sample_points": [
+    {
+      "name": "NW-A",
+      "xy_crop": [
+        588,
+        258
+      ],
+      "px_full": [
+        685.2,
+        503.2
+      ],
+      "projected_xy_m": [
+        333472.12,
+        668206.34
+      ],
+      "distance_to_1851_1867_way_m": 887.7,
+      "distance_to_1765_1851_way_group_m": 377
+    },
+    {
+      "name": "NW-B",
+      "xy_crop": [
+        589,
+        284
+      ],
+      "px_full": [
+        685.6,
+        513.6
+      ],
+      "projected_xy_m": [
+        333500.19,
+        667476.51
+      ],
+      "distance_to_1851_1867_way_m": 829.3,
+      "distance_to_1765_1851_way_group_m": 1106
+    },
+    {
+      "name": "NW-C",
+      "xy_crop": [
+        588,
+        314
+      ],
+      "px_full": [
+        685.2,
+        525.6
+      ],
+      "projected_xy_m": [
+        333472.12,
+        666634.39
+      ],
+      "distance_to_1851_1867_way_m": 1158.2,
+      "distance_to_1765_1851_way_group_m": 1948.6
+    },
+    {
+      "name": "NW-D",
+      "xy_crop": [
+        592,
+        347
+      ],
+      "px_full": [
+        686.8,
+        538.8
+      ],
+      "projected_xy_m": [
+        333584.4,
+        665708.06
+      ],
+      "distance_to_1851_1867_way_m": 936.7,
+      "distance_to_1765_1851_way_group_m": 2456.3
+    },
+    {
+      "name": "NW-E",
+      "xy_crop": [
+        592,
+        379
+      ],
+      "px_full": [
+        686.8,
+        551.6
+      ],
+      "projected_xy_m": [
+        333584.4,
+        664809.8
+      ],
+      "distance_to_1851_1867_way_m": 843.8,
+      "distance_to_1765_1851_way_group_m": 1652
+    },
+    {
+      "name": "NW-F",
+      "xy_crop": [
+        590,
+        405
+      ],
+      "px_full": [
+        686,
+        562
+      ],
+      "projected_xy_m": [
+        333528.26,
+        664079.96
+      ],
+      "distance_to_1851_1867_way_m": 1178,
+      "distance_to_1765_1851_way_group_m": 1068.7
+    }
+  ],
+  "summary": {
+    "median_distance_to_1851_1867_arc_m": 912.2,
+    "median_distance_to_1765_1851_arc_m": 1379,
+    "point_count": 6,
+    "points_closer_to_1851_variant": 4
+  },
+  "historical_admission": false,
+  "confidence": "SCREENING_ONLY_NO_CERTIFICATION"
+}

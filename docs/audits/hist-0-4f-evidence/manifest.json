@@ -1,0 +1,62 @@
+{
+  "phase": "HIST-0.4f",
+  "audit_date": "2026-11-11",
+  "base_commit": "d6d6be71737976cd2329fc5626140646654ad36e",
+  "scope": "Targeted per-way spatial comparison; one variant-differing arc inspected as non-blinded preliminary map overlay; no historical border certification.",
+  "counts": {
+    "relation_dossiers": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "transylvania_1851_1867_way_records": 82,
+    "transylvania_raster_coverage_ways": 82,
+    "transylvania_historically_approved_ways": 0,
+    "transylvania_temporal_shared_identical_ways": 81,
+    "transylvania_changed_way": 200503147,
+    "transylvania_old_alternative_ways": 3,
+    "chioar_ways_with_KMZ_distance": 15,
+    "provisional_manual_raster_points": 6,
+    "manual_points_closer_to_current_variant": 4,
+    "individually_certified_historic_boundaries": 0,
+    "admissions": 0
+  },
+  "area_difference_temporal_projected_km2": 93.719812,
+  "raster_map_sha256": "584c02b98939b0d4416babc0fc7fd50da2f8de042e877bc50e8fc1a8da8fe181",
+  "private_KMZ_sha256": "7b5f799a41bd6e133bb2b61e187e86504d049a929512c90f606966aadeaf427b",
+  "original_OHM_gzip_sha256": {
+    "2747435": "c489c9f80139a8d01d4c69ead195cf24f24639da2d486b278c4d34b37c3539d4",
+    "2829384": "82cddb7e81c0d804577e12911502c59a755dcd0f22c187343b06f6e70bbb7d70",
+    "2878295": "70fba9f8cd519287540c27a0164388b49db477a4c1801fba6736f312a24b0887"
+  },
+  "reproducibility": "5 deterministic local JSON artifacts rerun twice each with equal SHA256; 13 published raw GitHub artifact SHA256 digests verified; validate-evidence.mjs PASS from published files.",
+  "repo_artifact_sha256": {
+    "README.md": "6bd671017fbec30a2aec291f1b6261d08d7bd179cc3610ebf675c5a8644b6d33",
+    "per-way-gate.json": "b2c3432d5822432c0a4b3e720c35ebfb3cda83982a6432a1062a8e93ac22c8b7",
+    "transylvania-temporal-overlay.json": "b99d4c010b7eb5888a7825ae66fb94d72661a744655aef4ac025da7e0aa43163",
+    "chioar-per-way-distance.json": "d5914831aaa43bc2cb94a92b13795b2d1170008f119dd3ab5bdca57af46ea5ac",
+    "transylvania-1862-manual-screen.json": "cdaa9447610f5aebaa863cf5a5666cbc2ee516b60bdaf20a18df401b9412cc23",
+    "cartographic-and-archival-leads.json": "7fa28425d7fc13d7ebe93c8b2063fa388963f1a203617f47576744d6f47a9538",
+    "individual-qualification-37.json": "e3d61d1adec22fe77e9126279d2b3927d39f011129bbac3627a7c42340406187",
+    "validate-evidence.mjs": "70fd0dde18f40f2beba4edfd3e5d11489bd1c02acd8e36e62ecf72098da7d4eb",
+    "scripts/hist04f-stage1.mjs": "bfa5303cb8615360e37c9b08658b018beb335d3933398954e360be2cff074bc8",
+    "scripts/hist04f-transylvania-temporal.mjs": "e5378be2f829ad28af118cfa9e8ac20e2f20f1fcb8f4f46b6af0c1d1ea95533c",
+    "scripts/hist04f-distance-chioar.mjs": "e7fc35618dfea7706f2c0e98339ee10eac50a1239e096c6fb401bf36da6f62c9",
+    "scripts/hist04f-map-checkpoints.mjs": "57661a74c25fca1fa895202824b3685d47f8e77604584ad663efef3f6e9f50bb",
+    "scripts/hist04f-build-screen.mjs": "9500dda8864a5dfe0971efb48fe261e76d157112fa96787cfb93318a4facf4de"
+  },
+  "privacy_rights": {
+    "image_files_committed": 0,
+    "private_KMZ_committed": false,
+    "arcanum_tiles_downloaded": false,
+    "arcanum_tiles_committed": false,
+    "map_raster_committed": false,
+    "orders_placed": false,
+    "payments_made": false,
+    "website_code_modified": false,
+    "ACTUAL_OSMB_geometry_modified": false,
+    "OHM_geometry_modified": false
+  },
+  "qualifiers": "Coverage inside raster != historical correspondence. Manual points selected non-blind and do not establish georeferencing RMS. No source rights or legal chronology fully resolved.",
+  "verdict": "PER_WAY_SCREENING_REPRODUCED_TEMPORAL_ARC_LOCALIZED_NO_AUTHENTICATED_FULL_BORDER_TRACE_NO_ADMISSIONS",
+  "next_gate": "HIST-0.4g: acquire or verify accessible 1861 administrative sheet(s), trace independent Landes line for all relevant ways, compare residuals, and qualify Kővár 1861–1876 archival records and 1876 law."
+}
