@@ -1,0 +1,45 @@
+{
+  "name": "Karte des Grossfürstentums Siebenbürgen (1862)",
+  "source": "geo-spatial.org",
+  "uri": "https://www.geo-spatial.org/vechi/file_download/29356",
+  "file_size_bytes": 76917140,
+  "file_sha256": "584c02b98939b0d4416babc0fc7fd50da2f8de042e877bc50e8fc1a8da8fe181",
+  "width": 5472,
+  "height": 4369,
+  "geo_keys": {
+    "GTModelTypeGeoKey": 1,
+    "GTRasterTypeGeoKey": 1,
+    "GTCitationGeoKey": "Dealul Piscului 1970/ Stereo 70 (deprecated)",
+    "GeogCitationGeoKey": "Dealul Piscului 1970",
+    "GeogAngularUnitsGeoKey": 9102,
+    "GeogTOWGS84GeoKey": {
+      "0": 28,
+      "1": -121,
+      "2": -77
+    },
+    "ProjectedCSTypeGeoKey": 31700,
+    "ProjLinearUnitsGeoKey": 9001
+  },
+  "bbox": [
+    285387.1943734557,
+    396918.11274286505,
+    669392.8819894558,
+    703519.145124865
+  ],
+  "origin": [
+    285387.1943734557,
+    703519.145124865,
+    0
+  ],
+  "resolution": [
+    70.17647800000002,
+    -70.17647799999999,
+    0
+  ],
+  "tile_width": 256,
+  "tile_height": 256,
+  "samples": 3,
+  "compression": 8,
+  "photometric": 2,
+  "geo_referencing_present": true
+}
