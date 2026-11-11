@@ -1,0 +1,164 @@
+[
+  {
+    "id": "S01",
+    "title": "Tratatul de la Paris, 30 martie 1856, art. XX–XXI",
+    "type": "TRATAT_ORIGINAL_REPRODUCERE",
+    "url": "https://content.ecf.org.il/files/M00934_TreatyOfParis1856English.pdf",
+    "relevance": "Definirea transferului sudului Basarabiei către Principatul Moldovei; frontiera descrisă textual, fără digitalizarea anexelor",
+    "verification": "WEB_TEXT_AND_PDF_PAGE_5_VISUAL_2026_11_11",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S02",
+    "title": "Tratatul de la Berlin, 13 iulie 1878, art. XLIII–XLVI, FRUS 1878",
+    "type": "TRATAT_REPRODUCERE_DIPLOMATICA",
+    "url": "https://history.state.gov/historicaldocuments/frus1878/d523",
+    "relevance": "Independență și retrocedare Basarabia; textul FRUS are posibilă transcriere 1858 pentru tratatul din 1856 — nu se normalizează necritic",
+    "verification": "US_STATE_DEPARTMENT_DIPLOMATIC_REPRODUCTION",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S03",
+    "title": "Convenția de la Paris, 7 august 1858",
+    "type": "ACT_INTERNATIONAL_REPRODUS",
+    "url": "https://legislatie.just.ro/public/DetaliiDocument/21852",
+    "relevance": "Statutul Principatelor Unite ale Moldovei și Valahiei, nu hartă exactă",
+    "verification": "ROMANIAN_LEGAL_PORTAL_SEARCH_TEXT",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S04",
+    "title": "Encyclopaedia Britannica 1911: Transylvania",
+    "type": "ENCICLOPEDIE_ISTORICA",
+    "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Transylvania",
+    "relevance": "1765 titlul de Mare Principat, Compromisul austro-ungar 1867 și integrarea 1868, nu încheiere 1732",
+    "verification": "HISTORICAL_CONTEXT_VERIFIED",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S05",
+    "title": "Izvoare de demografie istorică, vol. II, Arhivele Statului, 1987, p.28",
+    "type": "PUBLICATIE_ARHIVISTICA",
+    "url": "https://biblioteca-digitala.ro/reviste/carte/arhivele-nationale/dl.asp?filename=fenesan_izvoare-demografie-istorica_vol-II_XlX_transilvania_1987.pdf",
+    "relevance": "Chioar: district separat în 1849–1860; desființare și împărțire în 1876; nu include coordonate certificate OHM",
+    "verification": "WEB_SEARCH_EXTRACT_TEXT_VISUAL_SCREENSHOT_UNAVAILABLE",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S06",
+    "title": "Máthiás Bél, monografie despre Chioar, 1725, prezentată de Gazeta de Maramureș",
+    "type": "REFERINTA_LA_DOCUMENT_ISTORIC",
+    "url": "https://www.gazetademaramures.ro/prima-monografie-a-arii-chioarului-24925/tipareste-pagina",
+    "relevance": "Indică o monografie din 1725 și ediția Arhivei Maramureșene 2020; originalul și harta istorică nu au fost confruntate cu conturul OHM",
+    "verification": "ARTICLE_REPORTING_ARCHIVAL_SOURCE_NOT_DIGITIZED",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S07",
+    "title": "Adam Mezes, Insecure Boundaries, CEU, 2013, p. 39",
+    "type": "STUDIU_ACADEMIC",
+    "url": "https://www.etd.ceu.edu/2013/mezes_adam.pdf",
+    "relevance": "1751 separarea civil/militar în Banat; organizarea efectivă a frontierei militare s-a făcut gradual",
+    "verification": "WEB_EXTRACT_PDF_SCREENSHOT_UNAVAILABLE",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S08",
+    "title": "Encyclopedia of Ukraine — Bukovyna",
+    "type": "ENCICLOPEDIE_SPECIALIZATA",
+    "url": "https://www.encyclopediaofukraine.com/pages/B/U/Bukovyna.htm",
+    "relevance": "1774–1786 guvernare militară, 1787–1849 legătura cu Galiția, 1849 țară a coroanei, 1861 statut autonom",
+    "verification": "SEARCH_RESULT_SOURCE_TEXT_VERIFIED",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S09",
+    "title": "Arhivele Voivodinei — inventar fonduri F.23–F.25",
+    "type": "CATALOG_DE_ARHIVA",
+    "url": "https://arhivvojvodine.org.rs/en/funds-and-collections-of-the-archives-of-vojvodina/",
+    "relevance": "Fonduri ale administrației Voivodinei Sârbești și Banatului Timișan (1849–1861), fără contur GIS",
+    "verification": "ARCHIVE_FONDS_METADATA",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S10",
+    "title": "Tratatul de la București, 10 august 1913 — descriere",
+    "type": "TRATAT_ISTORIC_REZUMAT",
+    "url": "https://www.macedonianleague.org/documents/the-treaty-of-bucharest-august-10-1913",
+    "relevance": "Transferul sudului Dobrogei în 1913, fără demonstrarea conturului OHM",
+    "verification": "TREATY_SUMMARY_NOT_ORIGINAL_FULL_MAP",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S11",
+    "title": "Tratatul de la Craiova, 7 septembrie 1940, anexa A",
+    "type": "ACT_NORMATIV_ORIGINAL",
+    "url": "https://legislatie.just.ro/public/DetaliiDocument/23040",
+    "relevance": "Traseul frontierelor româno-bulgare și anexă textuală; hărțile 1:200000 și 1:30000 trebuie recuperate separat",
+    "verification": "ROMANIAN_LEGAL_PORTAL_TEXT",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S12",
+    "title": "Tratatul de pace cu România, 10 februarie 1947, art. 1–2",
+    "type": "TRATAT_ORIGINAL_REPRODUS",
+    "url": "https://legislatie.just.ro/public/DetaliiDocument/126153",
+    "relevance": "Frontiere România 1947 și nulitatea arbitrajului din 1940; anexa cartografică necesită examinare proprie",
+    "verification": "ROMANIAN_LEGAL_PORTAL_TEXT",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S13",
+    "title": "USHMM Holocaust Encyclopedia — Transnistria Governorate",
+    "type": "MUZEU_REPUTABIL",
+    "url": "https://encyclopedia.ushmm.org/content/en/article/transnistria-governorate",
+    "relevance": "1941–1944 zonă românească de ocupație administrativă între Nistru și Bug, nu anexată ca teritoriu suveran; ocupația Odessei nu era completă în august",
+    "verification": "HISTORICAL_INSTITUTIONAL_CONTEXT",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S14",
+    "title": "US State Department, FRUS 1944 — Northern Bukovina",
+    "type": "DOCUMENT_DIPLOMATIC",
+    "url": "https://history.state.gov/historicaldocuments/frus1944v04/d793",
+    "relevance": "Note diplomatice despre ultimatum și transferuri în iunie 1940; perspectivă documentară a diplomației SUA",
+    "verification": "OFFICIAL_DIPLOMATIC_RECORD",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S15",
+    "title": "Cristian Constantin, Brăila „port-oraș” (1829–1840)",
+    "type": "STUDIU_ACADEMIC",
+    "url": "https://www.ceeol.com/search/article-detail?id=495124",
+    "relevance": "Contextul Tratatului de la Adrianopol și al Brăilei după 1829; contururile medievale ale Valahiei nedemonstrate",
+    "verification": "SCHOLARLY_ABSTRACT",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S16",
+    "title": "Consiliul Județean Timiș — Cronologia județului",
+    "type": "SURSĂ_INSTITUTIONALA_SECUNDARA",
+    "url": "https://www.cjtimis.ro/judetul-timis/cronologia-judetului-timis/",
+    "relevance": "1716–1718 instalarea administrației habsburgice și patentul imperial din 1849 pentru Voivodină",
+    "verification": "COUNTY_INSTITUTIONAL_TIMELINE",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S17",
+    "title": "Muzeul Virtual al Unirii — Unirea Transilvaniei, Banatului, Crișanei și Maramureșului",
+    "type": "MUZEU_ISTORIC",
+    "url": "https://mvu.ro/cum-s-au-unit-transilvania-banatul-crisana-si-maramuresul/",
+    "relevance": "1851 și 1854 reorganizări din Transilvania; statut district Chioar / reorganizare 1861",
+    "verification": "MUSEUM_HISTORICAL_CONTEXT",
+    "proves_OHM_geometric_boundary": false
+  },
+  {
+    "id": "S18",
+    "title": "Consiliul arhivistic sârb: fonduri Regional Administration, Timișoara",
+    "type": "CATALOG_ARCHIVISTIC",
+    "url": "https://arhivvojvodine.org.rs/en/funds-and-collections-of-the-archives-of-vojvodina/",
+    "relevance": "Prezența documentelor administrative 1849–1861 în fonduri; sunt necesare copii ale actelor pentru hotare",
+    "verification": "ARCHIVE_FINDING_AID",
+    "proves_OHM_geometric_boundary": false
+  }
+]

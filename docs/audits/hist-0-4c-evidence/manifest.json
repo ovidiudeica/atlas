@@ -1,0 +1,36 @@
+{
+  "phase": "HIST-0.4c",
+  "audit_date": "2026-11-11",
+  "base_main": "d8f63ee2256c2bd171e35f726c2e94a1a9179471",
+  "original_OHM_evidence": "HIST-0.4b / HIST-0.2 immutable",
+  "relations": 37,
+  "priority_origins": {
+    "P1_SOURCE_OR_CHRONOLOGY_REVIEW": 25,
+    "P2_SOURCE_RELEVANCE_REVIEW": 9,
+    "P0_TARGETED_EVIDENCE_REQUIRED": 3
+  },
+  "independently_contextualized_variants": 37,
+  "P0_with_independent_relevant_context": 3,
+  "documentary_sources_registered": 18,
+  "validated_historical_geometric_boundaries": 0,
+  "admitted_variants": 0,
+  "geometry_changes": 0,
+  "tree_changes": 0,
+  "application_changes": 0,
+  "assessment": "TARGETED_DOCUMENTARY_RESEARCH_COMPLETED_ALL_37 / 3_P0_NOT_LEGALLY_OR_GEOMETRICALLY_CLOSED / FINAL_IMPORT_BLOCKED",
+  "evidence_policy": "Independent sources corroborate specific events / administrative existence but do not validate exact OHM polygons; absence of way source cannot be replaced by approximate map.",
+  "caveat": "Web search evidence can lack direct access to full publication for some sources (PDF screenshots failed); source verification status is per-source.",
+  "artifact_sha256": {
+    "qualification-targeted-per-id-37.csv": "b869af3bed0c2ce5ee7142c4c05670cdcd4de60eb39443b75412462d7b5cfa0a",
+    "external-source-register-18.json": "fb36e059e0ef8d0803622edf7f76b269704ba76ea613f97dade5f6bc2b687d43",
+    "p0-targeted-findings-3.json": "139950df0204bc1804cec654f30fe080d5ac3900fd8a1300d38f87e189cbcee5",
+    "family-status-11.csv": "9f316dba4b72c0c22e43806f4935e24942a9261a331a7b602662df517219169e",
+    "exceptions-persisting-7.json": "a19f13b9e824508fc7bde5353c40917969a3bf5ffd770ab460aaf0f33fc9202d",
+    "README.md": "5e9822aaee7a599abcb884eeacc71e4715dd6911b8fe920be644fc1b4b6a5997"
+  },
+  "git_byte_exact_audit": {
+    "source_commit": "093ca84505217c505eccc615e152d5ff4921ebc2",
+    "artifact_git_bytes_verified": 6,
+    "normalization": "Transfer-normalized LF and final newline; manifest is based on actual published bytes, local review files synchronized."
+  }
+}
