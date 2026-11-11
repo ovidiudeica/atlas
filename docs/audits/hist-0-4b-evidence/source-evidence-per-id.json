@@ -1,0 +1,1000 @@
+[
+  {
+    "id": 2746573,
+    "family": "Banatul Timișoarei",
+    "source_keys": 0,
+    "way_source_coverage_pct": 6.67,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 4
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 4
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Kornyareva&map=hungaryindex",
+        "ways": 2
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 2
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 2
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1907,
+      1909
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "bbedce4d7154026b8c47f37ccab94cb8ba9a0b647bd01b7880755231fc2573a1"
+  },
+  {
+    "id": 2747562,
+    "family": "Banatul Timișoarei",
+    "source_keys": 0,
+    "way_source_coverage_pct": 4.17,
+    "source_texts_top": [
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 3
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 3
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "43dfa730b26062e41a2c16f126d388297bc924d77b782d28eff450d77d2fa26b"
+  },
+  {
+    "id": 2684081,
+    "family": "Bucovina și Districtul Bucovina",
+    "source_keys": 0,
+    "way_source_coverage_pct": 1.45,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 1
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "0e9e91856f45d1a23a22ee31c748f545f2f7c16bf17d24c363133004d54f3e73"
+  },
+  {
+    "id": 2746379,
+    "family": "Bucovina și Districtul Bucovina",
+    "source_keys": 2,
+    "way_source_coverage_pct": 1.45,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 1
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850
+    ],
+    "risks": [
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "0e9e91856f45d1a23a22ee31c748f545f2f7c16bf17d24c363133004d54f3e73"
+  },
+  {
+    "id": 2746380,
+    "family": "Bucovina și Districtul Bucovina",
+    "source_keys": 0,
+    "way_source_coverage_pct": 1.45,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 1
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "0e9e91856f45d1a23a22ee31c748f545f2f7c16bf17d24c363133004d54f3e73"
+  },
+  {
+    "id": 2746401,
+    "family": "Bucovina și Districtul Bucovina",
+    "source_keys": 0,
+    "way_source_coverage_pct": 1.45,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 1
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "0e9e91856f45d1a23a22ee31c748f545f2f7c16bf17d24c363133004d54f3e73"
+  },
+  {
+    "id": 2746744,
+    "family": "Bucovina și Districtul Bucovina",
+    "source_keys": 0,
+    "way_source_coverage_pct": 1.45,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 1
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "0e9e91856f45d1a23a22ee31c748f545f2f7c16bf17d24c363133004d54f3e73"
+  },
+  {
+    "id": 2746745,
+    "family": "Bucovina și Districtul Bucovina",
+    "source_keys": 1,
+    "way_source_coverage_pct": 1.45,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 1
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850
+    ],
+    "risks": [
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "0e9e91856f45d1a23a22ee31c748f545f2f7c16bf17d24c363133004d54f3e73"
+  },
+  {
+    "id": 2746839,
+    "family": "Frontiera Militară a Banatului",
+    "source_keys": 0,
+    "way_source_coverage_pct": 14.71,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 4
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 4
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Kornyareva&map=hungaryindex",
+        "ways": 2
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 1
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1907,
+      1909
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "9a97540360bc9f9b5c770dcd5af9fddb384674de165b4723fcc2b2c4e37f29e5"
+  },
+  {
+    "id": 2746840,
+    "family": "Frontiera Militară a Banatului",
+    "source_keys": 0,
+    "way_source_coverage_pct": 22.22,
+    "source_texts_top": [
+      {
+        "source": "Franziszeische/Zweite Landesaufnahme, Kroatien und Slavonien (2nd Habsburg military survey, Croatia and Slavonia)",
+        "ways": 7
+      },
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 4
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 4
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Kornyareva&map=hungaryindex",
+        "ways": 2
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1907,
+      1909
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "43dfa730b26062e41a2c16f126d388297bc924d77b782d28eff450d77d2fa26b"
+  },
+  {
+    "id": 2746841,
+    "family": "Frontiera Militară a Banatului",
+    "source_keys": 0,
+    "way_source_coverage_pct": 13.51,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 4
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 4
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Kornyareva&map=hungaryindex",
+        "ways": 2
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 1
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1907,
+      1909
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "9a97540360bc9f9b5c770dcd5af9fddb384674de165b4723fcc2b2c4e37f29e5"
+  },
+  {
+    "id": 2694153,
+    "family": "Gubernia Basarabia",
+    "source_keys": 0,
+    "way_source_coverage_pct": 51.11,
+    "source_texts_top": [
+      {
+        "source": "https://geospatial.org",
+        "ways": 33
+      },
+      {
+        "source": "Areal - Yahoo!",
+        "ways": 9
+      },
+      {
+        "source": "Russian survey, 1872",
+        "ways": 2
+      },
+      {
+        "source": "https://naturalearthdata.org",
+        "ways": 1
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "bc68818658f14c18c794908107ba36f52edf9d3463f38c3fa19f5e5c1be7adb8"
+  },
+  {
+    "id": 2694154,
+    "family": "Gubernia Basarabia",
+    "source_keys": 4,
+    "way_source_coverage_pct": 59.66,
+    "source_texts_top": [
+      {
+        "source": "https://geospatial.org",
+        "ways": 54
+      },
+      {
+        "source": "Areal - Yahoo!",
+        "ways": 9
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 4
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 3
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 3
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "fc7270c803bcc712ddf017a6748dc0834f6fd365d95a6f038b1d522fdd8aa885"
+  },
+  {
+    "id": 2692354,
+    "family": "Principatele Unite",
+    "source_keys": 0,
+    "way_source_coverage_pct": 45.12,
+    "source_texts_top": [
+      {
+        "source": "https://geospatial.org",
+        "ways": 54
+      },
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 13
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 13
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 5
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 5
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1898,
+      1900,
+      1904,
+      1907,
+      1909,
+      1911,
+      1912
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "9f6b04fdf6b499bdfc8b10b190012a1987a5c9bf83782b0743bf64e69e9e2900"
+  },
+  {
+    "id": 2746400,
+    "family": "Principatele Unite",
+    "source_keys": 0,
+    "way_source_coverage_pct": 37.16,
+    "source_texts_top": [
+      {
+        "source": "https://geospatial.org",
+        "ways": 33
+      },
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 13
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 13
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 4
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 4
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1898,
+      1900,
+      1904,
+      1907,
+      1909,
+      1911,
+      1912
+    ],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "9f6b04fdf6b499bdfc8b10b190012a1987a5c9bf83782b0743bf64e69e9e2900"
+  },
+  {
+    "id": 2692219,
+    "family": "Regatul României",
+    "source_keys": 2,
+    "way_source_coverage_pct": 46.34,
+    "source_texts_top": [
+      {
+        "source": "https://geospatial.org",
+        "ways": 54
+      },
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 13
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 13
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 5
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 5
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1898,
+      1900,
+      1904,
+      1907,
+      1909,
+      1911,
+      1912
+    ],
+    "risks": [
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "9f6b04fdf6b499bdfc8b10b190012a1987a5c9bf83782b0743bf64e69e9e2900"
+  },
+  {
+    "id": 2693255,
+    "family": "Regatul României",
+    "source_keys": 0,
+    "way_source_coverage_pct": 38.64,
+    "source_texts_top": [
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 42
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 42
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 8
+      },
+      {
+        "source": "https://naturalearthdata.org",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "TEMPORAL_PAIR_EXACT_DATE_GAP_342_DAYS",
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF",
+      "WWII_SOVEREIGNTY_VS_MILITARY_CONTROL_REVIEW"
+    ],
+    "raw_source_response_sha256": "76507c361831c8c7fd6ae5a9fe41b0ac5df4387b2e6b24232a3d20bb26ab846a"
+  },
+  {
+    "id": 2693256,
+    "family": "Regatul României",
+    "source_keys": 0,
+    "way_source_coverage_pct": 35.22,
+    "source_texts_top": [
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 54
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 54
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 2
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF",
+      "WWII_SOVEREIGNTY_VS_MILITARY_CONTROL_REVIEW"
+    ],
+    "raw_source_response_sha256": "57c54633536abd5cbe2f48adfc8b28a6ee640cd9ec01b7404d90b17e0abee319"
+  },
+  {
+    "id": 2693257,
+    "family": "Regatul României",
+    "source_keys": 0,
+    "way_source_coverage_pct": 30.9,
+    "source_texts_top": [
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 52
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 52
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 3
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "74bac9b2c17cbd5d643cf333c51091c7e14c3e139b5fda284a5747c2981a52fb"
+  },
+  {
+    "id": 2693258,
+    "family": "Regatul României",
+    "source_keys": 0,
+    "way_source_coverage_pct": 47.87,
+    "source_texts_top": [
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 87
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 87
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 3
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "74bac9b2c17cbd5d643cf333c51091c7e14c3e139b5fda284a5747c2981a52fb"
+  },
+  {
+    "id": 2693259,
+    "family": "Regatul României",
+    "source_keys": 0,
+    "way_source_coverage_pct": 53.8,
+    "source_texts_top": [
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 75
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 75
+      },
+      {
+        "source": "Areal - Yahoo!",
+        "ways": 9
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 7
+      },
+      {
+        "source": "https://naturalearthdata.org",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "OHM_SOURCE_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "74bac9b2c17cbd5d643cf333c51091c7e14c3e139b5fda284a5747c2981a52fb"
+  },
+  {
+    "id": 2693260,
+    "family": "Regatul României",
+    "source_keys": 2,
+    "way_source_coverage_pct": 42.7,
+    "source_texts_top": [
+      {
+        "source": "https://geospatial.org",
+        "ways": 54
+      },
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 13
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 13
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 4
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 4
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1898,
+      1900,
+      1904,
+      1907,
+      1909,
+      1911,
+      1912
+    ],
+    "risks": [
+      "TEMPORAL_PAIR_YEAR_BOUNDARY_UNCERTAIN",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "57c54633536abd5cbe2f48adfc8b28a6ee640cd9ec01b7404d90b17e0abee319"
+  },
+  {
+    "id": 2693464,
+    "family": "Regatul României",
+    "source_keys": 0,
+    "way_source_coverage_pct": 51.74,
+    "source_texts_top": [
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 72
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 72
+      },
+      {
+        "source": "Areal - Yahoo!",
+        "ways": 9
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 7
+      },
+      {
+        "source": "https://naturalearthdata.org",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "TEMPORAL_PAIR_YEAR_BOUNDARY_UNCERTAIN",
+      "OHM_SOURCE_FIXME",
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "74bac9b2c17cbd5d643cf333c51091c7e14c3e139b5fda284a5747c2981a52fb"
+  },
+  {
+    "id": 2877966,
+    "family": "Regatul României",
+    "source_keys": 0,
+    "way_source_coverage_pct": 57.06,
+    "source_texts_top": [
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 91
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 91
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 2
+      }
+    ],
+    "historic_source_years": [],
+    "risks": [
+      "TEMPORAL_PAIR_EXACT_DATE_GAP_342_DAYS",
+      "OHM_SOURCE_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "57c54633536abd5cbe2f48adfc8b28a6ee640cd9ec01b7404d90b17e0abee319"
+  },
+  {
+    "id": 2747434,
+    "family": "Țara Chioarului",
+    "source_keys": 0,
+    "way_source_coverage_pct": 0,
+    "source_texts_top": [],
+    "historic_source_years": [],
+    "risks": [
+      "TEMPORAL_PAIR_EXACT_DATE_GAP_3517_DAYS",
+      "OHM_SOURCE_FIXME",
+      "NO_SOURCE_ON_RELATION_OR_MEMBER_WAYS",
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME"
+    ],
+    "raw_source_response_sha256": "5f5f1541c9132e2023033df50350771648ef5d5d9d63a7d71e60ae6fbf641aa1"
+  },
+  {
+    "id": 2747435,
+    "family": "Țara Chioarului",
+    "source_keys": 0,
+    "way_source_coverage_pct": 0,
+    "source_texts_top": [],
+    "historic_source_years": [],
+    "risks": [
+      "TEMPORAL_PAIR_EXACT_DATE_GAP_3517_DAYS",
+      "OHM_SOURCE_FIXME",
+      "NO_SOURCE_ON_RELATION_OR_MEMBER_WAYS",
+      "LESS_THAN_10_PERCENT_MEMBER_WAYS_SOURCE_TAGGED",
+      "PARTIAL_WAY_SOURCE_COVERAGE"
+    ],
+    "raw_source_response_sha256": "5f5f1541c9132e2023033df50350771648ef5d5d9d63a7d71e60ae6fbf641aa1"
+  },
+  {
+    "id": 2694163,
+    "family": "Țara Moldovei",
+    "source_keys": 5,
+    "way_source_coverage_pct": 57.29,
+    "source_texts_top": [
+      {
+        "source": "https://geospatial.org",
+        "ways": 54
+      },
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 1
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 1
+      }
+    ],
+    "historic_source_years": [
+      1850
+    ],
+    "risks": [
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "279d2bb56ff8c98bc7a9b72c8970d2506273c6e2296a493e3db8788c239899b7"
+  },
+  {
+    "id": 2746689,
+    "family": "Țara Moldovei",
+    "source_keys": 5,
+    "way_source_coverage_pct": 48.28,
+    "source_texts_top": [
+      {
+        "source": "https://geospatial.org",
+        "ways": 33
+      },
+      {
+        "source": "United States. Department of State. Large Scale International Boundaries (LSIB), ver. 11.3.1 (2024)",
+        "ways": 3
+      },
+      {
+        "source": "https://geodata.state.gov/geonetwork/srv/eng/catalog.search#/metadata/3bdb81a0-c1b9-439a-a0b1-85dac30c59b2",
+        "ways": 3
+      },
+      {
+        "source": "3.2NM buffer of EU shapefile made in QGIS",
+        "ways": 3
+      },
+      {
+        "source": "Russian survey, 1872",
+        "ways": 2
+      }
+    ],
+    "historic_source_years": [
+      1850
+    ],
+    "risks": [
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "fc7270c803bcc712ddf017a6748dc0834f6fd365d95a6f038b1d522fdd8aa885"
+  },
+  {
+    "id": 2694164,
+    "family": "Țara Românească",
+    "source_keys": 5,
+    "way_source_coverage_pct": 18.46,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 12
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 12
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Verestorony&map=hungaryindex",
+        "ways": 3
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Petroseny&map=hungaryindex",
+        "ways": 3
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Felek&map=hungaryindex",
+        "ways": 2
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1898,
+      1900,
+      1904,
+      1907,
+      1909,
+      1911,
+      1912
+    ],
+    "risks": [
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "bc68818658f14c18c794908107ba36f52edf9d3463f38c3fa19f5e5c1be7adb8"
+  },
+  {
+    "id": 2929115,
+    "family": "Țara Românească",
+    "source_keys": 5,
+    "way_source_coverage_pct": 18.46,
+    "source_texts_top": [
+      {
+        "source": "https://commons.wikimedia.org/wiki/File:1853_Mitchell_Map_of_Turkey_in_Europe_and_Greece_(_Greece,_Balkans,_Macedonia_)_-_Geographicus_-_TurkeyEurope-mitchell-1850.jpg",
+        "ways": 12
+      },
+      {
+        "source": "http://www.naturalearthdata.com",
+        "ways": 12
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Verestorony&map=hungaryindex",
+        "ways": 3
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Petroseny&map=hungaryindex",
+        "ways": 3
+      },
+      {
+        "source": "https://easteurotopo.org/indices/view/view.php?section=Felek&map=hungaryindex",
+        "ways": 2
+      }
+    ],
+    "historic_source_years": [
+      1850,
+      1898,
+      1900,
+      1904,
+      1907,
+      1909,
+      1911,
+      1912
+    ],
+    "risks": [
+      "PARTIAL_WAY_SOURCE_COVERAGE",
+      "OHM_EVENT_METADATA_FIXME",
+      "SOURCE_MAP_YEAR_AFTER_RELATION_END",
+      "MODERN_GEODATA_PROXY_NOT_HISTORICAL_BORDER_PROOF"
+    ],
+    "raw_source_response_sha256": "bc68818658f14c18c794908107ba36f52edf9d3463f38c3fa19f5e5c1be7adb8"
+  },
+  {
+    "id": 2929116,
+    "family": "Țara Românească",

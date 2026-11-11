@@ -1,0 +1,71 @@
+{
+  "phase": "HIST-0.4b",
+  "date": "2026-11-11",
+  "base_main": "6a38d968bb761b65f7e9a89a01711c63c6beb650",
+  "OHM_original_snapshot": "HIST-0.2 archival batch responses 2026-11-10; fresh member-way tags 2026-11-11",
+  "total_sources_survey": 11,
+  "family": 11,
+  "selected_ids": 37,
+  "full_ring_reconstruction": 37,
+  "reference_hash_match": 37,
+  "way_references": 3643,
+  "way_source_tagged": 1142,
+  "relations_with_member_sources": 35,
+  "relation_source_keys_present": 12,
+  "fixme_s": 25,
+  "comparisons": 26,
+  "comparison_errors": 0,
+  "priorities": {
+    "P1_SOURCE_OR_CHRONOLOGY_REVIEW": 25,
+    "P2_SOURCE_RELEVANCE_REVIEW": 9,
+    "P0_TARGETED_EVIDENCE_REQUIRED": 3
+  },
+  "imported": 0,
+  "raw_origin_archive_present": true,
+  "import_authorized": false,
+  "geometry_modified": false,
+  "tree_created": false,
+  "legal_historic_accuracy_certified": false,
+  "source_quality_policy": "Source tag presence does not prove the historic time-specific boundary. Modern proxy and maps outside relation period are flagged.",
+  "sourceReferences": [
+    {
+      "title": "Treaty of Berlin, Article XLV (1878)",
+      "url": "https://sourcebooks.web.fordham.edu/mod/1878berlin.asp",
+      "use": "Context for southern Bessarabia boundary transfer; no GIS geometry certification"
+    },
+    {
+      "title": "Muzeul Național de Istorie a României — Independenta 1878",
+      "url": "https://www.mnir.ro/125-de-ani-de-la-proclamarea-independentei/",
+      "use": "Historical overview of southern Bessarabia / Dobrogea in 1878"
+    },
+    {
+      "title": "FWF Austria, historical Bukovina research",
+      "url": "https://www.fwf.ac.at/en/research-radar/10.55776/P15666",
+      "use": "Bukovina military/civil/crown-land administrative stages"
+    },
+    {
+      "title": "Encyclopedia of Ukraine, Bukovyna",
+      "url": "https://www.encyclopediaofukraine.com/pages/B/U/Bukovyna.htm",
+      "use": "Context for 1774–1918 administrative statuses"
+    },
+    {
+      "title": "1911 Encyclopaedia Britannica, Transylvania",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Transylvania",
+      "use": "Grand Principality 1765 / political changes in 1867"
+    },
+    {
+      "title": "Ciorteanu — Formation and evolution of borders of Greater Romania",
+      "url": "https://doaj.org/article/6d75306010bb495295d6677fb419650f",
+      "use": "Context 1918–1940 national frontier changes"
+    }
+  ],
+  "artifact_hashes": {
+    "consecutive-diffs-26.csv": "01230f29f81baac7845eb0f5f3b4ebe644099b26ee1dd4c39c3058b979f036d4",
+    "cross-family-evidence.json": "f8cbe3b590aabeff0a4bece62f788869058c137b1d38c6ca170cf38fed4b0c30",
+    "exceptions.json": "9bbd9280a03279fa751c68bdaaa85aa972f7a98df1703c3b4f4a982b63b80512",
+    "family-audit-11.csv": "3d7281b0db4abf7b05c508c801bf0ad2aa9ddfef22e2926c6816aa6feb1c0b7f",
+    "qualification-per-id-37.csv": "6eef221ba7ca6faf31baca6d77667b374688ad2f6c186ba82240af39b72ec60b",
+    "source-evidence-per-id.json": "29bdf6bba96686c056aa1204d3d01ff96f553d62fa5bb8588f370b8521b8141d"
+  },
+  "technical_geom_policy": "Original geometry polygonized temporarily for topology/area comparisons, not serialized as replacement assets."
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "label": "BANAT_1751_PARTITION",
+    "old": {
+      "km2": 28519.18237196324,
+      "polygons": 1
+    },
+    "civil": {
+      "km2": 18822.778246445043,
+      "polygons": 1
+    },
+    "military": {
+      "km2": 9696.171982775744,
+      "polygons": 1
+    },
+    "union": {
+      "km2": 28518.950229224818,
+      "polygons": 1
+    },
+    "civil_military_intersection_km2": 0,
+    "old_vs_union_symmetric_diff_km2": 7.086338933478064
+  },
+  {
+    "label": "MOLDOVA_BASARABIA_TRANSFER_1856_1878",
+    "moldGain": {
+      "km2": 10025.485204545037,
+      "polygons": 1
+    },
+    "bessarabiaGain": {
+      "km2": 10025.485204545037,
+      "polygons": 1
+    },
+    "same_transfer_symdiff_km2": 0
+  },
+  {
+    "label": "BUCOVINA_GEOMETRY_RETENTION",
+    "a": {
+      "km2": 10419.092715544572,
+      "polygons": 1
+    },
+    "b": {
+      "km2": 10421.010939628564,
+      "polygons": 1
+    },
+    "symdiff_km2": 4.0664660617619806
+  },
+  {
+    "label": "TRANSILVANIA_1765_STATUTE",
+    "a": {
+      "km2": 61983.67697903183,
+      "polygons": 1
+    },
+    "b": {
+      "km2": 61983.67697903183,
+      "polygons": 1
+    },
+    "symdiff_km2": 0
+  },
+  {
+    "label": "CHIOAR_1851_1860_UNDOCUMENTED_GAP",
+    "a": {
+      "km2": 1028.9582945865902,
+      "polygons": 1
+    },
+    "b": {
+      "km2": 1028.9582945865902,
+      "polygons": 1
+    },
+    "symdiff_km2": 0
+  }
+]
