@@ -38,4 +38,4 @@ assert.equal(new Set(dossiers.records.map(x=>x.ohm_relation_id)).size,37);
 assert.ok(dossiers.records.every(x=>x.hist04h.import_authorized===false));
 assert.equal(dossiers.variants_admitted,0);
 assert.equal(dossiers.qualified_GCP_count,0);
-console.log(JSON.stringify({pass:true,photos_screened:14,false_41_inlier_case_rejected:true,accepted_georeferences:0,legal_names:91,exact_ocr_candidates:58,variant_ocr_candidates:14,unresolved_ocr:19,1873_name_level_certified:0,relation_dossiers:37,approved_imports:0},null,2));
+console.log(JSON.stringify({pass:true,photos_screened:14,false_41_inlier_case_rejected:true,accepted_georeferences:0,legal_names:91,exact_ocr_candidates:58,variant_ocr_candidates:14,unresolved_ocr:19,gazetteer_1873_name_level_certified:0,relation_dossiers:37,approved_imports:0},null,2));
