@@ -1,0 +1,664 @@
+{
+  "phase": "HIST-0.4d",
+  "operation": "INDEPENDENT_RECOMPUTE_GEOMETRIC_TOPOLOGY_FROM_IMMUTABLE_OHM_WAY_COORDINATES",
+  "input": "Local HIST-0.4b original relations; no remote OHM edits",
+  "geodesic_method": "GeographicLib WGS84 geodesic PolygonArea; double precision; positions from way members",
+  "script_engine": "v24.21.0",
+  "software": "geographiclib-geodesic 2.2.0; @turf/area 7.4.0 (local research only)",
+  "audit_date": "2026-11-11",
+  "three_cases": [
+    {
+      "id": 2747433,
+      "source_file": "rel-2747433.json.gz",
+      "source_file_sha256": "3c0700f038847cc46b0c6492a90bbd46bad7db242d108c379318e65f5fbbc2b4",
+      "source_snapshot": "2026-11-10T22:53:54Z",
+      "relation_member_sha256_from_archive": "dbddebb7016f58902b1b22bc249589e774dd95465c227747f798de998ce9a830",
+      "relation_full_response_sha256_from_archive": "e2d52d2a5346392fe5e30a9e41c9480de4bd9028a09df1e2a5377d2447219cd7",
+      "member_ways": 78,
+      "role_counts": {
+        "outer": 78
+      },
+      "way_ids": [
+        198556568,
+        198598357,
+        198638800,
+        198638802,
+        198748714,
+        199456597,
+        199456598,
+        199458499,
+        199599450,
+        199599455,
+        199599456,
+        199603776,
+        199603778,
+        199603788,
+        199603789,
+        199603794,
+        199603795,
+        199603797,
+        199603798,
+        199603799,
+        199603801,
+        199603802,
+        199603804,
+        199603805,
+        199615699,
+        199615700,
+        199615701,
+        199615955,
+        199616882,
+        199616883,
+        199616886,
+        199616887,
+        199616888,
+        199616890,
+        199617346,
+        199617347,
+        199617349,
+        200156689,
+        200156690,
+        200156691,
+        200156695,
+        200156698,
+        200156700,
+        200156701,
+        200501717,
+        200504304,
+        202362114,
+        202362115,
+        202362116,
+        202362117,
+        202362118,
+        202362120,
+        202362121,
+        202362122,
+        202362126,
+        202362127,
+        202362129,
+        202362130,
+        202362132,
+        202362133,
+        202362145,
+        202362146,
+        202362147,
+        202362148,
+        202362149,
+        202362150,
+        202362151,
+        202362152,
+        202362159,
+        202362160,
+        202362162,
+        202362164,
+        202362165,
+        202384755,
+        202384756,
+        202489003,
+        204253764,
+        204254325
+      ],
+      "way_geometry_signature_sha256": "f32d853bb7ac6d9d99fe921e66690cffb3cf08a6f79121b4a24923810f7f29cb",
+      "way_vertex_counts": [
+        {
+          "ref": 200504304,
+          "n": 112
+        },
+        {
+          "ref": 199616882,
+          "n": 125
+        },
+        {
+          "ref": 199616886,
+          "n": 235
+        },
+        {
+          "ref": 199616887,
+          "n": 370
+        },
+        {
+          "ref": 199616888,
+          "n": 22
+        },
+        {
+          "ref": 199616890,
+          "n": 149
+        },
+        {
+          "ref": 202362132,
+          "n": 2
+        },
+        {
+          "ref": 202362133,
+          "n": 26
+        },
+        {
+          "ref": 199615955,
+          "n": 47
+        },
+        {
+          "ref": 199603789,
+          "n": 78
+        },
+        {
+          "ref": 199603776,
+          "n": 40
+        },
+        {
+          "ref": 199603788,
+          "n": 8
+        },
+        {
+          "ref": 199603794,
+          "n": 92
+        },
+        {
+          "ref": 202384756,
+          "n": 36
+        },
+        {
+          "ref": 202384755,
+          "n": 37
+        },
+        {
+          "ref": 199603795,
+          "n": 8
+        },
+        {
+          "ref": 199603778,
+          "n": 71
+        },
+        {
+          "ref": 199599455,
+          "n": 117
+        },
+        {
+          "ref": 199603797,
+          "n": 11
+        },
+        {
+          "ref": 199603798,
+          "n": 8
+        },
+        {
+          "ref": 199603799,
+          "n": 137
+        },
+        {
+          "ref": 199603801,
+          "n": 195
+        },
+        {
+          "ref": 199599450,
+          "n": 165
+        },
+        {
+          "ref": 199603805,
+          "n": 4
+        },
+        {
+          "ref": 199603804,
+          "n": 2
+        },
+        {
+          "ref": 199603802,
+          "n": 18
+        },
+        {
+          "ref": 199599456,
+          "n": 37
+        },
+        {
+          "ref": 202362120,
+          "n": 7
+        },
+        {
+          "ref": 202362118,
+          "n": 2
+        },
+        {
+          "ref": 198748714,
+          "n": 13
+        },
+        {
+          "ref": 202489003,
+          "n": 13
+        },
+        {
+          "ref": 204253764,
+          "n": 97
+        },
+        {
+          "ref": 200156700,
+          "n": 184
+        },
+        {
+          "ref": 200156701,
+          "n": 91
+        },
+        {
+          "ref": 204254325,
+          "n": 28
+        },
+        {
+          "ref": 200156695,
+          "n": 21
+        },
+        {
+          "ref": 200156689,
+          "n": 8
+        },
+        {
+          "ref": 200156690,
+          "n": 8
+        },
+        {
+          "ref": 202362162,
+          "n": 17
+        },
+        {
+          "ref": 202362159,
+          "n": 5
+        },
+        {
+          "ref": 202362164,
+          "n": 14
+        },
+        {
+          "ref": 202362160,
+          "n": 14
+        },
+        {
+          "ref": 200156691,
+          "n": 43
+        },
+        {
+          "ref": 202362148,
+          "n": 18
+        },
+        {
+          "ref": 202362149,
+          "n": 2
+        },
+        {
+          "ref": 202362150,
+          "n": 19
+        },
+        {
+          "ref": 200156698,
+          "n": 17
+        },
+        {
+          "ref": 202362145,
+          "n": 4
+        },
+        {
+          "ref": 202362146,
+          "n": 8
+        },
+        {
+          "ref": 202362151,
+          "n": 14
+        },
+        {
+          "ref": 202362147,
+          "n": 12
+        },
+        {
+          "ref": 202362152,
+          "n": 19
+        },
+        {
+          "ref": 198638800,
+          "n": 536
+        },
+        {
+          "ref": 202362130,
+          "n": 97
+        },
+        {
+          "ref": 199458499,
+          "n": 434
+        },
+        {
+          "ref": 198556568,
+          "n": 274
+        },
+        {
+          "ref": 202362127,
+          "n": 2
+        },
+        {
+          "ref": 202362165,
+          "n": 19
+        },
+        {
+          "ref": 202362129,
+          "n": 141
+        },
+        {
+          "ref": 199456598,
+          "n": 190
+        },
+        {
+          "ref": 198598357,
+          "n": 265
+        },
+        {
+          "ref": 199456597,
+          "n": 103
+        },
+        {
+          "ref": 198638802,
+          "n": 124
+        },
+        {
+          "ref": 199617347,
+          "n": 39
+        },
+        {
+          "ref": 199617346,
+          "n": 5
+        },
+        {
+          "ref": 199617349,
+          "n": 82
+        },
+        {
+          "ref": 199615701,
+          "n": 41
+        },
+        {
+          "ref": 199615700,
+          "n": 236
+        },
+        {
+          "ref": 202362126,
+          "n": 28
+        },
+        {
+          "ref": 202362122,
+          "n": 16
+        },
+        {
+          "ref": 202362121,
+          "n": 22
+        },
+        {
+          "ref": 200501717,
+          "n": 3
+        },
+        {
+          "ref": 199615699,
+          "n": 20
+        },
+        {
+          "ref": 202362117,
+          "n": 25
+        },
+        {
+          "ref": 202362114,
+          "n": 6
+        },
+        {
+          "ref": 202362116,
+          "n": 42
+        },
+        {
+          "ref": 202362115,
+          "n": 18
+        },
+        {
+          "ref": 199616883,
+          "n": 52
+        }
+      ],
+      "points_in_way_arrays": 5650,
+      "unique_vertices": 5572,
+      "source_tags_present_on_relation": 0,
+      "source_tagged_way_count": 8,
+      "closed_rings": 1,
+      "unclosed_rings": 0,
+      "outer_rings": 1,
+      "inner_rings": 0,
+      "wgs84_ellipsoid_area_km2": 56256.631584,
+      "spherical_area_km2": 56113.585956,
+      "perimeter_km": 1573.16965,
+      "bbox": [
+        22.3752021,
+        45.2496709,
+        26.5038299,
+        47.6726161
+      ],
+      "geometry_topologically_closed": true
+    },
+    {
+      "id": 2747434,
+      "source_file": "rel-2747434.json.gz",
+      "source_file_sha256": "37ad34749bb2c8d7a2f15ab1284699c09ddb17818030eb1d61584118f580b2e1",
+      "source_snapshot": "2026-11-10T22:53:54Z",
+      "relation_member_sha256_from_archive": "11c92d2ca40298e3af189cc59e914e023bd24fb425135f959f35ea511c6a3ede",
+      "relation_full_response_sha256_from_archive": "5f5f1541c9132e2023033df50350771648ef5d5d9d63a7d71e60ae6fbf641aa1",
+      "member_ways": 15,
+      "role_counts": {
+        "outer": 15
+      },
+      "way_ids": [
+        199615952,
+        199615953,
+        199615954,
+        199616884,
+        199616885,
+        199616887,
+        199616888,
+        199616890,
+        200504303,
+        202362132,
+        202362135,
+        202362137,
+        202362138,
+        202362142,
+        202362144
+      ],
+      "way_geometry_signature_sha256": "09dfd7ee0136610914015df7aea7ab99bd669b7c0d199e00da44360390d035ae",
+      "way_vertex_counts": [
+        {
+          "ref": 199616884,
+          "n": 305
+        },
+        {
+          "ref": 202362144,
+          "n": 38
+        },
+        {
+          "ref": 199615952,
+          "n": 98
+        },
+        {
+          "ref": 199615953,
+          "n": 31
+        },
+        {
+          "ref": 199615954,
+          "n": 6
+        },
+        {
+          "ref": 202362132,
+          "n": 2
+        },
+        {
+          "ref": 199616890,
+          "n": 149
+        },
+        {
+          "ref": 199616888,
+          "n": 22
+        },
+        {
+          "ref": 199616887,
+          "n": 370
+        },
+        {
+          "ref": 200504303,
+          "n": 8
+        },
+        {
+          "ref": 199616885,
+          "n": 222
+        },
+        {
+          "ref": 202362138,
+          "n": 18
+        },
+        {
+          "ref": 202362137,
+          "n": 20
+        },
+        {
+          "ref": 202362135,
+          "n": 43
+        },
+        {
+          "ref": 202362142,
+          "n": 128
+        }
+      ],
+      "points_in_way_arrays": 1460,
+      "unique_vertices": 1445,
+      "source_tags_present_on_relation": 0,
+      "source_tagged_way_count": 0,
+      "closed_rings": 1,
+      "unclosed_rings": 0,
+      "outer_rings": 1,
+      "inner_rings": 0,
+      "wgs84_ellipsoid_area_km2": 1031.852271,
+      "spherical_area_km2": 1028.958295,
+      "perimeter_km": 265.47963,
+      "bbox": [
+        23.3029031,
+        47.2626236,
+        23.9100265,
+        47.6935301
+      ],
+      "geometry_topologically_closed": true
+    },
+    {
+      "id": 2747435,
+      "source_file": "rel-2747435.json.gz",
+      "source_file_sha256": "c489c9f80139a8d01d4c69ead195cf24f24639da2d486b278c4d34b37c3539d4",
+      "source_snapshot": "2026-11-10T22:53:54Z",
+      "relation_member_sha256_from_archive": "8b989203b86d0d8249f99207089b1aadbbc632a6576c82b92faac988a15a266f",
+      "relation_full_response_sha256_from_archive": "5f5f1541c9132e2023033df50350771648ef5d5d9d63a7d71e60ae6fbf641aa1",
+      "member_ways": 15,
+      "role_counts": {
+        "outer": 15
+      },
+      "way_ids": [
+        199615952,
+        199615953,
+        199615954,
+        199616884,
+        199616885,
+        199616887,
+        199616888,
+        199616890,
+        200504303,
+        202362132,
+        202362135,
+        202362137,
+        202362138,
+        202362142,
+        202362144
+      ],
+      "way_geometry_signature_sha256": "09dfd7ee0136610914015df7aea7ab99bd669b7c0d199e00da44360390d035ae",
+      "way_vertex_counts": [
+        {
+          "ref": 199616884,
+          "n": 305
+        },
+        {
+          "ref": 202362144,
+          "n": 38
+        },
+        {
+          "ref": 199615952,
+          "n": 98
+        },
+        {
+          "ref": 199615953,
+          "n": 31
+        },
+        {
+          "ref": 199615954,
+          "n": 6
+        },
+        {
+          "ref": 202362132,
+          "n": 2
+        },
+        {
+          "ref": 199616890,
+          "n": 149
+        },
+        {
+          "ref": 199616888,
+          "n": 22
+        },
+        {
+          "ref": 199616887,
+          "n": 370
+        },
+        {
+          "ref": 200504303,
+          "n": 8
+        },
+        {
+          "ref": 199616885,
+          "n": 222
+        },
+        {
+          "ref": 202362138,
+          "n": 18
+        },
+        {
+          "ref": 202362137,
+          "n": 20
+        },
+        {
+          "ref": 202362135,
+          "n": 43
+        },
+        {
+          "ref": 202362142,
+          "n": 128
+        }
+      ],
+      "points_in_way_arrays": 1460,
+      "unique_vertices": 1445,
+      "source_tags_present_on_relation": 0,
+      "source_tagged_way_count": 0,
+      "closed_rings": 1,
+      "unclosed_rings": 0,
+      "outer_rings": 1,
+      "inner_rings": 0,
+      "wgs84_ellipsoid_area_km2": 1031.852271,
+      "spherical_area_km2": 1028.958295,
+      "perimeter_km": 265.47963,
+      "bbox": [
+        23.3029031,
+        47.2626236,
+        23.9100265,
+        47.6935301
+      ],
+      "geometry_topologically_closed": true
+    }
+  ],
+  "chioar_comparison": {
+    "same_way_ids": true,
+    "same_order_independent_geometry_sha256": true,
+    "area_difference_km2": 0,
+    "perimeter_difference_km": 0,
+    "relevance": "same OHM shape across two chronological claims does not demonstrate historic persistence"
+  },
+  "qualification": "GEOMETRIC_REPRODUCTION_ONLY_NOT_HISTORIC_BOUNDARY_CERTIFICATION"
+}
