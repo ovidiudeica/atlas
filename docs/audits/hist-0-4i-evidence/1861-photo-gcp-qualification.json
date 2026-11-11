@@ -1,0 +1,167 @@
+{
+  "phase": "HIST-0.4i",
+  "date": "2026-11-11",
+  "source_photo8": {
+    "file": "hu_mnl_ol_s_0075_no_0082_8.jpg",
+    "bytes": 30698500,
+    "sha256": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe"
+  },
+  "reference": "2026 Nominatim independently located toponyms, not OHM historical border and mostly modern administrative centroids",
+  "candidate_map_label_points": [
+    {
+      "photo_pixel_xy": [
+        954,
+        6338
+      ],
+      "source_label": "Reps",
+      "modern_reference_label": "Rupea",
+      "reference_wgs84": {
+        "lon": 25.2206701,
+        "lat": 46.0383743
+      },
+      "modern_osm_type": "relation",
+      "modern_osm_id": 10519774,
+      "role": "fit",
+      "cartographic_symbol_verified_as_historically_stable_landmark": false,
+      "independent_from_OHM_boundary": true,
+      "qualified_independent_stable_GCP": false
+    },
+    {
+      "photo_pixel_xy": [
+        1400,
+        3925
+      ],
+      "source_label": "Székely-Udvarhely",
+      "modern_reference_label": "Odorheiu Secuiesc",
+      "reference_wgs84": {
+        "lon": 25.2950261,
+        "lat": 46.3047462
+      },
+      "modern_osm_type": "relation",
+      "modern_osm_id": 10748530,
+      "role": "fit",
+      "cartographic_symbol_verified_as_historically_stable_landmark": false,
+      "independent_from_OHM_boundary": true,
+      "qualified_independent_stable_GCP": false
+    },
+    {
+      "photo_pixel_xy": [
+        4475,
+        3418
+      ],
+      "source_label": "Csík-Szereda",
+      "modern_reference_label": "Miercurea Ciuc",
+      "reference_wgs84": {
+        "lon": 25.8026675,
+        "lat": 46.3614042
+      },
+      "modern_osm_type": "node",
+      "modern_osm_id": 142172498,
+      "role": "fit",
+      "cartographic_symbol_verified_as_historically_stable_landmark": false,
+      "independent_from_OHM_boundary": true,
+      "qualified_independent_stable_GCP": false
+    },
+    {
+      "photo_pixel_xy": [
+        4460,
+        7740
+      ],
+      "source_label": "Sepsi-Sz.-György",
+      "modern_reference_label": "Sfântu Gheorghe",
+      "reference_wgs84": {
+        "lon": 25.7865367,
+        "lat": 45.8659935
+      },
+      "modern_osm_type": "relation",
+      "modern_osm_id": 10715864,
+      "role": "fit",
+      "cartographic_symbol_verified_as_historically_stable_landmark": false,
+      "independent_from_OHM_boundary": true,
+      "qualified_independent_stable_GCP": false
+    },
+    {
+      "photo_pixel_xy": [
+        3350,
+        9875
+      ],
+      "source_label": "Kronstadt",
+      "modern_reference_label": "Brașov",
+      "reference_wgs84": {
+        "lon": 25.6105654,
+        "lat": 45.6525105
+      },
+      "modern_osm_type": "relation",
+      "modern_osm_id": 10367676,
+      "role": "fit",
+      "cartographic_symbol_verified_as_historically_stable_landmark": false,
+      "independent_from_OHM_boundary": true,
+      "qualified_independent_stable_GCP": false
+    },
+    {
+      "photo_pixel_xy": [
+        4485,
+        9130
+      ],
+      "source_label": "Tartlau",
+      "modern_reference_label": "Prejmer",
+      "reference_wgs84": {
+        "lon": 25.7724871,
+        "lat": 45.7202793
+      },
+      "modern_osm_type": "node",
+      "modern_osm_id": 346146686,
+      "role": "fit",
+      "cartographic_symbol_verified_as_historically_stable_landmark": false,
+      "independent_from_OHM_boundary": true,
+      "qualified_independent_stable_GCP": false
+    },
+    {
+      "photo_pixel_xy": [
+        3260,
+        5860
+      ],
+      "source_label": "Baróth",
+      "modern_reference_label": "Baraolt",
+      "reference_wgs84": {
+        "lon": 25.5996242,
+        "lat": 46.0751919
+      },
+      "modern_osm_type": "relation",
+      "modern_osm_id": 10715890,
+      "role": "holdout",
+      "cartographic_symbol_verified_as_historically_stable_landmark": false,
+      "independent_from_OHM_boundary": true,
+      "qualified_independent_stable_GCP": false
+    },
+    {
+      "photo_pixel_xy": [
+        2385,
+        9365
+      ],
+      "source_label": "Zeiden",
+      "modern_reference_label": "Codlea",
+      "reference_wgs84": {
+        "lon": 25.4490362,
+        "lat": 45.6924431
+      },
+      "modern_osm_type": "relation",
+      "modern_osm_id": 10515006,
+      "role": "holdout",
+      "cartographic_symbol_verified_as_historically_stable_landmark": false,
+      "independent_from_OHM_boundary": true,
+      "qualified_independent_stable_GCP": false
+    }
+  ],
+  "fit_points": 6,
+  "heldout_points": 2,
+  "train_RMSE_m": 918.8635185297538,
+  "heldout_RMSE_m": 1241.1244512125957,
+  "LOO_RMSE_m": 1574.9748117443023,
+  "max_holdout_error_m": 1413.1250056121307,
+  "remaining_13_photos_manual_control_points_verified": 0,
+  "independent_stable_GCPs_verified": 0,
+  "historical_border_ways_verified": 0,
+  "approval": false,
+  "decision": "RESEARCH_ONLY_UNSTABLE_TOPONYM_CENTER_CONTROLS_NOT_GEOREFERENCING_CERTIFIED"
+}
