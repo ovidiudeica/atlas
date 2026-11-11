@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url));
+const c=JSON.parse(fs.readFileSync(path.join(dir,'chioar-91-documentary-screen.json'),'utf8'));
+const g=JSON.parse(fs.readFileSync(path.join(dir,'1861-photo-gcp-qualification.json'),'utf8'));
+const assert=(cond,msg)=>{if(!cond)throw new Error('HIST-0.4i FAIL: '+msg)};
+const sum=obj=>Object.values(obj).reduce((a,v)=>a+v.length,0);
+assert(c.phase==='HIST-0.4i'&&g.phase==='HIST-0.4i','phase');
+assert(c.records.length===91,'legal register must contain 91 entries');
+assert(sum(c.official_1873_transcribed_districts)===92,'independent 1873 district transcription must contain 92, NOT 91 entries');
+assert(sum(c.official_1877_transcribed_target_sections)===91,'four 1877 target sections contain 91 entries');
+assert(Object.values(c.official_1873_transcribed_districts).map(x=>x.length).join(',')==='22,20,21,29','1873 page district cardinalities');
+assert(Object.values(c.official_1877_transcribed_target_sections).map(x=>x.length).join(',')==='42,1,28,20','1877 successor district cardinalities');
+for(let i=0;i<91;i++){
+ const r=c.records[i];
+ assert(r.law_1877_order===i+1,'order '+i);
+ assert(r.approved_identity===false&&r.approved_geometry===false&&r.import_authorized===false,'fail closed '+i);
+ assert(r.modern_locality_id===null&&r.historical_commune_polygon===null,'no invented geographic identity '+i);
+ assert(r.official_1873_original_page_inspected&&r.official_1877_original_page_inspected,'official facsimiles inspected '+i);
+}
+assert(c.records.filter(x=>x.successor_county==='Szatmár').length===43,'43 Szatmár');
+assert(c.records.filter(x=>x.successor_county==='Szolnok-Doboka').length===48,'48 Szolnok-Doboka');
+assert(c.records.filter(x=>x.official_1877_visual_transcription_candidate.length).length===73,'1877 exact text candidates');
+assert(c.records.filter(x=>x.official_1873_direct_string_match).length===81,'1873 direct text candidates');
+assert(c.records.find(x=>x.law_1877_name==='Koltó-Katalin')?.research_class==='POTENTIAL_MANY_TO_ONE_COMPOSITE_1877','preserve composite anomaly');
+assert(c.records.find(x=>x.law_1877_name==='Kolcér')?.official_1873_direct_string_match==='Kolcér','recover Kolcér');
+assert(c.records.find(x=>x.law_1877_name==='Erdőaranyos')?.official_1873_direct_string_match==='Aranyoserdő','reverse toponym candidate');
+assert(g.candidate_map_label_points.length===8,'photo8 control candidates');
+assert(g.fit_points===6&&g.heldout_points===2,'pilot train/holdout');
+assert(g.heldout_RMSE_m>1000&&g.LOO_RMSE_m>1000,'retain unfit residuals, do not assert fake precision');
+assert(g.independent_stable_GCPs_verified===0&&g.historical_border_ways_verified===0&&g.approval===false,'georeference fail closed');
+assert(g.candidate_map_label_points.every(p=>p.qualified_independent_stable_GCP===false),'all toponyms provisional');
+assert(c.source['1873'].length===2&&c.source['1877'].length===4,'facsimile page counts');
+console.log('HIST-0.4i VALIDATION PASS: 1873 92 entries; 1877 91 entries; 91 per-law rows; 6 official scanned pages; 8 exploratory toponym candidates; zero stable GCP/identities/imports.');
