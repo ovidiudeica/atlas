@@ -1,0 +1,1577 @@
+{
+  "phase": "HIST-0.4g",
+  "audit_date": "2026-11-11",
+  "inherited_phase": "HIST-0.4f",
+  "unique_ids": 37,
+  "counts": {
+    "P0": 3,
+    "P1": 25,
+    "P2": 9
+  },
+  "focus_ids": [
+    "2747434",
+    "2747435",
+    "2829384",
+    "2878295"
+  ],
+  "carried_forward_untouched": 33,
+  "P0_open": 3,
+  "certified_boundaries": 0,
+  "admissions": 0,
+  "records": [
+    {
+      "ohm_relation_id": "2746573",
+      "display_name": "Banatul Timișoarei",
+      "family": "Banatul Timișoarei",
+      "interval": [
+        "1718-07-21",
+        "1751"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2747562",
+      "display_name": "Banatul Timișoarei",
+      "family": "Banatul Timișoarei",
+      "interval": [
+        "1751",
+        "1778-06-06"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR01"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR01",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2684081",
+      "display_name": "Bucovina",
+      "family": "Bucovina și Districtul Bucovina",
+      "interval": [
+        "1861-02-26",
+        "1878-07-13"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR02",
+        "AR03"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR03",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746379",
+      "display_name": "Bucovina",
+      "family": "Bucovina și Districtul Bucovina",
+      "interval": [
+        "1849-03-04",
+        "1860-08-06"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR02"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746380",
+      "display_name": "Bucovina",
+      "family": "Bucovina și Districtul Bucovina",
+      "interval": [
+        "1774",
+        "1786-08-06"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR01",
+        "DV04"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR01",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "DV04",
+          "role": "USER_SUPPLIED_DERIVATIVE_OR_THEMATIC_CONTEXT"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746401",
+      "display_name": "Bucovina",
+      "family": "Bucovina și Districtul Bucovina",
+      "interval": [
+        "1878-07-13",
+        "1918"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR03"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR03",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746744",
+      "display_name": "Districtul Bucovina",
+      "family": "Bucovina și Districtul Bucovina",
+      "interval": [
+        "1786-08-06",
+        "1849-03-04"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR01",
+        "AR02"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR01",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746745",
+      "display_name": "Districtul Bucovina",
+      "family": "Bucovina și Districtul Bucovina",
+      "interval": [
+        "1860-08-06",
+        "1861-02-26"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR02"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746839",
+      "display_name": "Frontiera Militară a Banatului",
+      "family": "Frontiera Militară a Banatului",
+      "interval": [
+        "1751",
+        "1849-11-18"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR01",
+        "AR02"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR01",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746840",
+      "display_name": "Granița militară bănățeană",
+      "family": "Frontiera Militară a Banatului",
+      "interval": [
+        "1849-11-18",
+        "1860-12-27"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR02"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746841",
+      "display_name": "Frontiera Militară a Banatului",
+      "family": "Frontiera Militară a Banatului",
+      "interval": [
+        "1860-12-27",
+        "1873-08-08"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR02",
+        "AR03"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR03",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2694153",
+      "display_name": "Gubernia Basarabia",
+      "family": "Gubernia Basarabia",
+      "interval": [
+        "1856-03-30",
+        "1878-07-13"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "DV03"
+      ],
+      "source_roles": [
+        {
+          "source_id": "DV03",
+          "role": "USER_SUPPLIED_DERIVATIVE_OR_THEMATIC_CONTEXT"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2694154",
+      "display_name": "Gubernia Basarabia",
+      "family": "Gubernia Basarabia",
+      "interval": [
+        "1878-07-13",
+        "1918"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2692354",
+      "display_name": "United Romanian Principalities",
+      "family": "Principatele Unite",
+      "interval": [
+        "1878-07-13",
+        "1881-03-14"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR03"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR03",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746400",
+      "display_name": "United Romanian Principalities",
+      "family": "Principatele Unite",
+      "interval": [
+        "1859-02-05",
+        "1878-07-13"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "DV03"
+      ],
+      "source_roles": [
+        {
+          "source_id": "DV03",
+          "role": "USER_SUPPLIED_DERIVATIVE_OR_THEMATIC_CONTEXT"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2692219",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1881-03-14",
+        "1913-08-29"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2693255",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1941-08-19",
+        "1944-04-01"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2693256",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1940-09-07",
+        "1941-08-19"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2693257",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1940-08-30",
+        "1940-09-07"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2693258",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1940-06-28",
+        "1940-08-30"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2693259",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1921",
+        "1940-06-28"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2693260",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1913-08-30",
+        "1918"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2693464",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1919",
+        "1921"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2877966",
+      "display_name": "Regatul României",
+      "family": "Regatul României",
+      "interval": [
+        "1945-03-09",
+        "1947-12-30"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2747434",
+      "display_name": "Țara Chioarului",
+      "family": "Țara Chioarului",
+      "interval": [
+        "1860-12-27",
+        "1876"
+      ],
+      "priority": "P0",
+      "new_candidate_source_ids": [
+        "DV01",
+        "AR02",
+        "AR03",
+        "AR04",
+        "EH01"
+      ],
+      "source_roles": [
+        {
+          "source_id": "DV01",
+          "role": "USER_SUPPLIED_DERIVATIVE_OR_THEMATIC_CONTEXT"
+        },
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR03",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR04",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "EH01",
+          "role": "DATE_SPECIFIC_GEOREFERENCED_CARTOGRAPHIC_SOURCE_UNVERIFIED_OHM_BORDER"
+        }
+      ],
+      "newly_measured_overlap": {
+        "other_source": "DV01",
+        "union_overlap_pct": 93.44803740635327,
+        "symmetric_difference_km2": 70.79152063509403,
+        "measured_against_original_OHM_2747435": true,
+        "source_epoch_verified": false
+      },
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NEXT_SEGMENT_LEVEL_REVIEW",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "KMZ_SOURCE_UNDATED_UNDOCUMENTED_AND_NONIDENTICAL_TO_OHM;_HISTORIC_BORDER_NOT_CERTIFIED",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "15_WAYS_NUMERIC_DISTANCE_TO_PRIVATE_KMZ_UNPROVEN_HISTORY",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false,
+        "source_ids": [
+          "MNL-KOVAR-954",
+          "MNL-KOVAR-1001-1055",
+          "BOROVSZKY-1876",
+          "HIM-BIXA719"
+        ],
+        "OHM_way_count": 15,
+        "KMZ_distance_ways": 15,
+        "KMZ_to_OHM_time_equivalence": false,
+        "KMZ_meaningful_primary_source_citation": false,
+        "ohm_to_kmz_p95_distance_m": 772.97,
+        "government_fonds_context_1861_1876": true,
+        "legislation_original_examined": false,
+        "site_readiness": "NOT_READY"
+      },
+      "hist04g": {
+        "source_status": "1877_I_SUCCESSOR_LOCALITIES_VERIFIED_NOT_GEOLOCATED",
+        "archival_reproductions_retrieved": 14,
+        "legal_localities_for_chioar": 91,
+        "ways_authentic_border_validated": 0,
+        "rights_to_publish_new_source_images": false,
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2747435",
+      "display_name": "Țara Chioarului",
+      "family": "Țara Chioarului",
+      "interval": [
+        "1650",
+        "1851-05-12"
+      ],
+      "priority": "P0",
+      "new_candidate_source_ids": [
+        "DV01",
+        "AR01",
+        "AR02",
+        "AR04"
+      ],
+      "source_roles": [
+        {
+          "source_id": "DV01",
+          "role": "USER_SUPPLIED_DERIVATIVE_OR_THEMATIC_CONTEXT"
+        },
+        {
+          "source_id": "AR01",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR04",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": {
+        "other_source": "DV01",
+        "union_overlap_pct": 93.44803740635327,
+        "symmetric_difference_km2": 70.79152063509403,
+        "measured_against_original_OHM_2747435": true,
+        "source_epoch_verified": false
+      },
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NEXT_SEGMENT_LEVEL_REVIEW",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "KMZ_SOURCE_UNDATED_UNDOCUMENTED_AND_NONIDENTICAL_TO_OHM;_HISTORIC_BORDER_NOT_CERTIFIED",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "15_WAYS_NUMERIC_DISTANCE_TO_PRIVATE_KMZ_UNPROVEN_HISTORY",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false,
+        "source_ids": [
+          "MNL-KOVAR-954"
+        ],
+        "OHM_way_count": 15,
+        "KMZ_distance_ways": 15,
+        "KMZ_to_OHM_time_equivalence": false,
+        "KMZ_meaningful_primary_source_citation": false,
+        "ohm_to_kmz_p95_distance_m": 772.97,
+        "MNL_fonds_1861_1876_outside_own_OHM_period": true,
+        "site_readiness": "NOT_READY"
+      },
+      "hist04g": {
+        "source_status": "1877_I_LAW_POSTDATES_1650_1851_AND_CANNOT_VALIDATE",
+        "archival_reproductions_retrieved": 14,
+        "legal_localities_for_chioar": 91,
+        "ways_authentic_border_validated": 0,
+        "rights_to_publish_new_source_images": false,
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2694163",
+      "display_name": "Țara Moldovei",
+      "family": "Țara Moldovei",
+      "interval": [
+        "1812-05-28",
+        "1856-03-30"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2746689",
+      "display_name": "Țara Moldovei",
+      "family": "Țara Moldovei",
+      "interval": [
+        "1856-03-30",
+        "1859-02-05"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2694164",
+      "display_name": "Țara Românească",
+      "family": "Țara Românească",
+      "interval": [
+        "1417",
+        "1420"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2929115",
+      "display_name": "Țara Românească",
+      "family": "Țara Românească",
+      "interval": [
+        "1420",
+        "1538"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2929116",
+      "display_name": "Țara Românească",
+      "family": "Țara Românească",
+      "interval": [
+        "1538",
+        "1829-09-14"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [
+        "AR05"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR05",
+          "role": "HISTORIC_MAP_CATALOG_LEAD_NOT_DIGITIZED_EXAMINED"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2929117",
+      "display_name": "Țara Românească",
+      "family": "Țara Românească",
+      "interval": [
+        "1829-09-14",
+        "1859-02-05"
+      ],
+      "priority": "P2",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2690518",
+      "display_name": "Transilvania",
+      "family": "Transilvania",
+      "interval": [
+        "1732-12-31",
+        "1765"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "PRIOR_HIST04D_BLOCK_CARRIED_FORWARD",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2747433",
+      "display_name": "Transilvania",
+      "family": "Transilvania",
+      "interval": [
+        "1711-04-29",
+        "1732-12-31"
+      ],
+      "priority": "P0",
+      "new_candidate_source_ids": [],
+      "source_roles": [],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NO_NEW_ELIGIBLE_SOURCE",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "1867_END_EVENT_VS_1732_END_DATE_CONTRADICTION_UNRESOLVED",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2829384",
+      "display_name": "Transilvania",
+      "family": "Transilvania",
+      "interval": [
+        "1851-05-12",
+        "1867-05-29"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "EH01",
+        "AR02"
+      ],
+      "source_roles": [
+        {
+          "source_id": "EH01",
+          "role": "DATE_SPECIFIC_GEOREFERENCED_CARTOGRAPHIC_SOURCE_UNVERIFIED_OHM_BORDER"
+        },
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "NEXT_SEGMENT_LEVEL_REVIEW",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "CONTEMPORARY_1862_GEOREFERENCED_SOURCE_ACQUIRED_BUT_OHM_82_WAYS_NOT_COMPARED_TO_HISTORIC_BORDER",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "ALL_82_GEOREFERENCE_COVERED_ONE_CHANGE_ARC_PROVISIONALLY_SCREENED",
+        "new_1862_provisional_checkpoints": 6,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false,
+        "source_ids": [
+          "EH01-1862",
+          "HIM-BIXA719",
+          "AT-ARCHIVE-719"
+        ],
+        "all_OHM_ways_inside_1862_raster": 82,
+        "original_OHM_way_count": 82,
+        "identical_with_prior_variant": 81,
+        "changed_way": 200503147,
+        "old_branch_ways": [
+          200503149,
+          200503150,
+          200503151
+        ],
+        "checkpoint_screen_not_blinded": true,
+        "points_closer_to_current": 4,
+        "source_map_year": 1862,
+        "source_map_year_within_ohm_interval": true,
+        "difference_area_km2": 93.719812,
+        "site_readiness": "NOT_READY_FULL_1862_LANDES_BORDER_UNTRACED"
+      },
+      "hist04g": {
+        "source_status": "MNL_1861_FACSIMILE_1859_CHRONOLOGY_NOT_GEOREFERENCED",
+        "archival_reproductions_retrieved": 14,
+        "legal_localities_for_chioar": 91,
+        "ways_authentic_border_validated": 0,
+        "rights_to_publish_new_source_images": false,
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2878295",
+      "display_name": "Transilvania",
+      "family": "Transilvania",
+      "interval": [
+        "1765",
+        "1851-05-12"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "DV01",
+        "AR01",
+        "AR02",
+        "AR04"
+      ],
+      "source_roles": [
+        {
+          "source_id": "DV01",
+          "role": "USER_SUPPLIED_DERIVATIVE_OR_THEMATIC_CONTEXT"
+        },
+        {
+          "source_id": "AR01",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        },
+        {
+          "source_id": "AR04",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "TEMPORAL_COMPARATOR_ONLY_NOT_CONTEMPORARY_TO_1862_MAP",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false,
+        "source_ids": [
+          "EH01-1862"
+        ],
+        "earlier_way_count": 84,
+        "shared_unchanged_ways": 81,
+        "only_earlier_ways": [
+          200503149,
+          200503150,
+          200503151
+        ],
+        "map_year_after_own_interval": true
+      },
+      "hist04g": {
+        "source_status": "COMPARATOR_ONLY_1861_MAP_POSTDATES_PERIOD",
+        "archival_reproductions_retrieved": 14,
+        "legal_localities_for_chioar": 91,
+        "ways_authentic_border_validated": 0,
+        "rights_to_publish_new_source_images": false,
+        "import_authorized": false
+      }
+    },
+    {
+      "ohm_relation_id": "2694215",
+      "display_name": "Voivodina Sârbească și Banatul Timișan",
+      "family": "Voivodina Sârbească și Banatul Timișan",
+      "interval": [
+        "1849-11-18",
+        "1860-12-27"
+      ],
+      "priority": "P1",
+      "new_candidate_source_ids": [
+        "AR02"
+      ],
+      "source_roles": [
+        {
+          "source_id": "AR02",
+          "role": "HISTORIC_GEOREFERENCED_SURVEY_BACKGROUND_NOT_YET_BORDER_EVIDENCE"
+        }
+      ],
+      "newly_measured_overlap": null,
+      "documentary_independence_confirmed": false,
+      "validity_period_to_primary_source_proven": false,
+      "geometry_validated_against_historic_admin_border_per_way": false,
+      "cartographic_institutional_rights_for_publication": false,
+      "candidate_review_state": "CANDIDATE_SOURCE_FOUND_REQUIRE_PROVENANCE_CHECK",
+      "individual_admission_eligible": false,
+      "import_authorized": false,
+      "published_in_HISTORIC_module": false,
+      "reason_for_hold": "SURVEY_OR_DERIVATIVE_CONTEXT_NOT_BOUNDARY_CERTIFICATION",
+      "hist04f": {
+        "source_phase": "HIST-0.4f",
+        "cartographic_screen_status": "PRIOR_HIST04E_NO_NEW_PER_WAY_COMPARISON",
+        "new_1862_provisional_checkpoints": 0,
+        "ways_with_authentic_historical_border_verified": 0,
+        "independent_legal_boundary_admission": false,
+        "rights_to_publish_new_source_confirmed": false
+      },
+      "hist04g": {
+        "status": "INHERITED_NO_NEW_QUALIFICATION",
+        "import_authorized": false
+      }
+    }
+  ]
+}

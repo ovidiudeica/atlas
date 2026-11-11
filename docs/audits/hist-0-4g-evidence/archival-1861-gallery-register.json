@@ -1,0 +1,226 @@
+{
+  "phase": "HIST-0.4g",
+  "audit_date": "2026-11-11",
+  "institution": "Magyar Nemzeti Levéltár (MNL)",
+  "institutional_webpage": "https://mnl.gov.hu/mnl/ol/hirek/erdely_terkep_amely_a_kormanyra_nezve_valosagos_kincset_kepezett",
+  "archival_collection": "MNL OL, Térképtár, Nyomtatott térképek (S 75), No. 82",
+  "map_title": "Administrativ Karte des Grossfürstenthums Siebenbürgen nach der neuesten Landeseintheilung 1859",
+  "map_source_state": "1861 photographic reproduction of administrative arrangement 1859, per MNL caption and observed title/legend",
+  "map_scale": "1:144000 (academic catalogue, not GIS pixel scale)",
+  "gallery_items_retrieved": 14,
+  "gallery_photos_not_equivalent_to_original_sheet_count": true,
+  "original_map_series_sheets_referenced_by_study": 24,
+  "source_image_bytes_total": 444622163,
+  "source_gallery": [
+    {
+      "gallery_index": 1,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_1_0.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_1_0.jpg",
+      "bytes": 43853933,
+      "sha256": "14b18424ae52971702120f4ac9a6c35c065c35cf7293272e100a42a5466060b4",
+      "pixels": [
+        6425,
+        10015
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 2,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_2.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_2.jpg",
+      "bytes": 27928772,
+      "sha256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+      "pixels": [
+        6379,
+        9819
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 3,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_3.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_3.jpg",
+      "bytes": 29250319,
+      "sha256": "ecd97f9c7cc76e41ebffa720be71201600f65aa33c9a92496dc8fea4ec6040e4",
+      "pixels": [
+        6426,
+        9840
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 4,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_4_4.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_4_4.jpg",
+      "bytes": 25061257,
+      "sha256": "c5181e93cfb2100224387e5ae02e6663332b501d26278a0db34fc786245743b7",
+      "pixels": [
+        6426,
+        9846
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 5,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_5_0.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_5_0.jpg",
+      "bytes": 42027933,
+      "sha256": "e9e0ea97e6046dad5814b752a496e6d11041960242b19e975a3745592e95f67d",
+      "pixels": [
+        6401,
+        10145
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 6,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_6.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_6.jpg",
+      "bytes": 28009070,
+      "sha256": "6bd9dcf547fd338eff40871192912af58a21ddb34ab3f8387cc606c5fda460b0",
+      "pixels": [
+        6379,
+        10149
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 7,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_7.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_7.jpg",
+      "bytes": 30720119,
+      "sha256": "62a6095c326aaf721d6cf3ca2240bf7176cbe6fc6e4d8d3fc7ddcab9985cfe36",
+      "pixels": [
+        6426,
+        10154
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 8,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_8.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_8.jpg",
+      "bytes": 30698500,
+      "sha256": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe",
+      "pixels": [
+        6415,
+        10156
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 9,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_9.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_9.jpg",
+      "bytes": 26314962,
+      "sha256": "606a9e3dbe6d627e4381ec559e172d9d09c5380abd5b2dfe4adfc1e3855968bf",
+      "pixels": [
+        6360,
+        10097
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 10,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_10_0.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_10_0.jpg",
+      "bytes": 45486533,
+      "sha256": "f52acca62b782117acdcef03b0c5d6e2105063870c70890b8c10269345467bdf",
+      "pixels": [
+        6401,
+        10145
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 11,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_11.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_11.jpg",
+      "bytes": 26949824,
+      "sha256": "e5d7578b5e6366028445336498a6307c63cf39b1e5a9117b76ed166d1aabed4e",
+      "pixels": [
+        6410,
+        10149
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 12,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_12.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_12.jpg",
+      "bytes": 29370038,
+      "sha256": "d4eca6905db768748b1cfc7aae4cc5b4437edb8dea7e4860cb1349e90693f4cb",
+      "pixels": [
+        6426,
+        10154
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 13,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_13.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_13.jpg",
+      "bytes": 29658433,
+      "sha256": "04734ea9daf0ae6eb6fb9b58493ddd22a47eaa4e36a4beb7b98f271669e2f1af",
+      "pixels": [
+        6415,
+        10156
+      ],
+      "file_format": "jpeg"
+    },
+    {
+      "gallery_index": 14,
+      "source_filename": "hu_mnl_ol_s_0075_no_0082_14.jpg",
+      "source_url": "https://mnl.gov.hu/sites/default/files/hu_mnl_ol_s_0075_no_0082_14.jpg",
+      "bytes": 29292470,
+      "sha256": "3ff58e812f7619088f835720581b0329f2a4a8b03e0665e01d87af961592d6a2",
+      "pixels": [
+        6355,
+        10156
+      ],
+      "file_format": "jpeg"
+    }
+  ],
+  "source_article_sha256": "3aeb7d3e65d58de9e30e6f97d37678454541530ee6a6d9ad5c6e557c1486552d",
+  "other_local_source_documents": [
+    {
+      "filename": "1876-XXXIII-law.html",
+      "source_url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87600033.TV",
+      "bytes": 82359,
+      "sha256": "9f753133800cd84d1992552d79e6e71e7ef1475581879f3e97eb84e2d031accf"
+    },
+    {
+      "filename": "1877-I-law.html",
+      "source_url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+      "bytes": 68975,
+      "sha256": "fe53fb8e1dd8f93b64130127b97a533ec918d920354d667cceff63120ed2e038"
+    },
+    {
+      "filename": "janko-catastrum-2024.pdf",
+      "source_url": "https://epa.oszk.hu/04300/04359/00039/pdf/EPA04359_catastrum_2024_01.pdf",
+      "bytes": 6107998,
+      "sha256": "d43c5e8ad85b2c8a28baaa73b37e60b17737c9123e73090137f07896cf9f1c73"
+    }
+  ],
+  "visual_inspection": {
+    "contact_sheet": "14-gallery-photo local-only contact sheet inspected",
+    "title_page_gallery_image": "hu_mnl_ol_s_0075_no_0082_9.jpg",
+    "inspected_title": "Administrativ Karte des Grossfürstenthums Siebenbürgen ... Landeseintheilung 1859",
+    "inspected_legend_labels": [
+      "Landesgrenzen",
+      "Kreisgrenzen",
+      "Bezirksgrenzen",
+      "Gemeindegrenzen"
+    ],
+    "title_inspection": "YES, high-resolution crop was visually inspected",
+    "originals_physically_inspected": false,
+    "high_resolution_GCP_georeferenced": false,
+    "land_border_vector_independently_traced": false,
+    "coverage_of_82_OHM_ways_verified_on_this_1861_copy": false
+  },
+  "copyright_rights": "Institutionally accessible digital images; research copies local only. Republishing image/derivatives requires independent permissions review.",
+  "image_files_published_in_git": 0,
+  "originals_directly_from_shelved_archival_object": "DIGITAL_REPRODUCTION_FROM_ARCHIVAL_INSTITUTION_WITH_IDENTIFIABLE_COLLECTION; physical original not inspected",
+  "historical_boundary_certification": 0,
+  "notes": "14 digital gallery items are not assumed to correspond one-to-one to all 24 sheets of the source series. No merged georeferenced mosaic or independent boundary line has been produced."
+}

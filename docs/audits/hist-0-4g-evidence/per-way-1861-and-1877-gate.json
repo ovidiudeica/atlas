@@ -1,0 +1,891 @@
+{
+  "phase": "HIST-0.4g",
+  "audit_date": "2026-11-11",
+  "inherits": "HIST-0.4f per-way screening",
+  "sources": {
+    "map1861": "MNL OL S75 No.82, 14 large photos of 1861 facsimile based on 1859 administrative arrangement",
+    "law1877": "1877:I §2: 48 Szolnok-Doboka plus 43 Szatmár former Chioar communities"
+  },
+  "temporal_risk": "1861 Partium reassignment discussed in Catastrum 2024; OHM 1851–1867 single polygon may conceal a boundary change, not confirmed geometrically",
+  "transylvania": {
+    "id": 2829384,
+    "OHM_way_count": 82,
+    "archival_1861_gallery_images": 14,
+    "archival_photo_to_OHM_way_index": 0,
+    "georeferenced_map1861": false,
+    "GCP_count": 0,
+    "independent_control_point_count": 0,
+    "georeferencing_RMS_m": null,
+    "authenticated_Landes_ways": 0,
+    "ways": [
+      {
+        "way_id": 202362117,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362114,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362116,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362115,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199616883,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362112,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199616880,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199616940,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199616939,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200503068,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200503056,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 198638805,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200503147,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": true,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200503146,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199616884,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362144,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199615952,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199615953,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199615954,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362133,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199615955,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603789,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603776,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603788,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603794,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202384756,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202384755,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603795,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603778,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199599455,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603797,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603798,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603799,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603801,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199599450,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603805,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603804,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199603802,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199599456,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362120,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362118,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 198748714,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202489003,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 204253764,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200156700,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200156701,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 204254325,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200156695,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200156689,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200156690,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362162,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362159,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362164,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362160,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200156691,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362148,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362149,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362150,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200156698,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362145,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362146,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362151,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362147,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362152,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 198638800,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362130,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199458499,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 198556568,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362127,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362165,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 202362129,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199456598,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 198598357,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199456597,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 198638802,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199617347,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199617346,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199617349,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 199615701,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200501719,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 198638803,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      },
+      {
+        "way_id": 200501716,
+        "prior_1862_raster_inside": true,
+        "prior_temporal_change_arc": false,
+        "archival_1861_sheet_matched": false,
+        "independent_Landes_trace": false,
+        "georeference_residual_m": null,
+        "certified": false
+      }
+    ]
+  },
+  "chioar": {
+    "ids": [
+      2747434,
+      2747435
+    ],
+    "historic_localities_1877": 91,
+    "counties": {
+      "Szolnok-Doboka": 48,
+      "Szatmár": 43
+    },
+    "pre_1876_legal_locality_polygons_mapped": 0,
+    "legal_records_not_retroactive_to_1650_1851": true,
+    "OHM_ways_count_per_relation": 15,
+    "ways": [
+      {
+        "way_id": 199616884,
+        "prior_hist04f_KMZ_p95_m": 634.7,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 202362144,
+        "prior_hist04f_KMZ_p95_m": 320.34,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 199615952,
+        "prior_hist04f_KMZ_p95_m": 221.94,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 199615953,
+        "prior_hist04f_KMZ_p95_m": 618.19,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 199615954,
+        "prior_hist04f_KMZ_p95_m": 666.12,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 202362132,
+        "prior_hist04f_KMZ_p95_m": 1050.8,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 199616890,
+        "prior_hist04f_KMZ_p95_m": 840.43,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 199616888,
+        "prior_hist04f_KMZ_p95_m": 384.67,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 199616887,
+        "prior_hist04f_KMZ_p95_m": 563.03,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 200504303,
+        "prior_hist04f_KMZ_p95_m": 682.96,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 199616885,
+        "prior_hist04f_KMZ_p95_m": 1061.5,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 202362138,
+        "prior_hist04f_KMZ_p95_m": 379.76,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 202362137,
+        "prior_hist04f_KMZ_p95_m": 523.89,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 202362135,
+        "prior_hist04f_KMZ_p95_m": 1027.83,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      },
+      {
+        "way_id": 202362142,
+        "prior_hist04f_KMZ_p95_m": 720.93,
+        "historical_1877_community_geometry_linked": false,
+        "source_original_border_verified": false,
+        "certified": false
+      }
+    ]
+  },
+  "gate": {
+    "new_original_paper_maps_physically_inspected": 0,
+    "high_res_institutional_reproductions_hashed": 14,
+    "formal_legal_locality_names_extracted": 91,
+    "new_independently_georeferenced_1861_ways": 0,
+    "verified_1877_commune_boundaries": 0,
+    "admitted_variants": 0,
+    "published_geometry_changes": false
+  }
+}

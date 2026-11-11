@@ -1,0 +1,70 @@
+{
+  "phase": "HIST-0.4g",
+  "audit_date": "2026-11-11",
+  "base_main": "46b2fe25878c0f301812ff036e6e4fca9bd8b8d8",
+  "scope": "High-resolution MNL 1861 archival facsimile acquisition plus 1877 legal locality reconciliation. Independent Landes border digitization remains open.",
+  "recovered": {
+    "institutional_map_gallery_images": 14,
+    "source_images_total_bytes": 444622163,
+    "original_24_sheet_equivalence_proven": false,
+    "institutional_map_source": "MNL OL S 75 No. 82; 1861 photographic reproduction of 1859 administrative arrangement",
+    "legal_law_1876": true,
+    "legal_law_1877": true,
+    "historical_1877_communities_named": 91,
+    "legal_successors": {
+      "Szolnok-Doboka": 48,
+      "Szatmár": 43
+    },
+    "map_year_1861_representation_year_1859": true,
+    "possibility_of_1861_Partium_reclassification_requires_legal_act": true
+  },
+  "validation": {
+    "acquired_map_image_sha256_recalculated_on_local_files": "14/14 PASS",
+    "law_name_extraction_A_B": "SHA256 identical two runs",
+    "law_local_derived_json_sha256": "526a4f67bde8f8fa48c6d4d211373c0baa51a891db31051cf82d9c2e80343bee",
+    "repo_artifact_exact_sha256": "9/9 PASS",
+    "validator": "PASS with 14 sources, 91 names, 82 Transylvania ways, 15 Chioar ways, 37 OHM relation dossiers, 0 admissions"
+  },
+  "counts": {
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "relation_dossiers": 37,
+    "transylvania_ways": 82,
+    "chioar_ways_each": 15,
+    "verified_1861_Landes_ways": 0,
+    "verified_1877_commune_polygons": 0,
+    "historical_boundaries_certified": 0,
+    "variants_admitted": 0
+  },
+  "source_protection": {
+    "private_KMZ_published": false,
+    "MNL_images_published": false,
+    "PDFs_published": false,
+    "georeferenced_1861_mosaic_generated": false,
+    "application_changed": false,
+    "OHM_ACTUAL_OSMB_geometries_changed": false,
+    "website_changed": false,
+    "orders_placed": false,
+    "payments_made": false
+  },
+  "repo_artifact_sha256": {
+    "README.md": "545f4be13261981fb4ceabcf8c47e0d3ca344a5439dcf74eaa25be9b3b91bf1c",
+    "archival-1861-gallery-register.json": "d73c5b066558d78a0ae17e6af6cbf3887ce800106efbf7bee47aabf6bd4700c1",
+    "chioar-1877-legal-locality-register.json": "aeeed10b4d31f0c7636091c00a003f9f13a5b9e40baa02109b9bc46f21c48244",
+    "per-way-1861-and-1877-gate.json": "c4267dc91315cb510a92f83c7a05e2e47dc691c21e2854c236e486bdae3fcdb3",
+    "individual-qualification-37.json": "0e7c51a1a11496b08f310ef811c3a93949af30601d4afe0e3196e82167af7265",
+    "source-provenance-register.json": "b32c96f6689098538755f92c4da0e4a88d400c864ed6478fc1afe1482d1d5674",
+    "validate-evidence.mjs": "961032656c51e39e4e2ebd444c84ff7fc60b22f4193d93c82c343cca98ad0996",
+    "scripts/acquire-mnl-1861-local.mjs": "a4e74c30644cf04ae92282c1d5f873b0df5b93ced8244b0e0bb4acaa0799a485",
+    "scripts/extract-1877-chioar-law.mjs": "15f6f1555e2d5298b60bbb257197d57d700e6f493b83a10d418182eb84e6a405"
+  },
+  "local_source_hashes": {
+    "MNL_article_1861_gallery": "See archival-1861-gallery-register.json for page and 14 JPG SHA-256",
+    "Janko_2024_Catastrum_PDF": "d43c5e8ad85b2c8a28baaa73b37e60b17737c9123e73090137f07896cf9f1c73",
+    "1876_XXXIII_HTML": "9f753133800cd84d1992552d79e6e71e7ef1475581879f3e97eb84e2d031accf",
+    "1877_I_HTML": "fe53fb8e1dd8f93b64130127b97a533ec918d920354d667cceff63120ed2e038"
+  },
+  "verdict": "MNL_1861_HIGH_RES_SOURCE_VERIFIED_1877_LEGAL_LOCALITIES_RECONCILED_NO_INDEPENDENT_LANDES_TRACE_NO_IMPORT",
+  "next_gate": "Per-sheet index of MNL S75 82, independent GCP georeferencing with RMS and leave-one-out checks, 1859 vs 1861 Partium statute and 1863 map, legal name-to-historical commune source crosswalk without name-only guessing."
+}
