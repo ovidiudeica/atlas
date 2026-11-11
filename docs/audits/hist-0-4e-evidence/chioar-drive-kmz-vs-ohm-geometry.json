@@ -1,0 +1,67 @@
+{
+  "phase": "HIST-0.4e",
+  "audit_date": "2026-11-11",
+  "operation": "Independent geometrical comparison of Drive KML district Chioar vs immutable OHM 2747435",
+  "local_source": {
+    "drive_id": "PRIVATE_DRIVE_FILE_ID_REDACTED",
+    "name": "Drive KMZ — Transylvania administrative divisions, early nineteenth century",
+    "kmz_sha256": "7b5f799a41bd6e133bb2b61e187e86504d049a929512c90f606966aadeaf427b",
+    "kml_bytes": 1678804,
+    "placemarks_total": 73,
+    "history_date_claim": "beginning of 19th century, not precise",
+    "primary_historical_source_in_file": false,
+    "license_in_file": false,
+    "coordinates_crs": "KML WGS84 longitude latitude"
+  },
+  "ohm_source": {
+    "id": 2747435,
+    "gzip_sha256": "c489c9f80139a8d01d4c69ead195cf24f24639da2d486b278c4d34b37c3539d4",
+    "member_way_count": 15,
+    "geom_sha256": "6bb9afbabafbe3cb3563b5028367ef2027ddc2c604bcdd85544c2c56dbf3bbdc"
+  },
+  "kml_chioar_instances": [
+    {
+      "placemark_index": 3,
+      "vertices": 518,
+      "bbox": [
+        23.303968,
+        47.258786,
+        23.919867,
+        47.689139
+      ],
+      "wgs84_area_km2": 1058.2819707242945,
+      "coordinate_sha256": "28ccac3cca8855311968ecd3b8f2e38a50f96134dd7d0974d67675e621835d39",
+      "administrative_text": "descriere: <br>ID: 10<br>REGIUNE: Părţile ungureşti<br>COMITATE: Chioar<br>STATUT: district"
+    },
+    {
+      "placemark_index": 42,
+      "vertices": 518,
+      "bbox": [
+        23.303968,
+        47.258786,
+        23.919867,
+        47.689139
+      ],
+      "wgs84_area_km2": 1058.2819707242945,
+      "coordinate_sha256": "28ccac3cca8855311968ecd3b8f2e38a50f96134dd7d0974d67675e621835d39",
+      "administrative_text": "descriere: <br>ID: 7<br>REGIUNE: Părţile ungureşti<br>COMITATE: Chioar<br>STATUT: district<br>CERCURI: "
+    }
+  ],
+  "duplicate_kml_exact_coordinates": true,
+  "comparison_wgs84_km2": {
+    "ohm_area": 1031.852270931592,
+    "kml_area": 1058.2819707242945,
+    "intersection_area": 1009.6713120394782,
+    "union_area": 1080.4628326745722,
+    "ohm_only_area": 22.180846197164016,
+    "kmz_only_area": 48.61067443793003,
+    "symmetric_difference_area": 70.79152063509403,
+    "net_area_difference": 26.429699792702422,
+    "jaccard_intersection_over_union": 0.9344803740635326,
+    "percentage_symdiff_vs_union": 6.551962593646749
+  },
+  "geometry_validity": "Clipping completed, requires independent reproduction if admitted",
+  "interpretation": "Documentary independence and historical date/scale NOT demonstrated, numerical comparison is not certification",
+  "original_boundary_certified": false,
+  "import_authorization": "NO"
+}
