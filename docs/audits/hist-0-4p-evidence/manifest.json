@@ -29,7 +29,8 @@
     "Várak.hu general methodological claim of 1:25,000 military maps is not evidence that this Kővár detail page serves a corresponding original 1:25,000 sheet. Its visible map gallery consists of regional schematic, modern road locator, 2024 route map.",
     "Burgenwelt cautions castle is often mislocated at the Cavnic–Lăpuș confluence; this is specifically excluded.",
     "Modern generic site location agreement does not make a measured historic physical bastion: fifth-precision pins and one 169m position difference must remain non-geodetic.",
-    "The MNL 1859 photo 2 has no unambiguous castle/ruin physical symbol after full-resolution examination; no historic-pixel ↔ modern same-object pair is admissible."
+    "The MNL 1859 photo 2 has no unambiguous castle/ruin physical symbol after full-resolution examination; no historic-pixel ↔ modern same-object pair is admissible.",
+    "MNM Folia Historica 7 (1979) entry 7 independently identifies original PIANTA DI KUIVAR as manuscript 8920.T (18.3×28.4 cm) with 1907 acquisition provenance. Distinguish Küküllővár inventory 8922.T. Original manuscript not examined."
   ],
   "historical_legal_state": {
     "Szt_Kapolnok_expansion_demonstrated": false,
@@ -67,5 +68,16 @@
     "mnl-kovar-cross-era-gcp-admission-gate.json",
     "validate-evidence.mjs"
   ],
-  "next_gate": "HIST-0.4q — stop assuming castle can be used on administrative MNL photo 2; independently prove an exact map symbol for any stable geographic anchor on SAME photographic sheet, or switch to properly dated free historic cadastral map with its own survey control and separately audit legal boundary. No more geography or nomenclature promotion from fuzzy centroids."
+  "next_gate": "HIST-0.4q — stop assuming castle can be used on administrative MNL photo 2; independently prove an exact map symbol for any stable geographic anchor on SAME photographic sheet, or switch to properly dated free historic cadastral map with its own survey control and separately audit legal boundary. No more geography or nomenclature promotion from fuzzy centroids.",
+  "manuscript_original_catalog": {
+    "museum": "Magyar Nemzeti Múzeum",
+    "original_inventory": "8920.T",
+    "manuscript": "PIANTA DI KUIVAR / governato da Teleki",
+    "reference": "Folia Historica 7 (1979), printed p.126, entry 7",
+    "source_url": "https://mnm.hu/sites/default/files/publications/foliahistorica_07.pdf",
+    "different_lookalike_manuscript": "PIANTA DI KUKELVAR 8922.T (Cetatea de Baltă)",
+    "original_manuscript_directly_inspected": false,
+    "personal_attribution_to_Marsigli_certain": false,
+    "geodesic_survey_point": false
+  }
 }
