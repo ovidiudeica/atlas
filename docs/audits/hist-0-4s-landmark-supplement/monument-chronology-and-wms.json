@@ -1,0 +1,214 @@
+{
+  "phase": "HIST-0.4s",
+  "audit_date": "2026-11-12",
+  "scope": "Supplement to already merged HIST-0.4s full-margin source qualification: heritage pre-1859 time/place admission, not a retraction of Austrian 1:25000 marginalia",
+  "method": "Official/cultural heritage documentary site coordinates were used solely to request spatial sheet-index WFS and WMS map windows; WMS center pixel is NEVER an independently identified historic map monument vertex.",
+  "raster_service": "https://services.geo-spatial.org/geoserver/eharta/ows",
+  "original_1924_sheet": "2977 — Șomcuta Mare, printing year 1924",
+  "monument_sources": [
+    {
+      "id": "BUTEASA_WOODEN_CHURCH",
+      "monument": "Biserica de lemn Sfinții Arhangheli Mihail și Gavril, Buteasa",
+      "LMI": "MM-II-m-B-04532",
+      "source_url": "https://chioar.culturamm.ro/biserica-de-lemn-sfintii-arhangheli-mihail-si-gavril-din-buteasa/",
+      "source_lat": 47.44749,
+      "source_lon": 23.54702,
+      "source_coordinate_accuracy_m": null,
+      "header_year": 1800,
+      "narrative_constructed_year_candidate": 1751,
+      "consecration_year_documentary": 1839,
+      "relevant_date_certification": "CONFLICT_BETWEEN_SUMMARY_1800_AND_NARRATIVE_1751__BOTH_PRE1859",
+      "documented_repair_years": [
+        1898,
+        1966
+      ],
+      "roof_collapse_window": "14/15 January 2019",
+      "original_stone_foundation_remains_and_surveyed": null,
+      "point_spatial_coverage": {
+        "WFS_HTTP": 200,
+        "sheets": [
+          {
+            "indicativ": "2977",
+            "name": "Șomcuta Mare",
+            "print_year": 1924,
+            "download_id": "25790"
+          }
+        ]
+      },
+      "WMS_detail": {
+        "bbox_lonlat": [
+          23.54102,
+          47.44349,
+          23.55302,
+          47.45149
+        ],
+        "dimensions_px": [
+          1400,
+          1000
+        ],
+        "HTTP": 200,
+        "sha256": "cf0c9511253172b8ad73039565ca0f5ded681378f12573b04e8e858e535e62bf",
+        "bytes": 1005030,
+        "visually_inspected": true,
+        "historic_church_symbol_uniquely_identified_at_source_coordinate": false
+      },
+      "position_site_may_have_pre1859_continuity": true,
+      "continuity_of_exact_bastion_or_wall_corner_demonstrated": false,
+      "qualified_independent_modern_surveyed_vertex": false,
+      "pre1859_original_map_matching_church_symbol": false,
+      "decision": "P1_CANDIDATE_ONLY__NO_GCP",
+      "why": "Rare probable pre1859 structure with specific modern heritage coordinate, but dating conflict, substantial 2019 collapse, no certified exact surveyed surviving vertex, no uniquely matched 1859 map symbol"
+    },
+    {
+      "id": "VALENII_SOMCUTEI_WOODEN_CHURCH",
+      "monument": "Biserica de lemn Sfinții Arhangheli, Vălenii Șomcutei",
+      "LMI": "MM-II-m-A-04793",
+      "source_url": "https://chioar.culturamm.ro/biserica-de-lemn-sf-arhangheli-din-valenii-somcutei/",
+      "source_lat": 47.47433,
+      "source_lon": 23.44854,
+      "source_coordinate_accuracy_m": null,
+      "header_date": "17th century",
+      "narrative_date": "probably 1741",
+      "documented_renovation_year": 1845,
+      "documented_renovation_changes": [
+        "Southern door blocked and entrance moved to western side",
+        "Western porch built"
+      ],
+      "monument_standing_status": "Described as standing wooden church in cultural heritage publication; current 2026 field status not independently inspected",
+      "point_spatial_coverage": {
+        "WFS_HTTP": 200,
+        "sheets": [
+          {
+            "indicativ": "2977",
+            "name": "Șomcuta Mare",
+            "print_year": 1924,
+            "download_id": "25790"
+          },
+          {
+            "indicativ": "2877",
+            "name": "Silimeghiu",
+            "print_year": 1924,
+            "download_id": "25750"
+          }
+        ],
+        "sheet_boundary_ambiguity": true
+      },
+      "WMS_detail": {
+        "bbox_lonlat": [
+          23.44254,
+          47.47033,
+          23.45454,
+          47.47833
+        ],
+        "dimensions_px": [
+          1400,
+          1000
+        ],
+        "HTTP": 200,
+        "sha256": "47c5a0a6684aa26c5e16578880a21c690328a532b70b68c163841cf07b59d8a2",
+        "bytes": 984415,
+        "visually_inspected": true,
+        "historic_church_symbol_uniquely_identified_at_source_coordinate": false
+      },
+      "pre1859_existence_probable": true,
+      "continuity_of_original_footprint_certified": false,
+      "qualified_independent_modern_surveyed_vertex": false,
+      "pre1859_original_map_matching_church_symbol": false,
+      "decision": "P1_CANDIDATE_ONLY__NEIGHBOR_SHEET_AMBIGUITY__NO_GCP",
+      "why": "Historic building likely predates 1859 but altered in 1845; source coordinate is heritage locator not a surveyed corner; 1924 WFS returns two neighboring sheet polygons"
+    },
+    {
+      "id": "CODRU_BUTESII_RELOCATED_WOODEN_CHURCH",
+      "monument": "Biserica de lemn Sfinții Arhangheli, Codru Butesii",
+      "LMI": "MM-II-m-B-04545",
+      "source_url": "https://chioar.culturamm.ro/biserica-de-lemn-sf-arhangheli-mihail-si-gavril-din-codru-butesii/",
+      "source_lat": 47.46785,
+      "source_lon": 23.5999,
+      "source_coordinate_accuracy_m": null,
+      "header_date": "19th century",
+      "narrative_building_date": "17th century (original building, not present location)",
+      "recorded_moves": [
+        "Originally Copalnic-Mănăștur",
+        "Subsequently Preluca Nouă",
+        "Sold to Codru Butesii and installed there in 1937"
+      ],
+      "arrived_at_current_site_year": 1937,
+      "point_spatial_coverage": {
+        "WFS_HTTP": 200,
+        "sheets": [
+          {
+            "indicativ": "2977",
+            "name": "Șomcuta Mare",
+            "print_year": 1924,
+            "download_id": "25790"
+          }
+        ]
+      },
+      "WMS_detail": {
+        "bbox_lonlat": [
+          23.5939,
+          47.46385,
+          23.6059,
+          47.47185
+        ],
+        "dimensions_px": [
+          1400,
+          1000
+        ],
+        "HTTP": 200,
+        "sha256": "e07bdda8d0671c60edbaa1667b7ce5b3120541fdc031a09b2ba03d5bd27a3844",
+        "bytes": 962883,
+        "visually_inspected": true,
+        "historic_church_symbol_uniquely_identified_at_source_coordinate": false
+      },
+      "present_local_structure_existed_at_site_in_1859": false,
+      "present_local_structure_existed_at_site_in_1924": false,
+      "pre1859_original_map_matching_church_symbol": false,
+      "decision": "P0_EXCLUDE_FROM_CROSS_ERA_FIXED_SITE_GCP",
+      "why": "Church is historic as an object but documented installation at current site in 1937; cannot treat current WGS84 point as 1859/1924 location of same church"
+    },
+    {
+      "id": "SOMCUTA_OLD_WOODEN_CHURCH_RELOCATED",
+      "monument": "Former wooden church from Șomcuta Mare moved to Ulmeni",
+      "source_url": "https://www.muzeubaiamare.ro/azi-despre-manastirea-ortodoxa-de-la-somcuta-mare-nagysomkut/",
+      "source_age": "Prior to 1895, existed in village; historical secondary chronological debate",
+      "move_year": 1895,
+      "source_coordinate_of_original_site": null,
+      "source_coordinate_of_destination_site": null,
+      "WFS_polygon_sheet": "2977",
+      "WMS_detail": null,
+      "decision": "EXCLUDE_CURRENT_ULMENI_POSITION_AS_1859_SOMCUTA_POINT",
+      "why": "A relocated monument cannot be used as a stationary site vertex between 1859 and present."
+    }
+  ],
+  "point_acceptance_gate": {
+    "unique_histmap_church_cross_or_footprint_at_1924_pixel_verified": 0,
+    "unique_equivalent_pre1877_pixel_verified": 0,
+    "modern_object_specific_surveyed_corner_coordinates_verified": 0,
+    "qualified_same_object_GCP_count": 0,
+    "new_geometric_fit_RMSE_m": null,
+    "new_holdout_RMSE_m": null,
+    "certified_boundary_segments": 0
+  },
+  "user_safety": {
+    "outbound_email": false,
+    "institution_contact": false,
+    "payments": false,
+    "copy_WMS_PNG_to_public_git": false,
+    "private_source_disclosure": false
+  },
+  "supplement_id": "HIST-0.4s-LM1",
+  "base_main_sha": "7709c8d07036e010da5a8d13abc14c349dcb3fa7",
+  "parent_evidence": "docs/audits/hist-0-4s-evidence/manifest.json",
+  "original_1924_source_correction": {
+    "original_full_margin_found_in_parent": true,
+    "MAPSTER_original_record": "11788799",
+    "full_JPEG_sha256": "367c2f3d5186bf04b4d980c7d4a4ab513cbc14192dcd37803ac969d1f49d93ce",
+    "original_source_margin_exact_text": "Ediție provizorie reprodus după hartă Austriacă la 1:25.000",
+    "Austrian_predecessor_scale_denominator": 25000,
+    "unique_Austrian_sheet_id": null,
+    "source_Austrian_survey_year": null,
+    "actual_printing_year": 1924,
+    "full_margin_independently_read_in_this_reconciliation": true
+  }
+}
