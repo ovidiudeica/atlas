@@ -1,0 +1,149 @@
+{
+  "phase": "HIST-0.4s",
+  "audit_date": "2026-11-12",
+  "territory": "Chioar / Kővár, Berchezoaia, Maramureș, Romania",
+  "source_identity": {
+    "series": "Planurile Directoare de Tragere",
+    "sheet_title": "Șomcuta Mare",
+    "sheet_number": "2977",
+    "printed_year": 1924,
+    "edition": "provisional",
+    "publisher_printed": "Serviciul Geografic al Armatei",
+    "printed_scale_denominator": 20000,
+    "printed_contour_interval_m": 20
+  },
+  "source_provenance_chain": [
+    {
+      "source": "eHarta WFS index (HIST-0.4r)",
+      "feature": "index_pt_20k.499",
+      "sheet": "2977",
+      "catalogue_id": "260",
+      "download_id": "25790",
+      "assertion": "Individual sheet index and 1924 catalogue print year",
+      "full_print_margins": false
+    },
+    {
+      "source": "MAPSTER maplist catalogue",
+      "catalogue_url": "http://igrek.amzp.pl/maplist.php?cat=ROMLCH020K&listtype=mapywig2",
+      "record_id": "11788799",
+      "sheet": "2977",
+      "description": "non-georeferenced jpg, full picture",
+      "resolution_dpi": 300,
+      "listed_size_megabytes": 21.4,
+      "full_print_margins": true,
+      "download_original_full_scan_url": "http://maps.mapywig.org/m/Balkan_states_maps/series/020K_România_L-CH_PDdT/jpg/PDdT_20K_2977_Șomcuta_Mare_1924_300dpi_eHarta0260.jpg",
+      "http_status": 200,
+      "transport_security": "HTTP plain-text public read-only; HTTPS MAPSTER certificate mismatch; compare source to eHarta sheet",
+      "original_edition_year": 1924
+    },
+    {
+      "source": "MAPSTER maplist catalogue",
+      "record_id": "11788800",
+      "sheet": "2977",
+      "description": "geotif, margins trimmed",
+      "url": "http://maps.mapywig.org/m/Balkan_states_maps/series/020K_România_L-CH_PDdT/geotiff/PDdT_20K_2977_Șomcuta_Mare_1924_eHarta0260-25790.tif",
+      "full_print_margins": false,
+      "same_source_1924_sheet": true
+    },
+    {
+      "source": "eHarta individual georeferenced GeoTIFF",
+      "download_url": "https://www.geo-spatial.org/vechi/file_download/25790",
+      "bytes": 21353131,
+      "sha256": "c97eea5662827f5d36dbaf1bd26c6fb6a1814c992ee783d1c7b441c153718ff2",
+      "dimensions_px": [
+        8883,
+        5966
+      ],
+      "geokey_EPSG": 3844,
+      "full_print_margins": false
+    }
+  ],
+  "verified_full_scan": {
+    "source_file_basename": "PDdT_20K_2977_Șomcuta_Mare_1924_300dpi_eHarta0260.jpg",
+    "local_user_controlled_file_only": true,
+    "content_type": "image/jpeg",
+    "http_status": 200,
+    "bytes": 22480703,
+    "sha256": "367c2f3d5186bf04b4d980c7d4a4ab513cbc14192dcd37803ac969d1f49d93ce",
+    "dimensions_px": [
+      9821,
+      7376
+    ],
+    "resolution_dpi": [
+      300,
+      300
+    ],
+    "image_header_hex": "ffd8ffe000104a464946",
+    "whole_image_visually_read": true,
+    "bottom_margin_visually_read": true,
+    "other_margins_visually_inspected": true,
+    "source_and_derived_image_content_consistent_at_toponym_and_relief_level": true,
+    "rigorous_pixel_for_pixel_source_alignment_performed": false,
+    "republication_license_separately_certified": false,
+    "original_raster_bytes_committed": false,
+    "derivative_margin_crops_committed": false
+  },
+  "printed_margin_evidence": [
+    {
+      "location": "top centre",
+      "exact_text": "PLANUL DIRECTOR DE TRAGERE",
+      "evidence_level": "DIRECT_VISUAL"
+    },
+    {
+      "location": "top right",
+      "exact_text": "ȘOMCUTA MARE 2977",
+      "evidence_level": "DIRECT_VISUAL"
+    },
+    {
+      "location": "bottom left",
+      "exact_text": "Serviciul Geografic al Armatei 1924",
+      "evidence_level": "DIRECT_VISUAL",
+      "meaning": "Publisher and publication/reproduction date"
+    },
+    {
+      "location": "bottom centre",
+      "exact_text": "Scara 1:20.000",
+      "evidence_level": "DIRECT_VISUAL"
+    },
+    {
+      "location": "bottom centre",
+      "exact_text": "Echidistanța curbelor 20 metri",
+      "evidence_level": "DIRECT_VISUAL"
+    },
+    {
+      "location": "bottom right",
+      "exact_text": "Ediție provizorie reprodus după hartă Austriacă la 1:25.000",
+      "evidence_level": "DIRECT_VISUAL",
+      "meaning": "Austrian 1:25,000 source family, not precise unique source map or year"
+    }
+  ],
+  "source_date_admission": {
+    "printed_1924_certified_from_original_margin": true,
+    "topographic_field_survey_year_is_1924_certified": false,
+    "publication_1924_certified": true,
+    "is_provisional_romania_map_edition": true,
+    "Austrian_predecessor_map_scale_25000_certified": true,
+    "exact_Austrian_original_source_sheet_id": null,
+    "exact_Austrian_original_survey_year": null,
+    "Austrian_predecessor_print_year": null,
+    "source_data_before_1877_certified": false,
+    "any_1924_new_field_measurements_proven": false,
+    "cartographic_rights_chain_certified_for_publication": false
+  },
+  "history_source_comparison": {
+    "full_margins_1924_vs_GeoTIFF_1924_are_two_digital_renderings_of_same_source": true,
+    "independent_geodetic_crosscheck_from_this_pair": false,
+    "print_marginal_source_resolution_improvement": true,
+    "original_1862_published_general_map_is_separate_document": true,
+    "original_1859_MNL_map_is_separate_document": true
+  },
+  "restrictions": {
+    "user_contacted_institutions": false,
+    "user_email_sent": false,
+    "purchases": false,
+    "payments": false,
+    "subscriptions": false,
+    "images_published": false,
+    "geometries_changed": false
+  }
+}

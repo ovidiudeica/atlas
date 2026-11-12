@@ -1,0 +1,120 @@
+{
+  "phase": "HIST-0.4s",
+  "date": "2026-11-12",
+  "goal": "Identify original Austrian mapping campaign and a genuine pre-1877 physical point for independently controlled map rectification",
+  "original_source_lineage": {
+    "Romanian_provisional_edition": {
+      "source": "Șomcuta Mare 2977",
+      "publisher": "Serviciul Geografic al Armatei",
+      "date": 1924,
+      "scale": "1:20000",
+      "original_scan_margins_verified": true,
+      "stated_based_on": "hartă Austriacă la 1:25.000"
+    },
+    "Austrian_underlying_map": {
+      "scale_denominator": 25000,
+      "source_claim": "DIRECT_PRINTED_MARGINAL_NOTE_1924",
+      "original_Austrian_sheet_id": null,
+      "original_Austrian_survey_year": null,
+      "original_Austrian_print_year": null,
+      "does_not_certify_pre1877": true
+    },
+    "comparative_series": [
+      {
+        "name": "Habsburg Third Military Survey",
+        "range_years": [
+          1869,
+          1887
+        ],
+        "nominal_scale": "1:25000",
+        "institution": "BEV Austria",
+        "source": "https://www.bev.gv.at/en/Services/Products/Maps.html",
+        "interpretation": "Possible family correspondence only; broad series range does not establish the year of a particular map sheet nor identity with the 1924 copied source",
+        "exact_Kovar_sheet_read": false,
+        "pre1877_status": "UNPROVEN"
+      },
+      {
+        "name": "Second Military Survey / Transylvanian exception",
+        "range_years": [
+          1853,
+          1872
+        ],
+        "nominal_scale": "1:28800",
+        "institution": "BEV Austria; Timár et al.",
+        "source": "https://technicalgeography.org/pdf/1_2007/gt_1_2007.pdf",
+        "interpretation": "Period comparator at different scale, cannot be identified as 1:25000 Austrian source merely from Romanian marginal note",
+        "exact_Kovar_sheet_read": false,
+        "pre1877_status": "PERIOD_ELIGIBLE_BUT_SHEET_UNRECOVERED"
+      },
+      {
+        "name": "Karte des Grossfürstentums Siebenbürgen",
+        "year": 1862,
+        "edition": "IV",
+        "source": "https://geo-spatial.org/vechi/download/karte-des-grossfuerstentums-siebenbuergen-harta-marelui-principat-al-transilvaniei",
+        "individual_same_object_landmark_visible": false,
+        "source_inspected_in_HIST04R": true,
+        "pre1877_status": "HISTORICALLY_VALID_REGIONAL_NO_GCP"
+      }
+    ],
+    "independent_witnesses_prior_to_1877": [
+      {
+        "source": "Kővári László 1852",
+        "type": "TEXT",
+        "site": "Kővár ruins and Lăpuș landscape",
+        "same_point_with_coordinates": false
+      },
+      {
+        "source": "MNL OL S75 nr.82, 1859 state, photographed 1861",
+        "type": "ADMINISTRATIVE_MAP_PHOTOGRAPH",
+        "original_photo_SHA256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+        "same_physical_monument_pixel_verified": false
+      },
+      {
+        "source": "Karte des Grossfürstentums Siebenbürgen IV, 1862",
+        "type": "REGIONAL_MAP",
+        "original_JPEG_SHA256": "d79ffb416106b99c5dfef81066f863aa92520eef0f0733917a764098e29389a9",
+        "same_physical_monument_pixel_verified": false
+      },
+      {
+        "source": "Pesty Frigyes 1865 Berkeszpataka",
+        "type": "TEXTUAL_PLACE_NAME_ATTESTATION",
+        "same_physical_monument_point_verified": false
+      }
+    ]
+  },
+  "catalogue_searches": {
+    "MAPSTER_KUK025_catalogue_http_status": 200,
+    "MAPSTER_KUK025_catalogue_bytes": 78379,
+    "MAPSTER_KUK0288_catalogue_http_status": 200,
+    "MAPSTER_KUK0288_catalogue_bytes": 39030,
+    "local_search_aliases": [
+      "GAURA",
+      "GALG",
+      "BERKESZ",
+      "SOMKUT",
+      "KOVAR",
+      "LÁPOS",
+      "MARMAROS"
+    ],
+    "matching_local_Austrian_25k_sheet_identified": false,
+    "MAPSTER_2977_original_two_versions": true,
+    "Drive_text_query_Chioar_results": 0,
+    "Drive_text_query_Kovar_results": 0,
+    "Drive_broad_Transylvania_results": 29,
+    "Drive_broad_historical_map_folder_candidates_seen": true,
+    "Drive_contents_proven_to_cover_Kovar": false,
+    "conclusion": "No exact independent pre-1877 original large-scale source retrieved by these catalog/text searches; an absent hit is not evidence no sheet exists."
+  },
+  "interpretation_rules": [
+    "The 1924 JPG and 1924 GeoTIFF are two digital witnesses of the SAME CARTOGRAPHIC ORIGINAL, never two independent geodetic observations.",
+    "The Austrian precursor is attested only by class/scale on printed Romanian margin; associating it to one specific 1869–1887 survey sheet is a hypothesis until original source title/date is verified.",
+    "A regional 1862 topographic representation and a 1924 detailed copy do not furnish a named castle bastion corner in the earlier source.",
+    "A printed river bend, settlement symbol, spot height, and ruin label are not by themselves stable geodetic point marks.",
+    "No legal commune border can be deduced from a printed military sheet, and map dating is distinct from the 1877 law name dispute."
+  ],
+  "independent_pre1877_25k_source_accepted": false,
+  "independent_geodetic_GCP_count": 0,
+  "original_Austrian_pre1877_site_historical_point": null,
+  "legal_border_segments_admitted": 0,
+  "images_republished": false
+}

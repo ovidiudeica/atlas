@@ -1,0 +1,115 @@
+{
+  "phase": "HIST-0.4s",
+  "date": "2026-11-12",
+  "target_area": "Berkeszpataka/Berchezoaia, Butyásza/Buteasa, Kővár ruins, Romania",
+  "source_tiers": [
+    {
+      "id": "ROM2977_1924_FULL",
+      "year": 1924,
+      "kind": "Provisional Romanian Army reproduction from Austrian 1:25000",
+      "printed_marginal_source_verified": true,
+      "original_Austrian_survey_year": null,
+      "individual_geometry_datum_accuracy": null
+    },
+    {
+      "id": "ROM2977_1924_GEO",
+      "year": 1924,
+      "kind": "eHarta EPSG:3844 georeferenced derivative of identical print",
+      "independent_of_full_JPG": false,
+      "horizontal_accuracy_m": null,
+      "pixel_sampling_m_about": 1.7
+    },
+    {
+      "id": "MNL_1859_PHOTO2",
+      "year": 1859,
+      "photographed_year": 1861,
+      "kind": "Administrative map photograph",
+      "castle_ruin_specific_symbol": null,
+      "river_vs_admin_boundary_stroke": "UNRESOLVED"
+    },
+    {
+      "id": "SIEBENBURGEN_1862",
+      "year": 1862,
+      "kind": "Regional original map",
+      "individually_surveyed_bastion_or_church_corner": null,
+      "georeference_independent_of_later_source": false
+    },
+    {
+      "id": "MNM_1687_KUIVAR",
+      "historical_attribution_year": 1687,
+      "kind": "Historical fortress plan with archival catalog 8920.T",
+      "individual_ground_position_verified": false,
+      "manuscript_original_pixel_verified": false
+    }
+  ],
+  "candidate_points": [
+    {
+      "id": "KOVAR_CASTLE_CORNER",
+      "feature": "Named ruined fortress 1924 and seventeenth-century plan",
+      "uniquely_identified_1924_original_print_vertex": false,
+      "individually_matched_1859_pixel": null,
+      "individually_matched_1862_pixel": null,
+      "surveyed_modern_geodetic_vertex": null,
+      "qualified_GCP": false
+    },
+    {
+      "id": "KOVAR_ELEVATION_406",
+      "feature": "Topographic elevation annotation 406 near ruin printed 1924",
+      "height_reference_datum": null,
+      "mark_physical_object_identified": false,
+      "ground_EPSG_3844_coordinate_for_same_mark": null,
+      "matched_1862_or_1859_pixel": null,
+      "qualified_GCP": false
+    },
+    {
+      "id": "LAPUS_MEANDER",
+      "feature": "Lăpuș river bend next to castle depicted 1924 and described 1852/1865",
+      "geomorphic_stability_1859_to_1924_verified": false,
+      "unique_confluence_reference": "Avoid wrong Cavnic–Lăpuș confluence documented by Burgenwelt",
+      "single_unchanged_vertex": null,
+      "qualified_GCP": false
+    },
+    {
+      "id": "BERCHEZOAIA_CHURCH_OR_BUILDING",
+      "feature": "Buildings and possible ecclesiastical sites on later map",
+      "building_built_before_1859_documented": false,
+      "exact_corner_on_1862_map_verified": false,
+      "exact_corner_on_MNL_1859_verified": false,
+      "independently_surveyed_same_corner": null,
+      "qualified_GCP": false
+    },
+    {
+      "id": "SOMCUTA_OLD_ROAD_BRIDGE",
+      "feature": "Road/bridge map symbols in 1924 region",
+      "bridge_persistence_demonstrated_pre1877": false,
+      "original_1859_map_individual_bridge_symbol_verified": false,
+      "modern_surveyed_unchanged_structure": null,
+      "qualified_GCP": false
+    }
+  ],
+  "accepted_GCPs": 0,
+  "reserved_holdouts": 0,
+  "new_geodetic_transformation_allowed": false,
+  "new_RMS_m": null,
+  "new_holdout_RMS_m": null,
+  "legal_independence": {
+    "recorded_1877_statute_literal": "Szt.-Kápolnok",
+    "official_erratum_found": false,
+    "normalization_to_Szurdok_Kapolnok_legally_admitted": false,
+    "municipal_legality_proven_from_1924_PDT": false,
+    "period_1859_legal_boundary_certified": false,
+    "Chioar_segments_admitted": 0,
+    "Transylvania_segments_admitted": 0,
+    "OHM_relations_imported": 0
+  },
+  "restricted_actions": {
+    "emails_sent": false,
+    "institution_contacted": false,
+    "paid_source_acquired": false,
+    "photographs_republished": false,
+    "ACTUAL_changed": false,
+    "OSMB_changed": false,
+    "OHM_changed": false,
+    "website_source_changed": false
+  }
+}
