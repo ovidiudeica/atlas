@@ -1,0 +1,74 @@
+{
+  "phase": "HIST-0.4n",
+  "date": "2026-11-12",
+  "base_main_sha": "3b37ce3bc756509dda661ee7deb7b8310576ce4f",
+  "status": "DOCUMENTARY_LOCATION_RECONCILED__PUBLIC_MAP_COMPARATOR_VISUALLY_INSPECTED__PARLIAMENTARY_REQUEST_PREPARED_NOT_SENT__NO_GCPS",
+  "parliamentary": {
+    "target": "Szt.-Kápolnok",
+    "foliated_hungaricana_original_records": 4,
+    "primary_original_folios_visual_readings": 0,
+    "official_correction_proven": 0,
+    "public_institution_email_verified": true,
+    "free_only_draft_created": true,
+    "draft_sent": false,
+    "paid_copy_requested": false,
+    "legal_historical_commune_identity_certified": false
+  },
+  "physical": {
+    "castle": "Cetatea Chioarului / Kővár",
+    "Pesty_1865_local_document": "Berkeszpataka, 7 Apr 1865, OSZK Fol Hung 1114/23 edited 2023",
+    "Kovari_1852_reference": "Butyásza, p169",
+    "official_RAN": "108525.01",
+    "municipal_source": "Remetea Chioarului 2023",
+    "source_disagreement_preserved": true,
+    "castle_extent_m_about": 600,
+    "independently_surveyed_single_castle_point_certified": false
+  },
+  "cartographic": {
+    "MNL_state_year": 1859,
+    "MNL_photo_year": 1861,
+    "MNL_photo_index": 2,
+    "NYPL_public_map_checked": true,
+    "NYPL_edition_contains_1904_sign_key": true,
+    "MAPSTER_1886_catalog_checked": true,
+    "MAPSTER_1886_actual_image_inspected": false,
+    "NYPL_1904_and_MAPSTER_1886_same_image_certified": false,
+    "physical_same_object_GCP_pairs": 0,
+    "approved_GCPs": 0,
+    "valid_affine_new_RMSE_m": null,
+    "valid_holdout_RMSE_m": null,
+    "photos_georeferenced_approved": 0
+  },
+  "geometry": {
+    "OHM_relations_prioritized": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "Transylvania_Landesgrenzen_segments_certified": 0,
+    "Chioar_segments_certified": 0,
+    "imports_to_historic_module": 0,
+    "modern_admin_tree_changes": 0
+  },
+  "restrictions": {
+    "source_code_modified": false,
+    "public_assets_modified": false,
+    "ACTUAL_modified": false,
+    "OSMB_modified": false,
+    "OHM_modified": false,
+    "archival_folios_republished": false,
+    "MNL_original_photos_republished": false,
+    "NYPL_map_republished": false,
+    "private_drive_data_published": false,
+    "external_payment": false,
+    "order": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "szt-parliamentary-institutional-access.json",
+    "chioar-fortress-1865-historical-reconciliation.json",
+    "mapster-1886-vs-nypl-revised-map-source-gate.json",
+    "validate-evidence.mjs"
+  ],
+  "next_evidence": "Obtain exact original parliamentary page images (without paid order) and a unique original 1859 map feature matched to a field-surveyed stable ground vertex; keep administrative territorial proofs separate."
+}
