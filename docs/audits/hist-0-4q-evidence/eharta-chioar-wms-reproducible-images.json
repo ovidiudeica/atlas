@@ -80,7 +80,7 @@
       "http_status": 200,
       "mime_type": "image/png",
       "downloaded_bytes": 341001,
-      "sha256": "df187352efc1e731b9ea9eaa65c320bd9d7614f9",
+      "sha256": "df187352efc1e731b9ea9eaa65c320bd9d7614f9d52ecf09d9d96166a6eeac7a",
       "request_url": "https://services.geo-spatial.org/geoserver/eharta/ows?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=eharta%3Amisc_karte_von_siebenburgen&STYLES=&SRS=EPSG%3A4326&BBOX=23.47%2C47.43%2C23.67%2C47.58&WIDTH=1200&HEIGHT=900&FORMAT=image%2Fpng&TRANSPARENT=true",
       "visually_inspected": true,
       "observed": "Historic regional depiction and topographic names; date not qualified for Chioar point or legal border",
