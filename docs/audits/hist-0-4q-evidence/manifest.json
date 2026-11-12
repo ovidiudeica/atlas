@@ -1,0 +1,74 @@
+{
+  "phase": "HIST-0.4q",
+  "date": "2026-11-12",
+  "base_main_sha": "591b86bc0a501906561a9e1cc02337e7b21f0f76",
+  "predecessor_POST_MERGE": {
+    "run_id": 43213366811,
+    "build": "SUCCESS",
+    "pages": "SUCCESS"
+  },
+  "goal": "Switch from undifferentiated MNL administrative map to independent survey/cadastre raster source while preserving both temporal provenance and legal border evidence gates",
+  "results": {
+    "target_area": "Chioar/Berchezoaia, Romania",
+    "public_WMS_capabilities_retrieved": true,
+    "actual_Chioar_WMS_PNGs_retrieved_and_hashed": 5,
+    "actual_source_collections_rendered_in_target": 3,
+    "actual_20k_source_ruins_label_read": true,
+    "ruins_label": "Ruine Chioarului (Kővár)",
+    "source_20k_original_sheet_date_qualified": false,
+    "source_20k_original_sheet_identifier": null,
+    "independent_surveyed_same_object_vertex_verified": 0,
+    "original_1859_photo2_castle_pixel_identified": false,
+    "approved_historical_GCPs": 0,
+    "valid_new_affine_RMSE_m": null,
+    "valid_new_holdout_RMSE_m": null,
+    "photos_georeferenced_certified": 0
+  },
+  "source_selection": {
+    "P0_historic_cadastre_original": "PENDING_SOURCE",
+    "P1_Transylvania_1869_1870_28800_original": "PENDING_SOURCE",
+    "available_operational_independent_background": "EHARTA_PLANURI_20K",
+    "available_austrian_200k_context": "EHARTA_AUSTRIAN_200K",
+    "eHarta_20k_is_primary_1859_source": false
+  },
+  "geometric_admission": {
+    "historical_OHM_candidate_relations": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "Transylvania_segments_certified": 0,
+    "Chioar_segments_certified": 0,
+    "OHM_relations_imported": 0,
+    "source_code_changes": false,
+    "public_asset_changes": false
+  },
+  "legal_naming": {
+    "Szt_Kapolnok_act_1877_literal_unchanged": true,
+    "correction_to_Szurdok_demonstrated": false,
+    "Copalnic_name_continuity_independent_of_geometry": true
+  },
+  "restrictions": {
+    "outbound_email": false,
+    "new_email_draft": false,
+    "institution_contact": false,
+    "orders": false,
+    "payments": false,
+    "subscription": false,
+    "source_rasters_committed": false,
+    "private_KMZ_republished": false,
+    "ACTUAL_changed": false,
+    "OSMB_changed": false,
+    "OHM_changed": false,
+    "website_changed": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "historical-source-switch-qualification.json",
+    "eharta-chioar-wms-reproducible-images.json",
+    "kovar-physical-feature-dual-gate.json",
+    "validate-evidence.mjs"
+  ],
+  "decision": "REAL_CHIOAR_MAP_SOURCE_OBTAINED_20K_WITH_NAMED_KOVAR_RUINS__TEMPORALLY_LATER_AND_INDIVIDUAL_VERTEX_UNQUALIFIED__ZERO_CERTIFIED_GCP_OR_BOUNDARY",
+  "next_phase": "HIST-0.4r — per-sheet source date/original/uncertainty audit for eHarta Chioar; compare unambiguous physical features in an appropriate pre-1877 original; strictly no contacts or payments"
+}

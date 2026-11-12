@@ -1,0 +1,160 @@
+{
+  "phase": "HIST-0.4q",
+  "audit_date": "2026-11-12",
+  "WMS_capabilities_url": "https://services.geo-spatial.org/geoserver/eharta/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+  "WMS_capabilities_status": 200,
+  "xml_bytes": 307697,
+  "request_protocol": "WMS 1.1.1 SRS EPSG:4326, longitude-latitude bbox ordering",
+  "source": "eHarta/geo-spatial.org, public GeoServer mosaic",
+  "source_citation": "https://geospatialorg.github.io/initiative/eharta/",
+  "images": [
+    {
+      "id": "CHIOAR_20K_CONTEXT",
+      "layer": "mozaic_planuri_tragere_20k",
+      "declared_CRS": [
+        "EPSG:3844",
+        "CRS:84"
+      ],
+      "WMS_bbox_lonlat": [
+        23.47,
+        47.43,
+        23.67,
+        47.58
+      ],
+      "WMS_dimensions_px": [
+        1200,
+        900
+      ],
+      "http_status": 200,
+      "mime_type": "image/png",
+      "downloaded_bytes": 2274564,
+      "sha256": "b0531e21c849dac6667676ff3603bf1181968233f7a14f72d726d362e9ac846c",
+      "request_url": "https://services.geo-spatial.org/geoserver/eharta/ows?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=eharta%3Amozaic_planuri_tragere_20k&STYLES=&SRS=EPSG%3A4326&BBOX=23.47%2C47.43%2C23.67%2C47.58&WIDTH=1200&HEIGHT=900&FORMAT=image%2Fpng&TRANSPARENT=true",
+      "visually_inspected": true,
+      "observed": "Berchezoaia, Buteasa, Remetea Chioarului and mountain terrain labeled, multiple sheet treatments visible",
+      "original_image_redistributed": false
+    },
+    {
+      "id": "CHIOAR_AUSTRIAN_200K_CONTEXT",
+      "layer": "mozaic_austrian_200k",
+      "declared_CRS": [
+        "EPSG:31700",
+        "CRS:84"
+      ],
+      "WMS_bbox_lonlat": [
+        23.47,
+        47.43,
+        23.67,
+        47.58
+      ],
+      "WMS_dimensions_px": [
+        1200,
+        900
+      ],
+      "http_status": 200,
+      "mime_type": "image/png",
+      "downloaded_bytes": 1572038,
+      "sha256": "5852dfe453f1146ef2e7e109d5770e6cdde6da75fbdb2534317ce1ce2f015c8e",
+      "request_url": "https://services.geo-spatial.org/geoserver/eharta/ows?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=eharta%3Amozaic_austrian_200k&STYLES=&SRS=EPSG%3A4326&BBOX=23.47%2C47.43%2C23.67%2C47.58&WIDTH=1200&HEIGHT=900&FORMAT=image%2Fpng&TRANSPARENT=true",
+      "visually_inspected": true,
+      "observed": "Berkeszpataka, Butyásza and Lăpuș visually present; scale too coarse for object-specific control",
+      "original_image_redistributed": false
+    },
+    {
+      "id": "CHIOAR_SIEBENBURGEN_CONTEXT",
+      "layer": "misc_karte_von_siebenburgen",
+      "declared_CRS": [
+        "EPSG:31700",
+        "CRS:84"
+      ],
+      "WMS_bbox_lonlat": [
+        23.47,
+        47.43,
+        23.67,
+        47.58
+      ],
+      "WMS_dimensions_px": [
+        1200,
+        900
+      ],
+      "http_status": 200,
+      "mime_type": "image/png",
+      "downloaded_bytes": 341001,
+      "sha256": "df187352efc1e731b9ea9eaa65c320bd9d7614f9d52ecf09d9d96166a6eeac7a",
+      "request_url": "https://services.geo-spatial.org/geoserver/eharta/ows?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=eharta%3Amisc_karte_von_siebenburgen&STYLES=&SRS=EPSG%3A4326&BBOX=23.47%2C47.43%2C23.67%2C47.58&WIDTH=1200&HEIGHT=900&FORMAT=image%2Fpng&TRANSPARENT=true",
+      "visually_inspected": true,
+      "observed": "Historic regional depiction and topographic names; date not qualified for Chioar point or legal border",
+      "original_image_redistributed": false
+    },
+    {
+      "id": "KOVAR_RUINS_20K_DETAIL",
+      "layer": "mozaic_planuri_tragere_20k",
+      "declared_CRS": [
+        "EPSG:3844",
+        "CRS:84"
+      ],
+      "WMS_bbox_lonlat": [
+        23.552,
+        47.462,
+        23.607,
+        47.492
+      ],
+      "WMS_dimensions_px": [
+        1600,
+        1000
+      ],
+      "http_status": 200,
+      "mime_type": "image/png",
+      "downloaded_bytes": 3291983,
+      "sha256": "25864a790b3949169a278143ce9756bde9e89fd3e29d89a6b70868586202f9f8",
+      "request_url": "https://services.geo-spatial.org/geoserver/eharta/ows?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=eharta%3Amozaic_planuri_tragere_20k&STYLES=&SRS=EPSG%3A4326&BBOX=23.552%2C47.462%2C23.607%2C47.492&WIDTH=1600&HEIGHT=1000&FORMAT=image%2Fpng&TRANSPARENT=true",
+      "visually_inspected": true,
+      "observed": "Exact old-map printed label 'Ruine Chioarului (Kővár)' above Lăpuș bend with detailed contour relief; label is NOT a uniquely surveyed bastion vertex",
+      "original_image_redistributed": false
+    },
+    {
+      "id": "KOVAR_RUINS_200K_DETAIL",
+      "layer": "mozaic_austrian_200k",
+      "declared_CRS": [
+        "EPSG:31700",
+        "CRS:84"
+      ],
+      "WMS_bbox_lonlat": [
+        23.552,
+        47.462,
+        23.607,
+        47.492
+      ],
+      "WMS_dimensions_px": [
+        1600,
+        1000
+      ],
+      "http_status": 200,
+      "mime_type": "image/png",
+      "downloaded_bytes": 270394,
+      "sha256": "9d1d6ac49e1ffe846f1eef531aa4198aa9816d56597ad11eb98e91f9c2085d62",
+      "request_url": "https://services.geo-spatial.org/geoserver/eharta/ows?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=eharta%3Amozaic_austrian_200k&STYLES=&SRS=EPSG%3A4326&BBOX=23.552%2C47.462%2C23.607%2C47.492&WIDTH=1600&HEIGHT=1000&FORMAT=image%2Fpng&TRANSPARENT=true",
+      "visually_inspected": true,
+      "observed": "General relief and settlement context only; 1:200,000 image not detailed enough to prove castle subfeature",
+      "original_image_redistributed": false
+    }
+  ],
+  "exact_site_label_read": "Ruine Chioarului (Kővár)",
+  "label_found_on_detailed_layer": "mozaic_planuri_tragere_20k",
+  "map_label_is_a_ground_survey_point": false,
+  "georeferenced_mosaic_retrieved": true,
+  "underlying_sheet_source_id": null,
+  "underlying_sheet_original_image_obtained": false,
+  "underlying_sheet_publication_year": null,
+  "underlying_sheet_survey_year": null,
+  "native_mosaic_crs_known": true,
+  "native_sheet_datum_and_GCP_residuals_qualified": false,
+  "independent_geodetic_bastion_vertex": null,
+  "MNL_1859_same_object_photo_pixel": null,
+  "approved_GCPs": 0,
+  "new_affine_RMSE_m": null,
+  "new_holdout_RMSE_m": null,
+  "approved_historical_boundaries": 0,
+  "imported_OHM_geometries": 0,
+  "source_rights": "Public service URLs, hashes and descriptions only; no eHarta imagery republished in GitHub."
+}

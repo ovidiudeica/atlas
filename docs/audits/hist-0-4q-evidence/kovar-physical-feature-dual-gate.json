@@ -1,0 +1,116 @@
+{
+  "phase": "HIST-0.4q",
+  "date": "2026-11-12",
+  "target": "Cetatea Chioarului / Kővár ruins above Lăpuș, Berchezoaia, Romania",
+  "source_gate": {
+    "new_independent_cartographic_source": "geo-spatial.org eHarta WMS mozaic_planuri_tragere_20k",
+    "source_retrieval": "SUCCESS_FREE_PUBLIC_HTTP_200",
+    "source_is_actually_georeferenced": true,
+    "exact_original_sheet_identified": false,
+    "source_sheet_year": null,
+    "original_sheet_survey_year": null,
+    "historical_object_label_visible": true,
+    "exact_label": "Ruine Chioarului (Kővár)",
+    "original_map_symbol_historic_not_editor_tourism_marker": true,
+    "original_source_print_or_cadastre_folio_read": false,
+    "per_sheet_georeferencing_accuracy_m": null,
+    "notes": "Raster mosaic overlaid by GeoServer; maps may have multiple source sheet editions, and serving georeferenced imagery is not independent geodetic proof of a particular old-map object."
+  },
+  "candidate_physical_features": [
+    {
+      "candidate_id": "KOVAR_SITE_LABEL",
+      "observation": "Ruine Chioarului (Kővár) printed on 1:20k detailed topographic source",
+      "feature_type": "NAMED_RUIN_COMPLEX_SITE",
+      "site_reference_modern_public": [
+        "https://ran.cimec.ro/sel.asp?codran=108525.01",
+        "https://varak.hu/latnivalo/index/1631-Berkeszpataka-Kovar-Chioar/"
+      ],
+      "single_vertex_confirmed": false,
+      "point_from_20k_original_sheet": null,
+      "modern_independent_survey_point": null,
+      "qualifies_as_GCP": false
+    },
+    {
+      "candidate_id": "KOVAR_406_HEIGHT_TEXT",
+      "observation": "A 406 elevation number appears near the labelled rocky ruin on the 20k sheet",
+      "feature_type": "SPOT_HEIGHT_OR_HEIGHT_ANNOTATION_CANDIDATE",
+      "height_datum_verified": false,
+      "physical_monument_correspondence": false,
+      "modern_surveyed_height_point": null,
+      "MNL_1859_point": null,
+      "qualifies_as_GCP": false
+    },
+    {
+      "candidate_id": "LAPUS_BEND",
+      "observation": "Lăpuș meander directly adjacent to Kővár ruin appears on 20k and broader 200k contextual map",
+      "feature_type": "RIVER_MEANDER_NONPOINT",
+      "stable_same_terrain_vertex_verified": false,
+      "river_course_unchanged_across_1859_to_20c": false,
+      "modern_GCP": null,
+      "qualifies_as_GCP": false
+    },
+    {
+      "candidate_id": "BERCHEZOAIA_ROAD_BUILDINGS",
+      "observation": "Buildings and streets in Berchezoaia present at 20k, but specific pre-1859 building identities not checked",
+      "feature_type": "LATER_SETTLEMENT_CARTOGRAPHY",
+      "specific_pre1859_physical_object_verified": false,
+      "modern_GCP": null,
+      "qualifies_as_GCP": false
+    }
+  ],
+  "MNL_1859_photo2_comparison": {
+    "original_photo_sha256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+    "original_dimensions_px": [
+      6379,
+      9819
+    ],
+    "old_ROI_pixel_bbox": [
+      2600,
+      3650,
+      2500,
+      3650
+    ],
+    "site_ruin_symbol_unambiguously_present": false,
+    "same_object_verified_pixel": null,
+    "old_thick_curved_line_still_UNRESOLVED": "administrative line vs river not independently resolved",
+    "candidate_matching_status": "NO_SINGLE_PHYSICAL_OBJECT_IN_BOTH_SOURCES"
+  },
+  "provenance_separation": {
+    "cartographic_later_mosaic_usable_as_comparative_reference": true,
+    "mosaic_is_primary_1859_cartography": false,
+    "georeferenced_mosaic_is_statutory_border": false,
+    "cadastral_1859_local_sheet_retrieved": false,
+    "legal_1877_Szt_Kapolnok_expanded": false,
+    "legal_historical_commune_border_proven": false
+  },
+  "admission": {
+    "new_independent_mosaic_map_sources_delivered": 1,
+    "new_site_labels_located": 1,
+    "independent_surveyed_landmark_vertices": 0,
+    "accepted_historic_image_to_ground_pairs": 0,
+    "eligible_1859_GCPs": 0,
+    "affine_fit_enabled": false,
+    "new_fit_RMSE_m": null,
+    "new_holdout_RMSE_m": null,
+    "certified_1859_georeferenced_photographs": 0,
+    "certified_Chioar_border_segments": 0,
+    "certified_Transylvania_border_segments": 0,
+    "OHM_relations_imported": 0
+  },
+  "next_evidence": [
+    "Recover the sheet-specific 20k printed title and marginal year/survey source covering the castle and eHarta georeferencing quality report",
+    "Identify a single unambiguous bastion, chapel, benchmark, bridge or building footprint and obtain independent modern surveyed vertex with uncertainty",
+    "Verify that SAME physical vertex is unambiguously represented on the earlier 1859 MNL photo or another contemporaneous local map; do not infer from similar place names",
+    "Reserve independent GCP holdouts and evaluate uncertainty only after enough noncollinear qualified same-object pairs",
+    "Separately recover the original statutory or cadastral boundary source before any political/communal geometry promotion"
+  ],
+  "guardrails": {
+    "images_committed": false,
+    "historical_boundaries_changed": false,
+    "legal_statutes_altered": false,
+    "modern_OSM_IDs_assigned": false,
+    "email_sent": false,
+    "institution_contacted": false,
+    "purchases": false
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "phase": "HIST-0.4q",
+  "audit_date": "2026-11-12",
+  "area": "Chioar – Berchezoaia / Kővár, Romania",
+  "selection_policy": "First require a downloadable and dated local original, then examine historically persistent physical features and legal border evidence independently.",
+  "candidates": [
+    {
+      "id": "CADASTRAL_MNL_S78",
+      "series": "Habsburg/Hungarian historical cadastre, S 78",
+      "scale": "1:2880 (some survey work at 1:1440 or 1:720)",
+      "provenance_url": "https://adatbazisokonline.mnl.gov.hu/adatbazis/kataszteri-telekkonyvek/informacio",
+      "local_target_sheet_identified": false,
+      "local_target_original_raster_obtained": false,
+      "free_endpoint": "Hungaricana Maps and Arcanum",
+      "access": "Both digital map viewers returned HTTP 403 to independent requests",
+      "chronology": "From 1850 onward, exact local sheet date unknown; coverage of former Transylvania/Maramureș NOT assured",
+      "legal_power": "Parcel depiction is not proof of contemporaneous village boundaries",
+      "readiness": "PRIORITY_FOR_LEGAL_GEOMETRIC_RESEARCH_BUT_SOURCE_NOT_YET_AVAILABLE"
+    },
+    {
+      "id": "MILITARY_TRANSYLVANIA_1869_1870",
+      "series": "Transylvanian continuation of Second Military Survey / early Third Survey",
+      "scale": "1:28800, per Austrian BEV and geodetic literature (not automatically 1:25000)",
+      "provenance_url": "https://www.bev.gv.at/en/Services/Products/Maps.html",
+      "geodetic_study_url": "https://technicalgeography.org/pdf/1_2007/gt_1_2007.pdf",
+      "survey_window": "1853–1870 or 1860–1872 depending local segment; exact Kővár sheet not qualified",
+      "local_target_sheet_identified": false,
+      "local_target_original_raster_obtained": false,
+      "access": "Arcanum viewer returned HTTP 403; catalogue/series only",
+      "legal_power": "Terrain reference for named dates, NOT administrative line certification",
+      "readiness": "PREFERRED_PERIOD_COMPARATOR_NOT_ACTUALLY_DELIVERED"
+    },
+    {
+      "id": "EHARTA_PLANURI_20K",
+      "series": "Planurile Directoare de Tragere, independent later topographic compilation",
+      "scale": "1:20000",
+      "provenance_url": "https://geo-spatial.org/vechi/download/planurile-directoare-de-tragere",
+      "viewer_source": "https://geospatialorg.github.io/initiative/eharta/",
+      "wms_layer": "mozaic_planuri_tragere_20k",
+      "wms_crs_declared": [
+        "EPSG:3844",
+        "CRS:84"
+      ],
+      "era": "1917–1959 documented range; NO exact source sheet date for the WMS tile",
+      "local_target_sheet_identified": false,
+      "local_target_original_raster_obtained": false,
+      "live_geo_referenced_mosaic_retrieved": true,
+      "castle_ruins_explicitly_labeled": true,
+      "ruin_label_exact": "Ruine Chioarului (Kővár)",
+      "cartographic_ground_control_class": "MODERN_LATER_SURVEY_REFERENCE_CANDIDATE_ONLY",
+      "legal_power": "Cannot establish the historic 1859 administrative frontier",
+      "readiness": "SELECTED_INDEPENDENT_GEOCODED_BACKGROUND_WITH_SHEET_PROVENANCE_HOLD"
+    },
+    {
+      "id": "EHARTA_AUSTRIAN_200K",
+      "series": "Austrian maps mosaic 1:200000",
+      "scale": "1:200000",
+      "provenance_url": "https://geospatialorg.github.io/initiative/eharta/",
+      "wms_layer": "mozaic_austrian_200k",
+      "wms_crs_declared": [
+        "EPSG:31700",
+        "CRS:84"
+      ],
+      "local_target_raster_obtained": true,
+      "original_edition_year_for_pixel": null,
+      "visible_labels": [
+        "Berkeszpataka",
+        "Lăpuș",
+        "Buteasa"
+      ],
+      "readiness": "COARSE_TOPONYMIC_TOPOGRAPHIC_CROSSCHECK_NOT_GCP"
+    },
+    {
+      "id": "EHARTA_HISTORIC_SIEBENBURGEN",
+      "series": "Karte des Grossfürstentums Siebenbürgen",
+      "scale": "unspecified in service metadata",
+      "provenance_url": "https://geospatialorg.github.io/initiative/eharta/",
+      "wms_layer": "misc_karte_von_siebenburgen",
+      "wms_crs_declared": [
+        "EPSG:31700",
+        "CRS:84"
+      ],
+      "local_target_raster_obtained": true,
+      "edition_year_for_pixel": null,
+      "readiness": "REGIONAL_HISTORICAL_BACKGROUND_NO_SAME_OBJECT_VERTEX"
+    },
+    {
+      "id": "MAPSTER_1886_1900",
+      "series": "Spezialkarte der österreichisch-ungarischen Monarchie, Gaura und Galgó",
+      "scale": "1:75000",
+      "source_catalog_1886": "https://igrek.amzp.pl/11860629",
+      "source_catalog_1900": "https://igrek.amzp.pl/details.php?id=11860630",
+      "edition_years": [
+        1886,
+        1900
+      ],
+      "original_edition_rasters_obtained": false,
+      "access": "Direct MAPSTER delivery failed; prior NYPL reproduction with 1904 sign key is a DIFFERENT later revised specimen",
+      "readiness": "CATALOG_REFERENCES_ONLY_NOT_A_NEW_GCP"
+    },
+    {
+      "id": "CHOLNOKY_CLUJ_SHEETS",
+      "series": "Cholnoky historical topographic survey scans, Cluj",
+      "source": "https://hagyatek.cholnoky.ro/terkeptar/digitalizalt/top-3k-25e/",
+      "sample_direct_image": "https://hagyatek.cholnoky.ro/wp-content/uploads/2011/10/TOP-3KF-25-5271-4-Kolozsvar.jpg",
+      "sample_sheet": "Kolozsvár 5271/4",
+      "direct_sample_link_verified": true,
+      "local_target_Berchezoaia_sheet_identified": false,
+      "new_search_site": "http://cholnokymaps.gisit.ro",
+      "new_site_access": "HTTP 403",
+      "readiness": "VALID_ARCHIVE_SAMPLE_OUTSIDE_CHIOAR_EXCLUDED_FROM_TARGET_GCP"
+    }
+  ],
+  "source_decision": {
+    "chosen_for_available_visual_crosscheck": "EHARTA_PLANURI_20K",
+    "chosen_for_1859_legal_boundary": "NONE",
+    "native_military_1869_1870_raster_delivered": false,
+    "local_cadastral_original_raster_delivered": false,
+    "actual_WMS_images_retrieved": true,
+    "modern_WMS_georeferencing_does_not_certify_historical_point": true
+  },
+  "user_constraints": {
+    "outbound_email": false,
+    "institution_contact": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false,
+    "upload_original_rasters": false,
+    "upload_private_drive_files": false
+  }
+}
