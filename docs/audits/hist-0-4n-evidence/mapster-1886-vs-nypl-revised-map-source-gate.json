@@ -1,0 +1,102 @@
+{
+  "phase": "HIST-0.4n",
+  "date": "2026-11-12",
+  "comparison_purpose": "Independent later survey witness of historic Kovar landscape, NOT law or 1859 map geodesy",
+  "map_witnesses": [
+    {
+      "id": "NYPL_COMMONS_GAURA_GALGO",
+      "source": "NYPL Lionel Pincus and Princess Firyal Map Division via Wikimedia Commons",
+      "title": "Gaura und Galgó, Spezialkarte Österreichisch-Ungarischen Monarchie",
+      "publisher": "K.u.k. Militärgeographisches Institut",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gaura_und_Galgo._NYPL1226642.tiff",
+      "commons_pageid": 32438710,
+      "nypl_identifier": "NYPL1226642",
+      "scale_denominator": 75000,
+      "original_tiff_pixel_dimensions": [
+        4496,
+        5419
+      ],
+      "original_tiff_bytes_catalog": 73097852,
+      "local_preview_pixel_width": 3840,
+      "local_preview_sha256": "4bb09db2c0fcf2f8e774d44dc2f409df8ceb0b9320875bf8796d885c207ca0bf",
+      "local_preview_bytes": 4892930,
+      "original_raster_published_to_repo": false,
+      "rights": "Wikimedia Commons describes original as CC0/public domain; check item page for rights when redistributing",
+      "date_verbatim_on_copy": "Nach Reambulirung 1893 u. 1894; Nach Zeichenschlüssel 1904",
+      "issue_year_certified": null,
+      "earliest_revision_context_year": 1904,
+      "chronological_status": "LATER_REVISED_SHEET_NOT_1886",
+      "image_manually_inspected": true,
+      "sheet_area_visually_covered": [
+        "Berkeszpataka",
+        "Butyásza",
+        "Gaura",
+        "Lăpuș valley"
+      ],
+      "exact_fortress_ruin_symbol_found": false,
+      "exact_castle_point_pixel": null
+    },
+    {
+      "id": "MAPSTER_1886_GAURA_GALGO",
+      "source": "MAPSTER catalogue, Library of Congress source",
+      "title": "GAURA und GALGÓ",
+      "source_url": "https://igrek.amzp.pl/11860629",
+      "image_filename": "ZONE_16_KOL_XXIX_(5071)_GAURA_und_GALGO_1886_300dpi_LoC_G6480_s75_.A8.jpg",
+      "catalog_year": 1886,
+      "scale_denominator": 75000,
+      "source_signature": "LoC G6480 s75 .A8",
+      "catalog_metadata_checked": true,
+      "distinct_exemplar_image_fetched": false,
+      "exact_fortress_ruin_symbol_found": null,
+      "exact_castle_point_pixel": null,
+      "source_distinction": "Not interchangeable with the NYPL revised sheet."
+    },
+    {
+      "id": "MNL_1859_STATE_PHOTO2",
+      "source": "MNL OL S75 No.82, gallery photo 2",
+      "source_reference": "Previously locally-held original; not republished",
+      "photograph_year": 1861,
+      "map_depicted_state_year": 1859,
+      "original_sha256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+      "source_photo_dimensions": [
+        6379,
+        9819
+      ],
+      "fullres_regional_crops_inspected": true,
+      "ruin_symbol_demonstrated": false,
+      "unique_feature_pixel": null
+    }
+  ],
+  "epistemic_discrepancies": [
+    "1886 MAPSTER catalog image vs NYPL/Commons copy with cartographic 1904 sign-key revision: do not treat as same edition or infer legal border",
+    "Georeferenced or graticule-bearing map is not by itself an independent surveyed point for the source photograph",
+    "19th-century settlement labels and generalized town hatch are NOT castle GCPs",
+    "Source tiff is public domain at Commons, but it is not incorporated in public atlas or GitHub assets"
+  ],
+  "candidate_crosschecks": [
+    {
+      "type": "FORTRESS_TOPONYM",
+      "site": "Kővár ruins",
+      "modern_references": "Current historical/archaeological written sources plus three candidate coordinates",
+      "NYPL_sheet_1904_ruin_point_pixel": null,
+      "MNL_1859_castle_point_pixel": null,
+      "verified_same_feature": false
+    },
+    {
+      "type": "GEOLOGICAL_HYDROGRAPHIC",
+      "site": "Rocky double-crest, Lăpuș river bend near Berchezoaia",
+      "modern_references": "RAN 108525.01 / Pesty 1865 / municipality",
+      "NYPL_sheet_1904_ruin_point_pixel": null,
+      "MNL_1859_castle_point_pixel": null,
+      "verified_same_feature": false
+    }
+  ],
+  "accepted_first_GCP_count": 0,
+  "valid_transform_RMSE_m": null,
+  "valid_holdout_RMSE_m": null,
+  "certified_historic_boundary_segments": 0,
+  "source_images_redistributed": false,
+  "private_GDrive_KMZ_redistributed": false,
+  "geometry_changes": false,
+  "next_step": "Obtain clear original 1859 MNL map symbol of ruin or a unique stable gorge landmark, independently measured vertex, and exact old-map datum/projection before any GCP fit."
+}
