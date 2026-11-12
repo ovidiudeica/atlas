@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url));
+const n=JSON.parse(fs.readFileSync(path.join(dir,'chioar-21-individual-lexical-and-identity-gate.json'),'utf8'));
+const g=JSON.parse(fs.readFileSync(path.join(dir,'1861-photo8-stable-physical-landmark-candidates.json'),'utf8'));
+const m=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'),'utf8'));
+function requireEq(c,m){if(!c)throw new Error('HIST-0.4j: '+m);}
+requireEq(n.phase==='HIST-0.4j'&&g.phase==='HIST-0.4j'&&m.phase==='HIST-0.4j','phase integrity');
+requireEq(n.records.length===21,'21 unique names');
+requireEq(new Set(n.records.map(r=>r.law_1877_name)).size===21,'unique names');
+requireEq(n.records.filter(r=>r.in_original_18_no_exact_1877).length===18,'18 original 1877 cases');
+requireEq(n.records.filter(r=>r.in_original_10_no_exact_1873).length===10,'10 original 1873 cases');
+requireEq(n.overlap_names.length===7,'seven overlapping names');
+requireEq(n.records.filter(r=>r.in_original_18_no_exact_1877&&r.official_1877.candidate_reading).length===18,'18 direct 1877 page variants');
+requireEq(n.records.filter(r=>r.in_original_10_no_exact_1873&&r.official_1873.candidate_reading).length===9,'nine 1873 leads including one separate-settlement pairing');
+requireEq(n.records.find(r=>r.law_1877_name==='Szt.-Kápolnok').official_1873.candidate_reading===null,'no invented legal Szt-Kapolnok alias');
+requireEq(n.records.find(r=>r.law_1877_name==='Koltó-Katalin').official_1873.textual_resolution==='TWO_DISTINCT_ENTRIES_IDENTIFIED','no false single 1873 Kolto-Katalin entity');
+requireEq(n.records.every(r=>r.is_modern_locality_match_certified===false&&r.historical_locality_identity_approved===false&&r.historical_commune_boundary_certified===false&&r.historical_commune_polygon===null&&r.geometry_source===null&&r.import_authorized===false),'all per-name identity and geometry approvals closed');
+requireEq(g.candidates.length===6,'6 physical objects');
+requireEq(g.candidates.filter(c=>c.modern_coordinate!==null).length===5,'5 modern object coordinates');
+requireEq(g.candidates.filter(c=>c.modern_coordinate===null).length===1,'1 conflicting modern coordinate');
+requireEq(g.candidates.every(c=>c.physically_pre_1859&&c.photo8_map_pixel_xy===null&&c.modern_source_is_not_OHM_border&&c.historic_map_symbol_verified===false&&c.approved_as_GCP===false),'no false GCP');
+requireEq(g.separation_of_controls.qualifying_independent_GCPs===0&&g.separation_of_controls.qualified_georeferences===0&&g.separation_of_controls.Landesgrenzen_admitted_segments===0,'no false historical boundary admission');
+requireEq(m.changes.application_files_changed===false&&m.changes.geometry_files_changed===false&&m.changes.original_source_binary_published===false,'safety restrictions');
+console.log('HIST-0.4j PASS: 18/18 1877 variants located; 9/10 1873 candidates documented; one Szt-Kapolnok unresolved; 21 unique; 6 stable-site candidates/0 approved GCP; 0 identities/boundaries/imports.');
