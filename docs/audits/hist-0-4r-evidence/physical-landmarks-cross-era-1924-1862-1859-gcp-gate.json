@@ -1,0 +1,107 @@
+{
+  "phase": "HIST-0.4r",
+  "date": "2026-11-12",
+  "state": "SHEET_2977_ORIGINAL_GEOREFERENCED_COPY_OBTAINED__1924_PRINT_YEAR_CONFIRMED_BY_PUBLIC_CATALOG__NO_FIELD_SURVEY_YEAR_OR_SAME_OBJECT_GCP",
+  "region": "Cetatea Chioarului / Kővár on Lăpuș river, Berchezoaia Romania",
+  "original_1924_sheet": {
+    "ind": "2977",
+    "name": "Șomcuta Mare",
+    "catalog_print_date": 1924,
+    "source_tiff_sha256": "c97eea5662827f5d36dbaf1bd26c6fb6a1814c992ee783d1c7b441c153718ff2",
+    "source_printed_date_directly_read": false,
+    "rendered_GeoTIFF_original_dimensions_px": [
+      8883,
+      5966
+    ],
+    "site_crop_rect_XYWH": [
+      4700,
+      2100,
+      1800,
+      1350
+    ],
+    "site_crop_pixels_visual_inspected": true,
+    "printed_label": "Ruine Chioarului (Kővár)",
+    "individual_original_monument_survey_point_with_WGS84_coordinates": null,
+    "photo2_source_1859_monument_symbol_point": null
+  },
+  "candidate_landmarks": [
+    {
+      "candidate_id": "PDT_2977_RUINS_FOOTPRINT",
+      "finding": "Ruined fortification walls/building fragments and label are printed in the 1924 derived topographic source",
+      "historic_source": "1924 Șomcuta Mare 2977 GeoTIFF",
+      "original_raster_ROI_XYWH": [
+        4700,
+        2100,
+        1800,
+        1350
+      ],
+      "interpretation": "Physical ruin complex at hill within river bend, not an independently surveyed single bastion corner",
+      "modern_independent_geodetic_monument_vertex": null,
+      "original_1862_map_same_vertex": null,
+      "original_MNL_1859_photo2_same_vertex": null,
+      "qualified_same_object_GCP": false
+    },
+    {
+      "candidate_id": "PDT_2977_ELEVATION_406",
+      "finding": "Spot elevation label 406 near castle hill; printed value is not automatically a located ground benchmark",
+      "historic_source": "1924 Șomcuta Mare 2977 GeoTIFF",
+      "source_height_value_m_candidate": 406,
+      "height_reference_datum": null,
+      "original_survey_benchmark_name": null,
+      "modern_field_height_and_vertex": null,
+      "original_1862_or_MNL_point": null,
+      "qualified_same_object_GCP": false
+    },
+    {
+      "candidate_id": "PDT_2977_LAPUS_RIVER_BEND",
+      "finding": "Meander of Lăpuș visible adjacent to labelled ruins; Kővári 1852 and Pesty 1865 describe general relation to river",
+      "historic_source": "1924 PDT plus independent pre1877 textual witnesses",
+      "feature_category": "HYDROGRAPHIC_BEND",
+      "individual_unchanged_vertex_across_1859_to_1924": null,
+      "river_migration_excluded": false,
+      "modern_independent_geodetic_point": null,
+      "qualified_same_object_GCP": false
+    },
+    {
+      "candidate_id": "PDT_2977_BERCHEZOAIA_BUILDINGS",
+      "finding": "Individual buildings mapped in Berchezoaia on 1924 sheet",
+      "historic_source": "1924 Șomcuta Mare 2977 GeoTIFF",
+      "specific_same_building_built_before_1859_demonstrated": false,
+      "individual_1862_map_building_footprint_verified": false,
+      "individual_MNL_1859_photo_building_corner_verified": false,
+      "modern_surveyed_corner": null,
+      "qualified_same_object_GCP": false
+    }
+  ],
+  "cross_era": {
+    "year1859_MNL_photo2_ruin_symbol": null,
+    "year1862_Siebenburgen_ruin_symbol_for_same_site": null,
+    "year1924_PDT_generic_ruins_site_label": true,
+    "field_survey_year_PDT_1924": null,
+    "unique_castle_substructure_in_1862_and_1924": false,
+    "unique_castle_substructure_in_1859_and_1924": false,
+    "corroborated_general_castle_location": true,
+    "independent_GCP_count": 0
+  },
+  "geodetic": {
+    "source_GeoTIFF_EPSG": 3844,
+    "source_pixel_size_m_about": 1.7,
+    "meaning": "Digital map pixel sampling, not field or fitting accuracy",
+    "registered_monument_ground_coordinate_uncertainty_m": null,
+    "valid_fitting_pairs": 0,
+    "reserved_independent_holdouts": 0,
+    "new_residual_RMSE_m": null,
+    "new_holdout_RMSE_m": null,
+    "eligible_affine_transform": false
+  },
+  "distinct_legal_gate": {
+    "year1924_sheet_admin_borders_certified_for_1859": false,
+    "pre1877_historical_commune_polygon_certified": false,
+    "legal_Szt_Kapolnok_rectification_found": false,
+    "historical_legal_identity_change": false,
+    "certified_Chioar_segments": 0,
+    "certified_Transylvania_segments": 0,
+    "OHM_relations_admitted": 0
+  },
+  "no_outbound_contact_or_commercial_actions": true
+}
