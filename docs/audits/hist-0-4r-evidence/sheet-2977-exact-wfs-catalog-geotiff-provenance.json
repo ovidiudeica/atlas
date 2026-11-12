@@ -1,0 +1,150 @@
+{
+  "phase": "HIST-0.4r",
+  "audit_date": "2026-11-12",
+  "target": "Cetatea Chioarului / Kővár, Berchezoaia, Maramureș, Romania",
+  "discovery_result": "ONE_EXACT_HISTORICAL_20K_SHEET_FOUND_AND_INDIVIDUAL_GEOTIFF_DOWNLOADED",
+  "sheet_identity": {
+    "series": "Planurile Directoare de Tragere",
+    "sheet_name": "Șomcuta Mare",
+    "sheet_number": "2977",
+    "sheet_index_id": "260",
+    "index_feature_id": "index_pt_20k.499",
+    "index_internal_id": 499,
+    "index_fid": 1225,
+    "version": "1",
+    "catalogue_print_year": 1924,
+    "printing_year_evidence": "Public eHarta download catalogue metadata; not independently read from original printed lower sheet margin",
+    "survey_year": null,
+    "earliest_source_cartography_year": null,
+    "edition_or_reprint_notes": null,
+    "printed_scale_denominator": 20000,
+    "printed_margin_available_in_downloaded_georectified_raster": false
+  },
+  "discovery_procedure": {
+    "source_html": "https://www.geo-spatial.org/vechi/maps/download-planuri-tragere.php",
+    "source_js": "https://www.geo-spatial.org/vechi/maps/js/pt-grid.php?lang=ro",
+    "catalogue_json_endpoint": "https://www.geo-spatial.org/vechi/maps/pt-grid-json.php?start=0&limit=5000",
+    "catalogue_records_reported": 1883,
+    "catalogue_records_received": 1883,
+    "js_object_limited_parser": "Response uses nonstandard JavaScript object prefix {success:true,results:...}; converted only fixed field-name prefix for strict JSON parsing, no eval",
+    "tile_index_WFS_name": "geospatial:index_pt_20k",
+    "WFS_query_url": "https://services.geo-spatial.org/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=geospatial%3Aindex_pt_20k&bbox=23.57%2C47.47%2C23.59%2C47.49%2CEPSG%3A4326&outputFormat=application%2Fjson&maxFeatures=20",
+    "WFS_HTTP_status": 200,
+    "WFS_content_type": "application/json",
+    "features_returned_for_tight_Kovar_BBOX": 1,
+    "WFS_feature_uuid": "6aff875e-5599-4bd8-b7d2-32a6a671922d",
+    "WFS_feature_bbox_projected": [
+      383122.18,
+      659417.02,
+      398221.08,
+      669558.14
+    ],
+    "WFS_native_polygon_CRS": "EPSG:3844 projected coordinates; feature GeoJSON geometry returned in source native coordinates, despite BBOX filter expressed EPSG:4326",
+    "crosswalk": "WFS index feature says indicativ 2977 idPlansa 260 edition 1 print-year 1924 download 25790; same exact record returned by 1883-entry catalogue"
+  },
+  "source_download": {
+    "url": "https://www.geo-spatial.org/vechi/file_download/25790",
+    "HTTP_status": 200,
+    "content_disposition_filename": "2977.tif",
+    "mime_type": "application/octet-stream",
+    "file_bytes": 21353131,
+    "sha256": "c97eea5662827f5d36dbaf1bd26c6fb6a1814c992ee783d1c7b441c153718ff2",
+    "file_type": "TIFF/GeoTIFF, Intel little endian, TIFF magic 42",
+    "saved_only_on_connected_user_computer": true,
+    "user_local_filename": "eHarta-PDT-2977-Somcuta-Mare-1924-geotiff.tif",
+    "source_scan_unwarped_pdf_or_margins_obtained": false,
+    "local_images_republished": false
+  },
+  "GeoTIFF_metadata": {
+    "width_px": 8883,
+    "height_px": 5966,
+    "channels": 3,
+    "bits_per_channel": 8,
+    "compression_TIFF_tag": 7,
+    "DPI_x": 300,
+    "DPI_y": 300,
+    "geokey_projected_CRS_EPSG": 3844,
+    "geokey_model_name": "Pulkovo 1942(58) / Stereo70",
+    "linear_units": "metre",
+    "model_pixel_scale_xy_m": [
+      1.6997523359225513,
+      1.6998189741870593
+    ],
+    "model_tie_point_pixel_xyz": [
+      0,
+      0,
+      0
+    ],
+    "model_tie_point_projected_xyz": [
+      383122.18,
+      669558.14,
+      0
+    ],
+    "upper_left_m": [
+      383122.18,
+      669558.14
+    ],
+    "pixel_ground_sample_distance_m_about": 1.7,
+    "geodetic_horizontal_accuracy_m": null,
+    "control_residual_RMSE_m": null,
+    "transform_method_and_source_GCPs": null,
+    "datum_transform_uncertainty_m": null,
+    "notes": "1.7m/pixel is sample resolution of the warped image, NOT independent 1.7m geodetic accuracy; margins trimmed or not present in this derivative file"
+  },
+  "image_review": {
+    "entire_GeoTIFF_rendered": true,
+    "site_ruin_toponym_read": true,
+    "printed_site_label": "Ruine Chioarului (Kővár)",
+    "Lăpuș_river_visualized": true,
+    "other_labels": [
+      "Berchezoaia",
+      "Buteasa",
+      "Șomcuta Mare",
+      "Copalnic"
+    ],
+    "source_crop_regions_original_pixel_XYWH": [
+      [
+        4700,
+        2100,
+        1800,
+        1350
+      ],
+      [
+        3800,
+        450,
+        1800,
+        1350
+      ],
+      [
+        4600,
+        1850,
+        2600,
+        1800
+      ]
+    ],
+    "crop_files_local_only": true,
+    "castle_label_is_a_uniquely_surveyed_monument_corner": false,
+    "fortress_building_or_wall_vertex_pixel_identified": null,
+    "source_spot_elevation_406_visible": true,
+    "datum_of_406_elevation": null,
+    "ground_elevation_mark_correspondence_verified": false
+  },
+  "primary_source_status": {
+    "individual_sheet_from_original_cartographic_series": "YES_GEOREFERENCED_DIGITAL_DERIVATIVE",
+    "original_folio_printed_margin_verified": false,
+    "year_1924_read_from_independent_catalogue": true,
+    "year_of_field_survey_or_of_pre1918_source_material": null,
+    "cannot_use_as_direct_1859_boundary": true,
+    "cannot_independently_calibrate_original_MNL_1859_photo2": true
+  },
+  "admissions": {
+    "sheet_identity_qualified": true,
+    "downloaded_GeoTIFF_binary_sha_verified": true,
+    "original_sheet_source_date_survey_qualified": false,
+    "contemporary_1859_survey_source": false,
+    "independent_historic_photo2_ground_GCPs": 0,
+    "accepted_1859_administrative_segments": 0,
+    "imported_OHM_geometries": 0
+  },
+  "no_contact_payment_or_republication": true
+}
