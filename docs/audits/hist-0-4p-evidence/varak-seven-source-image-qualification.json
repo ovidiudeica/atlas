@@ -197,5 +197,31 @@
   },
   "gcp_qualified": 0,
   "geometry_approved": 0,
-  "rights": "Links + hashes + short source descriptions only; third-party image content retained locally for inspection."
+  "rights": "Links + hashes + short source descriptions only; third-party image content retained locally for inspection.",
+  "hungarian_national_museum_original_manuscript_catalog": {
+    "institution": "Magyar Nemzeti Múzeum – Magyar Történelmi Képcsarnok",
+    "citation": "Cenner-Wilhelmb Gizella, A Magyar Történeti Képcsarnok kéziratos térképei, Folia Historica 7 (1979), printed p.126, catalog entry 7",
+    "publication_url": "https://mnm.hu/sites/default/files/publications/foliahistorica_07.pdf",
+    "manuscript_title": "PIANTA DI KUIVAR / governato da Teleki",
+    "accession_number": "8920.T",
+    "size_cm": [
+      18.3,
+      28.4
+    ],
+    "medium": "Ink and watercolor on two glued paper pieces",
+    "legend": "A–C in Italian",
+    "content_description": "Plan of fortress Kővár on hill adjacent to river Lăpuș, with surrounding terrain",
+    "acquisition_history": "Purchased in 1907 from Rohracher antiquarian bookseller in Lienz, Austria",
+    "historic_attribution": "Military engineer in entourage of Charles of Lorraine; circa 1687, not unconditionally attributed personally to Luigi Ferdinando Marsigli",
+    "next_catalog_entry_distinguished": {
+      "accession_number": "8922.T",
+      "manuscript_title": "PIANTA DI KUKELVAR",
+      "modern_locality": "Cetatea de Baltă / Küküllővár, distinct place — do NOT conflate with Kővár"
+    },
+    "original_manuscript_image_visually_inspected": false,
+    "hosted_varak_reproduction_matches_original_inventory_in_context": true,
+    "has_published_geodetic_vertex_coordinates": false,
+    "legal_boundary_geometry_demonstrated": false,
+    "evidence_classification": "INSTITUTIONAL_PRIMARY_MANUSCRIPT_INVENTORY_IDENTIFIED__MANUSCRIPT_ITSELF_NOT_DIRECTLY_EXAMINED"
+  }
 }
