@@ -1,0 +1,66 @@
+{
+  "phase": "HIST-0.4m",
+  "date": "2026-11-12",
+  "base_main_sha": "a3325e4a7baca3646895fda1956362f8169ccf28",
+  "intent": "Direct historical parliamentary facsimile scrutiny and construction of first physically grounded independent GCP set; no geometry without successful source gates",
+  "status": "PARTIAL_EVIDENCE_COMPLETION_NO_AUTHENTIC_FACSIMILES_NO_QUALIFIED_GCPS",
+  "legislation": {
+    "target": "Szt.-Kápolnok",
+    "parliamentary_locations_identified": 4,
+    "index_OCR_witnesses": 4,
+    "authentic_printed_original_pages_visually_inspected": 0,
+    "legal_corrigendum_authenticated": 0,
+    "proven_expansion_to_Szurdok": false,
+    "toponymic_candidate": "Szurduk-Kápolnok/Copalnic",
+    "legal_historical_commune_identity_admitted": false
+  },
+  "georeference": {
+    "MNL_archive": "MNL OL S75 Nr.82",
+    "map_state_year": 1859,
+    "photographic_reproduction_year": 1861,
+    "historical_photo_2_SHA256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+    "original_MNL_photos": 14,
+    "physical_monuments_screened": 6,
+    "physical_sites_with_modern_position_candidate": 5,
+    "physical_sites_with_multiple_reported_positions": 2,
+    "Chioar_fortress_source_position_cluster_within_m": 30,
+    "unambiguously_paired_MNL_symbol_and_same_physical_ground_object": 0,
+    "qualified_GCPs": 0,
+    "first_order_affine_new_RMSE_m": null,
+    "independent_holdout_new_RMSE_m": null,
+    "certified_photo_georeferences": 0
+  },
+  "historic_boundaries": {
+    "OHM_candidate_relations": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "Transylvania_Landesgrenzen_segments_accepted": 0,
+    "Chioar_segments_accepted": 0,
+    "geometries_imported": 0
+  },
+  "information_rights": {
+    "MNL_original_images_republished": false,
+    "Hungaricana_archival_scans_republished": false,
+    "private_GDrive_KMZ_copied_or_published": false,
+    "payment": false,
+    "order": false
+  },
+  "changes": {
+    "app_source_modified": false,
+    "public_assets_modified": false,
+    "ACTUAL_modified": false,
+    "OSMB_modified": false,
+    "OHM_modified": false,
+    "historical_boundary_modified": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "four-parliamentary-original-folio-audit.json",
+    "first-independent-ground-anchor-register.json",
+    "validate-evidence.mjs"
+  ],
+  "next_valid_evidence_gate": "Obtain exact parliamentary folio images and authenticated correction; identify a unique pre-1859 physical object on MNL map with exact original pixel and independently surveyed ground coordinate, then enough spatially distributed GCPs and held-out validation",
+  "decision": "NO_LEGAL_RECTIFICATION_AND_NO_FIRST_REAL_GCP_SET_CAN_BE_CERTIFIED_FROM_THE_ACCESSIBLE_RECORD"
+}
