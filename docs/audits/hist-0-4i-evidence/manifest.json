@@ -1,0 +1,85 @@
+{
+  "phase": "HIST-0.4i",
+  "date": "2026-11-11",
+  "kind": "EVIDENCE_ONLY_NO_GEOMETRY_CHANGES",
+  "sources": {
+    "KSH_1873_printed_pages": [
+      124,
+      125
+    ],
+    "KSH_1873_image_indices": [
+      114,
+      115
+    ],
+    "KSH_1877_printed_pages": [
+      47,
+      48,
+      50,
+      51
+    ],
+    "KSH_1877_image_indices": [
+      45,
+      46,
+      48,
+      49
+    ],
+    "MNL_1861_gallery_photos": 14,
+    "MNL_photo8_pilot": true
+  },
+  "manual_transcription_1873": {
+    "Nagy_Somkuti": 22,
+    "Nagy_Nyiresi": 20,
+    "Monostori": 21,
+    "Kis_Nyiresi": 29,
+    "total": 92
+  },
+  "documentary_transcription_1877": {
+    "Szatmar_Nagy_Somkuti": 42,
+    "Szatmar_Nagy_Banyai": 1,
+    "Szolnok_Doboka_Kis_Nyiresi": 28,
+    "Szolnok_Doboka_Monostori": 20,
+    "total": 91
+  },
+  "law_1877_successor_counties": {
+    "Szatmar": 43,
+    "Szolnok_Doboka": 48,
+    "total": 91
+  },
+  "textual_candidates_only": {
+    "law_to_printed_1877_exact_normalized": 73,
+    "law_to_printed_1873_direct_candidate": 81,
+    "none_verified_as_legal_geographic_identity": 91
+  },
+  "georeferencing": {
+    "source_photos": 14,
+    "photo8_label_candidates": 8,
+    "photo8_fit": 6,
+    "photo8_holdout": 2,
+    "photo8_holdout_RMSE_m": 1241.1244512125957,
+    "photo8_LOO_RMSE_m": 1574.9748117443023,
+    "qualified_stable_independent_GCP": 0,
+    "registered_photo_series": 0,
+    "certified_Landesgrenzen_ways": 0,
+    "certified_Chioar_ways": 0
+  },
+  "gates": {
+    "OHM_relation_count": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "approved_identity": 0,
+    "approved_boundaries": 0,
+    "imports": 0,
+    "original_historical_map_images_published": false,
+    "source_rights_cleared": false
+  },
+  "human_read_disclaimer": "92 and 91 are manual transcriptions of printed locality entries, not legally authenticated one-to-one identities; written spelling can be uncertain; prior 1873 local preliminary mistakenly used 116-117 as page indices",
+  "files": [
+    "README.md",
+    "manifest.json",
+    "chioar-91-documentary-screen.json",
+    "1861-photo-gcp-qualification.json",
+    "validate-evidence.mjs"
+  ],
+  "decision": "TEXTUAL_SOURCE_AUDIT_PASS__COUNT_MISMATCH_DOCUMENTED__HISTORICAL_GEOMETRY_NOT_ADMITTED"
+}
