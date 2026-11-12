@@ -1,0 +1,77 @@
+{
+  "phase": "HIST-0.4r",
+  "date": "2026-11-12",
+  "base_main_sha": "322bcb9a2d68fc29d8b55a48f54bc47b076e46c9",
+  "previous_postmerge": {
+    "run_id": 43238854754,
+    "build": "SUCCESS",
+    "pages": "SUCCESS"
+  },
+  "goal": "Recover exact eHarta 20k Chioar component sheet with print/survey provenance; identify separately original pre1877 map and test same physical landmarks without certifying legal boundaries",
+  "achievement": {
+    "exact_WFS_sheet_spatially_located": 1,
+    "full_sheet_catalogue_rows_inspected": 1883,
+    "matched_original_sheet_indicativ": "2977",
+    "matched_original_sheet_name": "Șomcuta Mare",
+    "catalogue_print_year": 1924,
+    "original_sheet_digitized_GeoTIFF_downloaded": true,
+    "TIFF_size_bytes": 21353131,
+    "TIFF_SHA256": "c97eea5662827f5d36dbaf1bd26c6fb6a1814c992ee783d1c7b441c153718ff2",
+    "TIFF_width": 8883,
+    "TIFF_height": 5966,
+    "TIFF_EPSG": 3844,
+    "TIFF_pixel_size_m_approx": 1.7,
+    "TIFF_print_margins_visible": false,
+    "original_field_survey_year": null,
+    "original_margin_with_survey_year_recovered": false,
+    "public_pre1877_original_map_image_downloaded": true,
+    "public_1862_map_title": "Karte des Grossfürstentums Siebenbürgen",
+    "public_1862_map_edition": "fourth",
+    "public_1862_map_dimensions": [
+      5500,
+      4347
+    ],
+    "public_1862_map_SHA256": "d79ffb416106b99c5dfef81066f863aa92520eef0f0733917a764098e29389a9",
+    "public_1862_map_same_mapped_castle_vertex_verified": false,
+    "physical_feature_candidates_screened": 4,
+    "independent_same_object_GCPs": 0,
+    "first_fitted_RMSE_m": null,
+    "holdout_RMSE_m": null,
+    "validated_1859_boundary_segments": 0
+  },
+  "gate": {
+    "MNL_1859_photo2_original_sha": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+    "historical_commune_legal_border_proven": false,
+    "Transylvania_Landesgrenzen_segments_approved": 0,
+    "Chioar_segments_approved": 0,
+    "OHM_relations_prioritized": 37,
+    "OHM_relations_approved": 0,
+    "geometries_imported": 0
+  },
+  "constraints": {
+    "emails_sent": false,
+    "new_emails_drafted": false,
+    "institution_contact": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false,
+    "public_app_assets_edited": false,
+    "source_code_edited": false,
+    "ACTUAL_modified": false,
+    "OSMB_modified": false,
+    "OHM_modified": false,
+    "third_party_1924_TIFF_republished": false,
+    "third_party_1862_raster_republished": false,
+    "private_KMZ_published": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "sheet-2977-exact-wfs-catalog-geotiff-provenance.json",
+    "1862-original-and-pre1877-cross-era-evidence.json",
+    "physical-landmarks-cross-era-1924-1862-1859-gcp-gate.json",
+    "validate-evidence.mjs"
+  ],
+  "verdict": "SHEET_2977_PRINTED_1924_AND_ORIGINAL_GEOREFERENCED_TIFF_RECOVERED__1862_ORIGINAL_MAP_RECOVERED__SURVEY_YEAR_AND_IDENTICAL_GCP_NOT_YET_CERTIFIED__ZERO_BOUNDARY_IMPORTS",
+  "next_stage": "HIST-0.4s — source-level historical sheet margins and printed survey/triangulation provenance plus stable monument survey vertex; if unavailable, pivot from castle-only GCP to independently mapped stable benchmark/stone/bridge on another same-date high-resolution sheet. Separate legal boundary from geometric adjustment."
+}

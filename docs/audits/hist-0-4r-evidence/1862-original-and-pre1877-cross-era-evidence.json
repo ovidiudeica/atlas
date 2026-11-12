@@ -1,0 +1,99 @@
+{
+  "phase": "HIST-0.4r",
+  "audit_date": "2026-11-12",
+  "question": "Does an actual freely accessible pre-1877 historic map corroborate the Kővár site and provide a unique independent GCP shared with 1924 PDT or 1859 MNL photo?",
+  "sources": [
+    {
+      "id": "SIEBENBURGEN_1862",
+      "title": "Karte des Grossfürstentums Siebenbürgen, vierte nach den neuesten Quellen berichtigte Auflage",
+      "publication_place": "Hermannstadt / Sibiu",
+      "year": 1862,
+      "edition": "fourth",
+      "source_article": "https://geo-spatial.org/vechi/download/karte-des-grossfuerstentums-siebenbuergen-harta-marelui-principat-al-transilvaniei",
+      "full_image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Gro%C3%9Ff%C3%BCrstentum_Siebenb%C3%BCrgen_1862.jpg",
+      "online_historical_map_geotiff_url": "https://www.geo-spatial.org/vechi/file_download/29356",
+      "visual_original_JPEG_obtained": true,
+      "source_bytes": 10448861,
+      "source_SHA256": "d79ffb416106b99c5dfef81066f863aa92520eef0f0733917a764098e29389a9",
+      "original_JPEG_dimensions_px": [
+        5500,
+        4347
+      ],
+      "whole_sheet_visually_inspected": true,
+      "old_map_year_actually_printed_on_marginal_title": true,
+      "map_is_georeferenced_by_later_sources_for_eHarta": true,
+      "eHarta_georeferenced_using": "Austrian later 1:200000 georeferenced maps",
+      "georeference_independent_of_later_20c_source": false,
+      "individual_Kovar_ruin_symbol_verified": false,
+      "site_specific_castle_wall_or_measured_vertex_verified": false,
+      "original_historic_commune_boundary_attributed_to_Chioar_certified": false,
+      "qualified_same_object_GCP": false,
+      "scope": "Primary 1862 edition historic map content, but not independently surveyed 1859 ruin vertex; regional map scale cannot be treated as individual ruin plan"
+    },
+    {
+      "id": "MNL_1859_1861_PHOTO2",
+      "archive": "MNL OL S75 nr.82 photographed 1861, state 1859",
+      "source_original_sha256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+      "original_image_dimensions_px": [
+        6379,
+        9819
+      ],
+      "spatial_context": "Berkeszpataka/Berchezoaia, Butyásza/Buteasa and topographic river region",
+      "unique_castle_ruin_symbol_demonstrated": false,
+      "castle_point_original_pixel": null,
+      "pre1877_contemporaneous_legal_boundary_certified": false,
+      "qualified_same_object_GCP": false
+    },
+    {
+      "id": "KOVARI_1852",
+      "title": "Kővári László, Erdély régiségei, §105 Kővár, printed p.169",
+      "publication_year": 1852,
+      "url": "https://mek.oszk.hu/21900/21944/21944.pdf",
+      "kind": "Contemporary published site description, NOT map control",
+      "facts": "Ruins described on left bank of Lápos and attributed to Butyásza area",
+      "individual_WGS84_monument_vertex": null,
+      "legal_borders_certified": false,
+      "qualified_same_object_GCP": false
+    },
+    {
+      "id": "PESTY_1865",
+      "title": "Pesty Frigyes, Berkeszpataka place name report, 7 April 1865, modern edition 2023",
+      "url": "https://mnhp.unideb.hu/kiadvanyok/pesty/pesty_kovar-kraszna.pdf",
+      "manuscript": "OSZK Fol. Hung. 1114/23",
+      "kind": "Contemporary place-name evidence from later critical printed transcription",
+      "facts": "Lá Kővár ruin as landmark, Lăpuș east of castle hill",
+      "individual_original_map_pixel": null,
+      "legal_borders_certified": false,
+      "qualified_same_object_GCP": false
+    },
+    {
+      "id": "MNM_1687_CASTLE_PLAN",
+      "manuscript": "PIANTA DI KUIVAR, Hungarian National Museum inventory 8920.T",
+      "publication_context": "Cenner-Wilhelmb, Folia Historica 7 (1979), p.126 entry 7",
+      "url": "https://mnm.hu/sites/default/files/publications/foliahistorica_07.pdf",
+      "historical_date_attributed": 1687,
+      "kind": "Original historical plan location metadata in modern museum catalogue",
+      "archival_original_visual_verification": false,
+      "original_ground_geodesy_verified": false,
+      "qualified_same_object_GCP": false
+    }
+  ],
+  "temporal_readiness": {
+    "historic_1862_general_original_downloaded_and_hashed": true,
+    "site_individual_ruin_symbol_in_1862_original_verified": false,
+    "independent_pre1877_point_anchored_to_GeoTIFF_1924": false,
+    "point_on_MNL_1859_source": false,
+    "historical_cadastral_sheet_Berkeszpataka_before_1877_identified": false,
+    "transylvania_original_military_28800_1853_1870_Chioar_sheet_obtained": false,
+    "eligible_cross_era_GCP_count": 0
+  },
+  "crucial_qualifier": "The 1862 edition is independently published as historic document but the eHarta georeferencing explicitly used later Austrian 1:200000 maps; it is not a fully independent geodetic validation. Historical administrative boundaries on different map dates cannot be equated.",
+  "rights_and_user_constraints": {
+    "original_1862_bytes_only_on_connected_pc": true,
+    "original_1862_bytes_committed_to_repository": false,
+    "emails_sent": false,
+    "institutions_contacted": false,
+    "orders": false,
+    "payments": false
+  }
+}
