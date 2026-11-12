@@ -1,0 +1,160 @@
+{
+  "phase": "HIST-0.4o",
+  "date": "2026-11-12",
+  "source": {
+    "archive": "MNL OL S75 No.82",
+    "gallery_photo": 2,
+    "represented_admin_state_year": 1859,
+    "photographed_year": 1861,
+    "local_JPEG_width_px": 6379,
+    "local_JPEG_height_px": 9819,
+    "local_JPEG_sha256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+    "local_fullres_review": true,
+    "photograph_republication_rights_certified": false
+  },
+  "review_method": {
+    "photo_overview": "Original image scaled to 1599x2462 px with 500 source-pixel internal inspection grid; derivative kept local only",
+    "fullres_internal_crops": [
+      {
+        "name": "upper-Kovar-core",
+        "source_crop_xywh": [
+          1400,
+          1700,
+          2500,
+          1900
+        ]
+      },
+      {
+        "name": "mid-Lapos-castle-search",
+        "source_crop_xywh": [
+          1600,
+          3500,
+          2700,
+          2100
+        ]
+      },
+      {
+        "name": "photo2-possible-castle",
+        "source_crop_xywh": [
+          2300,
+          2500,
+          1900,
+          1900
+        ]
+      }
+    ],
+    "source_crop_files_published": false,
+    "viewer_review": "Manual reading of individual settlement names and line layers, with source pixel coordinates preserved"
+  },
+  "historical_settlements_visually_read": [
+    {
+      "label": "Berkeszpataka",
+      "modern_name_candidate": "Berchezoaia",
+      "source_district": "Chioar",
+      "role": "context only; historical settlement dot not GCP"
+    },
+    {
+      "label": "Butyásza",
+      "modern_name_candidate": "Buteasa",
+      "source_district": "Chioar",
+      "role": "context only; historical settlement dot not GCP"
+    },
+    {
+      "label": "Nagy-Somkut",
+      "modern_name_candidate": "Șomcuta Mare",
+      "source_district": "Chioar",
+      "role": "context only; historical settlement dot not GCP"
+    },
+    {
+      "label": "Kápolnok-Monostor",
+      "modern_name_candidate": "Copalnic-Mănăștur",
+      "source_district": "Chioar",
+      "role": "context only; historical settlement dot not GCP"
+    }
+  ],
+  "source_search_region": {
+    "roi_id": "KOVAR_CANDIDATE_SEARCH_ONLY",
+    "source_photo": 2,
+    "source_pixel_bbox_xyxy": [
+      2600,
+      3650,
+      2500,
+      3650
+    ],
+    "bounded_by_context_labels": [
+      "Berkeszpataka",
+      "Butyásza",
+      "Nagy-Somkut"
+    ],
+    "coordinate_reference": "UNTRANSFORMED_ORIGINAL_JPEG_PIXELS",
+    "bounding_box_is_certified_fortress_extent": false,
+    "fortress_symbol_visible_inside_box": "NOT_CONFIRMED",
+    "castle_center_point_pixel": null,
+    "castle_polygon_pixel": null,
+    "independent_ground_coordinate_pair": null,
+    "approval": "PENDING",
+    "rationale": "Purely source-image visual search region; no source map legend anchor or original geographical georeferencing allows identity certification"
+  },
+  "cartographic_hazards": [
+    {
+      "id": "THICK_CURVED_LINE",
+      "finding": "A thick sinuous stroke occurs east/southeast of the Berkeszpataka label and bends near Butyásza",
+      "feature_type_status": "UNRESOLVED_CANDIDATE_ADMINISTRATIVE_BOUNDARY_OR_OTHER_SYMBOL",
+      "not_accepted_as": "Lăpuș river or confluence, Landesgrenze, Kreisgrenze or castle outline; no 1:1 certified object",
+      "note": "The MNL map encodes administrative borders and waterways; mere curvilinear proximity does not classify line"
+    },
+    {
+      "id": "SETTLEMENT_HATCH",
+      "finding": "Berkeszpataka, Butyásza, and other settlements are drawn as stippled blocks/dots",
+      "feature_type_status": "GENERALIZED_SETTLEMENT_AREA",
+      "not_accepted_as": "Historic church or ruined castle survey point",
+      "note": "Centres do not correspond automatically to physical monument or fixed geodetic mark"
+    },
+    {
+      "id": "TEMPORAL_GEOMETRY",
+      "finding": "MNL administrative state 1859 differs from later Pesty 1865 testimony and 1893–1904 revised topographic sheet",
+      "feature_type_status": "MIXED_CHRONOLOGY",
+      "not_accepted_as": "Primary evidence that commune boundaries coincided across dates",
+      "note": "No temporal transfer of territory or stable feature geometry without independent source"
+    }
+  ],
+  "independent_site_context": {
+    "site": "Cetatea Chioarului/Kővár",
+    "RAN": "108525.01",
+    "modern_published_points": [
+      {
+        "source": "WelcomeToRomania",
+        "lat": 47.47613,
+        "lon": 23.57881
+      },
+      {
+        "source": "Burgenwelt",
+        "lat": 47.47616666666667,
+        "lon": 23.57875
+      },
+      {
+        "source": "ExploreCarpathia",
+        "lat": 47.475914,
+        "lon": 23.578644
+      }
+    ],
+    "physical_site_estimated_length_m": 600,
+    "site_source": "Primăria Remetea Chioarului 2023",
+    "ruin_pre_1859_attested": true,
+    "modern_point_accuracy_proven_surveyed": false,
+    "correlation_with_MNL_symbol_verified": false,
+    "source_photo_pixel_for_same_surveyed_feature": null
+  },
+  "outcome": {
+    "individual_fortress_point_in_MNL_identified": false,
+    "physically_verified_same_object_cross_map_point_pairs": 0,
+    "qualified_independent_GCPs": 0,
+    "affine_fit_enabled": false,
+    "new_affine_RMSE_m": null,
+    "holdout_RMSE_m": null,
+    "photo2_georeferenced": false,
+    "Chioar_boundary_segments_certified": 0,
+    "OHM_geometries_imported": 0
+  },
+  "rights": "No original MNL photograph, derivative crop or private historic KMZ exported to GitHub."
+}

@@ -1,0 +1,131 @@
+{
+  "phase": "HIST-0.4o",
+  "date": "2026-11-12",
+  "scope": "Public/free independent legal-source checks only; NO institution contact, email, orders, payments or subscriptions",
+  "legal_target": {
+    "exact_statute_name": "Szt.-Kápolnok",
+    "law": "1877:I §2(2c)",
+    "enactment_reference": "Sanctioned 13 March 1877; announced in lower chamber 16 March, upper chamber 17 March 1877 per later digital legal PDF",
+    "modern_digitized_law": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+    "modern_reformatted_law_PDF": "https://net.jogtar.hu/getpdf?docid=87700001.TV&printTitle=1877.+%C3%A9vi+I.+t%C3%B6rv%C3%A9nycikk&referer=1000ev&targetdate=",
+    "original_promulgation_facsimile_verified": false
+  },
+  "parliamentary_original_witnesses": [
+    {
+      "document": "Képviselőházi irományok 1875 XIV nr.503",
+      "kind": "bill",
+      "printed_page": 4,
+      "viewer_index": 13,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_KI-1875_14/?pg=13",
+      "reading_OCR": "Szt Kápolnok",
+      "original_facsimile_visually_verified": false
+    },
+    {
+      "document": "Képviselőházi irományok 1875 XIV nr.529",
+      "kind": "adopted bill",
+      "printed_page": 150,
+      "viewer_index": 159,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_KI-1875_14/?pg=159",
+      "reading_OCR": "Szt Kápolnok",
+      "original_facsimile_visually_verified": false
+    },
+    {
+      "document": "Főrendiházi irományok 1875 IV nr.204",
+      "kind": "upper chamber",
+      "printed_page": 271,
+      "viewer_index": 282,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_FI-1875_04/?pg=282",
+      "reading_OCR": "Szt Kápolnok",
+      "original_facsimile_visually_verified": false
+    },
+    {
+      "document": "Főrendiházi irományok 1875 IV nr.231",
+      "kind": "upper chamber",
+      "printed_page": 364,
+      "viewer_index": 375,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_FI-1875_04/?pg=375",
+      "reading_OCR": "Szt Kápolnok",
+      "original_facsimile_visually_verified": false
+    }
+  ],
+  "additional_independent_names": [
+    {
+      "source": "KSH 1873 official gazetteer (scans inspected in HIST-0.4i)",
+      "year": 1873,
+      "printed_page": 125,
+      "reading": "Szurdok (Kápolnok-)",
+      "scope": "settlement name, not legal correction",
+      "authority": "OFFICIAL_STATISTICAL_GAZETTEER"
+    },
+    {
+      "source": "KSH 1877 official gazetteer (scans inspected in HIST-0.4i)",
+      "year": 1877,
+      "printed_page": 50,
+      "reading": "Kápolnok (Szurdok-)",
+      "scope": "settlement name, not a statute correction",
+      "authority": "OFFICIAL_STATISTICAL_GAZETTEER"
+    },
+    {
+      "source": "1885 justice/jurisdiction compendium quoting ministerial decree 56.687/85",
+      "year": 1885,
+      "url": "https://mek.oszk.hu/13200/13288/13288.pdf",
+      "reading": "Szurduk-Kápolnok (Kopalnik)",
+      "scope": "later administrative nomenclature; no retroactive 1877 statutory corrigendum",
+      "authority": "LATER_LEGAL_REFERENCE"
+    },
+    {
+      "source": "Varga E. Árpád historical settlement dictionary",
+      "url": "https://www.kia.hu/kiakonyvtar/konyvtar/erdstat/hnevtar.pdf",
+      "reading": "Copalnic — Szurdukkápolnok",
+      "scope": "documentary place-name lineage, not boundary evidence",
+      "authority": "SCHOLARLY_DERIVATIVE"
+    }
+  ],
+  "alternative_free_original_candidates": [
+    {
+      "title": "1877-ik évi országgyűlési törvényczikkek",
+      "publisher": "Ráth Mór, 1877; printed 280 pages",
+      "url": "https://www.antikvarium.hu/konyv/1877-ik-evi-orszaggyulesi-torvenyczikkek-560956-0",
+      "catalogue_index": "1877:I starts p.1",
+      "page_image_obtained": false,
+      "purchase_attempted": false,
+      "source_class": "CATALOG_ONLY"
+    },
+    {
+      "title": "Corpus Juris Hungarici — 1877–1878 laws",
+      "publisher": "Franklin-Társulat 1896",
+      "url": "https://www.antikvarium.hu/aukcio/index.php?aid=3608&bid=762221&t=cd",
+      "first_act_printed_pages": "3–9, cited scholarly",
+      "page_image_obtained": false,
+      "purchase_attempted": false,
+      "source_class": "LATER_PRINT_CATALOG"
+    },
+    {
+      "title": "Google Books parliamentary volume published 1877",
+      "url": "https://books.google.com/books/about/Irom%C3%A1nyok.html?id=w88_AQAAMAAJ",
+      "target_1875_XIV_volume_certified": false,
+      "page_image_obtained": false,
+      "source_class": "OTHER_VOLUME_NOT_VERIFIED_MATCH",
+      "purchase_attempted": false
+    }
+  ],
+  "checks": {
+    "same_legal_literal_in_modern_digitization": true,
+    "independently_located_period_witnesses_by_OCR": 4,
+    "original_parliamentary_folios_directly_viewed": 0,
+    "period_original_1877_statute_facsimile_directly_viewed": 0,
+    "official_erratum_primary_publication_found": 0,
+    "formal_expansion_Szt_to_Szurdok_certified": false,
+    "documentary_Copalnic_place_name_association": "STRONG_CONTEXTUAL_ONLY",
+    "historic_commune_legal_identity_certified": false,
+    "historic_commune_boundary_certified": false
+  },
+  "restrictions": {
+    "outbound_email_sent": false,
+    "new_email_draft_created": false,
+    "institution_contacted": false,
+    "order_placed": false,
+    "payment_made": false
+  },
+  "decision": "NO_PRIMARY_FACSIMILE_OR_ERRATUM_RECOVERED_FROM_PUBLIC_FREE_PATHS__STATUTE_LITERAL_UNCHANGED__NO_GEOMETRY"
+}
