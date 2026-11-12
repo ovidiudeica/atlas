@@ -1,0 +1,104 @@
+{
+  "phase": "HIST-0.4s",
+  "audit_date": "2026-11-12",
+  "target": "2977 Șomcuta Mare, first edition, publication year 1924 in public catalogue; Chioar / Kővár ruins",
+  "baseline_commit": "7e1c08248a6bba50542c63e822f725b6ab0d3c8a",
+  "reference_raster": {
+    "url": "https://www.geo-spatial.org/vechi/file_download/25790",
+    "downloaded_in_previous_phase": true,
+    "local_file_filename": "eHarta-PDT-2977-Somcuta-Mare-1924-geotiff.tif",
+    "downloaded_bytes": 21353131,
+    "sha256": "c97eea5662827f5d36dbaf1bd26c6fb6a1814c992ee783d1c7b441c153718ff2",
+    "width_px": 8883,
+    "height_px": 5966,
+    "geographic_CRS": "EPSG:3844 / Pulkovo 1942(58) Stereo70",
+    "sampling_resolution_m_approx": 1.7,
+    "frame_and_margins": "Georectified, trimmed map-area image; source original untrimmed marginalia not visible in that TIFF",
+    "original_scanner_image_retrieved": false,
+    "original_unwarped_scan_digest": null
+  },
+  "source_documentation": {
+    "metadata_methodology": "https://geo-spatial.org/vechi/articole/eHarta-work-planurile-de-tragere",
+    "documented_distinct_fields": [
+      "nume hartă",
+      "an tipărire",
+      "retipărit",
+      "sursă",
+      "an harta sursă",
+      "an ridicare",
+      "actualizări"
+    ],
+    "media_methodology": "https://geo-spatial.org/vechi/download/planurile-directoare-de-tragere",
+    "description": "Project scanned A0 paper/linen originals at 300 DPI then used georeferencing, clipping and optimization. Downloaded Stereo70 GeoTIFF is output product, not proof of surviving scan-margin text.",
+    "source_status": "METHOD_PUBLISHED__2977_FULL_MARGINS_NOT_OBTAINED"
+  },
+  "public_retrieval_trials": [
+    {
+      "url": "https://www.geo-spatial.org/vechi/maps/preview-pt-zoomify.php?mapId=260",
+      "HTTP": 200,
+      "result": "Legacy Flash preview page only; exposes relative zoomifyImagePath ../images/planuri_tragere/preview/prim/2977, not the original scanned margin",
+      "raw_image_available": false
+    },
+    {
+      "url": "https://www.geo-spatial.org/vechi/images/planuri_tragere/preview/prim/2977/ImageProperties.xml",
+      "HTTP": 404,
+      "result": "Zoomify metadata unavailable",
+      "raw_image_available": false
+    },
+    {
+      "url": "https://geo-spatial.org/vechi/images/planuri_tragere/preview/prim/2977/ImageProperties.xml",
+      "HTTP": 404,
+      "result": "Zoomify metadata unavailable on alternate hostname",
+      "raw_image_available": false
+    },
+    {
+      "url": "https://www.geo-spatial.org/vechi/maps/images/planuri_tragere/preview/prim/2977/ImageProperties.xml",
+      "HTTP": 404,
+      "result": "Incorrect/unsupported relative path; not a source",
+      "raw_image_available": false
+    },
+    {
+      "url": "https://www.geo-spatial.org/vechi/maps/pt-metadata.php?mapId=260",
+      "HTTP": 404,
+      "result": "Detailed metadata page unavailable",
+      "raw_image_available": false
+    },
+    {
+      "url": "https://www.geo-spatial.org/vechi/maps/pt-metadata.php?mapId=260&lang=ro",
+      "HTTP": 404,
+      "result": "Detailed metadata unavailable with language parameter",
+      "raw_image_available": false
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geo-spatial.org%2Fvechi%2Fimages%2Fplanuri_tragere%2Fpreview%2Fprim%2F2977%2FImageProperties.xml&output=json&filter=statuscode%3A200",
+      "HTTP": 200,
+      "result": "Empty CDX matches [] for this exact legacy metadata URL",
+      "raw_image_available": false
+    },
+    {
+      "url": "https://www.geo-spatial.org/vechi/maps/pt-grid-json.php?start=0&limit=1&filter[0][field]=idi&filter[0][data][type]=numeric&filter[0][data][comparison]=eq&filter[0][data][value]=260",
+      "HTTP": 200,
+      "result": "Confirmed sheet catalogue id 260, indicativ 2977, Șomcuta Mare, edition 1, printing year 1924; no surveyed-year fields returned",
+      "raw_image_available": false
+    }
+  ],
+  "provenance_status": {
+    "print_year": 1924,
+    "print_year_evidence": "Public community-edited catalogue; originally copied from map when documented, but untrimmed margin not re-read in present phase",
+    "print_year_directly_verified_on_untrimmed_scan": false,
+    "field_survey_year": null,
+    "field_survey_year_certified": false,
+    "source_map_year": null,
+    "source_map_kind": null,
+    "original_source_scale": null,
+    "reprint_indication": null,
+    "updates_dates": null,
+    "original_sheet_series_number": "2977",
+    "full_scan_margins_recovered": false,
+    "original_2977_source_scan_url": null,
+    "any_geodetic_GCP_residual_report_for_2977_recovered": false,
+    "old_Stereo70_GeoTIFF_is_native_Lambert_Cholesky_survey": false,
+    "consent_free_mode": "No login/registration: archived contributor workflow required registered account; no institutional email or form submitted"
+  },
+  "decision": "EXACT_PRINT_YEAR_KNOWN__SOURCE_AND_SURVEY_DATES_OPEN__UNWARPED_ORIGINAL_SCAN_MARGINS_NOT_RECOVERED__NO_GEOMETRY_PROMOTION"
+}
