@@ -1,0 +1,101 @@
+{
+  "phase": "HIST-0.4s",
+  "date": "2026-11-12",
+  "scope": "Rank pre-1877 primary map alternatives for individual stable physical features in Berchezoaia/Buteasa/Chioar, and distinguish primary documentary versus independently geodetic evidence.",
+  "hierarchy": [
+    {
+      "priority": "P0",
+      "class": "Untrimmed paper sheet 2977 1924",
+      "current_retrieval": "NOT_OBTAINED",
+      "known_source": "eHarta scanner originals at 300dpi from university geography archives",
+      "source": "https://geo-spatial.org/vechi/download/planurile-directoare-de-tragere",
+      "reason": "Would resolve sheet-specific print marginalia and source/survey/reprint annotations; BUT its 1924 printing date remains later than 1859 and does not by itself certify a legal boundary",
+      "specific_2977_unwarped_scan_url": null,
+      "quality_report_per_sheet": null,
+      "noncontact_next_step": "Check any already-public non-authenticated untrimmed scan or dataset mirror only, no form submission"
+    },
+    {
+      "priority": "P1",
+      "class": "Transylvania circa 1860–1872 Habsburg 2nd military survey, source 1:28,800",
+      "current_retrieval": "NO_EXACT_CHIOAR_RASTER",
+      "sources": [
+        "https://technicalgeography.org/pdf/1_2007/gt_1_2007.pdf",
+        "https://vmek.oszk.hu/01300/01336/html/"
+      ],
+      "specific_chioar_sheet_id": null,
+      "warning": "Transylvania source sheets and the Kingdom of Hungary-only digital package are different provenances; do NOT infer that a Hungary sheet DVD covering 1819–1869 includes Transylvania. Historic triangulation and georeferencing uncertainty must be measured.",
+      "source_for_exclusion": "https://nektar.oszk.hu/hu/manifestation/2649974",
+      "potential": "Primary contemporaneous cartographic representation of churches and roads but lacks proven independent exact same-object ground mark for Chioar so far"
+    },
+    {
+      "priority": "P2",
+      "class": "Karte des Grossfürstentums Siebenbürgen original 1862",
+      "current_retrieval": "OBTAINED_PRIOR_PHASE_HIST04R",
+      "known_original_sha256": "d79ffb416106b99c5dfef81066f863aa92520eef0f0733917a764098e29389a9",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Gro%C3%9Ff%C3%BCrstentum_Siebenb%C3%BCrgen_1862.jpg",
+      "warning": "Original edition is independent as 1862 publication, but insufficient detail to identify a wooden church corner or the 1924 topographic spot height; later eHarta georeferencing used Austrian 1:200,000 maps, hence geodetically dependent."
+    },
+    {
+      "priority": "P3",
+      "class": "MNL OL S75 No 82 administrative map, 1859 state photographed 1861",
+      "current_retrieval": "ORIGINAL_PHOTOGRAPH_AVAILABLE_PRIOR_PHASES",
+      "sha256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+      "warning": "Settlement shapes and heavy wavy administrative lines cannot be promoted as same-object river, wooden church vertex, or legal boundary without own legends and independent period proof."
+    },
+    {
+      "priority": "P4",
+      "class": "eHarta 1924 2977 georeferenced printed topographic sheet",
+      "current_retrieval": "FULL_GEOREFERENCED_DIGITAL_DERIVATIVE_OBTAINED",
+      "sha256": "c97eea5662827f5d36dbaf1bd26c6fb6a1814c992ee783d1c7b441c153718ff2",
+      "warning": "Can screen structures existing in the 1924 image, not prove they existed on the same physical site in 1859; ~1.7 m per pixel is image sampling, not geodetic accuracy."
+    }
+  ],
+  "witness_and_landmark_crosswalk": [
+    {
+      "object": "Buteasa historic wooden church",
+      "source": "https://chioar.culturamm.ro/biserica-de-lemn-sfintii-arhangheli-mihail-si-gavril-din-buteasa/",
+      "claims": "summary says 1800, narrative gives construction candidate 1751; consecration in 1839, collapse in 2019",
+      "legal_result": "Evidence supports pre-1859 monument existence but not certified original church point on 1859 map",
+      "old_sheet_unique_pixel": null,
+      "modern_surveyed_vertex": null,
+      "admissible_GCP": false
+    },
+    {
+      "object": "Vălenii Șomcutei wooden church",
+      "source": "https://chioar.culturamm.ro/biserica-de-lemn-sf-arhangheli-din-valenii-somcutei/",
+      "claims": "heritage summary: 17th c; narrative: probably 1741; 1845 porch and door altered",
+      "legal_result": "Historic presence plausible but exact church footprint and map symbol not certified on pre1877 image",
+      "old_sheet_unique_pixel": null,
+      "modern_surveyed_vertex": null,
+      "admissible_GCP": false
+    },
+    {
+      "object": "Codru Butesii wooden church",
+      "source": "https://chioar.culturamm.ro/biserica-de-lemn-sf-arhangheli-mihail-si-gavril-din-codru-butesii/",
+      "claims": "old wooden building moved to Codru Butesii in 1937, AFTER 1924 map",
+      "legal_result": "Hard chronological rejection of current site as 1859/1924 unchanged church vertex",
+      "old_sheet_unique_pixel": null,
+      "modern_surveyed_vertex": null,
+      "admissible_GCP": false
+    }
+  ],
+  "admission_standard": {
+    "required_per_point": [
+      "Unique physical object sub-feature with documented survival at same site across both dates",
+      "Unique point observed on original period map at known source-image pixel coordinate, not merely centre of WMS crop",
+      "Independently surveyed, object-identical reference coordinate and positional uncertainty",
+      "Holdout points not fitted with model, enough noncollinear points for transform",
+      "Explicit distinction of administrative legal boundary witness from topographic point"
+    ],
+    "number_approved": 0,
+    "fit_RMSE_m": null,
+    "holdout_RMSE_m": null,
+    "pre1859_legal_boundary_approved": 0
+  },
+  "safeguard": {
+    "no_institutional_email": true,
+    "no_orders_or_payments": true,
+    "no_private_map_republication": true,
+    "no_OSM_or_OHM_id_reassignment": true
+  }
+}
