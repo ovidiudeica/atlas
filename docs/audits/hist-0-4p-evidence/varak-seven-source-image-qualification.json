@@ -1,0 +1,227 @@
+{
+  "phase": "HIST-0.4p",
+  "date": "2026-11-12",
+  "resource_page": "https://varak.hu/latnivalo/index/1631-Berkeszpataka-Kovar-Chioar/",
+  "source_owner": "Várak.hu; original ownership/reuse rights vary by embedded image",
+  "inspection": "Seven image bytes retrieved over public HTTP to user's local machine and each visually reviewed; SHA-256 and dimensions recorded; NO image binary committed or distributed",
+  "images": [
+    {
+      "id": "V_1687_MARSIGLI",
+      "file": "3174c78cba2f2d1b67f1.jpg",
+      "name": "Piante di Kuivar — Marsigli 1687",
+      "category": "HISTORICAL_FORTRESS_PLAN_REPRODUCTION",
+      "date_attributed": 1687,
+      "dimensions": [
+        1387,
+        1000
+      ],
+      "bytes": 310417,
+      "sha": "6e0e529f474639b4f79578add2dce960f6e759cf00181e2394b3dd49c814d6be",
+      "features": [
+        "Lápos Fluv. depicted curving adjacent to the fortress",
+        "Parts A Primo Castello, B Secondo Castello, C Communicazione"
+      ],
+      "editorial_note": "Image includes modern site watermark and attribution Marsigli 1687; not an independently authenticated original manuscript facsimile",
+      "scale_known": false,
+      "individual_geodesic_point": false,
+      "source_url": "https://varak.hu/media/content/sights/1631/3174c78cba2f2d1b67f1.jpg",
+      "local_reviewed": true,
+      "original_image_binary_added_to_repository": false,
+      "republication_authorized": false,
+      "geodetic_ground_control_approved": false
+    },
+    {
+      "id": "V_17C_RECONSTRUCTION",
+      "file": "e4c104c46b5c730d6d80.jpg",
+      "name": "Berkeszpataka Kővár end-seventeenth-century schematic (Karczag/Szabó)",
+      "category": "MODERN_SCHEMATIC_RECONSTRUCTION",
+      "date_attributed": null,
+      "dimensions": [
+        1030,
+        693
+      ],
+      "bytes": 132903,
+      "sha": "63cec9eff5a6187ea9ebc7ba557560dc4a5b784dbef0e334909a200d857b64ec",
+      "features": [
+        "lower and upper castle shown distinctly",
+        "50 m graphic scale printed",
+        "north arrow appears"
+      ],
+      "editorial_note": "Not field-surveyed geodetic plan; modern reconstruction of seventeenth-century layout, not contemporaneous to MNL 1859",
+      "scale_known": true,
+      "individual_geodesic_point": false,
+      "source_url": "https://varak.hu/media/content/sights/1631/e4c104c46b5c730d6d80.jpg",
+      "local_reviewed": true,
+      "original_image_binary_added_to_repository": false,
+      "republication_authorized": false,
+      "geodetic_ground_control_approved": false
+    },
+    {
+      "id": "V_AA_RUSU_UPPER",
+      "file": "kvrajzok3.jpg",
+      "name": "Kővár upper castle plan — A. A. Rusu",
+      "category": "MODERN_ARCHAEOLOGICAL_PLAN",
+      "date_attributed": null,
+      "dimensions": [
+        700,
+        340
+      ],
+      "bytes": 44345,
+      "sha": "40045b17ff52e210ab92f7bf99369731bc141660625d6ed4eda9240b7a8f867e",
+      "features": [
+        "upper fortress walls and compartments"
+      ],
+      "editorial_note": "No map datum, geodetic coordinate or documented survey reference on hosted image",
+      "scale_known": false,
+      "individual_geodesic_point": false,
+      "source_url": "https://varak.hu/media/content/sights/1631/kvrajzok3.jpg",
+      "local_reviewed": true,
+      "original_image_binary_added_to_repository": false,
+      "republication_authorized": false,
+      "geodetic_ground_control_approved": false
+    },
+    {
+      "id": "V_1869_ENGRAVING",
+      "file": "4060e52b39872e0a6de0.JPG",
+      "name": "Keleti Gusztáv — Kővár with river Lăpuș, 1869",
+      "category": "HISTORICAL_LANDSCAPE_ILLUSTRATION",
+      "date_attributed": 1869,
+      "dimensions": [
+        1398,
+        1000
+      ],
+      "bytes": 266209,
+      "sha": "055ef726cbb43c5f9ca5d70ab71f06d0e6ff7ae892eb356f4499235978ca09bd",
+      "features": [
+        "ruined walls perched on cliff with river in foreground"
+      ],
+      "editorial_note": "Artistic landscape print, cannot infer survey coordinates or camera location from engraving",
+      "scale_known": false,
+      "individual_geodesic_point": false,
+      "source_url": "https://varak.hu/media/content/sights/1631/4060e52b39872e0a6de0.JPG",
+      "local_reviewed": true,
+      "original_image_binary_added_to_repository": false,
+      "republication_authorized": false,
+      "geodetic_ground_control_approved": false
+    },
+    {
+      "id": "V_REGIONAL_SCHEMATIC",
+      "file": "a8fa330cd4b5f395ab5e.jpg",
+      "name": "Kővár regional historical schematic / toponyms",
+      "category": "EDITORIAL_REGIONAL_SCHEMATIC",
+      "date_attributed": null,
+      "dimensions": [
+        600,
+        510
+      ],
+      "bytes": 112478,
+      "sha": "365da8359e54a8341d26129d2ba769fc1b1af96bb9e1197cb189cfe261a6b752",
+      "features": [
+        "regional labels and Kővár marker overlaid"
+      ],
+      "editorial_note": "Not a 1:25,000 military survey sheet; region-only conceptual diagram",
+      "scale_known": false,
+      "individual_geodesic_point": false,
+      "source_url": "https://varak.hu/media/content/sights/1631/a8fa330cd4b5f395ab5e.jpg",
+      "local_reviewed": true,
+      "original_image_binary_added_to_repository": false,
+      "republication_authorized": false,
+      "geodetic_ground_control_approved": false
+    },
+    {
+      "id": "V_MODERN_ROAD",
+      "file": "kvterkep1.jpg",
+      "name": "Modern road-map location map with Kővár overlay",
+      "category": "MODERN_CARTOGRAPHIC_INDEX",
+      "date_attributed": null,
+      "dimensions": [
+        600,
+        480
+      ],
+      "bytes": 56887,
+      "sha": "b0c541f3ebb6097ef4cc61f7e6e167fe389e876ae58a01abc5d2bdb0564a6761",
+      "features": [
+        "modern place names and roads; editor marker near castle"
+      ],
+      "editorial_note": "Modern touristic road map, not primary historic map",
+      "scale_known": false,
+      "individual_geodesic_point": false,
+      "source_url": "https://varak.hu/media/content/sights/1631/kvterkep1.jpg",
+      "local_reviewed": true,
+      "original_image_binary_added_to_repository": false,
+      "republication_authorized": false,
+      "geodetic_ground_control_approved": false
+    },
+    {
+      "id": "V_MAPYCZ_2024",
+      "file": "775d28f18a000ba6eb60.JPG",
+      "name": "Mapy.cz topographic route to Kővár, source label 2024",
+      "category": "MODERN_EDITOR_ANNOTATED_WEB_MAP",
+      "date_attributed": 2024,
+      "dimensions": [
+        1027,
+        1000
+      ],
+      "bytes": 144315,
+      "sha": "931096dbcd441d96910efa589312e2fc9737dc217d6176dcf78f9a58951d2f04",
+      "features": [
+        "Lăpuș meander and steep hillside",
+        "route and destination circle manually drawn"
+      ],
+      "editorial_note": "Modern hiking basemap / editorial location circle; not independent 1859 map symbol or surveyed bastion",
+      "scale_known": false,
+      "individual_geodesic_point": false,
+      "source_url": "https://varak.hu/media/content/sights/1631/775d28f18a000ba6eb60.JPG",
+      "local_reviewed": true,
+      "original_image_binary_added_to_repository": false,
+      "republication_authorized": false,
+      "geodetic_ground_control_approved": false
+    }
+  ],
+  "castle_evidence": {
+    "historical_castle_and_river_relation_support": true,
+    "distinct_seventeenth_century_castle_structures_identified": true,
+    "exact_original_MNL_1859_photo2_castle_mark_verified": false,
+    "modern_geodetically_surveyed_same_physical_subfeature_point": false
+  },
+  "map_claim_correction": {
+    "website_general_methodology_mentions_third_military_survey_25000": true,
+    "castle_page_specific_map_section_links_count": 3,
+    "castle_page_specific_map_section_contents": [
+      "regional schematic",
+      "modern road locator",
+      "2024 Mapy.cz route map"
+    ],
+    "direct_original_military_survey_25000_image_found_in_castle_page": false,
+    "prior_exploratory_label": "1:25,000 map possible from Várak.hu; not confirmed at object page after image inspection"
+  },
+  "gcp_qualified": 0,
+  "geometry_approved": 0,
+  "rights": "Links + hashes + short source descriptions only; third-party image content retained locally for inspection.",
+  "hungarian_national_museum_original_manuscript_catalog": {
+    "institution": "Magyar Nemzeti Múzeum – Magyar Történelmi Képcsarnok",
+    "citation": "Cenner-Wilhelmb Gizella, A Magyar Történeti Képcsarnok kéziratos térképei, Folia Historica 7 (1979), printed p.126, catalog entry 7",
+    "publication_url": "https://mnm.hu/sites/default/files/publications/foliahistorica_07.pdf",
+    "manuscript_title": "PIANTA DI KUIVAR / governato da Teleki",
+    "accession_number": "8920.T",
+    "size_cm": [
+      18.3,
+      28.4
+    ],
+    "medium": "Ink and watercolor on two glued paper pieces",
+    "legend": "A–C in Italian",
+    "content_description": "Plan of fortress Kővár on hill adjacent to river Lăpuș, with surrounding terrain",
+    "acquisition_history": "Purchased in 1907 from Rohracher antiquarian bookseller in Lienz, Austria",
+    "historic_attribution": "Military engineer in entourage of Charles of Lorraine; circa 1687, not unconditionally attributed personally to Luigi Ferdinando Marsigli",
+    "next_catalog_entry_distinguished": {
+      "accession_number": "8922.T",
+      "manuscript_title": "PIANTA DI KUKELVAR",
+      "modern_locality": "Cetatea de Baltă / Küküllővár, distinct place — do NOT conflate with Kővár"
+    },
+    "original_manuscript_image_visually_inspected": false,
+    "hosted_varak_reproduction_matches_original_inventory_in_context": true,
+    "has_published_geodetic_vertex_coordinates": false,
+    "legal_boundary_geometry_demonstrated": false,
+    "evidence_classification": "INSTITUTIONAL_PRIMARY_MANUSCRIPT_INVENTORY_IDENTIFIED__MANUSCRIPT_ITSELF_NOT_DIRECTLY_EXAMINED"
+  }
+}

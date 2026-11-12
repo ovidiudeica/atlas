@@ -1,0 +1,111 @@
+{
+  "phase": "HIST-0.4p",
+  "date": "2026-11-12",
+  "objective": "First defensible physically independent historic photo-to-ground control pair at Kővár/Chioar, with no inferred border",
+  "baseline": "main@7d06883093c2cad580208adb53928e4f116969dc",
+  "MNL_photo2": {
+    "archive": "MNL OL S75 No.82",
+    "photographed_year": 1861,
+    "represented_admin_state_year": 1859,
+    "sha256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+    "pixel_dimensions": [
+      6379,
+      9819
+    ],
+    "photographic_source_available_locally": true,
+    "search_ROI_original_xyxy": [
+      2600,
+      3650,
+      2500,
+      3650
+    ],
+    "identifiable_fortress_or_ruin_map_symbol": false,
+    "verified_exact_same_subfeature_pixel": null,
+    "map_feature_cannot_be_inferred_from_village_symbol": true,
+    "thick_curved_stroke_type": "UNRESOLVED_BOUNDARY_VS_RIVER",
+    "any_geodetic_anchor_approved": false
+  },
+  "target_feature_conditions": [
+    {
+      "condition": "Date-correct MNL 1859 map raster physically inspected",
+      "status": "PASS",
+      "evidence": "Original local JPEG with SHA256, full-res ROI from HIST-0.4o"
+    },
+    {
+      "condition": "Exact castle subfeature (bastion, gate, cliff corner) explicitly and uniquely mapped on MNL photo 2",
+      "status": "FAIL",
+      "evidence": "No physically unique sign or point established"
+    },
+    {
+      "condition": "Independent historical plan with a castle or distinctive landscape morphology",
+      "status": "PASS_DOCUMENTARY_ONLY",
+      "evidence": "Marsigli-attributed Kuivar plan dated 1687 shows parts and Lápos river bend, plus 1869 Keleti landscape engraving"
+    },
+    {
+      "condition": "Detailed survey plan with source-date, projection, geodetic scale and identified physical vertices",
+      "status": "FAIL",
+      "evidence": "Modern seventeenth-century schematic has a graphic scale but no geodetic datum/survey network; 1687 attribution is an editorial rendition"
+    },
+    {
+      "condition": "Modern independently surveyed coordinate of SAME physical MNL object",
+      "status": "FAIL",
+      "evidence": "Five generic site pins cluster within 29.2 m; other point 168.9m away; no measured same bastion, castle-wide site spans ~600 m"
+    },
+    {
+      "condition": "Confluence identity unambiguous",
+      "status": "FAIL_EXCLUSION",
+      "evidence": "Burgenwelt specifically rejects the Cavnic–Lăpuș confluence location misused in maps"
+    },
+    {
+      "condition": "Source-image geodetic fit with at least four noncollinear same-object points plus holdouts",
+      "status": "NOT_RUN",
+      "evidence": "Zero accepted historic map symbol to ground site pairs, no valid residual possible"
+    }
+  ],
+  "independent_historical_plan": {
+    "source": "Várak.hu photo gallery historical castle plans",
+    "url": "https://varak.hu/latnivalo/index/1631-Berkeszpataka-Kovar-Chioar/",
+    "marsigli_plan_1687_image": "https://varak.hu/media/content/sights/1631/3174c78cba2f2d1b67f1.jpg",
+    "historical_river_symbol_visible": true,
+    "geographic_graticule": false,
+    "modern_wgs84_vertex": null,
+    "original_primary_folio_authenticated": false,
+    "admissible_as_historic_castle_layout_context": true,
+    "admissible_as_1859_commune_border": false
+  },
+  "modern_topographic_locator": {
+    "source": "Mapy.cz 2024 edited route, hosted by Várak.hu",
+    "url": "https://varak.hu/media/content/sights/1631/775d28f18a000ba6eb60.JPG",
+    "exact_ground_vertex_measured": false,
+    "editorial_castle_dot": true,
+    "castle_dot_not_historic_MNL_symbol": true
+  },
+  "archaeological_separation": {
+    "source": "Iosipescu, Viorica Ursu, Traian Ursu (1979) preliminary excavation report, Persée",
+    "url": "https://www.persee.fr/doc/mcarh_0076-5147_1979_num_13_1_1494",
+    "physical_sectors_mentioned": [
+      "eastern outer castle",
+      "western inner castle",
+      "connection corridor",
+      "access/outer courtyard",
+      "western defensive ditch"
+    ],
+    "original_field_survey_geodetic_coordinates_present_in_accessible_text": false,
+    "modern_restored_structures_cannot_be_assumed_unchanged_since_1859": true
+  },
+  "gate": {
+    "physical_site_documented": true,
+    "individual_stable_monument_subfeature_geodesically_qualified": false,
+    "photo2_historical_castle_pixel": null,
+    "eligible_GCPs": 0,
+    "new_georeferencing_transform": null,
+    "new_RMSE_m": null,
+    "new_holdout_RMSE_m": null,
+    "historic_1859_boundaries_certified": 0,
+    "OHM_candidate_relations_approved": 0
+  },
+  "next_specific_evidence": "A public 1:25,000 original third-survey or source-dated cadastre sheet depicting Kővár ruins by its original own symbol, then exact stable structure vertex surveyed in modern ortho/archaeological plan; preserve 1859 map missing-symbol caveat, and consider a different MNL photo if castle not depicted.",
+  "no_email_or_contact": true,
+  "no_rights_expansion": true,
+  "no_boundary_changes": true
+}

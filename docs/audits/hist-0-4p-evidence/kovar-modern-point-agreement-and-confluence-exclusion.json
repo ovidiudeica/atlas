@@ -1,0 +1,196 @@
+{
+  "phase": "HIST-0.4p",
+  "date": "2026-11-12",
+  "object": "Cetatea Chioarului / Kővár fortress ruins",
+  "reference": "WGS84 degrees, modern public points describing a broad physical site; none independently demonstrated surveyed coordinates of a unique bastion, gate or bedrock corner",
+  "castle_complex_extent_approx_m": 600,
+  "physical_source": "https://remeteachioarului.ro/2023/10/18/cetatea-chioarului/",
+  "points": [
+    {
+      "id": "VARAK_SITE_PIN",
+      "lat": 47.47599,
+      "lon": 23.578743,
+      "url": "https://varak.hu/latnivalo/index/1631-Berkeszpataka-Kovar-Chioar/",
+      "kind": "touristic castle-site GPS point",
+      "survey": "UNSPECIFIED",
+      "uncertainty_m": null,
+      "independence_of_other_reported_positions_demonstrated": false,
+      "individual_same_object_vertex_described": false,
+      "qualified_geodetic_GCP": false
+    },
+    {
+      "id": "OSM_NODE_896978567",
+      "lat": 47.47601,
+      "lon": 23.57886,
+      "url": "https://mapcarta.com/N896978567",
+      "kind": "OSM historic=ruins point, not historic 1859 object geometry",
+      "survey": "UNSPECIFIED",
+      "uncertainty_m": null,
+      "independence_of_other_reported_positions_demonstrated": false,
+      "individual_same_object_vertex_described": false,
+      "qualified_geodetic_GCP": false
+    },
+    {
+      "id": "BURGENWELT",
+      "lat": 47.47616666666667,
+      "lon": 23.57875,
+      "url": "https://www.burgenwelt.org/rumaenien/chioarului/object.php",
+      "kind": "GPS DMS castle-site point",
+      "survey": "UNSPECIFIED",
+      "uncertainty_m": null,
+      "independence_of_other_reported_positions_demonstrated": false,
+      "individual_same_object_vertex_described": false,
+      "qualified_geodetic_GCP": false
+    },
+    {
+      "id": "WELCOME_TO_ROMANIA",
+      "lat": 47.47613,
+      "lon": 23.57881,
+      "url": "https://www.welcometoromania.ro/DN1c_Halmeu_Rastoci/DN1c_Halmeu_Rastoci_Berchezoaia_Cetatea_Chioarului_r.htm",
+      "kind": "tourism castle-site point",
+      "survey": "UNSPECIFIED",
+      "uncertainty_m": null,
+      "independence_of_other_reported_positions_demonstrated": false,
+      "individual_same_object_vertex_described": false,
+      "qualified_geodetic_GCP": false
+    },
+    {
+      "id": "EXPLORE_CARPATHIA",
+      "lat": 47.475914,
+      "lon": 23.578644,
+      "url": "https://www.explorecarpathia.eu/hu/romania/kovar",
+      "kind": "tourism castle-site point",
+      "survey": "UNSPECIFIED",
+      "uncertainty_m": null,
+      "independence_of_other_reported_positions_demonstrated": false,
+      "individual_same_object_vertex_described": false,
+      "qualified_geodetic_GCP": false
+    },
+    {
+      "id": "CASTLOPEDIA",
+      "lat": 47.4759,
+      "lon": 23.5765,
+      "url": "https://www.castlopedia.com/castle/chioar-fortress/12341",
+      "kind": "castle-site point, west of main cluster",
+      "survey": "UNSPECIFIED",
+      "uncertainty_m": null,
+      "independence_of_other_reported_positions_demonstrated": false,
+      "individual_same_object_vertex_described": false,
+      "qualified_geodetic_GCP": false
+    }
+  ],
+  "pairwise_distances_m": [
+    {
+      "a": "VARAK_SITE_PIN",
+      "b": "OSM_NODE_896978567",
+      "distance_m": 9.1
+    },
+    {
+      "a": "VARAK_SITE_PIN",
+      "b": "BURGENWELT",
+      "distance_m": 19.7
+    },
+    {
+      "a": "VARAK_SITE_PIN",
+      "b": "WELCOME_TO_ROMANIA",
+      "distance_m": 16.4
+    },
+    {
+      "a": "VARAK_SITE_PIN",
+      "b": "EXPLORE_CARPATHIA",
+      "distance_m": 11.3
+    },
+    {
+      "a": "VARAK_SITE_PIN",
+      "b": "CASTLOPEDIA",
+      "distance_m": 168.9
+    },
+    {
+      "a": "OSM_NODE_896978567",
+      "b": "BURGENWELT",
+      "distance_m": 19.3
+    },
+    {
+      "a": "OSM_NODE_896978567",
+      "b": "WELCOME_TO_ROMANIA",
+      "distance_m": 13.9
+    },
+    {
+      "a": "OSM_NODE_896978567",
+      "b": "EXPLORE_CARPATHIA",
+      "distance_m": 19.4
+    },
+    {
+      "a": "OSM_NODE_896978567",
+      "b": "CASTLOPEDIA",
+      "distance_m": 177.8
+    },
+    {
+      "a": "BURGENWELT",
+      "b": "WELCOME_TO_ROMANIA",
+      "distance_m": 6.1
+    },
+    {
+      "a": "BURGENWELT",
+      "b": "EXPLORE_CARPATHIA",
+      "distance_m": 29.2
+    },
+    {
+      "a": "BURGENWELT",
+      "b": "CASTLOPEDIA",
+      "distance_m": 171.7
+    },
+    {
+      "a": "WELCOME_TO_ROMANIA",
+      "b": "EXPLORE_CARPATHIA",
+      "distance_m": 27.1
+    },
+    {
+      "a": "WELCOME_TO_ROMANIA",
+      "b": "CASTLOPEDIA",
+      "distance_m": 175.5
+    },
+    {
+      "a": "EXPLORE_CARPATHIA",
+      "b": "CASTLOPEDIA",
+      "distance_m": 161.1
+    }
+  ],
+  "five_site_label_positions": {
+    "source_ids": [
+      "VARAK_SITE_PIN",
+      "OSM_NODE_896978567",
+      "BURGENWELT",
+      "WELCOME_TO_ROMANIA",
+      "EXPLORE_CARPATHIA"
+    ],
+    "max_pairwise_m": 29.2,
+    "min_pairwise_m": 6.1,
+    "interpretation": "Five published generic site positions cluster within roughly 30 m; NOT independent monument subfeature measurements",
+    "agreement_is_proof_of_independent_geodesy": false
+  },
+  "castlopedia_exception": {
+    "id": "CASTLOPEDIA",
+    "distance_from_varak_m": 168.9,
+    "interpretation": "A further point at about 169 m to west is materially different; cannot automatically reject or merge as identical bastion because the complex is hundreds of metres long"
+  },
+  "mislocated_site_warning": {
+    "source": "Burgenwelt, original German castle-site description",
+    "url": "https://www.burgenwelt.org/rumaenien/chioarului/object.php",
+    "statement": "Numerous maps put the ruin at the Cavnic–Lăpuș confluence; this is wrong. The ruins are further south above a separate Lăpuș bend",
+    "exclude_candidate": "Any Cavnic–Lăpuș confluence pin used as Kővár castle GCP",
+    "false_confluence_coordinates_from_original": null,
+    "exclusion_gate": "REJECT_FALSE_CAVNIC_CONFLUENCE_IDENTITY"
+  },
+  "historic_reference_comparison": {
+    "MNL_photo": 2,
+    "castle_symbol_pixel": null,
+    "unique_historic_feature_matching_any_modern_coordinate": false,
+    "historic_date_state": 1859,
+    "modern_feature_date": 2026,
+    "qualified_GCP_count": 0,
+    "geodetic_RMSE_m": null,
+    "historic_boundary_imports": 0
+  },
+  "safety": "Do not adopt a community OSM node or a tourist GPS point as a cadastral boundary or a survey-ground anchor."
+}
