@@ -1,0 +1,76 @@
+{
+  "phase": "HIST-0.4s",
+  "date": "2026-11-12",
+  "base_main_sha": "7e1c08248a6bba50542c63e822f725b6ab0d3c8a",
+  "predecessor": {
+    "postmerge_run_id": 43248873985,
+    "build_success": true,
+    "github_pages_success": true
+  },
+  "scope": "Recover 2977 untrimmed original margins and source/survey dates using free public paths; qualify independent pre1859 immovable physical landmarks on same 1924 sheet and pre1877 maps; never infer administrative boundaries.",
+  "findings": {
+    "sheet_2977_public_original_untrimmed_margin_recovered": false,
+    "sheet_2977_catalogue_print_year": 1924,
+    "sheet_2977_source_year": null,
+    "sheet_2977_field_survey_year": null,
+    "sheet_2977_reprint_status": null,
+    "sheet_2977_updates_dates": null,
+    "sheet_2977_eHarta_downloaded_GeoTIFF_existed_from_prior_phase": true,
+    "sheet_2977_GeoTIFF_sha256": "c97eea5662827f5d36dbaf1bd26c6fb6a1814c992ee783d1c7b441c153718ff2",
+    "raw_zoomify_endpoint_status": 404,
+    "public_original_margin_archival_snapshot_found": false,
+    "original_1862_regional_map_retained": true,
+    "original_1862_unique_church_point_verified": false,
+    "pre1877_transylvania_local_survey_sheet_recovered": false,
+    "monument_sites_checked_by_WFS": 3,
+    "site_WMS_PNGs_visually_inspected": 3,
+    "monument_candidates_for_further_independent_GCP_survey": 2,
+    "chronologically_excluded_moved_1937_church": 1,
+    "other_excluded_relocated_1895_church": 1,
+    "admitted_1859_GCP_pairs": 0,
+    "new_RMSE_m": null,
+    "holdout_RMSE_m": null,
+    "certified_1859_mapped_church_points": 0
+  },
+  "geometry": {
+    "OHM_candidate_relations": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "OHM_relations_imported": 0,
+    "Chioar_segments_certified": 0,
+    "Transylvania_segments_certified": 0
+  },
+  "separation": {
+    "documented_object_existed_before_1859_does_not_equal_stable_physical_corner": true,
+    "modern_heritage_site_coordinates_not_equal_surveyed_vertex": true,
+    "year1924_topographic_building_footprint_not_equal_original_1859_footprint": true,
+    "historical_topographic_line_not_equal_commune_legal_boundary": true,
+    "latest_photo_historical_map_GCP_count": 0
+  },
+  "constraints": {
+    "email_sent": false,
+    "new_email_draft": false,
+    "institution_contact": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false,
+    "private_KMZ_or_source_scans_published": false,
+    "third_party_WMS_images_published": false,
+    "app_or_source_changed": false,
+    "ACTUAL_changed": false,
+    "OSMB_changed": false,
+    "OHM_changed": false,
+    "boundaries_modified": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "2977-original-marginalia-access-and-source-date-gate.json",
+    "pre1877-stable-monuments-wfs-wms-and-relocation-triage.json",
+    "pre1877-map-hierarchy-and-independence-gate.json",
+    "validate-evidence.mjs"
+  ],
+  "verdict": "CLOSED_PUBLIC_MARGINS_SEARCH_WITH_SOURCE_YEAR_OPEN__POTENTIAL_HISTORIC_CHURCH_CANDIDATES_DISCOVERED__RELOCATIONS_CHRONOLOGICALLY_EXCLUDED__NO_GCP_OR_BOUNDARY_ADMITTED",
+  "next_stage": "HIST-0.4t — prioritize publicly downloadable, specifically indexed 1860–72 1:28800 Transylvania/Chioar sheet or old cadastral survey in which fixed church footprint is actually drawn; verify a single unchanged church foundation corner with independently surveyed coordinate, then 4+ noncollinear GCPs plus holdouts, separately audit legal municipal boundary."
+}
