@@ -1,0 +1,73 @@
+{
+  "phase": "HIST-0.4o",
+  "audit_date": "2026-11-12",
+  "base_main_sha": "cc4389bf511a459081616ec47609da8f03a8bb81",
+  "mode": "FREE_PUBLIC_SOURCES_ONLY_NO_COMMUNICATION_WITH_INSTITUTIONS",
+  "previous_phase_postmerge": {
+    "run_id": 43192757592,
+    "build_verification": "SUCCESS",
+    "pages_deployment": "SUCCESS"
+  },
+  "research": {
+    "statute": "1877:I §2(2c)",
+    "literal": "Szt.-Kápolnok",
+    "original_parliamentary_folios_found_by_index": 4,
+    "original_parliamentary_facsimiles_directly_read": 0,
+    "official_corrigenda_verifiably_read": 0,
+    "modern_1877_digital_text_seen": true,
+    "KSH_1873_1877_readings_from_prior_inspection": true,
+    "legal_expansion_certified": false,
+    "Chioar_name_candidate": "Szurduk-Kápolnok/Copalnic"
+  },
+  "cartography": {
+    "MNL_photo_index": 2,
+    "source_SHA256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+    "pixel_search_ROI": [
+      2600,
+      3650,
+      2500,
+      3650
+    ],
+    "fullres_source_inspected": true,
+    "pixel_of_castle_identified": null,
+    "unclassified_line_near_Berkeszpataka": true,
+    "NYPL_revised_sheet_visually_inspected_in_previous_phase": true,
+    "MAPSTER_1886_sheet_cataloged": true,
+    "MAPSTER_1886_image_retrieved": false,
+    "valid_ground_to_MNL_photo_pairs": 0,
+    "valid_GCPs": 0,
+    "new_affine_RMSE_m": null,
+    "new_holdout_RMSE_m": null,
+    "photos_georeferenced": 0
+  },
+  "admission": {
+    "OHM_candidate_relations": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "Transylvania_segments_admitted": 0,
+    "Chioar_segments_admitted": 0,
+    "geometries_imported": 0,
+    "modern_OSM_entity_IDs_newly_assigned": 0,
+    "app_changed": false
+  },
+  "user_constraints": {
+    "email_sent": false,
+    "email_draft_created": false,
+    "institution_contacted": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false,
+    "archival_map_images_published": false,
+    "private_KMZ_disclosed": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "1877-szt-kapolnok-public-source-audit.json",
+    "mnl-photo2-kovar-pixel-and-line-classification.json",
+    "gaura-galgo-editions-and-georeference-gate.json",
+    "validate-evidence.mjs"
+  ],
+  "verdict": "POSTMERGE_0_4N_PASS__SOURCE_ROI_IMPROVED__NO_NEW_PRIMARY_CORRIGENDUM_OR_QUALIFIED_GCP__NO_GEOMETRY_IMPORTS"
+}
