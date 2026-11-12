@@ -1,0 +1,56 @@
+{
+  "phase": "HIST-0.4j",
+  "audit_date": "2026-11-12",
+  "base_commit": "40ac6c1c71211adfdd6d429f35746a05346b9b43",
+  "repository": "ovidiudeica/atlas",
+  "method": "Manual KSH original-page readings, per-name crosswalk, independent historic physical-site checks with RAN and modern mapped features; fail-closed",
+  "individual_reconciliation": {
+    "original_1877_nonexact": 18,
+    "original_1873_nonexact": 10,
+    "overlap_names": 7,
+    "distinct_legal_names_investigated": 21,
+    "original_1877_text_variants_located": 18,
+    "original_1873_candidate_readings": 9,
+    "original_1873_unresolved_legal_abbreviation": 1,
+    "documentary_identity_case_study": "Koltó-Katalin corresponds historically to Cătălina/Katalinfalva, NOT automatically merged with Koltó/Coltău",
+    "certified_historical_locality_identifications": 0,
+    "certified_modern_place_ids": 0
+  },
+  "physical_site_screen": {
+    "photo_original": "MNL S75 nr.82, gallery photograph 8, photographed 1861 depicting 1859 state",
+    "contact_sheet_overview_images": 14,
+    "physical_historical_site_candidates": 6,
+    "modern_source_object_coordinates": 5,
+    "conflicting_coordinate_sources": 1,
+    "qualified_historical_map_pixel_GCPs": 0,
+    "approved_GIS_transforms": 0,
+    "per_way_Landesgrenzen_approved": 0,
+    "per_way_Chioar_boundaries_approved": 0
+  },
+  "admission": {
+    "relation_candidates": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "historical_geometries_approved": 0,
+    "actual_imports": 0
+  },
+  "changes": {
+    "application_files_changed": false,
+    "geometry_files_changed": false,
+    "original_source_binary_published": false,
+    "private_KMZ_published": false,
+    "OHM_OSMB_ACTUAL_modified": false,
+    "website_changed": false,
+    "payment": false,
+    "orders": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "chioar-21-individual-lexical-and-identity-gate.json",
+    "1861-photo8-stable-physical-landmark-candidates.json",
+    "validate-evidence.mjs"
+  ],
+  "gate_next": "HIST-0.4k focused original-document examination of Szt.-Kápolnok, unresolved Karullya historical alias and geographic extent of Katalinfalva; identify precise historic map symbols for surveyed physical sites across all 14 photos and obtain independent holdout metrics prior to any Landesgrenzen or commune polygon admission"
+}
