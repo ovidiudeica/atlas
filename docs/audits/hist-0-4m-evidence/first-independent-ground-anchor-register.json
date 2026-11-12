@@ -1,0 +1,329 @@
+{
+  "phase": "HIST-0.4m",
+  "date": "2026-11-12",
+  "map_source": "MNL OL S75 nr.82 map state 1859 photographed 1861",
+  "construction_kind": "FIRST_INDEPENDENT_PHYSICAL_GROUND_ANCHOR_REGISTER__NOT_VALID_GCPS",
+  "controls": [
+    {
+      "id": "MNL2-KOVAR-FORTRESS",
+      "MNL_photo": 2,
+      "name": "Cetatea Chioarului, Kővár",
+      "region": "Maramureș, România",
+      "historic_before_1859": true,
+      "historical_structure_status_1859": "RUIN_AFTER_1715",
+      "modern_point_sources": [
+        {
+          "source": "WelcomeToRomania",
+          "lat": 47.47613,
+          "lon": 23.57881,
+          "url": "https://www.welcometoromania.ro/DN1c_Halmeu_Rastoci/DN1c_Halmeu_Rastoci_Berchezoaia_Cetatea_Chioarului_r.htm"
+        },
+        {
+          "source": "Burgenwelt",
+          "lat": 47.47616666666667,
+          "lon": 23.57875,
+          "url": "https://www.burgenwelt.org/rumaenien/chioarului/burgenwelt-chioarului-objektseite.pdf"
+        },
+        {
+          "source": "ExploreCarpathia",
+          "lat": 47.475914,
+          "lon": 23.578644,
+          "url": "https://www.explorecarpathia.eu/hu/romania/kovar"
+        }
+      ],
+      "heritage_register": "RAN 108525.01, MM-I-s-A-04369",
+      "heritage_url": "https://ran.cimec.ro/sel.asp?codran=108525.01",
+      "map_region_manual_inspected": "Photo2 cropped around Berkeszpataka/Berchezoaia and major Lăpuș meanders; a unique fortress ruin symbol is NOT corroborated",
+      "source_pixel_xy": null,
+      "ground_reference_xy_WGS84": [
+        23.57875,
+        47.47613
+      ],
+      "ground_position_decision": "THREE_REPORTED_MODERN_POSITIONS_CLUSTERED_NOT_INDEPENDENTLY_SURVEYED",
+      "evidential_priority": "P0",
+      "issue": "Frequent mislocation on modern maps. Need original MNL fortress/ruin symbol and source-specific geodetic/field proof, not nearest village dot.",
+      "modern_position_pairwise_disagreement_m": [
+        {
+          "sources": [
+            "WelcomeToRomania",
+            "Burgenwelt"
+          ],
+          "distance_m": 6
+        },
+        {
+          "sources": [
+            "WelcomeToRomania",
+            "ExploreCarpathia"
+          ],
+          "distance_m": 27
+        },
+        {
+          "sources": [
+            "Burgenwelt",
+            "ExploreCarpathia"
+          ],
+          "distance_m": 29
+        }
+      ],
+      "historical_map_pixel_identity_verified": false,
+      "independent_ground_survey_accuracy_verified": false,
+      "GCP_classification": "NOT_ADMISSIBLE",
+      "geometry_access_level": "SOURCE_METADATA_ONLY",
+      "app_import": false
+    },
+    {
+      "id": "MNL8-REPS-FORTRESS",
+      "MNL_photo": 8,
+      "name": "Cetatea Rupea",
+      "region": "Brașov, România",
+      "historic_before_1859": true,
+      "modern_point_sources": [
+        {
+          "source": "OSM Nominatim relation 3132264",
+          "lat": 46.0374683,
+          "lon": 25.2123709,
+          "url": "https://nominatim.openstreetmap.org/search?format=json&q=Cetatea+Rupea&limit=5"
+        }
+      ],
+      "heritage_register": "RAN 40401.09",
+      "heritage_url": "https://ran.cimec.ro/sel.asp?codran=40401.09",
+      "map_region_manual_inspected": "Reps settlement hatch and one inverted triangular glyph seen; no individually confirmed castle symbol",
+      "source_pixel_xy": null,
+      "ground_reference_xy_WGS84": [
+        25.2123709,
+        46.0374683
+      ],
+      "ground_position_decision": "MODERN_SITE_CANDIDATE_UNSURVEYED",
+      "evidential_priority": "P1",
+      "modern_position_pairwise_disagreement_m": [],
+      "historical_map_pixel_identity_verified": false,
+      "independent_ground_survey_accuracy_verified": false,
+      "GCP_classification": "NOT_ADMISSIBLE",
+      "geometry_access_level": "SOURCE_METADATA_ONLY",
+      "app_import": false
+    },
+    {
+      "id": "MNL8-TARTLAU-CHURCH",
+      "MNL_photo": 8,
+      "name": "Biserica fortificată Prejmer",
+      "region": "Brașov, România",
+      "historic_before_1859": true,
+      "modern_point_sources": [
+        {
+          "source": "OSM Nominatim way 266834556",
+          "lat": 45.7219997,
+          "lon": 25.7737364,
+          "url": "https://nominatim.openstreetmap.org/search?format=json&q=Prejmer+fortified+church&limit=5"
+        }
+      ],
+      "heritage_register": "RAN 41676.12",
+      "heritage_url": "https://ran.cimec.ro/sel.asp?codran=41676.12",
+      "map_region_manual_inspected": "Tartlau triangular sign at (4481,9136) but not proven to be church; historical map symbol is not a unique church match",
+      "source_pixel_xy": null,
+      "ground_reference_xy_WGS84": [
+        25.7737364,
+        45.7219997
+      ],
+      "ground_position_decision": "MODERN_BUILDING_CENTROID_NOT_HISTORICAL_GCP",
+      "evidential_priority": "P1",
+      "modern_position_pairwise_disagreement_m": [],
+      "historical_map_pixel_identity_verified": false,
+      "independent_ground_survey_accuracy_verified": false,
+      "GCP_classification": "NOT_ADMISSIBLE",
+      "geometry_access_level": "SOURCE_METADATA_ONLY",
+      "app_import": false
+    },
+    {
+      "id": "MNL8-ZEIDEN-CHURCH",
+      "MNL_photo": 8,
+      "name": "Biserica fortificată Codlea",
+      "region": "Brașov, România",
+      "historic_before_1859": true,
+      "modern_point_sources": [
+        {
+          "source": "Outdooractive physical place listing",
+          "lat": 45.699877,
+          "lon": 25.446148,
+          "url": "https://www.outdooractive.com/en/poi/transylvania/the-fortified-church-of-codlea/807846124/"
+        }
+      ],
+      "heritage_register": "RAN 40250.09",
+      "heritage_url": "https://ran.cimec.ro/sel.asp?codran=40250.09",
+      "map_region_manual_inspected": "Zeiden settlement label and hatch, church symbol not unequivocally individualized",
+      "source_pixel_xy": null,
+      "ground_reference_xy_WGS84": [
+        25.446148,
+        45.699877
+      ],
+      "ground_position_decision": "MODERN_POINT_CANDIDATE_NO_PIXEL_PAIR",
+      "evidential_priority": "P2",
+      "modern_position_pairwise_disagreement_m": [],
+      "historical_map_pixel_identity_verified": false,
+      "independent_ground_survey_accuracy_verified": false,
+      "GCP_classification": "NOT_ADMISSIBLE",
+      "geometry_access_level": "SOURCE_METADATA_ONLY",
+      "app_import": false
+    },
+    {
+      "id": "MNL8-KRONSTADT-BLACKCHURCH",
+      "MNL_photo": 8,
+      "name": "Biserica Neagră Brașov",
+      "region": "Brașov, România",
+      "historic_before_1859": true,
+      "modern_point_sources": [
+        {
+          "source": "OSM Nominatim way 866090450",
+          "lat": 45.640997,
+          "lon": 25.5880699,
+          "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Biserica+Neagr%C4%83+Bra%C8%99ov%2C+Rom%C3%A2nia"
+        }
+      ],
+      "heritage_register": "historic medieval landmark",
+      "heritage_url": "https://mapcarta.com/26950134",
+      "map_region_manual_inspected": "Brașov urban hatch; cannot identify church building uniquely within 1859 cartography",
+      "source_pixel_xy": null,
+      "ground_reference_xy_WGS84": [
+        25.5880699,
+        45.640997
+      ],
+      "ground_position_decision": "MODERN_BUILDING_CENTROID_NO_HISTORIC_PIXEL",
+      "evidential_priority": "P2",
+      "modern_position_pairwise_disagreement_m": [],
+      "historical_map_pixel_identity_verified": false,
+      "independent_ground_survey_accuracy_verified": false,
+      "GCP_classification": "NOT_ADMISSIBLE",
+      "geometry_access_level": "SOURCE_METADATA_ONLY",
+      "app_import": false
+    },
+    {
+      "id": "MNL8-HONIGBERG-CHURCH",
+      "MNL_photo": 8,
+      "name": "Biserica fortificată Hărman",
+      "region": "Brașov, România",
+      "historic_before_1859": true,
+      "modern_point_sources": [
+        {
+          "source": "WhiteTown",
+          "lat": 45.7155199598157,
+          "lon": 25.684987257539,
+          "url": "https://whitetown.sk/ro/bisericafortificatdinhrman/"
+        },
+        {
+          "source": "Religiana",
+          "lat": 45.7105114,
+          "lon": 25.687551,
+          "url": "https://religiana.com/harman-fortified-church"
+        },
+        {
+          "source": "A fost acolo",
+          "lat": 45.7147258,
+          "lon": 25.6853906,
+          "url": "https://ns2.amfostacolo.ro/impresii9.php?d=biserica-fortificata-saseasca-harman-harman--prejmer&iid=113900"
+        }
+      ],
+      "heritage_register": "RAN 41097.10",
+      "heritage_url": "https://ran.cimec.ro/sel.asp?codran=41097.10",
+      "map_region_manual_inspected": "Honigberg label visible; point no unambiguous church match",
+      "source_pixel_xy": null,
+      "ground_reference_xy_WGS84": null,
+      "ground_position_decision": "MODERN_REFERENCES_SPATIALLY_DISCORDANT_NO_CANONICAL_POINT",
+      "evidential_priority": "P0",
+      "modern_position_pairwise_disagreement_m": [
+        {
+          "sources": [
+            "WhiteTown",
+            "Religiana"
+          ],
+          "distance_m": 591
+        },
+        {
+          "sources": [
+            "WhiteTown",
+            "A fost acolo"
+          ],
+          "distance_m": 94
+        },
+        {
+          "sources": [
+            "Religiana",
+            "A fost acolo"
+          ],
+          "distance_m": 498
+        }
+      ],
+      "historical_map_pixel_identity_verified": false,
+      "independent_ground_survey_accuracy_verified": false,
+      "GCP_classification": "NOT_ADMISSIBLE",
+      "geometry_access_level": "SOURCE_METADATA_ONLY",
+      "app_import": false
+    }
+  ],
+  "source_pixel_observations_without_physical_identity": [
+    {
+      "photo": 8,
+      "source_pixel_xy": [
+        1034,
+        6421
+      ],
+      "name": "Reps triangle",
+      "object_type": "UNRESOLVED_TRIANGLE_GLYPH",
+      "independent_ground_object_id": null,
+      "GCP_valid": false
+    },
+    {
+      "photo": 8,
+      "source_pixel_xy": [
+        4481,
+        9136
+      ],
+      "name": "Tartlau triangle",
+      "object_type": "UNRESOLVED_TRIANGLE_GLYPH",
+      "independent_ground_object_id": null,
+      "GCP_valid": false
+    },
+    {
+      "photo": 2,
+      "source_pixel_xy": null,
+      "name": "Berkeszpataka-Lăpuș river loop context",
+      "object_type": "RIVER_MEANDER_AND_ADMINISTRATIVE_BOUNDARIES_NOT_FORTRESS_SYMBOL",
+      "independent_ground_object_id": null,
+      "GCP_valid": false
+    }
+  ],
+  "previous_toponym_pilot": {
+    "fit_RMSE_m": 918.8635185297538,
+    "heldout_RMSE_m": 1241.1244512125957,
+    "LOO_RMSE_m": 1574.9748117443023,
+    "geodetically_qualified": false
+  },
+  "qualification": {
+    "ground_sites_with_point_candidates": 5,
+    "ground_sites_with_multi_source_cluster": 1,
+    "sites_without_reliable_single_coordinate": 1,
+    "physical_sites_screened": 6,
+    "verified_same_object_photo_to_modern_pairs": 0,
+    "qualified_independent_GCPs": 0,
+    "affine_fit_enabled": false,
+    "valid_affine_RMSE_m": null,
+    "valid_holdout_RMSE_m": null,
+    "georeferenced_photos_accepted": 0,
+    "historic_boundary_segments_accepted": 0,
+    "geometries_imported": 0
+  },
+  "independent_control_requirements": [
+    "Historic map photo original SHA256 and absolute pixel coordinate of a physically identified stable object, not textual label or settlement hatching",
+    "Separate physical site verification from its legal jurisdiction and from boundary proof",
+    "Independently surveyed or coordinate-footprint source not just copied web GPS and known uncertainty",
+    "Minimum four reasonably spaced noncollinear points and reserved holdouts; residual RMS compared to historic source scale",
+    "No automatic OHM/OSMB and no cadastral/legal boundary promotion without a separate historic source"
+  ],
+  "private_comparators": [
+    {
+      "title": "Împărțirea administrativă a Transilvaniei la începutul secolului al XIX-lea.kmz",
+      "drive_file_id": "1k2CSfYATlb5gKCO-TnD6z92GUlywUAza",
+      "metadata_only": true,
+      "usage": "User-held historic polygon/overlay candidate, not independently surveyed GCP; binary not downloaded or published"
+    }
+  ],
+  "rights": "External heritage links only; original MNL archive photographs, private Drive KMZ, and map tiles not republished"
+}

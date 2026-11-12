@@ -1,0 +1,143 @@
+{
+  "phase": "HIST-0.4m",
+  "date": "2026-11-12",
+  "target": "Szt.-Kápolnok, 1877:I §2(2c)",
+  "original_folios": [
+    {
+      "source_id": "OGYK_KI-1875_14_503",
+      "phase": "representatives_bill",
+      "document_no": "1875-503",
+      "printed_page": 4,
+      "viewer_page_index": 13,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_KI-1875_14/?pg=13",
+      "indexed_form": "Szt Kápolnok",
+      "search_index_url": "https://library.hungaricana.hu/en/search/results/?list=eyJxdWVyeSI6ICJTWk89KGJlcmVuY3ogZ3lcdTAwZjZyZ3kpIn0&page=10&per_page=100",
+      "original_page_image_viewed": false,
+      "access_issue": "HTTP_403_OR_VIEWER_UNAVAILABLE",
+      "typographical_form_certified": false,
+      "proof_of_corrigendum": false
+    },
+    {
+      "source_id": "OGYK_KI-1875_14_529",
+      "phase": "representatives_sanctioned",
+      "document_no": "1875-529",
+      "printed_page": 150,
+      "viewer_page_index": 159,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_KI-1875_14/?pg=159",
+      "indexed_form": "Szt Kápolnok",
+      "search_index_url": "https://library.hungaricana.hu/en/search/results/?list=eyJxdWVyeSI6ICJTWk89KGJlcmVuY3ogZ3lcdTAwZjZyZ3kpIn0&page=10&per_page=100",
+      "original_page_image_viewed": false,
+      "access_issue": "HTTP_403_OR_VIEWER_UNAVAILABLE",
+      "typographical_form_certified": false,
+      "proof_of_corrigendum": false
+    },
+    {
+      "source_id": "OGYK_FI-1875_04_204",
+      "phase": "magnates_first",
+      "document_no": "1875-204",
+      "printed_page": 271,
+      "viewer_page_index": 282,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_FI-1875_04/?pg=282",
+      "indexed_form": "Szt Kápolnok",
+      "search_index_url": "https://library.hungaricana.hu/en/search/results/?list=eyJxdWVyeSI6ICJTWk89KGJlcmVuY3ogZ3lcdTAwZjZyZ3kpIn0&page=10&per_page=100",
+      "original_page_image_viewed": false,
+      "access_issue": "HTTP_403_OR_VIEWER_UNAVAILABLE",
+      "typographical_form_certified": false,
+      "proof_of_corrigendum": false
+    },
+    {
+      "source_id": "OGYK_FI-1875_04_231",
+      "phase": "magnates_final",
+      "document_no": "1875-231",
+      "printed_page": 364,
+      "viewer_page_index": 375,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_FI-1875_04/?pg=375",
+      "indexed_form": "Szt Kápolnok",
+      "search_index_url": "https://library.hungaricana.hu/en/search/results/?list=eyJxdWVyeSI6ICJTWk89KGJlcmVuY3ogZ3lcdTAwZjZyZ3kpIn0&page=10&per_page=100",
+      "original_page_image_viewed": false,
+      "access_issue": "HTTP_403_OR_VIEWER_UNAVAILABLE",
+      "typographical_form_certified": false,
+      "proof_of_corrigendum": false
+    }
+  ],
+  "comparators": [
+    {
+      "id": "DIGITIZED_LAW_1877_I",
+      "type": "modern_transcription",
+      "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+      "form": "Szt.-Kápolnok",
+      "source_is_target_original_folio": false
+    },
+    {
+      "id": "GOOGLEBOOKS_1877_IROMANYOK",
+      "type": "alternate_volume_catalog",
+      "url": "https://books.google.com/books/about/Irom%C3%A1nyok.html?id=w88_AQAAMAAJ",
+      "source_is_target_original_folio": false
+    },
+    {
+      "id": "GOOGLEBOOKS_1876_VOLUME8",
+      "type": "background_1876_XXXIII",
+      "url": "https://books.google.com/books/about/Orsz%C3%A1ggy%C5%B1l%C3%A9s_K%C3%A9pvisel%C5%91h%C3%A1z%C3%A1nak_iro.html?id=D8HlAAAAMAAJ",
+      "source_is_target_original_folio": false
+    },
+    {
+      "id": "MNL_PRIMARY_LAW_CONTEXT",
+      "type": "archival_methodology",
+      "url": "https://mnl.gov.hu/faq/hol_talalom_meg_a_torvenyeket_es_rendeleteket",
+      "source_is_target_original_folio": false
+    }
+  ],
+  "access_attempts": [
+    {
+      "path": "Hungaricana official viewer via HTTP/web",
+      "status": "HTTP_403",
+      "direct_primary_page_views": 0
+    },
+    {
+      "path": "Hungaricana source-search index",
+      "status": "HTTP_200_OCR_SNIPPETS",
+      "direct_primary_page_views": 0
+    },
+    {
+      "path": "Hungaricana static CDN thumb/big/normal images",
+      "status": "HTTP_403",
+      "direct_primary_page_views": 0
+    },
+    {
+      "path": "Opera browser connector",
+      "status": "BROWSER_NOT_CONNECTED",
+      "direct_primary_page_views": 0
+    },
+    {
+      "path": "Google Books and Archive.org alternate volume catalogs",
+      "status": "TARGET_VOL_XIV_NOT_VERIFIED",
+      "direct_primary_page_views": 0
+    }
+  ],
+  "naming_chain": {
+    "KSH_1873": "Szurdok (Kápolnok-)",
+    "KSH_1877": "Kápolnok (Szurdok-)",
+    "reference_1885": "Szurduk-Kápolnok (Kopalnik)",
+    "modern_toponym_candidate": "Copalnic",
+    "law_literal": "Szt.-Kápolnok",
+    "scope": "DOCUMENTARY_PLACE_NAME_LINK_NOT_LEGISLATIVE_CORRECTION"
+  },
+  "epistemic_warning": "The four indexed parliamentary documents share legislative ancestry and OCR is not an independent facsimile reading. No original page has been visually inspected in this phase.",
+  "admission": {
+    "folio_locations_verified_in_ocr_index": 4,
+    "folio_originals_visually_inspected": 0,
+    "original_erratum_verified": 0,
+    "statute_abbreviation_expansion_certified": false,
+    "historical_legal_commune_identity_certified": false,
+    "legal_polygon_certified": false
+  },
+  "next_sources": [
+    "Institutional page scan copies for OGYK KI 1875 XIV items 503 p.4 and 529 p.150",
+    "Főrendiházi original items 204 p.271 and 231 p.364",
+    "Budapesti Közlöny 1877 March–April primary correction/implementation references",
+    "Ministerial execution order if available"
+  ],
+  "paid_acquisition": false,
+  "orders": false,
+  "archival_binary_republished": false
+}
