@@ -1,0 +1,132 @@
+{
+  "phase": "HIST-0.4l",
+  "date": "2026-11-12",
+  "legal_target": "Szt.-Kápolnok",
+  "law_allocation": "Szolnok-Doboka (former Kővár area)",
+  "official_parliamentary_sources": [
+    {
+      "source_id": "OGYK_KI_1875_XIV_503",
+      "kind": "PARLIAMENTARY_BILL",
+      "chamber": "Képviselőház",
+      "volume": "Képviselőházi irományok, 1875. XIV. kötet",
+      "item": "1875-503",
+      "printed_page": 4,
+      "viewer_page_index": 13,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_KI-1875_14/?pg=13",
+      "digital_index_reading": "Szt Kápolnok",
+      "inspection": "SEARCH_INDEX_OCR_ONLY",
+      "source_state": "GROUNDED_INDEXED_DOCUMENT_NOT_FULL_FACSIMILE_VERIFIED"
+    },
+    {
+      "source_id": "OGYK_KI_1875_XIV_529",
+      "kind": "RATIFIED_LAW_PARLIAMENTARY_PRINT",
+      "chamber": "Képviselőház",
+      "volume": "Képviselőházi irományok, 1875. XIV. kötet",
+      "item": "1875-529",
+      "printed_page": 150,
+      "viewer_page_index": 159,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_KI-1875_14/?pg=159",
+      "digital_index_reading": "Szt Kápolnok",
+      "inspection": "SEARCH_INDEX_OCR_ONLY",
+      "source_state": "GROUNDED_INDEXED_DOCUMENT_NOT_FULL_FACSIMILE_VERIFIED"
+    },
+    {
+      "source_id": "OGYK_FI_1875_IV_204",
+      "kind": "HOUSE_OF_MAGNATES_PARLIAMENTARY_PRINT",
+      "chamber": "Főrendiház",
+      "volume": "Főrendiházi irományok, 1875. IV. kötet",
+      "item": "1875-204",
+      "printed_page": 271,
+      "viewer_page_index": 282,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_FI-1875_04/?pg=282",
+      "digital_index_reading": "Szt Kápolnok",
+      "inspection": "SEARCH_INDEX_OCR_ONLY",
+      "source_state": "GROUNDED_INDEXED_DOCUMENT_NOT_FULL_FACSIMILE_VERIFIED"
+    },
+    {
+      "source_id": "OGYK_FI_1875_IV_231",
+      "kind": "HOUSE_OF_MAGNATES_PARLIAMENTARY_PRINT",
+      "chamber": "Főrendiház",
+      "volume": "Főrendiházi irományok, 1875. IV. kötet",
+      "item": "1875-231",
+      "printed_page": 364,
+      "viewer_page_index": 375,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_FI-1875_04/?pg=375",
+      "digital_index_reading": "Szt Kápolnok",
+      "inspection": "SEARCH_INDEX_OCR_ONLY",
+      "source_state": "GROUNDED_INDEXED_DOCUMENT_NOT_FULL_FACSIMILE_VERIFIED"
+    }
+  ],
+  "additional_comparators": [
+    {
+      "source": "1877:I §2(2c) law as published",
+      "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+      "exact": "Szt.-Kápolnok",
+      "source_class": "DIGITIZED_LEGAL_TEXT",
+      "statement": "legal string preserved, not a verified corrigendum"
+    },
+    {
+      "source": "KSH 1873 official gazetteer",
+      "url": "https://www.kshkonyvtar.hu/helysegnevtar/1873/Helys%C3%A9gn%C3%A9vt%C3%A1r_1873.pdf",
+      "printed_page": 125,
+      "image_index": 115,
+      "exact": "Szurdok (Kápolnok-)",
+      "source_class": "ORIGINAL_FACSIMILE_PREVIOUSLY_DIRECTLY_INSPECTED",
+      "statement": "prior 1876 site in Kővár"
+    },
+    {
+      "source": "KSH 1877 official gazetteer",
+      "url": "https://www.kshkonyvtar.hu/helysegnevtar/1877/",
+      "printed_page": 50,
+      "image_index": 48,
+      "exact": "Kápolnok (Szurdok-)",
+      "source_class": "ORIGINAL_FACSIMILE_PREVIOUSLY_DIRECTLY_INSPECTED",
+      "statement": "successor Szolnok-Doboka Monostori district"
+    },
+    {
+      "source": "Historical legal-geography handbook with 1885 IM decrees",
+      "url": "https://mek.oszk.hu/13200/13288/13288.pdf",
+      "reference": "magyar-láposi járásbíróság, 1885 ministerial reference 56.687/85",
+      "exact": "Szurduk-Kápolnok (Kopalnik)",
+      "source_class": "LATER_COMPILATION_REPRODUCING_OFFICIAL_JUDICIARY_CONTEXT",
+      "statement": "independent late nineteenth-century name continuity; cannot retroactively amend 1877 law"
+    },
+    {
+      "source": "Varga E. Árpád historic settlement dictionary",
+      "url": "https://www.kia.hu/kiakonyvtar/konyvtar/erdely/erdstat/hnevtar.pdf",
+      "exact": "Copalnic / Szurdukkápolnok",
+      "source_class": "SCHOLARLY_SECONDARY_NAME_LINEAGE",
+      "statement": "chronology across 1873–1880 and locality identity, no boundaries"
+    }
+  ],
+  "source_chain_status": "FOUR_PARLIAMENTARY_DOCUMENTS_INDEXED_WITH_SZT_READING_NOT_FACSIMILE_PROOF",
+  "note": "The four parliamentary instances are related printings within one legislative chain, not four independent legal corrections. OCR may omit punctuation; source images remain uninspected because viewer access blocked. Parliament printed text cannot establish an original legal corrigendum.",
+  "interpretation": {
+    "canonical_law_text": "Szt.-Kápolnok",
+    "candidate_name": "Szurduk-Kápolnok",
+    "modern_candidate": "Copalnic",
+    "name_continuity": "STRONGLY_CORROBORATED_BY_KSH_AND_LATER_SOURCES",
+    "act_authorizing_replacement_Szt_to_Szurdok": "NOT_OBTAINED",
+    "legislative_facsimile_page_review_completed": false,
+    "parliamentary_proof_showing_correction": false,
+    "ministry_implementing_order_with_specific_expansion": false,
+    "one_to_one_legal_village_identity_certified": false,
+    "commune_geometry_certified": false,
+    "modern_osm_id": null
+  },
+  "required_next_sources": [
+    "Facsimile of item 1875-503 page 4 and item 1875-529 page 150 for literal glyph confirmation",
+    "Facsimile of 1875 House of Magnates items 204 and 231 for amendments or correction notes",
+    "Official Rendeletek Tára 1876 p.150 onward and 1885 cited 56.687/85 ministerial decree for operative name, not retroactive law text",
+    "Original printed official statute and any contemporaneous corrigenda (Budapesti Közlöny)",
+    "Budapesti Közlöny contemporaneous issue containing a specific correction or ministerial implementing promulgation, if one exists; Rendeletek Tára indexing alone insufficient"
+  ],
+  "no_payments_orders": true,
+  "promulgation_hierarchy": {
+    "parliamentary_bills": "Documents parliamentary legislative stages and readings; not enactment/corrigendum by themselves",
+    "magyarorszagi_rendeletek_tara": "Retrospective curated ministerial/regulatory compendium, not official promulgating gazette",
+    "budapesti_kozlony": "Contemporaneous official promulgation newspaper for ministerial regulations and published corrections",
+    "source": "https://library.parlament.hu/archiv/-/asset_publisher/OTYxpZQhAHFt/content/az-orsz%C3%A1ggy%C5%B1l%C3%A9si-k%C3%B6nyvt%C3%A1r-jogi-tartalmai-a-hungarican%C3%A1n",
+    "legally_effective_official_correction_extracted": false
+  }
+}
