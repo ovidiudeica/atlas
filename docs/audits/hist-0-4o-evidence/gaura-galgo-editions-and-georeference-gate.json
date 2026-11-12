@@ -1,0 +1,105 @@
+{
+  "phase": "HIST-0.4o",
+  "date": "2026-11-12",
+  "map_series": "Spezialkarte der österreichisch-ungarischen Monarchie",
+  "sector": "Gaura und Galgó / Valea Chioarului – Gâlgău",
+  "scale_denominator": 75000,
+  "witnesses": [
+    {
+      "id": "MAPSTER_LOc_1886",
+      "title": "GAURA und GALGÓ",
+      "url": "https://igrek.amzp.pl/11860629",
+      "publisher": "K.u.k. Militärgeographisches Institut",
+      "catalogued_year": 1886,
+      "identity": "ZONE_16_KOL_XXIX_(5071)_GAURA_und_GALGO_1886_300dpi_LoC_G6480_s75_.A8.jpg",
+      "catalog_file_bytes": 9122545,
+      "source_collection": "Library of Congress",
+      "catalog_seen": true,
+      "image_pixels_viewed": false,
+      "delivery_probes": "MAPSTER direct pages unavailable from connected computer; Library of Congress public API returned 403 challenge",
+      "can_certify_specific_feature": false
+    },
+    {
+      "id": "MAPSTER_LOC_1900",
+      "title": "GAURA und GALGÓ",
+      "url": "https://igrek.amzp.pl/details.php?id=11860630",
+      "publisher": "K.u.k. Militärgeographisches Institut",
+      "catalogued_year": 1900,
+      "identity": "ZONE_16_COL_XXIX_(5071)_GAURA_und_GALGO_1900_300dpi_LoC_G6480_s75_.A8.jpg",
+      "catalog_file_bytes": 9107066,
+      "catalog_seen": true,
+      "image_pixels_viewed": false,
+      "can_certify_specific_feature": false
+    },
+    {
+      "id": "NYPL_WIKIMEDIA_REVISED",
+      "title": "Gaura und Galgó",
+      "url": "https://commons.wikimedia.org/wiki/File:Gaura_und_Galgo._NYPL1226642.tiff",
+      "publisher": "K.u.k. Militärgeographisches Institut",
+      "source_collection": "NYPL Map Division",
+      "catalogued_title_date_range": "1877–1914",
+      "visible_printed_margin": "Nach Reambulirung 1893 u.1894; Nach Zeichenschlüssel 1904",
+      "map_revision_key_year": 1904,
+      "edition_publication_year_determined": null,
+      "original_tiff_catalog_dimensions_px": [
+        4496,
+        5419
+      ],
+      "local_highres_preview_bytes": 4892930,
+      "local_preview_SHA256": "4bb09db2c0fcf2f8e774d44dc2f409df8ceb0b9320875bf8796d885c207ca0bf",
+      "free_preview_visually_inspected": true,
+      "places_visible": [
+        "Berkeszpataka",
+        "Butyásza",
+        "Gaura",
+        "Szurduk-Kápolnok"
+      ],
+      "an_individual_fortress_ruin_symbol_confirmed": false,
+      "castle_pixel_xy": null,
+      "legal_1859_boundary_proven": false,
+      "copy_published_in_app": false
+    },
+    {
+      "id": "MNL_1859_STATE_PHOTO2",
+      "title": "Administrative map of Transylvania, photographed 1861, 1859 state",
+      "url": null,
+      "publisher": "MNL OL S75 No.82",
+      "source_collection": "MNL",
+      "represented_year": 1859,
+      "photo_year": 1861,
+      "image_SHA256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+      "local_source_pixel_dimensions": [
+        6379,
+        9819
+      ],
+      "preview_visually_inspected": true,
+      "individual_castle_symbol_confirmed": false,
+      "castle_pixel_xy": null,
+      "source_rights_to_republish": false
+    }
+  ],
+  "temporal_rules": [
+    "A catalogued 1886 map not actually downloaded cannot be said to visually attest a mapped ruin.",
+    "NYPL map with a 1904 sign-key reference is not asserted to be the 1886 MAPSTER edition.",
+    "Cartographic representation of a terrain shape is not a surveyed vertex or an administrative border source.",
+    "A historic physical feature cannot be paired to a pixel by similarity of the place-name alone."
+  ],
+  "cross_map_comparison": {
+    "historic_sector_toponyms_correspond_at_general_level": true,
+    "independent_castle_object_1859_pixel": null,
+    "independent_castle_object_1886_pixel": null,
+    "independent_castle_object_revised_sheet_pixel": null,
+    "three_way_same_object_visual_match_certified": false,
+    "new_geodetic_GCPs": 0,
+    "new_RMSE_m": null,
+    "holdout_RMSE_m": null,
+    "geometries_approved": 0
+  },
+  "rights": {
+    "raster_1886_published": false,
+    "raster_1900_published": false,
+    "NYPL_highres_preview_published": false,
+    "MNL_original_published": false,
+    "no_paid_acquisition": true
+  }
+}
