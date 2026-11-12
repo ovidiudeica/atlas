@@ -105,7 +105,8 @@
       "url": "https://books.google.com/books/about/Irom%C3%A1nyok.html?id=w88_AQAAMAAJ",
       "target_1875_XIV_volume_certified": false,
       "page_image_obtained": false,
-      "source_class": "OTHER_VOLUME_NOT_VERIFIED_MATCH"
+      "source_class": "OTHER_VOLUME_NOT_VERIFIED_MATCH",
+      "purchase_attempted": false
     }
   ],
   "checks": {
