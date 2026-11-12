@@ -14,6 +14,11 @@ ok(v.images.filter(x=>x.category==='HISTORICAL_FORTRESS_PLAN_REPRODUCTION'||x.ca
 ok(v.images.some(x=>x.id==='V_1687_MARSIGLI'&&x.date_attributed===1687&&x.individual_geodesic_point===false),'Marsigli source caveat');
 ok(v.images.some(x=>x.id==='V_1869_ENGRAVING'&&x.date_attributed===1869&&x.individual_geodesic_point===false),'engraving not surveyed');
 ok(v.map_claim_correction.direct_original_military_survey_25000_image_found_in_castle_page===false,'no falsely downloaded 25000 sheet');
+ok(v.hungarian_national_museum_original_manuscript_catalog.accession_number==='8920.T','correct original Kovar archival manuscript');
+ok(v.hungarian_national_museum_original_manuscript_catalog.next_catalog_entry_distinguished.accession_number==='8922.T','Kukullovar distinct from Kovar');
+ok(v.hungarian_national_museum_original_manuscript_catalog.original_manuscript_image_visually_inspected===false,'museum catalog not original examined');
+ok(v.hungarian_national_museum_original_manuscript_catalog.has_published_geodetic_vertex_coordinates===false,'MNM primary inventory not geodetic GCP');
+ok(m.manuscript_original_catalog.original_inventory==='8920.T'&&m.manuscript_original_catalog.original_manuscript_directly_inspected===false,'manifest provenance and source limitation');
 ok(v.images.every(x=>x.republication_authorized===false),'no fabricated image licence');
 ok(p.points.length===6&&p.pairwise_distances_m.length===15,'six sites, fifteen pairs');
 ok(new Set(p.points.map(x=>x.id)).size===6,'unique modern source points');
