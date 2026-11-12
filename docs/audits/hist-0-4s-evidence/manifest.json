@@ -1,0 +1,85 @@
+{
+  "phase": "HIST-0.4s",
+  "date": "2026-11-12",
+  "base_main_sha": "7e1c08248a6bba50542c63e822f725b6ab0d3c8a",
+  "predecessor_postmerge_run": {
+    "id": 43248873985,
+    "build": "SUCCESS",
+    "pages": "SUCCESS"
+  },
+  "purpose": "Qualify all original printed marginalia of PDdT 2977 and source-survey lineage; test independent same-object early landmark pairs, without legal border transformation",
+  "evidence": {
+    "exact_full_MAPSTER_original_JPG_obtained": true,
+    "mapster_record_original": "11788799",
+    "mapster_record_derived": "11788800",
+    "full_JPG_bytes": 22480703,
+    "full_JPG_sha256": "367c2f3d5186bf04b4d980c7d4a4ab513cbc14192dcd37803ac969d1f49d93ce",
+    "full_JPG_dimensions_px": [
+      9821,
+      7376
+    ],
+    "dpi": 300,
+    "original_printed_margins_directly_inspected": true,
+    "publisher": "Serviciul Geografic al Armatei",
+    "romanian_print_year": 1924,
+    "romanian_edition_type": "Ediție provizorie",
+    "romanian_sheet_scale_denominator": 20000,
+    "original_source_type_printed": "hartă Austriacă",
+    "original_source_scale_denominator_printed": 25000,
+    "original_source_unique_Austrian_sheet_id": null,
+    "original_source_survey_year": null,
+    "pre1877_source_raster_for_same_landmark_recovered": false,
+    "independent_1862_regional_map_previously_recovered": true,
+    "number_landmark_classes_screened": 5,
+    "number_qualified_same_object_GCPs": 0,
+    "number_approved_legal_borders": 0
+  },
+  "honest_negative_findings": [
+    "The 1924 margin provides an original-source map family and scale, not the unique Austrian sheet identity or date.",
+    "Broad Habsburg Third Military Survey 1869–1887 dates cannot be assigned to this region without locating the specific Austrian predecessor.",
+    "MAPSTER's full JPG and eHarta's GeoTIFF are two images of the same 1924 printed edition and must never be counted as independent GCP witnesses.",
+    "No exact natural/architectural pre-1877 landmark is shown as an identical surveyed vertex across 1859/1862 and 1924.",
+    "Printed sample scale and pixel size do not provide independently quantified map-rectification error."
+  ],
+  "admission": {
+    "MNL_1859_photo2_georeferenced_now": false,
+    "control_pairs": 0,
+    "holdout_points": 0,
+    "new_affine_RMSE_m": null,
+    "new_holdout_RMSE_m": null,
+    "Chioar_segments_approved": 0,
+    "Transylvania_segments_approved": 0,
+    "OHM_candidate_relations_total": 37,
+    "OHM_geometries_imported": 0
+  },
+  "legal_nomenclature": {
+    "statute_1877_literal": "Szt.-Kápolnok",
+    "law_name_repair_officially_found": false,
+    "place_identity_certification_separate": true,
+    "historic_border_certification_separate": true
+  },
+  "constraints": {
+    "institution_emails_sent": false,
+    "new_email_drafts": false,
+    "institution_contact": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false,
+    "public_binary_images_committed": false,
+    "private_KMZ_committed": false,
+    "src_or_public_changed": false,
+    "ACTUAL_changed": false,
+    "OSMB_changed": false,
+    "OHM_changed": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "sheet2977-full-margin-source-witness.json",
+    "austrian-source-period-and-pre1877-gcp-search.json",
+    "landmark-and-legal-boundary-independent-admission.json",
+    "validate-evidence.mjs"
+  ],
+  "verdict": "1924_SOURCE_MARGIN_VERIFIED__AUSTRIAN_25000_PREDECESSOR_CERTIFIED_AS_CLASS__PREDECESSOR_SURVEY_YEAR_UNKNOWN__ZERO_GCP_OR_LEGAL_BOUNDARIES",
+  "next_step": "HIST-0.4t — unique Austrian original 1:25000 sheet recovery and print/survey year qualification, then independent stable site benchmark crosswalk; avoid retesting 1924 margin or catalog-only proxies."
+}
