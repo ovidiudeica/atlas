@@ -1,0 +1,55 @@
+{
+  "phase": "HIST-0.4k",
+  "audit_date": "2026-11-12",
+  "base_main": "fb74848b12af40740718184e479b5205d4b54076",
+  "scope": "Individual Szt.-Kápolnok and Karullya/Károlya historic place identity; manually identified 1859-state/1861 reproduction glyphs; no province or commune boundary admission",
+  "evidence_sources": {
+    "official_KSH_1873": "25ce833a6f15fbac76cafbdb120649c944609bb59bc94d1bc5bc3425efc1590f",
+    "official_KSH_1877": "274ce1624c5779e75ae382d9acd525529f5424cd57da4650b6046e1c1a759d2d",
+    "original_MNL_photo8": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe"
+  },
+  "documentary_qualifications": {
+    "target_names": 2,
+    "name_continuity_high": 1,
+    "name_continuity_contextual_strong_but_statute_alias_open": 1,
+    "legal_statute_correction_proven": 0,
+    "fully_certified_historical_legal_commune_identities": 0
+  },
+  "cartography": {
+    "photos_original": 14,
+    "photos_reviewed_for_exact_symbols_in_phase": 1,
+    "legend_reviewed": true,
+    "individual_symbols_pixel_indexed": 2,
+    "physical_buildings_tied_unambiguously_to_1859_symbols": 0,
+    "valid_independent_GCP": 0,
+    "qualified_georeferences": 0,
+    "old_affine_holdout_RMSE_m": 1241.1244512125957,
+    "old_affine_LOO_RMSE_m": 1574.9748117443023,
+    "new_geodetic_RMSE_m": null,
+    "proven_Landesgrenzen_ways": 0,
+    "proven_Chioar_ways": 0
+  },
+  "existing_relation_gate": {
+    "OHM_total": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "geometries_admitted": 0,
+    "imports": 0
+  },
+  "no_change_guards": {
+    "src_changed": false,
+    "public_changed": false,
+    "ACTUAL_changed": false,
+    "OSMB_changed": false,
+    "OHM_changed": false,
+    "tree_historic_changed": false,
+    "pages_site_changed": false,
+    "archival_binary_published": false,
+    "user_private_KMZ_published": false,
+    "payments": false,
+    "orders": false
+  },
+  "next_gate": "HIST-0.4l: recover 1877 printed parliamentary proof/ministerial implementation corrigendum for Szt.-Kápolnok and independently located, source-pixel paired ground control for all 14 images; only then revisit per-way boundary trace",
+  "conclusion": "ONE_STRONGLY_DOCUMENTED_KARULLYA_CORUIA_LINK__SZT_KAPOLNOK_LEGAL_PRINT_UNRESOLVED__TWO_GLYPHS_INDEXED_NOT_GCPS__ZERO_IMPORTS"
+}

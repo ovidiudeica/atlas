@@ -1,0 +1,137 @@
+{
+  "phase": "HIST-0.4k",
+  "date": "2026-11-12",
+  "method": "Original 1873 and 1877 KSH page alignment with independent period sources, historical monographs, gazetteers and modern etymological dictionaries",
+  "previous_phase_main_sha": "fb74848b12af40740718184e479b5205d4b54076",
+  "records": [
+    {
+      "law_name": "Karullya",
+      "destination_1877": "Szatmár",
+      "law_reference": "1877:I §2(3)",
+      "official_1873": {
+        "edition": "KSH Magyarország helységnévtára 1873",
+        "printed_page": 124,
+        "image_index": 114,
+        "name": "Karully / Karulya",
+        "district": "Kővár vidéke – Nagy-Somkuti"
+      },
+      "official_1877": {
+        "edition": "KSH A Magyar Korona Országainak helységnévtára 1877",
+        "printed_page": 48,
+        "image_index": 46,
+        "name": "Károlya",
+        "district": "Szatmár – Nagy-Somkuti"
+      },
+      "later_alias": "1882 Szatmár Nagy-Somkuti: Károlya; historical Karuly, medieval Korullya (1405), Karulya (1475); Varga lists 1850 Karullyer and 1873–1900 Karulya",
+      "proposed_locality": "Coruia (Săcălășeni, județul Maramureș, România)",
+      "source_evidence": [
+        {
+          "authority": "official_statute",
+          "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+          "claim": "law Karullya to Szatmár"
+        },
+        {
+          "authority": "official_gazetteer_scans",
+          "url": "https://web.kshkonyvtar.hu/article/56/959/helysegnevtarak",
+          "claim": "1873 Kővár Karully/Karulya; 1877 Károlya in successor county"
+        },
+        {
+          "authority": "historical_gazetteer_1882_transcription",
+          "url": "https://www.bogardi.com/gen/g149.shtml",
+          "claim": "1882 Szatmár Nagy-Somkuti Károlya"
+        },
+        {
+          "authority": "scholarly_historical_place_dictionary",
+          "url": "https://www.kia.hu/kiakonyvtar/konyvtar/erdely/erd2002/hnevta02.pdf",
+          "claim": "Varga E. Árpád Coruia/old Karulya with administrative chronology"
+        },
+        {
+          "authority": "historical_regional_monograph",
+          "url": "https://www.mek.oszk.hu/09500/09536/html/0020/7.html",
+          "claim": "Borovszky Karuly, medieval Korullya/Karulya in same Kővár geography"
+        }
+      ],
+      "historical_locality_name_continuity": "DOCUMENTARY_STRONGLY_CORROBORATED",
+      "law_abbreviation_expansion": "NOT_APPLICABLE",
+      "modern_osm_id": null,
+      "legal_commune_identity_certified": false,
+      "historical_boundary_certified": false,
+      "polygon": null,
+      "import_authorized": false
+    },
+    {
+      "law_name": "Szt.-Kápolnok",
+      "destination_1877": "Szolnok-Doboka",
+      "law_reference": "1877:I §2(2c)",
+      "official_1873": {
+        "edition": "KSH Magyarország helységnévtára 1873",
+        "printed_page": 125,
+        "image_index": 115,
+        "name": "Szurdok (Kápolnok-) [printed grouping reversed]",
+        "district": "Kővár vidéke – Monostori"
+      },
+      "official_1877": {
+        "edition": "KSH A Magyar Korona Országainak helységnévtára 1877",
+        "printed_page": 50,
+        "image_index": 48,
+        "name": "Kápolnok (Szurdok-)",
+        "district": "Szolnok-Doboka – Monostori"
+      },
+      "later_alias": "Varga: 1839 Szurdok-Kápolnak, 1873 Szurduk (Kápolnok-), 1880 Kápolnok (Szurdok-), 1890 Szurduk-Kápolnok; independent 1885 legal handbook says Szurduk-Kápolnok (Kopalnik)",
+      "proposed_locality": "Copalnic (comuna Copalnic-Mănăștur, județul Maramureș, România)",
+      "source_evidence": [
+        {
+          "authority": "official_statute",
+          "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=87700001.TV",
+          "claim": "1877 law still prints Szt.-Kápolnok"
+        },
+        {
+          "authority": "official_gazetteer_scans",
+          "url": "https://web.kshkonyvtar.hu/article/56/959/helysegnevtarak",
+          "claim": "1873 and 1877 Szurdok-Kápolnok variant"
+        },
+        {
+          "authority": "scholarly_historical_place_dictionary",
+          "url": "https://varga.adatbank.ro/?helyseg=magyar&k=450&pg=1",
+          "claim": "Copalnic historical names and county chronology"
+        },
+        {
+          "authority": "local_historical_toponym_dictionary_2023",
+          "url": "https://bjmures.ro/wp-content/uploads/2023/05/S00122.pdf",
+          "claim": "Dorin Ștef Copalnic etymology and pre-1877 spellings"
+        },
+        {
+          "authority": "1885_historical_juridical_geography",
+          "url": "https://mek.oszk.hu/13200/13288/13288.pdf",
+          "claim": "1885-cited justice administrative listing Szurduk-Kápolnok (Kopalnik)"
+        },
+        {
+          "authority": "1885_historical_geological_field_report",
+          "url": "https://epa.oszk.hu/02900/02934/00042/pdf/EPA02934_mafi_evi_jel_1885_027-051.pdf",
+          "claim": "Szurduk-Kápolnok near Gyertyános/Magura"
+        },
+        {
+          "authority": "historical_Kovar_regional_repertory",
+          "url": "https://lexikon.katolikus.hu/K/K%C5%91v%C3%A1r%20vid%C3%A9k.html",
+          "claim": "Kápolnokszurdok distinct from Kápolnokmonostor"
+        }
+      ],
+      "historical_locality_name_continuity": "CONTEXTUALLY_STRONGLY_CORROBORATED",
+      "law_abbreviation_expansion": "UNPROVEN: Szt. printed in law, no official corrigendum/ministerial decree recovered",
+      "modern_osm_id": null,
+      "legal_commune_identity_certified": false,
+      "historical_boundary_certified": false,
+      "polygon": null,
+      "import_authorized": false
+    }
+  ],
+  "gate": {
+    "historical_place_name_documentary_strong": 2,
+    "statute_abbreviation_literally_proven": 0,
+    "historical_legal_entity_identity_certified": 0,
+    "historical_boundary_certified": 0,
+    "modern_osm_id_assigned": 0,
+    "imports": 0
+  },
+  "caveat": "Name continuity and historical settlement identification are distinct from legal identity of an incorporated commune, cadastral perimeter and geometry. Any ambiguous statute abbreviation remains unresolved absent original corrections."
+}

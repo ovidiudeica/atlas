@@ -1,0 +1,238 @@
+{
+  "phase": "HIST-0.4k",
+  "date": "2026-11-12",
+  "historical_map": {
+    "archive": "MNL OL S75 nr.82",
+    "image_index": 8,
+    "original_sha256": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe",
+    "size_px": [
+      6415,
+      10156
+    ],
+    "represented_year": 1859,
+    "reproduction_year": 1861,
+    "measuring_coordinate_frame": "full-resolution original JPG, pixel center, origin NW, x increases eastward in image, y downward",
+    "crop_source_local_only": true,
+    "licence_to_redistribute_not_proven": true
+  },
+  "legend_direct_inspection": {
+    "source": "MNL photo 9 title 'Erklärung der Zeichen' image, reviewed at 1600x1822 crop",
+    "items_relevant": [
+      "Städte",
+      "Märkte",
+      "Dörfer",
+      "Landesgrenzen",
+      "Kreisgrenzen",
+      "Bezirksgrenzen",
+      "Gemeindegrenzen",
+      "Festungen",
+      "Forts",
+      "Ruinen",
+      "Mineralquelle",
+      "Salzquelle",
+      "Schwefel"
+    ],
+    "finding": "Triangle glyphs are not necessarily church markers; specifically an inverted triangle appears in the legend for mineral sources. Reps mark requires field-level source correlation."
+  },
+  "pixel_marks": [
+    {
+      "id": "MNL8-REPS-DOWNTRIANGLE",
+      "place": "Reps / Rupea",
+      "photo8_xy_px": [
+        1034,
+        6421
+      ],
+      "image_crop": {
+        "relative": "hist-0-4k-crops/rupea-detail.png",
+        "top_left_px": [
+          734,
+          6118
+        ],
+        "size_px": [
+          440,
+          440
+        ]
+      },
+      "reading": "Solid down-pointing triangle to southeast of Reps text",
+      "legend_correlation": "MINERALQUELLE candidate (not church or castle); legend also contains Salzquelle and mineral-related symbols",
+      "independent_context": "Rupea municipal sustainable development strategy describes 7 historically captured mineral springs, no individual location fix",
+      "independent_url": "https://www.primariarupea.ro/wp-content/uploads/SDD-RUPEA-actualizata.pdf",
+      "source_map_symbol_clear": true,
+      "feature_identification_exact": false,
+      "modern_exact_source_coordinate": null,
+      "coordinate_uncertainty_px": 12,
+      "approved_gcp": false,
+      "reason": "Physical mineral-source type is plausible, but 7 possible springs and no ground-surveyed individual source allow unique match"
+    },
+    {
+      "id": "MNL8-TARTLAU-UPTRIANGLE",
+      "place": "Tartlau / Prejmer",
+      "photo8_xy_px": [
+        4481,
+        9136
+      ],
+      "image_crop": {
+        "relative": "hist-0-4k-crops/prejmer-detail.png",
+        "top_left_px": [
+          4265,
+          8910
+        ],
+        "size_px": [
+          440,
+          440
+        ]
+      },
+      "reading": "Dark upward triangle in/near town hatch, with adjacent short stroke/number; graphic not independently proven to be fortified church",
+      "legend_correlation": "Multiple triangular mineral/ruin/other symbols are present; legend identification not yet uniquely established",
+      "independent_context": "Prejmer fortified church building is independently mapped but triangle cannot be linked to its exact footprint",
+      "independent_url": "https://ran.cimec.ro/sel.asp?descript=prejmer-prejmer-brasov-ansamblul-bisericii-evanghelice-fortificate-de-la-prejmer-cod-sit-ran-41676.12",
+      "source_map_symbol_clear": true,
+      "feature_identification_exact": false,
+      "modern_exact_source_coordinate": null,
+      "coordinate_uncertainty_px": 12,
+      "approved_gcp": false,
+      "reason": "Treat marker as unknown, NOT the church"
+    },
+    {
+      "id": "MNL8-KRONSTADT-URBANHATCH",
+      "place": "Kronstadt / Brașov",
+      "photo8_xy_px": null,
+      "image_crop": {
+        "relative": "hist-0-4k-crops/brasov-detail.png",
+        "top_left_px": [
+          3050,
+          9400
+        ],
+        "size_px": [
+          600,
+          600
+        ]
+      },
+      "reading": "Historical urban hatch occupies extensive footprint; exact Black Church location is not explicitly labelled or symbolized at source pixel",
+      "legend_correlation": "STÄDTE village/town hatch",
+      "independent_context": "Biserica Neagră building coordinates available separately (OSM way 866090450)",
+      "independent_url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Biserica+Neagr%C4%83+Bra%C8%99ov%2C+Rom%C3%A2nia",
+      "source_map_symbol_clear": false,
+      "feature_identification_exact": false,
+      "modern_exact_source_coordinate": null,
+      "coordinate_uncertainty_px": null,
+      "approved_gcp": false,
+      "reason": "No unique building-level correspondence"
+    }
+  ],
+  "physical_monument_diagnostics": [
+    {
+      "site": "Rupea – Biserica Evanghelică Fortificată",
+      "modern_centre": [
+        46.0383743,
+        25.2206701
+      ],
+      "modern_physical": [
+        46.0390464,
+        25.2214067
+      ],
+      "osm": "way/973910596",
+      "modern_centre_to_monument_distance_m": 94,
+      "is_independent_historic_map_GCP": false
+    },
+    {
+      "site": "Rupea – Cetatea",
+      "modern_centre": [
+        46.0383743,
+        25.2206701
+      ],
+      "modern_physical": [
+        46.0374683,
+        25.2123709
+      ],
+      "osm": "relation/3132264",
+      "modern_centre_to_monument_distance_m": 648,
+      "is_independent_historic_map_GCP": false
+    },
+    {
+      "site": "Prejmer – Biserica fortificată",
+      "modern_centre": [
+        45.7202793,
+        25.7724871
+      ],
+      "modern_physical": [
+        45.7219997,
+        25.7737364
+      ],
+      "osm": "way/266834556",
+      "modern_centre_to_monument_distance_m": 214,
+      "is_independent_historic_map_GCP": false
+    },
+    {
+      "site": "Brașov – Biserica Neagră",
+      "modern_centre": [
+        45.6525105,
+        25.6105654
+      ],
+      "modern_physical": [
+        45.640997,
+        25.5880699
+      ],
+      "osm": "way/866090450",
+      "modern_centre_to_monument_distance_m": 2167,
+      "is_independent_historic_map_GCP": false
+    },
+    {
+      "site": "Codlea – Biserica fortificată",
+      "modern_centre": [
+        45.6924431,
+        25.4490362
+      ],
+      "modern_physical": [
+        45.699877,
+        25.446148
+      ],
+      "osm": "physical candidate; coordinate NOT official surveyed",
+      "modern_centre_to_monument_distance_m": 857,
+      "is_independent_historic_map_GCP": false
+    }
+  ],
+  "previous_2026_modern_toponym_affine_pilot_recalculated": {
+    "fit_count": 6,
+    "holdout_count": 2,
+    "fit_RMSE_m": 918.8635185297538,
+    "holdout_RMSE_m": 1241.1244512125957,
+    "LOO_RMSE_m": 1574.9748117443023,
+    "max_holdout_m": 1413.1250056121307,
+    "role": "RECOMPUTED_PRIOR_PILOT_ONLY_NOT_NEW_HISTORICAL_MAP_TRANSFORM",
+    "fit_errors_m": [
+      190.41429109179484,
+      350.69162959070525,
+      767.0048405057453,
+      1170.090695966434,
+      1371.7396143395047,
+      1033.2185350145194
+    ],
+    "holdout_errors_m": [
+      1413.1250056121307,
+      1041.0847829592215
+    ],
+    "leave_one_out_errors_m": [
+      396.4845427263837,
+      763.9384339843564,
+      2532.32419423607,
+      1233.0788044357066,
+      2392.666316214042,
+      1641.2548046941256,
+      1359.782889015312,
+      950.1764230367817
+    ]
+  },
+  "georeference_admission": {
+    "map_symbol_pixel_candidates": 2,
+    "building_footprints_with_hist_map_pixel_verified": 0,
+    "independent_2026_ground_surveyed_unique_control_pairs": 0,
+    "new_independent_geodetic_residual_RMSE_m": null,
+    "qualified_photo_count": 0,
+    "original_photos_total": 14,
+    "historical_Landesgrenzen_segments_accepted": 0,
+    "historical_Chioar_segments_accepted": 0,
+    "geometry_imports": 0
+  },
+  "policy": "NO transformation fitted to mismatched object centers; no fake zero residuals when GCP=0; map corner/scan and legal boundary source distinction preserved"
+}
