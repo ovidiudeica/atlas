@@ -1,0 +1,80 @@
+{
+  "phase": "HIST-0.4l",
+  "date": "2026-11-12",
+  "base_main_sha": "d754210bcff5c54076f744d20566dd05603d4b79",
+  "title": "Szt.-Kápolnok primary parliamentary source chain + 14 MNL photos fingerprint + independent Arcanum reference gate",
+  "legal": {
+    "target": "Szt.-Kápolnok",
+    "record_count": 4,
+    "representations": [
+      "House of Representatives original bill 1875-503",
+      "House of Representatives ratified 1875-529",
+      "House of Magnates 1875-204",
+      "House of Magnates 1875-231"
+    ],
+    "parliamentary_primary_prints_manually_seen_in_full": false,
+    "parliamentary_search_index_source_names_found": 4,
+    "indexed_lexeme": "Szt Kápolnok (OCR/index normalized)",
+    "statutory_legal_text": "Szt.-Kápolnok",
+    "corrected_official_statutory_text_obtained": false,
+    "independent_1873_1877_place_candidate": "Szurdok (Kápolnok-) / Kápolnok (Szurdok-)",
+    "later_1885_judicial_name": "Szurduk-Kápolnok (Kopalnik)",
+    "name_identity_documentarily_supported": true,
+    "strict_legal_name_expansion_certified": false,
+    "certified_historical_commune_legal_identity": 0
+  },
+  "MNL": {
+    "gallery_photographs_fingerprinted": 14,
+    "photograph_actual_total_bytes": 444622163,
+    "photos_with_fullres_symbol_screening": 1,
+    "photos_with_fullres_title_legend_screening": 1,
+    "map_symbol_pixels_previous_screen": 2,
+    "unique_physical_map_to_modern_GCP_pairs_verified": 0,
+    "original_photos_certified_georeferenced": 0,
+    "old_affine_training_RMSE_m": 918.8635185297538,
+    "old_affine_heldout_RMSE_m": 1241.1244512125957,
+    "old_affine_LOO_RMSE_m": 1574.9748117443023,
+    "new_valid_RMSE_m": null
+  },
+  "sources": {
+    "cadastral_or_reference_layer_candidates": 4,
+    "actual_Arcanum_raster_downloaded": 0,
+    "independent_surveyed_point_coordinates_obtained": 0,
+    "source_rights_to_redistribute_cleared": false
+  },
+  "boundaries": {
+    "OHM_candidate_relations": 37,
+    "P0": 3,
+    "P1": 25,
+    "P2": 9,
+    "Transylvania_segments_certified": 0,
+    "Chioar_segments_certified": 0,
+    "historical_boundaries_modified": 0,
+    "geometries_admitted_to_app": 0
+  },
+  "CI_prerequisite_previous_phase": {
+    "phase": "HIST-0.4k",
+    "main_sha": "d754210bcff5c54076f744d20566dd05603d4b79",
+    "postmerge_run_id": 43170163292,
+    "build_and_smoke": "SUCCESS",
+    "pages_attempt1": "FAIL_ARTIFACT_METADATA_API",
+    "pages_attempt2": "SUCCESS",
+    "artifacts": [
+      "github-pages-43170163292-1",
+      "website-dist"
+    ]
+  },
+  "no_source_code_changes": true,
+  "no_rights_expansions": true,
+  "no_purchases": true,
+  "no_archival_orders": true,
+  "files": [
+    "README.md",
+    "manifest.json",
+    "szt-kapolnok-legislative-source-chain.json",
+    "mnl-14-source-photo-inventory.json",
+    "arcanum-gcp-independent-control-matrix.json",
+    "validate-evidence.mjs"
+  ],
+  "verdict": "PARLIAMENTARY_DRAFT_AND_FINAL_OCR_BOTH_HAVE_SZT_NO_CORRIGENDUM_PROVEN__14_MNL_FINGERPRINTS__0_GCPS_0_BOUNDARIES__FAIL_CLOSED"
+}
