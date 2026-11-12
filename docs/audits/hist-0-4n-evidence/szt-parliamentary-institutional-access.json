@@ -1,0 +1,104 @@
+{
+  "phase": "HIST-0.4n",
+  "audit_date": "2026-11-12",
+  "prior_phase": "HIST-0.4m",
+  "historical_legal_problem": "Szt.-Kápolnok in Act 1877:I §2; whether officially corrected to Szurdok-Kápolnok",
+  "original_folios": [
+    {
+      "id": "OGYK_KI_1875_XIV_503",
+      "chamber": "Képviselőház",
+      "kind": "bill",
+      "item": "503",
+      "printed_page": 4,
+      "viewer_index": 13,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_KI-1875_14/?pg=13",
+      "ocr_index_reading": "Szt Kápolnok",
+      "original_image_directly_read": false
+    },
+    {
+      "id": "OGYK_KI_1875_XIV_529",
+      "chamber": "Képviselőház",
+      "kind": "passed act parliamentary print",
+      "item": "529",
+      "printed_page": 150,
+      "viewer_index": 159,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_KI-1875_14/?pg=159",
+      "ocr_index_reading": "Szt Kápolnok",
+      "original_image_directly_read": false
+    },
+    {
+      "id": "OGYK_FI_1875_IV_204",
+      "chamber": "Főrendiház",
+      "kind": "first record",
+      "item": "204",
+      "printed_page": 271,
+      "viewer_index": 282,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_FI-1875_04/?pg=282",
+      "ocr_index_reading": "Szt Kápolnok",
+      "original_image_directly_read": false
+    },
+    {
+      "id": "OGYK_FI_1875_IV_231",
+      "chamber": "Főrendiház",
+      "kind": "last record",
+      "item": "231",
+      "printed_page": 364,
+      "viewer_index": 375,
+      "url": "https://library.hungaricana.hu/en/view/OGYK_FI-1875_04/?pg=375",
+      "ocr_index_reading": "Szt Kápolnok",
+      "original_image_directly_read": false
+    }
+  ],
+  "institutional_contact": {
+    "organization": "Országgyűlési Könyvtár",
+    "contact_url": "https://konyvtar.parlament.hu/en/home",
+    "recipient_public_email": "konyvtar@parlament.hu",
+    "address_source": "Official Parliament Library website footer",
+    "request_purpose": "Free public viewer link or bibliographic/paleographic advice for exact 4 folios and any 1877 statutory corrigendum",
+    "draft_created_in_connected_Gmail": true,
+    "draft_sent": false,
+    "outbound_message_sent": false,
+    "paid_order_placed": false,
+    "archive_copy_fee_authorized": false,
+    "contains_user_account_identifiers": false
+  },
+  "source_attempts": [
+    {
+      "channel": "Hungaricana public OCR index",
+      "result": "4 indexed item references; not direct original facsimiles",
+      "accepted_as_original_reading": false
+    },
+    {
+      "channel": "Hungaricana page viewer / static server",
+      "result": "prior attempts HTTP 403 on original page imagery",
+      "accepted_as_original_reading": false
+    },
+    {
+      "channel": "Opera Browser Connector",
+      "result": "Browser connection not available in previous phase",
+      "accepted_as_original_reading": false
+    },
+    {
+      "channel": "TinyFish remote browser in this phase",
+      "result": "Run unavailable: provider wallet had no funds; no attempt made to purchase credit or run billed automation",
+      "accepted_as_original_reading": false
+    },
+    {
+      "channel": "Institutional library Gmail",
+      "result": "Noncommercial free-source inquiry drafted, NOT sent",
+      "accepted_as_original_reading": false
+    }
+  ],
+  "legal_readiness": {
+    "page_indices_confirmed": 4,
+    "original_folios_visually_read": 0,
+    "official_erratum_primary_source_retrieved": 0,
+    "statute_literal": "Szt.-Kápolnok",
+    "toponymic_hypothesis": "Szurduk-Kápolnok / Copalnic",
+    "legal_expansion_Szt_to_Szurdok_certified": false,
+    "legal_communal_identity_certified": false,
+    "legal_commune_geometry_certified": false
+  },
+  "safety": "Never describe OCR snippets as facsimile readings. No institution was charged; no email was transmitted, no paid services or subscriptions activated.",
+  "next_action": "Consult/safely send prepared institutional inquiry only on explicit dispatch instruction, or retrieve freely accessible exact folios; certify only after visual inspection of original pages and official correction."
+}
