@@ -1,0 +1,38 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url));
+const read=x=>JSON.parse(fs.readFileSync(path.join(dir,x),'utf8'));
+const manifest=read('manifest.json');
+const names=read('chioar-two-target-identity-dossiers.json');
+const map=read('mnl1861-photo8-pixel-symbol-and-geodesy-gate.json');
+const check=(b,m)=>{if(!b)throw new Error('HIST-0.4k FAIL: '+m)};
+check([manifest.phase,names.phase,map.phase].every(x=>x==='HIST-0.4k'),'phase');
+check(manifest.base_main==='fb74848b12af40740718184e479b5205d4b54076','base');
+check(names.records.length===2,'two name targets');
+const by=Object.fromEntries(names.records.map(r=>[r.law_name,r]));
+check(by['Karullya'].proposed_locality.startsWith('Coruia (')&&by['Karullya'].historical_locality_name_continuity==='DOCUMENTARY_STRONGLY_CORROBORATED','Karullya continuity');
+check(by['Szt.-Kápolnok'].law_abbreviation_expansion.startsWith('UNPROVEN:'),'do not expand ambiguous Szt');
+check(by['Szt.-Kápolnok'].official_1877.name==='Kápolnok (Szurdok-)','original KSH 1877 entry');
+check(names.records.every(r=>r.source_evidence.length>=5),'independent source chains');
+check(names.records.every(r=>r.legal_commune_identity_certified===false&&r.historical_boundary_certified===false&&r.modern_osm_id===null&&r.polygon===null&&r.import_authorized===false),'all legal/geometry gates fail closed');
+check(map.historical_map.image_index===8&&map.historical_map.represented_year===1859&&map.historical_map.reproduction_year===1861,'1859 vs 1861');
+check(map.historical_map.size_px[0]===6415&&map.historical_map.size_px[1]===10156,'source dimensions');
+check(map.historical_map.original_sha256==='0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe','source provenance');
+check(map.pixel_marks.length===3&&map.pixel_marks.filter(x=>x.photo8_xy_px).length===2,'two not three pixel glyphs');
+for (const p of map.pixel_marks) {
+ check(p.approved_gcp===false&&p.modern_exact_source_coordinate===null,'no unique modern map feature');
+ if(p.photo8_xy_px)check(p.photo8_xy_px.every(Number.isInteger)&&p.photo8_xy_px[0]>=0&&p.photo8_xy_px[0]<6415&&p.photo8_xy_px[1]>=0&&p.photo8_xy_px[1]<10156,'pixel bounded');
+}
+const r=map.previous_2026_modern_toponym_affine_pilot_recalculated;
+const calc=a=>Math.sqrt(a.reduce((s,x)=>s+x*x,0)/a.length);
+for (const [key,values] of [['fit_RMSE_m',r.fit_errors_m],['holdout_RMSE_m',r.holdout_errors_m],['LOO_RMSE_m',r.leave_one_out_errors_m]])check(Math.abs(r[key]-calc(values))<1e-8,'recomputed RMS '+key);
+check(Math.abs(r.holdout_RMSE_m-1241.1244512125957)<1e-6,'prior holdout residual');
+check(Math.abs(r.LOO_RMSE_m-1574.9748117443023)<1e-6,'prior LOO residual');
+check(map.physical_monument_diagnostics.length===5,'five physical-vs-town centroid offsets');
+check(map.physical_monument_diagnostics.every(x=>x.is_independent_historic_map_GCP===false),'physical sites not historic GCP');
+check(map.georeference_admission.independent_2026_ground_surveyed_unique_control_pairs===0&&map.georeference_admission.new_independent_geodetic_residual_RMSE_m===null,'new valid RMS undefined');
+check(map.georeference_admission.qualified_photo_count===0&&map.georeference_admission.historical_Landesgrenzen_segments_accepted===0&&map.georeference_admission.geometry_imports===0,'no fabricated boundary or photo');
+check(manifest.existing_relation_gate.OHM_total===37&&manifest.existing_relation_gate.geometries_admitted===0,'37 relation gate');
+check(Object.values(manifest.no_change_guards).every(v=>v===false),'all original data untouched');
+console.log('HIST-0.4k VALIDATION PASS: 2 historic identity dossiers; 2 source-pixel cartographic glyphs; 0 certified legal identities, 0 physical GCP, 0 historical georeferences, 0 boundaries/imports.');
