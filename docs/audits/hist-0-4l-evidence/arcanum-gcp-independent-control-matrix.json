@@ -1,0 +1,250 @@
+{
+  "phase": "HIST-0.4l",
+  "date": "2026-11-12",
+  "source_scope": "MNL OL S75 No.82, photo-series photographic captures 1861, historical administrative state 1859",
+  "examined_prev_rasters": {
+    "photo8": "FULL_RES_CROPS_AND_GLYPHS",
+    "photo9": "FULL_RES_TITLE_AND_LEGEND",
+    "photo_others": "CONTACT_SHEET_LEVEL_ONLY"
+  },
+  "candidate_reference_sources": [
+    {
+      "source_id": "ARCANUM_SECOND_SURVEY_TRANSYLVANIA",
+      "name": "Second Military Survey – Transylvania",
+      "url": "https://maps.arcanum.com/en/map/secondsurvey-transylvania/",
+      "relevant_period": "Transylvanian survey ca.1860–1872 (check local sheet date)",
+      "georeferencing": "georeferenced visualization, but published geodetic literature states lack of primary survey geodetic datum",
+      "independent_of_OHM_geometries": true,
+      "original_map_sheet_downloaded": false,
+      "exact_reference_location_measured": false,
+      "source_access": "URL_IDENTIFIED_BUT_VIEWER_DENIED_403",
+      "can_be_used_as_cadastral_or_statutory_boundary_proof": false
+    },
+    {
+      "source_id": "ARCANUM_FIRST_SURVEY_TRANSYLVANIA",
+      "name": "First Military Survey – Transylvania",
+      "url": "https://maps.arcanum.com/ro/map/firstsurvey-transylvania/",
+      "relevant_period": "1769–1773, much earlier than MNL administrative state",
+      "georeferencing": "georeferenced independent cartographic cross-check only",
+      "independent_of_OHM_geometries": true,
+      "original_map_sheet_downloaded": false,
+      "exact_reference_location_measured": false,
+      "source_access": "URL_IDENTIFIED_ONLY",
+      "can_be_used_as_cadastral_or_statutory_boundary_proof": false
+    },
+    {
+      "source_id": "ARCANUM_HABSBURG_CADASTRE",
+      "name": "Habsburg Empire cadastral maps, 19th century",
+      "url": "https://maps.arcanum.com/hu/map/cadastral",
+      "relevant_period": "19th century varying by cadastral section; dates and rights unverified",
+      "georeferencing": "potential high detail individual parcel/building historical witness, not granted a licensed export",
+      "independent_of_OHM_geometries": true,
+      "original_map_sheet_downloaded": false,
+      "exact_reference_location_measured": false,
+      "source_access": "CATALOG_LINK_ONLY",
+      "can_be_used_as_cadastral_or_statutory_boundary_proof": false
+    },
+    {
+      "source_id": "ACADEMIC_SECOND_SURVEY_DATUM",
+      "name": "Timár et al., Datum and Projection Parameters for Transylvanian Sheets of 2nd and 3rd Military Surveys",
+      "url": "https://technicalgeography.org/pdf/1_2007/gt_1_2007.pdf",
+      "relevant_period": "study method, not original map",
+      "georeferencing": "explains landmark-based rectification and systematic errors",
+      "independent_of_OHM_geometries": true,
+      "original_map_sheet_downloaded": false,
+      "exact_reference_location_measured": false,
+      "source_access": "PUBLISHED_ABSTRACT",
+      "can_be_used_as_cadastral_or_statutory_boundary_proof": false
+    }
+  ],
+  "original_1859_pixel_hypotheses": [
+    {
+      "id": "MNL8-REPS-DOWNTRIANGLE",
+      "photo_index": 8,
+      "pixel_xy": [
+        1034,
+        6421
+      ],
+      "interpretation": "Solid down-pointing triangle to southeast of Reps text",
+      "original_photo_sha256": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe",
+      "original_pixel_uncertainty_px": 12,
+      "independent_site_name": null,
+      "independent_site_coordinates": null,
+      "physical_feature_identity_confirmed": false,
+      "qualifies_as_GCP": false
+    },
+    {
+      "id": "MNL8-TARTLAU-UPTRIANGLE",
+      "photo_index": 8,
+      "pixel_xy": [
+        4481,
+        9136
+      ],
+      "interpretation": "Dark upward triangle in/near town hatch, with adjacent short stroke/number; graphic not independently proven to be fortified church",
+      "original_photo_sha256": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe",
+      "original_pixel_uncertainty_px": 12,
+      "independent_site_name": null,
+      "independent_site_coordinates": null,
+      "physical_feature_identity_confirmed": false,
+      "qualifies_as_GCP": false
+    },
+    {
+      "id": "MNL8-KRONSTADT-URBANHATCH",
+      "photo_index": 8,
+      "pixel_xy": null,
+      "interpretation": "Historical urban hatch occupies extensive footprint; exact Black Church location is not explicitly labelled or symbolized at source pixel",
+      "original_photo_sha256": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe",
+      "original_pixel_uncertainty_px": null,
+      "independent_site_name": null,
+      "independent_site_coordinates": null,
+      "physical_feature_identity_confirmed": false,
+      "qualifies_as_GCP": false
+    }
+  ],
+  "six_physical_sites_screened": [
+    {
+      "site_id": "BV-RUPEA-FORTRESS",
+      "historic_label": "Reps",
+      "name": "Cetatea Rupea / Dealul Cohalmului",
+      "modern_physical_coordinate_candidate": {
+        "lat": 46.0374683,
+        "lon": 25.2123709,
+        "source": "OSM Nominatim attraction relation 3132264; point indicative, not surveyed",
+        "url": "https://nominatim.openstreetmap.org/search?format=json&q=Cetatea+Rupea&limit=5"
+      },
+      "source_institutional": "https://ran.cimec.ro/sel.asp?codran=40401.09",
+      "source_1859_mnl_photo_index": 8,
+      "independent_from_OHM_boundary": true,
+      "monument_exists_prior_to_1859": true,
+      "photo8_original_marker_pixel_assigned_to_this_monument": null,
+      "historic_map_symbol_matches_exact_physical_site": false,
+      "independent_coordinates_on_specific_surveyed_structure_verified": false,
+      "plausible_only": true,
+      "admission": "REJECT_GCP_PENDING_UNAMBIGUOUS_PHYSICAL_SYMBOL",
+      "reason": "Identified mapped settlement / physical monument does not constitute unique same-object map symbol; no audited pixel-to-site 1:1 pair"
+    },
+    {
+      "site_id": "BV-RUPEA-CHURCH",
+      "historic_label": "Reps",
+      "name": "Biserica evanghelică fortificată Rupea",
+      "modern_physical_coordinate_candidate": {
+        "lat": 46.0390464,
+        "lon": 25.2214067,
+        "source": "OSM Nominatim way 973910596, church building centroid",
+        "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Biserica+evanghelic%C4%83+fortificat%C4%83+Rupea%2C+Rom%C3%A2nia"
+      },
+      "source_institutional": "https://www.benesti.ro/wp-content/uploads/2024/07/2008MorganDBPhDGazetteer.pdf",
+      "source_1859_mnl_photo_index": 8,
+      "independent_from_OHM_boundary": true,
+      "monument_exists_prior_to_1859": true,
+      "photo8_original_marker_pixel_assigned_to_this_monument": null,
+      "historic_map_symbol_matches_exact_physical_site": false,
+      "independent_coordinates_on_specific_surveyed_structure_verified": false,
+      "plausible_only": true,
+      "admission": "REJECT_GCP_PENDING_UNAMBIGUOUS_PHYSICAL_SYMBOL",
+      "reason": "Identified mapped settlement / physical monument does not constitute unique same-object map symbol; no audited pixel-to-site 1:1 pair"
+    },
+    {
+      "site_id": "BV-PREJMER-CHURCH",
+      "historic_label": "Tartlau",
+      "name": "Biserica evanghelică fortificată Prejmer",
+      "modern_physical_coordinate_candidate": {
+        "lat": 45.7219997,
+        "lon": 25.7737364,
+        "source": "OSM Nominatim way 266834556, historic building, not village",
+        "url": "https://nominatim.openstreetmap.org/search?format=json&q=Prejmer+fortified+church&limit=5"
+      },
+      "source_institutional": "https://ran.cimec.ro/sel.asp?descript=prejmer-prejmer-brasov-ansamblul-bisericii-evanghelice-fortificate-de-la-prejmer-cod-sit-ran-41676.12",
+      "source_1859_mnl_photo_index": 8,
+      "independent_from_OHM_boundary": true,
+      "monument_exists_prior_to_1859": true,
+      "photo8_original_marker_pixel_assigned_to_this_monument": null,
+      "historic_map_symbol_matches_exact_physical_site": false,
+      "independent_coordinates_on_specific_surveyed_structure_verified": false,
+      "plausible_only": true,
+      "admission": "REJECT_GCP_PENDING_UNAMBIGUOUS_PHYSICAL_SYMBOL",
+      "reason": "Identified mapped settlement / physical monument does not constitute unique same-object map symbol; no audited pixel-to-site 1:1 pair"
+    },
+    {
+      "site_id": "BV-HARMAN-CHURCH",
+      "historic_label": "Honigberg",
+      "name": "Biserica evanghelică fortificată Hărman",
+      "modern_physical_coordinate_candidate": null,
+      "source_institutional": "https://ran.cimec.ro/sel.asp?descript=harman-harman-brasov-cetatea-sateasca-si-biserica-evanghelica-fortificata-de-la-harman.-cod-sit-ran-41097.10",
+      "source_1859_mnl_photo_index": 8,
+      "independent_from_OHM_boundary": true,
+      "monument_exists_prior_to_1859": true,
+      "photo8_original_marker_pixel_assigned_to_this_monument": null,
+      "historic_map_symbol_matches_exact_physical_site": false,
+      "independent_coordinates_on_specific_surveyed_structure_verified": false,
+      "plausible_only": true,
+      "admission": "REJECT_GCP_PENDING_UNAMBIGUOUS_PHYSICAL_SYMBOL",
+      "reason": "Identified mapped settlement / physical monument does not constitute unique same-object map symbol; no audited pixel-to-site 1:1 pair"
+    },
+    {
+      "site_id": "BV-CODLEA-CHURCH",
+      "historic_label": "Zeiden",
+      "name": "Biserica evanghelică fortificată Codlea",
+      "modern_physical_coordinate_candidate": {
+        "lat": 45.699877,
+        "lon": 25.446148,
+        "source": "Outdooractive point for church site; agrees to ~tens of metres with another source, NOT geodetic survey",
+        "url": "https://www.outdooractive.com/en/poi/transylvania/the-fortified-church-of-codlea/807846124/"
+      },
+      "source_institutional": "https://ran.cimec.ro/sel.asp?descript=codlea-municipiul-codlea-brasov-ansamblul-bisericii-evanghelice-fortificate-de-la-codlea-cod-sit-ran-40250.09",
+      "source_1859_mnl_photo_index": 8,
+      "independent_from_OHM_boundary": true,
+      "monument_exists_prior_to_1859": true,
+      "photo8_original_marker_pixel_assigned_to_this_monument": null,
+      "historic_map_symbol_matches_exact_physical_site": false,
+      "independent_coordinates_on_specific_surveyed_structure_verified": false,
+      "plausible_only": true,
+      "admission": "REJECT_GCP_PENDING_UNAMBIGUOUS_PHYSICAL_SYMBOL",
+      "reason": "Identified mapped settlement / physical monument does not constitute unique same-object map symbol; no audited pixel-to-site 1:1 pair"
+    },
+    {
+      "site_id": "BV-BRASOV-BLACK-CHURCH",
+      "historic_label": "Kronstadt",
+      "name": "Biserica Neagră, Brașov",
+      "modern_physical_coordinate_candidate": {
+        "lat": 45.640997,
+        "lon": 25.5880699,
+        "source": "OSM Nominatim building way 866090450",
+        "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Biserica+Neagr%C4%83+Bra%C8%99ov%2C+Rom%C3%A2nia"
+      },
+      "source_institutional": "https://mapcarta.com/26950134",
+      "source_1859_mnl_photo_index": 8,
+      "independent_from_OHM_boundary": true,
+      "monument_exists_prior_to_1859": true,
+      "photo8_original_marker_pixel_assigned_to_this_monument": null,
+      "historic_map_symbol_matches_exact_physical_site": false,
+      "independent_coordinates_on_specific_surveyed_structure_verified": false,
+      "plausible_only": true,
+      "admission": "REJECT_GCP_PENDING_UNAMBIGUOUS_PHYSICAL_SYMBOL",
+      "reason": "Identified mapped settlement / physical monument does not constitute unique same-object map symbol; no audited pixel-to-site 1:1 pair"
+    }
+  ],
+  "independent_GCP_pass_conditions": [
+    "Digitize the exact cartographic object symbol/physical landmark anchor in 1859 MNL photo, not a generalized settlement hatch or name",
+    "Identify same individual object in independent dated historic source and modern audited point/vertex coordinates",
+    "Review local image distortion, potential scan/cut folds, and mapping projection and point error",
+    "Use at least four non-collinear and geographically distributed verified GCPs for first-order affine pilot (three algebraic minimum insufficient for robust validation); retain separate holdouts",
+    "Report per-point provenance, residuals, cross-validation, units, transformation type and spatial validity; holdout error must be suitable for map scale",
+    "Only after valid source photo map units, consider manual per-way boundary tracing and separate legal corroboration"
+  ],
+  "quantitative_reassessment": {
+    "prior_affine_train_RMSE_m": 918.8635185297538,
+    "prior_affine_heldout_RMSE_m": 1241.1244512125957,
+    "prior_affine_LOO_RMSE_m": 1574.9748117443023,
+    "significance": "Prior modern centers exploratory; not independent stable same-object GCP",
+    "newly_certified_same_object_pairs": 0,
+    "new_valid_affine_residual_RMSE_m": null,
+    "new_heldout_RMSE_m": null,
+    "certified_photo_georeferences": 0,
+    "historical_Landesgrenzen_certified_segments": 0,
+    "historical_Chioar_certified_segments": 0,
+    "geometry_imports": 0
+  },
+  "rights": "No reproduction/export of Arcanum/MNL source tiles or private user KMZ; link metadata only",
+  "decision": "SOURCE_COMPARATORS_IDENTIFIED_MAP_SYMBOL_TO_GROUND_PAIR_NOT_ESTABLISHED_NO_GEOMETRY"
+}
