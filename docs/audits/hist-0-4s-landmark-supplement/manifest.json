@@ -1,0 +1,65 @@
+{
+  "phase": "HIST-0.4s",
+  "supplement_id": "HIST-0.4s-LM1",
+  "audit_date": "2026-11-12",
+  "parent_main_sha": "7709c8d07036e010da5a8d13abc14c349dcb3fa7",
+  "parent_pull_request": 111,
+  "parent_postmerge_run_id": 43256089018,
+  "parent_postmerge_conclusion": "SUCCESS",
+  "purpose": "Supplement the independently certified 1924 2977 original source margin with individual pre1859 monument site continuity and false GCP exclusion; do not change parent source provenance.",
+  "parent_source": {
+    "full_original_JPG_MAPSTER_record": "11788799",
+    "full_JPG_sha256": "367c2f3d5186bf04b4d980c7d4a4ab513cbc14192dcd37803ac969d1f49d93ce",
+    "full_JPG_bytes": 22480703,
+    "full_JPG_pixel_dimensions": [
+      9821,
+      7376
+    ],
+    "original_margin_source_text": "Ediție provizorie reprodus după hartă Austriacă la 1:25.000",
+    "base_Austrian_map_scale": 25000,
+    "exact_Austrian_sheet_id": null,
+    "exact_Austrian_survey_year": null
+  },
+  "new_evidence": {
+    "monument_sites_screened_by_WFS": 3,
+    "new_local_WMS_PNG_windows_downloaded_and_visually_checked": 3,
+    "heritage_candidate_pre1859_structures": 2,
+    "chronologically_excluded_moved_to_current_site_1937": 1,
+    "chronologically_excluded_moved_from_old_site_1895": 1,
+    "exact_original_1924_church_symbol_pixels_verified": 0,
+    "exact_pre1877_same_object_church_pixels_verified": 0,
+    "individual_surviving_surveyed_foundation_vertices_verified": 0,
+    "GCPs_approved": 0,
+    "new_RMS_m": null,
+    "new_holdout_RMS_m": null
+  },
+  "admission": {
+    "historical_OHM_candidate_relations": 37,
+    "OHM_geometries_imported": 0,
+    "Chioar_segments_certified": 0,
+    "Transylvania_segments_certified": 0,
+    "year1924_source_margin_preserved": true,
+    "existing_HIST04s_files_modified": false
+  },
+  "restrictions": {
+    "emails_sent": false,
+    "institution_contact": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false,
+    "user_private_data_published": false,
+    "third_party_RASTER_bytes_published": false,
+    "ACTUAL_changed": false,
+    "OSMB_changed": false,
+    "OHM_changed": false,
+    "src_public_changed": false,
+    "administrative_boundaries_changed": false
+  },
+  "files": [
+    "README.md",
+    "manifest.json",
+    "monument-chronology-and-wms.json",
+    "validate-evidence.mjs"
+  ],
+  "next": "HIST-0.4t: identify precise Austrian 1:25,000 precursor sheet and survey year, then same pre1859 fixed-point church foundation in an independently dated military/cadastral source; legal border evidence separate."
+}
