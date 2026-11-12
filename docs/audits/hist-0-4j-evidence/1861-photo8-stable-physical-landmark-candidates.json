@@ -1,0 +1,177 @@
+{
+  "phase": "HIST-0.4j",
+  "date": "2026-11-12",
+  "photos_in_MNL_S75_82": 14,
+  "scope": "Priority manual physical landmark discovery on photo 8; remaining photos not claimed inspected for landmark pixels",
+  "source_historical_map": {
+    "source": "MNL OL S75 No.82 (photographs 1861), depicts administrative organization as of 1859",
+    "image_index": 8,
+    "sha256": "0cd897c4e5d104042dab44bc47b3021722a5f294af565ad80b5bb15097bb9afe"
+  },
+  "separation_of_controls": {
+    "modern_town_centroids_from_HIST_0_4i": "NOT_ELIGIBLE_AS_PHYSICAL_GCPS",
+    "physical_site_candidates": 6,
+    "individual_historic_symbol_or_footprint_match_approved": 0,
+    "full_resolution_photo_pixel_xy_assigned_to_physical_landmark": 0,
+    "qualifying_independent_GCPs": 0,
+    "control_residual_RMSE_m": null,
+    "qualified_georeferences": 0,
+    "Landesgrenzen_admitted_segments": 0,
+    "historic_commune_boundaries_verified": 0
+  },
+  "requirement_for_GCP": "A valid GCP requires the physical monument independently confirmed in pre-1859 existence, its exact historic-map symbol/footprint pixel visibly distinguished from the locality center, independent modern geodetic coordinates, non-degenerate spatial distribution and hold-out residuals; none meets all criteria yet",
+  "rights": "Only link and register sources; do not publish MNL raster, proprietary KMZ, or images without rights.",
+  "candidates": [
+    {
+      "site_id": "BV-RUPEA-FORTRESS",
+      "name": "Cetatea Rupea / Dealul Cohalmului",
+      "label1859": "Reps",
+      "physically_pre_1859": true,
+      "archival_quality": "MEDIEVAL_FORTRESS_EXISTENCE_ATTESTED",
+      "institutional_id": "RAN 40401.09",
+      "institutional_url": "https://ran.cimec.ro/sel.asp?codran=40401.09",
+      "modern_coordinate": {
+        "lat": 46.0374683,
+        "lon": 25.2123709,
+        "source": "OSM Nominatim attraction relation 3132264; point indicative, not surveyed",
+        "url": "https://nominatim.openstreetmap.org/search?format=json&q=Cetatea+Rupea&limit=5"
+      },
+      "original_photo8_relevant_label": "Reps visible; fortress-specific cartographic symbol NOT verified",
+      "research_priority": "P1",
+      "caveat": "RAN places historic castle NW of village; MUST NOT use settlement dot as castle pin without separate map symbol",
+      "photo8_map_pixel_xy": null,
+      "modern_source_is_not_OHM_border": true,
+      "historic_map_symbol_verified": false,
+      "independent_point_coordinate_on_1859_cartography_verified": false,
+      "approved_as_GCP": false
+    },
+    {
+      "site_id": "BV-RUPEA-CHURCH",
+      "name": "Biserica evanghelică fortificată Rupea",
+      "label1859": "Reps",
+      "physically_pre_1859": true,
+      "archival_quality": "HISTORIC_CHURCH_VS_VILLAGE_DOT_NOT_RESOLVED",
+      "institutional_id": "historic building name; source OSM + research",
+      "institutional_url": "https://www.benesti.ro/wp-content/uploads/2024/07/2008MorganDBPhDGazetteer.pdf",
+      "modern_coordinate": {
+        "lat": 46.0390464,
+        "lon": 25.2214067,
+        "source": "OSM Nominatim way 973910596, church building centroid",
+        "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Biserica+evanghelic%C4%83+fortificat%C4%83+Rupea%2C+Rom%C3%A2nia"
+      },
+      "original_photo8_relevant_label": "Reps visible; specific church footprint point not yet established",
+      "research_priority": "P2",
+      "caveat": "Two different candidates in Rupea; town-center coordinate is neither castle nor necessarily church",
+      "photo8_map_pixel_xy": null,
+      "modern_source_is_not_OHM_border": true,
+      "historic_map_symbol_verified": false,
+      "independent_point_coordinate_on_1859_cartography_verified": false,
+      "approved_as_GCP": false
+    },
+    {
+      "site_id": "BV-PREJMER-CHURCH",
+      "name": "Biserica evanghelică fortificată Prejmer",
+      "label1859": "Tartlau",
+      "physically_pre_1859": true,
+      "archival_quality": "MONUMENT_DATABLE_PRE_1859_WITH_OFFICIAL_RAN_SITE",
+      "institutional_id": "RAN 41676.12; LMI BV-II-a-A-11745",
+      "institutional_url": "https://ran.cimec.ro/sel.asp?descript=prejmer-prejmer-brasov-ansamblul-bisericii-evanghelice-fortificate-de-la-prejmer-cod-sit-ran-41676.12",
+      "modern_coordinate": {
+        "lat": 45.7219997,
+        "lon": 25.7737364,
+        "source": "OSM Nominatim way 266834556, historic building, not village",
+        "url": "https://nominatim.openstreetmap.org/search?format=json&q=Prejmer+fortified+church&limit=5"
+      },
+      "original_photo8_relevant_label": "Tartlau visible on cropped map; church-specific symbol not individually tied to precise source pixel",
+      "research_priority": "P0",
+      "caveat": "A point on settlement label or a town center is not substitute for physical landmark",
+      "photo8_map_pixel_xy": null,
+      "modern_source_is_not_OHM_border": true,
+      "historic_map_symbol_verified": false,
+      "independent_point_coordinate_on_1859_cartography_verified": false,
+      "approved_as_GCP": false
+    },
+    {
+      "site_id": "BV-HARMAN-CHURCH",
+      "name": "Biserica evanghelică fortificată Hărman",
+      "label1859": "Honigberg",
+      "physically_pre_1859": true,
+      "archival_quality": "MONUMENT_DATABLE_PRE_1859_WITH_OFFICIAL_RAN_SITE",
+      "institutional_id": "RAN 41097.10; LMI BV-II-a-A-11715",
+      "institutional_url": "https://ran.cimec.ro/sel.asp?descript=harman-harman-brasov-cetatea-sateasca-si-biserica-evanghelica-fortificata-de-la-harman.-cod-sit-ran-41097.10",
+      "modern_coordinate": null,
+      "conflicting_position_sources": [
+        {
+          "lat": 45.7155199598157,
+          "lon": 25.684987257539,
+          "url": "https://whitetown.sk/ro/bisericafortificatdinhrman/"
+        },
+        {
+          "lat": 45.7105114,
+          "lon": 25.687551,
+          "url": "https://religiana.com/harman-fortified-church"
+        },
+        {
+          "lat": 45.7147258,
+          "lon": 25.6853906,
+          "url": "https://ns2.amfostacolo.ro/impresii9.php?d=biserica-fortificata-saseasca-harman-harman--prejmer&iid=113900"
+        }
+      ],
+      "original_photo8_relevant_label": "Honigberg visible; monument symbol unverified",
+      "research_priority": "P0",
+      "caveat": "Published coordinates are discordant by hundreds of metres; must compare actual footprint survey before GCP",
+      "photo8_map_pixel_xy": null,
+      "modern_source_is_not_OHM_border": true,
+      "historic_map_symbol_verified": false,
+      "independent_point_coordinate_on_1859_cartography_verified": false,
+      "approved_as_GCP": false
+    },
+    {
+      "site_id": "BV-CODLEA-CHURCH",
+      "name": "Biserica evanghelică fortificată Codlea",
+      "label1859": "Zeiden",
+      "physically_pre_1859": true,
+      "archival_quality": "MONUMENT_DATABLE_PRE_1859_WITH_OFFICIAL_RAN_SITE",
+      "institutional_id": "RAN 40250.09; LMI BV-II-a-A-11643",
+      "institutional_url": "https://ran.cimec.ro/sel.asp?descript=codlea-municipiul-codlea-brasov-ansamblul-bisericii-evanghelice-fortificate-de-la-codlea-cod-sit-ran-40250.09",
+      "modern_coordinate": {
+        "lat": 45.699877,
+        "lon": 25.446148,
+        "source": "Outdooractive point for church site; agrees to ~tens of metres with another source, NOT geodetic survey",
+        "url": "https://www.outdooractive.com/en/poi/transylvania/the-fortified-church-of-codlea/807846124/"
+      },
+      "other_evidence_url": "https://www.welcometoromania.ro/E68_Sibiu_Brasov/E68_Sibiu_Brasov_Codlea_Biserica_evanghelica_r.htm",
+      "original_photo8_relevant_label": "Zeiden is on local photo crop; church not unambiguously marked as an individual map feature",
+      "research_priority": "P0",
+      "caveat": "Site is physically stable but not yet tieable to historic-map map-pixel",
+      "photo8_map_pixel_xy": null,
+      "modern_source_is_not_OHM_border": true,
+      "historic_map_symbol_verified": false,
+      "independent_point_coordinate_on_1859_cartography_verified": false,
+      "approved_as_GCP": false
+    },
+    {
+      "site_id": "BV-BRASOV-BLACK-CHURCH",
+      "name": "Biserica Neagră, Brașov",
+      "label1859": "Kronstadt",
+      "physically_pre_1859": true,
+      "archival_quality": "MEDIEVAL_HISTORIC_BUILDING_ATTESTED",
+      "institutional_id": "OSM way 866090450; Wikidata Q910124",
+      "institutional_url": "https://mapcarta.com/26950134",
+      "modern_coordinate": {
+        "lat": 45.640997,
+        "lon": 25.5880699,
+        "source": "OSM Nominatim building way 866090450",
+        "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Biserica+Neagr%C4%83+Bra%C8%99ov%2C+Rom%C3%A2nia"
+      },
+      "original_photo8_relevant_label": "Kronstadt/urban plan visible; black church specific tower or building anchor NOT yet tied",
+      "research_priority": "P0",
+      "caveat": "Map density precludes assuming the center of urban hatch is church",
+      "photo8_map_pixel_xy": null,
+      "modern_source_is_not_OHM_border": true,
+      "historic_map_symbol_verified": false,
+      "independent_point_coordinate_on_1859_cartography_verified": false,
+      "approved_as_GCP": false
+    }
+  ]
+}
