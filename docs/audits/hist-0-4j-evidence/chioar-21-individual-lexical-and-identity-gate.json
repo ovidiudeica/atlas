@@ -1,0 +1,791 @@
+{
+  "phase": "HIST-0.4j",
+  "date": "2026-11-12",
+  "basis": "HIST-0.4i manual source page scans and HIST-0.4h legal crosswalk; independent alias research",
+  "scope": "Only original 18 non-exact law-to-1877 and 10 non-exact law-to-1873 rows; seven overlap, 21 unique",
+  "disclaimer": "Printed transcription variant does not certify legal place identity, modern OSM ID or historical municipal border. In ambiguous cases do not admit a homonym. No automatic geometry derivation.",
+  "counts": {
+    "original_1877_nonexact": 18,
+    "original_1873_nonexact": 10,
+    "overlap": 7,
+    "unique_names": 21,
+    "law_to_1877_printed_variants_located": 18,
+    "law_to_1873_printed_variants_located_including_composite": 9,
+    "unresolved_1873_legal_alias": 1,
+    "legal_identity_certifications": 0,
+    "verified_legal_boundaries": 0
+  },
+  "overlap_names": [
+    "Resztolcz",
+    "Szelnicze",
+    "Laczkonya",
+    "Plopis",
+    "Karullya",
+    "Stezser",
+    "Somkutpatak"
+  ],
+  "source_edition_hashes": {
+    "KSH_1873": "25ce833a6f15fbac76cafbdb120649c944609bb59bc94d1bc5bc3425efc1590f",
+    "KSH_1877": "274ce1624c5779e75ae382d9acd525529f5424cd57da4650b6046e1c1a759d2d"
+  },
+  "records": [
+    {
+      "law_order": 3,
+      "law_1877_name": "Poinicza",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Pojnica",
+        "variation_type": "GRAPHIC_VARIANT_OI_OJ_ICZ_IC",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Poinicza",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "law Poinicza, source 1877 Pojnica; spelling not municipal merger"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 11,
+      "law_1877_name": "Toplicza",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Toplica",
+        "variation_type": "ORTHOGRAPHIC_CZ_C",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Toplica",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "law -cza versus gazetteer -ca"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 13,
+      "law_1877_name": "Dióspatak",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": false,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": null,
+        "variation_type": "PARENTHETICAL_QUALIFIER",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "OUT_OF_ORIGINAL_18"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Dióspataka",
+        "variation_type": "FINAL_A_1873",
+        "textual_resolution": "OFFICIAL_1873_PRINT_VARIANT_LOCATED"
+      },
+      "notes": [
+        "1873 Dióspataka, 1877 Dióspatak"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 15,
+      "law_1877_name": "Resztolcz",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Resztolcs",
+        "variation_type": "ORTHOGRAPHIC_CZ_CS",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Resztolcs",
+        "variation_type": "CZ_CS_1873",
+        "textual_resolution": "OFFICIAL_1873_PRINT_VARIANT_LOCATED"
+      },
+      "notes": [
+        "two official gazetteer editions attest -cs",
+        "1873 and 1877 print Resztolcs"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 27,
+      "law_1877_name": "Szelnicze",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Szelnice",
+        "variation_type": "ORTHOGRAPHIC_CZ_C",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Szelnice",
+        "variation_type": "CZ_C_1873",
+        "textual_resolution": "OFFICIAL_1873_PRINT_VARIANT_LOCATED"
+      },
+      "notes": [
+        "1877 -ce; do not infer modern place automatically",
+        "1873 and 1877 print Szelnice"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 32,
+      "law_1877_name": "Russor",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Rusor",
+        "variation_type": "CONSONANT_SIMPLIFICATION",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Rusor",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "one s in both gazetteer editions"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 36,
+      "law_1877_name": "Szt.-Kápolnok",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": false,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Kápolnok (Szurdok-)",
+        "variation_type": "PARENTHETICAL_QUALIFIER",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "OUT_OF_ORIGINAL_18"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": null,
+        "archive_image_index": null,
+        "candidate_reading": null,
+        "variation_type": "UNRESOLVED_LEGAL_ABBREVIATION",
+        "textual_resolution": "LEGAL_ALIAS_NOT_RESOLVED"
+      },
+      "notes": [
+        "Szt. usually abbreviation for Szent; source 1873 has Szurdok (Kápolnok-), 1877 Kápolnok (Szurdok-); do not equate without archival amendment"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "UNRESOLVED_ABBREVIATION_1877_LAW",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 38,
+      "law_1877_name": "Fonácz",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Fonác",
+        "variation_type": "FINAL_CZ_C",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Fonács",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "compare 1873 Fonács, 1877 Fonác"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 39,
+      "law_1877_name": "Laczkonya",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Lackonya",
+        "variation_type": "CZ_C",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Lackonya",
+        "variation_type": "CZ_C_1873",
+        "textual_resolution": "OFFICIAL_1873_PRINT_VARIANT_LOCATED"
+      },
+      "notes": [
+        "both official repertories print Lackonya",
+        "both official editions spell Lackonya"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 40,
+      "law_1877_name": "Berencze",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Berence",
+        "variation_type": "CZ_C",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Berence",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "both official repertories print Berence"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 42,
+      "law_1877_name": "Garbonácz",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Garbonác",
+        "variation_type": "CZ_C",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Garbonác",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "both official repertories print Garbonác"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 47,
+      "law_1877_name": "Plopis",
+      "successor_county": "Szolnok-Doboka",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 50,
+        "archive_image_index": 48,
+        "candidate_reading": "Ploppis",
+        "variation_type": "CONSONANT_DOUBLE",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 125,
+        "archive_image_index": 115,
+        "candidate_reading": "Ploppis",
+        "variation_type": "DOUBLE_P_1873",
+        "textual_resolution": "OFFICIAL_1873_PRINT_VARIANT_LOCATED"
+      },
+      "notes": [
+        "both official repertories print Ploppis",
+        "both official editions spell Ploppis"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 50,
+      "law_1877_name": "Karullya",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Károlya",
+        "variation_type": "SUBSTANTIVE_GRAPHIC_VARIANT",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Karully",
+        "variation_type": "SPELLING_1873_UNCERTAIN",
+        "textual_resolution": "OFFICIAL_1873_PRINT_VARIANT_LOCATED"
+      },
+      "notes": [
+        "1873 reading Karully/Karuly uncertain, 1877 Károlya; double-check with independent historical lexicon",
+        "1873 manuscript reading might be Karuly, Karully; 1877 Károlya, needs independent alias genealogy"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "REFERENCE_TRANSCRIPTION_RECHECK_REQUIRED",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 63,
+      "law_1877_name": "Stezser",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Sztezser",
+        "variation_type": "INITIAL_SZ_ST",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Sztezser",
+        "variation_type": "INITIAL_SZ_1873",
+        "textual_resolution": "OFFICIAL_1873_PRINT_VARIANT_LOCATED"
+      },
+      "notes": [
+        "both repertories print Sztezser",
+        "1873 and 1877 print Sztezser"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 65,
+      "law_1877_name": "Somkutpatak",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Somkutpataka",
+        "variation_type": "FINAL_A",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Somkutpataka",
+        "variation_type": "FINAL_A_1873",
+        "textual_resolution": "OFFICIAL_1873_PRINT_VARIANT_LOCATED"
+      },
+      "notes": [
+        "both repertories print Somkutpataka",
+        "1873 and 1877 print Somkutpataka"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 68,
+      "law_1877_name": "N.-Nyires",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Nyires (Nagy-)",
+        "variation_type": "PREFIX_TO_PARENTHETICAL_QUALIFIER",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Nyires (Nagy-)",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "N. -> Nagy contextual from two repertories; homonyms excluded only by context"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 72,
+      "law_1877_name": "N.-Somkut",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Somkut (Nagy-)",
+        "variation_type": "PREFIX_TO_PARENTHETICAL_QUALIFIER",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Somkut (Nagy-)",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "N. -> Nagy contextual"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 74,
+      "law_1877_name": "N.-Fentős",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Fentős (Nagy-)",
+        "variation_type": "PREFIX_TO_PARENTHETICAL_QUALIFIER",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Fentős (Nagy-)",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "N. -> Nagy, must distinguish Kis and Puszta Fentős"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 75,
+      "law_1877_name": "P.-Fentős",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Fentős (Puszta-)",
+        "variation_type": "PREFIX_TO_PARENTHETICAL_QUALIFIER",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Fentős (Puszta-)",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "P. -> Puszta, must distinguish Nagy and Kis Fentős"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 83,
+      "law_1877_name": "Szappanpataka",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": true,
+      "in_original_10_no_exact_1873": false,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Szappanpatak",
+        "variation_type": "FINAL_A_OMISSION",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "VARIANT_LOCATED_IN_ORIGINAL_1877"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Szappanpataka",
+        "variation_type": "NOT_IN_ORIGINAL_10",
+        "textual_resolution": "OUT_OF_ORIGINAL_10"
+      },
+      "notes": [
+        "1873 edition retains -pataka, 1877 edition -patak"
+      ],
+      "other_documentary_evidence": [],
+      "documentary_interpretation": "SOURCE_VERIFIED_ORTHOGRAPHIC_CROSSWALK",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    },
+    {
+      "law_order": 85,
+      "law_1877_name": "Koltó-Katalin",
+      "successor_county": "Szatmár",
+      "in_original_18_no_exact_1877": false,
+      "in_original_10_no_exact_1873": true,
+      "official_1877": {
+        "edition": "KSH 1877",
+        "printed_page": 48,
+        "archive_image_index": 46,
+        "candidate_reading": "Katalin (Koltó-)",
+        "variation_type": "PARENTHETICAL_QUALIFIER",
+        "basis": "directly inspected official KSH page plus indexed transcription, NOT OCR alone",
+        "textual_resolution": "OUT_OF_ORIGINAL_18"
+      },
+      "official_1873": {
+        "edition": "KSH 1873",
+        "printed_page": 124,
+        "archive_image_index": 114,
+        "candidate_reading": "Katalinfalva (Koltó separate)",
+        "variation_type": "DISTINCT_SETTLEMENTS_AND_TOPONYM_HISTORY",
+        "textual_resolution": "TWO_DISTINCT_ENTRIES_IDENTIFIED"
+      },
+      "notes": [
+        "1873 explicitly Katalinfalva and Koltó as separate entries; 1877 Katalin (Koltó-) is likely Cătălina, independently supported by Dorin Ștef 2023"
+      ],
+      "other_documentary_evidence": [
+        {
+          "source": "Dorin Ștef, Dicționar etimologic al localităților din județul Maramureș (2023), p.156",
+          "url": "https://bjmures.ro/wp-content/uploads/2023/05/S00122.pdf",
+          "supports": "Koltó-Katalin/Katalinfalva -> Cătălina; modern Coltău is a distinct village"
+        },
+        {
+          "source": "Biblioteca județeană Maramureș: Desagă de Maramureș, nr.38 (2012)",
+          "url": "https://www.bibliotecamm.ro/septentrionalis/revista_bs_38%282012%29.pdf",
+          "supports": "separate historical attestation Coltău and Cătălina"
+        },
+        {
+          "source": "Historic gazetteer of Transylvania",
+          "url": "https://www.kia.hu/kiakonyvtar/konyvtar/erdely/erdstat/hnevtar.pdf",
+          "supports": "1873 Katalinfalva, 1880 Katalin (Koltó-); contextual identity evidence"
+        }
+      ],
+      "documentary_interpretation": "DOCUMENTARY_IDENTITY_LINK_SUPPORTED_NOT_ADMINISTRATIVE_MERGER",
+      "is_modern_locality_match_certified": false,
+      "historical_locality_identity_approved": false,
+      "historical_commune_boundary_certified": false,
+      "historical_commune_polygon": null,
+      "geometry_source": null,
+      "import_authorized": false
+    }
+  ]
+}
