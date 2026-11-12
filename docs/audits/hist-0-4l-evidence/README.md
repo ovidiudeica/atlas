@@ -17,6 +17,9 @@ Acestea sunt **reprezentări interdependente ale aceluiași proces legislativ**,
 
 **Control separat al localității:** scanările KSH 1873 p.125 și 1877 p.50 au `Szurdok (Kápolnok-)`, respectiv `Kápolnok (Szurdok-)`. Un [compendiu juridic ulterior](https://mek.oszk.hu/13200/13288/13288.pdf), care citează ordinele ministeriale din **1885**, enumeră **Szurduk-Kápolnok (Kopalnik)** lângă localitățile fostului Chioar. [Repertoriul istoric Varga](https://www.kia.hu/kiakonyvtar/konyvtar/erdely/erdstat/hnevtar.pdf) confirmă continuitatea numelui pentru **Copalnic**. Acest ansamblu susține un candidat de identitate **toponimică**, nu corectează literal forma legii 1877 și nu certifică legal identitatea unei comune/circumscripții sau conturul ei.
 
+
+**Ierarhia actelor administrative:** conform [Bibliotecii Parlamentului Ungariei](https://library.parlament.hu/archiv/-/asset_publisher/OTYxpZQhAHFt/content/az-orsz%C3%A1ggy%C5%B1l%C3%A9si-k%C3%B6nyvt%C3%A1r-jogi-tartalmai-a-hungarican%C3%A1n), *Magyarországi Rendeletek Tára* era o colecție retrospectivă selectivă, **nu locul promulgării ordinelor**; acesta era *Budapesti Közlöny*. În consecință, verificarea din *Rendeletek Tára* este o pistă de localizare, iar demonstrarea unui act de rectificare necesită ediția oficială și dispoziția relevantă. Până acum nu a fost recuperată o rectificare autentică în *Budapesti Közlöny*.
+
 **Decizie:** `Szt.-Kápolnok` rămâne forma exactă a legii, `Szurduk-Kápolnok/Copalnic` rămâne candidatul documentar foarte solid; **rectificare oficială găsită = 0**, **certificare juridică comunală = 0**, **geometrie = 0**.
 
 ## 2. MNL OL S75 nr. 82: audit integral de proveniență, nu de GCP
