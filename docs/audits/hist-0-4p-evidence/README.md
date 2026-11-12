@@ -22,6 +22,12 @@ Sursa bibliografică: [Berkeszpataka – Kővár / Chioar](https://varak.hu/latn
 
 **Corecție importantă:** deși prezentarea generală Várak.hu afirmă utilizarea decupajelor militare 1:25.000, **pagina acestui monument nu oferă, în cele trei imagini din secțiunea Hărți examinate, un raster militar original la 1:25.000**. Nu mai susținem că unul a fost recuperat pentru această cetate. Planurile istorice conțin probe ale configurației fortificației, fără a dobândi automat precizie juridică/cartografică.
 
+### Identificarea arhivistică a manuscrisului Kővár
+
+În colecția Muzeului Național Maghiar, studiul [Cenner-Wilhelmb Gizella, *A Magyar Történeti Képcsarnok kéziratos térképei*, *Folia Historica* 7 (1979), p. 126](https://mnm.hu/sites/default/files/publications/foliahistorica_07.pdf), **intrarea 7**, identifică **„PIANTA DI KUIVAR / governato da Teleki”** ca manuscris cu numărul de inventar **8920.T**, executat în tuș și acuarelă pe două foi lipite, format **18,3 × 28,4 cm**, cumpărat în **1907** de la anticarul Rohracher din Lienz. Catalogul îl atribuie unui **inginer militar din anturajul lui Carol de Lorena**. Asocierea personală cu Luigi Ferdinando Marsigli este prezentată în alte lucrări ca **posibilă**, nu ca identificare paleografică definitivă.
+
+**Atenție la omonim:** intrarea 8 a aceluiași catalog este **„PIANTA DI KUKELVAR”**, inventar **8922.T**, despre **Küküllővár/Cetatea de Baltă** — un alt obiect decât Kővár/Cetatea Chioarului. Nu se vor transfera înregistrări, scanuri sau geometrii între cele două. Manuscrisul **8920.T** nu a fost consultat direct, ci numai descrierea sa publicată; reproducerea Várak.hu și numărul de inventar nu asigură singure control geodezic, un punct al unui bastion sau hotare comunale.
+
 ## 3. Șase poziții moderne — acordul între surse nu este punct geodezic
 
 Am calculat distanțele geodezice WGS84 între pozițiile publicate pentru **același sit extins** (nu pentru aceeași cărămidă, poartă sau stâncă):
