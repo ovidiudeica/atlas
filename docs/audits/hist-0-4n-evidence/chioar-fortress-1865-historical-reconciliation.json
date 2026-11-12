@@ -1,0 +1,108 @@
+{
+  "phase": "HIST-0.4n",
+  "date": "2026-11-12",
+  "target": "Cetatea Chioarului / Kővár vára, Berchezoaia, Maramureș, România",
+  "temporal_classification": "Historic destroyed fortress ruins in 1852, 1865 and later; 1859 administrative state shown by MNL photos",
+  "field_and_historiographic_sources": [
+    {
+      "id": "KOVARI_1852",
+      "source": "Kővári László, Erdély régiségei, 1852, section 105 Kővár, printed p.169",
+      "url": "https://mek.oszk.hu/21900/21944/21944.pdf",
+      "type": "CONTEMPORANEOUS_PUBLISHED_HISTORICAL_TOPOGRAPHY",
+      "evidence": "Locates ruined castle relative to Butyásza, Szerny mountain and left bank of Lápos; castle described as upper and lower components",
+      "administrative_claim": "Butyásza boundary in this nineteenth-century description",
+      "legal_boundary_certified": false,
+      "facsimile_reading": "PDF searchable transcription; web source screenshot service returned cache miss, not independently authenticated typography"
+    },
+    {
+      "id": "PESTY_BERKESZPATAKA_1865",
+      "source": "Pesty Frigyes place-name questionnaire; local return signed April 7 1865, published critical edition 2023, pp.11–12",
+      "url": "https://mnhp.unideb.hu/kiadvanyok/pesty/pesty_kovar-kraszna.pdf",
+      "source_manuscript": "OSZK Fol. Hung. 1114/23",
+      "type": "CONTEMPORANEOUS_LOCAL_TESTIMONY_IN_MODERN_CRITICAL_EDITION",
+      "evidence": "Lists Lá Kővár in Berkeszpataka toponyms, fortress already ruins, Lăpuș flows east side of castle hill",
+      "administrative_claim": "Within descriptive toponym list of Berkeszpataka; not proof of communal polygon",
+      "legal_boundary_certified": false,
+      "facsimile_reading": "Modern critical editorial transcription, not original autograph read"
+    },
+    {
+      "id": "BOROVSZKY_EARLY_1900",
+      "source": "Borovszky, Magyarország vármegyéi és városai, Szatmár — Berkeszpataka entry",
+      "url": "https://www.mek.oszk.hu/09500/09536/html/0020/7.html",
+      "type": "LATER_HISTORICAL_MONOGRAPH",
+      "evidence": "Places ruins on Vurfu Corniciului summit in Berkeszpataka territory",
+      "legal_boundary_certified": false
+    },
+    {
+      "id": "RAN_2026",
+      "source": "Institutul Național al Patrimoniului, Repertoriul Arheologic Național",
+      "url": "https://ran.cimec.ro/sel.asp?Lang=EN&codran=108525.01",
+      "code": "108525.01",
+      "LMI": "MM-I-s-A-04369",
+      "last_updated": "2026-09-19",
+      "type": "CURRENT_OFFICIAL_ARCHAEOLOGICAL_LOCATION_DESCRIPTION",
+      "evidence": "Approx 3km south of Berchezoaia, rocky hill on left bank of Lăpuș; not a published geodetic monument vertex",
+      "legal_boundary_certified": false
+    },
+    {
+      "id": "MUNICIPAL_2023",
+      "source": "Primăria Remetea Chioarului, Cetatea Chioarului",
+      "url": "https://remeteachioarului.ro/2023/10/18/cetatea-chioarului/",
+      "type": "OFFICIAL_LOCAL_DESCRIPTIVE_SOURCE",
+      "evidence": "Fortress over two hills within river bend, construction complex about 600m long",
+      "legal_boundary_certified": false
+    }
+  ],
+  "source_reconciliation": {
+    "KOVARI_1852": "Butyásza descriptive territorial attribution",
+    "PESTY_1865": "Berkeszpataka local toponym and ruin condition",
+    "BOROVSZKY": "Berkeszpataka territorial reference",
+    "legal_territory_variation_status": "OPEN: the two settlement territory attributions are not documentary proof of any 1859 or 1877 municipal boundary; possible different historical jurisdictions or descriptive scope not established",
+    "physical_hill_river_location_consistency": "HIGH_LEVEL_GROUNDED_LEFT_BANK_ROCKY_RIVER_BEND",
+    "individual_geodetic_point_certified": false,
+    "site_extent_m_about": 600
+  },
+  "modern_published_point_cluster": [
+    {
+      "name": "WelcomeToRomania",
+      "lat": 47.47613,
+      "lon": 23.57881,
+      "url": "https://www.welcometoromania.ro/DN1c_Halmeu_Rastoci/DN1c_Halmeu_Rastoci_Berchezoaia_Cetatea_Chioarului_r.htm"
+    },
+    {
+      "name": "Burgenwelt",
+      "lat": 47.47616666666667,
+      "lon": 23.57875,
+      "url": "https://www.burgenwelt.org/rumaenien/chioarului/burgenwelt-chioarului-objektseite.pdf"
+    },
+    {
+      "name": "ExploreCarpathia",
+      "lat": 47.475914,
+      "lon": 23.578644,
+      "url": "https://www.explorecarpathia.eu/hu/romania/kovar"
+    }
+  ],
+  "ground_position_cluster_extent_vs_structure": "Reported points are within tens of metres, but an approximately 600m distributed ruins site cannot be represented as unique surveyed GCP from a generic monument centroid.",
+  "MNL_1859_photo": {
+    "gallery_photo": 2,
+    "archive": "MNL OL S75 No.82",
+    "image_original_sha256": "bd9c01173c1ddc89a97414215b0771b9d88861f192f547a2ec718bb2b9cb72a9",
+    "visible_toponyms": [
+      "Berkeszpataka/Berchezoaia",
+      "Butyásza",
+      "Nagy-Somkut"
+    ],
+    "unique_castle_ruin_symbol_identified": false,
+    "castle_absolute_pixel_coordinate": null,
+    "castle_hill_topographic_shape_paired_to_ground_unique": false,
+    "pixel_geo_pair_certified": false
+  },
+  "explicit_gates": {
+    "documentary_physical_location_consistency": "QUALIFIED_REGION_ONLY",
+    "independent_geodetic_point": "UNQUALIFIED",
+    "MNL_exact_same_object_pixel": "NOT_FOUND",
+    "GCP_status": "REJECTED_PENDING_UNIQUE_CROSS_MAP_SITE",
+    "historical_commune_border_certified": false,
+    "OHM_import_authorized": false
+  }
+}
