@@ -1,0 +1,111 @@
+{
+  "phase": "HIST-0.4t",
+  "audit_date": "2026-11-15",
+  "base_main_sha": "e0c701e807c4feaa2c74cf0576c8690dd5277e1a",
+  "research_scope": "Chioar/Kővár, Șomcuta Mare 2977; original Austrian 1:25000 antecedent and independent same-object fixed landmarks",
+  "previous_certified": {
+    "parent_manifest": "docs/audits/hist-0-4s-evidence/manifest.json",
+    "landmark_supplement": "docs/audits/hist-0-4s-landmark-supplement/monument-chronology-and-wms.json",
+    "romanian_sheet": "Șomcuta Mare 2977",
+    "print_year": 1924,
+    "print_scale": 20000,
+    "predecessor_scale_written": 25000,
+    "predecessor_original_sheet_id": null,
+    "predecessor_survey_year": null
+  },
+  "newly_checked": [
+    {
+      "id": "DRIVE_GEODATA_SCOPED_FILENAME_AUDIT",
+      "source": "Geodata GIS / synchronized Google Drive, 12 root collections",
+      "method": "recursive read-only file-name and collection enumeration; matched Austrian, Chioar, Somcut, Kovar, military survey and cadastral terms; not a full pixel inspection of every raster",
+      "observed": [
+        "GeoSpatial Austrian 1910 reprojected Stereo70 1:200000 raster pair",
+        "GeoSpatial 1:20000 Romanian Planurile Directoare historical sheets",
+        "ICR Maps Transylvanian early-19th-century KMZ derivative",
+        "HistoGIS 1860 Austrian crownlands GIS ZIP"
+      ],
+      "found_unique_predecessor_25000_original": false,
+      "cannot_conclude": "absence from all possible unindexed rasters or outside sources"
+    },
+    {
+      "id": "BEV_THIRD_SURVEY",
+      "url": "https://www.bev.gv.at/en/Services/Products/Maps.html",
+      "period": "1869–1887 (series-level)",
+      "predominant_scale": 25000,
+      "documented_transylvania_exception_scale": 28800,
+      "assessed": "series-level compatibility with 1924 margin; no original local sheet identity, survey year, or evidence of pre-1877 local content",
+      "unique_sheet_qualified": false
+    },
+    {
+      "id": "MAPSTER_GAURA_GALGO_1886",
+      "url": "https://igrek.amzp.pl/11860629",
+      "catalogue_record": "11860629",
+      "sheet": "ZONE 16 COL XXIX (5071), GAURA und GALGÓ",
+      "map_scale": 75000,
+      "print_year": 1886,
+      "mapped_scope": "Valea Chioarului, Gâlgău; regional search reference",
+      "original_raster_downloaded_in_this_phase": false,
+      "relationship_to_predecessor": "regional grid locator candidate only; not the 1:25000 original and post-1877",
+      "certificate": "catalogue metadata independently indexed, not pixel-level source witness"
+    },
+    {
+      "id": "MAPSTER_GAURA_GALGO_1900",
+      "url": "https://igrek.amzp.pl/details.php?id=11860630",
+      "catalogue_record": "11860630",
+      "sheet": "ZONE 16 COL XXIX (5071), GAURA und GALGÓ",
+      "map_scale": 75000,
+      "print_year": 1900,
+      "original_raster_downloaded_in_this_phase": false,
+      "relationship_to_predecessor": "later different edition; neither independent 1:25000 scan nor pre-1877 witness"
+    },
+    {
+      "id": "CHOLNOKY_3KF_25",
+      "url": "http://cholnokymaps.gisit.ro/",
+      "catalogue_code": "TOP-3KF-25",
+      "collection_class": "Third Austrian military survey at 1:25000",
+      "landing_page_http": 200,
+      "search_api_url": "http://cholnokymaps.gisit.ro/search.php",
+      "search_api_post_http": 403,
+      "request_method": "POST application/x-www-form-urlencoded; code=TOP-3KF-25&type=0",
+      "exact_local_sheet_identified": false,
+      "usable_original_scan_retrieved": false,
+      "result": "SERIES_PRESENT__TARGET_INVENTORY_QUERY_BLOCKED",
+      "caveat": "HTTP accessibility of landing page is not a verified local sheet or licensing grant"
+    },
+    {
+      "id": "ARCANUM_THIRDSURVEY25000",
+      "url": "https://maps.arcanum.com/en/map/thirdsurvey25000/",
+      "observed": "web viewer not retrievable for original-sheet scrutiny (403 in web access, 202/empty in desktop HTTP)",
+      "exact_sheet_identified": false,
+      "usable_original_scan_retrieved": false
+    },
+    {
+      "id": "OHM_CHIOAR_REL_2747435",
+      "url": "https://www.openhistoricalmap.org/relation/2747435",
+      "current_api_request": "https://www.openhistoricalmap.org/api/0.6/relation/2747435",
+      "current_api_http": 403,
+      "existing_repo_candidate_inventory": true,
+      "new_geometry_evidence": false,
+      "imported": false
+    }
+  ],
+  "independent_earlier_witnesses": {
+    "original_map_1862": "Karte des Grossfürstentums Siebenbürgen, 4th edition, regional scale; prior certified 1862 publication, cannot isolate matching point for 1924",
+    "MNL_1859_photo2": "Independent historical witness previously inventoried; no qualified unique same-object pixel match to a modern measured vertex",
+    "same_object_landmark_verified": false
+  },
+  "conclusion": {
+    "original_25000_sheet_unique_id": null,
+    "original_25000_survey_year": null,
+    "original_25000_scan_retrieved": false,
+    "local_pre_1877_large_scale_original_retrieved": false,
+    "new_independent_gcp": 0,
+    "new_holdout_points": 0,
+    "affine_rmse_m": null,
+    "independent_holdout_rmse_m": null,
+    "newly_certified_legal_boundary_segments": 0,
+    "OHM_approved": 0,
+    "temporal_projection_permitted": false,
+    "status": "SEARCH_SCREENING_PERFORMED__CANDIDATE_REGIONAL_GRID_AND_COLLECTION_LOCATED__EXACT_25000_PREDECESSOR_NOT_QUALIFIED"
+  }
+}
