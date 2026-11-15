@@ -1,0 +1,229 @@
+{
+  "phase": "HIST-0.4u",
+  "date": "2026-11-15",
+  "primary": {
+    "archive": "Bibliothèque nationale de France, Cartes et plans",
+    "shelfmark": "GE D-14179",
+    "ark": "btv1b8492308h",
+    "title": "KÖWAR in Transiluania",
+    "author_signature": "J. V. Holst Obr. fecit",
+    "commons_page": "https://commons.wikimedia.org/w/index.php?curid=120425983",
+    "bnf_catalogue": "https://catalogue.bnf.fr/ark:/12148/cb40635442c",
+    "local_JPEG_verified": true,
+    "bytes": 5997772,
+    "width": 6260,
+    "height": 5108,
+    "sha256": "4d035db75c147ce2ec56118577ae3747287edf268de98cabb68be406df3c7b8f",
+    "mediawiki_sha1": "cf7c6d5cd08aef0143bf675af2585b754719ddcb",
+    "visually_inspected": true,
+    "printed_survey_date": null,
+    "geodetic_plan": false,
+    "kind": "oblique engraved bird's-eye fortress view",
+    "not_original_unengraved_manuscript": true
+  },
+  "chronology": [
+    {
+      "year": 1658,
+      "source": "BnF/Commons catalogue date",
+      "certainty": "CATALOGUED_NOT_PRINTED_OR_SURVEY_CERTIFIED"
+    },
+    {
+      "year": 1661,
+      "source": "Iosipescu–Ursu–Ursu 1983 fig.2 (estimated survey)",
+      "certainty": "SECONDARY_ATTRIBUTION_NOT_INDEPENDENTLY_CERTIFIED"
+    },
+    {
+      "year": 1670,
+      "source": "Gualdo Priorato Historia di Leopoldo Cesare vol.1, printed publication (reported)",
+      "certainty": "PUBLICATION_DATE_NOT_SURVEY_DATE"
+    }
+  ],
+  "author_variants": [
+    "Jacob von Holst, museum catalogue",
+    "Johan von Holst, 1983 archaeology",
+    "J. V. Holst, engraving signature"
+  ],
+  "author_identity_reconciled": false,
+  "independent_catalogues": [
+    {
+      "id": "MUSEUM",
+      "url": "https://katalogus.keresztenymuzeum.hu/mutargy/1172/kovar-madartavlati-kepe",
+      "inventory": "1975.4702.1",
+      "documents": "engraving legend A-I, author variant"
+    },
+    {
+      "id": "BNF_SECOND",
+      "url": "https://gallica.bnf.fr/ark:/12148/btv1b53041153k",
+      "inventory": "GE DD-2987 (3277)",
+      "documents": "second copy, no new independent survey"
+    },
+    {
+      "id": "BRITISH_LIBRARY",
+      "url": "https://commons.wikimedia.org/wiki/User:Jheald/KTop_classes/110",
+      "inventory": "Maps K.Top.110.139",
+      "documents": "another copy, no new independent survey"
+    },
+    {
+      "id": "ARCHAEOLOGY_1983",
+      "url": "https://www.persee.fr/doc/mcarh_0076-5147_1983_num_15_1_1851",
+      "documents": "fig.2 caption with dated estimated survey and east tower of central courtyard gate"
+    },
+    {
+      "id": "ARCHAEOLOGY_1979",
+      "url": "https://www.persee.fr/doc/mcarh_0076-5147_1979_num_13_1_1494",
+      "documents": "excavation of middle gate, towers"
+    },
+    {
+      "id": "RAN",
+      "url": "https://ran.cimec.ro/?codran=108525.01",
+      "inventory": "RAN 108525.01 / LMI MM-I-s-A-04369",
+      "documents": "monument site, not corner coordinate"
+    },
+    {
+      "id": "GOOGLE_BOOKS",
+      "url": "https://books.google.com/books?id=f0QgAQAAMAAJ",
+      "documents": "1670 volume bibliographic reference, specific plate pages not scrutinized"
+    }
+  ],
+  "legend": [
+    {
+      "code": "A",
+      "italian": "Il castello maggiore",
+      "romanian": "cetatea mare",
+      "potential_individual_landmark": false
+    },
+    {
+      "code": "B",
+      "italian": "Il castello minore",
+      "romanian": "cetatea mică",
+      "potential_individual_landmark": false
+    },
+    {
+      "code": "C",
+      "italian": "I precipity delle rupi",
+      "romanian": "râpe",
+      "potential_individual_landmark": false
+    },
+    {
+      "code": "D",
+      "italian": "Il riuole Lapusch",
+      "romanian": "râul Lăpuș",
+      "potential_individual_landmark": false
+    },
+    {
+      "code": "E",
+      "italian": "Vn picciol prato",
+      "romanian": "pajiște",
+      "potential_individual_landmark": false
+    },
+    {
+      "code": "F",
+      "italian": "Monti ripieni de boschi, e alberi",
+      "romanian": "munți împăduriți",
+      "potential_individual_landmark": false
+    },
+    {
+      "code": "G",
+      "italian": "L'entrada del castello maggiore",
+      "romanian": "intrarea cetății mari",
+      "potential_individual_landmark": true
+    },
+    {
+      "code": "H",
+      "italian": "L'entrata del castello minore",
+      "romanian": "intrarea cetății mici",
+      "potential_individual_landmark": true
+    },
+    {
+      "code": "I",
+      "italian": "Strada de Neubania",
+      "romanian": "drumul către Baia Mare",
+      "potential_individual_landmark": false
+    }
+  ],
+  "specific_landmark_candidates": [
+    {
+      "id": "HOLST_G",
+      "name": "entrance to greater castle",
+      "graphic_symbol": "G",
+      "matches_1979_or_1983_archaeology": false,
+      "matched_1924_pixel": false,
+      "measured_modern_same_corner": false,
+      "gcp_admitted": false
+    },
+    {
+      "id": "HOLST_H",
+      "name": "entrance to smaller castle",
+      "graphic_symbol": "H",
+      "matches_1979_or_1983_archaeology": false,
+      "matched_1924_pixel": false,
+      "measured_modern_same_corner": false,
+      "gcp_admitted": false
+    },
+    {
+      "id": "EXCAVATED_EAST_TOWER",
+      "name": "east tower at central court gate, 1983 report",
+      "graphic_symbol": null,
+      "matches_Holst_G_or_H": false,
+      "matched_1924_pixel": false,
+      "measured_modern_same_corner": false,
+      "gcp_admitted": false
+    }
+  ],
+  "austrian_source": {
+    "Romanian_PDdT_sheet": "2977 Șomcuta Mare (1924)",
+    "printed_predecessor": "Austrian original 1:25,000",
+    "source_sheet_id": null,
+    "source_survey_year": null,
+    "original_25000_scan_found": false,
+    "checked_cues": [
+      {
+        "catalogue": "MAPSTER KUK025",
+        "url": "https://igrek.amzp.pl/mapindex.php?cat=KUK025&listtype=standard&listsort=sortoption1",
+        "outcome": "no exact local sheet document"
+      },
+      {
+        "catalogue": "Cholnoky TOP-3KF-25",
+        "url": "http://cholnokymaps.gisit.ro/",
+        "outcome": "series known, local search endpoint blocked on POST"
+      },
+      {
+        "catalogue": "Arcanum thirdsurvey25000",
+        "url": "https://maps.arcanum.com/en/map/thirdsurvey25000/",
+        "outcome": "no individual local original and date independently obtained"
+      },
+      {
+        "catalogue": "ČÚZK third survey",
+        "url": "https://geoportal.gov.cz/php/micka/record/basic/CZ-CUZK-TOPO75-R?dlang=eng",
+        "outcome": "series archive, exact Chioar sheet not obtained"
+      }
+    ],
+    "regional_map_excluded": "Gaura und Galgó 16 XXIX (5071), 1:75,000, 1886/1900; not 1:25,000 original",
+    "Holst_copperplate_is_not_1924_austrian_predecessor": true
+  },
+  "admission": {
+    "recovered_period_witnesses": 1,
+    "named_symbols": 9,
+    "candidate_gate_symbols": 2,
+    "qualified_GCP": 0,
+    "holdouts": 0,
+    "RMSE_m": null,
+    "legal_boundaries": 0,
+    "Chioar_segments": 0,
+    "Transylvania_segments": 0,
+    "OHM_relations": 0
+  },
+  "constraints": {
+    "modified_src": false,
+    "modified_public": false,
+    "modified_actual": false,
+    "modified_osmb": false,
+    "modified_ohm": false,
+    "modified_geodata": false,
+    "committed_image": false,
+    "emails": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false
+  }
+}
