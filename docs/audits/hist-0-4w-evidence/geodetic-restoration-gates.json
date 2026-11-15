@@ -1,0 +1,150 @@
+{
+  "phase": "HIST-0.4w",
+  "date": "2026-11-15",
+  "parent_crosswalk": "docs/audits/hist-0-4v-evidence/architectural-geodetic-crosswalk.json",
+  "site": "RAN 108525.01 / LMI MM-I-s-A-04369",
+  "source_constraints": {
+    "fig3": "Locally scaled archaeology east tower gate plan (0-1m scale bar); no georeferenced points or coordinate table",
+    "fig4": "Stratigraphic section at 1:50: structural markers I/II/III and layers 1–8; no global control points",
+    "late_restoration": "1980 project attributed to architect V. Brâncu and 1981 works in 1983 report; a gate tower rebuilt according to museum, exact tower attribution unverified",
+    "original_asbuilt_restoration_drawing_recovered": false,
+    "independent_post1981_wall_foundation_geodetic_survey_found": false,
+    "national_crs_for_wall_corner": null,
+    "observed_epoch": null,
+    "documented_point_accuracy_m": null
+  },
+  "candidates": [
+    {
+      "id": "HOLST_G_ENTRANCE_LARGE_CASTLE",
+      "source": "Holst engraving symbol G",
+      "local_scaled_plan_same_gate": false,
+      "exact_original_wall_corner": null,
+      "modern_measured_corner": null,
+      "crs": null,
+      "gcp": false,
+      "status": "P1_SEMANTIC_ONLY"
+    },
+    {
+      "id": "HOLST_H_ENTRANCE_SMALL_CASTLE",
+      "source": "Holst engraving H; functionally matches small castle gateway and its 1657 datestone context",
+      "local_scaled_plan_same_gate": false,
+      "exact_original_wall_corner": null,
+      "modern_measured_corner": null,
+      "crs": null,
+      "gcp": false,
+      "status": "P1_FUNCTIONAL_ONLY"
+    },
+    {
+      "id": "EXCAVATION_B_EAST_GATE_TOWER",
+      "source": "1983 fig3 page 478 and fig4 page 479; 1m bar and 1:50 profile",
+      "local_scaled_plan": true,
+      "structural_labels": [
+        "I stairwell wall",
+        "II south wall of tower",
+        "III first courses of earlier front wall",
+        "layer 7 bedrock"
+      ],
+      "phase_offset_described": true,
+      "hatch_pattern_phase_certified": false,
+      "restoration_asbuilt_mask": null,
+      "exact_original_wall_corner": null,
+      "modern_measured_corner": null,
+      "crs": null,
+      "gcp": false,
+      "status": "P2_LOCAL_ARCHAEOLOGICAL_GEOMETRY_ONLY"
+    },
+    {
+      "id": "EXCAVATION_B_WEST_GATE_TOWER",
+      "source": "1983 figs8–12 show west tower buttress, blocked entrances and masonry",
+      "local_scaled_plan": false,
+      "exact_original_wall_corner": null,
+      "modern_measured_corner": null,
+      "crs": null,
+      "gcp": false,
+      "status": "P1_PHOTOGRAPHIC_EXCAVATION_EVIDENCE"
+    },
+    {
+      "id": "EXCAVATION_D_LOWER_GATE",
+      "source": "1983 page 482",
+      "passage_width_m": 3.7,
+      "pillar_dimensions_m": [
+        0.5,
+        0.5,
+        0.9
+      ],
+      "distinct_from_central_gate": true,
+      "local_scaled_plan": false,
+      "modern_measured_corner": null,
+      "gcp": false,
+      "status": "P1_LOCALLY_MEASURED_PASSAGE"
+    },
+    {
+      "id": "EXCAVATION_B_CENTRAL_GATE_COMPLEX",
+      "source": "1983 page 482, two towers, same middle-gate complex described in 1979",
+      "local_scaled_plan_of_east_tower": true,
+      "holst_G_or_H_single_corner_correspondence": false,
+      "modern_measured_corner": null,
+      "gcp": false,
+      "status": "P2_ARCHAEOLOGICAL_COMPLEX_LOCALLY_MEASURED",
+      "reported_passage_widths_m": [
+        4.15,
+        3.15
+      ],
+      "which_cross_section_each_width_describes": null
+    }
+  ],
+  "gates": [
+    {
+      "id": "LOCAL_METRIC_FIGURE",
+      "passed": true,
+      "reason": "1983 fig3 0–1 m bar, fig4 1:50 and layer legend directly inspected"
+    },
+    {
+      "id": "SAME_HISTORIC_ORIGINAL_CORNER",
+      "passed": false,
+      "reason": "No identical G/H corner identified unambiguously in period view, excavation phase and existing building"
+    },
+    {
+      "id": "RECONSTRUCTION_MASK",
+      "passed": false,
+      "reason": "Solid and hatched areas lack source legend for original/restored phases; as-built restoration file not recovered"
+    },
+    {
+      "id": "MODERN_INDEPENDENT_SURVEY",
+      "passed": false,
+      "reason": "No same original foundation vertex with X/Y/Z, CRS, observation epoch, survey accuracy"
+    },
+    {
+      "id": "1924_AUSTRIAN_25000_LINK",
+      "passed": false,
+      "reason": "Source Austrian original sheet not uniquely identified; no matched 1924 corner pixel"
+    },
+    {
+      "id": "HOLDOUT",
+      "passed": false,
+      "reason": "Zero accepted independent GCPs implies no valid fit or holdout residual"
+    },
+    {
+      "id": "LEGAL_BOUNDARY",
+      "passed": false,
+      "reason": "A fortification gate is not a normative administrative boundary"
+    }
+  ],
+  "next_requirements": [
+    "Retrieve architect V. Brâncu 1980 restoration project and dated pre-1981 plan plus signed as-built drawing; annotate original foundation versus restored elevation based on documentary legend, not graphic hatches guessed from 1983 fig3",
+    "Obtain independent field or survey report identifying preserved original corner with point ID, X/Y/(Z), CRS, observation date, uncertainty",
+    "Match one original corner through dated historical source and exact sheet pixel, independently from image georeferencing",
+    "Continue original Austrian 1:25000 source identification; only compute geodetic fit with multiple independent GCPs and a withheld holdout; legal boundary certification separate"
+  ],
+  "verdict": {
+    "local_metric_excavation_figures_authenticated": 2,
+    "unique_original_wall_corner_surveyed": 0,
+    "independent_GCP": 0,
+    "holdout": 0,
+    "RMSE_m": null,
+    "legal_boundary_segments": 0,
+    "OHM_relations": 0,
+    "Chioar_segments": 0,
+    "Transylvania_segments": 0
+  }
+}

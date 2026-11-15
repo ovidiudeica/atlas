@@ -1,0 +1,241 @@
+{
+  "phase": "HIST-0.4w",
+  "date": "2026-11-15",
+  "source_provenance": {
+    "publisher": "Persée",
+    "article_1979": {
+      "title": "Raport preliminar de cercetare arheologică la Cetatea Chioar",
+      "author": "S. Iosipescu, V. Ursu, T. Ursu",
+      "year": 1979,
+      "volume": 13,
+      "pages_printed": [
+        337,
+        340
+      ],
+      "url": "https://www.persee.fr/doc/mcarh_0076-5147_1979_num_13_1_1494",
+      "doi": "10.3406/mcarh.1979.1494",
+      "article_id": "mcarh_0076-5147_1979_num_13_1_1494"
+    },
+    "article_1983": {
+      "title": "Cercetările arheologice la Cetatea de Piatră (Chioar)",
+      "author": "S. Iosipescu, V. Ursu, T. Ursu și colaboratorii",
+      "year": 1983,
+      "volume": 15,
+      "pages_printed": [
+        474,
+        483
+      ],
+      "url": "https://www.persee.fr/doc/mcarh_0076-5147_1983_num_15_1_1851",
+      "doi": "10.3406/mcarh.1983.1851",
+      "article_id": "mcarh_0076-5147_1983_num_15_1_1851"
+    }
+  },
+  "method": "Downloaded image/JPEG per printed page through Persée renderPage, validated JPEG file length and SHA-256, read 14 images visually; 5 high-resolution pages additionally verified. Local private temporary copies only. The complete PDFs were blocked by 403; no PDFs/binaries committed.",
+  "render_contract": {
+    "low_resolution_suffix": "_0000_710.jpg",
+    "high_resolution_suffix": "_0000_1400.jpg",
+    "page_number_is_printed_page": true,
+    "never_use_filename_as_geodetic_proof": true
+  },
+  "pages_710": [
+    {
+      "year": 1979,
+      "page": 337,
+      "bytes": 145290,
+      "sha256": "1db5cef115f4e2a3907105e63026446fb16e3c457359acf3c95c48cf37da3fbe",
+      "width_px": 710,
+      "height_px": 1008,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1979_num_13_1_1494/mcarh_0076-5147_1979_num_13_1_T1_0337_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1979,
+      "page": 338,
+      "bytes": 187143,
+      "sha256": "0ef6d81747a3dca140ddc8def70723c5631385096dc08fce2064cb1adc82653a",
+      "width_px": 710,
+      "height_px": 987,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1979_num_13_1_1494/mcarh_0076-5147_1979_num_13_1_T1_0338_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1979,
+      "page": 339,
+      "bytes": 195579,
+      "sha256": "d1eeed51ef4de30fda2610f2259bc5fa3b07e14b2b2eda561b837a79ad6efb0a",
+      "width_px": 710,
+      "height_px": 987,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1979_num_13_1_1494/mcarh_0076-5147_1979_num_13_1_T1_0339_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1979,
+      "page": 340,
+      "bytes": 181355,
+      "sha256": "45b4f5b8dce578cf5f7007d03a147a3670c8603abc88b31be5a981878718221d",
+      "width_px": 710,
+      "height_px": 1007,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1979_num_13_1_1494/mcarh_0076-5147_1979_num_13_1_T1_0340_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 474,
+      "bytes": 212908,
+      "sha256": "1e1d0b33da5c0407a02781edf90f746c19132a1b565480586db0b53974d6ce89",
+      "width_px": 710,
+      "height_px": 1029,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0474_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 475,
+      "bytes": 268063,
+      "sha256": "07691db140c6108374e49e83cc5679d043d36db370ae314763ad90441e26187d",
+      "width_px": 710,
+      "height_px": 1025,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0475_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 476,
+      "bytes": 116797,
+      "sha256": "52ca4f31e8d4a75b351cb4a778b1ebd08ac393e3f8d1ff07e0ea1f48718d69bc",
+      "width_px": 710,
+      "height_px": 1029,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0476_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 477,
+      "bytes": 72867,
+      "sha256": "e6a7b65a852d1f4663800c06401ee98680f0e2bc90f27d8cafc645d8df2cd17f",
+      "width_px": 710,
+      "height_px": 1024,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0477_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 478,
+      "bytes": 70054,
+      "sha256": "b9154015aaabc6ea58ccf690567edd7a18d09119ac266ff66ac0ecbab370d2de",
+      "width_px": 710,
+      "height_px": 1027,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0478_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 479,
+      "bytes": 103987,
+      "sha256": "7ae5410f043567edf8a3448178c553b615bdeeb952e89d790d0a9b98c5f897a5",
+      "width_px": 710,
+      "height_px": 1023,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0479_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 480,
+      "bytes": 138842,
+      "sha256": "37ebf793d70d9204009f42c5e22d8658767008a5b19dcd3165552224217c9fe3",
+      "width_px": 710,
+      "height_px": 1029,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0480_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 481,
+      "bytes": 128842,
+      "sha256": "29ed9c0554e4044022e6465a47856902fc8072d99cd5f1f5d391426d4778579f",
+      "width_px": 710,
+      "height_px": 1018,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0481_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 482,
+      "bytes": 211936,
+      "sha256": "0f22428dcd41785dc3ad0858e3c4783f81edb6fb9d5b1cc9ab213dc7fddb83e4",
+      "width_px": 710,
+      "height_px": 1028,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0482_0000_710.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 483,
+      "bytes": 69952,
+      "sha256": "092abc89ac245b643243b98d158b85b1133951418cf6c7589bb79e2cc168c8a2",
+      "width_px": 710,
+      "height_px": 1020,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0483_0000_710.jpg",
+      "readable": true
+    }
+  ],
+  "pages_highres": [
+    {
+      "year": 1979,
+      "page": 337,
+      "bytes": 470335,
+      "sha256": "ac1c9363af1c727ad9175f3269059e4798b07665ea25d20fc20304ee1cc431af",
+      "width_px": 1628,
+      "height_px": 2313,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1979_num_13_1_1494/mcarh_0076-5147_1979_num_13_1_T1_0337_0000_1400.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 477,
+      "bytes": 846301,
+      "sha256": "9bbdaeb485017a1ef2c8ef8faaf73f39dd851411c127e3a272f427198bb5fe35",
+      "width_px": 1620,
+      "height_px": 2337,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0477_0000_1400.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 478,
+      "bytes": 565237,
+      "sha256": "e080b5934db908aa9849dc0483600d5a35a8839b49a9ea30a4a9dfaee5c152da",
+      "width_px": 1621,
+      "height_px": 2345,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0478_0000_1400.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 479,
+      "bytes": 1312164,
+      "sha256": "d4afa7f01ca34b5bdc47a4add219ee3e0fcfccd9acddb59dcb4cf5528fd21c8e",
+      "width_px": 1622,
+      "height_px": 2339,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0479_0000_1400.jpg",
+      "readable": true
+    },
+    {
+      "year": 1983,
+      "page": 482,
+      "bytes": 676612,
+      "sha256": "41e9a3a57a8cbf02233b208dbc87133f67f534dc2e9dd8c92dc461b356aa3029",
+      "width_px": 1616,
+      "height_px": 2340,
+      "url": "https://www.persee.fr/renderPage/mcarh_0076-5147_1983_num_15_1_1851/mcarh_0076-5147_1983_num_15_1_T1_0482_0000_1400.jpg",
+      "readable": true
+    }
+  ],
+  "evidence_boundaries": {
+    "figure_3_source_image_is_locally_metric": true,
+    "figure_4_source_image_is_stratigraphic_metric": true,
+    "any_printed_global_crs_or_geo_survey_points": false,
+    "source_images_committed_to_repo": false,
+    "pdf_originals_committed_to_repo": false
+  }
+}
