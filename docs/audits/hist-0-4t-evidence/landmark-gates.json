@@ -1,0 +1,70 @@
+{
+  "phase": "HIST-0.4t",
+  "audit_date": "2026-11-15",
+  "authority": "Preserves HIST-0.4s-LM1 individual chronology and source-overlap classification, without redefining coordinates",
+  "rules": {
+    "single_locator_is_not_gcp": true,
+    "historical_map_feature_must_be_uniquely_identified": true,
+    "same_stable_site_across_eras_required": true,
+    "modern_same_object_vertex_must_be_independently_surveyed": true,
+    "terrain_geometry_does_not_certify_legal_admin_boundary": true,
+    "changing_meanders_not_assumed_stable": true
+  },
+  "candidates": [
+    {
+      "id": "BUTEASA_WOODEN_CHURCH",
+      "status": "P1_CANDIDATE_ONLY",
+      "historic_existence_credible": true,
+      "continuity_of_unique_surveyed_corner": false,
+      "independent_modern_vertex": false,
+      "gcp_admitted": false,
+      "source": "docs/audits/hist-0-4s-landmark-supplement/monument-chronology-and-wms.json"
+    },
+    {
+      "id": "VALENII_SOMCUTEI_WOODEN_CHURCH",
+      "status": "P1_CANDIDATE_ONLY",
+      "historic_existence_credible": true,
+      "neighbouring_sheet_2977_2877_ambiguity": true,
+      "continuity_of_unique_surveyed_corner": false,
+      "independent_modern_vertex": false,
+      "gcp_admitted": false,
+      "source": "docs/audits/hist-0-4s-landmark-supplement/monument-chronology-and-wms.json"
+    },
+    {
+      "id": "CODRU_BUTESII_RELOCATED_WOODEN_CHURCH",
+      "status": "EXCLUDED_AT_CURRENT_SITE_PRE1937",
+      "moving_to_present_site": 1937,
+      "gcp_admitted": false
+    },
+    {
+      "id": "SOMCUTA_OLD_WOODEN_CHURCH_RELOCATED",
+      "status": "EXCLUDED_AT_ULMENI_SITE_FOR_1859",
+      "moving_to_ulmeni": 1895,
+      "gcp_admitted": false
+    },
+    {
+      "id": "CHIOAR_CASTLE_UNIQUE_BASTION",
+      "status": "NO_UNAMBIGUOUS_CROSS_ERA_CORNER",
+      "modern_surveyed_vertex": false,
+      "gcp_admitted": false
+    },
+    {
+      "id": "LAPUS_MEANDER_OR_SPOT_HEIGHT_406",
+      "status": "NOT_A_VERIFIED_FIXED_GEODETIC_POINT",
+      "gcp_admitted": false
+    }
+  ],
+  "totals": {
+    "qualified_gcp": 0,
+    "holdout_points": 0,
+    "approved_chioar_segments": 0,
+    "approved_transylvania_segments": 0,
+    "approved_ohm_relations": 0
+  },
+  "next_gate": [
+    "Retrieve original Austrian 1:25000 sheet bearing individual Chioar site, read sheet ID and marginal survey/print dates",
+    "Find local large-scale pre-1877 original with exactly identifiable landmark, distinct from 1924-derived cartography",
+    "Identify corresponding uniquely surveyed modern fixed vertex with coordinates and error budget",
+    "Only then create GCP pair and validate independent residuals/holdout before any georeferencing, geometry, or boundary decision"
+  ]
+}
