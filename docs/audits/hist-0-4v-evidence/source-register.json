@@ -1,0 +1,163 @@
+{
+  "phase": "HIST-0.4v",
+  "audit_date": "2026-11-15",
+  "base_main_sha": "53cbca412cfd76b46b7399f885fa59e2fc803f0c",
+  "scope": "Historical gate cross-identification and independent modern measured survey-point screening at Cetatea Chioarului (RAN 108525.01); no web or canonical geometry changes",
+  "parent_research": "docs/audits/hist-0-4u-evidence/primary-evidence.json",
+  "sources": [
+    {
+      "id": "HOLST_BNF_GE_D_14179",
+      "type": "seventeenth-century engraved primary-period view, digitized from physical print",
+      "url": "https://commons.wikimedia.org/w/index.php?curid=120425983",
+      "archive_ref": "Bibliothèque nationale de France GE D-14179, btv1b8492308h",
+      "inspected": "high resolution 6260x5108 verified in HIST-0.4u; content reused from existing certified manifest",
+      "sha256": "4d035db75c147ce2ec56118577ae3747287edf268de98cabb68be406df3c7b8f",
+      "specific_evidence": [
+        "G labels entrance of larger castle",
+        "H labels entrance of smaller castle",
+        "oblique perspective, not geodetic"
+      ],
+      "independent_of": "1979/1983 archaeology as dated portrayal, but picture copies and derivative sketches do not provide independent measurements",
+      "metric_geometry": false
+    },
+    {
+      "id": "ARCH_1979",
+      "type": "excavation report",
+      "authors": "Sergiu Iosipescu, Viorica Ursu, Traian Ursu",
+      "year": 1979,
+      "publication": "Materiale și cercetări arheologice 13, pp. 337-340",
+      "url": "https://www.persee.fr/doc/mcarh_0076-5147_1979_num_13_1_1494",
+      "doi": "10.3406/mcarh.1979.1494",
+      "access": "Persée indexed full text; article PDF/full plan image not independently downloaded",
+      "specific_evidence": [
+        "Sector B: middle gate with two adjacent rectangular gate-tower footprints, north/east walls and gatepost remains",
+        "Sector D: excavation D II located an entrance in north-western part of outer courtyard",
+        "Sector E: E II cleared deposits in corridor of older access; E III measured western defence ditch sections",
+        "Distance and excavation trench/grid measurements are local stratigraphic values, not projected geodetic coordinates"
+      ],
+      "measured_same_corner_coordinate": false
+    },
+    {
+      "id": "ARCH_1983",
+      "type": "continued excavation report",
+      "authors": "Sergiu Iosipescu, Viorica Ursu, Traian Ursu et al.",
+      "year": 1983,
+      "publication": "Materiale și cercetări arheologice 15, pp. 474-483",
+      "url": "https://www.persee.fr/doc/mcarh_0076-5147_1983_num_15_1_1851",
+      "doi": "10.3406/mcarh.1983.1851",
+      "access": "Persée indexed full text and figures referred by captions; exact mapped figure pixel/coordinates not inspected",
+      "specific_evidence": [
+        "Sector B central courtyard gate contains east and west gate towers investigated across 1968, 1979-1980",
+        "East gate tower: archaeological phases have shifted original foundation relative to later east wall; two construction phases are documented",
+        "East tower restoration planned up to first-floor level; post-1979/1980 conservation-restoration 1981 onwards",
+        "West gate tower: north-eastern corner supported by buttress and eastern entrance blocked in later alteration",
+        "Sector C smaller outer castle, sector D lower courtyard are distinct from sector B central gate",
+        "Figures 2, 3, 4, 6, 7 are cited for plans/sections/photographs, but no modern geodetic corner-coordinate schedule is supplied"
+      ],
+      "measured_same_corner_coordinate": false
+    },
+    {
+      "id": "KACSO_2011",
+      "type": "curated museum archaeological repertory",
+      "author": "Carol Kacsó",
+      "year": 2011,
+      "title": "Repertoriul arheologic al județului Maramureș, vol. I",
+      "publisher": "Muzeul Județean de Istorie și Arheologie Maramureș, Eurotip",
+      "url": "https://www.muzeubaiamare.ro/wp-content/uploads/kacso_repertoriu_vol_1-1.pdf",
+      "access": "complete PDF directly downloaded to temporary desktop workspace; pp. 436-438 read from original PDF with pypdf",
+      "pdf_bytes": 4389941,
+      "pdf_sha256": "ef1eae89c3fc45ff5e7c2e212b57a35753e36ed508dfe254c822f4afc8e187da",
+      "printed_pages": [
+        436,
+        437,
+        438
+      ],
+      "specific_evidence": [
+        "Three defensive enclosures with internal gates and drawbridges; two castle complexes connected by walled road and courtyard",
+        "Small castle gate associated with a 1657 plaque showing coat of arms of Gheorghe Rákóczi II, indicating restoration/reconstruction",
+        "Central courtyard gate distinct from small castle gate, investigated in 1968 and 1976-1980",
+        "Summer 1981 partial restoration; later reproduced tower photograph referenced as fig. 236",
+        "Topography based on archaeological excavations, old plans and air photos is largely clarified for later phase, not for construction phases before 16th century"
+      ],
+      "measured_same_corner_coordinate": false
+    },
+    {
+      "id": "MUSEUM_HISTORY",
+      "type": "institutional public statement",
+      "url": "https://www.muzeubaiamare.ro/vernisajul-expozitiei-cetatea-de-piatra-cetatea-chioarului/",
+      "specific_evidence": [
+        "One prominent gate tower underwent reconstruction during the 1979-1981 works; source does not uniquely label east/west/large/small tower"
+      ],
+      "reconstruction_alert": true,
+      "measured_same_corner_coordinate": false
+    },
+    {
+      "id": "RAN_108525_01",
+      "type": "official protected archaeological site catalogue",
+      "url": "https://ran.cimec.ro/?codran=108525.01",
+      "RAN": "108525.01",
+      "LMI": "MM-I-s-A-04369",
+      "specific_evidence": [
+        "site in Berchezoaia commune Remetea Chioarului, south of village on rocky summit near Lăpuș",
+        "historic chronology XIII-XVIII; conservation assessment in 2019"
+      ],
+      "observed_corner_coordinates": false,
+      "datum_and_point_accuracy": false
+    },
+    {
+      "id": "LECHINTAN_1988",
+      "type": "derivative schematic redrawing of engravure",
+      "url": "https://biblioteca-digitala.ro/reviste/Acta-Mvsei-Porolissensis/12-Acta-Mvsei-Porolissensis-XII-1988-Zalau_321.pdf",
+      "source_context": "V. Lechințan 1988 p. 338, redrawn wall lines from period engraving, with drawn perspective removed",
+      "access": "indexed text/caption only; full PDF access denied HTTP 403, not pixel-inspected",
+      "specific_evidence": [
+        "numbered labels for large and small castles, respective entrances and route to Baia Mare",
+        "derivative of period engraving, not independently surveyed geographic plan"
+      ],
+      "independent_geodetic_witness": false
+    },
+    {
+      "id": "PRIMARIA",
+      "type": "local public history page",
+      "url": "https://remeteachioarului.ro/",
+      "specific_evidence": [
+        "describes two castles joined by a fortified corridor; local layout describes small castle in west and large castle in east"
+      ],
+      "actual_geodetic_vertex": false
+    },
+    {
+      "id": "OSM_SITE_MARKER",
+      "type": "community web map site-level locator",
+      "url": "https://mapcarta.com/N896978567",
+      "external_id": "OpenStreetMap node 896978567",
+      "specific_evidence": [
+        "ruin site locator, not a gate wall corner"
+      ],
+      "coordinate_qualifies_as_GCP": false
+    },
+    {
+      "id": "CJ_2023",
+      "type": "public property administration decision",
+      "url": "https://www.cjmaramures.ro/relatii-internationale/infratiri/raionul-singerei-republica-moldova/hotararea-nr-187-din-31-05-2023?print=1&tmpl=component",
+      "specific_evidence": [
+        "decision to pursue public ownership transfer of monument MM-I-s-A-04369; does not publish gate corner XYZ records"
+      ],
+      "independent_surveyed_vertex": false
+    }
+  ],
+  "screened_modern_geodetic_sources": [
+    "RAN site descriptor",
+    "OpenStreetMap point-level ruins marker",
+    "county monument administrative decision",
+    "1979/1983 excavation documentation",
+    "2011 heritage repertory"
+  ],
+  "no_surveyed_gate_corner_found_in_screened_sources": true,
+  "not_a_claim_that_no_survey_exists_anywhere": true,
+  "reading_limits": [
+    "Web-hosted 1983 excavation article PDF plan figures were not recovered for pixel-level comparison; avoid asserting direct plan-to-gravure spatial match",
+    "1988 Lechințan plan scan was not retrieved; indexed figure caption alone is not precision evidence",
+    "2011 repertory PDF was read as text at pp.436-438; no photographic pixel identification or modern survey coordinate tied to those pages"
+  ],
+  "no_source_binaries_committed": true
+}
