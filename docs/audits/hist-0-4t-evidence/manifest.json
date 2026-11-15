@@ -1,0 +1,45 @@
+{
+  "phase": "HIST-0.4t",
+  "date": "2026-11-15",
+  "base_main_sha": "e0c701e807c4feaa2c74cf0576c8690dd5277e1a",
+  "predecessor": "HIST-0.4s + HIST-0.4s-LM1, merged in main",
+  "objective": "Source-and-landmark qualification, not forced admission",
+  "verdict": "SEARCH_SCREENING_PERFORMED__CANDIDATE_REGIONAL_GRID_AND_COLLECTION_LOCATED__EXACT_25000_PREDECESSOR_NOT_QUALIFIED",
+  "source_gate": {
+    "original_25000_sheet_unique_id": null,
+    "original_25000_survey_year": null,
+    "original_25000_scan_retrieved": false,
+    "local_pre_1877_large_scale_original_retrieved": false,
+    "new_independent_gcp": 0,
+    "new_holdout_points": 0,
+    "affine_rmse_m": null,
+    "independent_holdout_rmse_m": null,
+    "newly_certified_legal_boundary_segments": 0,
+    "OHM_approved": 0,
+    "temporal_projection_permitted": false,
+    "status": "SEARCH_SCREENING_PERFORMED__CANDIDATE_REGIONAL_GRID_AND_COLLECTION_LOCATED__EXACT_25000_PREDECESSOR_NOT_QUALIFIED"
+  },
+  "landmark_gate": {
+    "qualified_gcp": 0,
+    "holdout_points": 0,
+    "approved_chioar_segments": 0,
+    "approved_transylvania_segments": 0,
+    "approved_ohm_relations": 0
+  },
+  "exact_Austrian_sheet_id": null,
+  "original_source_print_or_survey_year": null,
+  "no_new_local_raster_uploaded": true,
+  "no_direct_ohm_modification": true,
+  "no_change_to_src_public_data": true,
+  "no_legal_geometry_certification": true,
+  "no_emails_or_institutional_contact": true,
+  "no_orders_payments_subscriptions": true,
+  "files": [
+    "README.md",
+    "source-identification.json",
+    "landmark-gates.json",
+    "manifest.json",
+    "validate-evidence.mjs"
+  ],
+  "next_step": "HIST-0.4u — targeted identification of original Austrian 1:25000 sheet and individual same-object pre-1877 physical points; preserve zero admissions until gate passes"
+}
