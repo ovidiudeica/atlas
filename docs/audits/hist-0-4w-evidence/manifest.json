@@ -21,12 +21,15 @@
       3,
       4
     ],
-    "central_gate_local_width_m": 4.15,
     "lower_gate_local_width_m": 3.7,
     "original_vs_restored_hatch_meaning_qualified": false,
     "asbuilt_restoration_document_recovered": false,
     "independent_original_gate_corner_survey_found": false,
-    "original_Austrian_25000_sheet_id": null
+    "original_Austrian_25000_sheet_id": null,
+    "central_gate_local_widths_m": [
+      4.15,
+      3.15
+    ]
   },
   "admission": {
     "new_independent_GCP": 0,
