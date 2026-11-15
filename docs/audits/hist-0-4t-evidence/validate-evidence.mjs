@@ -14,7 +14,7 @@ ok(parent.phase==='HIST-0.4s'&&supplement.phase==='HIST-0.4s','previous certifie
 ok(parent.evidence.full_JPG_sha256==='367c2f3d5186bf04b4d980c7d4a4ab513cbc14192dcd37803ac969d1f49d93ce','original full 1924 scan hash');
 ok(parent.evidence.original_source_scale_denominator_printed===25000,'printed predecessor scale');
 ok(parent.evidence.original_source_unique_Austrian_sheet_id===null,'predecessor still unknown in parent');
-ok(parent.admission.number_qualified_same_object_GCPs===undefined || parent.evidence.number_qualified_same_object_GCPs===0,'previous GCPs not falsely admitted');
+ok(parent.evidence.number_qualified_same_object_GCPs===0 && parent.admission.control_pairs===0,'previous GCPs not falsely admitted');
 ok(s.previous_certified.predecessor_original_sheet_id===null&&s.previous_certified.predecessor_survey_year===null,'do not invent predecessor');
 ok(s.newly_checked.some(x=>x.id==='MAPSTER_GAURA_GALGO_1886'&&x.map_scale===75000&&x.print_year===1886),'regional 75k not 25k');
 ok(s.newly_checked.some(x=>x.id==='CHOLNOKY_3KF_25'&&x.search_api_post_http===403&&!x.exact_local_sheet_identified),'catalogue blockage explicitly shown');
