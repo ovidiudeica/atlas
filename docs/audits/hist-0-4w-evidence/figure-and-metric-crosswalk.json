@@ -1,0 +1,208 @@
+{
+  "phase": "HIST-0.4w",
+  "date": "2026-11-15",
+  "conventions": [
+    {
+      "id": "HOLST_PRINT_LEGEND",
+      "source": "BnF 17th century signed KÖWAR engraving",
+      "tokens": {
+        "A": "larger castle",
+        "B": "smaller castle",
+        "G": "larger castle gate",
+        "H": "smaller castle gate"
+      },
+      "map_type": "oblique perspective",
+      "geodetic_coordinates": false
+    },
+    {
+      "id": "IOSIPESCU_1979_DESCRIPTIVE",
+      "source": "1979 p.337 first paragraph b. Obiectivul cercetat",
+      "tokens": {
+        "A": "larger/exterior castle east",
+        "B": "smaller/interior castle west",
+        "C": "castle square and linking corridor",
+        "D": "outer courtyard and road south",
+        "E": "west ditch at smaller castle"
+      },
+      "map_type": "descriptive geographic site scheme, not numbered excavation plot",
+      "geodetic_coordinates": false
+    },
+    {
+      "id": "IOSIPESCU_1979_EXCAVATION",
+      "source": "1979 p.337 final paragraph and pp.338-340",
+      "tokens": {
+        "A": "upper larger castle / ditch",
+        "B": "middle gate and its towers",
+        "C": "smaller castle trenches",
+        "D": "lower courtyard and entrance",
+        "E": "small castle outer ditch / old access"
+      },
+      "map_type": "field sectors and trenches",
+      "geodetic_coordinates": false
+    },
+    {
+      "id": "IOSIPESCU_1983_EXCAVATION",
+      "source": "1983 p.474, sectors as described and figs.2–4",
+      "tokens": {
+        "B": "central courtyard and gate with east/west towers",
+        "C": "exterior smaller castle",
+        "D": "lower courtyard entrance"
+      },
+      "map_type": "archaeological field sectors",
+      "geodetic_coordinates": false
+    }
+  ],
+  "key_warning": "The same 1979 printed report introduces descriptive A/B/C components and later uses B/C for different archaeological sector units. The 1983 figure 2 is a redrawing of historical Holst view, so its legend is not an independent geodetic survey and not an excavation-sector namespace. Never compare letters without id+context+page.",
+  "figures": [
+    {
+      "id": "ARCH1983_FIG_1",
+      "page": 476,
+      "title": "Țara Lăpușului și Chioarului – vecinii principali",
+      "kind": "regional locational sketch",
+      "source_sha_710": "52ca4f31e8d4a75b351cb4a778b1ebd08ac393e3f8d1ff07e0ea1f48718d69bc",
+      "scale": "not adopted for gate GCP",
+      "metric_gate_plan": false
+    },
+    {
+      "id": "ARCH1983_FIG_2",
+      "page": 477,
+      "title": "Planul cetății Chioarului după ridicarea estimativă a colonelului Johann von Holst, publicată de Galeazzo Gualdo Priorato (1670)",
+      "kind": "derivative period perspective/architectural plan",
+      "source_sha_highres": "9bbdaeb485017a1ef2c8ef8faaf73f39dd851411c127e3a272f427198bb5fe35",
+      "independent_spatial_witness": false,
+      "internal_legend_letters_are_Holst": false,
+      "source_of_figure_is_Holst": true,
+      "metric_gate_plan": false
+    },
+    {
+      "id": "ARCH1983_FIG_3",
+      "page": 478,
+      "title": "Turnul de est al porții curții centrale a cetății",
+      "kind": "locally scaled excavation plan",
+      "source_sha_highres": "e080b5934db908aa9849dc0483600d5a35a8839b49a9ea30a4a9dfaee5c152da",
+      "north_arrow": true,
+      "graphical_scale_m": [
+        0,
+        1
+      ],
+      "scale_ratio_printed": null,
+      "solid_fill": true,
+      "hatched_fill": true,
+      "hatched_fill_interpretation": "UNLABELED_IN_FIGURE__DO_NOT_ASSUME_ORIGINAL_OR_RECONSTRUCTION",
+      "source_image_dimensions_px": [
+        1621,
+        2345
+      ],
+      "global_crs": null,
+      "benchmark_station_ids": [],
+      "local_archaeological_geometry_exists": true,
+      "surveyed_modern_global_coordinate": false
+    },
+    {
+      "id": "ARCH1983_FIG_4",
+      "page": 479,
+      "title": "Secțiune longitudinală în turnul de est, profil estic",
+      "kind": "archaeological stratigraphic longitudinal section",
+      "source_sha_highres": "d4afa7f01ca34b5bdc47a4add219ee3e0fcfccd9acddb59dcb4cf5528fd21c8e",
+      "printed_scale": "1:50",
+      "north_arrow": true,
+      "structural_labels": {
+        "I": "zidul casei scării",
+        "II": "peretele sudic al turnului",
+        "III": "primele asize ale faței anterioare a turnului"
+      },
+      "stratigraphic_labels": {
+        "1": "umplutură sub ultima podea",
+        "2": "groapă cu pământ și moloz",
+        "3": "strat roșu de ardere",
+        "4": "strat de pământ galben lutos cu urme de arsură roșie și cărbune",
+        "5": "cenușă",
+        "6": "strat roșu de ardere",
+        "7": "stâncă",
+        "8": "pământ galben lutos"
+      },
+      "global_crs": null,
+      "unambiguous_trench_local_origin": null,
+      "modern_point_ref": null,
+      "independent_survey": false
+    },
+    {
+      "id": "ARCH1983_FIG_5",
+      "page": 479,
+      "title": "East gate tower; blocked doorway on the east side",
+      "kind": "excavation photograph",
+      "blocked_doorway_visible": true,
+      "photographic_scale_for_geodetic_matching": false
+    },
+    {
+      "id": "ARCH1983_FIG_6",
+      "page": 480,
+      "title": "Longitudinal section photograph, east gate tower near staircase",
+      "kind": "excavation photograph with vertical photographic staff",
+      "separate_from_stratigraphic_FIG_4": true,
+      "global_coordinates": false
+    },
+    {
+      "id": "ARCH1983_FIG_7",
+      "page": 480,
+      "title": "East tower masonry and blocked entrance",
+      "kind": "excavation photograph",
+      "modern_same_wall_phase_verified": false
+    },
+    {
+      "id": "ARCH1983_FIG_8_TO_13",
+      "page_span": [
+        480,
+        481
+      ],
+      "title": "West-tower chimney, covered passage, masonry and annex images",
+      "kind": "photographic source context",
+      "modern_original_foundation_point_surveyed": false
+    }
+  ],
+  "locally_metric_constraints": [
+    {
+      "id": "CENTRAL_GATE_WIDTH",
+      "page": 482,
+      "feature": "Central courtyard gate flanked by two towers",
+      "observed_width_m": 4.15,
+      "reported_as": "lățime liberă de trecere",
+      "source": "1983 p.482",
+      "horizontal_geodetic_azimuth": null,
+      "accuracy_m": null,
+      "warning": "an architectural passage width only, not a northing/easting or historic administrative border"
+    },
+    {
+      "id": "LOWER_COURTYARD_GATE_WIDTH",
+      "page": 482,
+      "feature": "Lower courtyard gate (sector D)",
+      "observed_width_m": 3.7,
+      "reported_as": "passage between two gate-stone pillars",
+      "source": "1983 p.482",
+      "accuracy_m": null,
+      "warning": "different gate from central courtyard; must not conflate"
+    },
+    {
+      "id": "LOWER_GATE_PILLAR_BLOCK",
+      "page": 482,
+      "feature": "Gate pillar stones in lower courtyard sector D",
+      "dimensions_m": [
+        0.5,
+        0.5,
+        0.9
+      ],
+      "source": "1983 p.482",
+      "original_corner_world_coordinates": false,
+      "warning": "stones reportedly in excavation context; no independently surveyed modern global point"
+    }
+  ],
+  "important_observations": [
+    "The 1979 first printed page uses two descriptive and operational A/B/C conventions within one report; earlier comparison relied on an oversimplified two-alphabet model. This is documentary reclassification only, without changing source text.",
+    "The 1983 fig.2 is a secondary printed derivative of Holst estimated drawing, not a second independent 17th-century geodetic plan.",
+    "Fig.3 offers a 1-meter printed scale bar and north indication for a locally metric gate footprint, but has no projected coordinates, no local control-point table, no excavation-coordinate grid or datum in inspected source.",
+    "Solid and hatched zones are visually distinct in Fig.3; absent explicit original/restored legend, neither color nor hatch is automatically phase-certified.",
+    "Fig.4 has a stratigraphic frame 1:50, labels I/II/III for walls and 1–8 layers; older and later structure are distinguishable stratigraphically but their world-coordinate original vertex is not supplied.",
+    "Photographs 5–13 corroborate excavation wall details and blocked doors, but do not provide a measured repeatable same-object 2026 survey.",
+    "Numeric widths 4.15m and 3.70m refer to separate gate complexes; they are not source-to-modern control-point coordinates."
+  ]
+}
