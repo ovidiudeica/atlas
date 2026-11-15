@@ -20,7 +20,7 @@ Raportul **1979, p. 337**, introduce în descrierea de ansamblu A = cetatea mare
 
 **Fig. 4, p. 479:** secțiune stratigrafică estică a turnului, scara **1:50**, cu I = zidul casei scării, II = peretele sudic, III = primele asize ale feței anterioare, plus straturi 1–8 (două niveluri de ardere, cenușă și stâncă). Este un sistem metric **local**, nu un sistem global proiectat. Facsimilul la rezoluție mare: SHA-256 d4afa7f01ca34b5bdc47a4add219ee3e0fcfccd9acddb59dcb4cf5528fd21c8e.
 
-**Figurile 5–13, pp. 479–481:** fotografiile arată ziduri, praguri, intrări blocate, turnul vestic și anexe. Acestea nu sunt puncte geodezice măsurate. În **1983, p. 482**, se menționează distinct trecerea de **4,15 m** a porții centrale, trecerea de **3,70 m** a porții pieței de jos (sector D) și blocuri-stâlpi de aproximativ **0,50 × 0,50 × 0,90 m**. Măsurătorile locale pot fi utilizate pentru confruntarea arheologică, nu ca GCP.
+**Figurile 5–13, pp. 479–481:** fotografiile arată ziduri, praguri, intrări blocate, turnul vestic și anexe. Acestea nu sunt puncte geodezice măsurate. În **1983, p. 482**, se menționează distinct valorile **4,15 m și 3,15 m** pentru trecerea porții centrale, trecerea de **3,70 m** a porții pieței de jos (sector D) și blocuri-stâlpi de aproximativ **0,50 × 0,50 × 0,90 m**. Măsurătorile locale pot fi utilizate pentru confruntarea arheologică, nu ca GCP.
 
 ## 4. Restaurare și limite de admitere
 
