@@ -1,0 +1,312 @@
+{
+  "schema": "repo-cleanup-2/1",
+  "captured_on": "2026-11-15",
+  "repository": "ovidiudeica/atlas",
+  "base_main_sha": "55107339736731ea72d81c2af097c468760751fb",
+  "branch_count_before": 34,
+  "secondary_branch_count": 33,
+  "merged_pr_heads": 30,
+  "unmerged_pr_heads": 3,
+  "open_pull_requests": 0,
+  "policy": "No deletion until archive tag is created, remote object readback verifies all branch heads reachable, and main tree equality is verified.",
+  "archive_tag_name": "archive/repo-cleanup-2-2026-11-15",
+  "records": [
+    {
+      "branch": "audit/hist-0-4i-manual-gcp-chioar",
+      "head_sha": "51c8e5e548f9aac5eea0e5622353be2ac07bfc27",
+      "pr": 101,
+      "pr_merged": true,
+      "pr_head_sha": "51c8e5e548f9aac5eea0e5622353be2ac07bfc27",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4j-documentary-locality-landmark-gate",
+      "head_sha": "f1cf422848286ca57748ae8c7bbde172829e8667",
+      "pr": 102,
+      "pr_merged": true,
+      "pr_head_sha": "f1cf422848286ca57748ae8c7bbde172829e8667",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4k-legal-identity-pixel-gate",
+      "head_sha": "b29e775577f391eddeabfabcf0c3a14d402289b4",
+      "pr": 103,
+      "pr_merged": true,
+      "pr_head_sha": "b29e775577f391eddeabfabcf0c3a14d402289b4",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4l-parliamentary-and-gcp-source-gate",
+      "head_sha": "a9385db83f908cf357a38993c4d87e012a15f4f9",
+      "pr": 104,
+      "pr_merged": true,
+      "pr_head_sha": "a9385db83f908cf357a38993c4d87e012a15f4f9",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4m-originals-first-independent-gcp",
+      "head_sha": "cd2c44bf500a9c2eda42b3000b49a10802349c06",
+      "pr": 105,
+      "pr_merged": true,
+      "pr_head_sha": "cd2c44bf500a9c2eda42b3000b49a10802349c06",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4n-parliamentary-request-kovar-ground-control",
+      "head_sha": "433d036afe1c4da295824131704b2eecf62e8c2d",
+      "pr": 106,
+      "pr_merged": true,
+      "pr_head_sha": "433d036afe1c4da295824131704b2eecf62e8c2d",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4o-open-folio-cartographic-evidence",
+      "head_sha": "36fe02911c12b8f7cd7b79ea818c6935773f9983",
+      "pr": 107,
+      "pr_merged": true,
+      "pr_head_sha": "36fe02911c12b8f7cd7b79ea818c6935773f9983",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4p-early-fortress-plans-gcp-gate",
+      "head_sha": "1e21607717cb8c06eee44d9043ac5e431f68c71e",
+      "pr": 108,
+      "pr_merged": true,
+      "pr_head_sha": "1e21607717cb8c06eee44d9043ac5e431f68c71e",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4q-source-switch-eharta-chioar",
+      "head_sha": "3dd32c86209d6a08a9491aa12fe226399ad484ca",
+      "pr": 109,
+      "pr_merged": true,
+      "pr_head_sha": "3dd32c86209d6a08a9491aa12fe226399ad484ca",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4r-sheet2977-original-cross-era-gate",
+      "head_sha": "a5c1e601a2e346b240dd83807708751042a94047",
+      "pr": 110,
+      "pr_merged": true,
+      "pr_head_sha": "a5c1e601a2e346b240dd83807708751042a94047",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4s-addendum-heritage-control-exclusions",
+      "head_sha": "67364157a2ba2c9a963b615b72819da79ca4816d",
+      "pr": 113,
+      "pr_merged": true,
+      "pr_head_sha": "67364157a2ba2c9a963b615b72819da79ca4816d",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4s-full-margins-austrian-source-gcp-gate",
+      "head_sha": "b90ac4c646049f29c102e6c7fa5d57149113a849",
+      "pr": 111,
+      "pr_merged": true,
+      "pr_head_sha": "b90ac4c646049f29c102e6c7fa5d57149113a849",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/hist-0-4s-original-margins-stable-landmark-triage",
+      "head_sha": "4102186e210431b2fb4d07192419bb2b30823590",
+      "pr": 112,
+      "pr_merged": false,
+      "pr_head_sha": "4102186e210431b2fb4d07192419bb2b30823590",
+      "archive_required": true,
+      "decision": "UNMERGED_UNIQUE_EVIDENCE_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/official-territorial-symbols-20261108",
+      "head_sha": "cfc030e49973d472c66d62620293cf65ba0afa00",
+      "pr": 64,
+      "pr_merged": false,
+      "pr_head_sha": "cfc030e49973d472c66d62620293cf65ba0afa00",
+      "archive_required": true,
+      "decision": "UNMERGED_UNIQUE_EVIDENCE_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "audit/sim-r2b1-county-district-evidence-20261108",
+      "head_sha": "a49374c07fab66a11c4bb8db8b8bbc71270f50ec",
+      "pr": 69,
+      "pr_merged": false,
+      "pr_head_sha": "a49374c07fab66a11c4bb8db8b8bbc71270f50ec",
+      "archive_required": true,
+      "decision": "UNMERGED_UNIQUE_EVIDENCE_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-1-natural-study-boundary",
+      "head_sha": "0fbccb1e9b2a41759e179a6d3bc82a73e04e10e4",
+      "pr": 87,
+      "pr_merged": true,
+      "pr_head_sha": "0fbccb1e9b2a41759e179a6d3bc82a73e04e10e4",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-2-ohm-geometry-inventory",
+      "head_sha": "298417c9d22f6e0ed16b83d559188de817293727",
+      "pr": 88,
+      "pr_merged": true,
+      "pr_head_sha": "298417c9d22f6e0ed16b83d559188de817293727",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-3-ohm-editorial-classification",
+      "head_sha": "c5c08e6df6cbcd04302c7f5516e319397ba7170c",
+      "pr": 89,
+      "pr_merged": true,
+      "pr_head_sha": "c5c08e6df6cbcd04302c7f5516e319397ba7170c",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4a-select-historical-families",
+      "head_sha": "360e439c1d4c8ece78edbb55f3c061689b8e89f4",
+      "pr": 90,
+      "pr_merged": true,
+      "pr_head_sha": "360e439c1d4c8ece78edbb55f3c061689b8e89f4",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4b-qualify-original-ohm-evidence",
+      "head_sha": "5f642fb6c336949b86ead985fd5a7d7ccec9bdce",
+      "pr": 91,
+      "pr_merged": true,
+      "pr_head_sha": "5f642fb6c336949b86ead985fd5a7d7ccec9bdce",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4c-cartographic-provenance-2026-11-11",
+      "head_sha": "23344cbb89c0874d44136558ef4b5a5e0c7343cb",
+      "pr": 94,
+      "pr_merged": true,
+      "pr_head_sha": "23344cbb89c0874d44136558ef4b5a5e0c7343cb",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4c-chioar-archival-followup",
+      "head_sha": "dbc659ef8904e498670b39d5d3652d333afa7150",
+      "pr": 93,
+      "pr_merged": true,
+      "pr_head_sha": "dbc659ef8904e498670b39d5d3652d333afa7150",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4c-facsimile-screen-2026-11-11",
+      "head_sha": "81bf5c63dfe4270dce731c4986f11cacabed9eed",
+      "pr": 95,
+      "pr_merged": true,
+      "pr_head_sha": "81bf5c63dfe4270dce731c4986f11cacabed9eed",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4c-targeted-documentary-qualification",
+      "head_sha": "7db83026bea5e1e2e0a2416218cd8a15a031365f",
+      "pr": 92,
+      "pr_merged": true,
+      "pr_head_sha": "7db83026bea5e1e2e0a2416218cd8a15a031365f",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4d-independent-cartographic-gate-2026-11-11",
+      "head_sha": "75a06d0089481fc957a0d7cdc3b6404669bd3283",
+      "pr": 96,
+      "pr_merged": true,
+      "pr_head_sha": "75a06d0089481fc957a0d7cdc3b6404669bd3283",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4e-diversified-sources-individual-admission",
+      "head_sha": "fcfd7df4360528c0f3436b98d6253cc3a8a32c23",
+      "pr": 97,
+      "pr_merged": true,
+      "pr_head_sha": "fcfd7df4360528c0f3436b98d6253cc3a8a32c23",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4f-per-segment-map-crosscheck-2026-11-11",
+      "head_sha": "f3df706149b01da8f9afcfdbebfd07a357920c1c",
+      "pr": 98,
+      "pr_merged": true,
+      "pr_head_sha": "f3df706149b01da8f9afcfdbebfd07a357920c1c",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4g-1861-map-1877-locality-evidence",
+      "head_sha": "f0ade0f5b48440a855e6b917d58df72749a7a829",
+      "pr": 99,
+      "pr_merged": true,
+      "pr_head_sha": "f0ade0f5b48440a855e6b917d58df72749a7a829",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "hist-0-4h-georef-gcp-gate-chioar-gazetteer-crosswalk",
+      "head_sha": "027e4f485f50fff6f86dc5e5b425a9c950337c65",
+      "pr": 100,
+      "pr_merged": true,
+      "pr_head_sha": "027e4f485f50fff6f86dc5e5b425a9c950337c65",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "research/hist-0-4t-source-and-gcp-qualification",
+      "head_sha": "e478e121584b57714f074df3bff8040a4fcb831a",
+      "pr": 114,
+      "pr_merged": true,
+      "pr_head_sha": "e478e121584b57714f074df3bff8040a4fcb831a",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "research/hist-0-4u-holst-primary-witness",
+      "head_sha": "cae3a4691b6d97114ef8b9f9d05e02773264bac9",
+      "pr": 115,
+      "pr_merged": true,
+      "pr_head_sha": "cae3a4691b6d97114ef8b9f9d05e02773264bac9",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "research/hist-0-4v-architectural-geodetic-gates",
+      "head_sha": "8c839c23107a1adf7a1a0c199651c49e303f9819",
+      "pr": 116,
+      "pr_merged": true,
+      "pr_head_sha": "8c839c23107a1adf7a1a0c199651c49e303f9819",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    },
+    {
+      "branch": "research/hist-0-4w-primary-plans-wall-phase-gates",
+      "head_sha": "e47de0027a0dda225a58a3a10504381c433b4587",
+      "pr": 117,
+      "pr_merged": true,
+      "pr_head_sha": "e47de0027a0dda225a58a3a10504381c433b4587",
+      "archive_required": true,
+      "decision": "MERGED_HEAD_ARCHIVE_THEN_DELETE"
+    }
+  ]
+}
