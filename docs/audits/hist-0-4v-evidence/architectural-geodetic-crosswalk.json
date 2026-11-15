@@ -1,0 +1,204 @@
+{
+  "phase": "HIST-0.4v",
+  "date": "2026-11-15",
+  "terminology": {
+    "Holst_B": "The B symbol in the seventeenth-century engraving means smaller castle; it is not archaeology Sector B",
+    "archaeology_Sector_B": "The B sector in 1979 and 1983 archaeological reports means central courtyard and double-towered middle gate, not Holst B",
+    "Holst_A": "A = larger castle on engraving; cannot mechanically map to archaeological sector A",
+    "distinct_reference_alphabets": true,
+    "perspective_is_not_geodetic_map": true,
+    "archaeological_figure_pixels_not_compared": true
+  },
+  "features": [
+    {
+      "id": "HOLST_G",
+      "meaning": "Entrance of greater castle",
+      "source": [
+        "HOLST_BNF_GE_D_14179"
+      ],
+      "candidate_excavation_complex": "Greater castle area, possible upper castle approach",
+      "archaeological_exact_gate_correspondence": false,
+      "identical_to_1979_B_1983_B_proven": false,
+      "modern_measured_corner": false,
+      "admission": "P1_FUNCTIONAL_ONLY",
+      "gcp": false
+    },
+    {
+      "id": "HOLST_H",
+      "meaning": "Entrance of smaller castle",
+      "source": [
+        "HOLST_BNF_GE_D_14179"
+      ],
+      "candidate_excavation_complex": "Smaller outer castle gate described in Kacsó 2011",
+      "archaeological_exact_gate_correspondence": false,
+      "identical_to_1979_B_1983_B_proven": false,
+      "modern_measured_corner": false,
+      "admission": "P1_FUNCTIONAL_ONLY",
+      "gcp": false
+    },
+    {
+      "id": "ARCH_B_CENTRAL_GATE",
+      "meaning": "Middle/central courtyard gateway with two towers",
+      "source": [
+        "ARCH_1979",
+        "ARCH_1983"
+      ],
+      "same_excavation_complex_across_1979_1983": true,
+      "individual_wall_vertex_correspondence_verified": false,
+      "Holst_G_or_H_equivalence_proven": false,
+      "modern_measured_corner": false,
+      "admission": "P2_ARCHAEOLOGICAL_COMPLEX_DOCUMENTARY_RECONCILIATION",
+      "gcp": false
+    },
+    {
+      "id": "ARCH_B_EAST_TOWER",
+      "meaning": "Eastern tower of central courtyard gateway",
+      "source": [
+        "ARCH_1983"
+      ],
+      "two_construction_phases": true,
+      "foundation_displaced_relative_to_later_wall": true,
+      "restoration_proposal_described": true,
+      "which_modern_facade_rebuilt_verified": false,
+      "original_foundation_vertex_measured": false,
+      "admission": "P1_MULTIPHASE_GATE_TOWER",
+      "gcp": false
+    },
+    {
+      "id": "ARCH_B_WEST_TOWER",
+      "meaning": "Western tower of central courtyard gateway",
+      "source": [
+        "ARCH_1979",
+        "ARCH_1983"
+      ],
+      "north_east_buttress_described": true,
+      "blocked_eastern_entrance_described": true,
+      "original_corner_measured": false,
+      "admission": "P1_ARCHAEOLOGICAL_STRUCTURE",
+      "gcp": false
+    },
+    {
+      "id": "ARCH_SMALL_CASTLE_GATE",
+      "meaning": "Smaller outer castle entrance",
+      "source": [
+        "KACSO_2011",
+        "ARCH_1983"
+      ],
+      "repair_marker_year": 1657,
+      "repair_marker_Rakoczi_II": true,
+      "potential_H_functional_correspondence": true,
+      "exact_H_corner_matched": false,
+      "current_in_situ_plaque_verified": false,
+      "modern_measured_corner": false,
+      "admission": "P1_SMALL_CASTLE_GATE_CONTEXT",
+      "gcp": false
+    },
+    {
+      "id": "ARCH_D_OUTER_GATE",
+      "meaning": "Outer/lower court access",
+      "source": [
+        "ARCH_1979"
+      ],
+      "excavation_section": "D II",
+      "unique_Holst_G_H_match": false,
+      "modern_measured_corner": false,
+      "admission": "P1_DISTINCT_ENTRANCE",
+      "gcp": false
+    },
+    {
+      "id": "ARCH_E_OLD_ACCESS",
+      "meaning": "Old gate access corridor in exterior castle defence",
+      "source": [
+        "ARCH_1979"
+      ],
+      "excavation_section": "E II; E III is defensive ditch",
+      "unique_Holst_G_H_match": false,
+      "modern_measured_corner": false,
+      "admission": "P1_DISTINCT_ACCESS",
+      "gcp": false
+    },
+    {
+      "id": "MODERN_RESTORED_GATE_TOWER",
+      "meaning": "Visible restored gate tower",
+      "source": [
+        "MUSEUM_HISTORY",
+        "KACSO_2011",
+        "ARCH_1983"
+      ],
+      "reconstruction_confirmed": true,
+      "which_east_west_tower_rebuilt": null,
+      "retained_original_corner_verified": false,
+      "modern_rebuilt_facade_disallowed_as_original_GCP": true,
+      "admission": "EXCLUDE_REBUILT_CORNER_UNTIL_PHASE_SURVEY",
+      "gcp": false
+    },
+    {
+      "id": "SMALL_CASTLE_DATestone",
+      "meaning": "Inscribed 1657 Rákóczi II slab of small castle gate",
+      "source": [
+        "KACSO_2011"
+      ],
+      "architectural_repair_period_supported": true,
+      "present_same_spatial_position_surveyed": false,
+      "point_fixity_proven": false,
+      "admission": "CHRONOLOGY_ONLY_NOT_GCP",
+      "gcp": false
+    }
+  ],
+  "gcp_gate_checks": [
+    {
+      "id": "HISTORIC_OBJECT",
+      "passed": false,
+      "reason": "Holst gate functional symbols do not mark a uniquely identified ground-level wall corner"
+    },
+    {
+      "id": "ARCHAEOLOGY_LINK",
+      "passed": false,
+      "reason": "Excavations identify complexes and construction phases, but G/H -> exactly one excavation corner remains unresolved"
+    },
+    {
+      "id": "CONSTRUCTION_PHASE",
+      "passed": false,
+      "reason": "1981 restoration and east tower foundations displaced across phases; no verified original wall vertex retained"
+    },
+    {
+      "id": "MODERN_INDEPENDENT_SURVEY",
+      "passed": false,
+      "reason": "No independently measured same-object wall vertex with X/Y/Z, CRS, epoch and accuracy in examined public materials"
+    },
+    {
+      "id": "DATED_MAP_PIXEL_MATCH",
+      "passed": false,
+      "reason": "1924 image matching vertex not established; original Austrian 1:25000 sheet not uniquely identified"
+    },
+    {
+      "id": "INDEPENDENT_HOLDOUT",
+      "passed": false,
+      "reason": "No accepted original GCP; no valid fit or holdout residual"
+    },
+    {
+      "id": "ADMIN_BOUNDARY",
+      "passed": false,
+      "reason": "A defensive structure is not a historic administrative normative boundary"
+    }
+  ],
+  "totals": {
+    "historical_gate_symbols": 2,
+    "archaeological_complexes_documentarily_correlated": 1,
+    "qualified_independent_GCP": 0,
+    "qualified_holdout": 0,
+    "RMSE_m": null,
+    "holdout_RMSE_m": null,
+    "certified_chioar_segments": 0,
+    "certified_transylvania_segments": 0,
+    "admitted_OHM_relations": 0,
+    "certified_legal_boundaries": 0
+  },
+  "continuation": [
+    "Obtain and visually inspect scale-bearing archaeological plan figures with source page provenance and wall phase labels",
+    "Obtain restoration as-built drawings distinguishing 1979 foundations vs post-1981 reconstructed elevations",
+    "Find independent surveyed original wall-corner coordinates with declared CRS/epoch/accuracy",
+    "Match specific gate wall corner to 1924 image and original Austrian 1:25000 before georeferencing",
+    "Only after multiple certified independent GCPs, compute residuals and independent holdout tests"
+  ]
+}
