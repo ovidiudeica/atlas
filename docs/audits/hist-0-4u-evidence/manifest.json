@@ -1,0 +1,47 @@
+{
+  "phase": "HIST-0.4u",
+  "date": "2026-11-15",
+  "base_main_sha": "9d26c56c34f4db5ea2213ff391748245daef8716",
+  "predecessor": "docs/audits/hist-0-4t-evidence/manifest.json",
+  "verdict": "BNF_HOLST_HIGH_RES_WITNESS_RECOVERED__G_H_GATE_SYMBOLS_CANDIDATES__CHRONOLOGY_CONFLICT_OPEN__AUSTRIAN_25000_ORIGINAL_UNKNOWN__GCP_ZERO",
+  "verified": {
+    "primary_image_bytes": 5997772,
+    "primary_image_dimensions": [
+      6260,
+      5108
+    ],
+    "primary_image_sha256": "4d035db75c147ce2ec56118577ae3747287edf268de98cabb68be406df3c7b8f",
+    "BNF_ARK": "btv1b8492308h",
+    "legend_symbols": 9,
+    "gate_candidate_symbols": 2,
+    "date_1658_vs_1661_reconciled": false,
+    "source_25000_sheet_id": null,
+    "source_25000_survey_year": null,
+    "qualified_GCP": 0,
+    "holdout": 0,
+    "OHM_admitted": 0,
+    "legal_boundaries_admitted": 0
+  },
+  "restrictions": {
+    "commit_binary_image": false,
+    "commit_private_kmz": false,
+    "modify_src": false,
+    "modify_public": false,
+    "modify_ACTUAL": false,
+    "modify_OSMB": false,
+    "modify_OHM": false,
+    "modify_Geodata": false,
+    "emails": false,
+    "institution_contacts": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false
+  },
+  "files": [
+    "README.md",
+    "primary-evidence.json",
+    "manifest.json",
+    "validate-evidence.mjs"
+  ],
+  "next_step": "HIST-0.4v: independently qualify archaeological G/H gate identity, modern surveyed same-wall vertex and original Austrian 1:25000 predecessor. Never turn the Holst perspective into metric administrative boundaries."
+}
