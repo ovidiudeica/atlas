@@ -70,9 +70,9 @@
       "kind": "derivative period perspective/architectural plan",
       "source_sha_highres": "9bbdaeb485017a1ef2c8ef8faaf73f39dd851411c127e3a272f427198bb5fe35",
       "independent_spatial_witness": false,
-      "internal_legend_letters_are_Holst": false,
       "source_of_figure_is_Holst": true,
-      "metric_gate_plan": false
+      "metric_gate_plan": false,
+      "legend_namespace": "HOLST_ENGRAVING_REPRODUCTION_NOT_EXCAVATION_FIELD_CODES"
     },
     {
       "id": "ARCH1983_FIG_3",
