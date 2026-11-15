@@ -1,0 +1,62 @@
+{
+  "phase": "HIST-0.4v",
+  "date": "2026-11-15",
+  "main_base_sha": "53cbca412cfd76b46b7399f885fa59e2fc803f0c",
+  "parent": "docs/audits/hist-0-4u-evidence/manifest.json",
+  "scope": "architectural and geodetic qualification of historic entrances G/H, including excavation gate families, restoration phases and point controls",
+  "verdict": "ARCHAEOLOGICAL_B_GATE_COMPLEX_RECONCILED_1979_1983__HOLST_G_H_FUNCTION_ONLY__RESTORATION_AND_MULTIPHASE_RISK_IDENTIFIED__NO_SURVEYED_GATE_VERTEX__ZERO_GCP",
+  "new_evidence": {
+    "original_repertory_pdf_inspected_text": true,
+    "original_repertory_pdf_pages": [
+      436,
+      437,
+      438
+    ],
+    "original_repertory_pdf_sha256": "ef1eae89c3fc45ff5e7c2e212b57a35753e36ed508dfe254c822f4afc8e187da",
+    "primary_excavation_articles_screened": 2,
+    "museum_reconstruction_report_screened": true,
+    "Holst_vs_excavation_code_alphabets_disjoint": true,
+    "sector_B_same_courtyard_gate_complex_1979_1983": true,
+    "sector_B_same_specific_gate_corner_1979_1983": false,
+    "Holst_G_to_excavated_wall_vertex": false,
+    "Holst_H_to_excavated_wall_vertex": false,
+    "reconstructed_tower_identity_exactly_known": false,
+    "small_castle_gate_1657_repair_context": true,
+    "modern_original_wall_vertex_surveyed": false,
+    "original_Austrian_25000_sheet_found": false
+  },
+  "admission": {
+    "GCP": 0,
+    "independent_holdout": 0,
+    "rmse_m": null,
+    "holdout_rmse_m": null,
+    "legal_boundary_segments": 0,
+    "OHM_approved": 0,
+    "Chioar_segments": 0,
+    "Transylvania_segments": 0
+  },
+  "restrictions": {
+    "modified_src": false,
+    "modified_public": false,
+    "modified_ACTUAL": false,
+    "modified_OSMB": false,
+    "modified_OHM": false,
+    "modified_Geodata_GIS": false,
+    "committed_source_images": false,
+    "committed_bundled_pdf": false,
+    "private_kmz_disclosed": false,
+    "emails": false,
+    "contacts": false,
+    "orders": false,
+    "payments": false,
+    "subscriptions": false
+  },
+  "files": [
+    "README.md",
+    "source-register.json",
+    "architectural-geodetic-crosswalk.json",
+    "manifest.json",
+    "validate-evidence.mjs"
+  ],
+  "next_step": "HIST-0.4w: pixel-qualified gate-plan evidence, pre/post-restoration wall-phase crosswalk and independently measured original foundation/corner point, preserving no admission until verified"
+}
