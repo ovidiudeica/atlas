@@ -165,12 +165,16 @@
       "id": "CENTRAL_GATE_WIDTH",
       "page": 482,
       "feature": "Central courtyard gate flanked by two towers",
-      "observed_width_m": 4.15,
       "reported_as": "lățime liberă de trecere",
       "source": "1983 p.482",
       "horizontal_geodetic_azimuth": null,
       "accuracy_m": null,
-      "warning": "an architectural passage width only, not a northing/easting or historic administrative border"
+      "warning": "an architectural passage width only, not a northing/easting or historic administrative border",
+      "reported_widths_m": [
+        4.15,
+        3.15
+      ],
+      "meaning": "Both values are printed for the central courtyard gate passage, without assignment to two individually located cross-sections"
     },
     {
       "id": "LOWER_COURTYARD_GATE_WIDTH",
