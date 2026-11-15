@@ -81,12 +81,16 @@
     {
       "id": "EXCAVATION_B_CENTRAL_GATE_COMPLEX",
       "source": "1983 page 482, two towers, same middle-gate complex described in 1979",
-      "passage_width_m": 4.15,
       "local_scaled_plan_of_east_tower": true,
       "holst_G_or_H_single_corner_correspondence": false,
       "modern_measured_corner": null,
       "gcp": false,
-      "status": "P2_ARCHAEOLOGICAL_COMPLEX_LOCALLY_MEASURED"
+      "status": "P2_ARCHAEOLOGICAL_COMPLEX_LOCALLY_MEASURED",
+      "reported_passage_widths_m": [
+        4.15,
+        3.15
+      ],
+      "which_cross_section_each_width_describes": null
     }
   ],
   "gates": [
