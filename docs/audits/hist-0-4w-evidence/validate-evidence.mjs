@@ -55,7 +55,7 @@ assert.equal(f3.source_sha_highres,pages.pages_highres.find(p=>p.year===1983&&p.
 assert.equal(f4.printed_scale,'1:50');
 assert.equal(f4.stratigraphic_labels['7'],'stâncă');
 assert.equal(f4.source_sha_highres,pages.pages_highres.find(p=>p.year===1983&&p.page===479).sha256);
-assert.equal(figures.locally_metric_constraints.find(x=>x.id==='CENTRAL_GATE_WIDTH').observed_width_m,4.15);
+assert.deepEqual(figures.locally_metric_constraints.find(x=>x.id==='CENTRAL_GATE_WIDTH').reported_widths_m,[4.15,3.15]);
 assert.equal(figures.locally_metric_constraints.find(x=>x.id==='LOWER_COURTYARD_GATE_WIDTH').observed_width_m,3.70);
 
 assert.equal(geodesy.candidates.length,6);
@@ -69,6 +69,7 @@ for(const key of ['new_independent_GCP','qualified_holdout','Chioar_segments','T
  assert.equal(manifest.admission[key],0,key);
 }
 assert.equal(manifest.admission.RMSE_m,null);
+assert.deepEqual(manifest.source_gate.central_gate_local_widths_m,[4.15,3.15]);
 assert.equal(manifest.source_gate.total_verified_page_scans,14);
 assert.equal(manifest.source_gate.high_resolution_additional_scans,5);
 assert.equal(manifest.source_gate.original_vs_restored_hatch_meaning_qualified,false);
