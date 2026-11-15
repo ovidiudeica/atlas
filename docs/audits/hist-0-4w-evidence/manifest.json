@@ -1,0 +1,65 @@
+{
+  "phase": "HIST-0.4w",
+  "date": "2026-11-15",
+  "base_main_sha": "b85c72aabcb320fd86d4dc30679aef5718b8907b",
+  "parent": "docs/audits/hist-0-4v-evidence/manifest.json",
+  "objective": "Original 1979/1983 page-image qualification, restoration-phase distinction and independent GCP admission",
+  "verdict": "14_PERSEE_PAGE_IMAGES_AND_5_HIGHRES_VERIFIED__FIG3_1M_AND_FIG4_1TO50_LOCALLY_METRIC__FOUR_ALPHABETS__NO_MODERN_ORIGINAL_WALL_VERTEX__ZERO_GCP",
+  "source_gate": {
+    "facsimile_pages_1979": 4,
+    "facsimile_pages_1983": 10,
+    "total_verified_page_scans": 14,
+    "high_resolution_additional_scans": 5,
+    "verified_highres_pages": [
+      "1979:337",
+      "1983:477",
+      "1983:478",
+      "1983:479",
+      "1983:482"
+    ],
+    "two_locally_metric_figures": [
+      3,
+      4
+    ],
+    "central_gate_local_width_m": 4.15,
+    "lower_gate_local_width_m": 3.7,
+    "original_vs_restored_hatch_meaning_qualified": false,
+    "asbuilt_restoration_document_recovered": false,
+    "independent_original_gate_corner_survey_found": false,
+    "original_Austrian_25000_sheet_id": null
+  },
+  "admission": {
+    "new_independent_GCP": 0,
+    "qualified_holdout": 0,
+    "RMSE_m": null,
+    "holdout_RMSE_m": null,
+    "Chioar_segments": 0,
+    "Transylvania_segments": 0,
+    "OHM_relations": 0,
+    "legal_boundary_geometries": 0
+  },
+  "restrictions": {
+    "modified_src": false,
+    "modified_public": false,
+    "modified_ACTUAL": false,
+    "modified_OSMB": false,
+    "modified_OHM": false,
+    "modified_Geodata_GIS": false,
+    "committed_PDF_or_images": false,
+    "committed_private_KMZ": false,
+    "emails": false,
+    "institution_contacts": false,
+    "payments": false,
+    "orders": false,
+    "subscriptions": false
+  },
+  "files": [
+    "README.md",
+    "facsimile-page-register.json",
+    "figure-and-metric-crosswalk.json",
+    "geodetic-restoration-gates.json",
+    "manifest.json",
+    "validate-evidence.mjs"
+  ],
+  "next_step": "HIST-0.4x: qualify V. Brâncu signed pre-1981 restoration and as-built records, independently surveyed original foundation vertices with global CRS and accuracy; continue Austrian 1:25000 sheet identity separately."
+}
