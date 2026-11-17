@@ -1,0 +1,26 @@
+[
+  {
+    "file": "HIST-RASSM_FINAL_C.zip",
+    "sha256": "8ce459466db2e6a5b4381010ea8cce68dce963e9ac68c6c91420c839422b3ff6",
+    "bytes": 71135963,
+    "reuse": "Verified; retained in prior package, no redownload"
+  },
+  {
+    "file": "Atlas_1935.pdf",
+    "sha256": "cb9b6da2344e9f86766c4a457ca944ccf08ba499e0939a0e925b04d31806bb1b",
+    "bytes": 15975617,
+    "reuse": "Verified; retained in prior package, no redownload"
+  },
+  {
+    "file": "arhiva_R2947_inv3.pdf",
+    "sha256": "145971f841af0e06192e529f2da188311c70993afdd22dc66e280669bc3705c5",
+    "bytes": 1512399,
+    "reuse": "Verified; retained in prior package, no redownload"
+  },
+  {
+    "file": "Ukraine_admin_history.pdf",
+    "sha256": "66bd82a84eee3e5b12829f24b30d2c9d7be1633493c1234dc18ad9e18e1cb33f",
+    "bytes": 854251,
+    "reuse": "Verified; retained in prior package, no redownload"
+  }
+]

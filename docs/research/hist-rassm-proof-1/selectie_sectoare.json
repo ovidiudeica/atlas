@@ -1,0 +1,32 @@
+[
+  {
+    "sector": "MC",
+    "choice": "SELECTED_DIAGNOSTIC_C",
+    "new_evidence": "Detailed L-35-35-A reproduction; independent geographic frame; pre-impoundment hydrography",
+    "blocker": "Unknown historical datum; no independently located physical holdout; legal river-boundary rule and sign not authenticated"
+  },
+  {
+    "sector": "NE",
+    "choice": "REJECTED_FOR_FIRST_METRIC_RECONSTRUCTION",
+    "new_evidence": "1926 gazette facsimile improves legal identification of transfers",
+    "blocker": "No historical allotment or council polygons;1929 schematic insufficient"
+  },
+  {
+    "sector": "NW",
+    "choice": "REJECTED_FOR_FIRST_METRIC_RECONSTRUCTION",
+    "new_evidence": "1924/1926 facsimiles confirm specific villages and commission mandate",
+    "blocker": "Territorial commission plans and stable surveyed controls missing"
+  },
+  {
+    "sector": "ME",
+    "choice": "REJECTED_FOR_FIRST_METRIC_RECONSTRUCTION",
+    "new_evidence": "Ananiev1936 catalog locator verified",
+    "blocker": "Actual administrative sheet not recovered"
+  },
+  {
+    "sector": "SE",
+    "choice": "REJECTED_FOR_FIRST_METRIC_RECONSTRUCTION",
+    "new_evidence": "IU Tiraspol1929 original scan identified in public cold storage",
+    "blocker": "Retrieval queue unavailable; no original raster obtained; no metric1929 calibration admitted"
+  }
+]
