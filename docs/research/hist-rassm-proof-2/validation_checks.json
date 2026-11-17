@@ -1,0 +1,21 @@
+{
+  "all_passed": true,
+  "districts_analyzed": 91,
+  "districts_assembled_C": 91,
+  "source_snapshots": 8,
+  "source_polygons_unchanged": true,
+  "shared_boundaries_stored_once_per_episode": true,
+  "perimeter_identity_tolerance_m": 0.05,
+  "arc_partition_tolerance_m": 0.1,
+  "max_perimeter_identity_delta_m": 4.988699220120907e-05,
+  "max_internal_partition_delta_m": 2.6223715394735336e-06,
+  "max_external_partition_delta_m": 8.905772119760513e-08,
+  "councils_1935": 33,
+  "councils_Tiraspol1937": 21,
+  "transfer_objects1926": 11,
+  "Hrabariivka_recognition": 1,
+  "Novoselivska_distinct_changes": 1,
+  "geometric_matching_is_historical_proof": false,
+  "admitted_A_B_km": 0,
+  "numerical_grid_degrees": 1e-10
+}

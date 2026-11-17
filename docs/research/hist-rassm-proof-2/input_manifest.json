@@ -1,0 +1,74 @@
+[
+  {
+    "input": "HURI_ICR.gpkg",
+    "destination": "work/sources/HIST-RASSM_4_GIS_HURI_ICR_NECERTIFICAT.gpkg",
+    "sha256": "c37204324e3a2c8badf4362541086811cc6f2fb04809e0149b5cbbb10e99209f",
+    "bytes": 1667072
+  },
+  {
+    "input": "OSMB_relevant_all_semantics.gpkg",
+    "destination": "work/proof2/inputs.gpkg",
+    "sha256": "06d30e554f6d980dbda2dc7f7cec1f0388000f20f3ade9a42dfbdddba1f1c8ff",
+    "bytes": 9748480
+  },
+  {
+    "input": "OSMB_originals_manifest.json",
+    "destination": "work/proof2/sources/originals_manifest.json",
+    "sha256": "b6465c51c1026cbe0223b535049955f53c6ef40cbf032227b5af0241e6f6f2b7",
+    "bytes": 633
+  },
+  {
+    "input": "sectors.geojson",
+    "destination": "work/sources/HIST-RASSM_5_pachet_audit_2026-11-17/HIST-RASSM_5_sectoare_3x3.geojson",
+    "sha256": "de4b7be9aae609afc3da1ce9ff5725797c8b771af55737953047d8bd324f0226",
+    "bytes": 3112
+  },
+  {
+    "input": "admin/RASSM_33_consilii_reverificate.csv",
+    "destination": "outputs/09_HIST-RASSM_FINAL/02_ADMINISTRATIE_ISTORICA/RASSM_33_consilii_reverificate.csv",
+    "sha256": "df5bbfd217dce2657b060d9cfa7be9835cd0b985949dba1bd8919ac7336be0b1",
+    "bytes": 19745
+  },
+  {
+    "input": "admin/RASSM_Tiraspol_21_reverificate.csv",
+    "destination": "outputs/09_HIST-RASSM_FINAL/02_ADMINISTRATIE_ISTORICA/RASSM_Tiraspol_21_reverificate.csv",
+    "sha256": "42fdc453b6b3f6b42500cbe72ad11bdc6f16f53f3b347b0c1d7f3201498561e9",
+    "bytes": 9959
+  },
+  {
+    "input": "admin/RASSM_cronologie_acte_extinsa.csv",
+    "destination": "outputs/09_HIST-RASSM_FINAL/02_ADMINISTRATIE_ISTORICA/RASSM_cronologie_acte_extinsa.csv",
+    "sha256": "2b04ab67b9142212628b1ceabf58e2404b3c2a9704821e6ac5224b1d039af783",
+    "bytes": 7314
+  },
+  {
+    "input": "proof1/manifest_surse.json",
+    "destination": "outputs/10_HIST-RASSM_PROOF_1/01_SURSE_PRIMARE/manifest_surse.json",
+    "sha256": "871d99db1a564a16e2e533dfd738b016f7ffa2e433d9557b93d0db60e0831998",
+    "bytes": 14155
+  },
+  {
+    "input": "proof1/GCP_independente.csv",
+    "destination": "outputs/10_HIST-RASSM_PROOF_1/02_GCP_SI_GEOREFERENTIERE/GCP_independente.csv",
+    "sha256": "6ccf5fe4ad8fffcb5c829921f983ec840bb98cd53fa12ed7cb77757fded231dc",
+    "bytes": 8281
+  },
+  {
+    "input": "proof1/transformari.json",
+    "destination": "outputs/10_HIST-RASSM_PROOF_1/02_GCP_SI_GEOREFERENTIERE/transformari.json",
+    "sha256": "ea053b8d812a22687140d81f1adfc34a454b6be51beee57a21fb24450b7342b7",
+    "bytes": 2217
+  },
+  {
+    "input": "proof1/reconciliere_1926_12_obiecte.csv",
+    "destination": "outputs/10_HIST-RASSM_PROOF_1/05_RAPORT_PROBATORIU/reconciliere_1926_12_obiecte.csv",
+    "sha256": "f0c510fd5cfa23041b9ce650f3a2552a6a713bf0d10c0448755045943c46b0ec",
+    "bytes": 11009
+  },
+  {
+    "input": "proof1/HIST_RASSM_PROOF_1_C.gpkg",
+    "destination": "outputs/10_HIST-RASSM_PROOF_1/03_RECONSTRUCTIE_SECTOR/HIST_RASSM_PROOF_1_C.gpkg",
+    "sha256": "bb6aaa6c92bb6a936e83fd15802a1c2f4884c4cbd7db111a9f5f9f63b3c37b82",
+    "bytes": 262144
+  }
+]
