@@ -1,0 +1,2 @@
+change_id,action,source,source_existing_boundary_used_in_digitization,source_existing_boundary_changed,admitted_boundary,reason
+PROOF1-MC-001,ADD_NEW_IMAGE_DERIVED_HYDROGRAPHY_C,Dubasari_L3535A_1936.jpg,False,False,False,Independent pixel measurements of historical water course; datum and legal boundary interpretation unresolved
