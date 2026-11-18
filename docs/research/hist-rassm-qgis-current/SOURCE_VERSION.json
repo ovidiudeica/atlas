@@ -1,0 +1,151 @@
+{
+  "package": "HIST-RASSM.QGIS-CURRENT.1",
+  "date": "2026-11-18",
+  "class_historical": "C",
+  "geometry_basis": "PROOF.2 complete HURI candidate geometry; WKB unchanged through PROOF.6",
+  "HURI_reference": "1937-01-15",
+  "ICR_date": null,
+  "episodes": [
+    "1927-03-01",
+    "1928-08-15",
+    "1932-03-20",
+    "1932-10-25",
+    "1933-04-01",
+    "1933-12-15",
+    "1934-05-30",
+    "1937-01-15"
+  ],
+  "inputs": [
+    {
+      "name": "RASSM_PROOF_2_temporal_C.gpkg",
+      "sha256": "4ae9ec315841246a07d3678bfda045d14c2e5a2567547835624c0172f605b494",
+      "role": "Complete geometry and stable classifications"
+    },
+    {
+      "name": "RASSM_PROOF_5_temporal_C.gpkg",
+      "sha256": "0c53be76a1dfd75f582add57e0f534edb05015747905eba2f2de94a3268ebbed",
+      "role": "Unique5traces and uncertainty"
+    },
+    {
+      "name": "RASSM_PROOF_6_temporal_C.gpkg",
+      "sha256": "c482fdf9cff8b28ae1e3df3fb85d9b32927f212b5aa0dba2a28dd0b38726a990",
+      "role": "Latest metadata and frozen geometry verification"
+    },
+    {
+      "name": "HIST-RASSM_4_GIS_HURI_ICR_NECERTIFICAT.gpkg",
+      "sha256": "c37204324e3a2c8badf4362541086811cc6f2fb04809e0149b5cbbb10e99209f",
+      "role": "Undated ICR original reference"
+    }
+  ],
+  "GIS_validation": {
+    "passed": true,
+    "external_geodesic_m": 941310.474276343,
+    "internal_unique_geodesic_m": 525399.9809064411,
+    "internal_duplicate_overlap_m": -8.149072527885437e-10,
+    "districts1937": 14,
+    "historical_episodes": 8,
+    "reference_district_records": 91,
+    "ICR_undated": true,
+    "unique_historical_traces": 5,
+    "pilot_IDs_and_WKB_unchanged": 512,
+    "geometry_class": "C",
+    "AB_km": 0,
+    "physical_GCP_admitted": 0,
+    "absolute_accuracy_m": null,
+    "all_geometries_valid": true,
+    "all_vector_crs": "EPSG:4326",
+    "WKB_identical_to_inputs": {
+      "RASSM_EXTERNAL_1937_C": true,
+      "RASSM_DISTRICTS_1937_C": true,
+      "RASSM_INTERNAL_BOUNDARIES_1937_C": true,
+      "RASSM_ICR_UNDATED_C": true,
+      "RASSM_OSMB_CANDIDATE_ARCS": true,
+      "RASSM_HISTORICAL_TRACES_C": true,
+      "RASSM_PILOT_512_UNCHANGED_C": true,
+      "HURI_DISTRICTS_19270301_C": true,
+      "HURI_DISTRICTS_19280815_C": true,
+      "HURI_DISTRICTS_19320320_C": true,
+      "HURI_DISTRICTS_19321025_C": true,
+      "HURI_DISTRICTS_19330401_C": true,
+      "HURI_DISTRICTS_19331215_C": true,
+      "HURI_DISTRICTS_19340530_C": true,
+      "HURI_DISTRICTS_19370115_C": true,
+      "HURI_EXTERNAL_8_SNAPSHOTS_C": true,
+      "RASSM_DUBASARI_HYDROGRAPHY_C": true
+    },
+    "layer_counts": {
+      "RASSM_EXTERNAL_1937_C": 1,
+      "RASSM_DISTRICTS_1937_C": 14,
+      "RASSM_INTERNAL_BOUNDARIES_1937_C": 1224,
+      "RASSM_ICR_UNDATED_C": 1,
+      "RASSM_OSMB_CANDIDATE_ARCS": 1402,
+      "RASSM_HISTORICAL_TRACES_C": 5,
+      "RASSM_PILOT_512_UNCHANGED_C": 512,
+      "HURI_DISTRICTS_19270301_C": 11,
+      "HURI_DISTRICTS_19280815_C": 11,
+      "HURI_DISTRICTS_19320320_C": 11,
+      "HURI_DISTRICTS_19321025_C": 11,
+      "HURI_DISTRICTS_19330401_C": 11,
+      "HURI_DISTRICTS_19331215_C": 11,
+      "HURI_DISTRICTS_19340530_C": 11,
+      "HURI_DISTRICTS_19370115_C": 14,
+      "HURI_EXTERNAL_8_SNAPSHOTS_C": 8,
+      "RASSM_DUBASARI_HYDROGRAPHY_C": 3,
+      "RASSM_EXTERNAL_ADMITTED_AB": 0,
+      "RASSM_INTERNAL_ADMITTED_AB": 0
+    },
+    "comparisons": [
+      {
+        "stage": "12_HIST-RASSM_PROOF_3",
+        "table": "HURI_1937_DISTRICTS_REFERENCE_C",
+        "records": 14,
+        "WKB_identical": true
+      },
+      {
+        "stage": "13_HIST-RASSM_PROOF_4",
+        "table": "HURI_1937_DISTRICTS_REFERENCE_C",
+        "records": 14,
+        "WKB_identical": true
+      },
+      {
+        "stage": "14_HIST-RASSM_PROOF_5",
+        "table": "RASSM_DISTRICT_REFERENCE_8_EPISODES_C",
+        "records": 91,
+        "WKB_identical": true
+      },
+      {
+        "stage": "15_HIST-RASSM_PROOF_6",
+        "table": "DISTRICT_REFERENCE_8_EPISODES_C",
+        "records": 91,
+        "WKB_identical": true
+      }
+    ],
+    "integrity_check": "ok",
+    "general_historical_audit_rerun": false
+  },
+  "PROOF6_delivery_at_start": "Partial:17sourcefiles;11emptyfolders; not represented as completed",
+  "prior_PRs_modified": false,
+  "ACTUAL_modified": false,
+  "Atlas_application_modified": false,
+  "QGIS_validation": {
+    "passed": true,
+    "project_reopened": true,
+    "all_vectors_from_single_central_GPKG": true,
+    "display_crs": "EPSG:3857",
+    "layers": 36,
+    "default_visible": [
+      "RASSM_EXTERNAL_1937_C",
+      "RASSM_DISTRICTS_1937_C",
+      "RASSM_INTERNAL_BOUNDARIES_1937_C"
+    ],
+    "no_online_basemap_dependency": true,
+    "visual_verified": true
+  },
+  "version_history": [
+    {
+      "version": "QGIS-CURRENT.1-FIX",
+      "date": "2026-11-18",
+      "change": "Initial consolidated delivery; source WKB unchanged"
+    }
+  ]
+}
