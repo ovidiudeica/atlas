@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "offline": true,
+  "application_tables_compared": 19,
+  "all_schemas_attributes_and_geometry_blobs_identical": true,
+  "binary_SQLite_hash_identity_required": false,
+  "semantic_rebuild_not_original_file_substitution": true
+}

@@ -1,0 +1,26 @@
+{
+  "verdict": "PROOF.7-C",
+  "new_original_boundary_decrees": 0,
+  "new_original_maps": 0,
+  "new_independent_GCP": 0,
+  "new_AB_arcs": 0,
+  "new_archival_inventory_copies": 6,
+  "important_correction": "All three Ukrainian native downloads returned HTTP403. Only indexed text/catalogue recovered; no native PDF/DOC recovered.",
+  "visually_verified_inventory_targets": [
+    {"reference":"R2948/1/479","PDF_page":58,"printed_page":"54","dates":"1958-05-30/1960-12-27","leaves":82,"description":"Переписка по административно-территориальному делению Молдавской ССР","role":"UNRECOVERED_CASE"},
+    {"reference":"R2948/1/480","PDF_page":58,"printed_page":"54","dates":"1958-01/1960-12","leaves":419,"description":"Материалы (справки, решения исполкомов, карты и др.) по вопросам административно-территориального деления МССР, том I","role":"UNRECOVERED_CASE; MAPS MENTIONED NOT INSPECTED"},
+    {"reference":"R2948/1/481","PDF_page":58,"printed_page":"54","dates":"1958-01/1960-12","leaves":380,"description":"То же, том II","role":"UNRECOVERED_CASE; MAPS MENTIONED NOT INSPECTED"},
+    {"reference":"R2948/1/579","PDF_page":70,"printed_page":"65","dates":"1968","leaves":202,"description":"Документы по изменению административно-территориального деления Молдавской ССР","role":"UNRECOVERED_CASE"},
+    {"reference":"R2948/1/580","PDF_page":70,"printed_page":"65","dates":"1968-1969","leaves":261,"description":"То же, за 1968–1969 годы","role":"UNRECOVERED_CASE; CAM1969 CANDIDATE NOT CONFIRMED CONTENT"},
+    {"reference":"R2948/1/593","PDF_page":72,"printed_page":"67","dates":"1970","leaves":98,"description":"Документы по изменению административно-территориального деления Молдавской ССР","role":"UNRECOVERED_CASE"},
+    {"reference":"R2948/1/594","PDF_page":72,"printed_page":"67","dates":"1970-1971","leaves":236,"description":"То же, за 1970–1971 годы","role":"UNRECOVERED_CASE; GRI1971 CANDIDATE NOT CONFIRMED CONTENT"},
+    {"reference":"R2948/2/165","PDF_page":22,"dates":"1958","leaves":113,"description":"Проекты Указов Президиума Верховного Совета МССР нормативного характера и материалы к ним","role":"UNRECOVERED_CASE"},
+    {"reference":"R2948/2/178","PDF_page":23,"dates":"1959","leaves":38,"description":"Проекты Указов Президиума Верховного Совета МССР нормативного характера и материалы к ним","role":"UNRECOVERED_CASE"},
+    {"reference":"R2948/2/437","PDF_page":49,"printed_page":"8","dates":"1969-01-02/1969-11-11","leaves":321,"description":"Проекты Указов Президиума Верховного Совета МССР нормативного характера и материалы к ним, том I","role":"UNRECOVERED_CASE; JAN10 COVERED NOT ACT CONFIRMED"},
+    {"reference":"R2948/2/461","PDF_page":53,"printed_page":"12","dates":"1970-09-04/1971-10-27","leaves":288,"description":"Проекты Указов Президиума Верховного Совета МССР нормативного характера и материалы к ним","role":"UNRECOVERED_CASE"},
+    {"reference":"R2948/6/646","PDF_page":66,"printed_page":"11","dates":"1971-06-01/1971-06-28","leaves":46,"description":"Протокол №58 заседаний Президиума Верховного Совета МССР","role":"UNRECOVERED_CASE; JUN21 COVERED NOT ACT CONFIRMED"},
+    {"reference":"R2948/6/647","PDF_page":66,"printed_page":"11","dates":"1971-06-01/1971-06-28","leaves":230,"description":"Материалы к протоколу №58 заседаний Президиума Верховного Совета МССР","role":"UNRECOVERED_CASE"}
+  ],
+  "rejected_attributions": ["R2948/6/585-586 January28/30 does not prove January10 coverage", "R2948/3 pardon series protocol58 not identical to R2948/6 protocol58", "Prlib720326 publication1969 refers to December1968 session", "R2948/2/169-172 USSR not MSSR acts"],
+  "stop": "New exact-case public searches returned no relevant facsimiles. Public ANA digitization index does not expose these cases. No repeated failed earlier searches, institutional requests or access bypass."
+}
