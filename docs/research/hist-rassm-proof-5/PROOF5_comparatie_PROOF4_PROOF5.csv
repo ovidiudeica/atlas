@@ -1,0 +1,11 @@
+metric,PROOF4,PROOF5
+pilot_arcs,36,512
+new_M1_km,0,0
+new_external_AB_km,0,0
+new_internal_AB_km,0,0
+physical_GCP_admitted,0,0
+new_nominal_cartographic_C_km,0,7.7213410822905155
+new_primary_normative_acts_read,0,7
+geometric_chains_complete,0,0
+target_1939_recovered,False,False
+target_Ananiev1936_recovered,False,False
