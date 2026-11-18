@@ -1,0 +1,4 @@
+exec(open('work/proof3/acquire_maps.py',encoding='utf-8').read().split('targets=')[0])
+targets=[('Ohrincea_history.html','https://protopopiat-criuleni-dubasari.md/istoria-bisericii-cu-hramul-sfanta-treime-din-s-ohrincea-r-l-criuleni/'),('Izbiste_history.html','https://protopopiat-criuleni-dubasari.md/istoria-bisericii-cu-hramul-sf-m-mc-dumitru-din-satul-izbiste-r-l-criuleni'),('Jevreni_history.html','https://protopopiat-criuleni-dubasari.md/istoria-bisericii-cu-hramul-sf-ap-ioan-teologul-din-s-jevreni-r-l-criuleni'),('DubasariiVechi_history.html','https://protopopiat-criuleni-dubasari.md/istoria-bisericii-cu-hramul-sf-arhanghel-mihail-din-s-dubasarii-vechi-r-l-criuleni'),('ANRM_guide.html','https://doc.arhiva.gov.md/indrum2.php')]
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:rows=list(ex.map(get,targets))
+(P/'acquisition_context.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

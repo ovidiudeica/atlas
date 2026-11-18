@@ -1,0 +1,32 @@
+{
+  "method": "Approximate scale-constrained frame; not an authenticated historical projection or datum",
+  "source_sha256": "e5412bee01508849039d9854f5be96161f8d9103f8a4a3c5d7f880e098c96f66",
+  "matrix_pixel_to_nominal_AEQD": [
+    [
+      115.60606092871262,
+      -4.073166913550497
+    ],
+    [
+      -4.0542867584741,
+      -115.07019770375017
+    ]
+  ],
+  "offset": [
+    -122360.56966164804,
+    110808.05982924855
+  ],
+  "north_m_per_pixel": 115.14159822019187,
+  "east_m_per_pixel": 115.67779394576498,
+  "printed_fit_controls": 2,
+  "printed_scale_constraints": 1,
+  "independent_physical_holdouts": 0,
+  "absolute_RMSE_m": null,
+  "absolute_datum_unknown": true,
+  "absolute_accuracy_claimed": false,
+  "trace_count": 4,
+  "external_symbol_km": 88.55332909564687,
+  "internal_symbol_km": 9.859033356602051,
+  "legal_boundary_admitted_km": 0,
+  "certainty": "C",
+  "sensitivity": "±1 percent scale and 5 pixel reading allowance are conditional scenarios, not an absolute confidence bound"
+}
