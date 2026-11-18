@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "separate_process_readback": true,
+  "all_layer_records_actually_iterated": true,
+  "relative_datasources_verified": true,
+  "layers": [
+    {
+      "name": "512 pilot historical candidates C - M2 M3 M4 M5",
+      "expected": 512,
+      "actually_iterated": 512,
+      "provider": "ogr"
+    },
+    {
+      "name": "Absolute temporal and legal uncertainty - unknown",
+      "expected": 512,
+      "actually_iterated": 512,
+      "provider": "ogr"
+    },
+    {
+      "name": "Administrative events - regional/unit context, not line proof",
+      "expected": 12,
+      "actually_iterated": 12,
+      "provider": "ogr"
+    },
+    {
+      "name": "Arc to event context links - no geometric admission",
+      "expected": 3072,
+      "actually_iterated": 3072,
+      "provider": "ogr"
+    },
+    {
+      "name": "Dubasari historical water envelope C",
+      "expected": 1,
+      "actually_iterated": 1,
+      "provider": "ogr"
+    },
+    {
+      "name": "Dubasari hydrography C - axis and envelopes, NOT legal frontier",
+      "expected": 3,
+      "actually_iterated": 3,
+      "provider": "ogr"
+    },
+    {
+      "name": "Exact OSMB2026 source arcs - continuity unproved",
+      "expected": 45,
+      "actually_iterated": 45,
+      "provider": "ogr"
+    },
+    {
+      "name": "Exterior A/B - zero admitted",
+      "expected": 0,
+      "actually_iterated": 0,
+      "provider": "memory"
+    },
+    {
+      "name": "HURI 1927-03-01 candidate districts C",
+      "expected": 11,
+      "actually_iterated": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 1928-08-15 candidate districts C",
+      "expected": 11,
+      "actually_iterated": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 1932-03-20 candidate districts C",
+      "expected": 11,
+      "actually_iterated": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 1932-10-25 candidate districts C",
+      "expected": 11,
+      "actually_iterated": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 1933-04-01 candidate districts C",
+      "expected": 11,
+      "actually_iterated": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 1933-12-15 candidate districts C",
+      "expected": 11,
+      "actually_iterated": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 1934-05-30 candidate districts C",
+      "expected": 11,
+      "actually_iterated": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 1937-01-15 candidate districts C",
+      "expected": 14,
+      "actually_iterated": 14,
+      "provider": "ogr"
+    },
+    {
+      "name": "Historical continuity unresolved -512C arcs",
+      "expected": 512,
+      "actually_iterated": 512,
+      "provider": "ogr"
+    },
+    {
+      "name": "Interior A/B - zero admitted",
+      "expected": 0,
+      "actually_iterated": 0,
+      "provider": "memory"
+    },
+    {
+      "name": "M1 confirmed continuity - zero admitted",
+      "expected": 0,
+      "actually_iterated": 0,
+      "provider": "memory"
+    },
+    {
+      "name": "MSE undated content -4retained and1new nominal C symbols",
+      "expected": 5,
+      "actually_iterated": 5,
+      "provider": "ogr"
+    },
+    {
+      "name": "Sources and3unlocated target documents D - no invented coordinates",
+      "expected": 18,
+      "actually_iterated": 18,
+      "provider": "ogr"
+    }
+  ]
+}

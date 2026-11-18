@@ -1,0 +1,15 @@
+{
+ "trace_id":"P5-MSE30-BALTA-BIRZULA-01",
+ "source_id":"MSE5_NATIVE_P4",
+ "source_file":"MSE5_leaf0168_native.jp2",
+ "episode":"PUBLICATION_1930_ADMINISTRATIVE_CONTENT_UNDATED",
+ "kind":"INTERNAL_CARTOGRAPHIC_SYMBOL_C",
+ "adjacent_units":"UNASSIGNED_RAYON_OR_OKRUG_PAIR",
+ "pixels":[[2432,1979],[2470,1992],[2515,1992],[2540,1980],[2560,1988],[2575,2004],[2580,2028]],
+ "interpretation":"Clearly visible dotted administrative symbol southeast of Balta and east of Birzula. Legend combines raion and okrug boundaries; exact pair and content date unassigned. Stops before the forest/road junction; no inferred continuation.",
+ "physical_GCP":0,
+ "certainty":"C",
+ "historical_boundary_admitted":false,
+ "reading_allowance_native_pixels":15,
+ "absolute_accuracy_m":null
+}
