@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "independent_empty_output": true,
+  "network_used": false,
+  "vector_features_WKB_and_attributes_identical": 2238,
+  "attribute_records_identical": 1071,
+  "byte_identical_registers": {
+    "03_GRIGORIOPOL/GRIGORIOPOL_1971_1988_council_comparison.csv": true,
+    "04_MOLDOVA_UCRAINA/1999_scope_per_arc.csv": true,
+    "04_MOLDOVA_UCRAINA/1999_scope_per_corridor.csv": true,
+    "04_MOLDOVA_UCRAINA/MD_UA_1995_1999_scope_and_boundary_evidence.csv": true,
+    "05_UCRAINA/UKRAINE_KOATUU_KATOTTG_historical_crosswalk.csv": true,
+    "08_DUBASARI/GCP_nou_investigate.csv": true,
+    "08_DUBASARI/PROOF2_Dubasari_physical_GCP_candidates.csv": true,
+    "12_RAPORT_FINAL/per_corridor.csv": true,
+    "12_RAPORT_FINAL/per_raion.csv": true,
+    "12_RAPORT_FINAL/PROOF6_acte_1958_1971.csv": true,
+    "12_RAPORT_FINAL/PROOF6_comparatie_PROOF5_PROOF6.csv": true,
+    "12_RAPORT_FINAL/PROOF6_continuitate_per_arc.csv": true,
+    "12_RAPORT_FINAL/PROOF6_documente_delimitare.csv": true,
+    "12_RAPORT_FINAL/PROOF6_geometrii_AB.csv": true,
+    "12_RAPORT_FINAL/PROOF6_inherited_PROOF5_events.csv": true,
+    "12_RAPORT_FINAL/PROOF6_inherited_PROOF5_sources.csv": true,
+    "12_RAPORT_FINAL/PROOF6_M1_promovari.csv": true,
+    "12_RAPORT_FINAL/PROOF6_planuri_fonduri_satesti.csv": true,
+    "12_RAPORT_FINAL/PROOF6_restante_individuale.csv": true,
+    "12_RAPORT_FINAL/PROOF6_Ukraine_predecessor_units.csv": true
+  },
+  "scope_recomputed_separately": true,
+  "scope_input_provenance": "scope_1999.py and source hashes; no general network audit"
+}
