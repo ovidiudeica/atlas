@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "integrity_check": "ok",
+  "geometries_valid": true,
+  "spatial_layers": 19,
+  "districts1937": 14,
+  "episodes": 8,
+  "external_m": 941310.474276343,
+  "internal_unique_m": 525399.9809064411,
+  "duplicate_internal_m": -8.149072527885437e-10,
+  "source_district_union_vs_outer_residual_m2": 0.012564973180587137,
+  "AB_km": 0,
+  "ICR_undated": true,
+  "Tiraspol_conflict_retained": true,
+  "unique_traces": 5
+}
