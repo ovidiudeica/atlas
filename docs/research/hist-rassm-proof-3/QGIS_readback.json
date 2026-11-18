@@ -1,0 +1,87 @@
+{
+  "qgis_version": "3.44.13-Solothurn",
+  "project_reopened": true,
+  "relative_paths": true,
+  "all_layers_valid": true,
+  "layers": [
+    {
+      "name": "14 candidate districts - January Tiraspol contradicted",
+      "valid": true,
+      "features": 14
+    },
+    {
+      "name": "1930 printed symbols - approximate frame C - undated content",
+      "valid": true,
+      "features": 4
+    },
+    {
+      "name": "1930 source - APPROXIMATE georeferencing - C",
+      "valid": true,
+      "features": null
+    },
+    {
+      "name": "36 investigated PROOF2 arcs - unchanged C",
+      "valid": true,
+      "features": 36
+    },
+    {
+      "name": "Dubasari printed frame only - NO absolute physical GCP",
+      "valid": true,
+      "features": 22
+    },
+    {
+      "name": "Exact OSMB candidate source arcs - continuity unproved",
+      "valid": true,
+      "features": 37
+    },
+    {
+      "name": "Exterior1937 C - original M classes",
+      "valid": true,
+      "features": 2663
+    },
+    {
+      "name": "Exterior A/B - zero admitted",
+      "valid": true,
+      "features": 0
+    },
+    {
+      "name": "Interior A/B - zero admitted",
+      "valid": true,
+      "features": 0
+    },
+    {
+      "name": "OSM Standard - \u00a9 OpenStreetMap contributors / ODbL",
+      "valid": true,
+      "features": null
+    },
+    {
+      "name": "Shared interior1937 C - counted once",
+      "valid": true,
+      "features": 1224
+    },
+    {
+      "name": "Sources and individual decisions",
+      "valid": true,
+      "features": 46
+    },
+    {
+      "name": "Unresolved1937 M4 M5 and divergent M3",
+      "valid": true,
+      "features": 2621
+    }
+  ],
+  "display_crs": "EPSG:3857",
+  "geodesic_lengths_m": {
+    "exterior": 941310.4742762588,
+    "internal": 525399.9809064411,
+    "new_printed_symbols": 98412.36245224893
+  },
+  "extent_3857": [
+    3166106.8001305372,
+    5856659.618802091,
+    3358649.946544358,
+    6152758.775010088
+  ],
+  "visual_verified": true,
+  "visual_observation": "Overview, corrected printed internal dotted-symbol comparison, and Dubasari context reviewed. Cyan traces are approximate C, not certified borders."
+}

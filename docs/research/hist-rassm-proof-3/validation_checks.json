@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "investigated_arc_count": 36,
+  "external_cases": 18,
+  "internal_cases": 18,
+  "new_direct_historical_evidence_arc_count": 0,
+  "new_regional_context_arc_count": 8,
+  "immutable_PROOF2_GPKG_sha256": "4ae9ec315841246a07d3678bfda045d14c2e5a2567547835624c0172f605b494",
+  "case_geodesic_length_max_delta_m": 0,
+  "case_geometries_WKB_unchanged": true,
+  "modern_source_geometry_not_snapped": true,
+  "all_candidate_arcs_EPSG4326": true,
+  "unique_shared_internal_edges": true,
+  "all_new_traces_valid_simple": true,
+  "new_traces_temporally_unassigned_to_1937": true,
+  "new_traces_AB_admitted": false,
+  "absolute_accuracy_claimed": false,
+  "physical_GCP_admitted": 0,
+  "admitted_AB_feature_count": 0,
+  "M1_promotions": 0,
+  "baseline_reconciliation_rerun": false
+}

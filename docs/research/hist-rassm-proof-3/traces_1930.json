@@ -1,0 +1,349 @@
+{
+  "source_id": "MSE1930-OFFICIAL1280",
+  "source_file": "MASSR1930_official_1280.png",
+  "source_episode": "PUBLICATION_1930_ADMINISTRATIVE_CONTENT_UNDATED",
+  "method": "Manual reading of visible printed symbols, independent of HURI/ICR/OSMB; no snapping",
+  "controls": [
+    {
+      "pixel": [
+        1074,
+        442
+      ],
+      "lon": 30,
+      "lat": 48,
+      "role": "PRINTED_GRATICULE_FIT"
+    },
+    {
+      "pixel": [
+        1108,
+        1407
+      ],
+      "lon": 30,
+      "lat": 47,
+      "role": "PRINTED_GRATICULE_FIT"
+    }
+  ],
+  "scale_bar": {
+    "start_pixel": [
+      307,
+      1960
+    ],
+    "end_pixel": [
+      696,
+      1963
+    ],
+    "length_m": 45000
+  },
+  "absolute_datum": "UNKNOWN",
+  "absolute_error_m": null,
+  "independent_physical_holdouts": 0,
+  "digitizing_reading_allowance_px": 5,
+  "sensitivity_scale_fraction": [
+    -0.01,
+    0,
+    0.01
+  ],
+  "features": [
+    {
+      "trace_id": "P3-MSE30-NW-01",
+      "kind": "EXTERNAL_CARTOGRAPHIC_SYMBOL",
+      "adjacent_hypothesis": "Kamianka / western demarcation line",
+      "certainty": "C",
+      "pixels": [
+        [
+          211,
+          440
+        ],
+        [
+          217,
+          447
+        ],
+        [
+          227,
+          458
+        ],
+        [
+          239,
+          471
+        ],
+        [
+          252,
+          478
+        ],
+        [
+          267,
+          480
+        ],
+        [
+          281,
+          478
+        ],
+        [
+          291,
+          483
+        ],
+        [
+          296,
+          498
+        ],
+        [
+          302,
+          511
+        ],
+        [
+          313,
+          524
+        ],
+        [
+          321,
+          534
+        ],
+        [
+          315,
+          545
+        ],
+        [
+          310,
+          555
+        ],
+        [
+          316,
+          566
+        ],
+        [
+          332,
+          571
+        ],
+        [
+          349,
+          576
+        ],
+        [
+          368,
+          581
+        ],
+        [
+          390,
+          588
+        ],
+        [
+          414,
+          596
+        ],
+        [
+          430,
+          601
+        ]
+      ]
+    },
+    {
+      "trace_id": "P3-MSE30-SC-01",
+      "kind": "EXTERNAL_CARTOGRAPHIC_SYMBOL",
+      "adjacent_hypothesis": "Hryhoriopol / western demarcation line",
+      "certainty": "C",
+      "pixels": [
+        [
+          595,
+          1281
+        ],
+        [
+          603,
+          1272
+        ],
+        [
+          611,
+          1267
+        ],
+        [
+          620,
+          1268
+        ],
+        [
+          626,
+          1279
+        ],
+        [
+          635,
+          1287
+        ],
+        [
+          643,
+          1296
+        ],
+        [
+          647,
+          1307
+        ],
+        [
+          659,
+          1314
+        ],
+        [
+          672,
+          1316
+        ],
+        [
+          681,
+          1328
+        ],
+        [
+          690,
+          1340
+        ],
+        [
+          704,
+          1348
+        ],
+        [
+          708,
+          1360
+        ],
+        [
+          707,
+          1375
+        ],
+        [
+          694,
+          1384
+        ],
+        [
+          691,
+          1392
+        ]
+      ]
+    },
+    {
+      "trace_id": "P3-MSE30-SE-01",
+      "kind": "EXTERNAL_CARTOGRAPHIC_SYMBOL",
+      "adjacent_hypothesis": "Slobodzeia / western demarcation line",
+      "certainty": "C",
+      "pixels": [
+        [
+          911,
+          1665
+        ],
+        [
+          904,
+          1674
+        ],
+        [
+          890,
+          1680
+        ],
+        [
+          882,
+          1690
+        ],
+        [
+          889,
+          1701
+        ],
+        [
+          885,
+          1710
+        ],
+        [
+          876,
+          1718
+        ],
+        [
+          880,
+          1728
+        ],
+        [
+          897,
+          1729
+        ],
+        [
+          908,
+          1724
+        ],
+        [
+          922,
+          1727
+        ],
+        [
+          932,
+          1721
+        ],
+        [
+          945,
+          1721
+        ],
+        [
+          955,
+          1725
+        ],
+        [
+          960,
+          1736
+        ],
+        [
+          958,
+          1745
+        ],
+        [
+          954,
+          1757
+        ],
+        [
+          960,
+          1767
+        ],
+        [
+          972,
+          1770
+        ],
+        [
+          978,
+          1762
+        ],
+        [
+          978,
+          1752
+        ],
+        [
+          973,
+          1745
+        ]
+      ]
+    },
+    {
+      "trace_id": "P3-MSE30-IN-01",
+      "kind": "INTERNAL_CARTOGRAPHIC_SYMBOL",
+      "adjacent_hypothesis": "UNASSIGNED_RAYON_PAIR: visible internal dotted symbol near Jura/Desanovka; district identity and1933-1935reorganisation unresolved",
+      "certainty": "C",
+      "pixels": [
+        [
+          531.6,
+          923.8
+        ],
+        [
+          559.5,
+          935.7
+        ],
+        [
+          563,
+          941.5
+        ],
+        [
+          565.6,
+          947.8
+        ],
+        [
+          563.5,
+          964.5
+        ],
+        [
+          547.7,
+          967.7
+        ],
+        [
+          544.7,
+          975.7
+        ]
+      ],
+      "reading_method": "Reviewed printed-dot centres; initial rejected reading is not delivered"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+id,name,history,status,physical_absolute_GCP_admitted,pixel_x,pixel_y,lon,lat,absolute_sigma_m
+PHYS-OHRINCEA-CHURCH,Ohrincea,1824wooden structure with stone foundation; current same-point survey absent,CANDIDATE_IMPROVED_NOT_ADMITTED,False,,,,,
+PHYS-IZBISTE-CHURCH,Izbiste,1839reconstruction; map-symbol and measured coordinate missing,CANDIDATE_IMPROVED_NOT_ADMITTED,False,,,,,
+PHYS-JEVRENI-CHURCH,Jevreni,1794/1797 and1832/1852histories unresolved,CANDIDATE_IMPROVED_NOT_ADMITTED,False,,,,,
+PHYS-DUBASARII-VECHI-CHURCH,Dubasarii Vechi,1861stone church history; no surveyed coordinate or map-symbol admission,CANDIDATE_IMPROVED_NOT_ADMITTED,False,,,,,
