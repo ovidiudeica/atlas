@@ -1,0 +1,14 @@
+metric,PROOF3,PROOF4
+MSE_original_volume_authenticated,False,True
+MSE_native_map_width,1280,3820
+MSE_native_map_height,,5831
+new_diagnostic_georeferences,0,1
+physical_GCP_admitted,0,0
+M1_km,0,0
+exterior_AB_km,0,0
+interior_AB_km,0,0
+new_boundary_km_this_stage,98.41236245224893,0
+retained_independent_exterior_symbol_km,88.55332909564687,88.55332909564687
+retained_independent_interior_symbol_km,9.859033356602051,9.859033356602051
+target_1939_recovered,False,False
+target_Ananiev1936_recovered,False,False

@@ -1,0 +1,18 @@
+{
+  "Bessel_GK5_supported_as_hypothesis": true,
+  "actual_datum_realization_authenticated": false,
+  "transformation_to_WGS84_authenticated": false,
+  "physical_absolute_GCP_admitted": 0,
+  "absolute_RMSE_m": null,
+  "FIT_physical_points": 0,
+  "HOLDOUT_physical_points": 0,
+  "prior_rejections_preserved": [
+    "USTIA_NOT_SAME_FOOTPRINT",
+    "CORJOVA_WRONG_LOCALITY"
+  ],
+  "new_context_candidates": 4,
+  "river_legal_rule_authenticated": false,
+  "boundary_symbol_MSE1930": "Western demarcation symbol distinguished from administrative district dotted symbol by printed legend; not evidence of exact thalweg/median rule",
+  "certification": "C",
+  "missing": "Sheet-specific datum realization and operation; surveyed stable physical points and symbol identity; independent HOLDOUT; applicable contemporaneous river-line rule"
+}

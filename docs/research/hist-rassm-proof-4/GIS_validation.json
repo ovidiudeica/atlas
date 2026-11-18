@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "input_PROOF3_sha256": "e810fa4ea28f3e764c35477451d71f2c439f2fa76382ed564506d546882b69b9",
+  "all_inherited_geometry_WKB_unchanged": true,
+  "vector_layer_counts": {
+    "RASSM_EXTERNAL_ADMITTED": 0,
+    "RASSM_INTERNAL_ADMITTED": 0,
+    "RASSM_EXTERNAL_CANDIDATES": 2663,
+    "RASSM_INTERNAL_CANDIDATES": 1224,
+    "RASSM_HISTORICAL_RECONSTRUCTIONS": 4,
+    "RASSM_MODERN_CONTINUITY": 37,
+    "RASSM_UNRESOLVED_SEGMENTS": 2621,
+    "RASSM_GCP_AND_DATUM": 22,
+    "INVESTIGATED_CASES": 36,
+    "HURI_1937_DISTRICTS_REFERENCE_C": 14
+  },
+  "all_vector_crs": "EPSG:4326",
+  "all_geometries_valid": true,
+  "shared_internal_geometry_unique": true,
+  "baseline_reconciliation_rerun": false,
+  "new_polygons_created": 0,
+  "new_boundary_geometries_created": 0,
+  "case_count": 36,
+  "external_case_count": 18,
+  "internal_case_count": 18,
+  "absolute_accuracy_m": null,
+  "physical_GCP_admitted": 0,
+  "geodesic_lengths_m": {
+    "RASSM_EXTERNAL_CANDIDATES": 941310.4742762588,
+    "RASSM_INTERNAL_CANDIDATES": 525399.9809064411,
+    "RASSM_HISTORICAL_RECONSTRUCTIONS": 98412.36245224893
+  },
+  "source_hashes_verified": 9,
+  "symmetric_difference_of_inherited_polygons_m2": 0,
+  "modern_arc_and_geometry_provenance_unchanged": true
+}
