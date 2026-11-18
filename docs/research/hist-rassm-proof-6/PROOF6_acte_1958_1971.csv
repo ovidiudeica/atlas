@@ -1,0 +1,5 @@
+target_id,unit,date,event,original_act_recovered,boundary_annex_recovered,evidence,geometry_proved
+CAM1959,Camenca,1959,ABOLITION,False,False,Institutional history only; exact day and original act/annex unresolved,False
+CAM1969,Camenca,1969-01-10,RECREATION,False,False,Date corroborated by official1988reference pp34–35; original decree and delimitation annex missing,False
+GRI1958,Grigoriopol,1958,ABOLITION,False,False,Institutional history only; exact day and original act/annex unresolved,False
+GRI1971,Grigoriopol,1971-06-21,RECREATION,False,False,Date corroborated by official1988reference pp18–19; original decree and delimitation annex missing,False

@@ -1,0 +1,8 @@
+metric,PROOF5,PROOF6
+pilot_arcs,512.0,512
+new_M1_km,0.0,0
+new_external_AB_km,0.0,0
+new_internal_AB_km,0.0,0
+new_nominal_cartographic_C_km,7.7213410822905155,0
+geometric_chains_complete,0.0,0
+physical_GCP_admitted,0.0,0

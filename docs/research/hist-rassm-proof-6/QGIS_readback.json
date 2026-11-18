@@ -1,0 +1,16 @@
+{
+  "project_reopened": true,
+  "all_layers_valid": true,
+  "relative_paths": true,
+  "temporal_reference_layers": 8,
+  "display_crs": "EPSG:3857",
+  "qgis_version": "3.44.13-Solothurn",
+  "geodesic_lengths_m": {
+    "EXTERNAL": 49980.077463588794,
+    "INTERNAL": 148198.2296404938,
+    "Dubasari_axis": 4346.9498483056095
+  },
+  "visual_verified": true,
+  "layer_count": 31,
+  "empty_admission_display_schemas": "Zero feature memory schemas; actual empty GPKG tables independently validated; runtime relative empty extent limitation"
+}
