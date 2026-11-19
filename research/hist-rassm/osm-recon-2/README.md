@@ -23,7 +23,7 @@ Research **C** only — no legal/historical boundary A/B admission. 2026-11-19. 
 - [Research report](https://drive.google.com/file/d/1xr9wrub7DxwKxPhSDfk9FVOK5rOgApD4/view)
 - [Vector-only review map](https://drive.google.com/file/d/1QOx9G65uFzTJQv7fhWQ2Exm5ApCHXpZu/view)
 
-ZIP SHA-256: `6cec57d76e5f2c263b86e995bb409a59afb5c47b420747520fc330d08408ba3c`
+ZIP SHA-256: `13d23d72996a4233d4a2b81918047b9b744e895d9c2646e13ba3aaaa011439f3`
 
 No ACTUAL, canonical geodata, user-facing Atlas site, QGIS CURRENT, earlier branches or previous PRs changed. **Draft** for research review only; no merge or publication requested.
 
@@ -32,3 +32,7 @@ No ACTUAL, canonical geodata, user-facing Atlas site, QGIS CURRENT, earlier bran
 ## Next evidence gate
 
 HIST-RASSM.OSM-RECON.3: review longest unresolved gaps against directly retrievable OSM waterway/administrative ways and any real historical spatial source; keep chronology and geometric morphology distinct; use no fabricated segment or historical stamp.
+
+## Discovered full local OSM history archive and provenance limits
+
+Full local history PBF **history-261019.osm.pbf** exists on the authorized laptop at 163,893,678,040 bytes (~152.64 GiB). The existing download receipt status is **FULL_BASE_BYTES_VERIFIED_NOT_SOURCE_QUALIFIED**, and its documented SHA-256 was *not independently recomputed during this stage*. Selective preexisting **selected-base.osh.pbf** (15,100,527 bytes; verified SHA-256 dad0f923029c96046e3fbe90f793906fe07da0076380b1890bb2db413e4cfd34) contains 57,959 way-version records and 2,878,820 dense node-version records, **zero relation-version records**. It cannot be used to validate historic relation boundaries. The detailed audit is in [OSM_FULL_HISTORY_SOURCE_AUDIT.md](OSM_FULL_HISTORY_SOURCE_AUDIT.md) and linked Drive folder. Geometry 59-sector model is unchanged by this supplement. Full relation-history extraction is a future evidence gate; no claim of historical A/B admission or complete 1924–1940 accuracy is made. Research ZIP includes the reproducible base geometry script, source audit script and selected PBF scanner; excludes raw contributor-linked source dumps.
