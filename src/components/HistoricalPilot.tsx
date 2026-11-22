@@ -7,7 +7,7 @@ import {
   type PilotHistoricalCatalog, type HistoricalVersion
 } from '../data/historicalCatalog.mjs';
 import {
-  buildHistoricalReviewTree, type HistoricalQualification,
+  buildHistoricalReviewTree, historicalDateInPeriod, type HistoricalQualification,
   type HistoricalReviewTree
 } from '../data/historicalQualification.mjs';
 
@@ -18,6 +18,7 @@ export interface HistoricalLabels {
   historyPilotWarning: string;
   historyPilotSource: string;
   historyPilotYear: string;
+  historyPilotLoading: string;
   historyPilotNoRoots: string;
   historyPilotUnlinked: string;
   historyPilotUnlinkedNote: string;
@@ -130,7 +131,7 @@ export function HistoricalPilotTree({
   return <section className="tree-content history-pilot-pane" aria-label={labels.historyPilotTitle}>
     <p className="source-caveat"><strong>{labels.historyPilotWarning}</strong></p>
     <p className="note">{labels.historyPilotSource}</p>
-    {loading&&<p role="status">{lang==='ro'?'Se încarcă datele-pilot…':'Loading pilot records…'}</p>}
+    {loading&&<p role="status">{labels.historyPilotLoading}</p>}
     {error&&<p role="alert">{error}</p>}
     {catalog&&qualification&&<div className="history-pilot-controls">
       <label className="history-pilot-option">
@@ -186,9 +187,7 @@ export function HistoricalPilotEntityCard({
   const review=buildHistoricalReviewTree(catalog,qualification,iso);
   const parents=catalog.hierarchy.filter(r=>r.childVersionId===versionId &&
     r.period.kind==='interval' && r.evidenceStatus==='candidate' &&
-    // Display recorded parent relations, including ones blocked by QA, with
-    // their review warnings; we do not present any as certified successors.
-    true);
+    historicalDateInPeriod(r.period,iso));
   const children=review.children.get(versionId)||[];
   const byVersion=new Map(catalog.versions.map(v=>[v.id,v]));
   const qa=new Map(qualification.relations.map(r=>[r.id,r]));
