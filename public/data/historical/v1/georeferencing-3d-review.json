@@ -1,0 +1,238 @@
+{
+  "schema": "atlas-historical-3d-native-evidence-review-v1",
+  "asOf": "2026-11-22",
+  "stage": "PARTIAL_NATIVE_MAP_SCREENING_NO_CERTIFIABLE_GEOREFERENCING_OR_BOUNDARY",
+  "predecessor": "HIST-MODULE.3c",
+  "purpose": "Evidence inventory and fail-closed protocol; NOT a claim that blind holdout or native legal-boundary vectorization was completed.",
+  "originals": [
+    {
+      "sourceId": "hist3c:map:streit-1835",
+      "year": 1835,
+      "archiveSha256": "02e55f68e870aa6e8c65ff12a71e2a080a2787443eaa0e8a58e7c3fe83d1408a",
+      "catalog": "https://wbc.poznan.pl/dlibra/publication/17090/edition/27667",
+      "raster": "https://www.wbc.poznan.pl/Content/27667/PDF/17090.pdf",
+      "mapScanPage": 1,
+      "scale": {
+        "printedDenominator": 1200000,
+        "printedText": "15 Meilen = 1° des Aequators. 1:1200000",
+        "printedCartoucheVisuallyRead": true,
+        "wbcCatalogDenominator": 200000,
+        "wbcCatalogConflict": true,
+        "precisionEstimateQualified": false
+      },
+      "nativeImageReview": "existing 2039x1613 PDF rendering; printed scale inspected in 1600px reproduction, magnified without added resolving power"
+    },
+    {
+      "sourceId": "hist3c:map:raffelsperger-1841",
+      "year": 1841,
+      "archiveSha256": "c3b0f75ba204744405cb20e5f2af004d4514a108d131540c3a608cbb53dc7d87",
+      "catalog": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~297853~90069447",
+      "raster": "https://www.davidrumsey.com/static/jp2k/171/11381017.jp2",
+      "scale": {
+        "rumseyCatalogDenominator": 890000,
+        "printedScaleIndependentlyMeasured": false,
+        "precisionEstimateQualified": false
+      },
+      "nativeImageReview": "native-resolution crop reviewed in historical worktree; colored outlines and hydrography visible but do not uniquely establish every jurisdictional line"
+    }
+  ],
+  "candidatePhysicalLandmarks": [
+    {
+      "id": "HIST3D-PHYS-SOMES-JOIN",
+      "feature": "confluence Someșul Mare / Someșul Mic near Mica–Dej",
+      "kind": "river_confluence",
+      "geographyEvidence": [
+        "https://www.primariadej.ro/Portals/0/Fisiere/HCL/2022/HCL%20138%20-%20Statutul%20municipiului.pdf",
+        "https://documente.bcucluj.ro/web/bibdigit/periodice/arhivasomesana/pdf/BCUCLUJ_FP_279098_1932_009_016.pdf"
+      ],
+      "raster1835Status": "regional_river_network_visible_not_fingerprint_matched",
+      "raster1841Status": "regional_river_network_visible_not_fingerprint_matched",
+      "historicCourseStability": "requires_independent_historical_hydrology_check",
+      "nativePixel1835": null,
+      "nativePixel1841": null,
+      "groundCoordinates": null,
+      "quality": "RESEARCH_CANDIDATE_NOT_GCP",
+      "holdoutEligible": false,
+      "notes": "1932 study discusses older conjectured fluvial course changes; do not treat modern confluence as a fixed 1835 survey point without dated corroboration."
+    },
+    {
+      "id": "HIST3D-PHYS-MURES-STREI",
+      "feature": "confluence Mureș / Strei near Simeria",
+      "kind": "river_confluence",
+      "geographyEvidence": [],
+      "raster1835Status": "not_independently_resolved_to_single_pixel",
+      "raster1841Status": "not_independently_resolved_to_single_pixel",
+      "historicCourseStability": "unverified",
+      "nativePixel1835": null,
+      "nativePixel1841": null,
+      "groundCoordinates": null,
+      "quality": "RESEARCH_CANDIDATE_NOT_GCP",
+      "holdoutEligible": false
+    },
+    {
+      "id": "HIST3D-PHYS-TARNAVA-JOIN",
+      "feature": "confluence Târnava Mare / Târnava Mic near Blaj",
+      "kind": "river_confluence",
+      "geographyEvidence": [],
+      "raster1835Status": "not_independently_resolved_to_single_pixel",
+      "raster1841Status": "not_independently_resolved_to_single_pixel",
+      "historicCourseStability": "unverified",
+      "nativePixel1835": null,
+      "nativePixel1841": null,
+      "groundCoordinates": null,
+      "quality": "RESEARCH_CANDIDATE_NOT_GCP",
+      "holdoutEligible": false
+    },
+    {
+      "id": "HIST3D-PHYS-OLT-CIBIN",
+      "feature": "confluence Olt / Cibin in southern Transylvania",
+      "kind": "river_confluence",
+      "geographyEvidence": [],
+      "raster1835Status": "not_independently_resolved_to_single_pixel",
+      "raster1841Status": "not_independently_resolved_to_single_pixel",
+      "historicCourseStability": "unverified",
+      "nativePixel1835": null,
+      "nativePixel1841": null,
+      "groundCoordinates": null,
+      "quality": "RESEARCH_CANDIDATE_NOT_GCP",
+      "holdoutEligible": false
+    }
+  ],
+  "holdoutProtocol": {
+    "status": "PROTOCOL_DRAFT_NOT_EXECUTED",
+    "preexisting3cSplitBlind": false,
+    "requiredIndependence": "A distinct assessor preregisters physical GCP locations and uncertainty, seals holdout targets before analyst fits, and releases them only after model parameters are frozen; no previous 3c residuals may be used to choose the test set.",
+    "requiredMinFitPerMap": 6,
+    "requiredMinBlindHoldoutPerMap": 3,
+    "requiredNativePhysicalFeaturesPerMap": 9,
+    "fittedModelsFrozenBeforeBlindEvaluation": false,
+    "cryptographicPrecommitCreated": false,
+    "verifiedPhysicalFitPoints1835": 0,
+    "verifiedPhysicalFitPoints1841": 0,
+    "blindHoldoutMeasured1835": 0,
+    "blindHoldoutMeasured1841": 0,
+    "acceptedGeoreferences": 0
+  },
+  "nativeLineDigitization": {
+    "status": "NOT_COMPLETED_NO_UNAMBIGUOUSLY_ATTRIBUTED_NATIVE_LINES",
+    "sourceCoordinateSpace": "native_raster_pixels_no_grounded_EPSG3035",
+    "lines": [],
+    "sourceLineAttributionVerified": false,
+    "independentVectorTracesCount": 0,
+    "rejectedAsEvidence": "Display-grid and color-mask contours are not verified geopolitical linework; automated segmentation of orange/red borders cannot establish legal unit identities."
+  },
+  "boundaryCases": [
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12324:12328:1815-09-06",
+      "childName": "Doboka",
+      "sourceParentName": "Innere Szolnok",
+      "histogisOutsidePercent": 100,
+      "decision": "BLOCKED_SOURCE_PARENT",
+      "original1835NativeBoundaryLine": null,
+      "original1841NativeBoundaryLine": null,
+      "sourceLineTracedByIndependentOperator": false,
+      "legalBoundaryQualified": false,
+      "administrativeParentReassigned": false,
+      "notes": "Native original-sector attribution, independent polyline and chronology remain unverified; no cutting, buffering or inherited 1851 outlines."
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12330:9915:1815-09-06",
+      "childName": "Bistritz",
+      "sourceParentName": "Großfürstentum Siebenbürgen",
+      "histogisOutsidePercent": 0.228619,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "original1835NativeBoundaryLine": null,
+      "original1841NativeBoundaryLine": null,
+      "sourceLineTracedByIndependentOperator": false,
+      "legalBoundaryQualified": false,
+      "administrativeParentReassigned": false,
+      "notes": "Native original-sector attribution, independent polyline and chronology remain unverified; no cutting, buffering or inherited 1851 outlines."
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12383:12406:1815-09-06",
+      "childName": "Mühlbach",
+      "sourceParentName": "Unterweißenburg",
+      "histogisOutsidePercent": 100,
+      "decision": "BLOCKED_SOURCE_PARENT",
+      "original1835NativeBoundaryLine": null,
+      "original1841NativeBoundaryLine": null,
+      "sourceLineTracedByIndependentOperator": false,
+      "legalBoundaryQualified": false,
+      "administrativeParentReassigned": false,
+      "notes": "Native original-sector attribution, independent polyline and chronology remain unverified; no cutting, buffering or inherited 1851 outlines."
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12391:9915:1815-09-06",
+      "childName": "Kövár",
+      "sourceParentName": "Großfürstentum Siebenbürgen",
+      "histogisOutsidePercent": 3.004871,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "original1835NativeBoundaryLine": null,
+      "original1841NativeBoundaryLine": null,
+      "sourceLineTracedByIndependentOperator": false,
+      "legalBoundaryQualified": false,
+      "administrativeParentReassigned": false,
+      "notes": "Native original-sector attribution, independent polyline and chronology remain unverified; no cutting, buffering or inherited 1851 outlines."
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12392:9915:1815-09-06",
+      "childName": "Zărand",
+      "sourceParentName": "Großfürstentum Siebenbürgen",
+      "histogisOutsidePercent": 0.401048,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "original1835NativeBoundaryLine": null,
+      "original1841NativeBoundaryLine": null,
+      "sourceLineTracedByIndependentOperator": false,
+      "legalBoundaryQualified": false,
+      "administrativeParentReassigned": false,
+      "notes": "Native original-sector attribution, independent polyline and chronology remain unverified; no cutting, buffering or inherited 1851 outlines."
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12401:9915:1815-09-06",
+      "childName": "Hunyad",
+      "sourceParentName": "Großfürstentum Siebenbürgen",
+      "histogisOutsidePercent": 0.771978,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "original1835NativeBoundaryLine": null,
+      "original1841NativeBoundaryLine": null,
+      "sourceLineTracedByIndependentOperator": false,
+      "legalBoundaryQualified": false,
+      "administrativeParentReassigned": false,
+      "notes": "Native original-sector attribution, independent polyline and chronology remain unverified; no cutting, buffering or inherited 1851 outlines."
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12404:9915:1815-09-06",
+      "childName": "Kraszna",
+      "sourceParentName": "Großfürstentum Siebenbürgen",
+      "histogisOutsidePercent": 2.029978,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "original1835NativeBoundaryLine": null,
+      "original1841NativeBoundaryLine": null,
+      "sourceLineTracedByIndependentOperator": false,
+      "legalBoundaryQualified": false,
+      "administrativeParentReassigned": false,
+      "notes": "Native original-sector attribution, independent polyline and chronology remain unverified; no cutting, buffering or inherited 1851 outlines."
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12405:9915:1815-09-06",
+      "childName": "Mittlere Szolnok",
+      "sourceParentName": "Großfürstentum Siebenbürgen",
+      "histogisOutsidePercent": 5.892093,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "original1835NativeBoundaryLine": null,
+      "original1841NativeBoundaryLine": null,
+      "sourceLineTracedByIndependentOperator": false,
+      "legalBoundaryQualified": false,
+      "administrativeParentReassigned": false,
+      "notes": "Native original-sector attribution, independent polyline and chronology remain unverified; no cutting, buffering or inherited 1851 outlines."
+    }
+  ],
+  "admissions": {
+    "acceptedHistoricalPolygons": 0,
+    "acceptedNewGeoreferencedMaps": 0,
+    "certifiedBoundaryLines": 0,
+    "changedAdministrativeParentEdges": 0,
+    "modifiedACTUAL": 0
+  },
+  "releaseDecision": "HOLD_AND_PROHIBIT_PROMOTION"
+}
