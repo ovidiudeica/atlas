@@ -1,0 +1,186 @@
+{
+  "schema": "atlas-geodata-ohm-directory-list-v1",
+  "at": "2026-11-22",
+  "dirs": [
+    {
+      "name": "Regiunea Cernăuți",
+      "id": "1IZ7Y81Er_sUp9w-Y72VPzxaBBGCEV0L3",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1GW2x55gOlPPPuSfnmhD-Zi4MZ7o0W23J",
+          "mime": "application/json",
+          "size": "3499"
+        },
+        {
+          "name": "OHM-r2960367.source.json.gz",
+          "id": "1ooRRHByoEVq1mZpFKee2hrmKo_JwYLdG",
+          "mime": "application/x-gzip",
+          "size": "70504"
+        },
+        {
+          "name": "OHM-r2960367.geojson",
+          "id": "1GjNA-rhwZzHLioTtcuZppemElTCoSJpU",
+          "mime": "application/octet-stream",
+          "size": "205518"
+        }
+      ]
+    },
+    {
+      "name": "Regiunea Transcarpatia",
+      "id": "1Cs1wnv3XfN02I8XjOSLVtKC52bjb0ELX",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1_YL390yWcE4x7Q2_qxonKvNIrA2w06fu",
+          "mime": "application/json",
+          "size": "3304"
+        },
+        {
+          "name": "OHM-r2859183.source.json.gz",
+          "id": "18b4eihgu5w7Qw46dO-jxiMibzY2xBxl_",
+          "mime": "application/x-gzip",
+          "size": "54478"
+        },
+        {
+          "name": "OHM-r2859183.geojson",
+          "id": "1N8us4rJQGOmOseBMr2G97dBb0MY22Ss7",
+          "mime": "application/octet-stream",
+          "size": "156743"
+        }
+      ]
+    },
+    {
+      "name": "Regiunea Ismail",
+      "id": "1ZSuQLeMSc6GLXhjJRAPfGhMLzBNbDPQX",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "158R3gSbA8rPYjdre7DYv8_tmQO3zFgem",
+          "mime": "application/json",
+          "size": "3464"
+        },
+        {
+          "name": "OHM-r2960607.source.json.gz",
+          "id": "1x8EOZzbA0D3Gul1KU4oryg4HsZjxqBIG",
+          "mime": "application/x-gzip",
+          "size": "47605"
+        },
+        {
+          "name": "OHM-r2960607.geojson",
+          "id": "1TGVEpE3xeJK0ijx0M2wczlNDLc51kniT",
+          "mime": "application/octet-stream",
+          "size": "137721"
+        }
+      ]
+    },
+    {
+      "name": "Regiunea Akkerman",
+      "id": "15yK3OBzprguLCY0mIm2IGM122DbEl0fl",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1ESyYtet3_LPOXhhgyTjlq4MMh49NtMfH",
+          "mime": "application/json",
+          "size": "3456"
+        },
+        {
+          "name": "OHM-r2960608.source.json.gz",
+          "id": "11mBntLZBzR0lU_Ekp6B2LfRQp94ygFag",
+          "mime": "application/x-gzip",
+          "size": "47259"
+        },
+        {
+          "name": "OHM-r2960608.geojson",
+          "id": "1fJvhEiWu6lASHke72zIrZ9UedV339zRC",
+          "mime": "application/octet-stream",
+          "size": "137223"
+        }
+      ]
+    },
+    {
+      "name": "RSS Moldovenească",
+      "id": "1_SbPAqPseI-Xf03fEJbmgVwpf_dnrPF1",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1PJnZwKTLNFgJVeD0anKe74pyL1eWvJdk",
+          "mime": "application/json",
+          "size": "3446"
+        },
+        {
+          "name": "OHM-r2694777.source.json.gz",
+          "id": "1jOF3mZnW7wY_AOUu7l6TgpsPIUBCkfko",
+          "mime": "application/x-gzip",
+          "size": "163206"
+        },
+        {
+          "name": "OHM-r2694777.geojson",
+          "id": "1D_DPbHV2YjzcNjE3Fgn8rea1VutfEdXU",
+          "mime": "application/octet-stream",
+          "size": "474040"
+        }
+      ]
+    },
+    {
+      "name": "Voivodina Sârbească și Banatul Timișan",
+      "id": "1Or0zjWPFHi4vbgYN2MlZJEIQCXpYI0nD",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1bMvR_ZK2qEk-YPf5_Q5-V1VgS-UT7_gT",
+          "mime": "application/json",
+          "size": "3375"
+        },
+        {
+          "name": "OHM-r2694215.source.json.gz",
+          "id": "1gJuKpOPDB7DNIFQBZq8GdsjqD0dirYDO",
+          "mime": "application/x-gzip",
+          "size": "32300"
+        },
+        {
+          "name": "OHM-r2694215.geojson",
+          "id": "109luWsgg86TGSBUBgubzTOZpHhcxkG7S",
+          "mime": "application/octet-stream",
+          "size": "82973"
+        }
+      ]
+    },
+    {
+      "name": "Țara Chioarului",
+      "id": "15rSwAE4KZOXwT-xWgJTs4LHgQrA87d3X",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "11aeOWzdqoF2dic4lE4x5cNPSUdY_fI-I",
+          "mime": "application/json",
+          "size": "4878"
+        },
+        {
+          "name": "OHM-r2747434.source.json.gz",
+          "id": "1P3GnVZbnwzFSTL_40KpovqOOh8OIJHil",
+          "mime": "application/x-gzip",
+          "size": "12953"
+        },
+        {
+          "name": "OHM-r2747434.geojson",
+          "id": "1jb7iSmXxfPqyiIqbbq-LH_AM_2ulJsT3",
+          "mime": "application/octet-stream",
+          "size": "35233"
+        },
+        {
+          "name": "OHM-r2747435.source.json.gz",
+          "id": "1-IoqsEzFURFGdM0MTffNPiT9fl2slwXy",
+          "mime": "application/x-gzip",
+          "size": "13093"
+        },
+        {
+          "name": "OHM-r2747435.geojson",
+          "id": "1keKhTKW9MA6r44OJwUzekBBb8NhMf0kZ",
+          "mime": "application/octet-stream",
+          "size": "35390"
+        }
+      ]
+    }
+  ]
+}
