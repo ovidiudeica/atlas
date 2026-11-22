@@ -6,6 +6,15 @@ import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
+import { HistoricalPilotTree, HistoricalPilotEntityCard } from './components/HistoricalPilot';
+import {
+  loadHistoricalPilotCatalog,loadHistoricalPilotGeometries,
+  validateHistoricalPilotCatalog, type PilotHistoricalCatalog
+} from './data/historicalCatalog.mjs';
+import {
+  loadHistoricalPilotQualification, historicalDateInPeriod,
+  type HistoricalQualification
+} from './data/historicalQualification.mjs';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { SymbolAuditSummary } from './components/SymbolAuditSummary';
 import { symbolAuditFor } from './data/symbolAudit.mjs';
@@ -124,7 +133,37 @@ const WORDS = {
     geometryEvidenceQualified: 'Source-qualified',
     geometryEvidenceCandidate: 'Candidate, not yet admitted',
     geometryEvidenceReview: 'Under review',
-    referenceDatePrefix: 'Attested in '
+    referenceDatePrefix: 'Attested in ',
+    historyPilotTitle: 'Historical source pilot',
+    historyPilotEnable: 'Explore the unverified HistoGIS pilot',
+    historyPilotDisable: 'Hide unverified pilot',
+    historyPilotWarning: 'SOURCE PILOT · Boundaries and parentage are not independently certified.',
+    historyPilotSource: 'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0 · historical intervals as reported by the source',
+    historyPilotYear: 'Year of reference',
+    historyPilotNoRoots: 'No source version is documented for this year.',
+    historyPilotUnlinked: 'Unlinked or disputed units',
+    historyPilotUnlinkedNote: 'These versions are kept available, without inventing a parent or joining incompatible polygons.',
+    historyPilotCandidate: 'Source candidate relations',
+    historyPilotSpatialWarning: 'Geometric discrepancy — review required',
+    historyPilotOpen: 'Source children for this year',
+    historyPilotSelected: 'Selected historical version',
+    historyPilotYears: 'Source-reported period',
+    historyPilotIdentity: 'Historical identity',
+    historyPilotOriginalName: 'Original source name',
+    historyPilotOriginalType: 'Source administrative type',
+    historyPilotVersions: 'Chronological versions',
+    historyPilotHierarchy: 'Historical parent and children (candidates)',
+    historyPilotNoParent: 'Parent not confirmed',
+    historyPilotNoChildren: 'No source children documented for the selected year.',
+    historyPilotGeometry: 'Geometry',
+    historyPilotSources: 'Sources and rights',
+    historyPilotCurrent: 'Present-day administrative situation',
+    historyPilotNoBridge: 'No independently verified relation with ACTUAL has been admitted. This is not evidence that the current territory has no administration.',
+    historyPilotReviewNote: 'These are source-supplied proposals, not a certified legal or exhaustive historical hierarchy.',
+    historyPilotMap: 'Locate source polygon',
+    historyPilotStatus: 'Evidence qualification',
+    historyPilotSourceName: 'The source label has not yet been independently translated.',
+    historyPilotLoading: 'Loading the historical source pilot…'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -206,7 +245,37 @@ const WORDS = {
     geometryEvidenceQualified: 'Calificat după sursă',
     geometryEvidenceCandidate: 'Candidat, încă neadmis',
     geometryEvidenceReview: 'În verificare',
-    referenceDatePrefix: 'Atestat în '
+    referenceDatePrefix: 'Atestat în ',
+    historyPilotTitle: 'Arbore istoric — pilot documentar',
+    historyPilotEnable: 'Explorează pilotul HistoGIS necertificat',
+    historyPilotDisable: 'Ascunde pilotul necertificat',
+    historyPilotWarning: 'PILOT DOCUMENTAR · Hotarele și relațiile de subordonare nu sunt certificate independent.',
+    historyPilotSource: 'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0 · intervale conform sursei',
+    historyPilotYear: 'Anul de referință',
+    historyPilotNoRoots: 'Nu există o versiune documentată în sursă pentru acest an.',
+    historyPilotUnlinked: 'Unități nelegate sau disputate',
+    historyPilotUnlinkedNote: 'Păstrăm versiunile fără a inventa părinți și fără a conecta poligoane incompatibile.',
+    historyPilotCandidate: 'Relații candidate din sursă',
+    historyPilotSpatialWarning: 'Neconcordanță geometrică — necesită verificare',
+    historyPilotOpen: 'Copii conform sursei pentru acest an',
+    historyPilotSelected: 'Versiunea istorică selectată',
+    historyPilotYears: 'Perioadă conform sursei',
+    historyPilotIdentity: 'Identitate istorică',
+    historyPilotOriginalName: 'Denumire în sursa originală',
+    historyPilotOriginalType: 'Tip administrativ în sursă',
+    historyPilotVersions: 'Versiuni cronologice',
+    historyPilotHierarchy: 'Părinți și copii istorici (candidați)',
+    historyPilotNoParent: 'Părinte neconfirmat',
+    historyPilotNoChildren: 'Nu sunt copii documentați pentru anul selectat.',
+    historyPilotGeometry: 'Geometrie',
+    historyPilotSources: 'Surse și drepturi',
+    historyPilotCurrent: 'Situația administrativă actuală',
+    historyPilotNoBridge: 'Nu a fost admisă încă o corespondență verificată independent cu ACTUAL. Aceasta nu înseamnă că teritoriul nu are administrare actuală.',
+    historyPilotReviewNote: 'Acestea sunt propuneri din sursă, nu o ierarhie istorică juridică sau exhaustivă certificată.',
+    historyPilotMap: 'Încadrează conturul din sursă',
+    historyPilotStatus: 'Calificare probatorie',
+    historyPilotSourceName: 'Eticheta sursei nu a fost încă tradusă independent.',
+    historyPilotLoading: 'Se încarcă pilotul istoric…'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -277,6 +346,16 @@ export default function App() {
   // selection source in this release is Administrative.
   const [selectedModule,setSelectedModule] = useState<ModuleId|null>(
     SHARED_STATE.entity?'administrative':null);
+  // Historical preview is independent from ACTUAL canonical identities and
+  // moduleVisible. No unreviewed polygon is loaded as a certified ACTUAL shard.
+  const [historyCatalog,setHistoryCatalog] = useState<PilotHistoricalCatalog|null>(null);
+  const [historyQualifications,setHistoryQualifications] = useState<HistoricalQualification|null>(null);
+  const [historyGeometries,setHistoryGeometries] = useState<FeatureCollection|null>(null);
+  const [historyPreviewEnabled,setHistoryPreviewEnabled] = useState(false);
+  const [historyYear,setHistoryYear] = useState(1835);
+  const [historySelectedVersionId,setHistorySelectedVersionId] = useState<string|null>(null);
+  const [historyLoading,setHistoryLoading] = useState(false);
+  const [historyError,setHistoryError] = useState<string|null>(null);
   // Independent module geometry selections share one map without owning
   // each other's selections; the Administrative array retains persistence.
   const [moduleVisible,setModuleVisible] = useState(()=>makeModuleVisibility(restoreVisible()));
@@ -358,6 +437,14 @@ export default function App() {
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
+  const historicalSelectedVersion = historyCatalog?.versions.find(
+    v=>v.id===historySelectedVersionId) || null;
+  const historicalCardActive = Boolean(historyPreviewEnabled &&
+    selectedModule==='historical' && historicalSelectedVersion &&
+    historyCatalog && historyQualifications);
+  const shownCardName = historicalCardActive&&historicalSelectedVersion ?
+    (historicalSelectedVersion.name[lang]||historicalSelectedVersion.name.ro) :
+    currentNode ? cardNameOf(currentNode,lang) : null;
   const cardRoles=currentNode?entityCardRoles(currentNode):null;
   // These are presentation-tree children for the ACTIVE tree view, never
   // mutations to the canonical administrative/legal parent identifiers.
@@ -396,6 +483,25 @@ export default function App() {
       .catch(e=>{if(active)setCatalogError(String(e));});
     return ()=>{active=false;};
   },[]);
+  useEffect(()=>{
+    if(module!=='historical'||!modulePanelOpen||historyCatalog||historyLoading||historyError)return;
+    let active=true;
+    setHistoryLoading(true);
+    loadHistoricalPilotCatalog().then(async pilot=>{
+      const [qualifications,geometry]=await Promise.all([
+        loadHistoricalPilotQualification(pilot),loadHistoricalPilotGeometries()
+      ]);
+      const result=validateHistoricalPilotCatalog(pilot,geometry);
+      if(!result.ok)throw Error(result.errors.join('; '));
+      if(!active)return;
+      setHistoryCatalog(pilot);
+      setHistoryQualifications(qualifications);
+      setHistoryGeometries(geometry as FeatureCollection);
+    }).catch(e=>{if(active)setHistoryError(String(e));})
+      .finally(()=>{if(active)setHistoryLoading(false);});
+    return ()=>{active=false;};
+  },[module,modulePanelOpen,historyCatalog,historyError]);
+
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
   useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
   useEffect(()=>{
