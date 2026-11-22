@@ -689,6 +689,10 @@ export default function App() {
         instance.setFilter('entity-hover',['==',['get','atlasId'],'__none__']);
       });
       instance.on('click','entity-fill',event=>{
+        // The historical source outline has selection priority over the
+        // overlapping ACTUAL fill, while both remain separate data layers.
+        if(instance.queryRenderedFeatures(event.point,{
+          layers:['historical-pilot-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -698,6 +702,8 @@ export default function App() {
       });
       for(const boundaryLayer of ['entity-outline','entity-stat-outline'])
         instance.on('click',boundaryLayer,event=>{
+        if(instance.queryRenderedFeatures(event.point,{
+          layers:['historical-pilot-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -720,6 +726,8 @@ export default function App() {
         instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
       }
       instance.on('click','country-fill',event=>{
+        if(instance.queryRenderedFeatures(event.point,{
+          layers:['historical-pilot-fill']}).length)return;
         const country=event.features?.[0]?.properties?.id;
         if(country==='ro'||country==='md'){
           setSelected(country==='ro'?'osm-r90689':'osm-r58974');
@@ -851,7 +859,25 @@ export default function App() {
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
   function chooseHistoricalVersion(id:string){
-    if(!historyPreviewEnabled || !historyCatalog?.versions.some(v=>v.id===id))return;
+    const version=historyCatalog?.versions.find(v=>v.id===id);
+    if(!historyPreviewEnabled || !version)return;
+    if(!historicalDateInPeriod(version.period,
+      String(historyYear).padStart(4,'0')+'-07-01')){
+      // The year control uses a representative July date. Moving between
+      // versions must not silently display a polygon outside its interval.
+      const start=version.period.kind==='interval'?version.period.start:version.period.at;
+      const end=version.period.kind==='interval'?version.period.end:version.period.at;
+      if(start&&end){
+        const y=Math.max(1815,start.year);
+        const firstJuly=start.month&&start.month>7?y+1:y;
+        for(let attempt=firstJuly;attempt<=Math.min(end.year,1918);attempt++){
+          if(historicalDateInPeriod(version.period,
+              String(attempt).padStart(4,'0')+'-07-01')){
+            setHistoryYear(attempt);break;
+          }
+        }
+      }
+    }
     setToolsOpen(false);setToolSection(null);
     setHistorySelectedVersionId(id);
     setSelected(null);
