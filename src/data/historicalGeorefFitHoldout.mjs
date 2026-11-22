@@ -138,6 +138,8 @@ export function validateOriginalMapFitHoldout(pilot,review,register,results){
  for(const [i,c] of cases.entries()){
   const original=baseline.get(c.sourceRelationId),q=outcomes[i];
   if(!original||!q||q.sourceRelationId!==c.sourceRelationId||
+     c.childVersionId!==original.childVersionId||
+     c.parentVersionId!==original.parentVersionId||
      c.baselineDecision!==original.sourceTopologyVerdict||
      Math.abs(c.baselineOutsidePercent-original.outsidePercentEqualArea)>1e-7||
      c.decision!==q.decision||
