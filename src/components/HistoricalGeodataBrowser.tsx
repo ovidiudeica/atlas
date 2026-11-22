@@ -43,10 +43,11 @@ const dateLabel=(e:GeodataSourceEntry,lang:Locale)=>
     (lang==='ro'?'Atestat în ':'Attested in ')+e.sourcePeriod.start?.slice(0,4):
   (e.sourcePeriod.start?.slice(0,4)||'?')+'–'+(e.sourcePeriod.end?.slice(0,4)||'?');
 
-export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId}:{
+export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,onFiltersActiveChange}:{
  year:number;onYear:(year:number)=>void;lang:Locale;
  onSelect:(selection:HistoricalGeodataSelection)=>void;
  selectedId:string|null;
+ onFiltersActiveChange:(active:boolean)=>void;
 }){
  const [index,setIndex]=useState<GeodataSourceIndex|null>(null);
  const [error,setError]=useState<string|null>(null);
@@ -54,6 +55,8 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId}:
  const [query,setQuery]=useState('');
  const [yearOnly,setYearOnly]=useState(false);
  const t=labels[lang];
+ useEffect(()=>{onFiltersActiveChange(Boolean(query.trim())||yearOnly);},
+   [query,yearOnly,onFiltersActiveChange]);
  useEffect(()=>{
    let active=true;
    loadGeodataSourceIndex(import.meta.env.BASE_URL).then(data=>{if(active)setIndex(data);})
