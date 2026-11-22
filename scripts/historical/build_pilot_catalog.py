@@ -226,7 +226,7 @@ def build(index, zip_hash):
         "geometries": assets,
         "geometryUses": sorted(geometry_uses, key=lambda x: x["useId"]),
         "hierarchy": sorted(hierarchy, key=lambda x: x["id"]),
-        "bridge": [], "events": [], "symbols": [],
+        "bridge": [], "events": [], "symbols": [], "geometryDecisions": [],
         "qa": {
             "topologicallyValidSourcePolygons": len(selected),
             "sourcePolygons": len(selected),
