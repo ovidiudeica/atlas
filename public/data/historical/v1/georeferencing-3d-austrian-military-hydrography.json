@@ -1,0 +1,303 @@
+{
+  "schema": "atlas-historical-3d-austrian-military-hydrography-comparison-v1",
+  "asOf": "2026-11-22",
+  "scope": "QUALITATIVE_HISTORICAL_HYDROGRAPHIC_CONTINUITY_1769_1773_AND_UNDATED_AUSTRO_HUNGARIAN_THIRD_SURVEY_NOT_POINT_CERTIFICATION",
+  "predecessor": "atlas-historical-3d-physical-topographic-crosscheck-v1",
+  "timeSlices": [
+    {
+      "survey": "first_military_survey_josephine",
+      "reportedCoverage": "Transylvania 1769–1773",
+      "nominalScaleDenominator": 28800,
+      "repository": "Wikimedia Commons copies of Austrian Kriegsarchiv B IX 715 original manuscript sheets",
+      "digitalImageQuality": "1800px retrieved source-image thumbnails inspected, full native scan not downloaded in this stage",
+      "regionalComparisonPerformed": true,
+      "datumProjectionVerified": false,
+      "pixelCertified": false
+    },
+    {
+      "survey": "second_military_survey_franciscan",
+      "reportedCoverage": "Transylvania 1853–1858; 1869–1870, local exceptions possible",
+      "nominalScaleDenominator": 28800,
+      "repository": "Arcanum Mapire secondsurvey-transylvania catalog; Timár et al. academic description",
+      "digitalImageQuality": "the four required original sheets not retrieved or inspected; Mapire inaccessible to this audit",
+      "regionalComparisonPerformed": false,
+      "datumProjectionVerified": false,
+      "pixelCertified": false
+    },
+    {
+      "survey": "third_military_survey_spezialkarte",
+      "reportedCoverage": "LOC collection georeferenced sheets circa 1875 to post 1918: specific editions not dated",
+      "nominalScaleDenominator": 75000,
+      "repository": "Library of Congress Austrian-Hungarian Maps dataset; original unrectified sheets_img and georeferenced sheets_geo",
+      "digitalImageQuality": "all four direct remote GDAL GeoTIFF region crops retrieved and visually examined; original collar examined for 5172_000; other original margins not checked",
+      "regionalComparisonPerformed": true,
+      "datumProjectionVerified": false,
+      "pixelCertified": false
+    }
+  ],
+  "sources": {
+    "firstSurveyCommonsPrefix": "https://commons.wikimedia.org/wiki/File:Josephinische_Landaufnahme_pg",
+    "firstSurveyImageBase": "https://upload.wikimedia.org/wikipedia/commons/",
+    "locDataset": "https://data.labs.loc.gov/austro-hungarian-maps/",
+    "locRasterUrlTemplate": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_geo/{sheet}_000_geo.tif",
+    "locOriginalUrlTemplate": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_img/{sheet}_000_img.tif",
+    "locIndexShapefile": "https://data.labs.loc.gov/austro-hungarian-maps/data/index_shapefile.zip",
+    "secondSurveyCatalog": "https://maps.arcanum.com/en/map/secondsurvey-transylvania/",
+    "secondSurveyProjectionStudy": "https://technicalgeography.org/pdf/1_2007/gt_1_2007.pdf",
+    "locSampleCollar5172": {
+      "title": "SZAMOSÚJVÁR 5172",
+      "printedNominalScale": "1:75,000",
+      "publisher": "k.u.k. Militärgeographisches Institut",
+      "libraryAcquisitionStamp": "3 OCT 1966 — accession date, NOT cartographic survey/edition date",
+      "originalEditionYearVerified": null,
+      "upperCropSha256": "50d5c54061d77166ad8bb4970c17085e40a2c3bcc8add07bb95711d138f0aa5b",
+      "lowerCropSha256": "f94754f69088fe3bf5760833b44c81c9e3f0636ad778f218c7afe550a8aca738"
+    }
+  },
+  "cases": [
+    {
+      "physicalReferenceId": "HIST3D-PHYS-SOMES-JOIN",
+      "locality": "Mica–Dej",
+      "firstSurvey": {
+        "sheetPageNumbers": [
+          52,
+          53
+        ],
+        "previewFiles": [
+          {
+            "localFile": "JOSEPH_052_preview.jpg",
+            "sha256": "aec9bd98a5a14dcbe4f545afe88506d65f1a583fd67cb537299e8b857bd4d2c0",
+            "originalCommonsPage": "https://commons.wikimedia.org/wiki/File:Josephinische_Landaufnahme_pg052.jpg"
+          },
+          {
+            "localFile": "JOSEPH_053_preview.jpg",
+            "sha256": "9e48407654635423407cf1aa1ed1fdb8f164b082f33086b9fd3826eb5f1bbb3b",
+            "originalCommonsPage": "https://commons.wikimedia.org/wiki/File:Josephinische_Landaufnahme_pg053.jpg"
+          }
+        ],
+        "reading": "The 1769–1773 sheet 053 visibly shows Dés/Dej and multiple watercourses joining in the town valley; modern named identity of both arms and the same junction coordinates are not demonstrated.",
+        "classification": "CANDIDATE_CONFLUENCE_REGION_NOT_UNIQUELY_IDENTIFIED",
+        "uniqueHistoricalJunctionPixel": null,
+        "sourceGeoreferenceAccuracyQualified": false
+      },
+      "secondSurvey": {
+        "contemporaneousSheetId": null,
+        "sourceImageRecovered": false,
+        "localSectionSurveyYearVerified": false,
+        "uniqueHistoricalJunctionPixel": null,
+        "status": "BLOCKED_MISSING_TARGET_SHEET_RASTER"
+      },
+      "thirdSurvey": {
+        "sheetId": "5172_000",
+        "locIndexFootprintContainsEUHydroNode": true,
+        "geoTiffWgs84BBox_approx": [
+          23.86,
+          47.1,
+          23.975,
+          47.185
+        ],
+        "regionalCropFile": "LOC_5172_000_Dej_trial.jpg",
+        "regionalCropSha256": "0155dbb2d5c63d113d23e633a6004b9cba6eac17147fc820766358fb9a5b71a7",
+        "originalSheetUrl": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_img/5172_000_img.tif",
+        "locGeoTiffUrl": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_geo/5172_000_geo.tif",
+        "reading": "Sheet 5172_000 depicts Dés and Mica with strongly meandering river branches; a cross-period bankline/river-mouth displacement cannot be measured without certified alignment.",
+        "classification": "RIVER_BRANCHES_VISIBLE_NOT_INDEPENDENT_PIXEL_MATCH",
+        "editionYearVerified": null,
+        "uniqueHistoricalJunctionPixel": null,
+        "sourceGeoreferenceAccuracyQualified": false
+      },
+      "independentModernReference": "Copernicus EEA EU-Hydro modern network node, as in previous physical crosscheck",
+      "comparability": "TOPOLOGICAL_ONLY_NO_SURVEY_YEAR_RESOLVED_NO_COMMON_POSITIONAL_UNCERTAINTY",
+      "historicalFluvialStabilityFrom18thTo21stCentury": "NOT_ESTABLISHED",
+      "historicalGcpQualified": false,
+      "fitEligible": false,
+      "blindHoldoutEligible": false,
+      "decision": "HOLD_HYDROGRAPHIC_CONTINUITY_NOT_GEODETIC_STABILITY"
+    },
+    {
+      "physicalReferenceId": "HIST3D-PHYS-MURES-STREI",
+      "locality": "Simeria–Piski",
+      "firstSurvey": {
+        "sheetPageNumbers": [
+          200,
+          215
+        ],
+        "previewFiles": [
+          {
+            "localFile": "JOSEPH_200_preview.jpg",
+            "sha256": "91c241693091b109083ab36682d17367ef72b5b2c913de4a564a0f19f201e841",
+            "originalCommonsPage": "https://commons.wikimedia.org/wiki/File:Josephinische_Landaufnahme_pg200.jpg"
+          },
+          {
+            "localFile": "JOSEPH_215_preview.jpg",
+            "sha256": "1989cce7ec1cb7f7b75f2d1c6afc169eae90d9eb6c9d768f8805f15bfd1d0210",
+            "originalCommonsPage": "https://commons.wikimedia.org/wiki/File:Josephinische_Landaufnahme_pg215.jpg"
+          }
+        ],
+        "reading": "1769–1773 sheet 200 depicts Strei valley east of Szászváros, sheet 215 also covers Hunyad/Strei corridor, but the exact mouth at the Mureș is not independently shown in the inspected previews.",
+        "classification": "REGIONAL_TRIBUTARY_PRESENT_EXACT_MOUTH_OUTSIDE_OR_NOT_CONFIRMED",
+        "uniqueHistoricalJunctionPixel": null,
+        "sourceGeoreferenceAccuracyQualified": false
+      },
+      "secondSurvey": {
+        "contemporaneousSheetId": null,
+        "sourceImageRecovered": false,
+        "localSectionSurveyYearVerified": false,
+        "uniqueHistoricalJunctionPixel": null,
+        "status": "BLOCKED_MISSING_TARGET_SHEET_RASTER"
+      },
+      "thirdSurvey": {
+        "sheetId": "5670_000",
+        "locIndexFootprintContainsEUHydroNode": true,
+        "geoTiffWgs84BBox_approx": [
+          22.975,
+          45.805,
+          23.125,
+          45.905
+        ],
+        "regionalCropFile": "LOC_5670_000_Strei_trial.jpg",
+        "regionalCropSha256": "36f68d084a68de8307f9bb4a2938259a85e34e6afd4270f501b119e9a8da1776",
+        "originalSheetUrl": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_img/5670_000_img.tif",
+        "locGeoTiffUrl": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_geo/5670_000_geo.tif",
+        "reading": "LOC sheet 5670_000 visibly labels MAROS (Mureș) and STREU (Strei), with the Strei channel meeting the Mureș in the Piski corridor; direct named regional topology found, but the surveyed year and independent geodetic precision are unknown.",
+        "classification": "NAMED_HISTORIC_CONFLUENCE_VISIBLE_UNDATED",
+        "editionYearVerified": null,
+        "uniqueHistoricalJunctionPixel": null,
+        "sourceGeoreferenceAccuracyQualified": false
+      },
+      "independentModernReference": "Copernicus EEA EU-Hydro modern network node, as in previous physical crosscheck",
+      "comparability": "TOPOLOGICAL_ONLY_NO_SURVEY_YEAR_RESOLVED_NO_COMMON_POSITIONAL_UNCERTAINTY",
+      "historicalFluvialStabilityFrom18thTo21stCentury": "NOT_ESTABLISHED",
+      "historicalGcpQualified": false,
+      "fitEligible": false,
+      "blindHoldoutEligible": false,
+      "decision": "HOLD_HYDROGRAPHIC_CONTINUITY_NOT_GEODETIC_STABILITY"
+    },
+    {
+      "physicalReferenceId": "HIST3D-PHYS-TARNAVA-JOIN",
+      "locality": "Blaj–Balázsfalva",
+      "firstSurvey": {
+        "sheetPageNumbers": [
+          172
+        ],
+        "previewFiles": [
+          {
+            "localFile": "JOSEPH_172_preview.jpg",
+            "sha256": "7386619a67cd0229bb01fc1dd29880b2de6889c37d457cef7883dae0bafceb59",
+            "originalCommonsPage": "https://commons.wikimedia.org/wiki/File:Josephinische_Landaufnahme_pg172.jpg"
+          }
+        ],
+        "reading": "Sheet 172 depicts Balázsfalva and winding channels; named branches cannot be separated at a unique junction from the examined 1800px preview.",
+        "classification": "RIVER_CONFLUENCE_REGION_VISIBLE_EXACT_BRANCH_IDENTIFICATION_UNCERTAIN",
+        "uniqueHistoricalJunctionPixel": null,
+        "sourceGeoreferenceAccuracyQualified": false
+      },
+      "secondSurvey": {
+        "contemporaneousSheetId": null,
+        "sourceImageRecovered": false,
+        "localSectionSurveyYearVerified": false,
+        "uniqueHistoricalJunctionPixel": null,
+        "status": "BLOCKED_MISSING_TARGET_SHEET_RASTER"
+      },
+      "thirdSurvey": {
+        "sheetId": "5572_000",
+        "locIndexFootprintContainsEUHydroNode": true,
+        "geoTiffWgs84BBox_approx": [
+          23.83,
+          46.11,
+          23.985,
+          46.225
+        ],
+        "regionalCropFile": "LOC_5572_000_Tarnave_trial.jpg",
+        "regionalCropSha256": "404f8ea3065783e09e293979c743578d802670d660e92543e74f9a29cc74b158",
+        "originalSheetUrl": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_img/5572_000_img.tif",
+        "locGeoTiffUrl": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_geo/5572_000_geo.tif",
+        "reading": "LOC sheet 5572_000 explicitly labels N. Küküllő (Târnava Mare/Mică naming interpretation to verify) and another Küküllő branch around Balázsfalva, with convergence west of the town; detailed river meanders may have shifted.",
+        "classification": "HISTORIC_CONFLUENCE_MORPHOLOGY_VISIBLE_NAMES_NEED_CROSSCHECK",
+        "editionYearVerified": null,
+        "uniqueHistoricalJunctionPixel": null,
+        "sourceGeoreferenceAccuracyQualified": false
+      },
+      "independentModernReference": "Copernicus EEA EU-Hydro modern network node, as in previous physical crosscheck",
+      "comparability": "TOPOLOGICAL_ONLY_NO_SURVEY_YEAR_RESOLVED_NO_COMMON_POSITIONAL_UNCERTAINTY",
+      "historicalFluvialStabilityFrom18thTo21stCentury": "NOT_ESTABLISHED",
+      "historicalGcpQualified": false,
+      "fitEligible": false,
+      "blindHoldoutEligible": false,
+      "decision": "HOLD_HYDROGRAPHIC_CONTINUITY_NOT_GEODETIC_STABILITY"
+    },
+    {
+      "physicalReferenceId": "HIST3D-PHYS-OLT-CIBIN",
+      "locality": "Boița–Tălmaciu",
+      "firstSurvey": {
+        "sheetPageNumbers": [
+          253,
+          254
+        ],
+        "previewFiles": [
+          {
+            "localFile": "JOSEPH_253_preview.jpg",
+            "sha256": "c0947d536d314d6f4823f84551ab6a64a48907cd09787fa3eeac5ab8a6859f4b",
+            "originalCommonsPage": "https://commons.wikimedia.org/wiki/File:Josephinische_Landaufnahme_pg253.jpg"
+          },
+          {
+            "localFile": "JOSEPH_254_preview.jpg",
+            "sha256": "ad5bc107b7c2610a575889284c321e1929b620694d3b528a7ceb824036203cec",
+            "originalCommonsPage": "https://commons.wikimedia.org/wiki/File:Josephinische_Landaufnahme_pg254.jpg"
+          }
+        ],
+        "reading": "1769–1773 sheets 253 and 254 depict the Tălmaciu and Olt valley corridor near map edges but do not supply a uniquely attributable Cibin–Olt junction in reviewed previews.",
+        "classification": "CORRIDOR_VISIBLE_MOUTH_NOT_UNIQUELY_MATCHED",
+        "uniqueHistoricalJunctionPixel": null,
+        "sourceGeoreferenceAccuracyQualified": false
+      },
+      "secondSurvey": {
+        "contemporaneousSheetId": null,
+        "sourceImageRecovered": false,
+        "localSectionSurveyYearVerified": false,
+        "uniqueHistoricalJunctionPixel": null,
+        "status": "BLOCKED_MISSING_TARGET_SHEET_RASTER"
+      },
+      "thirdSurvey": {
+        "sheetId": "5772_000",
+        "locIndexFootprintContainsEUHydroNode": true,
+        "geoTiffWgs84BBox_approx": [
+          24.22,
+          45.605,
+          24.36,
+          45.71
+        ],
+        "regionalCropFile": "LOC_5772_000_Cibin_trial.jpg",
+        "regionalCropSha256": "3e0ae480e37f252b1f814658748877c29f49a73d07a9b7038bc9685f41e2d42f",
+        "originalSheetUrl": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_img/5772_000_img.tif",
+        "locGeoTiffUrl": "https://data.labs.loc.gov/austro-hungarian-maps/data/sheets_geo/5772_000_geo.tif",
+        "reading": "LOC 5772_000 displays Nagy Talmács, Boița and Porcești plus the drainage network in the Cibin–Olt corridor. Confluence interpretation is regional, exact pixel unverified.",
+        "classification": "REGIONAL_RIVER_NETWORK_VISIBLE_NOT_NATIVE_CONFLUENCE_MATCH",
+        "editionYearVerified": null,
+        "uniqueHistoricalJunctionPixel": null,
+        "sourceGeoreferenceAccuracyQualified": false
+      },
+      "independentModernReference": "Copernicus EEA EU-Hydro modern network node, as in previous physical crosscheck",
+      "comparability": "TOPOLOGICAL_ONLY_NO_SURVEY_YEAR_RESOLVED_NO_COMMON_POSITIONAL_UNCERTAINTY",
+      "historicalFluvialStabilityFrom18thTo21stCentury": "NOT_ESTABLISHED",
+      "historicalGcpQualified": false,
+      "fitEligible": false,
+      "blindHoldoutEligible": false,
+      "decision": "HOLD_HYDROGRAPHIC_CONTINUITY_NOT_GEODETIC_STABILITY"
+    }
+  ],
+  "evidenceGates": {
+    "firstSurveyDirectConfluencePixelsQualified": 0,
+    "secondSurveyOriginalSheetsInspected": 0,
+    "thirdSurveyEditionDatesVerified": 0,
+    "historicalPhysicalControlAccepted1835": 0,
+    "historicalPhysicalControlAccepted1841": 0,
+    "blindHoldoutPointsReleased": 0,
+    "newFitPerformed": false,
+    "independentMapToMapUncertaintyMeasured": false,
+    "historicalHydrologicalStabilityAccepted": false,
+    "newHistoricalBoundaryDigitization": 0,
+    "modifiedACTUAL": false
+  },
+  "overallDecision": "HOLD_ZERO_GCP_TO_BLIND_FIT_HOLDOUT"
+}
