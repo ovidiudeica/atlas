@@ -10,6 +10,10 @@ import { HistoricalPilotTree, HistoricalPilotEntityCard } from './components/His
 import {
   loadHistoricalBoundaryReview, type HistoricalBoundaryReview
 } from './data/historicalBoundaryReview.mjs';
+import {
+  loadOriginalMapFitHoldout,
+  type OriginalMapFitHoldoutRegister,type OriginalMapFitHoldoutResults
+} from './data/historicalGeorefFitHoldout.mjs';
 import { ActualHistoryConnections } from './components/HistoricalEvidenceSections';
 import {
   loadIndependentHistoricalAdmissions,
@@ -173,6 +177,21 @@ const WORDS = {
     historyPilotStatus: 'Evidence qualification',
     historyPilotSourceName: 'The source label has not yet been independently translated.',
     historyPilotLoading: 'Loading the historical source pilot…',
+    history3cTitle: 'Original map FIT/HOLDOUT (exploratory)',
+    history3cWarning: 'Independent original scans, but approximate town-position GCPs and non-blind HOLDOUT. Both map registrations fail screening; no boundary or parent is certified.',
+    history3cMapStatus: 'Map trial status',
+    history3cFit: 'FIT controls',
+    history3cHoldout: 'HOLDOUT controls',
+    history3cFitRmse: 'FIT error (RMSE)',
+    history3cHoldoutRmse: 'HOLDOUT error (RMSE)',
+    history3cMaxHoldout: 'Maximum HOLDOUT error',
+    history3cOriginal: 'Open original map catalogue',
+    history3cCase: 'Original map FIT/HOLDOUT — boundary verdict',
+    history3cUnverified: 'HOLD — unverified historical border, no new polygon',
+    history3cTrialRejected: 'Rejected original-map trials',
+    history3cBoundaryStatus: 'Certified boundaries',
+    history3cBlocked: 'Blocked source parent; no automatic replacement',
+    history3cHold: 'On hold for independent line tracing and reliable GCPs',
     history3bTitle: '1851 legal hierarchy — normative snapshot only',
     history3bLawParent: 'Direct parent prescribed by law',
     history3bGazetteDate: 'Gazette publication date',
@@ -320,6 +339,21 @@ const WORDS = {
     historyPilotStatus: 'Calificare probatorie',
     historyPilotSourceName: 'Eticheta sursei nu a fost încă tradusă independent.',
     historyPilotLoading: 'Se încarcă pilotul istoric…',
+    history3cTitle: 'Hărțile originale — FIT/HOLDOUT exploratoriu',
+    history3cWarning: 'Scanări originale independente, însă repere urbane aproximative și HOLDOUT neorb. Ambele georeferențieri de probă nu trec criteriile; niciun hotar sau părinte nu este certificat.',
+    history3cMapStatus: 'Starea probei cartografice',
+    history3cFit: 'Puncte FIT',
+    history3cHoldout: 'Puncte HOLDOUT',
+    history3cFitRmse: 'Eroare FIT (RMSE)',
+    history3cHoldoutRmse: 'Eroare HOLDOUT (RMSE)',
+    history3cMaxHoldout: 'Eroare HOLDOUT maximă',
+    history3cOriginal: 'Deschide catalogul hărții originale',
+    history3cCase: 'FIT/HOLDOUT pe hărți originale — verdictul hotarului',
+    history3cUnverified: 'HOLD — hotar istoric neverificat, fără poligon nou',
+    history3cTrialRejected: 'Probe de georeferențiere respinse',
+    history3cBoundaryStatus: 'Hotare certificate',
+    history3cBlocked: 'Părinte-sursă blocat; fără înlocuire automată',
+    history3cHold: 'În așteptarea trasării independente a hotarului și a reperelor fiabile',
     history3bTitle: 'Ierarhia legală din 1851 — atestare punctuală',
     history3bLawParent: 'Părinte direct prevăzut de actul normativ',
     history3bGazetteDate: 'Data publicării în gazeta oficială',
@@ -431,6 +465,8 @@ export default function App() {
   const [historyQualifications,setHistoryQualifications] = useState<HistoricalQualification|null>(null);
   const [historyAdmissions,setHistoryAdmissions] = useState<HistoricalIndependentAdmissions|null>(null);
   const [historyBoundaryReview,setHistoryBoundaryReview] = useState<HistoricalBoundaryReview|null>(null);
+  const [historyGeorefRegister,setHistoryGeorefRegister] = useState<OriginalMapFitHoldoutRegister|null>(null);
+  const [historyGeorefResults,setHistoryGeorefResults] = useState<OriginalMapFitHoldoutResults|null>(null);
   const [historyGeometries,setHistoryGeometries] = useState<FeatureCollection|null>(null);
   const [historyPreviewEnabled,setHistoryPreviewEnabled] = useState(false);
   const [historyYear,setHistoryYear] = useState(1835);
@@ -578,6 +614,8 @@ export default function App() {
         loadIndependentHistoricalAdmissions(pilot),
         loadHistoricalBoundaryReview(pilot,qualifications)
       ]);
+      const {register:georefRegister,results:georefResults}=
+        await loadOriginalMapFitHoldout(pilot,boundaryReview);
       const pilotGate=validateHistoricalPilotCatalog(pilot);
       if(!pilotGate.ok)throw Error(pilotGate.errors.join('; '));
       const gate=validateIndependentHistoricalAdmissions(pilot,admissions,{
@@ -590,6 +628,8 @@ export default function App() {
       setHistoryQualifications(qualifications);
       setHistoryAdmissions(admissions);
       setHistoryBoundaryReview(boundaryReview);
+      setHistoryGeorefRegister(georefRegister);
+      setHistoryGeorefResults(georefResults);
     }).catch(e=>{if(active)setHistoryError(String(e));})
       .finally(()=>{if(active)setHistoryLoading(false);});
     return ()=>{active=false;};
@@ -1420,6 +1460,7 @@ export default function App() {
   const historicalPanel=<HistoricalPilotTree
     catalog={historyCatalog} qualification={historyQualifications}
     admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
+    georefRegister={historyGeorefRegister} georefResults={historyGeorefResults}
     year={historyYear} preview={historyPreviewEnabled}
     selectedVersionId={historySelectedVersionId}
     lang={lang} labels={t} loading={historyLoading||historyGeometryLoading} error={historyError}
@@ -1449,6 +1490,7 @@ export default function App() {
     <HistoricalPilotEntityCard
       catalog={historyCatalog} qualification={historyQualifications}
       admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
+      georefRegister={historyGeorefRegister} georefResults={historyGeorefResults}
       versionId={historySelectedVersionId} year={historyYear}
       lang={lang} labels={t} onSelect={chooseHistoricalVersion}
       onMap={locateHistoricalVersion}
