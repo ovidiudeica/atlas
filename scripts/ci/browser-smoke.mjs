@@ -1981,6 +1981,47 @@ async function historicalPilotSmoke(cdp){
   }
 }
 
+/* HIST-MODULE.3 — actual bidirectional navigation, labels and source scope.
+ * At no point does a geometry overlap become a legal or institutional match.
+ */
+async function historicalIndependentSmoke(cdp){
+  const p=await cdp.page(1440,900,false,
+    site+'?entity=osm-r2077868&lang=ro');
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'HIST3 ACTUAL map ready');
+  await p.wait("document.querySelectorAll('.detail-sidebar .history-overlap-nav').length===2",
+    'HIST3 two documented source-overlap links for Suceava county');
+  const actualSection=await p.eval("document.querySelector('.detail-sidebar .entity-card-section:has(.history-overlap-nav)')?.textContent");
+  assert.match(actualSection,/Corespondențe teritoriale istorice/);
+  assert.match(actualSection,/Bucovina|Bukowina/);
+  assert.match(actualSection,/1907/);
+  assert.match(actualSection,/2026/);
+  assert.match(actualSection,/intersecție|suprapunere/i);
+  await p.eval("document.querySelector('.detail-sidebar .entity-card-section:has(.history-overlap-nav) summary').click()");
+  await p.eval("document.querySelector('.detail-sidebar .history-overlap-nav').click()");
+  await p.wait("!!document.querySelector('.detail-sidebar .history-entity-detail .entity-title')",
+    'HIST3 historical card opens from ACTUAL');
+  const historicalCard=await p.eval("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent");
+  assert.match(historicalCard,/HistoGIS/);
+  assert.match(historicalCard,/necertificat|certificate/i);
+  assert.match(historicalCard,/Atestări documentare independente/);
+  assert.match(historicalCard,/Situația administrativă actuală/);
+  assert.match(historicalCard,/Su[cz]eava/i);
+  const linkCount=await p.eval("document.querySelectorAll('.detail-sidebar .history-current-links .history-overlap-nav').length");
+  assert.equal(linkCount,1,'Bucovina 9970 links to current Suceava county');
+  await p.snap('desktop-hist-module-3-documentary-crosslink.png');
+  await p.eval("document.querySelector('.detail-sidebar .history-current-links .history-overlap-nav').click()");
+  await p.wait("!!document.querySelector('.detail-sidebar .entity-card')&&!document.querySelector('.detail-sidebar .history-entity-detail')",
+    'HIST3 reverse link returns to ACTUAL');
+  await p.eval("document.querySelector('.language button:first-child').click()");
+  await p.wait("document.documentElement.lang==='en'",
+    'HIST3 global EN switch');
+  const en=await p.eval("document.querySelector('.detail-sidebar .entity-card-section:has(.history-overlap-nav)')?.textContent");
+  assert.match(en,/Historical territorial correspondences/);
+  assert.match(en,/Spatial intersection does not imply/);
+  await p.close();
+}
+
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
@@ -2025,6 +2066,7 @@ try{
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
   await historicalPilotSmoke(client);
+  await historicalIndependentSmoke(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
