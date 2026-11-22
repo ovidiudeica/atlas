@@ -1,7 +1,8 @@
 /**
- * HIST-INTEGRATE.1b — source-qualified geometric intake into the Historical model.
- * Not the HistoGIS pilot's legal/admission validator. This projection is deliberately
- * read-only, preserves the original source index, and never creates parentage.
+ * HIST-OHM-CORE.1 — read-only OHM projection into Historical entity/version/
+ * geometry-use semantics. Folder grouping is only a candidate identity;
+ * institutional continuity, parentage and legal borders are NOT certified.
+ * HistoGIS is deliberately excluded and reserved for final gap completion.
  */
 import {validateHistoricalPeriod} from './historicalAdminBridge.mjs';
 import {validateGeodataHistoricalIndex} from './historicalGeodata.mjs';
@@ -16,7 +17,7 @@ const parseDate=x=>{
   if(m[3])d.day=Number(m[3]);
   return d;
 };
-function periodFor(entry){
+function sourcePeriod(entry){
   const p=entry.sourcePeriod;
   if(p.kind==='undated')return null;
   if(p.kind==='snapshot'){
@@ -29,75 +30,58 @@ function periodFor(entry){
 }
 
 /**
- * Same data-contract semantics as HistoricalEntity, HistoricalVersion,
- * GeometryAsset and GeometryUse, but strictly source-only. One source record
- * receives one provisional entity ID to avoid inventing continuity across dates.
- * Undated source polygons are retained as geometry assets with a holdout
- * reference and are NOT given an artificial HistoricalPeriod.
+ * One provisional entity per editorial source directory, NOT per geometry.
+ * Source relation IDs remain one-to-one with source HistoricalVersion records.
+ * No parent-child relation or documented institutional continuity is inferred
+ * from directory grouping.
  */
 export function projectGeodataHistoricalSourceCatalog(index){
   const qa=validateGeodataHistoricalIndex(index);
-  if(!qa.ok)throw Error('Geodata historical source index invalid: '+qa.errors.join('; '));
+  if(!qa.ok)throw Error('OHM historical index invalid: '+qa.errors.join('; '));
+  if(index.entries.some(e=>e.sourceFamily!=='OHM'))
+    throw Error('Only OHM may enter HIST-OHM-CORE.1');
   const entities=[],versions=[],geometryUses=[],undatedGeometryReferences=[];
-  const assetById=new Map();
+  const groups=new Map(),assets=new Map();
   for(const entry of index.entries){
-    let asset=assetById.get(entry.geometryId);
+    const entityId='ohm:provisional-entity:'+encodeURIComponent(entry.sourceGroup);
+    if(!groups.has(entry.sourceGroup)){
+      const entity={id:entityId,names:entry.displayName,
+        sourceOriginalName:entry.displayName.ro,sourceFamily:'OHM',
+        sourceGroup:entry.sourceGroup,groupingBasis:'editorial_directory_only',
+        identityReviewStatus:'in_review',institutionalContinuityQualified:false,
+        boundaryCertification:'not_certified'};
+      groups.set(entry.sourceGroup,entity);
+      entities.push(entity);
+    }
+    let asset=assets.get(entry.geometryId);
     if(!asset){
-      asset={geometryId:entry.geometryId,sourceUseIds:[],geometryStatus:'source_only_not_certified',
-        sourceCoordinateHashStatus:'deduplicated_exactly_within_geodata_index',
+      asset={geometryId:entry.geometryId,sourceUseIds:[],
+        geometryStatus:'source_only_not_certified',
+        sourceCoordinateHashStatus:'deduplicated_exactly_within_ohm_index',
         historicalBoundaryCertified:false};
-      assetById.set(entry.geometryId,asset);
+      assets.set(entry.geometryId,asset);
     }
     asset.sourceUseIds.push(entry.id);
-    const entityId='geodata:entity:'+entry.id,versionId='geodata:version:'+entry.id;
-    entities.push({id:entityId,names:entry.displayName,
-      sourceOriginalName:entry.displayName.ro,
-      sourceFamily:entry.sourceFamily,sourceId:entry.id,
-      identityReviewStatus:'in_review',institutionalContinuityQualified:false});
-    const period=periodFor(entry);
+    const versionId='ohm:version:'+entry.id;
+    const period=sourcePeriod(entry);
     if(!period){
-      undatedGeometryReferences.push({sourceId:entry.id,entityId,geometryId:entry.geometryId,
-        sourcePeriod:entry.sourcePeriod,reason:'NO_VALID_HISTORICAL_PERIOD',
-        evidenceStatus:'in_review'});
+      undatedGeometryReferences.push({sourceId:entry.id,entityId,
+        geometryId:entry.geometryId,sourcePeriod:entry.sourcePeriod,
+        reason:'NO_VALID_HISTORICAL_PERIOD',evidenceStatus:'in_review'});
       continue;
     }
-    versions.push({id:versionId,entityId,geometryId:entry.geometryId,period,
-      sourceIds:[entry.id],sourceOriginalType:entry.sourceType||'unknown',
-      sourceFamily:entry.sourceFamily,evidenceStatus:'in_review',
+    versions.push({id:versionId,entityId,geometryId:entry.geometryId,
+      period,sourceIds:[entry.id],sourceOriginalType:entry.sourceType||'unknown',
+      sourceFamily:'OHM',evidenceStatus:'in_review',
       boundaryCertification:'not_certified',periodQualified:false});
-    geometryUses.push({useId:'geodata:use:'+entry.id,entityId,versionId,
+    geometryUses.push({useId:'ohm:use:'+entry.id,entityId,versionId,
       geometryId:entry.geometryId,entityName:entry.displayName,period,
       sourceIds:[entry.id],evidenceStatus:'in_review'});
   }
-  return {
-    schema:SCHEMA,sourceSchema:index.schema,
+  return {schema:SCHEMA,sourceSchema:index.schema,sourceFamilies:['OHM'],
     sourceOnly:true,legalBoundariesCertified:false,
-    entities,versions,geometries:[...assetById.values()],geometryUses,
+    entities,versions,geometries:[...assets.values()],geometryUses,
     undatedGeometryReferences,hierarchy:[],bridge:[],events:[],symbols:[],
     geometryDecisions:[],administrativeParentsQualified:0,
-    crossModuleIdentityQualified:0
-  };
-}
-
-export function federatedHistoricalSourceOverview(pilot,sourceProjection){
-  if(!pilot||pilot.schema!=='atlas-historical-pilot-v1'||
-     sourceProjection?.schema!==SCHEMA)throw Error('Incompatible Historical source catalogues');
-  const pilotGeom=new Set(pilot.geometries.map(x=>x.geometryId));
-  for(const geometry of sourceProjection.geometries)
-    if(pilotGeom.has(geometry.geometryId))
-      throw Error('Cross-source geometry ID collision');
-  return {
-    schema:'atlas-historical-federated-source-overview-v1',
-    histogisEntities:pilot.entities.length,
-    histogisVersions:pilot.versions.length,
-    histogisGeometries:pilot.geometries.length,
-    geodataProvisionalEntities:sourceProjection.entities.length,
-    geodataDatedSourceVersions:sourceProjection.versions.length,
-    geodataUndatedGeometryReferences:sourceProjection.undatedGeometryReferences.length,
-    geodataGeometryAssets:sourceProjection.geometries.length,
-    // Not additive boundary certification or proof of any historical institution.
-    qualifiedCrossCatalogueIdentityLinks:0,
-    coordinateEquivalenceAcrossSources:'not_assessed',
-    historicalHierarchyMerge:'prohibited_without_independent_evidence'
-  };
+    crossModuleIdentityQualified:0};
 }
