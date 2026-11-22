@@ -1,5 +1,6 @@
 import {useEffect,useMemo,useState} from 'react';
 import {EntityCardSection} from './EntityCardSection';
+import {projectGeodataHistoricalSourceCatalog} from '../data/historicalGeodataTemporal.mjs';
 import {
   geodataSourcesAtYear,loadGeodataSourceFeature,loadGeodataSourceIndex,
   type GeodataSourceEntry,type GeodataSourceFeature,type GeodataSourceIndex
@@ -59,6 +60,7 @@ export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
      .catch(err=>{if(active)setError(String(err));});
    return ()=>{active=false;};
  },[]);
+ const sourceProjection=useMemo(()=>index?projectGeodataHistoricalSourceCatalog(index):null,[index]);
  const grouped=useMemo(()=>{
    if(!index)return [];
    const dateIds=yearOnly?new Set(geodataSourcesAtYear(index,year).map(e=>e.id)):null;
@@ -86,7 +88,9 @@ export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
  return <section className="tree-content history-geodata-pane" aria-label={t.title}>
    <h3>{t.title}</h3>
    <p className="source-caveat">{t.subtitle}</p>
-   <p className="note">{index?.entries.length||0} {t.indexed} · {index?.sourceFamilies?.join(' / ')||'OHM-Boundaries'}</p>
+   <p className="note">{index?.entries.length||0} {t.indexed} · {index?.sourceFamilies?.join(' / ')||'OHM-Boundaries'}
+     {sourceProjection&&<> · {sourceProjection.versions.length} {lang==='ro'?'versiuni datate':'dated versions'}
+       {' · '}{sourceProjection.undatedGeometryReferences.length} {lang==='ro'?'surse fără dată certă':'undated sources'}</>}</p>
    {!index&&!error&&<p role="status">{t.loading}</p>}
    <label className="history-source-search">{t.search}
      <input type="search" value={query} onChange={e=>setQuery(e.target.value)} />
