@@ -89,4 +89,3 @@ export function geometryUsesInHistoricalCatalog(
   catalog:PilotHistoricalCatalog,geometryId:string
 ): HistoricalGeometryUse[];
 export function loadHistoricalPilotCatalog(baseUrl?:string):Promise<PilotHistoricalCatalog>;
-export function loadHistoricalPilotGeometries(baseUrl?:string):Promise<unknown>;
