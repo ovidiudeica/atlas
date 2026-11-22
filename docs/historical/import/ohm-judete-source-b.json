@@ -1,0 +1,150 @@
+{
+  "schema": "atlas-geodata-ohm-leaf-inventory-v1",
+  "collection": "Județe istorice",
+  "dirs": [
+    {
+      "name": "Județul Roman",
+      "id": "13vt59d5pJpgY0AHh7FgLdY8tQWCeRgv-",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1Z9ZP7lUJ_4nPgko38AtNDdTV2naEnUjD",
+          "mime": "application/json",
+          "size": "2506"
+        },
+        {
+          "name": "OHM-r2943496.source.json.gz",
+          "id": "1q8Ic8cL--slLW2ks2PXCVZ9b1BswddGK",
+          "mime": "application/x-gzip",
+          "size": "6678"
+        },
+        {
+          "name": "OHM-r2943496.geojson",
+          "id": "1AxDc_XCD1EffxgnZgN5D7BgKDPZZ1Ung",
+          "mime": "application/octet-stream",
+          "size": "17379"
+        }
+      ]
+    },
+    {
+      "name": "Județul Putna",
+      "id": "10r_V3gmWqYQyjm7-8XQMtb9MmORRlusr",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "15_xY1M_tCkOeX_Ub9kaTC0V7cNBskfTq",
+          "mime": "application/json",
+          "size": "2507"
+        },
+        {
+          "name": "OHM-r2943652.source.json.gz",
+          "id": "1eS12nkJDOV58D4UyvT4PCIdJecnBxkNR",
+          "mime": "application/x-gzip",
+          "size": "10835"
+        },
+        {
+          "name": "OHM-r2943652.geojson",
+          "id": "1ngte0ROJAeQUpwyhHIy5HbLDS4FINFvT",
+          "mime": "application/octet-stream",
+          "size": "28645"
+        }
+      ]
+    },
+    {
+      "name": "Județul Neamț",
+      "id": "1bU_OJE5WNlDCwZHL1TGooQQdE55qYiEd",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1jyPGyfqqCkd_dEVXKMn8J5F8r1mqH6vB",
+          "mime": "application/json",
+          "size": "2512"
+        },
+        {
+          "name": "OHM-r2943485.source.json.gz",
+          "id": "1oVxUCA2Wpcg5cxHt87IgOMbdEPw2dvF7",
+          "mime": "application/x-gzip",
+          "size": "13115"
+        },
+        {
+          "name": "OHM-r2943485.geojson",
+          "id": "1q2h3RMtjuPdb7gBPQ4uk_ZUGvC1AecB6",
+          "mime": "application/octet-stream",
+          "size": "35586"
+        }
+      ]
+    },
+    {
+      "name": "Județul Moghilău",
+      "id": "1x76-5jjYWL6CrOBSfmNBAVNRWVqS-Ohb",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1UAEMVgD-fmwm2V2KBIjMMgIaTzbCrkry",
+          "mime": "application/json",
+          "size": "2571"
+        },
+        {
+          "name": "OHM-r2698193.source.json.gz",
+          "id": "1C-iTINQsRLWDse_TSyvOYdXV_j5G72TX",
+          "mime": "application/x-gzip",
+          "size": "1956"
+        },
+        {
+          "name": "OHM-r2698193.geojson",
+          "id": "1Dd78n3MtqjGCyfWy_XrDwRZam_iRo4Rf",
+          "mime": "application/octet-stream",
+          "size": "4310"
+        }
+      ]
+    },
+    {
+      "name": "Județul Maramureș",
+      "id": "1E9Lu2UyISnv3XCFdEoSu1unRV0s08cfK",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1KiltYbV8gUCnDXgJUMzcyAuUMkh6lNaQ",
+          "mime": "application/json",
+          "size": "2612"
+        },
+        {
+          "name": "OHM-r2829519.source.json.gz",
+          "id": "1P4zbj-vTmqrl9mHPYZ7I-l8pnDIxQAms",
+          "mime": "application/x-gzip",
+          "size": "30675"
+        },
+        {
+          "name": "OHM-r2829519.geojson",
+          "id": "1wFQiAwyVA_vhMkXYcKeCAsPriF4_q5ke",
+          "mime": "application/octet-stream",
+          "size": "87623"
+        }
+      ]
+    },
+    {
+      "name": "Județul Jugastru",
+      "id": "1dJ0Ze0QLblZthrOo7_50yee76rPzG4y4",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1mQlRmH_7X2n1JipOewie4fIQDUuRjxYj",
+          "mime": "application/json",
+          "size": "2567"
+        },
+        {
+          "name": "OHM-r2698191.source.json.gz",
+          "id": "1RGl2EgI4ilqnXfqFKZfn-tXJVlj45Te2",
+          "mime": "application/x-gzip",
+          "size": "1000"
+        },
+        {
+          "name": "OHM-r2698191.geojson",
+          "id": "1r1TMiL9fk8x8CslIBx3usb7-4WMGg1tp",
+          "mime": "application/octet-stream",
+          "size": "1860"
+        }
+      ]
+    }
+  ]
+}
