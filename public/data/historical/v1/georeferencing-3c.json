@@ -1,0 +1,685 @@
+{
+  "schema": "atlas-historical-fit-holdout-review-v1",
+  "asOf": "2026-11-22",
+  "scope": "exploratory_trial_georeferencing_original_maps_without_boundary_promotion",
+  "historicalArchiveSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+  "parentageReviewSha256": null,
+  "originalRasterSources": [
+    {
+      "id": "hist3c:map:streit-1835",
+      "year": 1835,
+      "title": "Das Grossfürstenthum Siebenbürgen; F. W. Streit; Natorff & Comp. Berlin 1835",
+      "archiveUrl": "https://www.wbc.poznan.pl/Content/27667/PDF/17090.pdf",
+      "catalogUrl": "https://www.wbc.poznan.pl/dlibra/doccontent?id=27667",
+      "fileType": "PDF (2 pages; map first, verso second)",
+      "rasterDataset": "PDF:1:<original pdf path>",
+      "rasterNative": {
+        "width": 2039,
+        "height": 1613,
+        "pages": 2,
+        "mapPage": 1
+      },
+      "analysisPreview": {
+        "width": 1600,
+        "height": 1266
+      },
+      "archiveSha256": "02e55f68e870aa6e8c65ff12a71e2a080a2787443eaa0e8a58e7c3fe83d1408a",
+      "archiveBytes": 9190975,
+      "independentOfHistoGIS": true,
+      "cartographicImageVerified": true,
+      "scaleClaim": "WBC 1:200,000 metadata is inconsistent with mapped extent; unqualified until marginal scale is read and independently reconciled",
+      "controls": [
+        {
+          "id": "Cluj",
+          "placeName": "Klausenburg / Cluj",
+          "pixelPreview": {
+            "x": 468,
+            "y": 521
+          },
+          "targetWgs84": {
+            "lon": 23.6236,
+            "lat": 46.7712
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Sibiu",
+          "pixelPreview": {
+            "x": 612,
+            "y": 898
+          },
+          "targetWgs84": {
+            "lon": 24.15,
+            "lat": 45.8
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:geodatos-romania",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Brasov",
+          "placeName": "Kronstadt / Brașov",
+          "pixelPreview": {
+            "x": 1010,
+            "y": 959
+          },
+          "targetWgs84": {
+            "lon": 25.60613,
+            "lat": 45.64861
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:geodatos-romania",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "AlbaIulia",
+          "placeName": "Karlsburg / Alba Iulia",
+          "pixelPreview": {
+            "x": 401,
+            "y": 804
+          },
+          "targetWgs84": {
+            "lon": 23.5667,
+            "lat": 46.0667
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "TarguMures",
+          "placeName": "Maros-Vásárhely / Târgu Mureș",
+          "pixelPreview": {
+            "x": 717,
+            "y": 621
+          },
+          "targetWgs84": {
+            "lon": 24.5667,
+            "lat": 46.55
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Turda",
+          "placeName": "Thorda / Turda",
+          "pixelPreview": {
+            "x": 480,
+            "y": 583
+          },
+          "targetWgs84": {
+            "lon": 23.787,
+            "lat": 46.566
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Zalau",
+          "placeName": "Zilah / Zalău",
+          "pixelPreview": {
+            "x": 287,
+            "y": 391
+          },
+          "targetWgs84": {
+            "lon": 23.058,
+            "lat": 47.185
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:geodatos-romania",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Deva",
+          "placeName": "Déva / Deva",
+          "pixelPreview": {
+            "x": 273,
+            "y": 888
+          },
+          "targetWgs84": {
+            "lon": 22.9,
+            "lat": 45.88
+          },
+          "role": "HOLDOUT",
+          "referenceSourceId": "ref:geodatos-romania",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 10,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Sighisoara",
+          "placeName": "Schäßburg / Sighișoara",
+          "pixelPreview": {
+            "x": 765,
+            "y": 748
+          },
+          "targetWgs84": {
+            "lon": 24.7833,
+            "lat": 46.2167
+          },
+          "role": "HOLDOUT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 10,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Fagaras",
+          "placeName": "Fogaras / Făgăraș",
+          "pixelPreview": {
+            "x": 819,
+            "y": 899
+          },
+          "targetWgs84": {
+            "lon": 24.97,
+            "lat": 45.842
+          },
+          "role": "HOLDOUT",
+          "referenceSourceId": "ref:fagaras",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 10,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Bistrita",
+          "placeName": "Bistritz / Bistrița",
+          "pixelPreview": {
+            "x": 727,
+            "y": 373
+          },
+          "targetWgs84": {
+            "lon": 24.5,
+            "lat": 47.13
+          },
+          "role": "HOLDOUT",
+          "referenceSourceId": "ref:geodatos-romania",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 10,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        }
+      ]
+    },
+    {
+      "id": "hist3c:map:raffelsperger-1841",
+      "year": 1841,
+      "title": "Karte des Grossfürstenthumes Siebenbürgen; Franz Raffelsperger, 1841",
+      "archiveUrl": "https://www.davidrumsey.com/static/jp2k/171/11381017.jp2",
+      "catalogUrl": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~297853~90069447",
+      "fileType": "JPEG2000",
+      "rasterDataset": "<original jp2 path>",
+      "rasterNative": {
+        "width": 11426,
+        "height": 8661,
+        "pages": 1,
+        "mapPage": 1
+      },
+      "analysisPreview": {
+        "width": 1700,
+        "height": 1289
+      },
+      "archiveSha256": "c3b0f75ba204744405cb20e5f2af004d4514a108d131540c3a608cbb53dc7d87",
+      "archiveBytes": 15084248,
+      "independentOfHistoGIS": true,
+      "cartographicImageVerified": true,
+      "scaleClaim": "David Rumsey original publisher scale 1:890,000; individual boundary-position uncertainty still requires validation",
+      "controls": [
+        {
+          "id": "Cluj",
+          "placeName": "Klausenburg / Cluj",
+          "pixelPreview": {
+            "x": 585,
+            "y": 547
+          },
+          "targetWgs84": {
+            "lon": 23.6236,
+            "lat": 46.7712
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Dej",
+          "placeName": "Dées / Dej",
+          "pixelPreview": {
+            "x": 642,
+            "y": 402
+          },
+          "targetWgs84": {
+            "lon": 23.87472,
+            "lat": 47.1425
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:dej",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Bistrita",
+          "placeName": "Bistritz / Bistrița",
+          "pixelPreview": {
+            "x": 818,
+            "y": 384
+          },
+          "targetWgs84": {
+            "lon": 24.5,
+            "lat": 47.13
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:geodatos-romania",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Sibiu",
+          "pixelPreview": {
+            "x": 695,
+            "y": 888
+          },
+          "targetWgs84": {
+            "lon": 24.15,
+            "lat": 45.8
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:geodatos-romania",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Brasov",
+          "placeName": "Kronstadt / Brașov",
+          "pixelPreview": {
+            "x": 1120,
+            "y": 888
+          },
+          "targetWgs84": {
+            "lon": 25.60613,
+            "lat": 45.64861
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:geodatos-romania",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Sighisoara",
+          "placeName": "Schäßburg / Sighișoara",
+          "pixelPreview": {
+            "x": 924,
+            "y": 714
+          },
+          "targetWgs84": {
+            "lon": 24.7833,
+            "lat": 46.2167
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "TarguMures",
+          "placeName": "Maros-Vásárhely / Târgu Mureș",
+          "pixelPreview": {
+            "x": 877,
+            "y": 607
+          },
+          "targetWgs84": {
+            "lon": 24.5667,
+            "lat": 46.55
+          },
+          "role": "FIT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 8,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Fagaras",
+          "placeName": "Fogaras / Făgăraș",
+          "pixelPreview": {
+            "x": 992,
+            "y": 841
+          },
+          "targetWgs84": {
+            "lon": 24.97,
+            "lat": 45.842
+          },
+          "role": "HOLDOUT",
+          "referenceSourceId": "ref:fagaras",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 10,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Turda",
+          "placeName": "Thorda / Turda",
+          "pixelPreview": {
+            "x": 647,
+            "y": 618
+          },
+          "targetWgs84": {
+            "lon": 23.787,
+            "lat": 46.566
+          },
+          "role": "HOLDOUT",
+          "referenceSourceId": "ref:openadmindata",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 10,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        },
+        {
+          "id": "Medias",
+          "placeName": "Mediasch / Mediaș",
+          "pixelPreview": {
+            "x": 767,
+            "y": 744
+          },
+          "targetWgs84": {
+            "lon": 24.35,
+            "lat": 46.16667
+          },
+          "role": "HOLDOUT",
+          "referenceSourceId": "ref:medias",
+          "landmarkKind": "historic_town_center_map_symbol_or_label",
+          "directImageInspection": true,
+          "pointQuality": "provisional_visual_only_not_ground_survey",
+          "pixelUncertaintyPreviewPx": 10,
+          "referenceLocationUncertaintyMeters": 1500,
+          "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+        }
+      ]
+    }
+  ],
+  "coordinateReferences": [
+    {
+      "id": "ref:openadmindata",
+      "url": "https://openadmindata.org/ro/cities/",
+      "type": "modern_gazetteer_centers_not_original_landmarks"
+    },
+    {
+      "id": "ref:geodatos-romania",
+      "url": "https://www.geodatos.net/en/coordinates/romania",
+      "type": "modern_city_centers_coarsely_rounded"
+    },
+    {
+      "id": "ref:dej",
+      "url": "https://en.wikipedia.org/wiki/Dej",
+      "type": "modern_city_geographic_reference"
+    },
+    {
+      "id": "ref:medias",
+      "url": "https://www.geodatos.net/en/coordinates/romania/medias",
+      "type": "modern_city_geographic_reference"
+    },
+    {
+      "id": "ref:fagaras",
+      "url": "https://www.primaria-fagaras.ro/fagaras/detaliu/3",
+      "type": "municipal_geographic_reference"
+    }
+  ],
+  "transformation": {
+    "model": "affine_2d_least_squares",
+    "targetCRS": "EPSG:3035",
+    "previewPixelsConvertedToNative": true,
+    "fitMinimum": 6,
+    "holdoutMinimum": 3,
+    "fitAndHoldoutDisjoint": true,
+    "trialMaximumHoldoutRMSEMeters": 5000,
+    "trialMaximumHoldoutErrorMeters": 10000,
+    "limits": "These are internal conservative screening gates, not legal tolerance or map accuracy certification.",
+    "independentControlClassification": "not_certified_due_to_approximate_urban_centers_and_non_blind_review",
+    "groundSurveyedLandmarks": 0,
+    "independentGeomorphicHoldouts": 0,
+    "certifiedGeoreferencingAllowed": false
+  },
+  "boundaryCases": [
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12324:12328:1815-09-06",
+      "childName": "Doboka",
+      "parentName": "Innere Szolnok",
+      "baselineOutsidePercent": 100,
+      "baselineDecision": "blocked_spatial_contradiction",
+      "original1835InventoryEvidence": "Doboká and Inner-Szolnok separate in historical subdivision legend",
+      "independentBoundaryLine1835": "not_traced",
+      "independentBoundaryLine1841": "not_traced",
+      "mapToMapLineFitStatus": "blocked_due_to_uncertified_georef",
+      "administrativeParentReassignment": null,
+      "newGeometryId": null,
+      "decision": "BLOCKED_SOURCE_PARENT",
+      "fullPeriodLegalParentQualified": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12330:9915:1815-09-06",
+      "childName": "Bistritz",
+      "parentName": "Großfürstentum Siebenbürgen",
+      "baselineOutsidePercent": 0.228619,
+      "baselineDecision": "requires_boundary_reconciliation",
+      "original1835InventoryEvidence": "Named historical territorial grouping observable in original legend, detailed boundary line not traced",
+      "independentBoundaryLine1835": "not_traced",
+      "independentBoundaryLine1841": "not_traced",
+      "mapToMapLineFitStatus": "blocked_due_to_uncertified_georef",
+      "administrativeParentReassignment": null,
+      "newGeometryId": null,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fullPeriodLegalParentQualified": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12383:12406:1815-09-06",
+      "childName": "Mühlbach",
+      "parentName": "Unterweißenburg",
+      "baselineOutsidePercent": 100,
+      "baselineDecision": "blocked_spatial_contradiction",
+      "original1835InventoryEvidence": "Mühlbacher Stuhl a separate Saxon seat; Unter-Albener Komitat a county",
+      "independentBoundaryLine1835": "not_traced",
+      "independentBoundaryLine1841": "not_traced",
+      "mapToMapLineFitStatus": "blocked_due_to_uncertified_georef",
+      "administrativeParentReassignment": null,
+      "newGeometryId": null,
+      "decision": "BLOCKED_SOURCE_PARENT",
+      "fullPeriodLegalParentQualified": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12391:9915:1815-09-06",
+      "childName": "Kövár",
+      "parentName": "Großfürstentum Siebenbürgen",
+      "baselineOutsidePercent": 3.004871,
+      "baselineDecision": "requires_boundary_reconciliation",
+      "original1835InventoryEvidence": "Named historical territorial grouping observable in original legend, detailed boundary line not traced",
+      "independentBoundaryLine1835": "not_traced",
+      "independentBoundaryLine1841": "not_traced",
+      "mapToMapLineFitStatus": "blocked_due_to_uncertified_georef",
+      "administrativeParentReassignment": null,
+      "newGeometryId": null,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fullPeriodLegalParentQualified": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12392:9915:1815-09-06",
+      "childName": "Zărand",
+      "parentName": "Großfürstentum Siebenbürgen",
+      "baselineOutsidePercent": 0.401048,
+      "baselineDecision": "requires_boundary_reconciliation",
+      "original1835InventoryEvidence": "Named historical territorial grouping observable in original legend, detailed boundary line not traced",
+      "independentBoundaryLine1835": "not_traced",
+      "independentBoundaryLine1841": "not_traced",
+      "mapToMapLineFitStatus": "blocked_due_to_uncertified_georef",
+      "administrativeParentReassignment": null,
+      "newGeometryId": null,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fullPeriodLegalParentQualified": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12401:9915:1815-09-06",
+      "childName": "Hunyad",
+      "parentName": "Großfürstentum Siebenbürgen",
+      "baselineOutsidePercent": 0.771978,
+      "baselineDecision": "requires_boundary_reconciliation",
+      "original1835InventoryEvidence": "Named historical territorial grouping observable in original legend, detailed boundary line not traced",
+      "independentBoundaryLine1835": "not_traced",
+      "independentBoundaryLine1841": "not_traced",
+      "mapToMapLineFitStatus": "blocked_due_to_uncertified_georef",
+      "administrativeParentReassignment": null,
+      "newGeometryId": null,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fullPeriodLegalParentQualified": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12404:9915:1815-09-06",
+      "childName": "Kraszna",
+      "parentName": "Großfürstentum Siebenbürgen",
+      "baselineOutsidePercent": 2.029978,
+      "baselineDecision": "requires_boundary_reconciliation",
+      "original1835InventoryEvidence": "Named historical territorial grouping observable in original legend, detailed boundary line not traced",
+      "independentBoundaryLine1835": "not_traced",
+      "independentBoundaryLine1841": "not_traced",
+      "mapToMapLineFitStatus": "blocked_due_to_uncertified_georef",
+      "administrativeParentReassignment": null,
+      "newGeometryId": null,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fullPeriodLegalParentQualified": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRelationId": "histogis-v9:hierarchy:12405:9915:1815-09-06",
+      "childName": "Mittlere Szolnok",
+      "parentName": "Großfürstentum Siebenbürgen",
+      "baselineOutsidePercent": 5.892093,
+      "baselineDecision": "requires_boundary_reconciliation",
+      "original1835InventoryEvidence": "Named historical territorial grouping observable in original legend, detailed boundary line not traced",
+      "independentBoundaryLine1835": "not_traced",
+      "independentBoundaryLine1841": "not_traced",
+      "mapToMapLineFitStatus": "blocked_due_to_uncertified_georef",
+      "administrativeParentReassignment": null,
+      "newGeometryId": null,
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fullPeriodLegalParentQualified": false,
+      "legalBoundaryCertified": false
+    }
+  ],
+  "admissions": {
+    "newCanonicalGeoreferencedRasters": 0,
+    "newHistoricalGeometryIds": 0,
+    "changedOriginalHistoGISGeometries": 0,
+    "changedHistoricalParents": 0,
+    "changedACTUAL": 0,
+    "directlyVerifiedOriginalBoundaryLines": 0,
+    "caseCount": 8,
+    "blockedSourceParentCount": 2,
+    "otherBoundaryHoldCount": 6
+  },
+  "uncertaintyNote": "GCP pixel picks are exploratory visual estimates on historical urban nuclei, and the points were reviewed during initial model development. This is a disjoint but not blind HOLDOUT. Neither map may supply an accepted historical boundary from these controls. Registration matrices may be used locally for manual inspection only.",
+  "outcome": null
+}
