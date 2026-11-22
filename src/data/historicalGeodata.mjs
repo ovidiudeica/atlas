@@ -77,8 +77,10 @@ export function geodataSourceAtDate(entry,iso){
 }
 export function geodataSourcesAtYear(index,year){
  if(!Number.isInteger(year)||year<1||year>9999)return [];
- const iso=String(year).padStart(4,'0')+'-07-01';
- return (index?.entries||[]).filter(e=>geodataSourceAtDate(e,iso));
+ const begin=String(year).padStart(4,'0')+'-01-01';
+ const end=String(year).padStart(4,'0')+'-12-31';
+ return (index?.entries||[]).filter(e=>e.sourcePeriod?.start&&e.sourcePeriod?.end&&
+   dateLower(e.sourcePeriod.start)<=end&&dateUpper(e.sourcePeriod.end)>=begin);
 }
 
 export function validateGeodataGeometryShard(shard,index,file){
