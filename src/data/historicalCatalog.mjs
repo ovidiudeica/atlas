@@ -8,6 +8,7 @@
 import { validateHistoricalPeriod, validateHistoricalAdminBridge } from './historicalAdminBridge.mjs';
 import { validateTemporalHierarchy } from './historicalTemporalHierarchy.mjs';
 import { validateHistoricalGeometryRegister, historicalUsesForGeometry } from './historicalGeometryUses.mjs';
+import { validateHistoricalLifeCycle } from './historicalLifeCycle.mjs';
 
 const SCHEMA = 'atlas-historical-pilot-v1';
 const BASE = 'data/historical/v1/';
@@ -73,7 +74,9 @@ export function validateHistoricalPilotCatalog(catalog, geometryCollection = nul
   requireUnique(catalog.geometryUses, 'geometryUses', errors);
   requireUnique(catalog.hierarchy, 'hierarchy', errors);
   if (!Array.isArray(catalog.bridge) || !Array.isArray(catalog.events) ||
-      !Array.isArray(catalog.symbols)) errors.push('bridge, events and symbols must be arrays');
+      !Array.isArray(catalog.symbols) ||
+      !Array.isArray(catalog.geometryDecisions))
+    errors.push('bridge, events, symbols and geometryDecisions must be arrays');
 
   for (const entity of entities.values()) {
     if (!nonempty(entity.sourceName) || !nonempty(entity.names?.ro) ||
@@ -125,6 +128,14 @@ export function validateHistoricalPilotCatalog(catalog, geometryCollection = nul
     if (!relation.sourceIds?.every(x => sources.has(x)))
       errors.push('unknown hierarchy source ' + relation.id);
   }
+
+  const lc = validateHistoricalLifeCycle({
+    entities: catalog.entities, versions: catalog.versions,
+    geometries: catalog.geometries, sources: catalog.sources,
+    events: catalog.events, symbols: catalog.symbols,
+    geometryDecisions: catalog.geometryDecisions
+  });
+  if (!lc.ok) errors.push(...lc.errors.map(x => 'life-cycle: ' + x));
 
   const bridge = Array.isArray(catalog.bridge) ? catalog.bridge : [];
   const bv = validateHistoricalAdminBridge(bridge, {
