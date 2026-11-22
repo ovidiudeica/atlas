@@ -1,7 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
-import {createHash} from 'node:crypto';
+import {readFileSync,existsSync} from 'node:fs';
 import {
   validateGeodataHistoricalIndex,validateGeodataGeometryShard,
   geodataSourceAtDate,geodataSourcesAtYear
@@ -11,16 +10,16 @@ const base=new URL('../public/data/historical/v1/geodata/',import.meta.url);
 const read=name=>JSON.parse(readFileSync(new URL(name,base),'utf8'));
 const index=read('index.json');
 
-test('historical source index: 290 source occurrences use 212 exact logical geometry assets',()=>{
+test('historical source index: 139 OHM versions use 125 exact logical geometry assets',()=>{
  assert.deepEqual(validateGeodataHistoricalIndex(index),{ok:true,errors:[]});
- assert.equal(index.entries.length,290);
- assert.equal(index.shards.length,32);
- assert.equal(index.shards.reduce((n,s)=>n+s.count,0),290);
+ assert.equal(index.entries.length,139);
+ assert.equal(index.shards.length,29);
+ assert.equal(index.shards.reduce((n,s)=>n+s.count,0),139);
  assert.equal(index.notCanonicalHierarchy,true);
  assert.equal(index.notLegalBoundaryCertification,true);
- assert.equal(index.geometryDuplicates.length,78);
- assert.equal(index.geometryAssets,212);
- assert.deepEqual(index.countsBySource,{OHM:139,HURI:99,TRANSILVANIA_COLLECTION:52});
+ assert.equal(index.geometryDuplicates.length,14);
+ assert.equal(index.geometryAssets,125);
+ assert.deepEqual(index.countsBySource,{OHM:139});
  assert.ok(index.entries.every(e=>e.status==='source_candidate_not_certified'));
 });
 
@@ -82,52 +81,12 @@ test('fail closed on fictional source certification, ID collision, path and time
  reject(x=>x.shards[0].count=999);
 });
 
-test('HURI RASSM snapshots are dated only at their exact source observation',()=>{
- const huri=index.entries.filter(e=>e.sourceFamily==='HURI');
- assert.equal(huri.length,99);
- assert.equal(huri.filter(e=>e.sourceGroup.includes('raioane')).length,91);
- assert.equal(huri.filter(e=>e.sourceGroup.includes('contururi')).length,8);
- assert.equal(new Set(huri.map(e=>e.sourcePeriod.start)).size,8);
- for(const e of huri){
-   assert.equal(e.sourcePeriod.kind,'snapshot');
-   assert.equal(e.sourcePeriod.start,e.sourcePeriod.end);
-   assert.equal(geodataSourceAtDate(e,e.sourcePeriod.start),true);
-   assert.equal(e.sourceRightsStatus,'HOLD_PENDING_REUSE_CONFIRMATION');
-   assert.equal(geodataSourceAtDate(e,'1940-01-01'),false);
- }
-});
-test('Transilvania collection 1860 label is not asserted as a historical snapshot',()=>{
- const trans=index.entries.filter(e=>e.sourceFamily==='TRANSILVANIA_COLLECTION');
- assert.equal(trans.length,52);
- for(const e of trans){
-   assert.deepEqual([e.sourcePeriod.start,e.sourcePeriod.end],[null,null]);
-   assert.equal(e.sourcePeriod.kind,'undated');
-   assert.equal(geodataSourceAtDate(e,'1860-01-01'),false);
-   assert.equal(e.sourceRightsStatus,'HOLD_PENDING_REUSE_CONFIRMATION');
- }
- assert.equal(geodataSourcesAtYear(index,1860).filter(e=>e.sourceFamily==='TRANSILVANIA_COLLECTION').length,0);
-});
-test('supplemental source ID, temporal status and rights cannot be silently promoted',()=>{
- const e=index.entries.find(x=>x.sourceFamily==='TRANSILVANIA_COLLECTION');
- const bad=structuredClone(index);
- const t=bad.entries.find(x=>x.id===e.id);
- t.sourcePeriod.start='1860-01-01';t.sourcePeriod.end='1860-12-31';
- assert.equal(validateGeodataHistoricalIndex(bad).ok,false);
- const bad2=structuredClone(index);
- bad2.entries.find(x=>x.id===e.id).sourceRightsStatus='REDISTRIBUTION_APPROVED';
- assert.equal(validateGeodataHistoricalIndex(bad2).ok,false);
-});
-
-test('supplement source payloads reconstruct original Drive SHA-256 (BOM tracked)',()=>{
- const expected={
-  'huri-rassm-raioane.geojson':'60569c218122617c8d65daa6b3720a4fd5d0db1d91c508b11ceb8bd8bf9fa45b',
-  'huri-rassm-contururi.geojson':'b29dce1c55d6bb3ba027c9e93b73b9406f36a25be8f29d8dd3f244aa89422138',
-  'transilvania-1860-districte.geojson':'2e72107cc06d035ce1337daca79520d37b42d4b30dfad464cd6aa4735c766091'
- };
- for(const [filename,originalHash] of Object.entries(expected)){
-   const rendered=readFileSync(new URL(filename,base));
-   const original=filename.startsWith('huri-')?
-     Buffer.concat([Buffer.from([0xef,0xbb,0xbf]),rendered]):rendered;
-   assert.equal(createHash('sha256').update(original).digest('hex'),originalHash);
- }
+test('OHM-first cleanup excludes HistoGIS and supplementary geometry assets',()=>{
+ assert.deepEqual(index.sourceFamilies,['OHM']);
+ assert.ok(index.entries.every(e=>e.sourceFamily==='OHM'));
+ assert.ok(index.shards.every(x=>x.file.startsWith('ohm-')));
+ assert.equal(existsSync(new URL('../geometry.geojson',base)),false);
+ assert.equal(existsSync(new URL('huri-rassm-raioane.geojson',base)),false);
+ assert.equal(existsSync(new URL('huri-rassm-contururi.geojson',base)),false);
+ assert.equal(existsSync(new URL('transilvania-1860-districte.geojson',base)),false);
 });
