@@ -1,6 +1,7 @@
 import type { HistoricalPeriod, EvidenceStatus } from './historicalAdminBridge.mjs';
 import type { HistoricalGeometryUse, HistoricalGeometryRecord } from './historicalGeometryUses.mjs';
 import type { HistoricalHierarchyLink } from './historicalTemporalHierarchy.mjs';
+import type { HistoricalEvent, HistoricalSymbolUse, HistoricalGeometryDecision } from './historicalLifeCycle.mjs';
 
 export interface HistoricalIdentity {
   id: string;
@@ -59,8 +60,9 @@ export interface PilotHistoricalCatalog {
     qualifiedHistoricalParentage:false;
   })[];
   bridge: [];
-  events: [];
-  symbols: [];
+  events: HistoricalEvent[];
+  symbols: HistoricalSymbolUse[];
+  geometryDecisions: HistoricalGeometryDecision[];
   qa: {
     topologicallyValidSourcePolygons:number;sourcePolygons:number;
     distinctGeometryAssets:number;geometryReuseCount:number;
