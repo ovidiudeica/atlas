@@ -79,6 +79,22 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
    return [...groups].sort((a,b)=>a[0].localeCompare(b[0],'ro')).map(([group,entries])=>
      ({group,entries:entries.sort((a,b)=>((a.sourcePeriod.start||'')< (b.sourcePeriod.start||'')?-1:1))}));
  },[index,year,yearOnly,query]);
+ type SourceCategory={id:'regions'|'judete'|'comitate';ro:string;en:string;count:number;
+   groups:Array<{group:string;entries:GeodataSourceEntry[]}>};
+ const categories=useMemo(()=>{
+   const sections:SourceCategory[]=[
+     {id:'regions',ro:'State și regiuni istorice',en:'Historical states and regions',count:0,groups:[]},
+     {id:'judete',ro:'Județe istorice',en:'Historical counties',count:0,groups:[]},
+     {id:'comitate',ro:'Comitate istorice',en:'Historical comitates',count:0,groups:[]}
+   ];
+   for(const item of grouped){
+     const bucket=item.group.startsWith('Județe istorice/')?sections[1]:
+       item.group.startsWith('Comitate istorice/')?sections[2]:sections[0];
+     bucket.groups.push(item);
+     bucket.count+=item.entries.length;
+   }
+   return sections.filter(x=>x.count>0);
+ },[grouped]);
  async function selectEntry(entry:GeodataSourceEntry){
    if(!index||busy)return;
    setBusy(entry.id);setError(null);
@@ -110,17 +126,22 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
    {busy&&<p role="status">{t.loadGeom}</p>}
    {index&&grouped.length===0&&<p>{t.empty}</p>}
    <div className="history-geodata-groups">
-     {grouped.map(({group,entries})=><details key={group} open={grouped.length<4}>
-       <summary>{group} ({entries.length})</summary>
-       <div className="tree-list" role="tree" aria-label={group}>
-         {entries.map(e=><div className="tree-line" key={e.id} role="treeitem"
-           aria-selected={selectedId===e.id}>
-           <button type="button" className="tree-label" onClick={()=>void selectEntry(e)}
-             disabled={busy!==null} aria-current={selectedId===e.id?'true':undefined}>
-             <span className="tree-label-heading"><span className="node-name">{e.displayName[lang]}</span></span>
-             <span className="node-level">{dateLabel(e,lang)} · {e.sourceRelationId??e.sourceExternalId??e.id}</span>
-           </button>
-         </div>)}
+     {categories.map(category=><details key={category.id} className="history-geodata-category">
+       <summary>{lang==='ro'?category.ro:category.en} ({category.count})</summary>
+       <div className="history-geodata-category-entries">
+         {category.groups.map(({group,entries})=><details key={group} className="history-geodata-entity">
+           <summary>{group.split('/').pop()} ({entries.length})</summary>
+           <div className="tree-list" role="tree" aria-label={group}>
+             {entries.map(e=><div className="tree-line" key={e.id} role="treeitem"
+               aria-selected={selectedId===e.id}>
+               <button type="button" className="tree-label" onClick={()=>void selectEntry(e)}
+                 disabled={busy!==null} aria-current={selectedId===e.id?'true':undefined}>
+                 <span className="tree-label-heading"><span className="node-name">{e.displayName[lang]}</span></span>
+                 <span className="node-level">{dateLabel(e,lang)} · {e.sourceRelationId}</span>
+               </button>
+             </div>)}
+           </div>
+         </details>)}
        </div>
      </details>)}
    </div>
