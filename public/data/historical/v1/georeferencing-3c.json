@@ -68,7 +68,8 @@
           "pixelUncertaintyPreviewPx": 8,
           "referenceLocationUncertaintyMeters": 1500,
           "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
-          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus.",
+          "placeName": "Hermannstadt / Sibiu"
         },
         {
           "id": "Brasov",
@@ -366,7 +367,8 @@
           "pixelUncertaintyPreviewPx": 8,
           "referenceLocationUncertaintyMeters": 1500,
           "fitHoldoutIndependence": "disjoint_coordinates_but_not_blind_selection",
-          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus."
+          "note": "Approximate symbol or historic label position on original map. Modern city-point location is not proven identical to the precise 1835/1841 nucleus.",
+          "placeName": "Hermannstadt / Sibiu"
         },
         {
           "id": "Brasov",
