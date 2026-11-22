@@ -117,7 +117,16 @@ const WORDS = {
     roleRegistryParent: 'Register parent code', cardStatParent: 'Statistical parent',
     cardOpenParent: 'Open parent entity',
     cardChildren: 'Subterritories in this tree view', cardChildrenCount: 'subterritories',
-    cardMoreChildren: 'Show next 12', cardOpenChild: 'Open child entity'
+    cardMoreChildren: 'Show next 12', cardOpenChild: 'Open child entity',
+    geometryUsesTitle: 'Documented uses of this geometry',
+    geometryUsesNote: 'This outline is stored once and may have several documented uses. All uses are listed in chronological order.',
+    geometryUseStatus: 'Evidence status', geometryUseNoSource: 'Not specified',
+    geometryEvidenceQualified: 'Cartographically accepted',
+    geometryEvidenceCandidate: 'Candidate',
+    geometryEvidenceReview: 'Under review',
+    referenceDatePrefix: 'Reference date: ',
+    undatedPeriod: 'Undated period',
+    untilPrefix: 'Until ', fromPrefix: 'From '
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -192,7 +201,16 @@ const WORDS = {
     roleRegistryParent: 'Cod părinte din registru', cardStatParent: 'Părinte statistic',
     cardOpenParent: 'Deschide entitatea părinte',
     cardChildren: 'Subunități în acest arbore', cardChildrenCount: 'subunități',
-    cardMoreChildren: 'Afișează încă 12', cardOpenChild: 'Deschide subunitatea'
+    cardMoreChildren: 'Afișează încă 12', cardOpenChild: 'Deschide subunitatea',
+    geometryUsesTitle: 'Utilizări documentate ale acestei geometrii',
+    geometryUsesNote: 'Acest contur este stocat o singură dată și poate avea mai multe utilizări documentate, afișate în ordine cronologică.',
+    geometryUseStatus: 'Statut probatoriu', geometryUseNoSource: 'Nespecificată',
+    geometryEvidenceQualified: 'Admis cartografic',
+    geometryEvidenceCandidate: 'Candidat',
+    geometryEvidenceReview: 'În verificare',
+    referenceDatePrefix: 'An de referință: ',
+    undatedPeriod: 'Perioadă nedeterminată',
+    untilPrefix: 'Până la ', fromPrefix: 'De la '
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
