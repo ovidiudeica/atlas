@@ -677,3 +677,23 @@
 .history-3b-issues .note{font-size:.83rem}
 @media(max-width:700px){.history-law-1851{padding:9px}
   .history-law-region{padding:8px}.history-law-open{width:100%}}
+
+/* HIST-MODULE.3c: exploratory original-map FIT/HOLDOUT — never a certified outline. */
+.history-3c-summary{margin:12px 0;padding:10px 12px;border:1px solid #adae9e;
+  border-radius:8px;background:rgba(245,242,231,.75)}
+.history-3c-summary>summary{font-weight:700;font-size:.91rem;line-height:1.5;
+  min-height:44px;cursor:pointer}
+.history-3c-summary>summary:focus-visible{outline:3px solid #345d44;outline-offset:3px}
+.history-3c-map-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin:9px 0}
+.history-3c-map-qa{border:1px solid #bfc5b7;border-radius:6px;padding:9px;
+  background:#fff;overflow-wrap:anywhere;line-height:1.45;font-size:.84rem}
+.history-3c-map-qa>strong{display:block;margin-bottom:8px}
+.history-3c-map-qa dl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 8px;margin:9px 0}
+.history-3c-map-qa dt{font-size:.82rem}
+.history-3c-map-qa dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;font-weight:650}
+.history-3c-map-qa a{color:#22593f;text-decoration:underline;text-underline-offset:2px}
+.history-3c-map-qa a:focus-visible{outline:3px solid #345d44;outline-offset:3px}
+.history-3c-case-list{padding-left:18px;line-height:1.5;margin:8px 0}
+.history-3c-case-list li{margin:0 0 10px;overflow-wrap:anywhere}
+.history-3c-case-list li>div{font-size:.83rem}
+@media(max-width:700px){.history-3c-summary{padding:9px}.history-3c-map-qa{padding:8px}}
