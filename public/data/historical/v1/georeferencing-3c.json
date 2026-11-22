@@ -556,7 +556,9 @@
       "newGeometryId": null,
       "decision": "BLOCKED_SOURCE_PARENT",
       "fullPeriodLegalParentQualified": false,
-      "legalBoundaryCertified": false
+      "legalBoundaryCertified": false,
+      "childVersionId": "histogis-v9:version:12324",
+      "parentVersionId": "histogis-v9:version:12328"
     },
     {
       "sourceRelationId": "histogis-v9:hierarchy:12330:9915:1815-09-06",
@@ -572,7 +574,9 @@
       "newGeometryId": null,
       "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
       "fullPeriodLegalParentQualified": false,
-      "legalBoundaryCertified": false
+      "legalBoundaryCertified": false,
+      "childVersionId": "histogis-v9:version:12330",
+      "parentVersionId": "histogis-v9:version:9915"
     },
     {
       "sourceRelationId": "histogis-v9:hierarchy:12383:12406:1815-09-06",
@@ -588,7 +592,9 @@
       "newGeometryId": null,
       "decision": "BLOCKED_SOURCE_PARENT",
       "fullPeriodLegalParentQualified": false,
-      "legalBoundaryCertified": false
+      "legalBoundaryCertified": false,
+      "childVersionId": "histogis-v9:version:12383",
+      "parentVersionId": "histogis-v9:version:12406"
     },
     {
       "sourceRelationId": "histogis-v9:hierarchy:12391:9915:1815-09-06",
@@ -604,7 +610,9 @@
       "newGeometryId": null,
       "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
       "fullPeriodLegalParentQualified": false,
-      "legalBoundaryCertified": false
+      "legalBoundaryCertified": false,
+      "childVersionId": "histogis-v9:version:12391",
+      "parentVersionId": "histogis-v9:version:9915"
     },
     {
       "sourceRelationId": "histogis-v9:hierarchy:12392:9915:1815-09-06",
@@ -620,7 +628,9 @@
       "newGeometryId": null,
       "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
       "fullPeriodLegalParentQualified": false,
-      "legalBoundaryCertified": false
+      "legalBoundaryCertified": false,
+      "childVersionId": "histogis-v9:version:12392",
+      "parentVersionId": "histogis-v9:version:9915"
     },
     {
       "sourceRelationId": "histogis-v9:hierarchy:12401:9915:1815-09-06",
@@ -636,7 +646,9 @@
       "newGeometryId": null,
       "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
       "fullPeriodLegalParentQualified": false,
-      "legalBoundaryCertified": false
+      "legalBoundaryCertified": false,
+      "childVersionId": "histogis-v9:version:12401",
+      "parentVersionId": "histogis-v9:version:9915"
     },
     {
       "sourceRelationId": "histogis-v9:hierarchy:12404:9915:1815-09-06",
@@ -652,7 +664,9 @@
       "newGeometryId": null,
       "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
       "fullPeriodLegalParentQualified": false,
-      "legalBoundaryCertified": false
+      "legalBoundaryCertified": false,
+      "childVersionId": "histogis-v9:version:12404",
+      "parentVersionId": "histogis-v9:version:9915"
     },
     {
       "sourceRelationId": "histogis-v9:hierarchy:12405:9915:1815-09-06",
@@ -668,7 +682,9 @@
       "newGeometryId": null,
       "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
       "fullPeriodLegalParentQualified": false,
-      "legalBoundaryCertified": false
+      "legalBoundaryCertified": false,
+      "childVersionId": "histogis-v9:version:12405",
+      "parentVersionId": "histogis-v9:version:9915"
     }
   ],
   "admissions": {
