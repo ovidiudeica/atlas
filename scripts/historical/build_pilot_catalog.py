@@ -259,8 +259,9 @@ def main():
     dest.mkdir(parents=True, exist_ok=True)
     for name, obj in [("catalog.json", catalog), ("geometry.geojson", geometry)]:
         path = dest / name
-        path.write_text(json.dumps(obj, ensure_ascii=False, sort_keys=True,
-            separators=(",", ":")) + "\n", encoding="utf-8")
+        with path.open("w", encoding="utf-8", newline="\n") as stream:
+            stream.write(json.dumps(obj, ensure_ascii=False, sort_keys=True,
+                separators=(",", ":")) + "\n")
         print(name, path.stat().st_size, hashlib.sha256(path.read_bytes()).hexdigest())
     print("PILOT", len(catalog["entities"]), "entities", len(catalog["versions"]),
         "versions", len(catalog["geometries"]), "unique geometries",
