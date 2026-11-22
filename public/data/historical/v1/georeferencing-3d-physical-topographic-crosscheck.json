@@ -357,7 +357,7 @@
     "acceptedBlindHoldoutGCP1841": 0,
     "georeferenceRecalculated": false,
     "canonicalGeometryEdited": false,
-    "actuaLChanged": false,
+    "actualChanged": false,
     "independentSecondReaderHistoricalPixelAudit": false
   },
   "overallVerdict": "HOLD_PHYSICAL_GCP_PENDING_UNIQUE_ORIGINAL_PIXEL_AND_HISTORICAL_STABILITY"
