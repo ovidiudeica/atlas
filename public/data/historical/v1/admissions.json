@@ -1,0 +1,849 @@
+{
+  "schema": "atlas-historical-independent-admissions-v1",
+  "sourceArchiveSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+  "actualSnapshotDate": "2026-10-05",
+  "actualCatalogSha256": "1f930079194c92dc0e02d6e675165dddec6f49db0a62357bcc61be0705125482",
+  "historicalGeometryGeojsonSha256": "3ff24bcc42bb9556f663e332a8a67ba9b7799ab094561daea11fcd7eac1f3fd2",
+  "actualGeometryShard": "ro-adm-09",
+  "actualGeometryShardSha256": "07463d7f4dcb685cf7858b134f48f721cd388bb4a23e85f9e03d0355a555aba8",
+  "coverage": {
+    "complete": false,
+    "independentIdentitySnapshotsOnly": true,
+    "administrativeDirectParentageQualified": false,
+    "historicalBoundariesLegallyCertified": false,
+    "primaryHistoricalGeometryAdmitted": false,
+    "notAllPeriodsCertified": true
+  },
+  "sources": [
+    {
+      "id": "hist3:law:at-1849-03-04",
+      "title": "Reichsverfassung für das Kaiserthum Österreich",
+      "publisher": "Kaiserliche Staatsdruckerei",
+      "originalDate": "1849-03-04",
+      "kind": "contemporary_primary_normative_text",
+      "url": "https://www.verfassungen.at/at-18/verfassung49.htm",
+      "section": "§ 1",
+      "independentOfHistogis": true,
+      "originalFacsimileInspected": false,
+      "scope": "Crownlands; Transylvanian named territorial constituents; not polygon boundaries"
+    },
+    {
+      "id": "hist3:law:at-1861-20",
+      "title": "Landes-Ordnung und Landtags-Wahlordnung für das Herzogthum Bukowina",
+      "publisher": "Reichsgesetzblatt, Nr. 20/1861 (official gazette index)",
+      "originalDate": "1861-02-28",
+      "kind": "official_gazette_bibliographic_entry",
+      "url": "https://www.reichsgesetzblatt.de/A/RGBl-A/1861/haupt.htm",
+      "section": "Nr. 20/1861, Landes-Ordnung Bukowina",
+      "independentOfHistogis": true,
+      "originalFacsimileInspected": false,
+      "scope": "Official title attests duchy name/status; full legal provisions not yet audited"
+    },
+    {
+      "id": "hist3:map:bev-bukowina-1907",
+      "title": "Nationalitätenkarte der österreichischen Kronländer – Blatt Bukowina (1907)",
+      "publisher": "Bundesamt für Eich- und Vermessungswesen (BEV), Austria, archive presentation 2025-10-01",
+      "originalDate": "1907",
+      "kind": "historical_map_archival_presentation",
+      "url": "https://www.bev.gv.at/Presse/Archiv/2025/Histo-KdM_Oktober_2025.html",
+      "section": "Original map title and boundary legend, 1907",
+      "independentOfHistogis": true,
+      "originalFacsimileInspected": false,
+      "scope": "Independent crownland/administrative mapping; no independent georeferencing or line-by-line polygon certification"
+    },
+    {
+      "id": "hist3:paper:transylvania-1848-saxon-seats",
+      "title": "Creating a digital historical map of the German-inhabited areas in southern Transylvania (central Romania) in 1848",
+      "publisher": "Journal of Maps, Taylor & Francis (2023)",
+      "originalDate": "2023",
+      "kind": "independent_peer_reviewed_historical_study",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/17445647.2023.2227214",
+      "section": "Historical Saxon seat organization; 1848",
+      "independentOfHistogis": true,
+      "originalFacsimileInspected": false,
+      "scope": "Naming and existence of Saxon seats in 1848; not geometry certification"
+    },
+    {
+      "id": "hist3:actual:osmb-2026-10-05",
+      "title": "Atlas ACTUAL certified cartographic OSM-Boundaries snapshot 2026-10-05",
+      "publisher": "ovidiudeica/atlas",
+      "originalDate": "2026-10-05",
+      "kind": "certified_cartographic_snapshot_not_legal_boundaries",
+      "url": "https://github.com/ovidiudeica/atlas/blob/main/public/data/phase4/catalog.json.gz",
+      "section": "2026-10-05, ro-adm-09-detailed.geojson.gz",
+      "independentOfHistogis": true,
+      "originalFacsimileInspected": true,
+      "scope": "Modern reference polygons, cartographic; not legal boundary evidence"
+    }
+  ],
+  "identityAttestations": [
+    {
+      "id": "hist3:identity:9915:1849:constitution",
+      "historicalEntityId": "histogis-v9:entity:shape-9915",
+      "historicalVersionId": "histogis-v9:version:9915",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "verifiedHistoricalType": "Grand Principality",
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12391:1849:constitution",
+      "historicalEntityId": "histogis-v9:entity:shape-12391",
+      "historicalVersionId": "histogis-v9:version:12391",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "verifiedHistoricalType": "District",
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12392:1849:constitution",
+      "historicalEntityId": "histogis-v9:entity:shape-12392",
+      "historicalVersionId": "histogis-v9:version:12392",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "verifiedHistoricalType": "County",
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12404:1849:constitution",
+      "historicalEntityId": "histogis-v9:entity:shape-12404",
+      "historicalVersionId": "histogis-v9:version:12404",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "verifiedHistoricalType": "County",
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12405:1849:constitution",
+      "historicalEntityId": "histogis-v9:entity:shape-12405",
+      "historicalVersionId": "histogis-v9:version:12405",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "verifiedHistoricalType": "County",
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:9936:1861:gazette",
+      "historicalEntityId": "histogis-v9:entity:bukowina",
+      "historicalVersionId": "histogis-v9:version:9936",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1861,
+          "month": 2,
+          "day": 28
+        }
+      },
+      "verifiedHistoricalType": "Duchy",
+      "sourceIds": [
+        "hist3:law:at-1861-20"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:9970:1907:map",
+      "historicalEntityId": "histogis-v9:entity:bukowina",
+      "historicalVersionId": "histogis-v9:version:9970",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "verifiedHistoricalType": "Duchy",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12321:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12321",
+      "historicalVersionId": "histogis-v9:version:12321",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12383:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12383",
+      "historicalVersionId": "histogis-v9:version:12383",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12395:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12395",
+      "historicalVersionId": "histogis-v9:version:12395",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12397:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12397",
+      "historicalVersionId": "histogis-v9:version:12397",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12400:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12400",
+      "historicalVersionId": "histogis-v9:version:12400",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12403:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12403",
+      "historicalVersionId": "histogis-v9:version:12403",
+      "evidenceStatus": "qualified",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12408:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12408",
+      "historicalVersionId": "histogis-v9:version:12408",
+      "evidenceStatus": "in_review",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12402:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12402",
+      "historicalVersionId": "histogis-v9:version:12402",
+      "evidenceStatus": "in_review",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:12398:1848:study",
+      "historicalEntityId": "histogis-v9:entity:shape-12398",
+      "historicalVersionId": "histogis-v9:version:12398",
+      "evidenceStatus": "in_review",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1848
+        }
+      },
+      "verifiedHistoricalType": "Saxon Seat",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:11756:1907:map",
+      "historicalEntityId": "histogis-v9:entity:shape-11756",
+      "historicalVersionId": "histogis-v9:version:11756",
+      "evidenceStatus": "in_review",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "verifiedHistoricalType": "Political District",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:11751:1907:map",
+      "historicalEntityId": "histogis-v9:entity:shape-11751",
+      "historicalVersionId": "histogis-v9:version:11751",
+      "evidenceStatus": "in_review",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "verifiedHistoricalType": "Political District",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    },
+    {
+      "id": "hist3:identity:11383:1907:map",
+      "historicalEntityId": "histogis-v9:entity:shape-11383",
+      "historicalVersionId": "histogis-v9:version:11383",
+      "evidenceStatus": "in_review",
+      "scope": "identity_and_type_at_document_date_only",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "verifiedHistoricalType": "Political District",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907"
+      ],
+      "boundaryCertified": false,
+      "wholeVersionIntervalCertified": false,
+      "note": "Independent documentary attestation only; source geometry and full version dates remain unqualified."
+    }
+  ],
+  "relationAttestations": [
+    {
+      "id": "hist3:relation:12391:1849-03-04",
+      "sourceRelationId": "histogis-v9:hierarchy:12391:9915:1815-09-06",
+      "childVersionId": "histogis-v9:version:12391",
+      "parentVersionId": "histogis-v9:version:9915",
+      "evidenceStatus": "qualified",
+      "kind": "territorial_membership_not_direct_parentage",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "fullIntervalCertified": false,
+      "directAdministrativeParentCertified": false,
+      "note": "Article §1 explicitly includes the named county/district in Grand Principality of Transylvania; source geometry discrepancy remains unresolved."
+    },
+    {
+      "id": "hist3:relation:12392:1849-03-04",
+      "sourceRelationId": "histogis-v9:hierarchy:12392:9915:1815-09-06",
+      "childVersionId": "histogis-v9:version:12392",
+      "parentVersionId": "histogis-v9:version:9915",
+      "evidenceStatus": "qualified",
+      "kind": "territorial_membership_not_direct_parentage",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "fullIntervalCertified": false,
+      "directAdministrativeParentCertified": false,
+      "note": "Article §1 explicitly includes the named county/district in Grand Principality of Transylvania; source geometry discrepancy remains unresolved."
+    },
+    {
+      "id": "hist3:relation:12404:1849-03-04",
+      "sourceRelationId": "histogis-v9:hierarchy:12404:9915:1815-09-06",
+      "childVersionId": "histogis-v9:version:12404",
+      "parentVersionId": "histogis-v9:version:9915",
+      "evidenceStatus": "qualified",
+      "kind": "territorial_membership_not_direct_parentage",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "fullIntervalCertified": false,
+      "directAdministrativeParentCertified": false,
+      "note": "Article §1 explicitly includes the named county/district in Grand Principality of Transylvania; source geometry discrepancy remains unresolved."
+    },
+    {
+      "id": "hist3:relation:12405:1849-03-04",
+      "sourceRelationId": "histogis-v9:hierarchy:12405:9915:1815-09-06",
+      "childVersionId": "histogis-v9:version:12405",
+      "parentVersionId": "histogis-v9:version:9915",
+      "evidenceStatus": "qualified",
+      "kind": "territorial_membership_not_direct_parentage",
+      "attestedAt": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1849,
+          "month": 3,
+          "day": 4
+        }
+      },
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "boundaryCertified": false,
+      "fullIntervalCertified": false,
+      "directAdministrativeParentCertified": false,
+      "note": "Article §1 explicitly includes the named county/district in Grand Principality of Transylvania; source geometry discrepancy remains unresolved."
+    }
+  ],
+  "bridges": [
+    {
+      "id": "hist3:bridge:9970:osm-r2077868",
+      "actualId": "osm-r2077868",
+      "historicalEntityId": "histogis-v9:entity:bukowina",
+      "historicalVersionId": "histogis-v9:version:9970",
+      "kind": "territorial_overlap",
+      "evidenceStatus": "qualified",
+      "historicalPeriod": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "actualSnapshotDate": "2026-10-05",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907",
+        "hist3:actual:osmb-2026-10-05"
+      ],
+      "referenceScope": "verified_intersection_between_source_polygons_only",
+      "institutionalContinuityCertified": false,
+      "administrativeSuccessionCertified": false,
+      "identicalBoundaryCertified": false,
+      "legalBoundaryCertified": false,
+      "geometryComparison": {
+        "historicalGeometryId": "histogis-v9:geometry:1101b2e846ef34446961ae0c",
+        "actualGeometryId": "osm-r2077868",
+        "crs": "EPSG:3035",
+        "method": "Shapely 2 intersection, pyproj equal-area EPSG:3035, original coordinates; percentages of each input source polygon",
+        "historicalCoveragePercent": 50.14002,
+        "actualCoveragePercent": 61.26594
+      },
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Herzogtum Bukowina",
+      "historicalSourceType": "Duchy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 22,
+          "month": 12,
+          "year": 1867
+        }
+      }
+    },
+    {
+      "id": "hist3:bridge:11756:osm-r2077868",
+      "actualId": "osm-r2077868",
+      "historicalEntityId": "histogis-v9:entity:shape-11756",
+      "historicalVersionId": "histogis-v9:version:11756",
+      "kind": "territorial_overlap",
+      "evidenceStatus": "qualified",
+      "historicalPeriod": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "actualSnapshotDate": "2026-10-05",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907",
+        "hist3:actual:osmb-2026-10-05"
+      ],
+      "referenceScope": "verified_intersection_between_source_polygons_only",
+      "institutionalContinuityCertified": false,
+      "administrativeSuccessionCertified": false,
+      "identicalBoundaryCertified": false,
+      "legalBoundaryCertified": false,
+      "geometryComparison": {
+        "historicalGeometryId": "histogis-v9:geometry:1aa39d24da36d9e8c0ce7cff",
+        "actualGeometryId": "osm-r2077868",
+        "crs": "EPSG:3035",
+        "method": "Shapely 2 intersection, pyproj equal-area EPSG:3035, original coordinates; percentages of each input source polygon",
+        "historicalCoveragePercent": 100,
+        "actualCoveragePercent": 6.13413
+      },
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Suczawa",
+      "historicalSourceType": "District Captaincy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 1,
+          "month": 10,
+          "year": 1893
+        }
+      }
+    },
+    {
+      "id": "hist3:bridge:11756:osm-r10495794",
+      "actualId": "osm-r10495794",
+      "historicalEntityId": "histogis-v9:entity:shape-11756",
+      "historicalVersionId": "histogis-v9:version:11756",
+      "kind": "territorial_overlap",
+      "evidenceStatus": "qualified",
+      "historicalPeriod": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "actualSnapshotDate": "2026-10-05",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907",
+        "hist3:actual:osmb-2026-10-05"
+      ],
+      "referenceScope": "verified_intersection_between_source_polygons_only",
+      "institutionalContinuityCertified": false,
+      "administrativeSuccessionCertified": false,
+      "identicalBoundaryCertified": false,
+      "legalBoundaryCertified": false,
+      "geometryComparison": {
+        "historicalGeometryId": "histogis-v9:geometry:1aa39d24da36d9e8c0ce7cff",
+        "actualGeometryId": "osm-r10495794",
+        "crs": "EPSG:3035",
+        "method": "Shapely 2 intersection, pyproj equal-area EPSG:3035, original coordinates; percentages of each input source polygon",
+        "historicalCoveragePercent": 6.07179,
+        "actualCoveragePercent": 65.76029
+      },
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Suczawa",
+      "historicalSourceType": "District Captaincy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 1,
+          "month": 10,
+          "year": 1893
+        }
+      }
+    },
+    {
+      "id": "hist3:bridge:11751:osm-r10495792",
+      "actualId": "osm-r10495792",
+      "historicalEntityId": "histogis-v9:entity:shape-11751",
+      "historicalVersionId": "histogis-v9:version:11751",
+      "kind": "territorial_overlap",
+      "evidenceStatus": "qualified",
+      "historicalPeriod": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "actualSnapshotDate": "2026-10-05",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907",
+        "hist3:actual:osmb-2026-10-05"
+      ],
+      "referenceScope": "verified_intersection_between_source_polygons_only",
+      "institutionalContinuityCertified": false,
+      "administrativeSuccessionCertified": false,
+      "identicalBoundaryCertified": false,
+      "legalBoundaryCertified": false,
+      "geometryComparison": {
+        "historicalGeometryId": "histogis-v9:geometry:cfab3b44c1fcf32584f0918e",
+        "actualGeometryId": "osm-r10495792",
+        "crs": "EPSG:3035",
+        "method": "Shapely 2 intersection, pyproj equal-area EPSG:3035, original coordinates; percentages of each input source polygon",
+        "historicalCoveragePercent": 1.72983,
+        "actualCoveragePercent": 100
+      },
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Radautz",
+      "historicalSourceType": "District Captaincy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 1,
+          "month": 10,
+          "year": 1893
+        }
+      }
+    },
+    {
+      "id": "hist3:bridge:11383:osm-r10495796",
+      "actualId": "osm-r10495796",
+      "historicalEntityId": "histogis-v9:entity:shape-11383",
+      "historicalVersionId": "histogis-v9:version:11383",
+      "kind": "territorial_overlap",
+      "evidenceStatus": "qualified",
+      "historicalPeriod": {
+        "kind": "snapshot",
+        "at": {
+          "year": 1907
+        }
+      },
+      "actualSnapshotDate": "2026-10-05",
+      "sourceIds": [
+        "hist3:map:bev-bukowina-1907",
+        "hist3:actual:osmb-2026-10-05"
+      ],
+      "referenceScope": "verified_intersection_between_source_polygons_only",
+      "institutionalContinuityCertified": false,
+      "administrativeSuccessionCertified": false,
+      "identicalBoundaryCertified": false,
+      "legalBoundaryCertified": false,
+      "geometryComparison": {
+        "historicalGeometryId": "histogis-v9:geometry:1e9f04409dcbd68f04f2ddfa",
+        "actualGeometryId": "osm-r10495796",
+        "crs": "EPSG:3035",
+        "method": "Shapely 2 intersection, pyproj equal-area EPSG:3035, original coordinates; percentages of each input source polygon",
+        "historicalCoveragePercent": 5.33096,
+        "actualCoveragePercent": 93.45305
+      },
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Kimpolung",
+      "historicalSourceType": "District Captaincy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 31,
+          "month": 8,
+          "year": 1868
+        }
+      }
+    }
+  ],
+  "geometryDecisions": [],
+  "unresolved": [
+    {
+      "id": "hist3:issue:bukovina-1849-date",
+      "versionId": "histogis-v9:version:9936",
+      "kind": "date_mismatch",
+      "histoGISStart": "1849-03-05",
+      "originalActDate": "1849-03-04",
+      "status": "blocked_for_backdating",
+      "note": "The act precedes HistoGIS version start by one day; do not alter history start automatically."
+    },
+    {
+      "id": "hist3:issue:bukovina-kingdom-type",
+      "versionId": "histogis-v9:version:9936",
+      "kind": "type_mismatch",
+      "histoGISType": "Kingdom",
+      "documentType": "Duchy",
+      "status": "documentarily_supported_type_only",
+      "note": "Do not overwrite sourceOriginalType; show verified type in sidecar."
+    },
+    {
+      "id": "hist3:issue:1849-constitution-repealed",
+      "versionId": "histogis-v9:version:9915",
+      "kind": "later_legal_repeal",
+      "sourceIds": [
+        "hist3:law:at-1849-03-04"
+      ],
+      "status": "no_extrapolation",
+      "note": "The constitution was repealed 1851-12-31; a 1849 attestation is not an interval covering 1815-1849 or 1849-1867."
+    },
+    {
+      "id": "hist3:issue:saxon-seat-continuity",
+      "kind": "administrative_discontinuity",
+      "sourceIds": [
+        "hist3:paper:transylvania-1848-saxon-seats"
+      ],
+      "status": "no_extrapolation",
+      "note": "The peer-reviewed study notes temporary abolition 1849-1860; do not carry 1848 structures across reforms."
+    }
+  ]
+}
