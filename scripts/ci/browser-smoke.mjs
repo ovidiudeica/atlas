@@ -2022,6 +2022,52 @@ async function historicalIndependentSmoke(cdp){
   await p.close();
 }
 
+/* HIST-MODULE.3b: law-only 1851 administrative hierarchy must not be
+ * confused with the still-unqualified HistoGIS geometric candidate tree. */
+async function historical1851OriginalReviewSmoke(cdp) {
+ for(const width of [1440,390]) {
+   const mobile=width<700;
+   const p=await cdp.page(width,900,mobile,site+'?lang=ro');
+   const panel=mobile?'.drawer-tree':'.tree-sidebar';
+   await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+     'HIST3b map ready '+width);
+   await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+   await p.wait("!!document.querySelector('"+panel+" .history-pilot-option input')",
+     'HIST3b official registry loaded '+width);
+   assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-law-1851')"),
+     false,'1851 law must not appear without explicit review '+width);
+   await p.eval("document.querySelector('"+panel+" .history-pilot-option input').click()");
+   await p.wait("!!document.querySelector('"+panel+" .history-pilot-year input')",
+     'HIST3b year selector '+width);
+   await p.eval("(()=>{const x=document.querySelector('"+panel+" .history-pilot-year input');const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;setter.call(x,'1851');x.dispatchEvent(new Event('input',{bubbles:true}));x.dispatchEvent(new Event('change',{bubbles:true}));})()");
+   await p.wait("!!document.querySelector('"+panel+" .history-law-1851')",
+     'HIST3b statute-only 1851 hierarchy '+width);
+   await p.eval("document.querySelector('"+panel+" .history-law-1851>summary').click()");
+   assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-law-region').length"),5,
+     'Exactly five administrative Kreise '+width);
+   assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-law-region li').length"),36,
+     'Exactly 36 law-only political Bezirkshauptmannschaften '+width);
+   const norm=await p.eval("document.querySelector('"+panel+" .history-law-1851')?.textContent");
+   assert.match(norm,/Karlsburg/,'Missing fifth Kreis is not omitted');
+   assert.match(norm,/fără poligon|fără poligoane|fără un poligon|poligon/i,
+     'Law nodes must be described as non-polygon evidence');
+   assert.match(norm,/nu|NU|necertificat/,'Legal snapshot caveat');
+   await p.snap((mobile?'mobile':'desktop')+'-hist-module-3b-1851-normative-hierarchy.png');
+   if(!mobile) {
+     await p.eval("document.querySelector('"+panel+" .history-law-region>summary').click()");
+     await p.eval("document.querySelector('"+panel+" .history-law-region .history-law-open').click()");
+     await p.wait("!!document.querySelector('.detail-sidebar .history-entity-detail .history-3b-issues, .detail-sidebar .history-entity-detail .history-law-open')",
+       'HIST3b legal Kreis source-card evidence '+width);
+     const card=await p.eval("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent");
+     assert.match(card,/1851/);
+     assert.match(card,/Părinte direct prevăzut/);
+   }
+   assert.equal(await p.eval("document.documentElement.scrollWidth-innerWidth<=1"),true,
+     'No 1851 law hierarchy horizontal overflow '+width);
+   await p.close();
+ }
+}
+
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
@@ -2067,6 +2113,7 @@ try{
   await moduleScopedResets(client);
   await historicalPilotSmoke(client);
   await historicalIndependentSmoke(client);
+  await historical1851OriginalReviewSmoke(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
