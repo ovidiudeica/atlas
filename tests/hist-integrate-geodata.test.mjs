@@ -10,14 +10,15 @@ const base=new URL('../public/data/historical/v1/geodata/',import.meta.url);
 const read=name=>JSON.parse(readFileSync(new URL(name,base),'utf8'));
 const index=read('index.json');
 
-test('historical source index: 27 geometries imported into six separate OHM source shards',()=>{
+test('historical source index: 43 source versions use 36 shared logical OHM geometries',()=>{
  assert.deepEqual(validateGeodataHistoricalIndex(index),{ok:true,errors:[]});
- assert.equal(index.entries.length,27);
- assert.equal(index.shards.length,6);
- assert.equal(index.shards.reduce((n,s)=>n+s.count,0),27);
+ assert.equal(index.entries.length,43);
+ assert.equal(index.shards.length,9);
+ assert.equal(index.shards.reduce((n,s)=>n+s.count,0),43);
  assert.equal(index.notCanonicalHierarchy,true);
  assert.equal(index.notLegalBoundaryCertification,true);
- assert.deepEqual(index.geometryDuplicates.length,3);
+ assert.equal(index.geometryDuplicates.length,7);
+ assert.equal(index.geometryAssets,36);
  assert.ok(index.entries.every(e=>e.status==='source_candidate_not_certified'));
 });
 
@@ -35,7 +36,7 @@ test('source geom coordinates, types and original OSM relation identifiers are i
      assert.equal(feature.id,'ohm-r'+feature.properties.ohm_relation_id);
    }
  }
- assert.equal(ids.size,27);
+ assert.equal(ids.size,43);
 });
 
 test('OHM source dates are not automatically extended or legal-certified',()=>{
@@ -60,7 +61,9 @@ test('fail closed on fictional source certification, ID collision, path and time
  reject(x=>x.notLegalBoundaryCertification=false);
  reject(x=>x.entries[0].status='legal_boundary_certified');
  reject(x=>x.entries[1].id=x.entries[0].id);
- reject(x=>x.entries[1].geometryId=x.entries[0].geometryId);
+ reject(x=>x.entries[1].geometryId='geom:ohm-r0000000');
+ reject(x=>x.geometryAssets=999);
+ reject(x=>x.geometryDuplicates.push(['ohm-r2878295','ohm-r2746379']));
  reject(x=>x.entries[0].sourcePeriod.sourceOnly=false);
  reject(x=>x.entries[0].sourcePeriod.start='eighteenth century');
  reject(x=>x.entries[0].geometryShard='../phase4/catalog.json.gz');
