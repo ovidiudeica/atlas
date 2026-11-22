@@ -1,0 +1,800 @@
+{
+  "schema": "atlas-geodata-historical-source-index-v1",
+  "asOf": "2026-11-22",
+  "status": "INTEGRATED_SOURCE_CANDIDATES_NOT_LEGAL_BOUNDARIES",
+  "sourceDomain": "Geodata GIS / OHM-Boundaries",
+  "collection": "OHM historical principal entities (first tranche)",
+  "notCanonicalHierarchy": true,
+  "notLegalBoundaryCertification": true,
+  "coordinateReferenceSystem": "EPSG:4326",
+  "geometryDuplicates": [
+    [
+      "ohm-r2878295",
+      "ohm-r2690518"
+    ],
+    [
+      "ohm-r2684081",
+      "ohm-r2746379"
+    ],
+    [
+      "ohm-r2684081",
+      "ohm-r2746380"
+    ]
+  ],
+  "shards": [
+    {
+      "file": "ohm-transilvania.geojson",
+      "count": 4
+    },
+    {
+      "file": "ohm-bucovina.geojson",
+      "count": 4
+    },
+    {
+      "file": "ohm-moldova-states.geojson",
+      "count": 6
+    },
+    {
+      "file": "ohm-tara-romaneasca.geojson",
+      "count": 4
+    },
+    {
+      "file": "ohm-regatul-romaniei-a.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-regatul-romaniei-b.geojson",
+      "count": 4
+    }
+  ],
+  "entries": [
+    {
+      "id": "ohm-r2829384",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transilvania",
+      "displayName": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourcePeriod": {
+        "start": "1851-05-12",
+        "end": "1867-05-29",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "grand_principality",
+      "geometryId": "geom:ohm-r2829384",
+      "featureId": "ohm-r2829384",
+      "geometryShard": "ohm-transilvania.geojson",
+      "sourceDriveFileId": "1iBqvNISklmcV4DVKo5lvpdvNp5XE1bb7",
+      "sourceFilename": "OHM-r2829384.geojson",
+      "sourceRelationId": 2829384,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: need to figure out what places these are...",
+        "fixme:e: needs start_event, end_event, or both",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2878295",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transilvania",
+      "displayName": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourcePeriod": {
+        "start": "1765",
+        "end": "1851-05-12",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "grand_principality",
+      "geometryId": "geom:ohm-r2878295",
+      "featureId": "ohm-r2878295",
+      "geometryShard": "ohm-transilvania.geojson",
+      "sourceDriveFileId": "1BXRrbQ3tc27KJaeKphdKWcDSxeMgWylR",
+      "sourceFilename": "OHM-r2878295.geojson",
+      "sourceRelationId": 2878295,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: need to figure out what places these are...",
+        "fixme:e: needs end_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2690518",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transilvania",
+      "displayName": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourcePeriod": {
+        "start": "1732-12-31",
+        "end": "1765",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2690518",
+      "featureId": "ohm-r2690518",
+      "geometryShard": "ohm-transilvania.geojson",
+      "sourceDriveFileId": "1ffFcGLq0ZJaMiWV8Y_2yH0OscFQbMlt3",
+      "sourceFilename": "OHM-r2690518.geojson",
+      "sourceRelationId": 2690518,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: need to figure out what places these are...",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747433",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transilvania",
+      "displayName": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourcePeriod": {
+        "start": "1711-04-29",
+        "end": "1732-12-31",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2747433",
+      "featureId": "ohm-r2747433",
+      "geometryShard": "ohm-transilvania.geojson",
+      "sourceDriveFileId": "18pUEkHhXRDt0CSYk4ixkE9TvTlbw9Uch",
+      "sourceFilename": "OHM-r2747433.geojson",
+      "sourceRelationId": 2747433,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: need to figure out what places these are...",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746401",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Bucovina",
+      "displayName": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourcePeriod": {
+        "start": "1878-07-13",
+        "end": "1918",
+        "sourceOnly": true,
+        "notes": "Date arbitrarily chosen as the Treaty of Berlin for convenience; courses depicted are those of the third military survey 1869-1887; previous itteration shows the second survey 1861-64."
+      },
+      "sourceType": "duchy",
+      "geometryId": "geom:ohm-r2746401",
+      "featureId": "ohm-r2746401",
+      "geometryShard": "ohm-bucovina.geojson",
+      "sourceDriveFileId": "1wx3hnIEGsOpqnCo5HdMOqqvSSb_PUgiI",
+      "sourceFilename": "OHM-r2746401.geojson",
+      "sourceRelationId": 2746401,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2684081",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Bucovina",
+      "displayName": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourcePeriod": {
+        "start": "1861-02-26",
+        "end": "1878-07-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "duchy",
+      "geometryId": "geom:ohm-r2684081",
+      "featureId": "ohm-r2684081",
+      "geometryShard": "ohm-bucovina.geojson",
+      "sourceDriveFileId": "11tvCn6zklSW_E9Xe4crMU9jETQK3svvw",
+      "sourceFilename": "OHM-r2684081.geojson",
+      "sourceRelationId": 2684081,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746379",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Bucovina",
+      "displayName": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourcePeriod": {
+        "start": "1849-03-04",
+        "end": "1860-08-06",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "duchy",
+      "geometryId": "geom:ohm-r2746379",
+      "featureId": "ohm-r2746379",
+      "geometryShard": "ohm-bucovina.geojson",
+      "sourceDriveFileId": "1ij9lxaVFhHthXOmhhGPTpRnknmXld0Fc",
+      "sourceFilename": "OHM-r2746379.geojson",
+      "sourceRelationId": 2746379,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event"
+      ]
+    },
+    {
+      "id": "ohm-r2746380",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Bucovina",
+      "displayName": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourcePeriod": {
+        "start": "1774",
+        "end": "1786-08-06",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "military_district",
+      "geometryId": "geom:ohm-r2746380",
+      "featureId": "ohm-r2746380",
+      "geometryShard": "ohm-bucovina.geojson",
+      "sourceDriveFileId": "1_G02NqivGT8uiTVAPnugv8Lo9xfI3dpa",
+      "sourceFilename": "OHM-r2746380.geojson",
+      "sourceRelationId": 2746380,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2694154",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Basarabia",
+      "displayName": {
+        "ro": "Gubernia Basarabia",
+        "en": "Bessarabia Governorate"
+      },
+      "sourcePeriod": {
+        "start": "1878-07-13",
+        "end": "1918",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2694154",
+      "featureId": "ohm-r2694154",
+      "geometryShard": "ohm-moldova-states.geojson",
+      "sourceDriveFileId": "1PQVlTol_0B1kpCVgHeyoU2kDOvwoaStq",
+      "sourceFilename": "OHM-r2694154.geojson",
+      "sourceRelationId": 2694154,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:place: need to figure out what places these are..."
+      ]
+    },
+    {
+      "id": "ohm-r2694153",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Basarabia",
+      "displayName": {
+        "ro": "Gubernia Basarabia",
+        "en": "Bessarabia Governorate"
+      },
+      "sourcePeriod": {
+        "start": "1856-03-30",
+        "end": "1878-07-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "governorate",
+      "geometryId": "geom:ohm-r2694153",
+      "featureId": "ohm-r2694153",
+      "geometryShard": "ohm-moldova-states.geojson",
+      "sourceDriveFileId": "1y-42yzaBTbfozxYkObuu9Jw_gMA5bOLK",
+      "sourceFilename": "OHM-r2694153.geojson",
+      "sourceRelationId": 2694153,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2692354",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Principatele Unite",
+      "displayName": {
+        "ro": "United Romanian Principalities",
+        "en": "United Romanian Principalities"
+      },
+      "sourcePeriod": {
+        "start": "1878-07-13",
+        "end": "1881-03-14",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "2",
+      "geometryId": "geom:ohm-r2692354",
+      "featureId": "ohm-r2692354",
+      "geometryShard": "ohm-moldova-states.geojson",
+      "sourceDriveFileId": "1fwrzICHXNXXMGlbKKIGD69mqShkLE628",
+      "sourceFilename": "OHM-r2692354.geojson",
+      "sourceRelationId": 2692354,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746400",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Principatele Unite",
+      "displayName": {
+        "ro": "United Romanian Principalities",
+        "en": "United Romanian Principalities"
+      },
+      "sourcePeriod": {
+        "start": "1859-02-05",
+        "end": "1878-07-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "3",
+      "geometryId": "geom:ohm-r2746400",
+      "featureId": "ohm-r2746400",
+      "geometryShard": "ohm-moldova-states.geojson",
+      "sourceDriveFileId": "1cEHPKSUYxsqZ4ZztGVfQOhXIggkZ7U6B",
+      "sourceFilename": "OHM-r2746400.geojson",
+      "sourceRelationId": 2746400,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746689",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Principatul Moldovei",
+      "displayName": {
+        "ro": "Țara Moldovei",
+        "en": "Principality of Moldavia"
+      },
+      "sourcePeriod": {
+        "start": "1856-03-30",
+        "end": "1859-02-05",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2746689",
+      "featureId": "ohm-r2746689",
+      "geometryShard": "ohm-moldova-states.geojson",
+      "sourceDriveFileId": "19ayRNP-0XgKYE37qJCEsDcBNnHYHpF7q",
+      "sourceFilename": "OHM-r2746689.geojson",
+      "sourceRelationId": 2746689,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: start and end dates",
+        "fixme:e: needs start_event"
+      ]
+    },
+    {
+      "id": "ohm-r2694163",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Principatul Moldovei",
+      "displayName": {
+        "ro": "Țara Moldovei",
+        "en": "Principality of Moldavia"
+      },
+      "sourcePeriod": {
+        "start": "1812-05-28",
+        "end": "1856-03-30",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2694163",
+      "featureId": "ohm-r2694163",
+      "geometryShard": "ohm-moldova-states.geojson",
+      "sourceDriveFileId": "1i65LWWk0bhEfeV4udGDLFCe-6e9qwGYf",
+      "sourceFilename": "OHM-r2694163.geojson",
+      "sourceRelationId": 2694163,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: start and end dates",
+        "fixme:e: needs start_event"
+      ]
+    },
+    {
+      "id": "ohm-r2929117",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Românească",
+      "displayName": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourcePeriod": {
+        "start": "1829-09-14",
+        "end": "1859-02-05",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2929117",
+      "featureId": "ohm-r2929117",
+      "geometryShard": "ohm-tara-romaneasca.geojson",
+      "sourceDriveFileId": "19AFsuleMk7Sb6a4dWGdLaHspHHKgfrby",
+      "sourceFilename": "OHM-r2929117.geojson",
+      "sourceRelationId": 2929117,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: Turnu Măgurele → Ottomans 1417; Giurgiu → Ottomans 1420; Brăila → Ottomans 1538; returned 1829 (Akkerman Convention/Treaty of Adrianople) (all 3 also retaken 1594-96)",
+        "fixme:e: needs start_event, end_event, or both"
+      ]
+    },
+    {
+      "id": "ohm-r2929116",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Românească",
+      "displayName": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourcePeriod": {
+        "start": "1538",
+        "end": "1829-09-14",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2929116",
+      "featureId": "ohm-r2929116",
+      "geometryShard": "ohm-tara-romaneasca.geojson",
+      "sourceDriveFileId": "1bTKMkEEet2TseJr1KD6Mm98zTnQTGfcF",
+      "sourceFilename": "OHM-r2929116.geojson",
+      "sourceRelationId": 2929116,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: Turnu Măgurele → Ottomans 1417; Giurgiu → Ottomans 1420; Brăila → Ottomans 1538; returned 1829 (Akkerman Convention/Treaty of Adrianople) (all 3 also retaken 1594-96)",
+        "fixme:e: needs start_event, end_event, or both"
+      ]
+    },
+    {
+      "id": "ohm-r2929115",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Românească",
+      "displayName": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourcePeriod": {
+        "start": "1420",
+        "end": "1538",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2929115",
+      "featureId": "ohm-r2929115",
+      "geometryShard": "ohm-tara-romaneasca.geojson",
+      "sourceDriveFileId": "1__OfGE2K8qZoytfDfbHsgQ3cy9cSZ6PZ",
+      "sourceFilename": "OHM-r2929115.geojson",
+      "sourceRelationId": 2929115,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: Turnu Măgurele → Ottomans 1417; Giurgiu → Ottomans 1420; Brăila → Ottomans 1538; returned 1829 (Akkerman Convention/Treaty of Adrianople) (all 3 also retaken 1594-96)",
+        "fixme:e: needs start_event, end_event, or both"
+      ]
+    },
+    {
+      "id": "ohm-r2694164",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Românească",
+      "displayName": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourcePeriod": {
+        "start": "1417",
+        "end": "1420",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2694164",
+      "featureId": "ohm-r2694164",
+      "geometryShard": "ohm-tara-romaneasca.geojson",
+      "sourceDriveFileId": "1dL5rJwvRJW4Gt85TWteaAQuKiAyUZv_4",
+      "sourceFilename": "OHM-r2694164.geojson",
+      "sourceRelationId": 2694164,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: Turnu Măgurele → Ottomans 1417; Giurgiu → Ottomans 1420; Brăila → Ottomans 1538; returned 1829 (Akkerman Convention/Treaty of Adrianople) (all 3 also retaken 1594-96)",
+        "fixme:e: needs start_event, end_event, or both"
+      ]
+    },
+    {
+      "id": "ohm-r2877966",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1945-03-09",
+        "end": "1947-12-30",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2877966",
+      "featureId": "ohm-r2877966",
+      "geometryShard": "ohm-regatul-romaniei-a.geojson",
+      "sourceDriveFileId": "1wwcTHHAjbtYpfnMvQLg6YSy7V5JrCr7p",
+      "sourceFilename": "OHM-r2877966.geojson",
+      "sourceRelationId": 2877966,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693255",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1941-08-19",
+        "end": "1944-04-01",
+        "sourceOnly": true,
+        "notes": "Odessa not captured until October 1941"
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693255",
+      "featureId": "ohm-r2693255",
+      "geometryShard": "ohm-regatul-romaniei-a.geojson",
+      "sourceDriveFileId": "179Kp-GISATS5JNw4XkFfcdx3rN2T482d",
+      "sourceFilename": "OHM-r2693255.geojson",
+      "sourceRelationId": 2693255,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693256",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1940-09-07",
+        "end": "1941-08-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693256",
+      "featureId": "ohm-r2693256",
+      "geometryShard": "ohm-regatul-romaniei-a.geojson",
+      "sourceDriveFileId": "1TTcvGKcAqM73P6KOmkdjJVunrSjsjT2a",
+      "sourceFilename": "OHM-r2693256.geojson",
+      "sourceRelationId": 2693256,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: border gap",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693257",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1940-08-30",
+        "end": "1940-09-07",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693257",
+      "featureId": "ohm-r2693257",
+      "geometryShard": "ohm-regatul-romaniei-a.geojson",
+      "sourceDriveFileId": "1Pi6vtEqoI5DD1QF8CuqGGeDXjj230rxc",
+      "sourceFilename": "OHM-r2693257.geojson",
+      "sourceRelationId": 2693257,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: label",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693258",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1940-06-28",
+        "end": "1940-08-30",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693258",
+      "featureId": "ohm-r2693258",
+      "geometryShard": "ohm-regatul-romaniei-a.geojson",
+      "sourceDriveFileId": "1f5EahmaJ8hSIdwOTZbRKVtKVZuA15rCq",
+      "sourceFilename": "OHM-r2693258.geojson",
+      "sourceRelationId": 2693258,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693259",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1921",
+        "end": "1940-06-28",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693259",
+      "featureId": "ohm-r2693259",
+      "geometryShard": "ohm-regatul-romaniei-b.geojson",
+      "sourceDriveFileId": "1YeFcGRimTE3XEL0lB29-aJPC4ZyLmLPw",
+      "sourceFilename": "OHM-r2693259.geojson",
+      "sourceRelationId": 2693259,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: border adjustment with Kingdom of Serbs, Croats and Slovenes 1923-11-24 (see en:Timiș-Torontal County)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693464",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1919",
+        "end": "1921",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693464",
+      "featureId": "ohm-r2693464",
+      "geometryShard": "ohm-regatul-romaniei-b.geojson",
+      "sourceDriveFileId": "1PY-QOvkVOpW2jz1KHnwUbzJ_7sfzTuB6",
+      "sourceFilename": "OHM-r2693464.geojson",
+      "sourceRelationId": 2693464,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: border adjustment with Kingdom of Serbs, Croats and Slovenes 1923-11-24 (see en:Timiș-Torontal County)",
+        "fixme:e: needs start_event, end_event, or both",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693260",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1913-08-30",
+        "end": "1918",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693260",
+      "featureId": "ohm-r2693260",
+      "geometryShard": "ohm-regatul-romaniei-b.geojson",
+      "sourceDriveFileId": "1qw9Xrwg1yVYC6DhapgBkwdw0vdUh5XE-",
+      "sourceFilename": "OHM-r2693260.geojson",
+      "sourceRelationId": 2693260,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2692219",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1881-03-14",
+        "end": "1913-08-29",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2692219",
+      "featureId": "ohm-r2692219",
+      "geometryShard": "ohm-regatul-romaniei-b.geojson",
+      "sourceDriveFileId": "1fvb-u-R_-JLJVrGFBc-RQ2dpYhGxQSlf",
+      "sourceFilename": "OHM-r2692219.geojson",
+      "sourceRelationId": 2692219,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    }
+  ],
+  "missingSources": "OHM counties, comitates and further Geodata GIS collections require import in subsequent inventory batches."
+}
