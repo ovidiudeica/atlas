@@ -228,12 +228,5 @@ export async function loadHistoricalPilotCatalog(baseUrl = import.meta.env?.BASE
   return catalog;
 }
 
-export async function loadHistoricalPilotGeometries(baseUrl = import.meta.env?.BASE_URL ?? '/') {
-  const prefix = baseUrl.replace(/\/?$/, '/') + BASE;
-  const response = await fetch(prefix + 'geometry.geojson');
-  if (!response.ok) throw Error('Historical geometry HTTP ' + response.status);
-  const features = await response.json();
-  if (features?.type !== 'FeatureCollection' || !Array.isArray(features.features))
-    throw Error('Invalid historical geometry collection');
-  return features;
-}
+// HistoGIS pilot geometries were retired in HIST-OHM-CORE.1.
+// Their original collection remains in Geodata GIS for final gap filling.
