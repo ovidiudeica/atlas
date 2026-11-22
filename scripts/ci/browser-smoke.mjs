@@ -1950,8 +1950,11 @@ async function historicalOhmSmoke(cdp){
     assert.match(summary,/139/,'OHM 139 versions '+width);
     assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-pilot-review')"),
       false,'HistoGIS pilot is retired '+width);
-    await p.eval("document.querySelector('"+panel+" .history-geodata-groups details:first-child summary').click()");
-    await p.eval("document.querySelector('"+panel+" .history-geodata-groups details:first-child .tree-label').click()");
+    assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-geodata-category').length"),
+      3,'OHM category coverage remains separate');
+    await p.eval("document.querySelector('"+panel+" .history-geodata-category:first-child > summary').click()");
+    await p.eval("document.querySelector('"+panel+" .history-geodata-category:first-child .history-geodata-entity:first-child > summary').click()");
+    await p.eval("document.querySelector('"+panel+" .history-geodata-category:first-child .history-geodata-entity:first-child .tree-label').click()");
     const entity=mobile?'.drawer-detail .history-entity-detail':'.detail-sidebar .history-entity-detail';
     await p.wait("!!document.querySelector('"+entity+" .entity-title h3')",
       'OHM: source Entity card '+width);
