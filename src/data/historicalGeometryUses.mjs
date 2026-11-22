@@ -96,14 +96,18 @@ export function formatHistoricalDate(date, lang = 'ro') {
  * Reference years are snapshots, not implied periods of unchanging borders.
  * Period boundaries may be imprecise; only supplied precision is displayed.
  */
-export function formatHistoricalUse(use, lang = 'ro') {
+export function formatHistoricalUse(use, lang, labels) {
   verifyUse(use);
-  const ro = lang !== 'en';
-  if (use.kind === 'reference') return (ro ? 'An de referință: ' : 'Reference date: ') +
-    formatHistoricalDate(use.at, lang);
-  if (!use.from && !use.to) return ro ? 'Perioadă nedeterminată' : 'Undated period';
-  if (!use.from) return (ro ? 'Până la ' : 'Until ') + formatHistoricalDate(use.to, lang);
-  if (!use.to) return (ro ? 'De la ' : 'From ') + formatHistoricalDate(use.from, lang);
+  // All user-facing labels come from App's existing global WORDS[lang].
+  // No Historical-specific language switch, vocabulary or locale state.
+  if (!labels || !['referenceDatePrefix', 'undatedPeriod', 'untilPrefix', 'fromPrefix']
+    .every(key => typeof labels[key] === 'string')) {
+    throw Error('Global geometry-use translation labels required');
+  }
+  if (use.kind === 'reference') return labels.referenceDatePrefix + formatHistoricalDate(use.at, lang);
+  if (!use.from && !use.to) return labels.undatedPeriod;
+  if (!use.from) return labels.untilPrefix + formatHistoricalDate(use.to, lang);
+  if (!use.to) return labels.fromPrefix + formatHistoricalDate(use.from, lang);
   return formatHistoricalDate(use.from, lang) + ' – ' + formatHistoricalDate(use.to, lang);
 }
 
