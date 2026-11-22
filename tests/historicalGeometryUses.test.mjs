@@ -5,6 +5,20 @@ import {
   formatHistoricalUse, validateHistoricalGeometryRegister
 } from '../src/data/historicalGeometryUses.mjs';
 
+// In production, these labels come from App.WORDS[lang] for every module.
+const labels = {
+  ro: {
+    referenceDatePrefix: 'An de referință: ',
+    undatedPeriod: 'Perioadă nedeterminată',
+    untilPrefix: 'Până la ', fromPrefix: 'De la '
+  },
+  en: {
+    referenceDatePrefix: 'Reference date: ',
+    undatedPeriod: 'Undated period',
+    untilPrefix: 'Until ', fromPrefix: 'From '
+  }
+};
+
 const use = (useId, entityId, kind, temporal, geometryId='g001') => ({
   useId, entityId, geometryId, kind, entityName: { ro: entityId },
   evidenceStatus: 'qualified', sourceIds: ['OHM'],
@@ -28,8 +42,8 @@ test('a single outline has multiple historically distinct uses sorted chronologi
 
 test('reference year is a snapshot, never a fabricated historical interval', () => {
   const snapshot = use('u-1910','Austria-Hungary','reference',{at:{year:1910}});
-  assert.equal(formatHistoricalUse(snapshot,'ro'),'An de referință: 1910');
-  assert.equal(formatHistoricalUse(snapshot,'en'),'Reference date: 1910');
+  assert.equal(formatHistoricalUse(snapshot,'ro',labels.ro),'An de referință: 1910');
+  assert.equal(formatHistoricalUse(snapshot,'en',labels.en),'Reference date: 1910');
 });
 
 test('date precision, BCE and qualifiers survive presentation', () => {
@@ -44,9 +58,9 @@ test('date precision, BCE and qualifiers survive presentation', () => {
 });
 
 test('open-ended and undated ranges are explicit, never filled by guesses', () => {
-  assert.equal(formatHistoricalUse(use('a','A','interval',{from:{year:1859}}),'ro'),'De la 1859');
-  assert.equal(formatHistoricalUse(use('b','A','interval',{to:{year:1862}}),'en'),'Until 1862');
-  assert.equal(formatHistoricalUse(use('c','A','interval',{}),'ro'),'Perioadă nedeterminată');
+  assert.equal(formatHistoricalUse(use('a','A','interval',{from:{year:1859}}),'ro',labels.ro),'De la 1859');
+  assert.equal(formatHistoricalUse(use('b','A','interval',{to:{year:1862}}),'en',labels.en),'Until 1862');
+  assert.equal(formatHistoricalUse(use('c','A','interval',{}),'ro',labels.ro),'Perioadă nedeterminată');
 });
 
 test('rejects duplicate physical geometries, IDs and dangling temporal uses', () => {
@@ -67,4 +81,11 @@ test('rejects chronologically inconsistent and malformed temporal records', () =
     use('bad','A','reference',{at:{year:1910},to:{year:1918}})
   ]), /must have at and no interval/);
   assert.throws(()=>formatHistoricalDate({year:0}),/nonzero integer year/);
+});
+
+test('global translation copy is required for periods, never locally duplicated', () => {
+  const snapshot = use('u-1910','Austria-Hungary','reference',{at:{year:1910}});
+  assert.throws(() => formatHistoricalUse(snapshot,'ro'), /Global geometry-use translation labels required/);
+  assert.equal(formatHistoricalUse(snapshot,'ro',{...labels.ro,referenceDatePrefix:'Dată documentată: '}),
+    'Dată documentată: 1910');
 });
