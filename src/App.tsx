@@ -381,6 +381,8 @@ export default function App() {
     SHARED_STATE.entity?'administrative':null);
   // HIST-OHM-CORE: the only active historical source is OpenHistoricalMap.
   const [historyYear,setHistoryYear] = useState(1835);
+  const [historyFilterActive,setHistoryFilterActive] = useState(false);
+  const [historyResetEpoch,setHistoryResetEpoch] = useState(0);
   const [historicalGeodataSelection,setHistoricalGeodataSelection] = useState<HistoricalGeodataSelection|null>(null);
   // Independent module geometry selections share one map without owning
   // each other's selections; the Administrative array retains persistence.
@@ -953,12 +955,12 @@ export default function App() {
   // selections owned by another module. The global reset restores RO + MD.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
   const localSelectionActive=module==='historical'?
-    historicalGeodataSelection!==null:
+    (historicalGeodataSelection!==null||historyFilterActive||historyYear!==1835):
     moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
       adminFilters,statFilters,selected,selectedModule);
   function resetLocalModule(id:ModuleId){
     if(id==='historical'){
-      if(!historicalGeodataSelection)return;
+      if(!historicalGeodataSelection&&!historyFilterActive&&historyYear===1835)return;
       if(historicalGeodataSelection && selectedModule==='historical'){
         setSelectedModule(selected?'administrative':null);
         setDetailPanelOpen(false);
@@ -966,6 +968,8 @@ export default function App() {
       }
       setHistoricalGeodataSelection(null);
       setHistoryYear(1835);
+      setHistoryFilterActive(false);
+      setHistoryResetEpoch(x=>x+1);
       return;
     }
     if(!moduleHasSelections(moduleVisible,id,DEFAULT_VISIBLE,
@@ -993,6 +997,8 @@ export default function App() {
   }
   const resetAllSelections=()=>{
     setHistoricalGeodataSelection(null);
+    setHistoryFilterActive(false);
+    setHistoryResetEpoch(x=>x+1);
     setHistoryYear(1835);
     navigationEpoch.current++; // Cancel stale asynchronous camera movements.
     setNavBusy(false);
@@ -1241,7 +1247,8 @@ export default function App() {
     </div>
   </section>;
 
-  const historicalPanel=<HistoricalGeodataBrowser year={historyYear} onYear={setHistoryYear}
+  const historicalPanel=<HistoricalGeodataBrowser key={historyResetEpoch}
+    year={historyYear} onYear={setHistoryYear} onFiltersActiveChange={setHistoryFilterActive}
     lang={lang} selectedId={historicalGeodataSelection?.entry.id||null}
     onSelect={chooseHistoricalGeodata}/>;
 
