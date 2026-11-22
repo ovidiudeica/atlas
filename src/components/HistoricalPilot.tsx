@@ -7,6 +7,13 @@ import {
 } from './HistoricalOriginalReview';
 import type {HistoricalBoundaryReview} from '../data/historicalBoundaryReview.mjs';
 import {
+  HistoricalGeorefTrialSummary,HistoricalGeorefCaseSection,
+  type HistoricalGeorefLabels
+} from './HistoricalGeorefTrial';
+import type {
+  OriginalMapFitHoldoutRegister, OriginalMapFitHoldoutResults
+} from '../data/historicalGeorefFitHoldout.mjs';
+import {
   HistoricalDocumentaryEvidence, HistoricalActualConnections,
   type HistoricalEvidenceLabels
 } from './HistoricalEvidenceSections';
@@ -24,7 +31,7 @@ import {
   type HistoricalReviewTree
 } from '../data/historicalQualification.mjs';
 
-export interface HistoricalLabels extends HistoricalEvidenceLabels, HistoricalReviewLabels {
+export interface HistoricalLabels extends HistoricalEvidenceLabels, HistoricalReviewLabels, HistoricalGeorefLabels {
   historyPilotTitle: string;
   historyPilotEnable: string;
   historyPilotDisable: string;
@@ -82,13 +89,16 @@ function periodOf(v:HistoricalVersion,lang:Locale) {
  * opt-in. No administrative polygons or ACTUAL selections are modified.
  */
 export function HistoricalPilotTree({
-  catalog,qualification,admissions,boundaryReview,year,preview,selectedVersionId,lang,labels,
+  catalog,qualification,admissions,boundaryReview,georefRegister,georefResults,
+  year,preview,selectedVersionId,lang,labels,
   loading,error,onYear,onPreview,onSelect
 }:{
   catalog:PilotHistoricalCatalog|null;
   qualification:HistoricalQualification|null;
   admissions:HistoricalIndependentAdmissions|null;
   boundaryReview:HistoricalBoundaryReview|null;
+  georefRegister:OriginalMapFitHoldoutRegister|null;
+  georefResults:OriginalMapFitHoldoutResults|null;
   year:number;
   preview:boolean;
   selectedVersionId:string|null;
@@ -191,19 +201,24 @@ export function HistoricalPilotTree({
       </details>}
       <HistoricalLaw1851Tree review={boundaryReview} year={year} lang={lang}
         labels={labels} onSelect={onSelect}/>
+      <HistoricalGeorefTrialSummary register={georefRegister}
+        results={georefResults} lang={lang} labels={labels}/>
       <p className="source-caveat">{labels.historyPilotReviewNote}</p>
     </div>}
   </section>;
 }
 
 export function HistoricalPilotEntityCard({
-  catalog,qualification,admissions,boundaryReview,versionId,year,lang,labels,onSelect,onMap,
+  catalog,qualification,admissions,boundaryReview,georefRegister,georefResults,
+  versionId,year,lang,labels,onSelect,onMap,
   onSelectActual,actualName
 }:{
   catalog:PilotHistoricalCatalog;
   qualification:HistoricalQualification;
   admissions:HistoricalIndependentAdmissions|null;
   boundaryReview:HistoricalBoundaryReview|null;
+  georefRegister:OriginalMapFitHoldoutRegister|null;
+  georefResults:OriginalMapFitHoldoutResults|null;
   versionId:string;
   year:number;
   lang:Locale;
@@ -256,6 +271,9 @@ export function HistoricalPilotEntityCard({
       <HistoricalBoundaryDocumentarySection review={boundaryReview}
         catalog={catalog} versionId={versionId} year={year} lang={lang}
         labels={labels} onSelect={onSelect}/>
+      <HistoricalGeorefCaseSection register={georefRegister}
+        results={georefResults} versionId={versionId}
+        lang={lang} labels={labels}/>
       <EntityCardSection title={labels.historyPilotVersions} kind="hierarchy">
         <ol className="historical-geometry-uses">
           {variants.map(v=><li key={v.id}>
