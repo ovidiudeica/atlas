@@ -6,30 +6,8 @@ import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
-import { HistoricalPilotTree, HistoricalPilotEntityCard } from './components/HistoricalPilot';
 import { HistoricalGeodataBrowser,HistoricalGeodataEntityCard,
   type HistoricalGeodataSelection } from './components/HistoricalGeodataBrowser';
-import {
-  loadHistoricalBoundaryReview, type HistoricalBoundaryReview
-} from './data/historicalBoundaryReview.mjs';
-import {
-  loadOriginalMapFitHoldout,
-  type OriginalMapFitHoldoutRegister,type OriginalMapFitHoldoutResults
-} from './data/historicalGeorefFitHoldout.mjs';
-import { ActualHistoryConnections } from './components/HistoricalEvidenceSections';
-import {
-  loadIndependentHistoricalAdmissions,
-  validateIndependentHistoricalAdmissions,
-  type HistoricalIndependentAdmissions
-} from './data/historicalIndependentAdmissions.mjs';
-import {
-  loadHistoricalPilotCatalog,loadHistoricalPilotGeometries,
-  validateHistoricalPilotCatalog, type PilotHistoricalCatalog
-} from './data/historicalCatalog.mjs';
-import {
-  loadHistoricalPilotQualification, historicalDateInPeriod,
-  type HistoricalQualification
-} from './data/historicalQualification.mjs';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { SymbolAuditSummary } from './components/SymbolAuditSummary';
 import { symbolAuditFor } from './data/symbolAudit.mjs';
@@ -149,36 +127,6 @@ const WORDS = {
     geometryEvidenceCandidate: 'Candidate, not yet admitted',
     geometryEvidenceReview: 'Under review',
     referenceDatePrefix: 'Attested in ',
-    historyPilotTitle: 'Historical source pilot',
-    historyPilotEnable: 'Explore the unverified HistoGIS pilot',
-    historyPilotDisable: 'Hide unverified pilot',
-    historyPilotWarning: 'SOURCE PILOT · Boundaries and parentage are not independently certified.',
-    historyPilotSource: 'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0 · historical intervals as reported by the source',
-    historyPilotYear: 'Year (state on 1 July)',
-    historyPilotNoRoots: 'No source version is documented for this year.',
-    historyPilotUnlinked: 'Unlinked or disputed units',
-    historyPilotUnlinkedNote: 'These versions are kept available, without inventing a parent or joining incompatible polygons.',
-    historyPilotCandidate: 'Source candidate relations',
-    historyPilotSpatialWarning: 'Geometric discrepancy — review required',
-    historyPilotOpen: 'Source children for this year',
-    historyPilotSelected: 'Selected historical version',
-    historyPilotYears: 'Source-reported period',
-    historyPilotIdentity: 'Historical identity',
-    historyPilotOriginalName: 'Original source name',
-    historyPilotOriginalType: 'Source administrative type',
-    historyPilotVersions: 'Chronological versions',
-    historyPilotHierarchy: 'Historical parent and children (candidates)',
-    historyPilotNoParent: 'Parent not confirmed',
-    historyPilotNoChildren: 'No source children documented for the selected year.',
-    historyPilotGeometry: 'Geometry',
-    historyPilotSources: 'Sources and rights',
-    historyPilotCurrent: 'Present-day administrative situation',
-    historyPilotNoBridge: 'No independently verified relation with ACTUAL has been admitted. This is not evidence that the current territory has no administration.',
-    historyPilotReviewNote: 'These are source-supplied proposals, not a certified legal or exhaustive historical hierarchy.',
-    historyPilotMap: 'Locate source polygon',
-    historyPilotStatus: 'Evidence qualification',
-    historyPilotSourceName: 'The source label has not yet been independently translated.',
-    historyPilotLoading: 'Loading the historical source pilot…',
     history3cTitle: 'Original map FIT/HOLDOUT (exploratory)',
     history3cWarning: 'Independent original scans, but approximate town-position GCPs and non-blind HOLDOUT. Both map registrations fail screening; no boundary or parent is certified.',
     history3cMapStatus: 'Map trial status',
@@ -311,36 +259,6 @@ const WORDS = {
     geometryEvidenceCandidate: 'Candidat, încă neadmis',
     geometryEvidenceReview: 'În verificare',
     referenceDatePrefix: 'Atestat în ',
-    historyPilotTitle: 'Arbore istoric — pilot documentar',
-    historyPilotEnable: 'Explorează pilotul HistoGIS necertificat',
-    historyPilotDisable: 'Ascunde pilotul necertificat',
-    historyPilotWarning: 'PILOT DOCUMENTAR · Hotarele și relațiile de subordonare nu sunt certificate independent.',
-    historyPilotSource: 'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0 · intervale conform sursei',
-    historyPilotYear: 'Anul (stare la 1 iulie)',
-    historyPilotNoRoots: 'Nu există o versiune documentată în sursă pentru acest an.',
-    historyPilotUnlinked: 'Unități nelegate sau disputate',
-    historyPilotUnlinkedNote: 'Păstrăm versiunile fără a inventa părinți și fără a conecta poligoane incompatibile.',
-    historyPilotCandidate: 'Relații candidate din sursă',
-    historyPilotSpatialWarning: 'Neconcordanță geometrică — necesită verificare',
-    historyPilotOpen: 'Copii conform sursei pentru acest an',
-    historyPilotSelected: 'Versiunea istorică selectată',
-    historyPilotYears: 'Perioadă conform sursei',
-    historyPilotIdentity: 'Identitate istorică',
-    historyPilotOriginalName: 'Denumire în sursa originală',
-    historyPilotOriginalType: 'Tip administrativ în sursă',
-    historyPilotVersions: 'Versiuni cronologice',
-    historyPilotHierarchy: 'Părinți și copii istorici (candidați)',
-    historyPilotNoParent: 'Părinte neconfirmat',
-    historyPilotNoChildren: 'Nu sunt copii documentați pentru anul selectat.',
-    historyPilotGeometry: 'Geometrie',
-    historyPilotSources: 'Surse și drepturi',
-    historyPilotCurrent: 'Situația administrativă actuală',
-    historyPilotNoBridge: 'Nu a fost admisă încă o corespondență verificată independent cu ACTUAL. Aceasta nu înseamnă că teritoriul nu are administrare actuală.',
-    historyPilotReviewNote: 'Acestea sunt propuneri din sursă, nu o ierarhie istorică juridică sau exhaustivă certificată.',
-    historyPilotMap: 'Încadrează conturul din sursă',
-    historyPilotStatus: 'Calificare probatorie',
-    historyPilotSourceName: 'Eticheta sursei nu a fost încă tradusă independent.',
-    historyPilotLoading: 'Se încarcă pilotul istoric…',
     history3cTitle: 'Hărțile originale — FIT/HOLDOUT exploratoriu',
     history3cWarning: 'Scanări originale independente, însă repere urbane aproximative și HOLDOUT neorb. Ambele georeferențieri de probă nu trec criteriile; niciun hotar sau părinte nu este certificat.',
     history3cMapStatus: 'Starea probei cartografice',
@@ -461,22 +379,9 @@ export default function App() {
   // selection source in this release is Administrative.
   const [selectedModule,setSelectedModule] = useState<ModuleId|null>(
     SHARED_STATE.entity?'administrative':null);
-  // Historical preview is independent from ACTUAL canonical identities and
-  // moduleVisible. No unreviewed polygon is loaded as a certified ACTUAL shard.
-  const [historyCatalog,setHistoryCatalog] = useState<PilotHistoricalCatalog|null>(null);
-  const [historyQualifications,setHistoryQualifications] = useState<HistoricalQualification|null>(null);
-  const [historyAdmissions,setHistoryAdmissions] = useState<HistoricalIndependentAdmissions|null>(null);
-  const [historyBoundaryReview,setHistoryBoundaryReview] = useState<HistoricalBoundaryReview|null>(null);
-  const [historyGeorefRegister,setHistoryGeorefRegister] = useState<OriginalMapFitHoldoutRegister|null>(null);
-  const [historyGeorefResults,setHistoryGeorefResults] = useState<OriginalMapFitHoldoutResults|null>(null);
-  const [historyGeometries,setHistoryGeometries] = useState<FeatureCollection|null>(null);
-  const [historyPreviewEnabled,setHistoryPreviewEnabled] = useState(false);
+  // HIST-OHM-CORE: the only active historical source is OpenHistoricalMap.
   const [historyYear,setHistoryYear] = useState(1835);
-  const [historySelectedVersionId,setHistorySelectedVersionId] = useState<string|null>(null);
   const [historicalGeodataSelection,setHistoricalGeodataSelection] = useState<HistoricalGeodataSelection|null>(null);
-  const [historyLoading,setHistoryLoading] = useState(false);
-  const [historyGeometryLoading,setHistoryGeometryLoading] = useState(false);
-  const [historyError,setHistoryError] = useState<string|null>(null);
   // Independent module geometry selections share one map without owning
   // each other's selections; the Administrative array retains persistence.
   const [moduleVisible,setModuleVisible] = useState(()=>makeModuleVisibility(restoreVisible()));
@@ -558,18 +463,10 @@ export default function App() {
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
-  const historicalSelectedVersion = historyCatalog?.versions.find(
-    v=>v.id===historySelectedVersionId) || null;
-  const historicalPilotCardActive = Boolean(historyPreviewEnabled &&
-    selectedModule==='historical' && historicalSelectedVersion &&
-    historyCatalog && historyQualifications);
-  const historicalSourceCardActive = Boolean(historicalGeodataSelection &&
-    selectedModule==='historical');
-  const historicalCardActive = historicalPilotCardActive||historicalSourceCardActive;
+  const historicalSourceCardActive = Boolean(historicalGeodataSelection && selectedModule==='historical');
+  const historicalCardActive = historicalSourceCardActive;
   const shownCardName = historicalSourceCardActive&&historicalGeodataSelection ?
     historicalGeodataSelection.entry.displayName[lang] :
-    historicalPilotCardActive&&historicalSelectedVersion ?
-    (historicalSelectedVersion.name[lang]||historicalSelectedVersion.name.ro) :
     currentNode ? cardNameOf(currentNode,lang) : null;
   const cardRoles=currentNode?entityCardRoles(currentNode):null;
   // These are presentation-tree children for the ACTIVE tree view, never
@@ -609,54 +506,6 @@ export default function App() {
       .catch(e=>{if(active)setCatalogError(String(e));});
     return ()=>{active=false;};
   },[]);
-  // Read-only historical metadata is loaded after ACTUAL, so Administrative
-  // Entity cards can show verified *spatial-only* historical comparisons.
-  // Large historical polygons remain lazy and are loaded only in Historical.
-  useEffect(()=>{
-    if(catalog.length!==4283||historyCatalog||historyLoading||historyError)return;
-    let active=true;
-    setHistoryLoading(true);
-    loadHistoricalPilotCatalog().then(async pilot=>{
-      const qualifications=await loadHistoricalPilotQualification(pilot);
-      const [admissions,boundaryReview]=await Promise.all([
-        loadIndependentHistoricalAdmissions(pilot),
-        loadHistoricalBoundaryReview(pilot,qualifications)
-      ]);
-      const {register:georefRegister,results:georefResults}=
-        await loadOriginalMapFitHoldout(pilot,boundaryReview);
-      const pilotGate=validateHistoricalPilotCatalog(pilot);
-      if(!pilotGate.ok)throw Error(pilotGate.errors.join('; '));
-      const gate=validateIndependentHistoricalAdmissions(pilot,admissions,{
-        certificate:'CERTIFIED_CARTOGRAPHIC_SOURCE_WITH_ACCEPTED_EXCEPTIONS',
-        sourceSnapshotDate:'2026-10-05',entities:catalog
-      });
-      if(!gate.ok)throw Error(gate.errors.join('; '));
-      if(!active)return;
-      setHistoryCatalog(pilot);
-      setHistoryQualifications(qualifications);
-      setHistoryAdmissions(admissions);
-      setHistoryBoundaryReview(boundaryReview);
-      setHistoryGeorefRegister(georefRegister);
-      setHistoryGeorefResults(georefResults);
-    }).catch(e=>{if(active)setHistoryError(String(e));})
-      .finally(()=>{if(active)setHistoryLoading(false);});
-    return ()=>{active=false;};
-  },[catalog,historyCatalog,historyError]);
-
-  useEffect(()=>{
-    if(!(module==='historical'&&(modulePanelOpen||historyPreviewEnabled))||!historyCatalog||
-      historyGeometries||historyGeometryLoading||historyError)return;
-    let active=true;
-    setHistoryGeometryLoading(true);
-    loadHistoricalPilotGeometries().then(geometry=>{
-      const checked=validateHistoricalPilotCatalog(historyCatalog,geometry);
-      if(!checked.ok)throw Error(checked.errors.join('; '));
-      if(active)setHistoryGeometries(geometry as FeatureCollection);
-    }).catch(e=>{if(active)setHistoryError(String(e));})
-      .finally(()=>{if(active)setHistoryGeometryLoading(false);});
-    return ()=>{active=false;};
-  },[module,modulePanelOpen,historyPreviewEnabled,historyCatalog,historyGeometries,historyError]);
-
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
   useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
   useEffect(()=>{
@@ -830,16 +679,7 @@ export default function App() {
       instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
       // Independent historical source; never inserted into the certified
       // administrative feature collection, style or geometry shard cache.
-      instance.addSource('historical-pilot',{type:'geojson',data:EMPTY_FEATURES});
-      // Pilot attribution is displayed in its opt-in panel and Entity card.
-      // A global MapLibre attribution for an initially empty pilot source
-      // caused overlap with the scale control at mobile 390px.
-      instance.addLayer({id:'historical-pilot-fill',type:'fill',source:'historical-pilot',
-        paint:{'fill-color':'#d0953e','fill-opacity':0.09}});
-      instance.addLayer({id:'historical-pilot-outline',type:'line',source:'historical-pilot',
-        paint:{'line-color':'#bd781e','line-width':3,'line-opacity':0.92,
-          'line-dasharray':[3,2]}});
-      // Geodata GIS source assets are separate from the HistoGIS pilot and ACTUAL.
+      // OpenHistoricalMap source geometries are isolated from ACTUAL.
       instance.addSource('historical-geodata',{type:'geojson',data:EMPTY_FEATURES});
       instance.addLayer({id:'historical-geodata-fill',type:'fill',source:'historical-geodata',
         paint:{'fill-color':'#1d879d','fill-opacity':0.14}});
@@ -857,7 +697,7 @@ export default function App() {
         // The historical source outline has selection priority over the
         // overlapping ACTUAL fill, while both remain separate data layers.
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
+          layers:['historical-geodata-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -868,7 +708,7 @@ export default function App() {
       for(const boundaryLayer of ['entity-outline','entity-stat-outline'])
         instance.on('click',boundaryLayer,event=>{
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
+          layers:['historical-geodata-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -876,23 +716,9 @@ export default function App() {
           else if(window.innerWidth<1100)setModulePanelOpen(false);
         }
       });
-      for(const layer of ['historical-pilot-fill','historical-pilot-outline']){
-        instance.on('click',layer,event=>{
-          const versionId=event.features?.[0]?.properties?.versionId;
-          if(typeof versionId!=='string')return;
-          setHistorySelectedVersionId(versionId);
-          setSelected(null);
-          setSelectedModule('historical');
-          setDetailPanelOpen(true);
-          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
-          else if(window.innerWidth<1100)setModulePanelOpen(false);
-        });
-        instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
-        instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
-      }
       instance.on('click','country-fill',event=>{
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
+          layers:['historical-geodata-fill']}).length)return;
         const country=event.features?.[0]?.properties?.id;
         if(country==='ro'||country==='md'){
           setSelected(country==='ro'?'osm-r90689':'osm-r58974');
@@ -996,23 +822,6 @@ export default function App() {
 
   useEffect(()=>{
     if(!ready||!mapRef.current)return;
-    const source=mapRef.current.getSource('historical-pilot') as GeoJSONSource|undefined;
-    if(!source)return;
-    if(!historyPreviewEnabled || !historicalSelectedVersion || !historyGeometries ||
-        !historicalDateInPeriod(historicalSelectedVersion.period,
-          String(historyYear).padStart(4,'0')+'-07-01')){
-      source.setData(EMPTY_FEATURES);
-      return;
-    }
-    const feature=historyGeometries.features.find(
-      f=>f.properties?.geometryId===historicalSelectedVersion.geometryId);
-    if(!feature){source.setData(EMPTY_FEATURES);return;}
-    source.setData({type:'FeatureCollection',features:[{
-      ...feature,properties:{...feature.properties,versionId:historicalSelectedVersion.id}
-    }]});
-  },[ready,historyPreviewEnabled,historyGeometries,historicalSelectedVersion,historyYear]);
-  useEffect(()=>{
-    if(!ready||!mapRef.current)return;
     const source=mapRef.current.getSource('historical-geodata') as GeoJSONSource|undefined;
     if(!source)return;
     if(selectedModule!=='historical'||!historicalGeodataSelection){
@@ -1032,69 +841,7 @@ export default function App() {
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
-  function chooseHistoricalVersion(id:string){
-    const version=historyCatalog?.versions.find(v=>v.id===id);
-    if(!historyPreviewEnabled || !version)return;
-    if(!historicalDateInPeriod(version.period,
-      String(historyYear).padStart(4,'0')+'-07-01')){
-      // The year control uses a representative July date. Moving between
-      // versions must not silently display a polygon outside its interval.
-      const start=version.period.kind==='interval'?version.period.start:version.period.at;
-      const end=version.period.kind==='interval'?version.period.end:version.period.at;
-      if(start&&end){
-        const y=Math.max(1815,start.year);
-        const firstJuly=start.month&&start.month>7?y+1:y;
-        for(let attempt=firstJuly;attempt<=Math.min(end.year,1918);attempt++){
-          if(historicalDateInPeriod(version.period,
-              String(attempt).padStart(4,'0')+'-07-01')){
-            setHistoryYear(attempt);break;
-          }
-        }
-      }
-    }
-    setToolsOpen(false);setToolSection(null);
-    setHistorySelectedVersionId(id);
-    setHistoricalGeodataSelection(null);
-    setSelected(null);
-    setSelectedModule('historical');
-    setDetailPanelOpen(true);
-    if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
-    else if(window.innerWidth<1100)setModulePanelOpen(false);
-  }
-  function openHistoricalFromActual(versionId:string){
-    const selectedActual=selected;
-    const bridge=historyAdmissions?.bridges.find(b=>
-      b.actualId===selectedActual && b.historicalVersionId===versionId &&
-      b.evidenceStatus==='qualified' && b.kind==='territorial_overlap');
-    if(!bridge||!historyCatalog?.versions.some(v=>v.id===versionId))return;
-    setToolsOpen(false);setToolSection(null);
-    setHistoryPreviewEnabled(true);
-    setHistoryYear(1907);
-    setHistorySelectedVersionId(versionId);
-    setSelected(null);setSelectedModule('historical');setDetailPanelOpen(true);
-    setModule('historical');
-    if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
-    else {setModulePanelOpen(true);setDrawer(null);}
-  }
-  function openActualFromHistorical(actualId:string){
-    const allowed=historyAdmissions?.bridges.some(b=>
-      b.actualId===actualId&&b.historicalVersionId===historySelectedVersionId&&
-      b.kind==='territorial_overlap'&&b.evidenceStatus==='qualified');
-    if(!allowed||!nodes.has(actualId))return;
-    setModule('administrative');
-    choose(actualId);
-  }
-  function locateHistoricalVersion(){
-    if(!historicalSelectedVersion||!historyGeometries||!mapRef.current)return;
-    const feature=historyGeometries.features.find(f=>
-      f.properties?.geometryId===historicalSelectedVersion.geometryId);
-    if(!feature)return;
-    mapRef.current.fitBounds(bboxOfGeometry(feature.geometry),{
-      padding:window.innerWidth<=700?36:85,duration:650,maxZoom:9
-    });
-  }
   function chooseHistoricalGeodata(selection:HistoricalGeodataSelection){
-    setHistorySelectedVersionId(null);
     setHistoricalGeodataSelection(selection);
     setSelected(null);setSelectedModule('historical');setDetailPanelOpen(true);
     setToolsOpen(false);setToolSection(null);
@@ -1111,17 +858,6 @@ export default function App() {
     mapRef.current.fitBounds(bboxOfGeometry(historicalGeodataSelection.feature.geometry),{
       padding:window.innerWidth<=700?36:85,duration:650,maxZoom:9
     });
-  }
-  function setHistoricalReviewEnabled(enabled:boolean){
-    setHistoryPreviewEnabled(enabled);
-    if(!enabled){
-      setHistorySelectedVersionId(null);
-      if(selectedModule==='historical'&&!historicalGeodataSelection){
-        setSelectedModule(selected?'administrative':null);
-        setDetailPanelOpen(false);
-        if(drawer==='detail')setDrawer(null);
-      }
-    }
   }
   function chooseRelated(id:string){
     // Only card-internal navigation moves focus to a new card's heading.
@@ -1217,19 +953,18 @@ export default function App() {
   // selections owned by another module. The global reset restores RO + MD.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
   const localSelectionActive=module==='historical'?
-    (historyPreviewEnabled||historySelectedVersionId!==null||historicalGeodataSelection!==null):
+    historicalGeodataSelection!==null:
     moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
       adminFilters,statFilters,selected,selectedModule);
   function resetLocalModule(id:ModuleId){
     if(id==='historical'){
-      if(!historyPreviewEnabled && !historySelectedVersionId && !historicalGeodataSelection)return;
+      if(!historicalGeodataSelection)return;
       if(historicalGeodataSelection && selectedModule==='historical'){
         setSelectedModule(selected?'administrative':null);
         setDetailPanelOpen(false);
         if(drawer==='detail')setDrawer(null);
       }
       setHistoricalGeodataSelection(null);
-      setHistoricalReviewEnabled(false);
       setHistoryYear(1835);
       return;
     }
@@ -1258,8 +993,6 @@ export default function App() {
   }
   const resetAllSelections=()=>{
     setHistoricalGeodataSelection(null);
-    setHistoryPreviewEnabled(false);
-    setHistorySelectedVersionId(null);
     setHistoryYear(1835);
     navigationEpoch.current++; // Cancel stale asynchronous camera movements.
     setNavBusy(false);
@@ -1508,32 +1241,9 @@ export default function App() {
     </div>
   </section>;
 
-  const historicalPanel=<>
-    <HistoricalGeodataBrowser year={historyYear} lang={lang}
-      selectedId={historicalGeodataSelection?.entry.id||null}
-      onSelect={chooseHistoricalGeodata}/>
-    <HistoricalPilotTree
-    catalog={historyCatalog} qualification={historyQualifications}
-    admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
-    georefRegister={historyGeorefRegister} georefResults={historyGeorefResults}
-    year={historyYear} preview={historyPreviewEnabled}
-    selectedVersionId={historySelectedVersionId}
-    lang={lang} labels={t} loading={historyLoading||historyGeometryLoading} error={historyError}
-    onPreview={setHistoricalReviewEnabled}
-    onYear={year=>{
-      setHistoryYear(year);
-      const active=historicalSelectedVersion&&historicalDateInPeriod(
-        historicalSelectedVersion.period,String(year).padStart(4,'0')+'-07-01');
-      if(historicalSelectedVersion&&!active){
-        setHistorySelectedVersionId(null);
-        if(selectedModule==='historical'){
-          setSelectedModule(selected?'administrative':null);
-          setDetailPanelOpen(false);
-          if(drawer==='detail')setDrawer(null);
-        }
-      }
-    }} onSelect={chooseHistoricalVersion}/>
-  </>;
+  const historicalPanel=<HistoricalGeodataBrowser year={historyYear} onYear={setHistoryYear}
+    lang={lang} selectedId={historicalGeodataSelection?.entry.id||null}
+    onSelect={chooseHistoricalGeodata}/>;
 
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
@@ -1544,17 +1254,7 @@ export default function App() {
   const headerCoatSrc=currentNode?coatImageForEntity(currentNode,import.meta.env.BASE_URL):null;
   const historicalDetails=historicalSourceCardActive&&historicalGeodataSelection?
     <HistoricalGeodataEntityCard selection={historicalGeodataSelection}
-      lang={lang} onLocate={locateHistoricalGeodata}/> :
-    historicalPilotCardActive&&historyCatalog&&historyQualifications&&historySelectedVersionId?
-    <HistoricalPilotEntityCard
-      catalog={historyCatalog} qualification={historyQualifications}
-      admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
-      georefRegister={historyGeorefRegister} georefResults={historyGeorefResults}
-      versionId={historySelectedVersionId} year={historyYear}
-      lang={lang} labels={t} onSelect={chooseHistoricalVersion}
-      onMap={locateHistoricalVersion}
-      onSelectActual={openActualFromHistorical}
-      actualName={id=>nodes.get(id)?cardNameOf(nodes.get(id)!,lang):id}/> : null;
+      lang={lang} onLocate={locateHistoricalGeodata}/> : null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
@@ -1604,9 +1304,6 @@ export default function App() {
         {territorialContextNote(currentNode,lang)&&
           <p className="source-caveat">{territorialContextNote(currentNode,lang)}</p>}
       </EntityCardSection>
-      <ActualHistoryConnections admissions={historyAdmissions}
-        actualId={currentNode.id} lang={lang} labels={t}
-        onOpenHistorical={openHistoricalFromActual}/>
       {officialSymbols&&
       <EntityCardSection
         title={lang==='ro'?'Simboluri teritoriale':'Territorial symbols'} kind="symbols">
