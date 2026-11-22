@@ -1,0 +1,2084 @@
+{
+  "schema": "atlas-historical-geodata-source-import-v1",
+  "createdAt": "2026-11-22",
+  "status": "SOURCE_INTEGRATION_UNCERTIFIED",
+  "originalsPreserved": true,
+  "historicalPolygonSourcesCount": 12,
+  "sourcePolygonOccurrences": 63,
+  "uniqueGeometryAssets": 59,
+  "existingHistogisCatalog": "/data/historical/v1/catalog.json",
+  "existingHistogisGeometry": "/data/historical/v1/geometry.geojson",
+  "geometryRoot": "/data/historical/geodata-source/v1/",
+  "sourceDocuments": {
+    "ohm": "Geodata GIS/OHM-Boundaries",
+    "trans1860": "Geodata GIS/Transilvania 1860 (districte)",
+    "rights": "Original source geometry references preserved; verify OHM ODbL attribution/derivative share-alike and Transilvania 1860 reuse permissions independently"
+  },
+  "policies": {
+    "sameGeometryMultipleVersions": true,
+    "renderSourceOnly": true,
+    "legalCertificationRequiredForDisplay": false,
+    "legalCertificationNeverInferred": true,
+    "bridgesNotInferred": true,
+    "parentHierarchyNotInferred": true
+  },
+  "assets": [
+    {
+      "id": "source-geometry-0001",
+      "originalFile": "ohm/transilvania/OHM-r2829384.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0002",
+      "originalFile": "ohm/transilvania/OHM-r2878295.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0003",
+      "originalFile": "ohm/transilvania/OHM-r2747433.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0004",
+      "originalFile": "ohm/zarand/OHM-r2747305.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0005",
+      "originalFile": "ohm/judetul-iasi/OHM-r2943493.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0006",
+      "originalFile": "ohm/bucovina/OHM-r2746401.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0007",
+      "originalFile": "ohm/bucovina/OHM-r2684081.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0008",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 0,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0009",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 1,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0010",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 2,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0011",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 3,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0012",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 4,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0013",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 5,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0014",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 6,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0015",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 7,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0016",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 8,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0017",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 9,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0018",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 10,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0019",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 11,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0020",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 12,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0021",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 13,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0022",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 14,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0023",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 15,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0024",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 16,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0025",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 17,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0026",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 18,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0027",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 19,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0028",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 20,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0029",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 21,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0030",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 22,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0031",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 23,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0032",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 24,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0033",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 25,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0034",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 26,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0035",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 27,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0036",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 28,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0037",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 29,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0038",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 30,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0039",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 31,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0040",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 32,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0041",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 33,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0042",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 34,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0043",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 35,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0044",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 36,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0045",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 37,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0046",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 38,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0047",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 39,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0048",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 40,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0049",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 41,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0050",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 42,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0051",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 43,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0052",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 44,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0053",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 45,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0054",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 46,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0055",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 47,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0056",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 48,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0057",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 49,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0058",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 50,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0059",
+      "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 51,
+      "geometryType": "MultiPolygon"
+    }
+  ],
+  "versions": [
+    {
+      "id": "ohm:r2829384",
+      "sourceFile": "ohm/transilvania/OHM-r2829384.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0001",
+      "name": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2829384",
+      "period": {
+        "kind": "source_interval",
+        "start": "1851-05-12",
+        "end": "1867-05-29"
+      },
+      "sourceTags": {
+        "originalType": "grand_principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Siebenbürgen"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2829384"
+    },
+    {
+      "id": "ohm:r2878295",
+      "sourceFile": "ohm/transilvania/OHM-r2878295.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0002",
+      "name": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2878295",
+      "period": {
+        "kind": "source_interval",
+        "start": "1765",
+        "end": "1851-05-12"
+      },
+      "sourceTags": {
+        "originalType": "grand_principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Siebenbürgen"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2878295"
+    },
+    {
+      "id": "ohm:r2690518",
+      "sourceFile": "ohm/transilvania/OHM-r2690518.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0002",
+      "name": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2690518",
+      "period": {
+        "kind": "source_interval",
+        "start": "1732-12-31",
+        "end": "1765"
+      },
+      "sourceTags": {
+        "originalType": "principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Siebenbürgen"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2690518"
+    },
+    {
+      "id": "ohm:r2747433",
+      "sourceFile": "ohm/transilvania/OHM-r2747433.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0003",
+      "name": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2747433",
+      "period": {
+        "kind": "source_interval",
+        "start": "1711-04-29",
+        "end": "1732-12-31"
+      },
+      "sourceTags": {
+        "originalType": "principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Siebenbürgen"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2747433"
+    },
+    {
+      "id": "ohm:r2747305",
+      "sourceFile": "ohm/zarand/OHM-r2747305.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0004",
+      "name": {
+        "ro": "Comitatul Zărand",
+        "en": "Zaránd County"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2747305",
+      "period": {
+        "kind": "source_interval",
+        "start": "1860-12-27",
+        "end": "1876-06-19"
+      },
+      "sourceTags": {
+        "originalType": "county",
+        "region": null,
+        "circles": null,
+        "sourceName": "Zaránd vármegye"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2747305"
+    },
+    {
+      "id": "ohm:r2747306",
+      "sourceFile": "ohm/zarand/OHM-r2747306.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0004",
+      "name": {
+        "ro": "Comitatul Zărand",
+        "en": "Zaránd County"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2747306",
+      "period": {
+        "kind": "source_interval",
+        "start": "1744",
+        "end": "1851-05-12"
+      },
+      "sourceTags": {
+        "originalType": "county",
+        "region": null,
+        "circles": null,
+        "sourceName": "Zaránd vármegye"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2747306"
+    },
+    {
+      "id": "ohm:r2943493",
+      "sourceFile": "ohm/judetul-iasi/OHM-r2943493.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0005",
+      "name": {
+        "ro": "Județul Iași",
+        "en": "Iași County"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2943493",
+      "period": {
+        "kind": "source_interval",
+        "start": "1859",
+        "end": null
+      },
+      "sourceTags": {
+        "originalType": null,
+        "region": null,
+        "circles": null,
+        "sourceName": "Iași County"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2943493"
+    },
+    {
+      "id": "ohm:r2746401",
+      "sourceFile": "ohm/bucovina/OHM-r2746401.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0006",
+      "name": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2746401",
+      "period": {
+        "kind": "source_interval",
+        "start": "1878-07-13",
+        "end": "1918"
+      },
+      "sourceTags": {
+        "originalType": "duchy",
+        "region": null,
+        "circles": null,
+        "sourceName": "Bukowina"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2746401"
+    },
+    {
+      "id": "ohm:r2684081",
+      "sourceFile": "ohm/bucovina/OHM-r2684081.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0007",
+      "name": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2684081",
+      "period": {
+        "kind": "source_interval",
+        "start": "1861-02-26",
+        "end": "1878-07-13"
+      },
+      "sourceTags": {
+        "originalType": "duchy",
+        "region": null,
+        "circles": null,
+        "sourceName": "Bukowina"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2684081"
+    },
+    {
+      "id": "ohm:r2746379",
+      "sourceFile": "ohm/bucovina/OHM-r2746379.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0007",
+      "name": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2746379",
+      "period": {
+        "kind": "source_interval",
+        "start": "1849-03-04",
+        "end": "1860-08-06"
+      },
+      "sourceTags": {
+        "originalType": "duchy",
+        "region": null,
+        "circles": null,
+        "sourceName": "Bukowina"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2746379"
+    },
+    {
+      "id": "ohm:r2746380",
+      "sourceFile": "ohm/bucovina/OHM-r2746380.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0007",
+      "name": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2746380",
+      "period": {
+        "kind": "source_interval",
+        "start": "1774",
+        "end": "1786-08-06"
+      },
+      "sourceTags": {
+        "originalType": "military_district",
+        "region": null,
+        "circles": null,
+        "sourceName": "Bukowina"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2746380"
+    },
+    {
+      "id": "trans1860:0",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0008",
+      "name": {
+        "ro": "Solnocu de Mijloc",
+        "en": "Solnocu de Mijloc"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:0",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "comitat",
+        "region": "Părţile ungureşti",
+        "circles": null,
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:1",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 1,
+      "geometryAssetId": "source-geometry-0009",
+      "name": {
+        "ro": "Crasna",
+        "en": "Crasna"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:1",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "comitat",
+        "region": "Părţile ungureşti",
+        "circles": null,
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:2",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 2,
+      "geometryAssetId": "source-geometry-0010",
+      "name": {
+        "ro": "Cluj",
+        "en": "Cluj"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:2",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Sus",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:3",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 3,
+      "geometryAssetId": "source-geometry-0011",
+      "name": {
+        "ro": "Dăbâca",
+        "en": "Dăbâca"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:3",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Sus",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:4",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 4,
+      "geometryAssetId": "source-geometry-0012",
+      "name": {
+        "ro": "Zărand",
+        "en": "Zărand"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:4",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "comitat",
+        "region": "Părţile ungureşti",
+        "circles": null,
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:5",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 5,
+      "geometryAssetId": "source-geometry-0013",
+      "name": {
+        "ro": "Hunedoara",
+        "en": "Hunedoara"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:5",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de dincolo de Mureş",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:6",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 6,
+      "geometryAssetId": "source-geometry-0014",
+      "name": {
+        "ro": "Hunedoara",
+        "en": "Hunedoara"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:6",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de dincoace de Mureş",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:7",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 7,
+      "geometryAssetId": "source-geometry-0015",
+      "name": {
+        "ro": "Hunedoara",
+        "en": "Hunedoara"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:7",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "district",
+        "region": "Ardealul comitatelor",
+        "circles": "Haţeg",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:8",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 8,
+      "geometryAssetId": "source-geometry-0016",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:8",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Orăştie",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:9",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 9,
+      "geometryAssetId": "source-geometry-0017",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:9",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Sebeş",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:10",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 10,
+      "geometryAssetId": "source-geometry-0018",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:10",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Miercurea",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:11",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 11,
+      "geometryAssetId": "source-geometry-0019",
+      "name": {
+        "ro": "Făgăraş",
+        "en": "Făgăraş"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:11",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "district",
+        "region": "Ardealul comitatelor",
+        "circles": null,
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:12",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 12,
+      "geometryAssetId": "source-geometry-0020",
+      "name": {
+        "ro": "Trei Scaune",
+        "en": "Trei Scaune"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:12",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "parte",
+        "region": "Scaunele secuieşti",
+        "circles": "Sepsi",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:13",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 13,
+      "geometryAssetId": "source-geometry-0021",
+      "name": {
+        "ro": "Trei Scaune",
+        "en": "Trei Scaune"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:13",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "parte",
+        "region": "Scaunele secuieşti",
+        "circles": "Orbai",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:14",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 14,
+      "geometryAssetId": "source-geometry-0022",
+      "name": {
+        "ro": "Trei Scaune",
+        "en": "Trei Scaune"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:14",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "parte",
+        "region": "Scaunele secuieşti",
+        "circles": "Kezdi",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:15",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 15,
+      "geometryAssetId": "source-geometry-0023",
+      "name": {
+        "ro": "Ciuc",
+        "en": "Ciuc"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:15",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "filie",
+        "region": "Scaunele secuieşti",
+        "circles": "Caşin",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:16",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 16,
+      "geometryAssetId": "source-geometry-0024",
+      "name": {
+        "ro": "Ciuc",
+        "en": "Ciuc"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:16",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "parte",
+        "region": "Scaunele secuieşti",
+        "circles": "Ciucul de Jos",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:17",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 17,
+      "geometryAssetId": "source-geometry-0025",
+      "name": {
+        "ro": "Ciuc",
+        "en": "Ciuc"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:17",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "filie",
+        "region": "Scaunele secuieşti",
+        "circles": "Gheorghieni",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:18",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 18,
+      "geometryAssetId": "source-geometry-0026",
+      "name": {
+        "ro": "Ciuc",
+        "en": "Ciuc"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:18",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "parte",
+        "region": "Scaunele secuieşti",
+        "circles": "Ciucul de Sus",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:19",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 19,
+      "geometryAssetId": "source-geometry-0027",
+      "name": {
+        "ro": "Mureş",
+        "en": "Mureş"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:19",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Scaunele secuieşti",
+        "circles": "Cercul Târnava",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:20",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 20,
+      "geometryAssetId": "source-geometry-0028",
+      "name": {
+        "ro": "Dăbâca",
+        "en": "Dăbâca"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:20",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Jos",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:21",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 21,
+      "geometryAssetId": "source-geometry-0029",
+      "name": {
+        "ro": "Chioar",
+        "en": "Chioar"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:21",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "district",
+        "region": "Părţile ungureşti",
+        "circles": null,
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:22",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 22,
+      "geometryAssetId": "source-geometry-0030",
+      "name": {
+        "ro": "Solnocul Dinăuntru",
+        "en": "Solnocul Dinăuntru"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:22",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Sus",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:23",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 23,
+      "geometryAssetId": "source-geometry-0031",
+      "name": {
+        "ro": "Mureş",
+        "en": "Mureş"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:23",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Scaunele secuieşti",
+        "circles": "Cercul Niraj",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:24",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 24,
+      "geometryAssetId": "source-geometry-0032",
+      "name": {
+        "ro": "Mureş",
+        "en": "Mureş"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:24",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Scaunele secuieşti",
+        "circles": "Cercul Mureş",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:25",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 25,
+      "geometryAssetId": "source-geometry-0033",
+      "name": {
+        "ro": "Cluj",
+        "en": "Cluj"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:25",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Jos",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:26",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 26,
+      "geometryAssetId": "source-geometry-0034",
+      "name": {
+        "ro": "Solnocul Dinăuntru",
+        "en": "Solnocul Dinăuntru"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:26",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Jos",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:27",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 27,
+      "geometryAssetId": "source-geometry-0035",
+      "name": {
+        "ro": "Turda",
+        "en": "Turda"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:27",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Sus",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:28",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 28,
+      "geometryAssetId": "source-geometry-0036",
+      "name": {
+        "ro": "Arieş",
+        "en": "Arieş"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:28",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "scaun",
+        "region": "Scaunele secuieşti",
+        "circles": null,
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:29",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 29,
+      "geometryAssetId": "source-geometry-0037",
+      "name": {
+        "ro": "Alba de Jos",
+        "en": "Alba de Jos"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:29",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Jos",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:30",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 30,
+      "geometryAssetId": "source-geometry-0038",
+      "name": {
+        "ro": "Trei Scaune",
+        "en": "Trei Scaune"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:30",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "parte",
+        "region": "Scaunele secuieşti",
+        "circles": "Micloşoara",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:31",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 31,
+      "geometryAssetId": "source-geometry-0039",
+      "name": {
+        "ro": "Odorhei",
+        "en": "Odorhei"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:31",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "filie",
+        "region": "Scaunele secuieşti",
+        "circles": "Brăduţ",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:32",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 32,
+      "geometryAssetId": "source-geometry-0040",
+      "name": {
+        "ro": "Odorhei",
+        "en": "Odorhei"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:32",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele secuieşti",
+        "circles": "Odorhei",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:33",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 33,
+      "geometryAssetId": "source-geometry-0041",
+      "name": {
+        "ro": "Odorhei",
+        "en": "Odorhei"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:33",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "filie",
+        "region": "Scaunele secuieşti",
+        "circles": "Cristur",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:34",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 34,
+      "geometryAssetId": "source-geometry-0042",
+      "name": {
+        "ro": "Târnava",
+        "en": "Târnava"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:34",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Sus",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:35",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 35,
+      "geometryAssetId": "source-geometry-0043",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:35",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Cincu",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:36",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 36,
+      "geometryAssetId": "source-geometry-0044",
+      "name": {
+        "ro": "Turda",
+        "en": "Turda"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:36",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Jos",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:37",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 37,
+      "geometryAssetId": "source-geometry-0045",
+      "name": {
+        "ro": "Alba de Jos",
+        "en": "Alba de Jos"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:37",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Sus",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:38",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 38,
+      "geometryAssetId": "source-geometry-0046",
+      "name": {
+        "ro": "Bistriţa",
+        "en": "Bistriţa"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:38",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Scaunele săseşti",
+        "circles": "Cercul Rodna",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:39",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 39,
+      "geometryAssetId": "source-geometry-0047",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:39",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Mediaş",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:40",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 40,
+      "geometryAssetId": "source-geometry-0048",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:40",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Nocrich",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:41",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 41,
+      "geometryAssetId": "source-geometry-0049",
+      "name": {
+        "ro": "Târnava",
+        "en": "Târnava"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:41",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Ardealul comitatelor",
+        "circles": "Cercul de Jos",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:42",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 42,
+      "geometryAssetId": "source-geometry-0050",
+      "name": {
+        "ro": "Alba de Sus",
+        "en": "Alba de Sus"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:42",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "comitat",
+        "region": "Ardealul comitatelor",
+        "circles": null,
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:43",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 43,
+      "geometryAssetId": "source-geometry-0051",
+      "name": {
+        "ro": "Bistriţa",
+        "en": "Bistriţa"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:43",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "cerc",
+        "region": "Scaunele săseşti",
+        "circles": "Cercul Bistriţa",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:44",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 44,
+      "geometryAssetId": "source-geometry-0052",
+      "name": {
+        "ro": "Braşov",
+        "en": "Braşov"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:44",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "-",
+        "region": "Scaunele săseşti",
+        "circles": "Bârsa",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:45",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 45,
+      "geometryAssetId": "source-geometry-0053",
+      "name": {
+        "ro": "Braşov",
+        "en": "Braşov"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:45",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "domeniu",
+        "region": "Scaunele săseşti",
+        "circles": "Domeniile Branului şi ale oraşului Braşov",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:46",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 46,
+      "geometryAssetId": "source-geometry-0054",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:46",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "filie",
+        "region": "Scaunele săseşti",
+        "circles": "Tălmaciu",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:47",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 47,
+      "geometryAssetId": "source-geometry-0055",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:47",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "filie",
+        "region": "Scaunele săseşti",
+        "circles": "Sălişte",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:48",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 48,
+      "geometryAssetId": "source-geometry-0056",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:48",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Sibiu",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:49",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 49,
+      "geometryAssetId": "source-geometry-0057",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:49",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "domeniu",
+        "region": "Scaunele săseşti",
+        "circles": "Domeniul celor şapte juzi şi ale oraşelor",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:50",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 50,
+      "geometryAssetId": "source-geometry-0058",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:50",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Sighişoara",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    },
+    {
+      "id": "trans1860:51",
+      "sourceFile": "transilvania-1860/districte_transilvania_1860.geojson",
+      "featureIndex": 51,
+      "geometryAssetId": "source-geometry-0059",
+      "name": {
+        "ro": "Sibiu",
+        "en": "Sibiu"
+      },
+      "sourceCollection": "Transilvania 1860",
+      "sourceIdentity": "trans1860:feature:51",
+      "period": {
+        "kind": "snapshot",
+        "at": "1860-01-01",
+        "precision": "year-only"
+      },
+      "sourceTags": {
+        "originalType": "principal",
+        "region": "Scaunele săseşti",
+        "circles": "Rupea",
+        "sourceName": null
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": null
+    }
+  ]
+}
