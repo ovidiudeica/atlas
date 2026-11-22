@@ -654,3 +654,26 @@
 .history-overlap-sources a{color:#19563c;text-decoration:underline;
   text-underline-offset:2px;overflow-wrap:anywhere}
 .history-overlap-sources a:focus-visible{outline:3px solid #245d40;outline-offset:3px}
+
+
+/* HIST-MODULE.3b — distinguish legal 1851 snapshot from uncertified GIS tree. */
+.history-law-1851{margin:14px 0;padding:11px 12px;border:1px solid #8e9c93;
+  border-radius:8px;background:rgba(238,244,239,.7)}
+.history-law-1851>summary{font-size:.91rem;font-weight:700;line-height:1.5;
+  cursor:pointer;min-height:42px}
+.history-law-regions{display:grid;gap:8px;margin:10px 0}
+.history-law-region{border:1px solid #c2cec4;border-radius:6px;
+  background:white;padding:8px 10px}
+.history-law-region>summary{font-weight:650;cursor:pointer;min-height:38px}
+.history-law-region ul,.history-3b-issues{padding-left:20px;line-height:1.45;
+  margin:8px 0}
+.history-law-region li,.history-3b-issues li{margin:0 0 8px;overflow-wrap:anywhere}
+.history-law-region li small{font-size:.77rem;color:#59655c}
+.history-law-open{margin:6px 0;border:1px solid #68806c;background:#fff;
+ color:#1b4935;border-radius:6px;padding:7px 10px;min-height:44px;
+ cursor:pointer;text-align:left;font:inherit;max-width:100%}
+.history-law-open:focus-visible,.history-law-region>summary:focus-visible,
+.history-law-1851>summary:focus-visible{outline:3px solid #276249;outline-offset:3px}
+.history-3b-issues .note{font-size:.83rem}
+@media(max-width:700px){.history-law-1851{padding:9px}
+  .history-law-region{padding:8px}.history-law-open{width:100%}}
