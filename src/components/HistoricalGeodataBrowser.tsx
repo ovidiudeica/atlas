@@ -190,7 +190,7 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
    {index&&shownCount===0&&<p className="history-catalog-empty">{t.empty}</p>}
    <div className="history-geodata-groups" aria-label={headings.title}>
      {categories.map(category=><details key={category.id+(term?':search':':browse')}
-       className="history-geodata-category" defaultOpen={Boolean(term)||category.id==='regions'}>
+       className="history-geodata-category" open={Boolean(term)||category.id==='regions'}>
        <summary>
          <span className="history-category-name">{lang==='ro'?category.ro:category.en}</span>
          <span className="history-group-count">{category.count}</span>
@@ -203,7 +203,7 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
                {versionButton(entries[0],true)}
              </div>:
              <details key={group+(term?':search':':browse')}
-               className="history-geodata-entity" defaultOpen={Boolean(term)}>
+               className="history-geodata-entity" open={Boolean(term)}>
                <summary title={name}>
                  <span className="history-source-entity-name">{name}</span>
                  <span className="history-source-version-count">{entries.length}</span>
