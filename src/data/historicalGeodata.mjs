@@ -10,7 +10,7 @@ export const HISTORICAL_GEODATA_SCHEMA='atlas-geodata-historical-source-index-v1
 const present=x=>typeof x==='string'&&x.length>0;
 const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
 const validDate=x=>x===null||(present(x)&&/^\d{3,4}(-\d\d(-\d\d)?)?$/.test(x));
-const safeShard=x=>present(x)&&/^ohm-[a-z0-9-]+\.geojson$/.test(x);
+const safeShard=x=>present(x)&&/^(?:ohm-[a-z0-9-]+|huri-rassm-(?:raioane|contururi)|transilvania-1860-districte)\.geojson$/.test(x);
 
 export function validateGeodataHistoricalIndex(index){
  const errors=[],fail=(b,msg)=>{if(!b)errors.push(msg)};
@@ -38,8 +38,9 @@ export function validateGeodataHistoricalIndex(index){
  for(const entry of index.entries||[]){
    fail(present(entry.id)&&!ids.has(entry.id),'Unknown or duplicate historical source ID');
    ids.add(entry.id);
-   fail(entry.sourceFamily==='OHM'&&entry.status==='source_candidate_not_certified',
-     'Unverified OHM source promoted to legal boundary');
+   fail(['OHM','HURI','TRANSILVANIA_COLLECTION'].includes(entry.sourceFamily)&&
+       entry.status==='source_candidate_not_certified',
+     'Unverified Geodata source promoted to legal boundary');
    const canonical=duplicates.get(entry.id)||entry.id;
    fail(entry.geometryId==='geom:'+canonical&&entry.featureId===entry.id,
      'Geometry-use reference lost source identity or unverified sharing');
@@ -52,8 +53,19 @@ export function validateGeodataHistoricalIndex(index){
    fail((present(entry.sourceDriveFileId)||present(entry.sourcePath))&&
         present(entry.sourceFilename)&&present(entry.sourcePath)&&
         /^[a-f0-9]{64}$/.test(entry.sourceFileSha256||'') &&
-        Number.isSafeInteger(entry.sourceRelationId),
-     'Original source file, hash or OHM identifier incomplete');
+        (entry.sourceFamily==='OHM'?Number.isSafeInteger(entry.sourceRelationId):
+         Number.isSafeInteger(entry.sourceFeatureIndex)&&entry.sourceFeatureIndex>=0&&
+         present(entry.sourceDriveFileId)&&
+         entry.sourceRightsStatus==='HOLD_PENDING_REUSE_CONFIRMATION'),
+     'Original source file, hash, index or unverified reuse status incomplete');
+   if(entry.sourceFamily==='HURI')
+     fail(entry.sourcePeriod.kind==='snapshot'&&
+       entry.sourcePeriod.start===entry.sourcePeriod.end&&entry.sourcePeriod.start!==null,
+       'HURI source snapshot may not become an administrative time interval');
+   if(entry.sourceFamily==='TRANSILVANIA_COLLECTION')
+     fail(entry.sourcePeriod.kind==='undated'&&entry.sourcePeriod.start===null&&
+       entry.sourcePeriod.end===null,
+       'Unverified Transilvania 1860 label may not become an asserted historical date');
    fail(typeof entry.geometryValidSource==='boolean','Missing source spatial validity QA');
    fail(files.has(entry.geometryShard),'Geometry shard not in inventory');
    counts.set(entry.geometryShard,(counts.get(entry.geometryShard)||0)+1);
@@ -91,24 +103,32 @@ export function validateGeodataGeometryShard(shard,index,file){
  const errors=[];
  if(!object(shard)||shard.type!=='FeatureCollection'||!Array.isArray(shard.features))
    return {ok:false,errors:['Missing source FeatureCollection']};
- if(shard.atlasImport?.schema!=='atlas-geodata-ohm-import-v1'||
+ const isOhm=file.startsWith('ohm-');
+ if(isOhm&&(shard.atlasImport?.schema!=='atlas-geodata-ohm-import-v1'||
     shard.atlasImport?.originalCoordinateGeometryUnmodified!==true ||
-    shard.atlasImport?.importStatus!=='SOURCE_GEOMETRY_UNCERTIFIED')
+    shard.atlasImport?.importStatus!=='SOURCE_GEOMETRY_UNCERTIFIED'))
    errors.push('Source provenance or geometry immutability missing');
+ if(!isOhm&&!safeShard(file))
+   errors.push('Unexpected historical source shard');
  const indexed=index?.entries?.filter(e=>e.geometryShard===file)||[];
  if(shard.features.length!==indexed.length)errors.push('Source geometry count differs from index');
  const ids=new Set();
- for(const feature of shard.features){
-   const id=feature?.id;
-   if(!present(id)||ids.has(id))errors.push('Duplicate or missing OHM geometry ID');
+ for(let i=0;i<shard.features.length;i++){
+   const feature=shard.features[i];
+   const entity=isOhm?indexed.find(e=>e.featureId===feature?.id):
+     indexed.find(e=>e.sourceFeatureIndex===i);
+   const id=isOhm?feature?.id:entity?.id;
+   if(!present(id)||ids.has(id))errors.push('Duplicate or missing source geometry ID');
    ids.add(id);
-   const entity=indexed.find(e=>e.featureId===id);
-   if(!entity||feature?.properties?.ohm_relation_id!==entity.sourceRelationId)
+   if(!entity||(isOhm&&feature?.properties?.ohm_relation_id!==entity.sourceRelationId))
      errors.push('Feature identity disagrees with index');
    if(feature?.type!=='Feature'||!['Polygon','MultiPolygon'].includes(feature?.geometry?.type))
      errors.push('Historical source feature is not a polygon');
-   if(feature?.properties?.atlas_historical_boundary_certified!==false)
+   if(isOhm&&feature?.properties?.atlas_historical_boundary_certified!==false)
      errors.push('False source boundary certification');
+   if(!isOhm&&(entity?.sourceRightsStatus!=='HOLD_PENDING_REUSE_CONFIRMATION'||
+      entity?.status!=='source_candidate_not_certified'))
+     errors.push('Unreviewed supplemental source cannot be certified or distributed as admitted');
  }
  return {ok:errors.length===0,errors};
 }
@@ -142,8 +162,15 @@ export async function loadGeodataSourceFeature(index,entry,base='/'){
  }
  try {
    const data=await promise;
-   const feature=data.features.find(f=>f.id===entry.featureId);
+   const feature=entry.sourceFamily==='OHM'?
+     data.features.find(f=>f.id===entry.featureId):
+     data.features[entry.sourceFeatureIndex];
    if(!feature)throw Error('Historical source geometry ID is missing');
-   return feature;
+   if(entry.sourceFamily==='OHM')return feature;
+   // Only presentation metadata is added. The source geometry itself is never altered.
+   return {type:'Feature',id:entry.id,geometry:feature.geometry,properties:{
+     ...feature.properties,atlas_historical_boundary_certified:false,
+     atlas_historical_source_id:entry.id,atlas_historical_source_only:true
+   }};
  }catch(err){cached.delete(cacheKey);throw err}
 }
