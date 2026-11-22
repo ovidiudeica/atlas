@@ -3,9 +3,9 @@
   "createdAt": "2026-11-22",
   "status": "SOURCE_INTEGRATION_UNCERTIFIED",
   "originalsPreserved": true,
-  "historicalPolygonSourcesCount": 12,
-  "sourcePolygonOccurrences": 63,
-  "uniqueGeometryAssets": 59,
+  "historicalPolygonSourcesCount": 30,
+  "sourcePolygonOccurrences": 81,
+  "uniqueGeometryAssets": 77,
   "existingHistogisCatalog": "/data/historical/v1/catalog.json",
   "existingHistogisGeometry": "/data/historical/v1/geometry.geojson",
   "geometryRoot": "/data/historical/geodata-source/v1/",
@@ -376,6 +376,114 @@
       "originalFile": "transilvania-1860/districte_transilvania_1860.geojson",
       "featureIndex": 51,
       "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0060",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2877966.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0061",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2693255.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0062",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2693256.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0063",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2693257.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0064",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2693258.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0065",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2693259.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0066",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2693464.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0067",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2693260.geojson",
+      "featureIndex": 0,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0068",
+      "originalFile": "ohm/regatul-romaniei/OHM-r2692219.geojson",
+      "featureIndex": 0,
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "source-geometry-0069",
+      "originalFile": "ohm/principatul-moldovei/OHM-r2746689.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0070",
+      "originalFile": "ohm/principatul-moldovei/OHM-r2694163.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0071",
+      "originalFile": "ohm/tara-romaneasca/OHM-r2929117.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0072",
+      "originalFile": "ohm/tara-romaneasca/OHM-r2929116.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0073",
+      "originalFile": "ohm/tara-romaneasca/OHM-r2929115.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0074",
+      "originalFile": "ohm/tara-romaneasca/OHM-r2694164.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0075",
+      "originalFile": "ohm/rss-moldoveneasca/OHM-r2694777.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0076",
+      "originalFile": "ohm/principatele-unite/OHM-r2692354.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "source-geometry-0077",
+      "originalFile": "ohm/principatele-unite/OHM-r2746400.geojson",
+      "featureIndex": 0,
+      "geometryType": "Polygon"
     }
   ],
   "versions": [
@@ -2079,6 +2187,492 @@
       "boundaryCertification": "NOT_CERTIFIED",
       "administrativeParentStatus": "NOT_QUALIFIED",
       "sourceUrl": null
+    },
+    {
+      "id": "ohm:r2877966",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2877966.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0060",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2877966",
+      "period": {
+        "kind": "source_interval",
+        "start": "1945-03-09",
+        "end": "1947-12-30"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2877966"
+    },
+    {
+      "id": "ohm:r2693255",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2693255.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0061",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2693255",
+      "period": {
+        "kind": "source_interval",
+        "start": "1941-08-19",
+        "end": "1944-04-01"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2693255"
+    },
+    {
+      "id": "ohm:r2693256",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2693256.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0062",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2693256",
+      "period": {
+        "kind": "source_interval",
+        "start": "1940-09-07",
+        "end": "1941-08-19"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2693256"
+    },
+    {
+      "id": "ohm:r2693257",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2693257.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0063",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2693257",
+      "period": {
+        "kind": "source_interval",
+        "start": "1940-08-30",
+        "end": "1940-09-07"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2693257"
+    },
+    {
+      "id": "ohm:r2693258",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2693258.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0064",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2693258",
+      "period": {
+        "kind": "source_interval",
+        "start": "1940-06-28",
+        "end": "1940-08-30"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2693258"
+    },
+    {
+      "id": "ohm:r2693259",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2693259.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0065",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2693259",
+      "period": {
+        "kind": "source_interval",
+        "start": "1921",
+        "end": "1940-06-28"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2693259"
+    },
+    {
+      "id": "ohm:r2693464",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2693464.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0066",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2693464",
+      "period": {
+        "kind": "source_interval",
+        "start": "1919",
+        "end": "1921"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2693464"
+    },
+    {
+      "id": "ohm:r2693260",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2693260.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0067",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2693260",
+      "period": {
+        "kind": "source_interval",
+        "start": "1913-08-30",
+        "end": "1918"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2693260"
+    },
+    {
+      "id": "ohm:r2692219",
+      "sourceFile": "ohm/regatul-romaniei/OHM-r2692219.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0068",
+      "name": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2692219",
+      "period": {
+        "kind": "source_interval",
+        "start": "1881-03-14",
+        "end": "1913-08-29"
+      },
+      "sourceTags": {
+        "originalType": "kingdom",
+        "region": null,
+        "circles": null,
+        "sourceName": "Regatul României"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2692219"
+    },
+    {
+      "id": "ohm:r2746689",
+      "sourceFile": "ohm/principatul-moldovei/OHM-r2746689.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0069",
+      "name": {
+        "ro": "Principatul Moldovei",
+        "en": "Principality of Moldavia"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2746689",
+      "period": {
+        "kind": "source_interval",
+        "start": "1856-03-30",
+        "end": "1859-02-05"
+      },
+      "sourceTags": {
+        "originalType": "principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Țara Moldovei"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2746689"
+    },
+    {
+      "id": "ohm:r2694163",
+      "sourceFile": "ohm/principatul-moldovei/OHM-r2694163.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0070",
+      "name": {
+        "ro": "Principatul Moldovei",
+        "en": "Principality of Moldavia"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2694163",
+      "period": {
+        "kind": "source_interval",
+        "start": "1812-05-28",
+        "end": "1856-03-30"
+      },
+      "sourceTags": {
+        "originalType": "principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Țara Moldovei"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2694163"
+    },
+    {
+      "id": "ohm:r2929117",
+      "sourceFile": "ohm/tara-romaneasca/OHM-r2929117.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0071",
+      "name": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2929117",
+      "period": {
+        "kind": "source_interval",
+        "start": "1829-09-14",
+        "end": "1859-02-05"
+      },
+      "sourceTags": {
+        "originalType": "principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Wallachia"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2929117"
+    },
+    {
+      "id": "ohm:r2929116",
+      "sourceFile": "ohm/tara-romaneasca/OHM-r2929116.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0072",
+      "name": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2929116",
+      "period": {
+        "kind": "source_interval",
+        "start": "1538",
+        "end": "1829-09-14"
+      },
+      "sourceTags": {
+        "originalType": "principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Wallachia"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2929116"
+    },
+    {
+      "id": "ohm:r2929115",
+      "sourceFile": "ohm/tara-romaneasca/OHM-r2929115.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0073",
+      "name": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2929115",
+      "period": {
+        "kind": "source_interval",
+        "start": "1420",
+        "end": "1538"
+      },
+      "sourceTags": {
+        "originalType": "principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Wallachia"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2929115"
+    },
+    {
+      "id": "ohm:r2694164",
+      "sourceFile": "ohm/tara-romaneasca/OHM-r2694164.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0074",
+      "name": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2694164",
+      "period": {
+        "kind": "source_interval",
+        "start": "1417",
+        "end": "1420"
+      },
+      "sourceTags": {
+        "originalType": "principality",
+        "region": null,
+        "circles": null,
+        "sourceName": "Wallachia"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2694164"
+    },
+    {
+      "id": "ohm:r2694777",
+      "sourceFile": "ohm/rss-moldoveneasca/OHM-r2694777.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0075",
+      "name": {
+        "ro": "RSS Moldovenească",
+        "en": "Moldavian SSR"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2694777",
+      "period": {
+        "kind": "source_interval",
+        "start": "1944",
+        "end": "1991-05-22"
+      },
+      "sourceTags": {
+        "originalType": "soviet_socialist_republic",
+        "region": null,
+        "circles": null,
+        "sourceName": "Молдавская ССР"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2694777"
+    },
+    {
+      "id": "ohm:r2692354",
+      "sourceFile": "ohm/principatele-unite/OHM-r2692354.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0076",
+      "name": {
+        "ro": "Principatele Unite",
+        "en": "United Romanian Principalities"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2692354",
+      "period": {
+        "kind": "source_interval",
+        "start": "1878-07-13",
+        "end": "1881-03-14"
+      },
+      "sourceTags": {
+        "originalType": null,
+        "region": null,
+        "circles": null,
+        "sourceName": "United Romanian Principalities"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2692354"
+    },
+    {
+      "id": "ohm:r2746400",
+      "sourceFile": "ohm/principatele-unite/OHM-r2746400.geojson",
+      "featureIndex": 0,
+      "geometryAssetId": "source-geometry-0077",
+      "name": {
+        "ro": "Principatele Unite",
+        "en": "United Romanian Principalities"
+      },
+      "sourceCollection": "OHM",
+      "sourceIdentity": "ohm:r2746400",
+      "period": {
+        "kind": "source_interval",
+        "start": "1859-02-05",
+        "end": "1878-07-13"
+      },
+      "sourceTags": {
+        "originalType": null,
+        "region": null,
+        "circles": null,
+        "sourceName": "United Romanian Principalities"
+      },
+      "sourceStatus": "SOURCE_GEOMETRY_DISPLAY_ONLY",
+      "boundaryCertification": "NOT_CERTIFIED",
+      "administrativeParentStatus": "NOT_QUALIFIED",
+      "sourceUrl": "https://www.openhistoricalmap.org/relation/2746400"
     }
   ],
   "sourceFiles": [
@@ -2115,6 +2709,132 @@
       "driveFileId": "1FIOwYfKZ9rgqRDnIyHamWY328oRysxYC",
       "originalSha256": "d34f61e819a3ac7492266d3f3b6893cfd6eacff4627fc4d277cd84898da62dd2",
       "originalFileUrl": "https://drive.google.com/file/d/1FIOwYfKZ9rgqRDnIyHamWY328oRysxYC/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/principatele-unite/OHM-r2692354.geojson",
+      "driveFileId": "1fwrzICHXNXXMGlbKKIGD69mqShkLE628",
+      "originalSha256": "673e46f4ff8b26b8784c389a405ac21a2cde40c4ed8a4f8fc0a244ae44d2f3cb",
+      "originalFileUrl": "https://drive.google.com/file/d/1fwrzICHXNXXMGlbKKIGD69mqShkLE628/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/principatele-unite/OHM-r2746400.geojson",
+      "driveFileId": "1cEHPKSUYxsqZ4ZztGVfQOhXIggkZ7U6B",
+      "originalSha256": "fef9e3a501179a5df682f6200060b6390811f606d885c7920b4c9da4c4170b65",
+      "originalFileUrl": "https://drive.google.com/file/d/1cEHPKSUYxsqZ4ZztGVfQOhXIggkZ7U6B/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/principatul-moldovei/OHM-r2694163.geojson",
+      "driveFileId": "1i65LWWk0bhEfeV4udGDLFCe-6e9qwGYf",
+      "originalSha256": "b83fba66b3f496e23f560820e8b89d92b7822c5918ae9f3f2ce3ee2f2d3fa422",
+      "originalFileUrl": "https://drive.google.com/file/d/1i65LWWk0bhEfeV4udGDLFCe-6e9qwGYf/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/principatul-moldovei/OHM-r2746689.geojson",
+      "driveFileId": "19ayRNP-0XgKYE37qJCEsDcBNnHYHpF7q",
+      "originalSha256": "fb83a07ee7e878b4d79687d601c5702e8725653aed38df1ce9c4e8262ac1021d",
+      "originalFileUrl": "https://drive.google.com/file/d/19ayRNP-0XgKYE37qJCEsDcBNnHYHpF7q/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2692219.geojson",
+      "driveFileId": "1fvb-u-R_-JLJVrGFBc-RQ2dpYhGxQSlf",
+      "originalSha256": "52359382cbe49bb1c3628a2d68bd98cab7f20b68730dc3e7eb36db2751813c25",
+      "originalFileUrl": "https://drive.google.com/file/d/1fvb-u-R_-JLJVrGFBc-RQ2dpYhGxQSlf/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2693255.geojson",
+      "driveFileId": "179Kp-GISATS5JNw4XkFfcdx3rN2T482d",
+      "originalSha256": "c42eaf558cfd65691a42f329f7c5703214e1c687af77e251cb903d498e6f74fd",
+      "originalFileUrl": "https://drive.google.com/file/d/179Kp-GISATS5JNw4XkFfcdx3rN2T482d/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2693256.geojson",
+      "driveFileId": "1TTcvGKcAqM73P6KOmkdjJVunrSjsjT2a",
+      "originalSha256": "32730cd0e38a99ec2ddbd6d79bfc92f132310def1d41687773d88934cb19621b",
+      "originalFileUrl": "https://drive.google.com/file/d/1TTcvGKcAqM73P6KOmkdjJVunrSjsjT2a/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2693257.geojson",
+      "driveFileId": "1Pi6vtEqoI5DD1QF8CuqGGeDXjj230rxc",
+      "originalSha256": "2a4f1487156a453ae0b51282e1b7c03e929150677a0e7078a1dbbea6ec30f261",
+      "originalFileUrl": "https://drive.google.com/file/d/1Pi6vtEqoI5DD1QF8CuqGGeDXjj230rxc/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2693258.geojson",
+      "driveFileId": "1f5EahmaJ8hSIdwOTZbRKVtKVZuA15rCq",
+      "originalSha256": "e191bc49074c242bb68ba1a88d51fea81d31502ba8664af2e798e31153448e55",
+      "originalFileUrl": "https://drive.google.com/file/d/1f5EahmaJ8hSIdwOTZbRKVtKVZuA15rCq/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2693259.geojson",
+      "driveFileId": "1YeFcGRimTE3XEL0lB29-aJPC4ZyLmLPw",
+      "originalSha256": "af8585102a79968fe631edecfd5d9bb3fd8b108f382b95aee4f7b16a3fc604a9",
+      "originalFileUrl": "https://drive.google.com/file/d/1YeFcGRimTE3XEL0lB29-aJPC4ZyLmLPw/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2693260.geojson",
+      "driveFileId": "1qw9Xrwg1yVYC6DhapgBkwdw0vdUh5XE-",
+      "originalSha256": "b827ce0bd6d32fedb47195d42f69cd10711f185e9c0cce2c3b6c4844b9eca04f",
+      "originalFileUrl": "https://drive.google.com/file/d/1qw9Xrwg1yVYC6DhapgBkwdw0vdUh5XE-/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2693464.geojson",
+      "driveFileId": "1PY-QOvkVOpW2jz1KHnwUbzJ_7sfzTuB6",
+      "originalSha256": "37acb7d868b5bf4d5d8fd8dac81656beedfe6c8f4ec895ab7fa5c7b1fc1c624b",
+      "originalFileUrl": "https://drive.google.com/file/d/1PY-QOvkVOpW2jz1KHnwUbzJ_7sfzTuB6/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/regatul-romaniei/OHM-r2877966.geojson",
+      "driveFileId": "1wwcTHHAjbtYpfnMvQLg6YSy7V5JrCr7p",
+      "originalSha256": "27a59314c82eb2ce13d613d9499d58796a63d97046de7aa4163562a75760ec6b",
+      "originalFileUrl": "https://drive.google.com/file/d/1wwcTHHAjbtYpfnMvQLg6YSy7V5JrCr7p/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/rss-moldoveneasca/OHM-r2694777.geojson",
+      "driveFileId": "1D_DPbHV2YjzcNjE3Fgn8rea1VutfEdXU",
+      "originalSha256": "218bc557369611356593c1085b9f3db86782d9b34eb683e2248c70b640c5aa85",
+      "originalFileUrl": "https://drive.google.com/file/d/1D_DPbHV2YjzcNjE3Fgn8rea1VutfEdXU/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/tara-romaneasca/OHM-r2694164.geojson",
+      "driveFileId": "1dL5rJwvRJW4Gt85TWteaAQuKiAyUZv_4",
+      "originalSha256": "266f4b4981a57e752cbf70091555b60d49bd4a541cfe7320b3f7456aee451660",
+      "originalFileUrl": "https://drive.google.com/file/d/1dL5rJwvRJW4Gt85TWteaAQuKiAyUZv_4/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/tara-romaneasca/OHM-r2929115.geojson",
+      "driveFileId": "1__OfGE2K8qZoytfDfbHsgQ3cy9cSZ6PZ",
+      "originalSha256": "76e8dbf05f91557f9f496a612a01139578c5162141103fb562869755482abf94",
+      "originalFileUrl": "https://drive.google.com/file/d/1__OfGE2K8qZoytfDfbHsgQ3cy9cSZ6PZ/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/tara-romaneasca/OHM-r2929116.geojson",
+      "driveFileId": "1bTKMkEEet2TseJr1KD6Mm98zTnQTGfcF",
+      "originalSha256": "45f831c66016475f1dd77b561d72e90d155935ee4a6a0ad51aa649690ad61028",
+      "originalFileUrl": "https://drive.google.com/file/d/1bTKMkEEet2TseJr1KD6Mm98zTnQTGfcF/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/tara-romaneasca/OHM-r2929117.geojson",
+      "driveFileId": "19AFsuleMk7Sb6a4dWGdLaHspHHKgfrby",
+      "originalSha256": "b9775d4c2dd22ae905022feff799b426c717561689808434a61a05341ec6ae10",
+      "originalFileUrl": "https://drive.google.com/file/d/19AFsuleMk7Sb6a4dWGdLaHspHHKgfrby/view",
       "sourceShaBasis": "OHM source manifest"
     },
     {
