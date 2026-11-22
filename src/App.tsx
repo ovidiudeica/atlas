@@ -562,7 +562,7 @@ export default function App() {
   },[catalog,historyCatalog,historyError]);
 
   useEffect(()=>{
-    if(module!=='historical'||!modulePanelOpen||!historyCatalog||
+    if(!(module==='historical'&&(modulePanelOpen||historyPreviewEnabled))||!historyCatalog||
       historyGeometries||historyGeometryLoading||historyError)return;
     let active=true;
     setHistoryGeometryLoading(true);
@@ -573,7 +573,7 @@ export default function App() {
     }).catch(e=>{if(active)setHistoryError(String(e));})
       .finally(()=>{if(active)setHistoryGeometryLoading(false);});
     return ()=>{active=false;};
-  },[module,modulePanelOpen,historyCatalog,historyGeometries,historyError]);
+  },[module,modulePanelOpen,historyPreviewEnabled,historyCatalog,historyGeometries,historyError]);
 
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
   useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
@@ -961,6 +961,29 @@ export default function App() {
     setDetailPanelOpen(true);
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
     else if(window.innerWidth<1100)setModulePanelOpen(false);
+  }
+  function openHistoricalFromActual(versionId:string){
+    const selectedActual=selected;
+    const bridge=historyAdmissions?.bridges.find(b=>
+      b.actualId===selectedActual && b.historicalVersionId===versionId &&
+      b.evidenceStatus==='qualified' && b.kind==='territorial_overlap');
+    if(!bridge||!historyCatalog?.versions.some(v=>v.id===versionId))return;
+    setToolsOpen(false);setToolSection(null);
+    setHistoryPreviewEnabled(true);
+    setHistoryYear(1907);
+    setHistorySelectedVersionId(versionId);
+    setSelected(null);setSelectedModule('historical');setDetailPanelOpen(true);
+    setModule('historical');
+    if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+    else {setModulePanelOpen(true);setDrawer(null);}
+  }
+  function openActualFromHistorical(actualId:string){
+    const allowed=historyAdmissions?.bridges.some(b=>
+      b.actualId===actualId&&b.historicalVersionId===historySelectedVersionId&&
+      b.kind==='territorial_overlap'&&b.evidenceStatus==='qualified');
+    if(!allowed||!nodes.has(actualId))return;
+    setModule('administrative');
+    choose(actualId);
   }
   function locateHistoricalVersion(){
     if(!historicalSelectedVersion||!historyGeometries||!mapRef.current)return;
@@ -1362,9 +1385,10 @@ export default function App() {
 
   const historicalPanel=<HistoricalPilotTree
     catalog={historyCatalog} qualification={historyQualifications}
+    admissions={historyAdmissions}
     year={historyYear} preview={historyPreviewEnabled}
     selectedVersionId={historySelectedVersionId}
-    lang={lang} labels={t} loading={historyLoading} error={historyError}
+    lang={lang} labels={t} loading={historyLoading||historyGeometryLoading} error={historyError}
     onPreview={setHistoricalReviewEnabled}
     onYear={year=>{
       setHistoryYear(year);
@@ -1390,9 +1414,12 @@ export default function App() {
   const historicalDetails=historicalCardActive&&historyCatalog&&historyQualifications&&historySelectedVersionId?
     <HistoricalPilotEntityCard
       catalog={historyCatalog} qualification={historyQualifications}
+      admissions={historyAdmissions}
       versionId={historySelectedVersionId} year={historyYear}
       lang={lang} labels={t} onSelect={chooseHistoricalVersion}
-      onMap={locateHistoricalVersion}/> : null;
+      onMap={locateHistoricalVersion}
+      onSelectActual={openActualFromHistorical}
+      actualName={id=>nodes.get(id)?cardNameOf(nodes.get(id)!,lang):id}/> : null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
@@ -1442,6 +1469,9 @@ export default function App() {
         {territorialContextNote(currentNode,lang)&&
           <p className="source-caveat">{territorialContextNote(currentNode,lang)}</p>}
       </EntityCardSection>
+      <ActualHistoryConnections admissions={historyAdmissions}
+        actualId={currentNode.id} lang={lang} labels={t}
+        onOpenHistorical={openHistoricalFromActual}/>
       {officialSymbols&&
       <EntityCardSection
         title={lang==='ro'?'Simboluri teritoriale':'Territorial symbols'} kind="symbols">
