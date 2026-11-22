@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type SetStateAction } from 'react';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap } from 'maplibre-gl';
-import type { FeatureCollection } from 'geojson';
+import type { Feature, FeatureCollection } from 'geojson';
 import { getCountryGeoJSON } from './data/borders';
 import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
 import { HistoricalPilotTree, HistoricalPilotEntityCard } from './components/HistoricalPilot';
+import { HistoricalGeodataBrowser } from './components/HistoricalGeodataBrowser';
+import { geodataPeriodLabel, type GeodataSourceVersion } from './data/historicalGeodataSource.mjs';
 import {
   loadHistoricalBoundaryReview, type HistoricalBoundaryReview
 } from './data/historicalBoundaryReview.mjs';
@@ -471,6 +473,7 @@ export default function App() {
   const [historyPreviewEnabled,setHistoryPreviewEnabled] = useState(false);
   const [historyYear,setHistoryYear] = useState(1835);
   const [historySelectedVersionId,setHistorySelectedVersionId] = useState<string|null>(null);
+  const [geodataSelected,setGeodataSelected] = useState<{entry:GeodataSourceVersion;feature:Feature}|null>(null);
   const [historyLoading,setHistoryLoading] = useState(false);
   const [historyGeometryLoading,setHistoryGeometryLoading] = useState(false);
   const [historyError,setHistoryError] = useState<string|null>(null);
@@ -557,10 +560,11 @@ export default function App() {
   const currentNode=selected?nodes.get(selected) || null:null;
   const historicalSelectedVersion = historyCatalog?.versions.find(
     v=>v.id===historySelectedVersionId) || null;
+  const geodataCardActive=Boolean(selectedModule==='historical' && geodataSelected);
   const historicalCardActive = Boolean(historyPreviewEnabled &&
     selectedModule==='historical' && historicalSelectedVersion &&
     historyCatalog && historyQualifications);
-  const shownCardName = historicalCardActive&&historicalSelectedVersion ?
+  const shownCardName = geodataCardActive&&geodataSelected ? geodataSelected.entry.name[lang] : historicalCardActive&&historicalSelectedVersion ?
     (historicalSelectedVersion.name[lang]||historicalSelectedVersion.name.ro) :
     currentNode ? cardNameOf(currentNode,lang) : null;
   const cardRoles=currentNode?entityCardRoles(currentNode):null;
@@ -831,6 +835,12 @@ export default function App() {
       instance.addLayer({id:'historical-pilot-outline',type:'line',source:'historical-pilot',
         paint:{'line-color':'#bd781e','line-width':3,'line-opacity':0.92,
           'line-dasharray':[3,2]}});
+      instance.addSource('historical-geodata',{type:'geojson',data:EMPTY_FEATURES});
+      instance.addLayer({id:'historical-geodata-fill',type:'fill',source:'historical-geodata',
+        paint:{'fill-color':'#487db4','fill-opacity':0.12}});
+      instance.addLayer({id:'historical-geodata-outline',type:'line',source:'historical-geodata',
+        paint:{'line-color':'#37628a','line-width':2.4,'line-opacity':0.95,
+          'line-dasharray':[2,2]}});
       instance.on('mousemove','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         instance.setFilter('entity-hover',['==',['get','atlasId'],typeof id==='string'?id:'__none__']);
@@ -842,7 +852,7 @@ export default function App() {
         // The historical source outline has selection priority over the
         // overlapping ACTUAL fill, while both remain separate data layers.
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill']}).length)return;
+          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -853,7 +863,7 @@ export default function App() {
       for(const boundaryLayer of ['entity-outline','entity-stat-outline'])
         instance.on('click',boundaryLayer,event=>{
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill']}).length)return;
+          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -877,7 +887,7 @@ export default function App() {
       }
       instance.on('click','country-fill',event=>{
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill']}).length)return;
+          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
         const country=event.features?.[0]?.properties?.id;
         if(country==='ro'||country==='md'){
           setSelected(country==='ro'?'osm-r90689':'osm-r58974');
@@ -997,6 +1007,12 @@ export default function App() {
     }]});
   },[ready,historyPreviewEnabled,historyGeometries,historicalSelectedVersion,historyYear]);
 
+  useEffect(()=>{
+    if(!ready||!mapRef.current)return;
+    const source=mapRef.current.getSource('historical-geodata') as GeoJSONSource|undefined;
+    if(!source)return;
+    source.setData(geodataSelected?{type:'FeatureCollection',features:[geodataSelected.feature]}:EMPTY_FEATURES);
+  },[ready,geodataSelected]);
   const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
     const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
@@ -1009,6 +1025,7 @@ export default function App() {
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
   function chooseHistoricalVersion(id:string){
+    setGeodataSelected(null);
     const version=historyCatalog?.versions.find(v=>v.id===id);
     if(!historyPreviewEnabled || !version)return;
     if(!historicalDateInPeriod(version.period,
@@ -1173,12 +1190,13 @@ export default function App() {
   // selections owned by another module. The global reset restores RO + MD.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
   const localSelectionActive=module==='historical'?
-    (historyPreviewEnabled||historySelectedVersionId!==null):
+    (historyPreviewEnabled||historySelectedVersionId!==null||geodataSelected!==null):
     moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
       adminFilters,statFilters,selected,selectedModule);
   function resetLocalModule(id:ModuleId){
     if(id==='historical'){
-      if(!historyPreviewEnabled && !historySelectedVersionId)return;
+      if(!historyPreviewEnabled && !historySelectedVersionId && !geodataSelected)return;
+      setGeodataSelected(null);
       setHistoricalReviewEnabled(false);
       setHistoryYear(1835);
       return;
@@ -1207,6 +1225,7 @@ export default function App() {
     }
   }
   const resetAllSelections=()=>{
+    setGeodataSelected(null);
     setHistoryPreviewEnabled(false);
     setHistorySelectedVersionId(null);
     setHistoryYear(1835);
@@ -1457,7 +1476,7 @@ export default function App() {
     </div>
   </section>;
 
-  const historicalPanel=<HistoricalPilotTree
+  const historicalPanel=<><HistoricalPilotTree
     catalog={historyCatalog} qualification={historyQualifications}
     admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
     georefRegister={historyGeorefRegister} georefResults={historyGeorefResults}
@@ -1477,8 +1496,29 @@ export default function App() {
           if(drawer==='detail')setDrawer(null);
         }
       }
-    }} onSelect={chooseHistoricalVersion}/>;
-
+    }} onSelect={chooseHistoricalVersion}/>
+    <HistoricalGeodataBrowser lang={lang} year={historyYear}
+      selectedId={geodataSelected?.entry.id||null}
+      onClear={()=>{
+        setGeodataSelected(null);
+        if(selectedModule==='historical'&&!historySelectedVersionId){
+          setSelectedModule(null);setDetailPanelOpen(false);
+        }
+      }}
+      onSelect={(entry,feature)=>{
+        setGeodataSelected({entry,feature});
+        setHistorySelectedVersionId(null);
+        setSelectedModule('historical');
+        setDetailPanelOpen(true);
+        setModule('historical');
+        if(mapRef.current)mapRef.current.fitBounds(bboxOfGeometry(feature.geometry),{
+          padding:window.innerWidth<=700?36:85,duration:650,maxZoom:9
+        });
+        if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+        else if(window.innerWidth<1100)setModulePanelOpen(false);
+      }}/>
+    </>;
+  
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
   // SIM-R4.1: the heading shows the same coat as the tree, with a neutral
@@ -1496,6 +1536,33 @@ export default function App() {
       onMap={locateHistoricalVersion}
       onSelectActual={openActualFromHistorical}
       actualName={id=>nodes.get(id)?cardNameOf(nodes.get(id)!,lang):id}/> : null;
+  const geodataDetails=geodataCardActive&&geodataSelected?
+    <section className="detail-content history-entity-detail">
+      <div className="entity-card" key={geodataSelected.entry.id}>
+        <header className="entity-title"><span className="flag flag--coat" aria-hidden="true">◇</span>
+          <div><h3 tabIndex={-1}>{geodataSelected.entry.name[lang]}</h3>
+            <small>{geodataPeriodLabel(geodataSelected.entry,lang)}</small></div>
+        </header>
+        <p className="source-caveat">{lang==='ro'?
+          'Geometrie de sursă — hotarul și părintele administrativ nu sunt certificate.':
+          'Source geometry — boundary and administrative parent are not certified.'}</p>
+        <EntityCardSection title={lang==='ro'?'Identitate':'Identity'} kind="identity">
+          <dl className="metadata">
+            <dt>ID</dt><dd>{geodataSelected.entry.id}</dd>
+            <dt>{lang==='ro'?'Tip original':'Original type'}</dt><dd>{geodataSelected.entry.sourceTags.originalType||'—'}</dd>
+            <dt>{lang==='ro'?'Perioadă sursă':'Source period'}</dt><dd>{geodataPeriodLabel(geodataSelected.entry,lang)}</dd>
+            <dt>{lang==='ro'?'Geometrie':'Geometry'}</dt><dd>{geodataSelected.entry.geometryAssetId}</dd>
+          </dl>
+        </EntityCardSection>
+        <EntityCardSection title={lang==='ro'?'Surse':'Sources'} kind="cartographic">
+          <p>{geodataSelected.entry.sourceCollection} · {geodataSelected.entry.sourceFile}</p>
+          {geodataSelected.entry.sourceUrl&&<a href={geodataSelected.entry.sourceUrl}
+            target="_blank" rel="noopener noreferrer">{lang==='ro'?'Înregistrare originală':'Original source record'}</a>}
+          <p className="note">{lang==='ro'?'Datele sursei nu implică nici succesiune instituțională, nici identitate juridică.':
+            'Source geometry does not establish institutional succession or legal identity.'}</p>
+        </EntityCardSection>
+      </div>
+    </section>:null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
@@ -1989,7 +2056,7 @@ export default function App() {
         </div>
         {details}
       </aside>}
-      {historicalCardActive&&detailPanelOpen&&<aside className="detail-sidebar"
+      {(historicalCardActive||geodataCardActive)&&detailPanelOpen&&<aside className="detail-sidebar"
         aria-label={t.details+': '+(shownCardName||'')}>
         <h2 className="sr-only">{t.details}</h2>
         <div className="pane-toolbar">
@@ -1997,7 +2064,7 @@ export default function App() {
           <button type="button" className="pane-close" aria-label={t.close} title={t.close}
             onClick={closeDetailPanel}>×</button>
         </div>
-        {historicalDetails}
+        {geodataDetails||historicalDetails}
       </aside>}
     </div>
     {drawer&&<div className="drawer-screen" role="presentation" onClick={()=>{
@@ -2005,7 +2072,7 @@ export default function App() {
     }}>
       <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true"
         aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
-          historicalCardActive?t.details+': '+(shownCardName||''):
+          (historicalCardActive||geodataCardActive)?t.details+': '+(shownCardName||''):
           t.details+(currentNode?': '+cardNameOf(currentNode,lang):'')}
         onClick={e=>e.stopPropagation()}>
         <h2 className="sr-only">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
@@ -2029,7 +2096,7 @@ export default function App() {
         {drawer==='tree'?(module==='administrative'?treePanel:module==='historical'?historicalPanel:
           <section className="tree-content">
             <p className="planned-module-description">{t.planned}</p>
-          </section>):historicalCardActive?historicalDetails:details}
+          </section>):geodataCardActive?geodataDetails:historicalCardActive?historicalDetails:details}
       </div>
     </div>}
   </div>;
