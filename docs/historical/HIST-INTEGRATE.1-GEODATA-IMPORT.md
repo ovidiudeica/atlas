@@ -1,45 +1,50 @@
-# HIST-INTEGRATE.1 — integrarea sistematică a poligoanelor-sursă Geodata GIS în Istoric
+# HIST-OHM-CORE.1 — catalog istoric OHM, după retragerea HistoGIS
 
-> **Actualizare HIST-INTEGRATE.1b (22 noiembrie 2026):** în aceeași ramură a fost integrat și lotul de 99 reprezentări RASSM/HURI (91 raioane + 8 contururi, snapshoturi 1927–1937) și 52 poligoane din colecția Transilvania cu **datare neconfirmată**. Indexul comun are acum **290 utilizări-sursă, 212 geometrii logice exacte, 78 reutilizări, 32 sharduri**. Raportul de mai jos descrie stadiul inițial OHM de 139 fișiere, nu totalul curent. Detalii în [HIST-INTEGRATE.1-SUPPLEMENT.md](HIST-INTEGRATE.1-SUPPLEMENT.md). Drepturile surselor noi sunt în HOLD; nu s-a făcut merge/deploy și nu s-au certificat hotare.
+**Prioritate decisă:** OHM → județele și plășile din 1930 → abia la final HistoGIS pentru completarea lacunelor. Nicio georeferențiere nouă a hărților din 1835 și 1841 nu este inclusă în această etapă.
 
-**Stadiu:** sursele OHM importate complet într-un branch de dezvoltare; raport închis doar pentru colecția OHM-Boundaries, **NU** pentru întreg Geodata GIS. **Fără merge/deploy** înainte de CI, drepturi și QA.
+**Stadiu:** implementat în ramura draft `feat/hist-import-geodata-gis-1` / PR #143, **neintegrat, nepublicat și fără certificare juridică a hotarelor**. Actualizarea catalogului web se produce numai după verificarea CI și integrarea protejată.
 
-## Proveniență / date
+## Setul de date activ — OpenHistoricalMap
 
-Sursa directă este `G:\My Drive\Geodata GIS\OHM-Boundaries`, copie sincronizată a directorului Google Drive autentic. **139 fișiere OHM-r*.geojson** au fost citite integral, fără a modifica sau suprascrie vreun fișier în Drive; 139 de versiuni administrative cartografice ale sursei au fost înregistrate în `public/data/historical/v1/geodata/index.json`, cu 29 de fragmente GeoJSON încărcate la cerere.
+Sursa este colecția existentă `Geodata GIS/OHM-Boundaries` din Drive, fără mutarea sau modificarea fișierelor originale.
 
-- **139** versiuni istorice-sursă distincte: **43** principale/regionale, **19** județe istorice, **77** comitate istorice.
-- **125** active geometrice logice distincte după egalitate **exactă a secvenței de coordonate**, **14** versiuni folosesc un contur deja prezent; toate originale sunt păstrate în fragmentele-sursă.
-- **139/139** poligoane `Polygon` sau `MultiPolygon` topologic valide (Shapely), fără `buffer`, `make_valid`, simplificare, interpolare sau reproiectare a datelor-sursă publicate.
-- **13** versiuni au cel puțin un capăt temporal incomplet. Ele se pot consulta în listă, însă nu se extind automat la un an fără dovadă.
-- Fiecare intrare păstrează `id`/ID OHM, nume RO/EN când există, intervalul exact de sursă, avertismentele `fixme`, cale originală relativă, SHA-256 al fișierului și sursa din Drive când ID-ul este verificat. Lipsa ID-ului Drive individual nu este acoperită cu un URL inventat; se păstrează calea sincronizată și relația OHM.
-- Un `sourceGroup` indică **folderul editorial al sursei**, **nu** o subordonare administrativă verificată.
+| Lot OHM | Versiuni-sursă |
+|---|---:|
+| State și regiuni istorice | 43 |
+| Județe istorice | 19 |
+| Comitate istorice | 77 |
+| **Total** | **139** |
 
-Importatorul reproducibil este `scripts/historical/import_geodata_gis_sources.py`; registrul QA: `docs/historical/import/HIST-INTEGRATE.1-OHM-IMPORT-QA.json`. Datele `ACTUAL` și `public/data/phase4` sunt neschimbate. Geometriile HistoGIS deja prezente în catalogul-pilot (53 active, 54 versiuni) nu sunt replicate ca OHM.
+- **139** apariții de geometrii-sursă și versiuni OHM, păstrate separat ca relații OHM distincte;
+- **125** active geometrice logice distincte după egalitate **exactă** a coordonatelor, cu **14** reutilizări, fără rescrierea coordonatelor;
+- **29** fișiere GeoJSON fragmentate pentru încărcare la selecție, nu într-un singur payload mare;
+- **139/139** geometrii topologic valide conform QA efectuat la import; acest rezultat este tehnic, nu o atestare a hotarelor istorice;
+- **13** versiuni au cel puțin o limită temporală nedocumentată; ea nu se completează arbitrar;
+- **76** grupuri de proveniență/editoriale distincte sunt proiectate ca **entități provizorii de lucru** (nu identități instituționale certificate), cu **139** versiuni-sursă și **139** utilizări de geometrie.
 
-## Interfață
+Identitatea relației OHM, datarea declarată, denumirile originale, tipul sursei, ID-ul și calea sursei, SHA-256 și etichetele `fixme` se păstrează în `public/data/historical/v1/geodata/index.json`. Geometria se încarcă numai la selectare. Legăturile de subordonare, continuitatea instituțională și corespondențele ACTUAL ↔ Istoric rămân necertificate și nu sunt generate din structura folderelor.
 
-Modulul Istoric dispune în continuare de arborele HistoGIS și de cardul comun al Entității. Acest import adaugă **catalogul de versiuni sursă OHM** cu filtrare după nume, grup și perioadă, geometrie on-demand în sursa **`historical-geodata`** MapLibre și card Entitate cu proveniență, interval original și avertisment de necertificare. Nu există amestec cu `historical-pilot` sau catalogul ACTUAL. Resetul local Istoric elimină selecția sursei istorice, resetul global revine la România + Moldova. Anul este o opțiune de filtrare, nu o atribuire retrospectivă.
+**Drepturile de reutilizare și validarea istorică independentă trebuie verificate înainte de a trata geometria drept hotar admis.** Vizualizarea sursei nu reprezintă certificare juridică.
 
-Modulul nu a inventat din foldere relațiile părinte–copil și nu a certificat hotare juridice. Următoarea etapă separată trebuie să unească registrele provenienței cu `HistoricalEntity`/`HistoricalVersion`/`TemporalHierarchy` după probe documentare.
+## Clean-up executat în ramura draft
 
-## Stadiul celorlalte colecții
+- Retrasă geometria HistoGIS `public/data/historical/v1/geometry.geojson` din pachetul web; pilotul HistoGIS și legăturile sale din interfața principală au fost dezactivate/eliminate.
+- Retrași cei trei payload-uri suplimentare RASSM/HURI și Transilvania introduse prematur în aceeași ramură; ei nu se reintroduc odată cu OHM.
+- Indexul și validatoarele active acceptă numai familia `OHM`; testele de regresie principale și smoke-testul browser sunt actualizate pentru OHM.
+- Metadatele documentare istorice din etapele HIST-MODULE precedente rămân disponibile pentru audit, dar **nu sunt un catalog activ și nu mai au un pachet geometric HistoGIS publicat prin această ramură**.
+- **Fișierele-sursă HistoGIS din Geodata GIS rămân intacte** pentru completarea lacunelor după finalizarea lotului OHM și a județelor/plășilor 1930.
+- `ACTUAL`, `public/data/phase4` și geometria administrativă în producție nu sunt modificate.
 
-| Sursă | Inventar observat / stadiu | Decizie de import |
-|---|---|---|
-| HistoGIS v9.0 | arhivă 41,5 MB; pilot existent 53 geometrii / 54 versiuni; export Europa 2.617 entități, 101 MB, CC BY 4.0 | **Pilot integrat anterior**; exportul Europa și colecțiile istorice din 1512/1834/1860 rămân de importat, fără dublarea celor 54 versiuni |
-| Transilvania 1860 | 52 poligoane înregistrate în catalogul-sursă, dar perioada rămâne nulă; posibil Mosaic 1910 | **Integrat ca sursă fără datare**; HOLD pentru drepturi și cronologie |
-| ICR Maps | 20 KMZ sursă; provin din multiple hărți My Maps | inventar sursă disponibil, selecție și drepturi per strat încă nefinalizate |
-| RASSM | 99 reprezentări HURI din două fișiere GeoJSON integrate; celelalte 1.396 fișiere de lucru necesită selecție și audit | **Snapshoturile HURI sunt surse candidate**; restul nu se importă automat drept hotare canonice |
-| DARMC | trei arhive ZIP, două servicii regionale exportate și registru QA | de integrat după citirea licențelor și a atributelor cronologice originale |
-| Mosaic | 11 arhive-sursă și README cu condiții noncomerciale pentru unele resurse | în așteptarea drepturilor de redistribuire |
-| Russian Empire 1897 | arhivă ZIP, README și documentație | inventar disponibil; geometriile trebuie examinate înainte de adoptarea versiunilor |
-| GeoSpatial / Natural Earth / HydroSHEDS / Marine Regions / AIGA | colecții prezente în Geodata GIS | statutul de sursă istorică și temporalitatea trebuie determinate per set; nu toate sunt poligoane administrative istorice |
+## Etapa următoare: județe și plăși 1930
 
-Criteriu de completitudine: vom numi `Geodata GIS complet importat` **numai după** auditul tuturor colecțiilor, cu registru `importat / aceeași geometrie deja prezentă / licență HOLD / neistoric / invalid / cercetare suplimentară` și referință verificabilă.
+1. Stabilizarea lotului OHM: verificarea relațiilor/versiunilor și a interfeței RO/EN, QA CI și emiterea verdictului de integrare.
+2. Inventarierea completă a geometriilor județelor din 1930, cu proveniență, limită de perioadă și raport de acoperire.
+3. Integrarea plășilor din 1930 sub județele documentate, numai cu relații părinte–copil și delimitări confirmate din surse.
+4. Reconcilierea suprapunerilor OHM ↔ 1930 **fără a suprascrie sursa originală**.
+5. Completarea lacunelor cu HistoGIS **la final**, după verificarea corespondențelor și drepturilor.
 
-## Control de acceptare
+Un județ OHM cu o dată care intersectează 1930 nu este automat un județ 1930 certificat, iar poligonul județului nu este o geometrie de plasă.
 
-`node --test tests/hist-integrate-geodata.test.mjs`: 4/4 verificări reușite pentru registrul OHM complet, identificatori, geometrii și fail-closed. `npm run build`: TypeScript + Vite reușite în Windows. Testele globale includ arhive istorice de hashuri SHA-256 care sunt sensibile la checkout `core.autocrlf=true`; rezultatele locale negative de reproducibilitate pentru acele dosare sunt tratate distinct, nu remediate prin editarea datelor ACTUAL sau a registrelor de simboluri.
+## Reproducibilitate
 
-**Niciun poligon sursă nu primește `boundaryCertified=true` în acest import.**
+Importator: `scripts/historical/import_geodata_gis_sources.py`; registrul original: `docs/historical/import/HIST-INTEGRATE.1-OHM-IMPORT-QA.json`; proiecția sursei: `src/data/historicalGeodataTemporal.mjs`; teste: `tests/hist-integrate-geodata.test.mjs` și `tests/hist-geodata-temporal-projection.test.mjs`. Vechea integrare HistoGIS poate fi consultată în documentația HIST-MODULE și în istoricul Git, dar nu reprezintă setul activ OHM.
