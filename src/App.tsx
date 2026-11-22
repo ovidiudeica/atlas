@@ -673,6 +673,14 @@ export default function App() {
           'line-opacity':0.94,'line-dasharray':[3,2]}});
       instance.addLayer({id:'entity-hover',type:'line',source:'entities',paint:{'line-color':'#1d7e65','line-width':3},filter:['==',['get','atlasId'],'__none__']});
       instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
+      // Independent historical source; never inserted into the certified
+      // administrative feature collection, style or geometry shard cache.
+      instance.addSource('historical-pilot',{type:'geojson',data:EMPTY_FEATURES});
+      instance.addLayer({id:'historical-pilot-fill',type:'fill',source:'historical-pilot',
+        paint:{'fill-color':'#d0953e','fill-opacity':0.09}});
+      instance.addLayer({id:'historical-pilot-outline',type:'line',source:'historical-pilot',
+        paint:{'line-color':'#bd781e','line-width':3,'line-opacity':0.92,
+          'line-dasharray':[3,2]}});
       instance.on('mousemove','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         instance.setFilter('entity-hover',['==',['get','atlasId'],typeof id==='string'?id:'__none__']);
@@ -697,6 +705,19 @@ export default function App() {
           else if(window.innerWidth<1100)setModulePanelOpen(false);
         }
       });
+      for(const layer of ['historical-pilot-fill','historical-pilot-outline']){
+        instance.on('click',layer,event=>{
+          const versionId=event.features?.[0]?.properties?.versionId;
+          if(typeof versionId!=='string')return;
+          setHistorySelectedVersionId(versionId);
+          setSelectedModule('historical');
+          setDetailPanelOpen(true);
+          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+          else if(window.innerWidth<1100)setModulePanelOpen(false);
+        });
+        instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
+        instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
+      }
       instance.on('click','country-fill',event=>{
         const country=event.features?.[0]?.properties?.id;
         if(country==='ro'||country==='md'){
@@ -799,6 +820,24 @@ export default function App() {
     m.setPaintProperty('backdrop','background-color',basemap==='dark'?'#14241e':'#f1f5ef');
   },[basemap,ready]);
 
+  useEffect(()=>{
+    if(!ready||!mapRef.current)return;
+    const source=mapRef.current.getSource('historical-pilot') as GeoJSONSource|undefined;
+    if(!source)return;
+    if(!historyPreviewEnabled || !historicalSelectedVersion || !historyGeometries ||
+        !historicalDateInPeriod(historicalSelectedVersion.period,
+          String(historyYear).padStart(4,'0')+'-07-01')){
+      source.setData(EMPTY_FEATURES);
+      return;
+    }
+    const feature=historyGeometries.features.find(
+      f=>f.properties?.geometryId===historicalSelectedVersion.geometryId);
+    if(!feature){source.setData(EMPTY_FEATURES);return;}
+    source.setData({type:'FeatureCollection',features:[{
+      ...feature,properties:{...feature.properties,versionId:historicalSelectedVersion.id}
+    }]});
+  },[ready,historyPreviewEnabled,historyGeometries,historicalSelectedVersion,historyYear]);
+
   const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
     const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
@@ -810,6 +849,35 @@ export default function App() {
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
+  function chooseHistoricalVersion(id:string){
+    if(!historyPreviewEnabled || !historyCatalog?.versions.some(v=>v.id===id))return;
+    setToolsOpen(false);setToolSection(null);
+    setHistorySelectedVersionId(id);
+    setSelectedModule('historical');
+    setDetailPanelOpen(true);
+    if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+    else if(window.innerWidth<1100)setModulePanelOpen(false);
+  }
+  function locateHistoricalVersion(){
+    if(!historicalSelectedVersion||!historyGeometries||!mapRef.current)return;
+    const feature=historyGeometries.features.find(f=>
+      f.properties?.geometryId===historicalSelectedVersion.geometryId);
+    if(!feature)return;
+    mapRef.current.fitBounds(bboxOfGeometry(feature.geometry),{
+      padding:window.innerWidth<=700?36:85,duration:650,maxZoom:9
+    });
+  }
+  function setHistoricalReviewEnabled(enabled:boolean){
+    setHistoryPreviewEnabled(enabled);
+    if(!enabled){
+      setHistorySelectedVersionId(null);
+      if(selectedModule==='historical'){
+        setSelectedModule(selected?'administrative':null);
+        setDetailPanelOpen(false);
+        if(drawer==='detail')setDrawer(null);
+      }
+    }
+  }
   function chooseRelated(id:string){
     // Only card-internal navigation moves focus to a new card's heading.
     pendingCardNavigationRef.current=id;
