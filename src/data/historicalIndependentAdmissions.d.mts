@@ -23,6 +23,7 @@ export interface MembershipAttestation {
 export interface SourceOverlapBridge extends HistoricalAdminLink {
  kind:'territorial_overlap';evidenceStatus:'qualified';
  referenceScope:'verified_intersection_between_source_polygons_only';
+ historicalSourceName:string;historicalSourceType:string;
  institutionalContinuityCertified:false;administrativeSuccessionCertified:false;
  identicalBoundaryCertified:false;legalBoundaryCertified:false;
  geometryComparison:NonNullable<HistoricalAdminLink['geometryComparison']>;
