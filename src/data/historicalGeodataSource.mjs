@@ -39,9 +39,12 @@ export function geodataVersionAttestedAtYear(v,year){
  if(p.kind!=='source_interval')return false;
  const start=p.start==null?null:Number(String(p.start).slice(0,4));
  const end=p.end==null?null:Number(String(p.end).slice(0,4));
- // An unbounded source range is not treated as a historically qualified
- // interval; the year filter is a SOURCE-tag selector only.
- return (start===null||year>=start)&&(end===null||year<=end);
+ // Unknown ends are not silently extended to infinity: a solitary
+ // source date is an attestation for that year, not a validated interval.
+ if(start===null&&end===null)return false;
+ if(start===null)return year===end;
+ if(end===null)return year===start;
+ return year>=start&&year<=end;
 }
 export function geodataPeriodLabel(v,lang='ro'){
  const p=v.period;
