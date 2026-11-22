@@ -117,7 +117,14 @@ const WORDS = {
     roleRegistryParent: 'Register parent code', cardStatParent: 'Statistical parent',
     cardOpenParent: 'Open parent entity',
     cardChildren: 'Subterritories in this tree view', cardChildrenCount: 'subterritories',
-    cardMoreChildren: 'Show next 12', cardOpenChild: 'Open child entity'
+    cardMoreChildren: 'Show next 12', cardOpenChild: 'Open child entity',
+    geometryUsesTitle: 'Documented uses of this geometry',
+    geometryUsesNote: 'This outline is stored once. Its source-documented uses are listed chronologically; candidates are not legally certified.',
+    geometryUseStatus: 'Evidence status', geometryUseNoSource: 'Not specified',
+    geometryEvidenceQualified: 'Source-qualified',
+    geometryEvidenceCandidate: 'Candidate, not yet admitted',
+    geometryEvidenceReview: 'Under review',
+    referenceDatePrefix: 'Attested in '
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -192,7 +199,14 @@ const WORDS = {
     roleRegistryParent: 'Cod părinte din registru', cardStatParent: 'Părinte statistic',
     cardOpenParent: 'Deschide entitatea părinte',
     cardChildren: 'Subunități în acest arbore', cardChildrenCount: 'subunități',
-    cardMoreChildren: 'Afișează încă 12', cardOpenChild: 'Deschide subunitatea'
+    cardMoreChildren: 'Afișează încă 12', cardOpenChild: 'Deschide subunitatea',
+    geometryUsesTitle: 'Utilizări documentate ale acestei geometrii',
+    geometryUsesNote: 'Conturul este stocat o singură dată. Utilizările atestate de surse sunt listate cronologic; candidații nu sunt hotare juridic certificate.',
+    geometryUseStatus: 'Statut probatoriu', geometryUseNoSource: 'Nespecificată',
+    geometryEvidenceQualified: 'Calificat după sursă',
+    geometryEvidenceCandidate: 'Candidat, încă neadmis',
+    geometryEvidenceReview: 'În verificare',
+    referenceDatePrefix: 'Atestat în '
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];

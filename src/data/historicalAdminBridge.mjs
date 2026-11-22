@@ -29,8 +29,9 @@ function validDate(date) {
   if (date.month !== undefined && (!Number.isInteger(date.month) || date.month < 1 || date.month > 12)) return false;
   if (date.day !== undefined) {
     if (date.month === undefined || !Number.isInteger(date.day) || date.day < 1) return false;
-    const days = new Date(Date.UTC(2000, date.month, 0)).getUTCDate();
-    if (date.day > days) return false; // calendar precision remains source-specific
+    const leap = date.year % 4 === 0 && (date.year % 100 !== 0 || date.year % 400 === 0);
+    const days = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][date.month - 1];
+    if (date.day > days) return false; // Proleptic Gregorian date validation.
   }
   return true;
 }
@@ -64,10 +65,11 @@ function formattedYear(date, lang) {
  * or day. Exact dates remain in the underlying record.
  * Unknown bounds stay visibly unknown; a snapshot is only an attestation.
  */
-export function formatHistoricalPeriod(period, lang = 'ro') {
+export function formatHistoricalPeriod(period, lang = 'ro', options = null) {
   if (!validateHistoricalPeriod(period)) throw new Error('Invalid historical period');
   if (period.kind === 'snapshot')
-    return (lang === 'en' ? 'Attested in ' : 'Atestat în ') + formattedYear(period.at, lang);
+    return (typeof options?.snapshotPrefix === 'string' ? options.snapshotPrefix :
+      (lang === 'en' ? 'Attested in ' : 'Atestat în ')) + formattedYear(period.at, lang);
   return (period.start === null ? '?' : formattedYear(period.start, lang)) + '–' +
     (period.end === null ? '?' : formattedYear(period.end, lang));
 }
