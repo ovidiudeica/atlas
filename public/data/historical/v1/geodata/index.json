@@ -3,22 +3,38 @@
   "asOf": "2026-11-22",
   "status": "INTEGRATED_SOURCE_CANDIDATES_NOT_LEGAL_BOUNDARIES",
   "sourceDomain": "Geodata GIS / OHM-Boundaries",
-  "collection": "OHM historical principal entities (first tranche)",
+  "collection": "OHM principal historical entities and regional source polygons (first import tranche)",
   "notCanonicalHierarchy": true,
   "notLegalBoundaryCertification": true,
   "coordinateReferenceSystem": "EPSG:4326",
   "geometryDuplicates": [
     [
+      "ohm-r2746379",
+      "ohm-r2746380"
+    ],
+    [
+      "ohm-r2746379",
+      "ohm-r2684081"
+    ],
+    [
+      "ohm-r2746379",
+      "ohm-r2746744"
+    ],
+    [
+      "ohm-r2746379",
+      "ohm-r2746745"
+    ],
+    [
+      "ohm-r2747435",
+      "ohm-r2747434"
+    ],
+    [
+      "ohm-r2960607",
+      "ohm-r2960608"
+    ],
+    [
       "ohm-r2878295",
       "ohm-r2690518"
-    ],
-    [
-      "ohm-r2684081",
-      "ohm-r2746379"
-    ],
-    [
-      "ohm-r2684081",
-      "ohm-r2746380"
     ]
   ],
   "shards": [
@@ -44,6 +60,18 @@
     },
     {
       "file": "ohm-regatul-romaniei-b.geojson",
+      "count": 4
+    },
+    {
+      "file": "ohm-historical-regions.geojson",
+      "count": 6
+    },
+    {
+      "file": "ohm-banat-chioar.geojson",
+      "count": 6
+    },
+    {
+      "file": "ohm-banat-bucovina.geojson",
       "count": 4
     }
   ],
@@ -121,7 +149,7 @@
         "notes": null
       },
       "sourceType": "principality",
-      "geometryId": "geom:ohm-r2690518",
+      "geometryId": "geom:ohm-r2878295",
       "featureId": "ohm-r2690518",
       "geometryShard": "ohm-transilvania.geojson",
       "sourceDriveFileId": "1ffFcGLq0ZJaMiWV8Y_2yH0OscFQbMlt3",
@@ -205,7 +233,7 @@
         "notes": null
       },
       "sourceType": "duchy",
-      "geometryId": "geom:ohm-r2684081",
+      "geometryId": "geom:ohm-r2746379",
       "featureId": "ohm-r2684081",
       "geometryShard": "ohm-bucovina.geojson",
       "sourceDriveFileId": "11tvCn6zklSW_E9Xe4crMU9jETQK3svvw",
@@ -260,7 +288,7 @@
         "notes": null
       },
       "sourceType": "military_district",
-      "geometryId": "geom:ohm-r2746380",
+      "geometryId": "geom:ohm-r2746379",
       "featureId": "ohm-r2746380",
       "geometryShard": "ohm-bucovina.geojson",
       "sourceDriveFileId": "1_G02NqivGT8uiTVAPnugv8Lo9xfI3dpa",
@@ -794,7 +822,441 @@
       "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
       "status": "source_candidate_not_certified",
       "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2960367",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regiunea Cernăuți",
+      "displayName": {
+        "ro": "Regiunea Cernăuți",
+        "en": "Chernivtsi Oblast"
+      },
+      "sourcePeriod": {
+        "start": "1940-08-07",
+        "end": "1991-08-24",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "oblast",
+      "geometryId": "geom:ohm-r2960367",
+      "featureId": "ohm-r2960367",
+      "geometryShard": "ohm-historical-regions.geojson",
+      "sourceDriveFileId": "1GjNA-rhwZzHLioTtcuZppemElTCoSJpU",
+      "sourceFilename": "OHM-r2960367.geojson",
+      "sourceRelationId": 2960367,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2859183",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regiunea Transcarpatia",
+      "displayName": {
+        "ro": "Regiunea Transcarpatia",
+        "en": "Zakarpattia Oblast"
+      },
+      "sourcePeriod": {
+        "start": "1946-01-22",
+        "end": "1991-08-24",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2859183",
+      "featureId": "ohm-r2859183",
+      "geometryShard": "ohm-historical-regions.geojson",
+      "sourceDriveFileId": "1N8us4rJQGOmOseBMr2G97dBb0MY22Ss7",
+      "sourceFilename": "OHM-r2859183.geojson",
+      "sourceRelationId": 2859183,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2857483",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transcarpatia",
+      "displayName": {
+        "ro": "Transcarpatia",
+        "en": "Subcarpathian Rus'"
+      },
+      "sourcePeriod": {
+        "start": "1920-08-10",
+        "end": "1938-11-02",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2857483",
+      "featureId": "ohm-r2857483",
+      "geometryShard": "ohm-historical-regions.geojson",
+      "sourceDriveFileId": "1ZwPbJzO2cJJJ6rTSQwuKLwh6ZPFAmpez",
+      "sourceFilename": "OHM-r2857483.geojson",
+      "sourceRelationId": 2857483,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: check and improve western boundary",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2960607",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regiunea Ismail",
+      "displayName": {
+        "ro": "Regiunea Ismail",
+        "en": "Izmail Oblast"
+      },
+      "sourcePeriod": {
+        "start": "1940-12-07",
+        "end": "1954-02-15",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "oblast",
+      "geometryId": "geom:ohm-r2960607",
+      "featureId": "ohm-r2960607",
+      "geometryShard": "ohm-historical-regions.geojson",
+      "sourceDriveFileId": "1TGVEpE3xeJK0ijx0M2wczlNDLc51kniT",
+      "sourceFilename": "OHM-r2960607.geojson",
+      "sourceRelationId": 2960607,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2960608",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regiunea Akkerman",
+      "displayName": {
+        "ro": "Аккерманская область",
+        "en": "Akkerman Oblast"
+      },
+      "sourcePeriod": {
+        "start": "1940-08-07",
+        "end": "1940-12-07",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "oblast",
+      "geometryId": "geom:ohm-r2960607",
+      "featureId": "ohm-r2960608",
+      "geometryShard": "ohm-historical-regions.geojson",
+      "sourceDriveFileId": "1fJvhEiWu6lASHke72zIrZ9UedV339zRC",
+      "sourceFilename": "OHM-r2960608.geojson",
+      "sourceRelationId": 2960608,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2694777",
+      "sourceFamily": "OHM",
+      "sourceGroup": "RSS Moldovenească",
+      "displayName": {
+        "ro": "RSS Moldovenească",
+        "en": "Moldavian SSR"
+      },
+      "sourcePeriod": {
+        "start": "1944",
+        "end": "1991-05-22",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "soviet_socialist_republic",
+      "geometryId": "geom:ohm-r2694777",
+      "featureId": "ohm-r2694777",
+      "geometryShard": "ohm-historical-regions.geojson",
+      "sourceDriveFileId": "1D_DPbHV2YjzcNjE3Fgn8rea1VutfEdXU",
+      "sourceFilename": "OHM-r2694777.geojson",
+      "sourceRelationId": 2694777,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2694215",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Voivodina Sârbească și Banatul Timișan",
+      "displayName": {
+        "ro": "Voivodina Sârbească și Banatul Timișan",
+        "en": "Voivodeship of Serbia and Banat of Temes"
+      },
+      "sourcePeriod": {
+        "start": "1849-11-18",
+        "end": "1860-12-27",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "3",
+      "geometryId": "geom:ohm-r2694215",
+      "featureId": "ohm-r2694215",
+      "geometryShard": "ohm-banat-chioar.geojson",
+      "sourceDriveFileId": "109luWsgg86TGSBUBgubzTOZpHhcxkG7S",
+      "sourceFilename": "OHM-r2694215.geojson",
+      "sourceRelationId": 2694215,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2747434",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Chioarului",
+      "displayName": {
+        "ro": "Țara Chioarului",
+        "en": "Kővár District"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1876",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2747435",
+      "featureId": "ohm-r2747434",
+      "geometryShard": "ohm-banat-chioar.geojson",
+      "sourceDriveFileId": "1jb7iSmXxfPqyiIqbbq-LH_AM_2ulJsT3",
+      "sourceFilename": "OHM-r2747434.geojson",
+      "sourceRelationId": 2747434,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: Border is a quite rough; check dates",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747435",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Chioarului",
+      "displayName": {
+        "ro": "Țara Chioarului",
+        "en": "Kővár District"
+      },
+      "sourcePeriod": {
+        "start": "1650",
+        "end": "1851-05-12",
+        "sourceOnly": true,
+        "notes": "Existed from 1549 as a subdivision of Közép-Szolnok."
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2747435",
+      "featureId": "ohm-r2747435",
+      "geometryShard": "ohm-banat-chioar.geojson",
+      "sourceDriveFileId": "1keKhTKW9MA6r44OJwUzekBBb8NhMf0kZ",
+      "sourceFilename": "OHM-r2747435.geojson",
+      "sourceRelationId": 2747435,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: Border is a quite rough; check start_date",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746841",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Frontiera Militară a Banatului",
+      "displayName": {
+        "ro": "Frontiera Militară a Banatului",
+        "en": "Banat Military Frontier"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1873-08-08",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2746841",
+      "featureId": "ohm-r2746841",
+      "geometryShard": "ohm-banat-chioar.geojson",
+      "sourceDriveFileId": "18gAYunbyYKWpuIhwCSjMWCSf-uXp2O8d",
+      "sourceFilename": "OHM-r2746841.geojson",
+      "sourceRelationId": 2746841,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746840",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Frontiera Militară a Banatului",
+      "displayName": {
+        "ro": "Granița militară bănățeană",
+        "en": "Banat Military Frontier"
+      },
+      "sourcePeriod": {
+        "start": "1849-11-18",
+        "end": "1860-12-27",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2746840",
+      "featureId": "ohm-r2746840",
+      "geometryShard": "ohm-banat-chioar.geojson",
+      "sourceDriveFileId": "1IN08u8elyD3M5MKWxpdQNFLqjISDqqOe",
+      "sourceFilename": "OHM-r2746840.geojson",
+      "sourceRelationId": 2746840,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746839",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Frontiera Militară a Banatului",
+      "displayName": {
+        "ro": "Frontiera Militară a Banatului",
+        "en": "Banat Military Frontier"
+      },
+      "sourcePeriod": {
+        "start": "1751",
+        "end": "1849-11-18",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2746839",
+      "featureId": "ohm-r2746839",
+      "geometryShard": "ohm-banat-chioar.geojson",
+      "sourceDriveFileId": "1B0qEcqMx6LI1WrwkMqZZ1ilK-5EbsQNK",
+      "sourceFilename": "OHM-r2746839.geojson",
+      "sourceRelationId": 2746839,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747562",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Banatul Timișoarei",
+      "displayName": {
+        "ro": "Banatul Timișoarei",
+        "en": "Banat of Temeswar"
+      },
+      "sourcePeriod": {
+        "start": "1751",
+        "end": "1778-06-06",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "banate",
+      "geometryId": "geom:ohm-r2747562",
+      "featureId": "ohm-r2747562",
+      "geometryShard": "ohm-banat-bucovina.geojson",
+      "sourceDriveFileId": "17ezShScNYiSFn1ohO3Ay6CTuFfwve1Pt",
+      "sourceFilename": "OHM-r2747562.geojson",
+      "sourceRelationId": 2747562,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: The course of the Tisza/Tisa/Theiss is missing some meanders",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746573",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Banatul Timișoarei",
+      "displayName": {
+        "ro": "Banatul Timișoarei",
+        "en": "Banat of Temeswar"
+      },
+      "sourcePeriod": {
+        "start": "1718-07-21",
+        "end": "1751",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "banate",
+      "geometryId": "geom:ohm-r2746573",
+      "featureId": "ohm-r2746573",
+      "geometryShard": "ohm-banat-bucovina.geojson",
+      "sourceDriveFileId": "1SZDTd2nVUfUn4Gf8vcT9CR8bS6RcwCgb",
+      "sourceFilename": "OHM-r2746573.geojson",
+      "sourceRelationId": 2746573,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme: The course of the Tisza/Tisa/Theiss is missing some meanders.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746745",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Districtul Bucovina",
+      "displayName": {
+        "ro": "Districtul Bucovina",
+        "en": "Bukowiner Kreis"
+      },
+      "sourcePeriod": {
+        "start": "1860-08-06",
+        "end": "1861-02-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "district",
+      "geometryId": "geom:ohm-r2746379",
+      "featureId": "ohm-r2746745",
+      "geometryShard": "ohm-banat-bucovina.geojson",
+      "sourceDriveFileId": "1hGUnR1BjSiauWSwdSNqeS3H9YVqHT57t",
+      "sourceFilename": "OHM-r2746745.geojson",
+      "sourceRelationId": 2746745,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2746744",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Districtul Bucovina",
+      "displayName": {
+        "ro": "Districtul Bucovina",
+        "en": "Bukowiner Kreis"
+      },
+      "sourcePeriod": {
+        "start": "1786-08-06",
+        "end": "1849-03-04",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "district",
+      "geometryId": "geom:ohm-r2746379",
+      "featureId": "ohm-r2746744",
+      "geometryShard": "ohm-banat-bucovina.geojson",
+      "sourceDriveFileId": "1oIV421Q633ZvZnzjUBYT9NjNSc1Co-4f",
+      "sourceFilename": "OHM-r2746744.geojson",
+      "sourceRelationId": 2746744,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 source snapshot",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
     }
   ],
-  "missingSources": "OHM counties, comitates and further Geodata GIS collections require import in subsequent inventory batches."
+  "missingSources": "OHM counties, comitates and further Geodata GIS collections require import in subsequent inventory batches.",
+  "geometryAssets": 36,
+  "geometryAssetSemantics": "Canonical logical geometry IDs are shared for exactly identical coordinate sequences. Source GeoJSON shards preserve all original versions for traceability; no coordinate repair or synthetic change."
 }
