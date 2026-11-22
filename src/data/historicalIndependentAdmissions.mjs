@@ -141,6 +141,7 @@ export function validateIndependentHistoricalAdmissions(catalog,admissions,actua
     if(!row||row.entityId!==b.historicalEntityId||
        b.historicalSourceName!==row.name.ro||
        b.historicalSourceType!==row.sourceOriginalType||
+       JSON.stringify(b.historicalSourcePeriod)!==JSON.stringify(row.period)||
        !iso||!historicalDateInPeriod(row.period,iso))
       errors.push('Bridge historical version/date mismatch '+b.id);
     if(requireActualCatalog&&(!current||current.geometryShard!==admissions.actualGeometryShard||
