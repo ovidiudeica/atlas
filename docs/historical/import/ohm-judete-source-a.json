@@ -1,0 +1,150 @@
+{
+  "schema": "atlas-geodata-ohm-leaf-inventory-v1",
+  "collection": "Județe istorice",
+  "dirs": [
+    {
+      "name": "Județul Vaslui",
+      "id": "1cY06ou0z8fECUQ0NQBHN9RFATLk8hgi6",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1oJdUT_dcTH4x7Z-8b34hDmsRFb6TA1Lj",
+          "mime": "application/json",
+          "size": "2506"
+        },
+        {
+          "name": "OHM-r2943670.source.json.gz",
+          "id": "1J6d3Hi9PvMTd6z_lDC9Cd-KN0ZdnYmkV",
+          "mime": "application/x-gzip",
+          "size": "7471"
+        },
+        {
+          "name": "OHM-r2943670.geojson",
+          "id": "18CFCQ0i8xiV6QAYwXuyv3vKvde0kFTHH",
+          "mime": "application/octet-stream",
+          "size": "19539"
+        }
+      ]
+    },
+    {
+      "name": "Județul Tutova",
+      "id": "1SPSsBQmUlnWDnoh7QlHpMUxFHw13zdXb",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "134UcIKSPKeRW2wQA_eFP5L4sYCUsYpe3",
+          "mime": "application/json",
+          "size": "2511"
+        },
+        {
+          "name": "OHM-r2945089.source.json.gz",
+          "id": "1SiloNDQyMws2vJvL7B9wolknFgHTHtJK",
+          "mime": "application/x-gzip",
+          "size": "10697"
+        },
+        {
+          "name": "OHM-r2945089.geojson",
+          "id": "1AbIXLtrhw4bOHVWrMDmyPYJC1nKXLuT5",
+          "mime": "application/octet-stream",
+          "size": "28397"
+        }
+      ]
+    },
+    {
+      "name": "Județul Tulcin",
+      "id": "1eB8DwKgoWJjizWg-C9Z1H9PTfnDuKnrY",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1Z2a4bIRqpxqjux0Kf1mg2WhNrF6HNgNk",
+          "mime": "application/json",
+          "size": "2561"
+        },
+        {
+          "name": "OHM-r2698192.source.json.gz",
+          "id": "1J-4GFubFqTrDe2c6W3aNAHsSEghFKQ-W",
+          "mime": "application/x-gzip",
+          "size": "1152"
+        },
+        {
+          "name": "OHM-r2698192.geojson",
+          "id": "1ThBq_MKYpB-6WcblE3FHNtsJLAC11YhH",
+          "mime": "application/octet-stream",
+          "size": "2307"
+        }
+      ]
+    },
+    {
+      "name": "Județul Timiș-Torontal",
+      "id": "1A51z1F3-2Ik4JrXnxOlKPJm-QgZB6FKz",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1osGEHiX91YP2qIAFu3Cmhf0kC669jZ-U",
+          "mime": "application/json",
+          "size": "2606"
+        },
+        {
+          "name": "OHM-r2829528.source.json.gz",
+          "id": "1TkCWPmzsM-Znupcfw4XvIjzB1KWCaZSs",
+          "mime": "application/x-gzip",
+          "size": "18442"
+        },
+        {
+          "name": "OHM-r2829528.geojson",
+          "id": "1CnW5AZE1XVc9Kj85twGmw28XqS0xvAru",
+          "mime": "application/octet-stream",
+          "size": "49500"
+        }
+      ]
+    },
+    {
+      "name": "Județul Tecuci",
+      "id": "1nzAoGM4AbsUHQf_hKh6E7EZFoFZWZaNZ",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "13L27Nkfeyc6LJFnSJQHUn6C6Q1YYuoXH",
+          "mime": "application/json",
+          "size": "2510"
+        },
+        {
+          "name": "OHM-r2945087.source.json.gz",
+          "id": "1-TB3bm7jXonHUjYol1a0TD_Aq8lXEN_Z",
+          "mime": "application/x-gzip",
+          "size": "9413"
+        },
+        {
+          "name": "OHM-r2945087.geojson",
+          "id": "1WMDCOQyiPem-p-rQ94WdqhI6WJc64hoo",
+          "mime": "application/octet-stream",
+          "size": "25076"
+        }
+      ]
+    },
+    {
+      "name": "Județul Suceava",
+      "id": "1ZqiRYDJx302nx1bp1Bjen2zpvb8x2fny",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1jEBWFG2Ia6GRmVaGo5-TdjMDGp2CxyqY",
+          "mime": "application/json",
+          "size": "2515"
+        },
+        {
+          "name": "OHM-r2940721.source.json.gz",
+          "id": "1tzuB9w31elbLaNrloYnI31dURXKpsxJZ",
+          "mime": "application/x-gzip",
+          "size": "29921"
+        },
+        {
+          "name": "OHM-r2940721.geojson",
+          "id": "1nB7TVULJeyw5ooMfmRWtmpei7pyvRFW4",
+          "mime": "application/octet-stream",
+          "size": "84924"
+        }
+      ]
+    }
+  ]
+}

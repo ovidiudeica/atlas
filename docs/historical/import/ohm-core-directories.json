@@ -1,0 +1,415 @@
+{
+  "schema": "hist-import-ohm-directories-v1",
+  "asOf": "2026-11-22",
+  "source": "Geodata GIS / OHM-Boundaries",
+  "directories": [
+    {
+      "name": "Transilvania",
+      "folderId": "1BnsjC4mF9egtHitaagZ25RwSHKU6wH7O",
+      "files": [
+        {
+          "id": "1I5lw943hw9qWNLHt9hPcK_l3Pvr33JJu",
+          "name": "manifest.json",
+          "size": "7933",
+          "mime": "application/json"
+        },
+        {
+          "id": "1a_goQ2GaDiUz0QtMhw2t6J1bJFJrrHxZ",
+          "name": "OHM-r2829384.source.json.gz",
+          "size": "48654",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1iBqvNISklmcV4DVKo5lvpdvNp5XE1bb7",
+          "name": "OHM-r2829384.geojson",
+          "size": "131908",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1PQFS6L1PvxuWXqmehZcAY7Ds2AS480GF",
+          "name": "OHM-r2878295.source.json.gz",
+          "size": "48783",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1BXRrbQ3tc27KJaeKphdKWcDSxeMgWylR",
+          "name": "OHM-r2878295.geojson",
+          "size": "132175",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1VXq_N0oL1SPMTIXa_zEMp1W6KxmaTR8Q",
+          "name": "OHM-r2690518.source.json.gz",
+          "size": "48723",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1ffFcGLq0ZJaMiWV8Y_2yH0OscFQbMlt3",
+          "name": "OHM-r2690518.geojson",
+          "size": "132085",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1Rr2Uwa5xNKp_Fc7ggNCju9WUuUdvX4cB",
+          "name": "OHM-r2747433.source.json.gz",
+          "size": "50324",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "18pUEkHhXRDt0CSYk4ixkE9TvTlbw9Uch",
+          "name": "OHM-r2747433.geojson",
+          "size": "136634",
+          "mime": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "name": "Bucovina",
+      "folderId": "1R2h5L6GyZExxWwxqZkKSNWeUN6istppj",
+      "files": [
+        {
+          "id": "1C2w00LO0VUg4t3QYEtlpneSnW8qyYTz1",
+          "name": "manifest.json",
+          "size": "9534",
+          "mime": "application/json"
+        },
+        {
+          "id": "1jAb_gsd08nXsanMbA6EkSjxERsvpqs5d",
+          "name": "OHM-r2746401.source.json.gz",
+          "size": "82617",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1wx3hnIEGsOpqnCo5HdMOqqvSSb_PUgiI",
+          "name": "OHM-r2746401.geojson",
+          "size": "239957",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1XT5AraC1iBu3VKF70WorxxmXiNMdf_j1",
+          "name": "OHM-r2684081.source.json.gz",
+          "size": "82316",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "11tvCn6zklSW_E9Xe4crMU9jETQK3svvw",
+          "name": "OHM-r2684081.geojson",
+          "size": "239099",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1GKnLOFIHlHlXXo2_LfUC4u32kgVIlS-M",
+          "name": "OHM-r2746379.source.json.gz",
+          "size": "82211",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1ij9lxaVFhHthXOmhhGPTpRnknmXld0Fc",
+          "name": "OHM-r2746379.geojson",
+          "size": "239027",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1KalwGIzWYfAIhqY9XJAb2Xwgl63PbbZP",
+          "name": "OHM-r2746380.source.json.gz",
+          "size": "81937",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1_G02NqivGT8uiTVAPnugv8Lo9xfI3dpa",
+          "name": "OHM-r2746380.geojson",
+          "size": "238635",
+          "mime": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "name": "Basarabia",
+      "folderId": "1YbMf1AIvBOcdDf_0k9POUS9FcP93rw8T",
+      "files": [
+        {
+          "id": "141sVCTmveCG97wgUibAy4JH6bwUgrWCz",
+          "name": "manifest.json",
+          "size": "4451",
+          "mime": "application/json"
+        },
+        {
+          "id": "1-j9bH2m2XtTRXLuwE48mZVEuRV4Flqc8",
+          "name": "OHM-r2694154.source.json.gz",
+          "size": "71725",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1PQVlTol_0B1kpCVgHeyoU2kDOvwoaStq",
+          "name": "OHM-r2694154.geojson",
+          "size": "195413",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1LXq2kDVRFZYNN8w-cS-9LEUKa28fd7Dq",
+          "name": "OHM-r2694153.source.json.gz",
+          "size": "49152",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1y-42yzaBTbfozxYkObuu9Jw_gMA5bOLK",
+          "name": "OHM-r2694153.geojson",
+          "size": "131956",
+          "mime": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "name": "Regatul Romaniei",
+      "folderId": "1dE6r6Y4VAwmj0YqZob2nVrjSh_rh8Diy",
+      "files": [
+        {
+          "id": "1aq0EoJ8i5-rekBcsSsKH20aMfF7ARLKg",
+          "name": "manifest.json",
+          "size": "17607",
+          "mime": "application/json"
+        },
+        {
+          "id": "10PTDNBgGa2kFmn2rdKQ6a4uv-EyRjsCP",
+          "name": "OHM-r2877966.source.json.gz",
+          "size": "210632",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1wwcTHHAjbtYpfnMvQLg6YSy7V5JrCr7p",
+          "name": "OHM-r2877966.geojson",
+          "size": "606634",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "13MrEeYOS5JCErNOcXCKxf6YJwxjjRnBH",
+          "name": "OHM-r2693255.source.json.gz",
+          "size": "103291",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "179Kp-GISATS5JNw4XkFfcdx3rN2T482d",
+          "name": "OHM-r2693255.geojson",
+          "size": "282936",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1bzuxKuXkL2aYhjq7RGYU_7Qbq5yFJsjh",
+          "name": "OHM-r2693256.source.json.gz",
+          "size": "179828",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1TTcvGKcAqM73P6KOmkdjJVunrSjsjT2a",
+          "name": "OHM-r2693256.geojson",
+          "size": "515845",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1BazH-3V92u7qA5VnCQHRKhv4flYamkw4",
+          "name": "OHM-r2693257.source.json.gz",
+          "size": "176255",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1Pi6vtEqoI5DD1QF8CuqGGeDXjj230rxc",
+          "name": "OHM-r2693257.geojson",
+          "size": "505585",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1Qf5n0BnEOVzXwHS5rOcNzq1d_X2Km8Ul",
+          "name": "OHM-r2693258.source.json.gz",
+          "size": "207822",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1f5EahmaJ8hSIdwOTZbRKVtKVZuA15rCq",
+          "name": "OHM-r2693258.geojson",
+          "size": "598404",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1hK_xyl33j1NUVpwv3WPW0RSO_yGQDsDM",
+          "name": "OHM-r2693259.source.json.gz",
+          "size": "135226",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1YeFcGRimTE3XEL0lB29-aJPC4ZyLmLPw",
+          "name": "OHM-r2693259.geojson",
+          "size": "376131",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "189WlCZWWgp6ifCSOe6ih5WRPBvxF0Krz",
+          "name": "OHM-r2693464.source.json.gz",
+          "size": "132205",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1PY-QOvkVOpW2jz1KHnwUbzJ_7sfzTuB6",
+          "name": "OHM-r2693464.geojson",
+          "size": "367688",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1cTDztwlXBOL3KzO3JMzQs4Nt7e6A-oRW",
+          "name": "OHM-r2693260.source.json.gz",
+          "size": "124710",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1qw9Xrwg1yVYC6DhapgBkwdw0vdUh5XE-",
+          "name": "OHM-r2693260.geojson",
+          "size": "346845",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "17mZYh131XRYXB7yL8goeNL1vZt_TsOV8",
+          "name": "OHM-r2692219.source.json.gz",
+          "size": "127751",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1fvb-u-R_-JLJVrGFBc-RQ2dpYhGxQSlf",
+          "name": "OHM-r2692219.geojson",
+          "size": "354194",
+          "mime": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "name": "Principatele Unite",
+      "folderId": "1_9_I8AkhnlpvfvE4mAun8kNNhelRlGw6",
+      "files": [
+        {
+          "id": "1kjKAd5vH6EQpYyCiCuD1AXws_03O-HHH",
+          "name": "manifest.json",
+          "size": "4731",
+          "mime": "application/json"
+        },
+        {
+          "id": "1YdCn2mgb7Yt_Lc2HrNZ3s0QF-ig6--Hf",
+          "name": "OHM-r2692354.source.json.gz",
+          "size": "126062",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1fwrzICHXNXXMGlbKKIGD69mqShkLE628",
+          "name": "OHM-r2692354.geojson",
+          "size": "350865",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1jqqBkX31FjmKWhPk9DpqTjLKJ6qKhVcA",
+          "name": "OHM-r2746400.source.json.gz",
+          "size": "106753",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1cEHPKSUYxsqZ4ZztGVfQOhXIggkZ7U6B",
+          "name": "OHM-r2746400.geojson",
+          "size": "296695",
+          "mime": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "name": "Tara Romaneasca",
+      "folderId": "1TSQ7stKrGkvsRAYCSHpbmQIxmwrg0rnJ",
+      "files": [
+        {
+          "id": "1Nj21yFozHNwJ7W7FCJRUwl2qpy0cjGR2",
+          "name": "manifest.json",
+          "size": "7718",
+          "mime": "application/json"
+        },
+        {
+          "id": "19AFsuleMk7Sb6a4dWGdLaHspHHKgfrby",
+          "name": "OHM-r2929117.geojson",
+          "size": "89967",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1bTKMkEEet2TseJr1KD6Mm98zTnQTGfcF",
+          "name": "OHM-r2929116.geojson",
+          "size": "87050",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1__OfGE2K8qZoytfDfbHsgQ3cy9cSZ6PZ",
+          "name": "OHM-r2929115.geojson",
+          "size": "89898",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1dL5rJwvRJW4Gt85TWteaAQuKiAyUZv_4",
+          "name": "OHM-r2694164.geojson",
+          "size": "90017",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1wdk-50r9_LM8rMFDQXeKUynK1Yv-Oz_e",
+          "name": "OHM-r2929117.source.json.gz",
+          "size": "35076",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1gjHFi_rgX0N1BRU8iimbSxvqd0wbhSFx",
+          "name": "OHM-r2929116.source.json.gz",
+          "size": "33915",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1mbuOaTawOV6OvsmknCwrhW9-YMMWtpxn",
+          "name": "OHM-r2929115.source.json.gz",
+          "size": "35055",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1rmYmYlflzTxcjPNvO-FrmNUi5WrzLW8N",
+          "name": "OHM-r2694164.source.json.gz",
+          "size": "35093",
+          "mime": "application/x-gzip"
+        }
+      ]
+    },
+    {
+      "name": "Principatul Moldovei",
+      "folderId": "1c7Cnj7FWpPjvx4AHw-FwvJUrmIWrPumq",
+      "files": [
+        {
+          "id": "1NqZN7tFOdkO2TLw6ubLK9I9FExvBumaY",
+          "name": "manifest.json",
+          "size": "3987",
+          "mime": "application/json"
+        },
+        {
+          "id": "1T--nYcV9wseLe1HdKG34j0i351wZhn56",
+          "name": "OHM-r2746689.source.json.gz",
+          "size": "78920",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "19ayRNP-0XgKYE37qJCEsDcBNnHYHpF7q",
+          "name": "OHM-r2746689.geojson",
+          "size": "220983",
+          "mime": "application/octet-stream"
+        },
+        {
+          "id": "1O19o0XqS-UwCXc456TEMSqTVmyfZPpiV",
+          "name": "OHM-r2694163.source.json.gz",
+          "size": "91988",
+          "mime": "application/x-gzip"
+        },
+        {
+          "id": "1i65LWWk0bhEfeV4udGDLFCe-6e9qwGYf",
+          "name": "OHM-r2694163.geojson",
+          "size": "258986",
+          "mime": "application/octet-stream"
+        }
+      ]
+    }
+  ]
+}

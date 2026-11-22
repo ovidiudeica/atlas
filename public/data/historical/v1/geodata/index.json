@@ -1,0 +1,4423 @@
+{
+  "schema": "atlas-geodata-historical-source-index-v1",
+  "asOf": "2026-11-22",
+  "status": "INTEGRATED_SOURCE_CANDIDATES_NOT_LEGAL_BOUNDARIES",
+  "sourceDomain": "Geodata GIS / OHM-Boundaries — phase 1 authoritative source priority",
+  "collection": "OHM historical source versions (43 states/regions; 19 counties; 77 comitates)",
+  "notCanonicalHierarchy": true,
+  "notLegalBoundaryCertification": true,
+  "coordinateReferenceSystem": "EPSG:4326",
+  "geometryDuplicates": [
+    [
+      "ohm-r2684081",
+      "ohm-r2746379"
+    ],
+    [
+      "ohm-r2684081",
+      "ohm-r2746380"
+    ],
+    [
+      "ohm-r2684081",
+      "ohm-r2746744"
+    ],
+    [
+      "ohm-r2684081",
+      "ohm-r2746745"
+    ],
+    [
+      "ohm-r2960608",
+      "ohm-r2960607"
+    ],
+    [
+      "ohm-r2690518",
+      "ohm-r2878295"
+    ],
+    [
+      "ohm-r2747434",
+      "ohm-r2747435"
+    ],
+    [
+      "ohm-r2747447",
+      "ohm-r2747448"
+    ],
+    [
+      "ohm-r2747429",
+      "ohm-r2747431"
+    ],
+    [
+      "ohm-r2829357",
+      "ohm-r2829358"
+    ],
+    [
+      "ohm-r2747449",
+      "ohm-r2747450"
+    ],
+    [
+      "ohm-r2747307",
+      "ohm-r2747308"
+    ],
+    [
+      "ohm-r2829351",
+      "ohm-r2829352"
+    ],
+    [
+      "ohm-r2747305",
+      "ohm-r2747306"
+    ]
+  ],
+  "geometryAssets": 125,
+  "geometryAssetSemantics": "Logical assets deduplicated only by exact coordinate geometry SHA256, every original feature preserved.",
+  "shards": [
+    {
+      "file": "ohm-source-other-01.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-other-02.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-other-03.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-other-04.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-other-05.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-other-06.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-other-07.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-other-08.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-other-09.geojson",
+      "count": 3
+    },
+    {
+      "file": "ohm-source-judete-01.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-judete-02.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-judete-03.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-judete-04.geojson",
+      "count": 4
+    },
+    {
+      "file": "ohm-source-comitate-01.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-02.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-03.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-04.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-05.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-06.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-07.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-08.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-09.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-10.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-11.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-12.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-13.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-14.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-15.geojson",
+      "count": 5
+    },
+    {
+      "file": "ohm-source-comitate-16.geojson",
+      "count": 2
+    }
+  ],
+  "entries": [
+    {
+      "id": "ohm-r2746573",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Banatul Timișoarei",
+      "displayName": {
+        "ro": "Banatul Timișoarei",
+        "en": "Banat of Temeswar"
+      },
+      "sourcePeriod": {
+        "start": "1718-07-21",
+        "end": "1751",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "banate",
+      "geometryId": "geom:ohm-r2746573",
+      "featureId": "ohm-r2746573",
+      "geometryShard": "ohm-source-other-01.geojson",
+      "sourceDriveFileId": "1SZDTd2nVUfUn4Gf8vcT9CR8bS6RcwCgb",
+      "sourceFilename": "OHM-r2746573.geojson",
+      "sourcePath": "OHM-Boundaries/Banatul Timișoarei/OHM-r2746573.geojson",
+      "sourceFileSha256": "9af1df0ddcd8718fb5e4513c970e897f6c44a1b9dfa5f4f693516eb01c41630e",
+      "sourceRelationId": 2746573,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The course of the Tisza/Tisa/Theiss is missing some meanders.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747562",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Banatul Timișoarei",
+      "displayName": {
+        "ro": "Banatul Timișoarei",
+        "en": "Banat of Temeswar"
+      },
+      "sourcePeriod": {
+        "start": "1751",
+        "end": "1778-06-06",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "banate",
+      "geometryId": "geom:ohm-r2747562",
+      "featureId": "ohm-r2747562",
+      "geometryShard": "ohm-source-other-01.geojson",
+      "sourceDriveFileId": "17ezShScNYiSFn1ohO3Ay6CTuFfwve1Pt",
+      "sourceFilename": "OHM-r2747562.geojson",
+      "sourcePath": "OHM-Boundaries/Banatul Timișoarei/OHM-r2747562.geojson",
+      "sourceFileSha256": "6c628a8c604844ce23eae3e563a5b081fe693aec9e05103de1cda2d8192af18f",
+      "sourceRelationId": 2747562,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The course of the Tisza/Tisa/Theiss is missing some meanders",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2684081",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Bucovina",
+      "displayName": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourcePeriod": {
+        "start": "1861-02-26",
+        "end": "1878-07-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "duchy",
+      "geometryId": "geom:ohm-r2684081",
+      "featureId": "ohm-r2684081",
+      "geometryShard": "ohm-source-other-01.geojson",
+      "sourceDriveFileId": "11tvCn6zklSW_E9Xe4crMU9jETQK3svvw",
+      "sourceFilename": "OHM-r2684081.geojson",
+      "sourcePath": "OHM-Boundaries/Bucovina/OHM-r2684081.geojson",
+      "sourceFileSha256": "3c57f365c17d0ea0895a7a553f32f77054a8b036db9afa990ee784ae4b6e6155",
+      "sourceRelationId": 2684081,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746379",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Bucovina",
+      "displayName": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourcePeriod": {
+        "start": "1849-03-04",
+        "end": "1860-08-06",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "duchy",
+      "geometryId": "geom:ohm-r2684081",
+      "featureId": "ohm-r2746379",
+      "geometryShard": "ohm-source-other-01.geojson",
+      "sourceDriveFileId": "1ij9lxaVFhHthXOmhhGPTpRnknmXld0Fc",
+      "sourceFilename": "OHM-r2746379.geojson",
+      "sourcePath": "OHM-Boundaries/Bucovina/OHM-r2746379.geojson",
+      "sourceFileSha256": "5cc647389d8c66385021a954a8db7d89922f47c2e96d5e56345268d8271a01ec",
+      "sourceRelationId": 2746379,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event"
+      ]
+    },
+    {
+      "id": "ohm-r2746380",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Bucovina",
+      "displayName": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourcePeriod": {
+        "start": "1774",
+        "end": "1786-08-06",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "military_district",
+      "geometryId": "geom:ohm-r2684081",
+      "featureId": "ohm-r2746380",
+      "geometryShard": "ohm-source-other-01.geojson",
+      "sourceDriveFileId": "1_G02NqivGT8uiTVAPnugv8Lo9xfI3dpa",
+      "sourceFilename": "OHM-r2746380.geojson",
+      "sourcePath": "OHM-Boundaries/Bucovina/OHM-r2746380.geojson",
+      "sourceFileSha256": "6fe3b2f2988bcd5557297811124320fb34f6b6a1f9cfdc6123ce6a7c7157d24b",
+      "sourceRelationId": 2746380,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746401",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Bucovina",
+      "displayName": {
+        "ro": "Bucovina",
+        "en": "Bukovina"
+      },
+      "sourcePeriod": {
+        "start": "1878-07-13",
+        "end": "1918",
+        "sourceOnly": true,
+        "notes": "Date arbitrarily chosen as the Treaty of Berlin for convenience; courses depicted are those of the third military survey 1869-1887; previous itteration shows the second survey 1861-64."
+      },
+      "sourceType": "duchy",
+      "geometryId": "geom:ohm-r2746401",
+      "featureId": "ohm-r2746401",
+      "geometryShard": "ohm-source-other-02.geojson",
+      "sourceDriveFileId": "1wx3hnIEGsOpqnCo5HdMOqqvSSb_PUgiI",
+      "sourceFilename": "OHM-r2746401.geojson",
+      "sourcePath": "OHM-Boundaries/Bucovina/OHM-r2746401.geojson",
+      "sourceFileSha256": "ca0533e6f97679198ba8d3899a05defa16f0ec0b9efc66055286b9c44f1117fc",
+      "sourceRelationId": 2746401,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746744",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Districtul Bucovina",
+      "displayName": {
+        "ro": "Districtul Bucovina",
+        "en": "Bukowiner Kreis"
+      },
+      "sourcePeriod": {
+        "start": "1786-08-06",
+        "end": "1849-03-04",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "district",
+      "geometryId": "geom:ohm-r2684081",
+      "featureId": "ohm-r2746744",
+      "geometryShard": "ohm-source-other-02.geojson",
+      "sourceDriveFileId": "1oIV421Q633ZvZnzjUBYT9NjNSc1Co-4f",
+      "sourceFilename": "OHM-r2746744.geojson",
+      "sourcePath": "OHM-Boundaries/Districtul Bucovina/OHM-r2746744.geojson",
+      "sourceFileSha256": "dde37b633e04250b68e64edfb32299a906ab56c0b06bc080437a286de6942f88",
+      "sourceRelationId": 2746744,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746745",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Districtul Bucovina",
+      "displayName": {
+        "ro": "Districtul Bucovina",
+        "en": "Bukowiner Kreis"
+      },
+      "sourcePeriod": {
+        "start": "1860-08-06",
+        "end": "1861-02-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "district",
+      "geometryId": "geom:ohm-r2684081",
+      "featureId": "ohm-r2746745",
+      "geometryShard": "ohm-source-other-02.geojson",
+      "sourceDriveFileId": "1hGUnR1BjSiauWSwdSNqeS3H9YVqHT57t",
+      "sourceFilename": "OHM-r2746745.geojson",
+      "sourcePath": "OHM-Boundaries/Districtul Bucovina/OHM-r2746745.geojson",
+      "sourceFileSha256": "cf10ff6668b2fd6d657b306859f28f4443992745a83382eb4b4d1004c5695386",
+      "sourceRelationId": 2746745,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2746839",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Frontiera Militară a Banatului",
+      "displayName": {
+        "ro": "Frontiera Militară a Banatului",
+        "en": "Banat Military Frontier"
+      },
+      "sourcePeriod": {
+        "start": "1751",
+        "end": "1849-11-18",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2746839",
+      "featureId": "ohm-r2746839",
+      "geometryShard": "ohm-source-other-02.geojson",
+      "sourceDriveFileId": "1B0qEcqMx6LI1WrwkMqZZ1ilK-5EbsQNK",
+      "sourceFilename": "OHM-r2746839.geojson",
+      "sourcePath": "OHM-Boundaries/Frontiera Militară a Banatului/OHM-r2746839.geojson",
+      "sourceFileSha256": "15db64010aacba8e9627a0cc19867ea7dcdf57d92ac495d67a4fcc2c51141dd6",
+      "sourceRelationId": 2746839,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746840",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Frontiera Militară a Banatului",
+      "displayName": {
+        "ro": "Granița militară bănățeană",
+        "en": "Banat Military Frontier"
+      },
+      "sourcePeriod": {
+        "start": "1849-11-18",
+        "end": "1860-12-27",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2746840",
+      "featureId": "ohm-r2746840",
+      "geometryShard": "ohm-source-other-02.geojson",
+      "sourceDriveFileId": "1IN08u8elyD3M5MKWxpdQNFLqjISDqqOe",
+      "sourceFilename": "OHM-r2746840.geojson",
+      "sourcePath": "OHM-Boundaries/Frontiera Militară a Banatului/OHM-r2746840.geojson",
+      "sourceFileSha256": "e1a329bca5aa2ac9773c5ab107713e3b1594b4feb1596b6eaa0c9c346ff15e31",
+      "sourceRelationId": 2746840,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746841",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Frontiera Militară a Banatului",
+      "displayName": {
+        "ro": "Frontiera Militară a Banatului",
+        "en": "Banat Military Frontier"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1873-08-08",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2746841",
+      "featureId": "ohm-r2746841",
+      "geometryShard": "ohm-source-other-03.geojson",
+      "sourceDriveFileId": "18gAYunbyYKWpuIhwCSjMWCSf-uXp2O8d",
+      "sourceFilename": "OHM-r2746841.geojson",
+      "sourcePath": "OHM-Boundaries/Frontiera Militară a Banatului/OHM-r2746841.geojson",
+      "sourceFileSha256": "3c6d4981673900250085a3fcc2dbd7f1bfd5fd7fefe0364f635a49ba70d3b427",
+      "sourceRelationId": 2746841,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2694153",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Gubernia Basarabia",
+      "displayName": {
+        "ro": "Gubernia Basarabia",
+        "en": "Bessarabia Governorate"
+      },
+      "sourcePeriod": {
+        "start": "1856-03-30",
+        "end": "1878-07-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "governorate",
+      "geometryId": "geom:ohm-r2694153",
+      "featureId": "ohm-r2694153",
+      "geometryShard": "ohm-source-other-03.geojson",
+      "sourceDriveFileId": "1y-42yzaBTbfozxYkObuu9Jw_gMA5bOLK",
+      "sourceFilename": "OHM-r2694153.geojson",
+      "sourcePath": "OHM-Boundaries/Gubernia Basarabia/OHM-r2694153.geojson",
+      "sourceFileSha256": "56226cfe879051a2e4a2c987e72e7a0ce2764c25ff4c99910d060293c36c1a82",
+      "sourceRelationId": 2694153,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2694154",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Gubernia Basarabia",
+      "displayName": {
+        "ro": "Gubernia Basarabia",
+        "en": "Bessarabia Governorate"
+      },
+      "sourcePeriod": {
+        "start": "1878-07-13",
+        "end": "1918",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2694154",
+      "featureId": "ohm-r2694154",
+      "geometryShard": "ohm-source-other-03.geojson",
+      "sourceDriveFileId": "1PQVlTol_0B1kpCVgHeyoU2kDOvwoaStq",
+      "sourceFilename": "OHM-r2694154.geojson",
+      "sourcePath": "OHM-Boundaries/Gubernia Basarabia/OHM-r2694154.geojson",
+      "sourceFileSha256": "4e1e460c216f1120b4aa42c9215c27be5331ad86031e6f417f4bf40726cc2738",
+      "sourceRelationId": 2694154,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:place: need to figure out what places these are..."
+      ]
+    },
+    {
+      "id": "ohm-r2692354",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Principatele Unite",
+      "displayName": {
+        "ro": "United Romanian Principalities",
+        "en": "United Romanian Principalities"
+      },
+      "sourcePeriod": {
+        "start": "1878-07-13",
+        "end": "1881-03-14",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "2",
+      "geometryId": "geom:ohm-r2692354",
+      "featureId": "ohm-r2692354",
+      "geometryShard": "ohm-source-other-03.geojson",
+      "sourceDriveFileId": "1fwrzICHXNXXMGlbKKIGD69mqShkLE628",
+      "sourceFilename": "OHM-r2692354.geojson",
+      "sourcePath": "OHM-Boundaries/Principatele Unite/OHM-r2692354.geojson",
+      "sourceFileSha256": "673e46f4ff8b26b8784c389a405ac21a2cde40c4ed8a4f8fc0a244ae44d2f3cb",
+      "sourceRelationId": 2692354,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2746400",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Principatele Unite",
+      "displayName": {
+        "ro": "United Romanian Principalities",
+        "en": "United Romanian Principalities"
+      },
+      "sourcePeriod": {
+        "start": "1859-02-05",
+        "end": "1878-07-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "3",
+      "geometryId": "geom:ohm-r2746400",
+      "featureId": "ohm-r2746400",
+      "geometryShard": "ohm-source-other-03.geojson",
+      "sourceDriveFileId": "1cEHPKSUYxsqZ4ZztGVfQOhXIggkZ7U6B",
+      "sourceFilename": "OHM-r2746400.geojson",
+      "sourcePath": "OHM-Boundaries/Principatele Unite/OHM-r2746400.geojson",
+      "sourceFileSha256": "fef9e3a501179a5df682f6200060b6390811f606d885c7920b4c9da4c4170b65",
+      "sourceRelationId": 2746400,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2694163",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Principatul Moldovei",
+      "displayName": {
+        "ro": "Țara Moldovei",
+        "en": "Principality of Moldavia"
+      },
+      "sourcePeriod": {
+        "start": "1812-05-28",
+        "end": "1856-03-30",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2694163",
+      "featureId": "ohm-r2694163",
+      "geometryShard": "ohm-source-other-04.geojson",
+      "sourceDriveFileId": "1i65LWWk0bhEfeV4udGDLFCe-6e9qwGYf",
+      "sourceFilename": "OHM-r2694163.geojson",
+      "sourcePath": "OHM-Boundaries/Principatul Moldovei/OHM-r2694163.geojson",
+      "sourceFileSha256": "b83fba66b3f496e23f560820e8b89d92b7822c5918ae9f3f2ce3ee2f2d3fa422",
+      "sourceRelationId": 2694163,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: start and end dates",
+        "fixme:e: needs start_event"
+      ]
+    },
+    {
+      "id": "ohm-r2746689",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Principatul Moldovei",
+      "displayName": {
+        "ro": "Țara Moldovei",
+        "en": "Principality of Moldavia"
+      },
+      "sourcePeriod": {
+        "start": "1856-03-30",
+        "end": "1859-02-05",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2746689",
+      "featureId": "ohm-r2746689",
+      "geometryShard": "ohm-source-other-04.geojson",
+      "sourceDriveFileId": "19ayRNP-0XgKYE37qJCEsDcBNnHYHpF7q",
+      "sourceFilename": "OHM-r2746689.geojson",
+      "sourcePath": "OHM-Boundaries/Principatul Moldovei/OHM-r2746689.geojson",
+      "sourceFileSha256": "fb83a07ee7e878b4d79687d601c5702e8725653aed38df1ce9c4e8262ac1021d",
+      "sourceRelationId": 2746689,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: start and end dates",
+        "fixme:e: needs start_event"
+      ]
+    },
+    {
+      "id": "ohm-r2692219",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1881-03-14",
+        "end": "1913-08-29",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2692219",
+      "featureId": "ohm-r2692219",
+      "geometryShard": "ohm-source-other-04.geojson",
+      "sourceDriveFileId": "1fvb-u-R_-JLJVrGFBc-RQ2dpYhGxQSlf",
+      "sourceFilename": "OHM-r2692219.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2692219.geojson",
+      "sourceFileSha256": "52359382cbe49bb1c3628a2d68bd98cab7f20b68730dc3e7eb36db2751813c25",
+      "sourceRelationId": 2692219,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2693255",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1941-08-19",
+        "end": "1944-04-01",
+        "sourceOnly": true,
+        "notes": "Odessa not captured until October 1941"
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693255",
+      "featureId": "ohm-r2693255",
+      "geometryShard": "ohm-source-other-04.geojson",
+      "sourceDriveFileId": "179Kp-GISATS5JNw4XkFfcdx3rN2T482d",
+      "sourceFilename": "OHM-r2693255.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2693255.geojson",
+      "sourceFileSha256": "c42eaf558cfd65691a42f329f7c5703214e1c687af77e251cb903d498e6f74fd",
+      "sourceRelationId": 2693255,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693256",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1940-09-07",
+        "end": "1941-08-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693256",
+      "featureId": "ohm-r2693256",
+      "geometryShard": "ohm-source-other-04.geojson",
+      "sourceDriveFileId": "1TTcvGKcAqM73P6KOmkdjJVunrSjsjT2a",
+      "sourceFilename": "OHM-r2693256.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2693256.geojson",
+      "sourceFileSha256": "32730cd0e38a99ec2ddbd6d79bfc92f132310def1d41687773d88934cb19621b",
+      "sourceRelationId": 2693256,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: border gap",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693257",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1940-08-30",
+        "end": "1940-09-07",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693257",
+      "featureId": "ohm-r2693257",
+      "geometryShard": "ohm-source-other-05.geojson",
+      "sourceDriveFileId": "1Pi6vtEqoI5DD1QF8CuqGGeDXjj230rxc",
+      "sourceFilename": "OHM-r2693257.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2693257.geojson",
+      "sourceFileSha256": "2a4f1487156a453ae0b51282e1b7c03e929150677a0e7078a1dbbea6ec30f261",
+      "sourceRelationId": 2693257,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: label",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693258",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1940-06-28",
+        "end": "1940-08-30",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693258",
+      "featureId": "ohm-r2693258",
+      "geometryShard": "ohm-source-other-05.geojson",
+      "sourceDriveFileId": "1f5EahmaJ8hSIdwOTZbRKVtKVZuA15rCq",
+      "sourceFilename": "OHM-r2693258.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2693258.geojson",
+      "sourceFileSha256": "e191bc49074c242bb68ba1a88d51fea81d31502ba8664af2e798e31153448e55",
+      "sourceRelationId": 2693258,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693259",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1921",
+        "end": "1940-06-28",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693259",
+      "featureId": "ohm-r2693259",
+      "geometryShard": "ohm-source-other-05.geojson",
+      "sourceDriveFileId": "1YeFcGRimTE3XEL0lB29-aJPC4ZyLmLPw",
+      "sourceFilename": "OHM-r2693259.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2693259.geojson",
+      "sourceFileSha256": "af8585102a79968fe631edecfd5d9bb3fd8b108f382b95aee4f7b16a3fc604a9",
+      "sourceRelationId": 2693259,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: border adjustment with Kingdom of Serbs, Croats and Slovenes 1923-11-24 (see en:Timiș-Torontal County)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2693260",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1913-08-30",
+        "end": "1918",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693260",
+      "featureId": "ohm-r2693260",
+      "geometryShard": "ohm-source-other-05.geojson",
+      "sourceDriveFileId": "1qw9Xrwg1yVYC6DhapgBkwdw0vdUh5XE-",
+      "sourceFilename": "OHM-r2693260.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2693260.geojson",
+      "sourceFileSha256": "b827ce0bd6d32fedb47195d42f69cd10711f185e9c0cce2c3b6c4844b9eca04f",
+      "sourceRelationId": 2693260,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2693464",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1919",
+        "end": "1921",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2693464",
+      "featureId": "ohm-r2693464",
+      "geometryShard": "ohm-source-other-05.geojson",
+      "sourceDriveFileId": "1PY-QOvkVOpW2jz1KHnwUbzJ_7sfzTuB6",
+      "sourceFilename": "OHM-r2693464.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2693464.geojson",
+      "sourceFileSha256": "37acb7d868b5bf4d5d8fd8dac81656beedfe6c8f4ec895ab7fa5c7b1fc1c624b",
+      "sourceRelationId": 2693464,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: border adjustment with Kingdom of Serbs, Croats and Slovenes 1923-11-24 (see en:Timiș-Torontal County)",
+        "fixme:e: needs start_event, end_event, or both",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2877966",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regatul României",
+      "displayName": {
+        "ro": "Regatul României",
+        "en": "Kingdom of Romania"
+      },
+      "sourcePeriod": {
+        "start": "1945-03-09",
+        "end": "1947-12-30",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "kingdom",
+      "geometryId": "geom:ohm-r2877966",
+      "featureId": "ohm-r2877966",
+      "geometryShard": "ohm-source-other-06.geojson",
+      "sourceDriveFileId": "1wwcTHHAjbtYpfnMvQLg6YSy7V5JrCr7p",
+      "sourceFilename": "OHM-r2877966.geojson",
+      "sourcePath": "OHM-Boundaries/Regatul României/OHM-r2877966.geojson",
+      "sourceFileSha256": "27a59314c82eb2ce13d613d9499d58796a63d97046de7aa4163562a75760ec6b",
+      "sourceRelationId": 2877966,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2960608",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regiunea Akkerman",
+      "displayName": {
+        "ro": "Аккерманская область",
+        "en": "Akkerman Oblast"
+      },
+      "sourcePeriod": {
+        "start": "1940-08-07",
+        "end": "1940-12-07",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "oblast",
+      "geometryId": "geom:ohm-r2960608",
+      "featureId": "ohm-r2960608",
+      "geometryShard": "ohm-source-other-06.geojson",
+      "sourceDriveFileId": "1fJvhEiWu6lASHke72zIrZ9UedV339zRC",
+      "sourceFilename": "OHM-r2960608.geojson",
+      "sourcePath": "OHM-Boundaries/Regiunea Akkerman/OHM-r2960608.geojson",
+      "sourceFileSha256": "8c20203faf9d9529963a3cdfe975c706ea35f5b88fe7ff204a482ada3ac5721c",
+      "sourceRelationId": 2960608,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2960367",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regiunea Cernăuți",
+      "displayName": {
+        "ro": "Regiunea Cernăuți",
+        "en": "Chernivtsi Oblast"
+      },
+      "sourcePeriod": {
+        "start": "1940-08-07",
+        "end": "1991-08-24",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "oblast",
+      "geometryId": "geom:ohm-r2960367",
+      "featureId": "ohm-r2960367",
+      "geometryShard": "ohm-source-other-06.geojson",
+      "sourceDriveFileId": "1GjNA-rhwZzHLioTtcuZppemElTCoSJpU",
+      "sourceFilename": "OHM-r2960367.geojson",
+      "sourcePath": "OHM-Boundaries/Regiunea Cernăuți/OHM-r2960367.geojson",
+      "sourceFileSha256": "2865e1a589d28ca717b39794ea79995cc3f3045bc481677d984cf898db1f4e40",
+      "sourceRelationId": 2960367,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2960607",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regiunea Ismail",
+      "displayName": {
+        "ro": "Regiunea Ismail",
+        "en": "Izmail Oblast"
+      },
+      "sourcePeriod": {
+        "start": "1940-12-07",
+        "end": "1954-02-15",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "oblast",
+      "geometryId": "geom:ohm-r2960608",
+      "featureId": "ohm-r2960607",
+      "geometryShard": "ohm-source-other-06.geojson",
+      "sourceDriveFileId": "1TGVEpE3xeJK0ijx0M2wczlNDLc51kniT",
+      "sourceFilename": "OHM-r2960607.geojson",
+      "sourcePath": "OHM-Boundaries/Regiunea Ismail/OHM-r2960607.geojson",
+      "sourceFileSha256": "960a7e61c0059656f1a69d3df0a889006adabf49c2e3c7d265c59365cbc9ff51",
+      "sourceRelationId": 2960607,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2859183",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Regiunea Transcarpatia",
+      "displayName": {
+        "ro": "Regiunea Transcarpatia",
+        "en": "Zakarpattia Oblast"
+      },
+      "sourcePeriod": {
+        "start": "1946-01-22",
+        "end": "1991-08-24",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2859183",
+      "featureId": "ohm-r2859183",
+      "geometryShard": "ohm-source-other-06.geojson",
+      "sourceDriveFileId": "1N8us4rJQGOmOseBMr2G97dBb0MY22Ss7",
+      "sourceFilename": "OHM-r2859183.geojson",
+      "sourcePath": "OHM-Boundaries/Regiunea Transcarpatia/OHM-r2859183.geojson",
+      "sourceFileSha256": "7849f07911fb974520df326fff59334989d51ecb7f26ac8e98b9f537e60451f4",
+      "sourceRelationId": 2859183,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2694777",
+      "sourceFamily": "OHM",
+      "sourceGroup": "RSS Moldovenească",
+      "displayName": {
+        "ro": "RSS Moldovenească",
+        "en": "Moldavian SSR"
+      },
+      "sourcePeriod": {
+        "start": "1944",
+        "end": "1991-05-22",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "soviet_socialist_republic",
+      "geometryId": "geom:ohm-r2694777",
+      "featureId": "ohm-r2694777",
+      "geometryShard": "ohm-source-other-07.geojson",
+      "sourceDriveFileId": "1D_DPbHV2YjzcNjE3Fgn8rea1VutfEdXU",
+      "sourceFilename": "OHM-r2694777.geojson",
+      "sourcePath": "OHM-Boundaries/RSS Moldovenească/OHM-r2694777.geojson",
+      "sourceFileSha256": "218bc557369611356593c1085b9f3db86782d9b34eb683e2248c70b640c5aa85",
+      "sourceRelationId": 2694777,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2857483",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transcarpatia",
+      "displayName": {
+        "ro": "Transcarpatia",
+        "en": "Subcarpathian Rus'"
+      },
+      "sourcePeriod": {
+        "start": "1920-08-10",
+        "end": "1938-11-02",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2857483",
+      "featureId": "ohm-r2857483",
+      "geometryShard": "ohm-source-other-07.geojson",
+      "sourceDriveFileId": "1ZwPbJzO2cJJJ6rTSQwuKLwh6ZPFAmpez",
+      "sourceFilename": "OHM-r2857483.geojson",
+      "sourcePath": "OHM-Boundaries/Transcarpatia/OHM-r2857483.geojson",
+      "sourceFileSha256": "61f221c978489fcd8e543c878ebebb7d2fb062e25c2a8f141becb9cbab594392",
+      "sourceRelationId": 2857483,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: check and improve western boundary",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2690518",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transilvania",
+      "displayName": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourcePeriod": {
+        "start": "1732-12-31",
+        "end": "1765",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2690518",
+      "featureId": "ohm-r2690518",
+      "geometryShard": "ohm-source-other-07.geojson",
+      "sourceDriveFileId": "1ffFcGLq0ZJaMiWV8Y_2yH0OscFQbMlt3",
+      "sourceFilename": "OHM-r2690518.geojson",
+      "sourcePath": "OHM-Boundaries/Transilvania/OHM-r2690518.geojson",
+      "sourceFileSha256": "715218bdb97abf327d5679f85f40ba257bc31bd692dd1dc3fe85835e15ef0f64",
+      "sourceRelationId": 2690518,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: need to figure out what places these are...",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747433",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transilvania",
+      "displayName": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourcePeriod": {
+        "start": "1711-04-29",
+        "end": "1732-12-31",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2747433",
+      "featureId": "ohm-r2747433",
+      "geometryShard": "ohm-source-other-07.geojson",
+      "sourceDriveFileId": "18pUEkHhXRDt0CSYk4ixkE9TvTlbw9Uch",
+      "sourceFilename": "OHM-r2747433.geojson",
+      "sourcePath": "OHM-Boundaries/Transilvania/OHM-r2747433.geojson",
+      "sourceFileSha256": "4fe1caa1c4315fc6a1f5acaba93eb00bf65e948646de3b479fd0ccd61a5e7740",
+      "sourceRelationId": 2747433,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: need to figure out what places these are...",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829384",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transilvania",
+      "displayName": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourcePeriod": {
+        "start": "1851-05-12",
+        "end": "1867-05-29",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "grand_principality",
+      "geometryId": "geom:ohm-r2829384",
+      "featureId": "ohm-r2829384",
+      "geometryShard": "ohm-source-other-07.geojson",
+      "sourceDriveFileId": "1iBqvNISklmcV4DVKo5lvpdvNp5XE1bb7",
+      "sourceFilename": "OHM-r2829384.geojson",
+      "sourcePath": "OHM-Boundaries/Transilvania/OHM-r2829384.geojson",
+      "sourceFileSha256": "dc26bfcc2d38f1e0ea58b4feafbe1a83c918f82c6e2ddf32018beca30a56d108",
+      "sourceRelationId": 2829384,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: need to figure out what places these are...",
+        "fixme:e: needs start_event, end_event, or both",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2878295",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Transilvania",
+      "displayName": {
+        "ro": "Transilvania",
+        "en": "Transylvania"
+      },
+      "sourcePeriod": {
+        "start": "1765",
+        "end": "1851-05-12",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "grand_principality",
+      "geometryId": "geom:ohm-r2690518",
+      "featureId": "ohm-r2878295",
+      "geometryShard": "ohm-source-other-08.geojson",
+      "sourceDriveFileId": "1BXRrbQ3tc27KJaeKphdKWcDSxeMgWylR",
+      "sourceFilename": "OHM-r2878295.geojson",
+      "sourcePath": "OHM-Boundaries/Transilvania/OHM-r2878295.geojson",
+      "sourceFileSha256": "4a7303be62bcb10fd85970b2d167c73b93695a3a8b4e9099f4aa213d7617ab8d",
+      "sourceRelationId": 2878295,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: need to figure out what places these are...",
+        "fixme:e: needs end_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2694215",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Voivodina Sârbească și Banatul Timișan",
+      "displayName": {
+        "ro": "Voivodina Sârbească și Banatul Timișan",
+        "en": "Voivodeship of Serbia and Banat of Temes"
+      },
+      "sourcePeriod": {
+        "start": "1849-11-18",
+        "end": "1860-12-27",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "3",
+      "geometryId": "geom:ohm-r2694215",
+      "featureId": "ohm-r2694215",
+      "geometryShard": "ohm-source-other-08.geojson",
+      "sourceDriveFileId": "109luWsgg86TGSBUBgubzTOZpHhcxkG7S",
+      "sourceFilename": "OHM-r2694215.geojson",
+      "sourcePath": "OHM-Boundaries/Voivodina Sârbească și Banatul Timișan/OHM-r2694215.geojson",
+      "sourceFileSha256": "c0526223fb1a607dfb141ea49820c5e80f12d52fea826ebeec6918cd7a0211d5",
+      "sourceRelationId": 2694215,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2747434",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Chioarului",
+      "displayName": {
+        "ro": "Țara Chioarului",
+        "en": "Kővár District"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1876",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2747434",
+      "featureId": "ohm-r2747434",
+      "geometryShard": "ohm-source-other-08.geojson",
+      "sourceDriveFileId": "1jb7iSmXxfPqyiIqbbq-LH_AM_2ulJsT3",
+      "sourceFilename": "OHM-r2747434.geojson",
+      "sourcePath": "OHM-Boundaries/Țara Chioarului/OHM-r2747434.geojson",
+      "sourceFileSha256": "2667f7f8d19d1bbd4e148b866c181aa4dd43ed4c43e638a3dcdd46a837c62a59",
+      "sourceRelationId": 2747434,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Border is a quite rough; check dates",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747435",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Chioarului",
+      "displayName": {
+        "ro": "Țara Chioarului",
+        "en": "Kővár District"
+      },
+      "sourcePeriod": {
+        "start": "1650",
+        "end": "1851-05-12",
+        "sourceOnly": true,
+        "notes": "Existed from 1549 as a subdivision of Közép-Szolnok."
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2747434",
+      "featureId": "ohm-r2747435",
+      "geometryShard": "ohm-source-other-08.geojson",
+      "sourceDriveFileId": "1keKhTKW9MA6r44OJwUzekBBb8NhMf0kZ",
+      "sourceFilename": "OHM-r2747435.geojson",
+      "sourcePath": "OHM-Boundaries/Țara Chioarului/OHM-r2747435.geojson",
+      "sourceFileSha256": "c87f0498f7969ce6765be641eb034ea48ec00d8750d0d930df884d5513fcf22b",
+      "sourceRelationId": 2747435,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Border is a quite rough; check start_date",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2694164",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Românească",
+      "displayName": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourcePeriod": {
+        "start": "1417",
+        "end": "1420",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2694164",
+      "featureId": "ohm-r2694164",
+      "geometryShard": "ohm-source-other-08.geojson",
+      "sourceDriveFileId": "1dL5rJwvRJW4Gt85TWteaAQuKiAyUZv_4",
+      "sourceFilename": "OHM-r2694164.geojson",
+      "sourcePath": "OHM-Boundaries/Țara Românească/OHM-r2694164.geojson",
+      "sourceFileSha256": "266f4b4981a57e752cbf70091555b60d49bd4a541cfe7320b3f7456aee451660",
+      "sourceRelationId": 2694164,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Turnu Măgurele → Ottomans 1417; Giurgiu → Ottomans 1420; Brăila → Ottomans 1538; returned 1829 (Akkerman Convention/Treaty of Adrianople) (all 3 also retaken 1594-96)",
+        "fixme:e: needs start_event, end_event, or both"
+      ]
+    },
+    {
+      "id": "ohm-r2929115",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Românească",
+      "displayName": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourcePeriod": {
+        "start": "1420",
+        "end": "1538",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2929115",
+      "featureId": "ohm-r2929115",
+      "geometryShard": "ohm-source-other-09.geojson",
+      "sourceDriveFileId": "1__OfGE2K8qZoytfDfbHsgQ3cy9cSZ6PZ",
+      "sourceFilename": "OHM-r2929115.geojson",
+      "sourcePath": "OHM-Boundaries/Țara Românească/OHM-r2929115.geojson",
+      "sourceFileSha256": "76e8dbf05f91557f9f496a612a01139578c5162141103fb562869755482abf94",
+      "sourceRelationId": 2929115,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Turnu Măgurele → Ottomans 1417; Giurgiu → Ottomans 1420; Brăila → Ottomans 1538; returned 1829 (Akkerman Convention/Treaty of Adrianople) (all 3 also retaken 1594-96)",
+        "fixme:e: needs start_event, end_event, or both"
+      ]
+    },
+    {
+      "id": "ohm-r2929116",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Românească",
+      "displayName": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourcePeriod": {
+        "start": "1538",
+        "end": "1829-09-14",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2929116",
+      "featureId": "ohm-r2929116",
+      "geometryShard": "ohm-source-other-09.geojson",
+      "sourceDriveFileId": "1bTKMkEEet2TseJr1KD6Mm98zTnQTGfcF",
+      "sourceFilename": "OHM-r2929116.geojson",
+      "sourcePath": "OHM-Boundaries/Țara Românească/OHM-r2929116.geojson",
+      "sourceFileSha256": "45f831c66016475f1dd77b561d72e90d155935ee4a6a0ad51aa649690ad61028",
+      "sourceRelationId": 2929116,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Turnu Măgurele → Ottomans 1417; Giurgiu → Ottomans 1420; Brăila → Ottomans 1538; returned 1829 (Akkerman Convention/Treaty of Adrianople) (all 3 also retaken 1594-96)",
+        "fixme:e: needs start_event, end_event, or both"
+      ]
+    },
+    {
+      "id": "ohm-r2929117",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Țara Românească",
+      "displayName": {
+        "ro": "Țara Românească",
+        "en": "Principality of Wallachia"
+      },
+      "sourcePeriod": {
+        "start": "1829-09-14",
+        "end": "1859-02-05",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "principality",
+      "geometryId": "geom:ohm-r2929117",
+      "featureId": "ohm-r2929117",
+      "geometryShard": "ohm-source-other-09.geojson",
+      "sourceDriveFileId": "19AFsuleMk7Sb6a4dWGdLaHspHHKgfrby",
+      "sourceFilename": "OHM-r2929117.geojson",
+      "sourcePath": "OHM-Boundaries/Țara Românească/OHM-r2929117.geojson",
+      "sourceFileSha256": "b9775d4c2dd22ae905022feff799b426c717561689808434a61a05341ec6ae10",
+      "sourceRelationId": 2929117,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Turnu Măgurele → Ottomans 1417; Giurgiu → Ottomans 1420; Brăila → Ottomans 1538; returned 1829 (Akkerman Convention/Treaty of Adrianople) (all 3 also retaken 1594-96)",
+        "fixme:e: needs start_event, end_event, or both"
+      ]
+    },
+    {
+      "id": "ohm-r2829529",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Arad",
+      "displayName": {
+        "ro": "Județul Arad",
+        "en": "Arad county"
+      },
+      "sourcePeriod": {
+        "start": "1921-07-26",
+        "end": "1950-09-06",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2829529",
+      "featureId": "ohm-r2829529",
+      "geometryShard": "ohm-source-judete-01.geojson",
+      "sourceDriveFileId": "1WyKBj8ujOjgKGgLCUDzndC8NFHfq_FVR",
+      "sourceFilename": "OHM-r2829529.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Arad/OHM-r2829529.geojson",
+      "sourceFileSha256": "69a2c2f182914649002ebb4ebd589a9c7476436d22346af5fed05c666c2b6d12",
+      "sourceRelationId": 2829529,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: disestablished? 1938-40 (Ținutul Timiș established); uncertain when area south of Arad transferred",
+        "fixme:e: needs start_event"
+      ]
+    },
+    {
+      "id": "ohm-r2943619",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Bacău",
+      "displayName": {
+        "ro": "Județul Bacău",
+        "en": "Bacău County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2943619",
+      "featureId": "ohm-r2943619",
+      "geometryShard": "ohm-source-judete-01.geojson",
+      "sourceDriveFileId": "1UY8GB5GKHsrqzjBlnwTajd2eUxwzO58G",
+      "sourceFilename": "OHM-r2943619.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Bacău/OHM-r2943619.geojson",
+      "sourceFileSha256": "7aabf020b1ecdb2029e320835534eb2e5f3d0a59c7ffc61015f96ce7ed071bdd",
+      "sourceRelationId": 2943619,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2940712",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Botoșani",
+      "displayName": {
+        "ro": "Județul Botoșani",
+        "en": "Botoșani County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2940712",
+      "featureId": "ohm-r2940712",
+      "geometryShard": "ohm-source-judete-01.geojson",
+      "sourceDriveFileId": "1a04eGLVPeci6BkmO_GN5vWft7qexjE4_",
+      "sourceFilename": "OHM-r2940712.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Botoșani/OHM-r2940712.geojson",
+      "sourceFileSha256": "ce26f3f7ac4499cd3da927388db4d1d39b9a72f3b4b0382e5490a92d5784ed67",
+      "sourceRelationId": 2940712,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2945088",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Covurlui",
+      "displayName": {
+        "ro": "Județul Covurlui",
+        "en": "Covurlui County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2945088",
+      "featureId": "ohm-r2945088",
+      "geometryShard": "ohm-source-judete-01.geojson",
+      "sourceDriveFileId": "1m0YlexZyYRaExlGvxAciRoBqikqzXq78",
+      "sourceFilename": "OHM-r2945088.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Covurlui/OHM-r2945088.geojson",
+      "sourceFileSha256": "dcc539672c9c9b4edbbc5ee8735918e5cd302ad791c9c5d23b3ad5c7b68b75c7",
+      "sourceRelationId": 2945088,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2937887",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Dorohoi",
+      "displayName": {
+        "ro": "Județul Dorohoi",
+        "en": "Dorohoi County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": null,
+      "geometryId": "geom:ohm-r2937887",
+      "featureId": "ohm-r2937887",
+      "geometryShard": "ohm-source-judete-01.geojson",
+      "sourceDriveFileId": "1p88n7jG8SzVadXs67QlDtgVWFWyaHq6q",
+      "sourceFilename": "OHM-r2937887.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Dorohoi/OHM-r2937887.geojson",
+      "sourceFileSha256": "b6ecffeaa9d2839f390f10cbf4f6533f28fc29acccf826969dd2fe87b5f956c6",
+      "sourceRelationId": 2937887,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2943671",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Fălciu",
+      "displayName": {
+        "ro": "Județul Fălciu",
+        "en": "Fălciu County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2943671",
+      "featureId": "ohm-r2943671",
+      "geometryShard": "ohm-source-judete-02.geojson",
+      "sourceDriveFileId": "1e40Ce7QjYIquV5KN9--D6PyqwF_bwzf6",
+      "sourceFilename": "OHM-r2943671.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Fălciu/OHM-r2943671.geojson",
+      "sourceFileSha256": "8aa5b041bdf2bfb76459fb24945557c693f24adc05a5908a964d58b50e108459",
+      "sourceRelationId": 2943671,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2943493",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Iași",
+      "displayName": {
+        "ro": "Județul Iași",
+        "en": "Iași County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2943493",
+      "featureId": "ohm-r2943493",
+      "geometryShard": "ohm-source-judete-02.geojson",
+      "sourceDriveFileId": "1FIOwYfKZ9rgqRDnIyHamWY328oRysxYC",
+      "sourceFilename": "OHM-r2943493.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Iași/OHM-r2943493.geojson",
+      "sourceFileSha256": "d34f61e819a3ac7492266d3f3b6893cfd6eacff4627fc4d277cd84898da62dd2",
+      "sourceRelationId": 2943493,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2698191",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Jugastru",
+      "displayName": {
+        "ro": "Județul Jugastru",
+        "en": "Judeţul Jugastru"
+      },
+      "sourcePeriod": {
+        "start": "1941-08-19",
+        "end": "1944-03-31",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2698191",
+      "featureId": "ohm-r2698191",
+      "geometryShard": "ohm-source-judete-02.geojson",
+      "sourceDriveFileId": "1r1TMiL9fk8x8CslIBx3usb7-4WMGg1tp",
+      "sourceFilename": "OHM-r2698191.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Jugastru/OHM-r2698191.geojson",
+      "sourceFileSha256": "f38ad1c59a7af7c5956d3a409672a25eb54cc820df761ccac826e5dcd9276d5e",
+      "sourceRelationId": 2698191,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2829519",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Maramureș",
+      "displayName": {
+        "ro": "Județul Maramureș",
+        "en": "Maramureș county"
+      },
+      "sourcePeriod": {
+        "start": "1921",
+        "end": "1940-08-29",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2829519",
+      "featureId": "ohm-r2829519",
+      "geometryShard": "ohm-source-judete-02.geojson",
+      "sourceDriveFileId": "1wFQiAwyVA_vhMkXYcKeCAsPriF4_q5ke",
+      "sourceFilename": "OHM-r2829519.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Maramureș/OHM-r2829519.geojson",
+      "sourceFileSha256": "d652842478a551b2f8e371b2dafb04448688e29c2370289b04b1d73e42a4b401",
+      "sourceRelationId": 2829519,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2698193",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Moghilău",
+      "displayName": {
+        "ro": "Județul Moghilău",
+        "en": "Judeţul Moghilău"
+      },
+      "sourcePeriod": {
+        "start": "1941-08-19",
+        "end": "1944-03-31",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2698193",
+      "featureId": "ohm-r2698193",
+      "geometryShard": "ohm-source-judete-02.geojson",
+      "sourceDriveFileId": "1Dd78n3MtqjGCyfWy_XrDwRZam_iRo4Rf",
+      "sourceFilename": "OHM-r2698193.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Moghilău/OHM-r2698193.geojson",
+      "sourceFileSha256": "bd818a73ea02a2cbb2ecb3076e4be872cec5bb297138b4cd3bf8d4b90d36d94a",
+      "sourceRelationId": 2698193,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2943485",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Neamț",
+      "displayName": {
+        "ro": "Județul Neamț",
+        "en": "Neamț County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": null,
+      "geometryId": "geom:ohm-r2943485",
+      "featureId": "ohm-r2943485",
+      "geometryShard": "ohm-source-judete-03.geojson",
+      "sourceDriveFileId": "1q2h3RMtjuPdb7gBPQ4uk_ZUGvC1AecB6",
+      "sourceFilename": "OHM-r2943485.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Neamț/OHM-r2943485.geojson",
+      "sourceFileSha256": "b0c27235c67203d46c2906f052510abd89fbe83e932bcbce3c515579d01ad343",
+      "sourceRelationId": 2943485,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2943652",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Putna",
+      "displayName": {
+        "ro": "Județul Putna",
+        "en": "Putna County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2943652",
+      "featureId": "ohm-r2943652",
+      "geometryShard": "ohm-source-judete-03.geojson",
+      "sourceDriveFileId": "1ngte0ROJAeQUpwyhHIy5HbLDS4FINFvT",
+      "sourceFilename": "OHM-r2943652.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Putna/OHM-r2943652.geojson",
+      "sourceFileSha256": "08fb4a8a15fd64a2ff2e6f3b0e3f3be80b45345c5c68e7a5f8ba16c95e0f78c7",
+      "sourceRelationId": 2943652,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2943496",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Roman",
+      "displayName": {
+        "ro": "Județul Roman",
+        "en": "Roman County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2943496",
+      "featureId": "ohm-r2943496",
+      "geometryShard": "ohm-source-judete-03.geojson",
+      "sourceDriveFileId": "1AxDc_XCD1EffxgnZgN5D7BgKDPZZ1Ung",
+      "sourceFilename": "OHM-r2943496.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Roman/OHM-r2943496.geojson",
+      "sourceFileSha256": "778042668c22391766e422917574533dd393f191f5f9ffd0d049af76044adb67",
+      "sourceRelationId": 2943496,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2940721",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Suceava",
+      "displayName": {
+        "ro": "Județul Suceava",
+        "en": "Suceava County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": null,
+      "geometryId": "geom:ohm-r2940721",
+      "featureId": "ohm-r2940721",
+      "geometryShard": "ohm-source-judete-03.geojson",
+      "sourceDriveFileId": "1nB7TVULJeyw5ooMfmRWtmpei7pyvRFW4",
+      "sourceFilename": "OHM-r2940721.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Suceava/OHM-r2940721.geojson",
+      "sourceFileSha256": "0ce87e08484e46b116b2ae1e6dcd2979146bff9f874665a9569e7139942512c9",
+      "sourceRelationId": 2940721,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2945087",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Tecuci",
+      "displayName": {
+        "ro": "Județul Tecuci",
+        "en": "Tecuci County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2945087",
+      "featureId": "ohm-r2945087",
+      "geometryShard": "ohm-source-judete-03.geojson",
+      "sourceDriveFileId": "1WMDCOQyiPem-p-rQ94WdqhI6WJc64hoo",
+      "sourceFilename": "OHM-r2945087.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Tecuci/OHM-r2945087.geojson",
+      "sourceFileSha256": "c3bfb7e509cbf6d257fdf4eaf5d6f85b82e294ccdcf39047875129763e682367",
+      "sourceRelationId": 2945087,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2829528",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Timiș-Torontal",
+      "displayName": {
+        "ro": "Județul Timiș-Torontal",
+        "en": "Timiș-Torontal County"
+      },
+      "sourcePeriod": {
+        "start": "1920-06-04",
+        "end": "1950-09-06",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2829528",
+      "featureId": "ohm-r2829528",
+      "geometryShard": "ohm-source-judete-04.geojson",
+      "sourceDriveFileId": "1CnW5AZE1XVc9Kj85twGmw28XqS0xvAru",
+      "sourceFilename": "OHM-r2829528.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Timiș-Torontal/OHM-r2829528.geojson",
+      "sourceFileSha256": "350c1c12dcad815392bbb4ef35743b6a88a74b70e3aa69424ef8b47a157b1017",
+      "sourceRelationId": 2829528,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Serbia-Romania border adjustment 1923-11-24; disestablished? 1938-40 (Ținutul Timiș established); uncertain when area south of Arad transferred",
+        "fixme:e: needs start_event"
+      ]
+    },
+    {
+      "id": "ohm-r2698192",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Tulcin",
+      "displayName": {
+        "ro": "Județul Tulcin",
+        "en": "Judeţul Tulcin"
+      },
+      "sourcePeriod": {
+        "start": "1941-08-19",
+        "end": "1944-03-31",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "4",
+      "geometryId": "geom:ohm-r2698192",
+      "featureId": "ohm-r2698192",
+      "geometryShard": "ohm-source-judete-04.geojson",
+      "sourceDriveFileId": "1ThBq_MKYpB-6WcblE3FHNtsJLAC11YhH",
+      "sourceFilename": "OHM-r2698192.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Tulcin/OHM-r2698192.geojson",
+      "sourceFileSha256": "cb70857edf3b0a969e9ff24852b99df26f365860b28371186a8a995e48991f65",
+      "sourceRelationId": 2698192,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2945089",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Tutova",
+      "displayName": {
+        "ro": "Județul Tutova",
+        "en": "Tutova County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2945089",
+      "featureId": "ohm-r2945089",
+      "geometryShard": "ohm-source-judete-04.geojson",
+      "sourceDriveFileId": "1AbIXLtrhw4bOHVWrMDmyPYJC1nKXLuT5",
+      "sourceFilename": "OHM-r2945089.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Tutova/OHM-r2945089.geojson",
+      "sourceFileSha256": "0d6ead00078ca7f1b2e5b63648422d8ef4a48e44fb4efeb158c62600307c3b5e",
+      "sourceRelationId": 2945089,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2943670",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Județe istorice/Județul Vaslui",
+      "displayName": {
+        "ro": "Județul Vaslui",
+        "en": "Vaslui County"
+      },
+      "sourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "5",
+      "geometryId": "geom:ohm-r2943670",
+      "featureId": "ohm-r2943670",
+      "geometryShard": "ohm-source-judete-04.geojson",
+      "sourceDriveFileId": "18CFCQ0i8xiV6QAYwXuyv3vKvde0kFTHH",
+      "sourceFilename": "OHM-r2943670.geojson",
+      "sourcePath": "OHM-Boundaries/Județe istorice/Județul Vaslui/OHM-r2943670.geojson",
+      "sourceFileSha256": "d9a21d6856b08ca6a524002cb5a251d0a59207fe146e42fda63284b4f5cc52d6",
+      "sourceRelationId": 2943670,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2928927",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Alba de Jos",
+      "displayName": {
+        "ro": "Comitatul Alba de Jos",
+        "en": "Alsó-Fehér County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928927",
+      "featureId": "ohm-r2928927",
+      "geometryShard": "ohm-source-comitate-01.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928927.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Alba de Jos/OHM-r2928927.geojson",
+      "sourceFileSha256": "d7fec4dc1b92d9dfeef083fff494cbad91fc16660c150d2855b85419390abdb6",
+      "sourceRelationId": 2928927,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829223",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Arad",
+      "displayName": {
+        "ro": "Arad vármegye",
+        "en": "Arad county"
+      },
+      "sourcePeriod": {
+        "start": "1854-04-24",
+        "end": "1860-10-20",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829223",
+      "featureId": "ohm-r2829223",
+      "geometryShard": "ohm-source-comitate-01.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829223.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Arad/OHM-r2829223.geojson",
+      "sourceFileSha256": "ad8209e2971625fd56a06f2ddf132f804ac536a3cae5273d38db8b30ce594b67",
+      "sourceRelationId": 2829223,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829224",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Arad",
+      "displayName": {
+        "ro": "Arad vármegye",
+        "en": "Arad county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829224",
+      "featureId": "ohm-r2829224",
+      "geometryShard": "ohm-source-comitate-01.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829224.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Arad/OHM-r2829224.geojson",
+      "sourceFileSha256": "8dc01db491e03b76636a360c6709a4514cf6a0244347908e003b4fd45670b3fc",
+      "sourceRelationId": 2829224,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829225",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Arad",
+      "displayName": {
+        "ro": "Arad vármegye",
+        "en": "Arad county"
+      },
+      "sourcePeriod": {
+        "start": "1744",
+        "end": "1790-04-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829225",
+      "featureId": "ohm-r2829225",
+      "geometryShard": "ohm-source-comitate-01.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829225.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Arad/OHM-r2829225.geojson",
+      "sourceFileSha256": "58cf53839a69b6c8dac1fe760bebb3e791f7342e6d8c422b4d2f54bb859fd9d6",
+      "sourceRelationId": 2829225,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829740",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Arad",
+      "displayName": {
+        "ro": "Arad vármegye",
+        "en": "Arad county"
+      },
+      "sourcePeriod": {
+        "start": "1790-04-26",
+        "end": "1850-09-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829740",
+      "featureId": "ohm-r2829740",
+      "geometryShard": "ohm-source-comitate-01.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829740.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Arad/OHM-r2829740.geojson",
+      "sourceFileSha256": "77f792dd73c1d6aa29a0cba0faef89b0b0fe48759206a91e553d848331456ee3",
+      "sourceRelationId": 2829740,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829534",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Bereg-Ugocsa",
+      "displayName": {
+        "ro": "Bereg-Ugocsa vármegye",
+        "en": "Bereg-Ugocsa county"
+      },
+      "sourcePeriod": {
+        "start": "1850-09-13",
+        "end": "1860-10-20",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829534",
+      "featureId": "ohm-r2829534",
+      "geometryShard": "ohm-source-comitate-02.geojson",
+      "sourceDriveFileId": "1J8b0ORtV5dJbWGKFTm3dhL2jchpN-k1z",
+      "sourceFilename": "OHM-r2829534.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Bereg-Ugocsa/OHM-r2829534.geojson",
+      "sourceFileSha256": "2a37dff3c2aeaf1c551f7b6c503e652e0a0c56ec2d9e4178ddbd110786855b46",
+      "sourceRelationId": 2829534,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:wd: needs wikidata tag"
+      ]
+    },
+    {
+      "id": "ohm-r2829532",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Bereg",
+      "displayName": {
+        "ro": "Bereg vármegye",
+        "en": "Bereg county"
+      },
+      "sourcePeriod": {
+        "start": "1200",
+        "end": "1850-09-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829532",
+      "featureId": "ohm-r2829532",
+      "geometryShard": "ohm-source-comitate-02.geojson",
+      "sourceDriveFileId": "1M6bvs73AqGjvd4fJuGl-LoYClnXpziIh",
+      "sourceFilename": "OHM-r2829532.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Bereg/OHM-r2829532.geojson",
+      "sourceFileSha256": "4a94cbbe974c205b1c5f5c1e3f754f0b4468c1b14f06d6d7fe2ddca3bfe040f9",
+      "sourceRelationId": 2829532,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2829533",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Bereg",
+      "displayName": {
+        "ro": "Bereg vármegye",
+        "en": "Bereg county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829533",
+      "featureId": "ohm-r2829533",
+      "geometryShard": "ohm-source-comitate-02.geojson",
+      "sourceDriveFileId": "1goT_gbgQVBtB_FV4Ckmubl-ZZrTTelQA",
+      "sourceFilename": "OHM-r2829533.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Bereg/OHM-r2829533.geojson",
+      "sourceFileSha256": "f9a6965f4450bd6543f4224697ba9133b68a8ce6f9b3a08baaaa8915bd85d6e1",
+      "sourceRelationId": 2829533,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2929705",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Bereg",
+      "displayName": {
+        "ro": "Bereg vármegye",
+        "en": "Bereg county"
+      },
+      "sourcePeriod": {
+        "start": "1860-10-20",
+        "end": "1876-06-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2929705",
+      "featureId": "ohm-r2929705",
+      "geometryShard": "ohm-source-comitate-02.geojson",
+      "sourceDriveFileId": "1bu64ky2h4AgMzdZ3LE25n5Gk0pkNEYjm",
+      "sourceFilename": "OHM-r2929705.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Bereg/OHM-r2929705.geojson",
+      "sourceFileSha256": "eabf09d15298d51a89082645dc73afbc7df86e76a322550e5b08630c4c130822",
+      "sourceRelationId": 2929705,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2829450",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Bihor",
+      "displayName": {
+        "ro": "Comitatul Bihor",
+        "en": "Bihar county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829450",
+      "featureId": "ohm-r2829450",
+      "geometryShard": "ohm-source-comitate-02.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829450.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Bihor/OHM-r2829450.geojson",
+      "sourceFileSha256": "2d993e26084df3d5df0797e0cc7cd1ca471827c16b71aaf33d78fe943006ee03",
+      "sourceRelationId": 2829450,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928938",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Bistrița-Năsăud",
+      "displayName": {
+        "ro": "Comitatul Bistriţa-Năsăud",
+        "en": "Beszterce-Naszód County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928938",
+      "featureId": "ohm-r2928938",
+      "geometryShard": "ohm-source-comitate-03.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928938.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Bistrița-Năsăud/OHM-r2928938.geojson",
+      "sourceFileSha256": "d2c96278fc8b9309be237ff9052197913eba18a1b8b345affe4e1946ab715ccb",
+      "sourceRelationId": 2928938,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928931",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Brașov",
+      "displayName": {
+        "ro": "Comitatul Brașov",
+        "en": "Brassó County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928931",
+      "featureId": "ohm-r2928931",
+      "geometryShard": "ohm-source-comitate-03.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928931.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Brașov/OHM-r2928931.geojson",
+      "sourceFileSha256": "4e97209d201e4db3340613abed0816d97d63e97c87889c2cf3224bd08ca327b7",
+      "sourceRelationId": 2928931,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: At some point there was a Brassó-Háromszék boundary change (near the border with Romania)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829205",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Békés-Csanád",
+      "displayName": {
+        "ro": "Békés-Csanád vármegye",
+        "en": "Békés-Csanád county"
+      },
+      "sourcePeriod": {
+        "start": "1854-04-06",
+        "end": "1860-10-20",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829205",
+      "featureId": "ohm-r2829205",
+      "geometryShard": "ohm-source-comitate-03.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829205.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Békés-Csanád/OHM-r2829205.geojson",
+      "sourceFileSha256": "779579d117f617d31ead267a22a1164b3bd1f1ec2d5cfffa7c3e57c6213e1796",
+      "sourceRelationId": 2829205,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:wd: needs wikidata tag"
+      ]
+    },
+    {
+      "id": "ohm-r2829207",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Békés",
+      "displayName": {
+        "ro": "Békés vármegye",
+        "en": "Békés county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829207",
+      "featureId": "ohm-r2829207",
+      "geometryShard": "ohm-source-comitate-03.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829207.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Békés/OHM-r2829207.geojson",
+      "sourceFileSha256": "a0f4cc6e6f6f74c092f883d4893dba485b4932738eda39b657348941e32d68b9",
+      "sourceRelationId": 2829207,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829209",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Békés",
+      "displayName": {
+        "ro": "Békés vármegye",
+        "en": "Békés county"
+      },
+      "sourcePeriod": {
+        "start": "1790-04-26",
+        "end": "1850-09-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829209",
+      "featureId": "ohm-r2829209",
+      "geometryShard": "ohm-source-comitate-03.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829209.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Békés/OHM-r2829209.geojson",
+      "sourceFileSha256": "b97d4a3b117be5110041a42927beb9f23322d55c037a1f044510a45458880573",
+      "sourceRelationId": 2829209,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829217",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Békés",
+      "displayName": {
+        "ro": "Békés vármegye",
+        "en": "Békés county"
+      },
+      "sourcePeriod": {
+        "start": "1921-07-26",
+        "end": "1946-02-01",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829217",
+      "featureId": "ohm-r2829217",
+      "geometryShard": "ohm-source-comitate-04.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829217.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Békés/OHM-r2829217.geojson",
+      "sourceFileSha256": "d0b5e14d6f51e47749b44c453edb6689ede62d45f32cdb49353f72e712a061d3",
+      "sourceRelationId": 2829217,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747633",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Caraș-Severin",
+      "displayName": {
+        "ro": "Comitatul Caraș-Severin",
+        "en": "Krassó-Szörény County"
+      },
+      "sourcePeriod": {
+        "start": "1881",
+        "end": "1920-06-04",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747633",
+      "featureId": "ohm-r2747633",
+      "geometryShard": "ohm-source-comitate-04.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747633.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Caraș-Severin/OHM-r2747633.geojson",
+      "sourceFileSha256": "262958cf1f453988434f7b758f85768aa63230762a30708ba5297f066fb0dd08",
+      "sourceRelationId": 2747633,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The boundary between Temes and Krassó(-Szörény) counties seems to have been changed slightly in several places between the 2nd and 3rd surveys; the dates for these changes remain obscure.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747447",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Caraș",
+      "displayName": {
+        "ro": "Comitatul Caraș",
+        "en": "Krassó County"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1873-08-08",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747447",
+      "featureId": "ohm-r2747447",
+      "geometryShard": "ohm-source-comitate-04.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747447.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Caraș/OHM-r2747447.geojson",
+      "sourceFileSha256": "7d9dee31a55cc7ace83ef7d5a990bf3180ba1721bc6260fa9c7491886112bce8",
+      "sourceRelationId": 2747447,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The boundary between Temes and Krassó counties seems to have been changed slightly in several places between the 2nd and 3rd surveys; the dates for these changes remain obscure.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747448",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Caraș",
+      "displayName": {
+        "ro": "Comitatul Caraș",
+        "en": "Krassó County"
+      },
+      "sourcePeriod": {
+        "start": "1779-04-23",
+        "end": "1849-11-18",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747447",
+      "featureId": "ohm-r2747448",
+      "geometryShard": "ohm-source-comitate-04.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747448.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Caraș/OHM-r2747448.geojson",
+      "sourceFileSha256": "e57516f9e03aec5017acfe2de251d270f9b9f06bf0584a85c5d87ca636d367ac",
+      "sourceRelationId": 2747448,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The boundary between Temes and Krassó counties seems to have been changed slightly in several places between the 2nd and 3rd surveys; the dates for these changes remain obscure.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747635",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Caraș",
+      "displayName": {
+        "ro": "Comitatul Caraș",
+        "en": "Krassó County"
+      },
+      "sourcePeriod": {
+        "start": "1873-08-08",
+        "end": "1881",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747635",
+      "featureId": "ohm-r2747635",
+      "geometryShard": "ohm-source-comitate-04.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747635.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Caraș/OHM-r2747635.geojson",
+      "sourceFileSha256": "3d19b9e2ff4e2128c85fc7945daef1887274462c117605a538224cb302f2d07d",
+      "sourceRelationId": 2747635,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The boundary between Temes and Krassó counties seems to have been changed slightly in several places between the 2nd and 3rd surveys; the dates for these changes remain obscure.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829208",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Cenad",
+      "displayName": {
+        "ro": "Comitatul Cenad",
+        "en": "Csanád county"
+      },
+      "sourcePeriod": {
+        "start": "1790-04-26",
+        "end": "1850-09-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829208",
+      "featureId": "ohm-r2829208",
+      "geometryShard": "ohm-source-comitate-05.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829208.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Cenad/OHM-r2829208.geojson",
+      "sourceFileSha256": "690b47e8d3d582a9005aeb671245c7a41305b40f2a488e337c3ec376a0a1c641",
+      "sourceRelationId": 2829208,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928934",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Ciuc",
+      "displayName": {
+        "ro": "Comitatul Ciuc",
+        "en": "Csík County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928934",
+      "featureId": "ohm-r2928934",
+      "geometryShard": "ohm-source-comitate-05.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928934.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Ciuc/OHM-r2928934.geojson",
+      "sourceFileSha256": "33edb25ebf42035f7661c9474e37a543f6d23cfd7544ff3413b0578e4c932265",
+      "sourceRelationId": 2928934,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928936",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Cluj",
+      "displayName": {
+        "ro": "Comitatul Cluj",
+        "en": "Kolozs County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928936",
+      "featureId": "ohm-r2928936",
+      "geometryShard": "ohm-source-comitate-05.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928936.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Cluj/OHM-r2928936.geojson",
+      "sourceFileSha256": "b1e13f21a33bf4b83554d871b45dc273d9a89fd78fb7f643ea02161bececac71",
+      "sourceRelationId": 2928936,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829215",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Csanád-Arad-Torontál",
+      "displayName": {
+        "ro": "Csanád, Arad és Torontál k.e.e. vármegye",
+        "en": "Csanád-Arad-Torontál county"
+      },
+      "sourcePeriod": {
+        "start": "1923",
+        "end": "1945",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829215",
+      "featureId": "ohm-r2829215",
+      "geometryShard": "ohm-source-comitate-05.geojson",
+      "sourceDriveFileId": "1jhpqP2BpU3J4NRwmqp6QdBcq80aZWoHQ",
+      "sourceFilename": "OHM-r2829215.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Csanád-Arad-Torontál/OHM-r2829215.geojson",
+      "sourceFileSha256": "ce606a7d04274057c4d2f0ee1c4c8c5e4ee676c29228cc7a62dc0682d41d454b",
+      "sourceRelationId": 2829215,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829086",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Csongrád",
+      "displayName": {
+        "ro": "Csongrád vármegye",
+        "en": "Csongrád county"
+      },
+      "sourcePeriod": {
+        "start": "1790-04-26",
+        "end": "1876-06-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829086",
+      "featureId": "ohm-r2829086",
+      "geometryShard": "ohm-source-comitate-05.geojson",
+      "sourceDriveFileId": "1pEl4bi__axKRKSJ0Rx3En_UALFohvWNl",
+      "sourceFilename": "OHM-r2829086.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Csongrád/OHM-r2829086.geojson",
+      "sourceFileSha256": "a64268c86a18a4c2f0dbef624fa9c9a210a8c2f32f041ae60513b874ae895baf",
+      "sourceRelationId": 2829086,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829212",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Csongrád",
+      "displayName": {
+        "ro": "Csongrád vármegye",
+        "en": "Csongrád county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1908-09-21",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829212",
+      "featureId": "ohm-r2829212",
+      "geometryShard": "ohm-source-comitate-06.geojson",
+      "sourceDriveFileId": "175AoIcg9uPcb09uRDlrqrKLD6DynJRyq",
+      "sourceFilename": "OHM-r2829212.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Csongrád/OHM-r2829212.geojson",
+      "sourceFileSha256": "3d58615228ba4059c94e3b1e2af88b3ed3dfdb3a60dd4a4b7c3cf9ec4f890575",
+      "sourceRelationId": 2829212,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829219",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Csongrád",
+      "displayName": {
+        "ro": "Csongrád vármegye",
+        "en": "Csongrád county"
+      },
+      "sourcePeriod": {
+        "start": "1921-07-26",
+        "end": "1941-12-14",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829219",
+      "featureId": "ohm-r2829219",
+      "geometryShard": "ohm-source-comitate-06.geojson",
+      "sourceDriveFileId": "121EN3Y8eqluS2NtGjzfLvSiJCSfky148",
+      "sourceFilename": "OHM-r2829219.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Csongrád/OHM-r2829219.geojson",
+      "sourceFileSha256": "a8a744d5c086aa6828d83a5fd8fb7389a4e78cb3c49339b38011ead45664de05",
+      "sourceRelationId": 2829219,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs end_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829220",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Csongrád",
+      "displayName": {
+        "ro": "Csongrád vármegye",
+        "en": "Csongrád county"
+      },
+      "sourcePeriod": {
+        "start": "1941-12-14",
+        "end": "1944",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829220",
+      "featureId": "ohm-r2829220",
+      "geometryShard": "ohm-source-comitate-06.geojson",
+      "sourceDriveFileId": "1kJKmtUermnJtRa_V5MpZh3zStg2pGXPv",
+      "sourceFilename": "OHM-r2829220.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Csongrád/OHM-r2829220.geojson",
+      "sourceFileSha256": "45df71804a582a3c4c4926460aa92678476151b1049f48e7616b28df572a051a",
+      "sourceRelationId": 2829220,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829221",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Csongrád",
+      "displayName": {
+        "ro": "Csongrád vármegye",
+        "en": "Csongrád county"
+      },
+      "sourcePeriod": {
+        "start": "1908-09-21",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829221",
+      "featureId": "ohm-r2829221",
+      "geometryShard": "ohm-source-comitate-06.geojson",
+      "sourceDriveFileId": "164T913AlbN2Sf7uZwdGeT3MaCOGTn9AW",
+      "sourceFilename": "OHM-r2829221.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Csongrád/OHM-r2829221.geojson",
+      "sourceFileSha256": "d5a1e2649726e9c1a2636376cea45131b9282aed0c1e6d3dba6a824b899129b1",
+      "sourceRelationId": 2829221,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928928",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Făgăraș",
+      "displayName": {
+        "ro": "Comitatul Făgăraș",
+        "en": "Fogaras County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928928",
+      "featureId": "ohm-r2928928",
+      "geometryShard": "ohm-source-comitate-06.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928928.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Făgăraș/OHM-r2928928.geojson",
+      "sourceFileSha256": "47650280545329096b759047b03b6207ddd6df2f126d0c4fff67fa5a5e3f168a",
+      "sourceRelationId": 2928928,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928925",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Hunedoara",
+      "displayName": {
+        "ro": "Comitatul Hunedoara",
+        "en": "Hunyad County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928925",
+      "featureId": "ohm-r2928925",
+      "geometryShard": "ohm-source-comitate-07.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928925.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Hunedoara/OHM-r2928925.geojson",
+      "sourceFileSha256": "332531fbcf5f92d1d13389bc4196ab19ec23ede3c2e42668831ddc453f9bcf81",
+      "sourceRelationId": 2928925,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: At some point there was a Szeben-Hunyad boundary change; Figure out when boundary with Romania/Wallachia changed (north-east of Petroșani)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747429",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Kraszna",
+      "displayName": {
+        "ro": "Kraszna vármegye",
+        "en": "Kraszna County"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1876-06-18",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747429",
+      "featureId": "ohm-r2747429",
+      "geometryShard": "ohm-source-comitate-07.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747429.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Kraszna/OHM-r2747429.geojson",
+      "sourceFileSha256": "2514fcf1247f3231a5ff59ae579b48d9225435c057a65a62735cf28957d28cfd",
+      "sourceRelationId": 2747429,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747431",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Kraszna",
+      "displayName": {
+        "ro": "Kraszna vármegye",
+        "en": "Kraszna County"
+      },
+      "sourcePeriod": {
+        "start": "1164",
+        "end": "1851-05-12",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747429",
+      "featureId": "ohm-r2747431",
+      "geometryShard": "ohm-source-comitate-07.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747431.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Kraszna/OHM-r2747431.geojson",
+      "sourceFileSha256": "232b8c9ccf946435ff959d9860acf34bf8b3fdf22cb2227189fa908f226018fd",
+      "sourceRelationId": 2747431,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: There seem to have been some enclaves within this county until at least the early 19th century which are not yet shown",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747430",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Közép-Szolnok",
+      "displayName": {
+        "ro": "Közép-Szolnok vármegye",
+        "en": "Közép-Szolnok County"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1876-06-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747430",
+      "featureId": "ohm-r2747430",
+      "geometryShard": "ohm-source-comitate-07.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747430.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Közép-Szolnok/OHM-r2747430.geojson",
+      "sourceFileSha256": "320542f20207863b5391f4a317279e73f0bd66da9b9ac067bb367e032bcf6ae4",
+      "sourceRelationId": 2747430,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747432",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Közép-Szolnok",
+      "displayName": {
+        "ro": "Közép-Szolnok vármegye",
+        "en": "Közép-Szolnok County"
+      },
+      "sourcePeriod": {
+        "start": "1650",
+        "end": "1851-05-12",
+        "sourceOnly": true,
+        "notes": "Mid-17th century (included Kővárvidék until then). Existed at least by the 16th century."
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747432",
+      "featureId": "ohm-r2747432",
+      "geometryShard": "ohm-source-comitate-07.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747432.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Közép-Szolnok/OHM-r2747432.geojson",
+      "sourceFileSha256": "c661b28179e01df4e43e366155f10ca2c8662e30a48f6419f7ec631c1bd79a96",
+      "sourceRelationId": 2747432,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: There seem to have been some enclaves within this county until at least the early 19th century which are not yet shown",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829353",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Maramureș",
+      "displayName": {
+        "ro": "Comitatul Maramureș",
+        "en": "Máramaros county"
+      },
+      "sourcePeriod": {
+        "start": "1850-09-13",
+        "end": "1860-10-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829353",
+      "featureId": "ohm-r2829353",
+      "geometryShard": "ohm-source-comitate-08.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829353.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Maramureș/OHM-r2829353.geojson",
+      "sourceFileSha256": "b6378c521ff6608294fc892ccc97132009befd3fc092a3a48b289257baa9e880",
+      "sourceRelationId": 2829353,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829357",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Maramureș",
+      "displayName": {
+        "ro": "Comitatul Maramureș",
+        "en": "Máramaros county"
+      },
+      "sourcePeriod": {
+        "start": "1860-10-20",
+        "end": "1920-06-03",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829357",
+      "featureId": "ohm-r2829357",
+      "geometryShard": "ohm-source-comitate-08.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829357.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Maramureș/OHM-r2829357.geojson",
+      "sourceFileSha256": "c963410d472ba4c6cc76a06927fe59781dc3d5f93cce445bb99987921f40384d",
+      "sourceRelationId": 2829357,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829358",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Maramureș",
+      "displayName": {
+        "ro": "Comitatul Maramureș",
+        "en": "Máramaros county"
+      },
+      "sourcePeriod": {
+        "start": "1402",
+        "end": "1850-09-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829357",
+      "featureId": "ohm-r2829358",
+      "geometryShard": "ohm-source-comitate-08.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829358.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Maramureș/OHM-r2829358.geojson",
+      "sourceFileSha256": "d0143dbc4350facc7859b45213321f33334b62de15a82405b847f2658c18f072",
+      "sourceRelationId": 2829358,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928937",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Mureș-Turda",
+      "displayName": {
+        "ro": "Comitatul Mureş-Turda",
+        "en": "Maros-Torda County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928937",
+      "featureId": "ohm-r2928937",
+      "geometryShard": "ohm-source-comitate-08.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928937.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Mureș-Turda/OHM-r2928937.geojson",
+      "sourceFileSha256": "2b9696e0d137cf4a4235898ed65cdc4254aec0c883454db78a866fa76a914b73",
+      "sourceRelationId": 2928937,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928933",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Odorhei",
+      "displayName": {
+        "ro": "Comitatul Odorhei",
+        "en": "Udvarhely County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928933",
+      "featureId": "ohm-r2928933",
+      "geometryShard": "ohm-source-comitate-08.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928933.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Odorhei/OHM-r2928933.geojson",
+      "sourceFileSha256": "6f0220b60363d4608711f4c9746bfb4dca25618ae6513728c1bff62a8d541292",
+      "sourceRelationId": 2928933,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747636",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Severin",
+      "displayName": {
+        "ro": "Comitatul Severin",
+        "en": "Szörény County"
+      },
+      "sourcePeriod": {
+        "start": "1873-08-08",
+        "end": "1881",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747636",
+      "featureId": "ohm-r2747636",
+      "geometryShard": "ohm-source-comitate-09.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747636.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Severin/OHM-r2747636.geojson",
+      "sourceFileSha256": "49778e220ab317d71ca508cae48fc5d87eb794056da44e48f9d5e100ad834c38",
+      "sourceRelationId": 2747636,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928926",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Sibiu",
+      "displayName": {
+        "ro": "Comitatul Sibiu",
+        "en": "Szeben County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928926",
+      "featureId": "ohm-r2928926",
+      "geometryShard": "ohm-source-comitate-09.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928926.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Sibiu/OHM-r2928926.geojson",
+      "sourceFileSha256": "a64694f4bb3c690194b0bae38047e3bf20d663319fe1560b6b03fa8cc9134984",
+      "sourceRelationId": 2928926,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: At some point there was a Szeben-Hunyad boundary change",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928939",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Solnoc-Dăbâca",
+      "displayName": {
+        "ro": "Comitatul Solnoc-Dăbâca",
+        "en": "Szolnok-Doboka County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928939",
+      "featureId": "ohm-r2928939",
+      "geometryShard": "ohm-source-comitate-09.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928939.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Solnoc-Dăbâca/OHM-r2928939.geojson",
+      "sourceFileSha256": "014287dde576cf00f7472e7a9efc4480fff5396159fd06c98af2ea585b142df9",
+      "sourceRelationId": 2928939,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829379",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Szabolcs",
+      "displayName": {
+        "ro": "Szabolcs vármegye",
+        "en": "Szabolcs county"
+      },
+      "sourcePeriod": {
+        "start": "1854-04-06",
+        "end": "1860-10-20",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829379",
+      "featureId": "ohm-r2829379",
+      "geometryShard": "ohm-source-comitate-09.geojson",
+      "sourceDriveFileId": "1AeiUmh0g_hGDZqQSSWJfF6EWVAGInkbw",
+      "sourceFilename": "OHM-r2829379.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Szabolcs/OHM-r2829379.geojson",
+      "sourceFileSha256": "81016ae6d2beb67d43bfac4a5bdd255b130c2608d29168d7fff5b1917a4c3ad1",
+      "sourceRelationId": 2829379,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "ohm-r2829510",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Szabolcs",
+      "displayName": {
+        "ro": "Szabolcs vármegye",
+        "en": "Szabolcs county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1923",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829510",
+      "featureId": "ohm-r2829510",
+      "geometryShard": "ohm-source-comitate-09.geojson",
+      "sourceDriveFileId": "1wkX4m0WHV_XijJ_1Baj4WG8EitdLe5XX",
+      "sourceFilename": "OHM-r2829510.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Szabolcs/OHM-r2829510.geojson",
+      "sourceFileSha256": "cac435b63824d2c31b6ad2e27ba3eff694e5b4ef55480c80e1dbe63fad7e1723",
+      "sourceRelationId": 2829510,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829716",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Szabolcs",
+      "displayName": {
+        "ro": "Szabolcs vármegye",
+        "en": "Szabolcs county"
+      },
+      "sourcePeriod": {
+        "start": "1699-01-26",
+        "end": "1800",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829716",
+      "featureId": "ohm-r2829716",
+      "geometryShard": "ohm-source-comitate-10.geojson",
+      "sourceDriveFileId": "1QZjSiBLpo3F8Wz5nN4MiM17MVYU2hGq8",
+      "sourceFilename": "OHM-r2829716.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Szabolcs/OHM-r2829716.geojson",
+      "sourceFileSha256": "65508da55ba297839fee65b09d8a01fb0fbc400453bc289fd0da26408dc3c1e2",
+      "sourceRelationId": 2829716,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Mihályfalva should maybe be an exclave; maybe remove Acsád; check boundaries with Hajdú district",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829717",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Szabolcs",
+      "displayName": {
+        "ro": "Szabolcs vármegye",
+        "en": "Szabolcs county"
+      },
+      "sourcePeriod": {
+        "start": "1824",
+        "end": "1850-09-13",
+        "sourceOnly": true,
+        "notes": "arbitrary: chosen to coinside with Borsod-Abaúj boundary change"
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829717",
+      "featureId": "ohm-r2829717",
+      "geometryShard": "ohm-source-comitate-10.geojson",
+      "sourceDriveFileId": "1PI0xPgdvYcmB-NcpKHUKDbgFeo1hqQAj",
+      "sourceFilename": "OHM-r2829717.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Szabolcs/OHM-r2829717.geojson",
+      "sourceFileSha256": "f2473e42a0ead2a962f2db1e22c246f8bed689e6f59c8ea91ba187d9ea7d0529",
+      "sourceRelationId": 2829717,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Mihályfalva should maybe be an exclave; maybe remove Acsád; check boundaries with Hajdú district",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829719",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Szabolcs",
+      "displayName": {
+        "ro": "Szabolcs vármegye",
+        "en": "Szabolcs county"
+      },
+      "sourcePeriod": {
+        "start": "1800",
+        "end": "1824",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829719",
+      "featureId": "ohm-r2829719",
+      "geometryShard": "ohm-source-comitate-10.geojson",
+      "sourceDriveFileId": "14yuqeqHluNnANo1N-2ULub9kDK-GvKNH",
+      "sourceFilename": "OHM-r2829719.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Szabolcs/OHM-r2829719.geojson",
+      "sourceFileSha256": "07a3eb52c4e134a8573142e86b8d50505938c1a13b394ab30f933c928328f6c3",
+      "sourceRelationId": 2829719,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Mihályfalva should maybe be an exclave; maybe remove Acsád; check boundaries with Hajdú district",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829407",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Sălaj",
+      "displayName": {
+        "ro": "Comitatul Sălaj",
+        "en": "Szilágy County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829407",
+      "featureId": "ohm-r2829407",
+      "geometryShard": "ohm-source-comitate-10.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829407.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Sălaj/OHM-r2829407.geojson",
+      "sourceFileSha256": "726f63fdd34c46b3f3d858745f3e1d4f9e5265c0fcaee7f0b4758efaa309ffa6",
+      "sourceRelationId": 2829407,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries and make sure borders match those of Szilágy throughout (currently shared with Közép-Szolnok/Kraszna from the 2nd survey – mid-19c.)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829380",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Sătmar",
+      "displayName": {
+        "ro": "Comitatul Sătmar",
+        "en": "Szatmár county"
+      },
+      "sourcePeriod": {
+        "start": "1699-01-26",
+        "end": "1800",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829380",
+      "featureId": "ohm-r2829380",
+      "geometryShard": "ohm-source-comitate-10.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829380.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Sătmar/OHM-r2829380.geojson",
+      "sourceFileSha256": "a3e53a7860ffa47bbdf4f8e6a27583efb15eb085f140f9a88cf1d60f3d6d2923",
+      "sourceRelationId": 2829380,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Boundary changes vs. current (mostly) 1850s borders (incl. some enclaves in the NW and some exclaves in Szablócs, Közép-Szolnok and Kraszna)",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829381",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Sătmar",
+      "displayName": {
+        "ro": "Comitatul Sătmar",
+        "en": "Szatmár county"
+      },
+      "sourcePeriod": {
+        "start": "1860-10-20",
+        "end": "1876-06-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829381",
+      "featureId": "ohm-r2829381",
+      "geometryShard": "ohm-source-comitate-11.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829381.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Sătmar/OHM-r2829381.geojson",
+      "sourceFileSha256": "d47b19e2c06af8261c4e2aa713014cc654ee446699118ba2b7ae5c563514dfe2",
+      "sourceRelationId": 2829381,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829382",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Sătmar",
+      "displayName": {
+        "ro": "Comitatul Sătmar",
+        "en": "Szatmár county"
+      },
+      "sourcePeriod": {
+        "start": "1850-09-13",
+        "end": "1860-10-20",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829382",
+      "featureId": "ohm-r2829382",
+      "geometryShard": "ohm-source-comitate-11.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829382.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Sătmar/OHM-r2829382.geojson",
+      "sourceFileSha256": "d7b85f565212b12059ed374c8a0356815d496de9b951ea75b05a124f7474511b",
+      "sourceRelationId": 2829382,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829383",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Sătmar",
+      "displayName": {
+        "ro": "Comitatul Sătmar",
+        "en": "Szatmár county"
+      },
+      "sourcePeriod": {
+        "start": "1800",
+        "end": "1850-09-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829383",
+      "featureId": "ohm-r2829383",
+      "geometryShard": "ohm-source-comitate-11.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829383.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Sătmar/OHM-r2829383.geojson",
+      "sourceFileSha256": "285a05d31f01b69b6278570dd02c3f981a8fa559b10abf839ac03e54dab3a8f0",
+      "sourceRelationId": 2829383,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Boundary changes vs. current (mostly) 1850s borders (incl. some enclaves in the NW and some exclaves in Szablócs, Közép-Szolnok and Kraszna)",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928940",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Sătmar",
+      "displayName": {
+        "ro": "Comitatul Sătmar",
+        "en": "Szatmár county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928940",
+      "featureId": "ohm-r2928940",
+      "geometryShard": "ohm-source-comitate-11.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928940.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Sătmar/OHM-r2928940.geojson",
+      "sourceFileSha256": "c5194fd8d4a8c022d515ab4970d3b44e3f325fe0b6bf90e2a1a4f7f0f9e3e45f",
+      "sourceRelationId": 2928940,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Boundary changes (most of the border is from the 2nd survey circa 1850s)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747449",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Timiș",
+      "displayName": {
+        "ro": "Comitatul Timiș",
+        "en": "Temes County"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1873-08-08",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747449",
+      "featureId": "ohm-r2747449",
+      "geometryShard": "ohm-source-comitate-11.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747449.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Timiș/OHM-r2747449.geojson",
+      "sourceFileSha256": "08437629449cba93e8a36fb2409162490b0dadb6ffbd8f5e13057c61496b320e",
+      "sourceRelationId": 2747449,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The boundary between Temes and Krassó counties seems to have been changed slightly in several places between the 2nd and 3rd surveys; the dates for these changes remain obscure.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747450",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Timiș",
+      "displayName": {
+        "ro": "Comitatul Timiș",
+        "en": "Temes County"
+      },
+      "sourcePeriod": {
+        "start": "1779-04-23",
+        "end": "1849-11-18",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747449",
+      "featureId": "ohm-r2747450",
+      "geometryShard": "ohm-source-comitate-12.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747450.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Timiș/OHM-r2747450.geojson",
+      "sourceFileSha256": "f8f41f6ccdb1cf6984d5c7c322b9d367e6c8b12e5b490c85ce0248fab076c3f2",
+      "sourceRelationId": 2747450,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The boundary between Temes and Krassó counties seems to have been changed slightly in several places between the 2nd and 3rd surveys; the dates for these changes remain obscure.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747632",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Timiș",
+      "displayName": {
+        "ro": "Comitatul Timiș",
+        "en": "Temes County"
+      },
+      "sourcePeriod": {
+        "start": "1873-08-08",
+        "end": "1881",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747632",
+      "featureId": "ohm-r2747632",
+      "geometryShard": "ohm-source-comitate-12.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747632.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Timiș/OHM-r2747632.geojson",
+      "sourceFileSha256": "e8a052567bc3eae076d15520d86d4e645f808d4251f8a4891a696fbac8e8f736",
+      "sourceRelationId": 2747632,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The boundary between Temes and Krassó(-Szörény) counties seems to have been changed slightly in several places between the 2nd and 3rd surveys; the dates for these changes remain obscure.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747634",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Timiș",
+      "displayName": {
+        "ro": "Comitatul Timiș",
+        "en": "Temes County"
+      },
+      "sourcePeriod": {
+        "start": "1881",
+        "end": "1920-06-04",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747634",
+      "featureId": "ohm-r2747634",
+      "geometryShard": "ohm-source-comitate-12.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747634.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Timiș/OHM-r2747634.geojson",
+      "sourceFileSha256": "25c6d0fb7d23da4982109fb769865464835f48d056250b55db9cb932edfdc8dd",
+      "sourceRelationId": 2747634,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: The boundary between Temes and Krassó(-Szörény) counties seems to have been changed slightly in several places between the 2nd and 3rd surveys; the dates for these changes remain obscure.",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747307",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Torontal",
+      "displayName": {
+        "ro": "Comitatul Torontal",
+        "en": "Torontál county"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1873-08-08",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747307",
+      "featureId": "ohm-r2747307",
+      "geometryShard": "ohm-source-comitate-12.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747307.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Torontal/OHM-r2747307.geojson",
+      "sourceFileSha256": "47e3752187f688dd6cc326ffd416cc7703c3749a4f7b407d8b2f9a9bd0bca24c",
+      "sourceRelationId": 2747307,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747308",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Torontal",
+      "displayName": {
+        "ro": "Comitatul Torontal",
+        "en": "Torontál county"
+      },
+      "sourcePeriod": {
+        "start": "1779-04-23",
+        "end": "1849-11-18",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747307",
+      "featureId": "ohm-r2747308",
+      "geometryShard": "ohm-source-comitate-12.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747308.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Torontal/OHM-r2747308.geojson",
+      "sourceFileSha256": "423d5da076132ad0baeff2c7fceb77bc2499cca16925e6fc35a22d181509e25e",
+      "sourceRelationId": 2747308,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928932",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Trei Scaune",
+      "displayName": {
+        "ro": "Comitatul Trei Scaune",
+        "en": "Háromszék County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928932",
+      "featureId": "ohm-r2928932",
+      "geometryShard": "ohm-source-comitate-13.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928932.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Trei Scaune/OHM-r2928932.geojson",
+      "sourceFileSha256": "463bc58cb7b158be87b0f628f845412dc985ea727d90294566fcc6357b05d2d7",
+      "sourceRelationId": 2928932,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: At some point there was a Brassó-Háromszék boundary change (near the border with Romania); Figure out when boundary with Romania/Wallachia changed (south-east).",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928935",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Turda-Arieș",
+      "displayName": {
+        "ro": "Comitatul Turda-Arieş",
+        "en": "Torda-Aranyos County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928935",
+      "featureId": "ohm-r2928935",
+      "geometryShard": "ohm-source-comitate-13.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928935.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Turda-Arieș/OHM-r2928935.geojson",
+      "sourceFileSha256": "b8b1dc3d08771e3bc9afcad0ae7150acf7622428b1e90035aa290775694dcb69",
+      "sourceRelationId": 2928935,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928930",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Târnava-Mare",
+      "displayName": {
+        "ro": "Comitatul Târnava-Mare",
+        "en": "Nagy-Küküllő County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928930",
+      "featureId": "ohm-r2928930",
+      "geometryShard": "ohm-source-comitate-13.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928930.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Târnava-Mare/OHM-r2928930.geojson",
+      "sourceFileSha256": "f8dfbeaa7a72bbee4957f44649cb5c29873c0d1cf78e010e6153046e28322f8c",
+      "sourceRelationId": 2928930,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2928929",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Târnava-Mică",
+      "displayName": {
+        "ro": "Comitatul Târnava-Mică",
+        "en": "Kis-Küküllő County"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2928929",
+      "featureId": "ohm-r2928929",
+      "geometryShard": "ohm-source-comitate-13.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2928929.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Târnava-Mică/OHM-r2928929.geojson",
+      "sourceFileSha256": "922b0bed7b38a89ceeaa03065b7f63b74b2450e1c1dd292af9bf96fd650ba9c5",
+      "sourceRelationId": 2928929,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: improve boundaries (current ones are a rough first pass)",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829351",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Ugocea",
+      "displayName": {
+        "ro": "Comitatul Ugocea",
+        "en": "Ugocsa county"
+      },
+      "sourcePeriod": {
+        "start": "1790-04-26",
+        "end": "1850-09-12",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829351",
+      "featureId": "ohm-r2829351",
+      "geometryShard": "ohm-source-comitate-13.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829351.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Ugocea/OHM-r2829351.geojson",
+      "sourceFileSha256": "4a11e1bffb419088546f8640073dd4b7af7c36b33d17670429f2ff4c2e5b4a0a",
+      "sourceRelationId": 2829351,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829352",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Ugocea",
+      "displayName": {
+        "ro": "Comitatul Ugocea",
+        "en": "Ugocsa county"
+      },
+      "sourcePeriod": {
+        "start": "1860-10-20",
+        "end": "1920-06-03",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829351",
+      "featureId": "ohm-r2829352",
+      "geometryShard": "ohm-source-comitate-14.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2829352.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Ugocea/OHM-r2829352.geojson",
+      "sourceFileSha256": "24775e2249bcc8ab4c7deaf35adfa82fa3fbf508f69c8a632fa9b9c380a0b5aa",
+      "sourceRelationId": 2829352,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2929703",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Ung",
+      "displayName": {
+        "ro": "Comitatul Ung",
+        "en": "Ung county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1876-06-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2929703",
+      "featureId": "ohm-r2929703",
+      "geometryShard": "ohm-source-comitate-14.geojson",
+      "sourceDriveFileId": "1zySNkFDLvL9xw2ZH5Y4xAWY6r9vtRdEi",
+      "sourceFilename": "OHM-r2929703.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Ung/OHM-r2929703.geojson",
+      "sourceFileSha256": "db962cef1e52d806263a1075e3ee193a9f01f48c979a24030a7ef9fc17e32495",
+      "sourceRelationId": 2929703,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747305",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zaránd",
+      "displayName": {
+        "ro": "Zaránd vármegye",
+        "en": "Zaránd County"
+      },
+      "sourcePeriod": {
+        "start": "1860-12-27",
+        "end": "1876-06-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747305",
+      "featureId": "ohm-r2747305",
+      "geometryShard": "ohm-source-comitate-14.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747305.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zaránd/OHM-r2747305.geojson",
+      "sourceFileSha256": "c58e536b5d655d049747eba5de74f6c25432d65c7baba72ee7f373595d1aee4a",
+      "sourceRelationId": 2747305,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Border is a bit rough; check dates",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2747306",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zaránd",
+      "displayName": {
+        "ro": "Zaránd vármegye",
+        "en": "Zaránd County"
+      },
+      "sourcePeriod": {
+        "start": "1744",
+        "end": "1851-05-12",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2747305",
+      "featureId": "ohm-r2747306",
+      "geometryShard": "ohm-source-comitate-14.geojson",
+      "sourceDriveFileId": null,
+      "sourceFilename": "OHM-r2747306.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zaránd/OHM-r2747306.geojson",
+      "sourceFileSha256": "4d34f3bca17e689c2897073770001290575b06c266b10b3b6183bd8263af87e1",
+      "sourceRelationId": 2747306,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Border is a bit rough",
+        "fixme:e: needs start_event",
+        "fixme:s: needs source for boundary lines"
+      ]
+    },
+    {
+      "id": "ohm-r2829461",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "displayName": {
+        "ro": "Zemplén vármegye",
+        "en": "Zemplén county"
+      },
+      "sourcePeriod": {
+        "start": "1850-09-13",
+        "end": "1860-10-20",
+        "sourceOnly": true,
+        "notes": "Amended boundary from some point in the 1850s (probably either 1850 or 1853/54)"
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829461",
+      "featureId": "ohm-r2829461",
+      "geometryShard": "ohm-source-comitate-14.geojson",
+      "sourceDriveFileId": "1EUV5LP_6w9dBzxcvwkzRJSd8aTcmEpUx",
+      "sourceFilename": "OHM-r2829461.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zemplén/OHM-r2829461.geojson",
+      "sourceFileSha256": "9651ae32178ceb71c9c0997bcf57ce9a0f741c7f7335865fb773074b6483f47c",
+      "sourceRelationId": 2829461,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Quite rough borders"
+      ]
+    },
+    {
+      "id": "ohm-r2829504",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "displayName": {
+        "ro": "Zemplén vármegye",
+        "en": "Zemplén county"
+      },
+      "sourcePeriod": {
+        "start": "1860-10-20",
+        "end": "1876-06-19",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829504",
+      "featureId": "ohm-r2829504",
+      "geometryShard": "ohm-source-comitate-15.geojson",
+      "sourceDriveFileId": "1KRaIMRoMH_Izoan9CtDGWOwcXBMkc2Rj",
+      "sourceFilename": "OHM-r2829504.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zemplén/OHM-r2829504.geojson",
+      "sourceFileSha256": "770d92cf9ba1e634adfd1257f0d2ae08930e895d48dbd62e9c64457250d2ce7d",
+      "sourceRelationId": 2829504,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Quite rough borders"
+      ]
+    },
+    {
+      "id": "ohm-r2829507",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "displayName": {
+        "ro": "Zemplén vármegye",
+        "en": "Zemplén county"
+      },
+      "sourcePeriod": {
+        "start": "1824",
+        "end": "1850-09-13",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829507",
+      "featureId": "ohm-r2829507",
+      "geometryShard": "ohm-source-comitate-15.geojson",
+      "sourceDriveFileId": "1O8qUHLMMKoRQTVFg0is8Cje1zjaf0p6t",
+      "sourceFilename": "OHM-r2829507.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zemplén/OHM-r2829507.geojson",
+      "sourceFileSha256": "f91131a178328b277e59e2d2627eaf8631fadd5356e3964d1f3f58a731242afe",
+      "sourceRelationId": 2829507,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Quite rough borders; various boundary changes pre-1850s not yet implemented; 1824 chosen to coinside with Borsod-Abaúj change"
+      ]
+    },
+    {
+      "id": "ohm-r2829508",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "displayName": {
+        "ro": "Zemplén vármegye",
+        "en": "Zemplén county"
+      },
+      "sourcePeriod": {
+        "start": "1910",
+        "end": "1913",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829508",
+      "featureId": "ohm-r2829508",
+      "geometryShard": "ohm-source-comitate-15.geojson",
+      "sourceDriveFileId": "1hPtEUj7eWllKtcWzYqGVglXGKku6lDgn",
+      "sourceFilename": "OHM-r2829508.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zemplén/OHM-r2829508.geojson",
+      "sourceFileSha256": "cf424738dc3386890c91dcb818a366081c5db2a61060b7fe5af0562330677df9",
+      "sourceRelationId": 2829508,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Quite rough borders; Regéczi-Háom-Huta (Háromhuta) seems to have passed to Zemplén some time after 1910"
+      ]
+    },
+    {
+      "id": "ohm-r2829721",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "displayName": {
+        "ro": "Zemplén vármegye",
+        "en": "Zemplén county"
+      },
+      "sourcePeriod": {
+        "start": "1050",
+        "end": "1800",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829721",
+      "featureId": "ohm-r2829721",
+      "geometryShard": "ohm-source-comitate-15.geojson",
+      "sourceDriveFileId": "163dCcWypEfjCdhdoM61FAwjPgj1KgTQI",
+      "sourceFilename": "OHM-r2829721.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zemplén/OHM-r2829721.geojson",
+      "sourceFileSha256": "c287489c85c99e6568ccd731c053f62845cc67e938bb7dd69c4bb52eb3e6838d",
+      "sourceRelationId": 2829721,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Quite rough borders; various boundary changes pre-1850s not yet implemented"
+      ]
+    },
+    {
+      "id": "ohm-r2829738",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "displayName": {
+        "ro": "Zemplén vármegye",
+        "en": "Zemplén county"
+      },
+      "sourcePeriod": {
+        "start": "1800",
+        "end": "1824",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2829738",
+      "featureId": "ohm-r2829738",
+      "geometryShard": "ohm-source-comitate-15.geojson",
+      "sourceDriveFileId": "10hGQAxeqiRuCpOD2rkDjGhrKawNHkgvz",
+      "sourceFilename": "OHM-r2829738.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zemplén/OHM-r2829738.geojson",
+      "sourceFileSha256": "bc1c588ac49015f0d4dcd2cebbe76f71f8836d31ee4b0b6c2b0dc969bbcf7c57",
+      "sourceRelationId": 2829738,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Quite rough borders; various boundary changes pre-1850s not yet implemented; 1824 chosen to coinside with Borsod-Abaúj change"
+      ]
+    },
+    {
+      "id": "ohm-r2929704",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "displayName": {
+        "ro": "Zemplén vármegye",
+        "en": "Zemplén county"
+      },
+      "sourcePeriod": {
+        "start": "1876-06-19",
+        "end": "1910",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2929704",
+      "featureId": "ohm-r2929704",
+      "geometryShard": "ohm-source-comitate-16.geojson",
+      "sourceDriveFileId": "1nz60u3MqeXtV47GWqbEdDQU2zlr-Npbe",
+      "sourceFilename": "OHM-r2929704.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zemplén/OHM-r2929704.geojson",
+      "sourceFileSha256": "016ae740c818088d5d337c4720dd9451ae1d934d016ac17962a90883ff44b402",
+      "sourceRelationId": 2929704,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Quite rough borders"
+      ]
+    },
+    {
+      "id": "ohm-r2929720",
+      "sourceFamily": "OHM",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "displayName": {
+        "ro": "Zemplén vármegye",
+        "en": "Zemplén county"
+      },
+      "sourcePeriod": {
+        "start": "1913",
+        "end": "1921-07-26",
+        "sourceOnly": true,
+        "notes": null
+      },
+      "sourceType": "county",
+      "geometryId": "geom:ohm-r2929720",
+      "featureId": "ohm-r2929720",
+      "geometryShard": "ohm-source-comitate-16.geojson",
+      "sourceDriveFileId": "1UYZhelkqrv2iqdPGyy_7or7nqQ1P1EJZ",
+      "sourceFilename": "OHM-r2929720.geojson",
+      "sourcePath": "OHM-Boundaries/Comitate istorice/Comitatul Zemplén/OHM-r2929720.geojson",
+      "sourceFileSha256": "a5d78f0a33069adec627ada6d666f9b1fda5b91ae5d83c4d73ea58996d86c9b0",
+      "sourceRelationId": 2929720,
+      "provenance": "Geodata GIS / OHM-Boundaries / 2026-11-10 snapshot",
+      "status": "source_candidate_not_certified",
+      "geometryValidSource": true,
+      "sourceTagWarnings": [
+        "fixme: Quite rough borders; Regéczi-Háom-Huta (Háromhuta) seems to have passed to Zemplén some time after 1910"
+      ]
+    }
+  ],
+  "missingSources": "HistoGIS retained only in the original Geodata GIS Drive archive for final-stage gap filling. Other source families, including RASSM/HURI, Transilvania, DARMC, ICR and 1930 counties/plasi, are not part of this OHM-only active catalog.",
+  "sourceFamilies": [
+    "OHM"
+  ],
+  "sourceFamilyStatus": "SOURCE_ONLY_UNCERTIFIED_NO_ADMIN_PARENTAGE",
+  "sourceRightsReviewRequired": true,
+  "countsBySource": {
+    "OHM": 139
+  }
+}

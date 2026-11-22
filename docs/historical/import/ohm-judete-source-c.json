@@ -1,0 +1,174 @@
+{
+  "schema": "atlas-geodata-ohm-leaf-inventory-v1",
+  "collection": "Județe istorice",
+  "dirs": [
+    {
+      "name": "Județul Iași",
+      "id": "1szvrR3jnalKIQ7qvoDNl1VGXicu1ELAh",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1L5uni-WDJUwWVfJUUP2-iO2GaknfmMHP",
+          "mime": "application/json",
+          "size": "2508"
+        },
+        {
+          "name": "OHM-r2943493.source.json.gz",
+          "id": "1mdsh-_R7cZOgM03uUv_NdZX4e8bHq0AH",
+          "mime": "application/x-gzip",
+          "size": "19908"
+        },
+        {
+          "name": "OHM-r2943493.geojson",
+          "id": "1FIOwYfKZ9rgqRDnIyHamWY328oRysxYC",
+          "mime": "application/octet-stream",
+          "size": "54062"
+        }
+      ]
+    },
+    {
+      "name": "Județul Fălciu",
+      "id": "1BnmVYtrbiebA00pBJlMsGxGKpMPo2efx",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1wssTXNuVgd5OWH0wJ8zxVS7dcCdw4dTi",
+          "mime": "application/json",
+          "size": "2514"
+        },
+        {
+          "name": "OHM-r2943671.source.json.gz",
+          "id": "1uUBMhlXPSSt9OFbv6hhuQvrE9YytLpAR",
+          "mime": "application/x-gzip",
+          "size": "18695"
+        },
+        {
+          "name": "OHM-r2943671.geojson",
+          "id": "1e40Ce7QjYIquV5KN9--D6PyqwF_bwzf6",
+          "mime": "application/octet-stream",
+          "size": "51582"
+        }
+      ]
+    },
+    {
+      "name": "Județul Dorohoi",
+      "id": "1EgkW-V5FsP2iisSsueKScVkXOEGoi3wP",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1uXNY1JCa6hlTf0B1MmmqaZNQVUo10TSS",
+          "mime": "application/json",
+          "size": "2714"
+        },
+        {
+          "name": "OHM-r2937887.source.json.gz",
+          "id": "1jeIXEVFeWY-gQzuICNl5AbPt6FV5Cc0x",
+          "mime": "application/x-gzip",
+          "size": "25227"
+        },
+        {
+          "name": "OHM-r2937887.geojson",
+          "id": "1p88n7jG8SzVadXs67QlDtgVWFWyaHq6q",
+          "mime": "application/octet-stream",
+          "size": "71907"
+        }
+      ]
+    },
+    {
+      "name": "Județul Covurlui",
+      "id": "1yIkxBnLck-BWYf2O5d6BpcEoBjVX5Np8",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "14BfKqL1PMJ_rUum6uiNTkXkyA56kwcGm",
+          "mime": "application/json",
+          "size": "2516"
+        },
+        {
+          "name": "OHM-r2945088.source.json.gz",
+          "id": "1z1-phmgZx1L0LPEOeNBT-FZ7f7XO9sN-",
+          "mime": "application/x-gzip",
+          "size": "9861"
+        },
+        {
+          "name": "OHM-r2945088.geojson",
+          "id": "1m0YlexZyYRaExlGvxAciRoBqikqzXq78",
+          "mime": "application/octet-stream",
+          "size": "26525"
+        }
+      ]
+    },
+    {
+      "name": "Județul Botoșani",
+      "id": "1C_MawlP7XA31sFZcu_QFbZVFI3ltJ1yP",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1Q1AfAKCOuqOoRDMV6NbRYg8DOAfXSRV_",
+          "mime": "application/json",
+          "size": "2520"
+        },
+        {
+          "name": "OHM-r2940712.source.json.gz",
+          "id": "1WzxqpNCHMRGmTcQsfygEcsCIyNfO5enX",
+          "mime": "application/x-gzip",
+          "size": "15054"
+        },
+        {
+          "name": "OHM-r2940712.geojson",
+          "id": "1a04eGLVPeci6BkmO_GN5vWft7qexjE4_",
+          "mime": "application/octet-stream",
+          "size": "41006"
+        }
+      ]
+    },
+    {
+      "name": "Județul Bacău",
+      "id": "1uQmEhMDYilI4DzhLB-xiL7QZqOZw-f8o",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1mZQW8mir5YLi4jcw-URUWufr6ezUwuZX",
+          "mime": "application/json",
+          "size": "2509"
+        },
+        {
+          "name": "OHM-r2943619.source.json.gz",
+          "id": "1djE4KOk4ReIXOiH-Gbia09U3cfxwAe-S",
+          "mime": "application/x-gzip",
+          "size": "19663"
+        },
+        {
+          "name": "OHM-r2943619.geojson",
+          "id": "1UY8GB5GKHsrqzjBlnwTajd2eUxwzO58G",
+          "mime": "application/octet-stream",
+          "size": "54073"
+        }
+      ]
+    },
+    {
+      "name": "Județul Arad",
+      "id": "1WNUbAxNTPb7dad9N15_DDZ6W7d3jZb0f",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "19Fw8g8AF7afjU8h8nZbWmkV9A0IAZPW3",
+          "mime": "application/json",
+          "size": "2571"
+        },
+        {
+          "name": "OHM-r2829529.source.json.gz",
+          "id": "1ScxoxWhLZPUplfV7KGIl57yiJ2ZGx2eC",
+          "mime": "application/x-gzip",
+          "size": "15802"
+        },
+        {
+          "name": "OHM-r2829529.geojson",
+          "id": "1WyKBj8ujOjgKGgLCUDzndC8NFHfq_FVR",
+          "mime": "application/octet-stream",
+          "size": "41342"
+        }
+      ]
+    }
+  ]
+}
