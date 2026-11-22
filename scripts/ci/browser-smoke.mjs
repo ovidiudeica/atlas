@@ -2056,7 +2056,7 @@ async function historical1851OriginalReviewSmoke(cdp) {
    if(!mobile) {
      await p.eval("document.querySelector('"+panel+" .history-law-region>summary').click()");
      await p.eval("document.querySelector('"+panel+" .history-law-region .history-law-open').click()");
-     await p.wait("!!document.querySelector('.detail-sidebar .history-entity-detail .history-3b-issues, .detail-sidebar .history-entity-detail .history-law-open')",
+     await p.wait("!!document.querySelector('.detail-sidebar .history-entity-detail .entity-title h3')",
        'HIST3b legal Kreis source-card evidence '+width);
      const card=await p.eval("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent");
      assert.match(card,/1851/);
