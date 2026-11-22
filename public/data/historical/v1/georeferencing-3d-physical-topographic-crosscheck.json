@@ -1,0 +1,364 @@
+{
+  "schema": "atlas-historical-3d-physical-topographic-crosscheck-v1",
+  "asOf": "2026-11-22",
+  "scope": "physical_landmark_identification_native_originals_plus_independent_modern_topographic_network_NOT_GCP_certification",
+  "predecessor": "HIST-MODULE.3d",
+  "reference": {
+    "dataset": "Copernicus Land Monitoring Service / EEA EU-Hydro River Network Database (v1)",
+    "provider": "European Environment Agency",
+    "coverageEpoch": "2006–2012 (underlying EU-Hydro product; service version later)",
+    "baseArcgisService": "https://copernicus.discomap.eea.europa.eu/arcgis/rest/services/EUHydro/EU_Hydro_RiverNetworkDatabase/MapServer",
+    "sourceReferenceCRS": "EPSG:4326",
+    "methods": "ArcGIS feature queries for Strahler line layers 7,8,9,10: retrieve named network links and compute matched FNODE/TNODE; no centroid, bounding-box midpoint or HistoGIS polygon is used to define a junction.",
+    "notDerivedFromHistoGIS": true,
+    "sourceSuppliedPositionalUncertaintyMeters": null,
+    "limitations": "Modern hydrological network is not a historical topographic survey of 1835/1841. Network links are generalized and may contain short unnamed connectors; displayed coordinate digits are machine precision, not measured positional accuracy."
+  },
+  "historicalSources": [
+    {
+      "id": "hist3c:map:streit-1835",
+      "sha256": "02e55f68e870aa6e8c65ff12a71e2a080a2787443eaa0e8a58e7c3fe83d1408a",
+      "nativeRasterSize": [
+        2039,
+        1613
+      ],
+      "opening": "PDF:1:Streit_1835_17090_original.pdf",
+      "scaleDenominator": 1200000
+    },
+    {
+      "id": "hist3c:map:raffelsperger-1841",
+      "sha256": "c3b0f75ba204744405cb20e5f2af004d4514a108d131540c3a608cbb53dc7d87",
+      "nativeRasterSize": [
+        11426,
+        8661
+      ],
+      "opening": "Raffelsperger_Siebenburgen_1841_11381017.jp2",
+      "catalogScaleDenominator": 890000
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "HIST3D-PHYS-SOMES-JOIN",
+      "landmarkName": "Someșul Mare / Someșul Mic near Mica–Dej",
+      "modernTopographicFinding": {
+        "nodeId": "NO35132805",
+        "referenceWgs84": {
+          "lon": 23.91306916363337,
+          "lat": 47.144495439886036
+        },
+        "degreeOrBranchTopologicalConfidence": "IDENTIFIED_DIRECT",
+        "topologyExplanation": "THREE_NAMED_UPSTREAM_DOWNSTREAM_LINKS_EXACT_SHARED_NODE",
+        "networkLinks": [
+          {
+            "objectId": "RL35133368",
+            "layer": 8,
+            "role": "Someșul Mic"
+          },
+          {
+            "objectId": "RL35133366",
+            "layer": 10,
+            "role": "Someș downstream"
+          },
+          {
+            "objectId": "RL35133419",
+            "layer": 10,
+            "role": "Someșul Mare"
+          }
+        ],
+        "shortConnectorSeparationMeters": null,
+        "sourceHistoricEpochMatchesMap": false,
+        "independentPhysicalSurveyControl": false,
+        "topographicIdentityAndNode": "CORROBORATED_FROM_COPERNICUS_NETWORK_ONLY"
+      },
+      "nativeRasterEvidence": [
+        {
+          "sourceId": "hist3c:map:streit-1835",
+          "nativePixelWindow": [
+            450,
+            290,
+            700,
+            520
+          ],
+          "sha256": "e2765c23c95ec8e071353e14c3412177b800a4d6e2256854b3f710efecdc3eab",
+          "file": "HIST3D_1835_Somes_native.png",
+          "localRelativeFolder": "C:\\Users\\Public\\Documents\\hist3c_sources",
+          "pixelAtConfluence": null,
+          "unambiguousPixelMatch": false,
+          "sourceColorOrRiverAttributionCertified": false
+        },
+        {
+          "sourceId": "hist3c:map:raffelsperger-1841",
+          "nativePixelWindow": [
+            3550,
+            2100,
+            1850,
+            1350
+          ],
+          "sha256": "d6859c0c31f9494f1a046cadac1bffe6b7948151efedbe015d6e03de38f033b9",
+          "file": "HIST3D_1841_Somes_native.png",
+          "localRelativeFolder": "C:\\Users\\Public\\Documents\\hist3c_sources",
+          "pixelAtConfluence": null,
+          "unambiguousPixelMatch": false,
+          "sourceColorOrRiverAttributionCertified": false
+        }
+      ],
+      "historicalRasterObservation": "River network and Dej region present, exact confluence symbol not uniquely and independently fixed in both originals",
+      "secondaryGeographicCorroborationUrl": "https://turism-dej.ro/resurse-turistice/resurse-turistice-naturale/some%C8%99ul",
+      "timeStability1835ToModern": "NOT_ESTABLISHED",
+      "physicalLandmarkCertifiedForMap1835": false,
+      "physicalLandmarkCertifiedForMap1841": false,
+      "fitEligible": false,
+      "blindHoldoutEligible": false,
+      "outcome": "EXTERNAL_MODERN_REFERENCE_IDENTIFIED_HISTORICAL_PIXEL_NOT_QUALIFIED"
+    },
+    {
+      "id": "HIST3D-PHYS-MURES-STREI",
+      "landmarkName": "Mureș / Strei near Simeria",
+      "modernTopographicFinding": {
+        "nodeId": "NO35093042",
+        "referenceWgs84": {
+          "lon": 23.051413086907992,
+          "lat": 45.851757934015104
+        },
+        "degreeOrBranchTopologicalConfidence": "IDENTIFIED_WITH_TOPOLOGICAL_CHAIN",
+        "topologyExplanation": "THREE_LINK_JUNCTION_STREI_UPSTREAM_NAMED_ONE_LINK_EARLIER",
+        "networkLinks": [
+          {
+            "objectId": "RL35093029",
+            "layer": 8,
+            "role": "Strei continuation unnamed"
+          },
+          {
+            "objectId": "RL35093068",
+            "layer": 10,
+            "role": "Mureș"
+          },
+          {
+            "objectId": "RL35093112",
+            "layer": 10,
+            "role": "Mureș continuation unnamed"
+          },
+          {
+            "objectId": "RL35092948",
+            "layer": 8,
+            "role": "Strei upstream named"
+          }
+        ],
+        "shortConnectorSeparationMeters": null,
+        "sourceHistoricEpochMatchesMap": false,
+        "independentPhysicalSurveyControl": false,
+        "topographicIdentityAndNode": "CORROBORATED_FROM_COPERNICUS_NETWORK_ONLY"
+      },
+      "nativeRasterEvidence": [
+        {
+          "sourceId": "hist3c:map:streit-1835",
+          "nativePixelWindow": [
+            50,
+            840,
+            720,
+            590
+          ],
+          "sha256": "a3277be07043e4c5a6ecee10bef45024bac176e3ebab665a02a19671fd502237",
+          "file": "HIST3D_1835_Strei_native.jpg",
+          "localRelativeFolder": "C:\\Users\\Public\\Documents\\hist3c_sources",
+          "pixelAtConfluence": null,
+          "unambiguousPixelMatch": false,
+          "sourceColorOrRiverAttributionCertified": false
+        },
+        {
+          "sourceId": "hist3c:map:raffelsperger-1841",
+          "nativePixelWindow": [
+            1750,
+            5300,
+            1850,
+            1450
+          ],
+          "sha256": "b070e8f9a91c391160f76753dd117923fd19783628aa31b8d8f2569a155a1802",
+          "file": "HIST3D_1841_Strei_native.jpg",
+          "localRelativeFolder": "C:\\Users\\Public\\Documents\\hist3c_sources",
+          "pixelAtConfluence": null,
+          "unambiguousPixelMatch": false,
+          "sourceColorOrRiverAttributionCertified": false
+        }
+      ],
+      "historicalRasterObservation": "Deva–Mureș corridor evident; specific physical Strei mouth not uniquely resolved on both original sheets",
+      "secondaryGeographicCorroborationUrl": "https://primariasimeria.ro/simeria/prezentare-generala/",
+      "timeStability1835ToModern": "NOT_ESTABLISHED",
+      "physicalLandmarkCertifiedForMap1835": false,
+      "physicalLandmarkCertifiedForMap1841": false,
+      "fitEligible": false,
+      "blindHoldoutEligible": false,
+      "outcome": "EXTERNAL_MODERN_REFERENCE_IDENTIFIED_HISTORICAL_PIXEL_NOT_QUALIFIED"
+    },
+    {
+      "id": "HIST3D-PHYS-TARNAVA-JOIN",
+      "landmarkName": "Târnava Mare / Târnava Mică near Blaj",
+      "modernTopographicFinding": {
+        "nodeId": "NO35095608",
+        "referenceWgs84": {
+          "lon": 23.891902631310867,
+          "lat": 46.170957689537545
+        },
+        "degreeOrBranchTopologicalConfidence": "IDENTIFIED_WITH_SHORT_CONNECTOR_UNCERTAINTY",
+        "topologyExplanation": "THREE_LINK_JOIN_WITH_39M_SOURCE_GENERALIZATION_CONNECTOR",
+        "networkLinks": [
+          {
+            "objectId": "RL35095612",
+            "layer": 9,
+            "role": "Târnava Mare downstream"
+          },
+          {
+            "objectId": "RL35095642",
+            "layer": 9,
+            "role": "Târnava Mare upstream"
+          },
+          {
+            "objectId": "RL35095614",
+            "layer": 8,
+            "role": "short connector attributed Mare"
+          },
+          {
+            "objectId": "RL35095825",
+            "layer": 8,
+            "role": "Târnava Mică upstream to NO35095610"
+          }
+        ],
+        "shortConnectorSeparationMeters": 38.72,
+        "sourceHistoricEpochMatchesMap": false,
+        "independentPhysicalSurveyControl": false,
+        "topographicIdentityAndNode": "CORROBORATED_FROM_COPERNICUS_NETWORK_ONLY"
+      },
+      "nativeRasterEvidence": [
+        {
+          "sourceId": "hist3c:map:streit-1835",
+          "nativePixelWindow": [
+            420,
+            680,
+            800,
+            650
+          ],
+          "sha256": "a9e7163785ee9def9e793ccef1d669b5553741310c87b07627e1e954f0bc1b74",
+          "file": "HIST3D_1835_Tarnava_native.jpg",
+          "localRelativeFolder": "C:\\Users\\Public\\Documents\\hist3c_sources",
+          "pixelAtConfluence": null,
+          "unambiguousPixelMatch": false,
+          "sourceColorOrRiverAttributionCertified": false
+        },
+        {
+          "sourceId": "hist3c:map:raffelsperger-1841",
+          "nativePixelWindow": [
+            3450,
+            4380,
+            1900,
+            1550
+          ],
+          "sha256": "0316868d11af26d6f0b78ea94070672d1fd036f6145ce92fecd26d1d6",
+          "file": "HIST3D_1841_Tarnava_native.jpg",
+          "localRelativeFolder": "C:\\Users\\Public\\Documents\\hist3c_sources",
+          "pixelAtConfluence": null,
+          "unambiguousPixelMatch": false,
+          "sourceColorOrRiverAttributionCertified": false
+        }
+      ],
+      "historicalRasterObservation": "Blaj–Târnava regional hydrography present; no unique and reproducible subpixel confluence identification in 1835/1841",
+      "secondaryGeographicCorroborationUrl": "https://www.researchgate.net/publication/347496189_STARI_GEOMORFOLOGICE_CRITICE_IN_SISTEMUL_URBAN_BLAJ",
+      "timeStability1835ToModern": "NOT_ESTABLISHED",
+      "physicalLandmarkCertifiedForMap1835": false,
+      "physicalLandmarkCertifiedForMap1841": false,
+      "fitEligible": false,
+      "blindHoldoutEligible": false,
+      "outcome": "EXTERNAL_MODERN_REFERENCE_IDENTIFIED_HISTORICAL_PIXEL_NOT_QUALIFIED"
+    },
+    {
+      "id": "HIST3D-PHYS-OLT-CIBIN",
+      "landmarkName": "Olt / Cibin near Podu Olt–Boița",
+      "modernTopographicFinding": {
+        "nodeId": "NO35092876",
+        "referenceWgs84": {
+          "lon": 24.29198825766995,
+          "lat": 45.647012441622344
+        },
+        "degreeOrBranchTopologicalConfidence": "IDENTIFIED_WITH_SHORT_CONNECTOR_UNCERTAINTY",
+        "topologyExplanation": "THREE_LINK_JOIN_WITH_96M_SOURCE_GENERALIZATION_CONNECTOR",
+        "networkLinks": [
+          {
+            "objectId": "RL35092865",
+            "layer": 10,
+            "role": "Olt upstream continuation"
+          },
+          {
+            "objectId": "RL35092954",
+            "layer": 10,
+            "role": "Olt downstream"
+          },
+          {
+            "objectId": "RL35092867",
+            "layer": 8,
+            "role": "short unnamed Cibin continuation"
+          },
+          {
+            "objectId": "RL35092914",
+            "layer": 8,
+            "role": "named Cibin ending at NO35092878"
+          }
+        ],
+        "shortConnectorSeparationMeters": 96.27,
+        "sourceHistoricEpochMatchesMap": false,
+        "independentPhysicalSurveyControl": false,
+        "topographicIdentityAndNode": "CORROBORATED_FROM_COPERNICUS_NETWORK_ONLY"
+      },
+      "nativeRasterEvidence": [
+        {
+          "sourceId": "hist3c:map:streit-1835",
+          "nativePixelWindow": [
+            560,
+            900,
+            820,
+            600
+          ],
+          "sha256": "28876b4b05c6aa3b54c9c76db8ec58e2895151ea12f0e844b625ab6fa2aefb11",
+          "file": "HIST3D_1835_Cibin_native.jpg",
+          "localRelativeFolder": "C:\\Users\\Public\\Documents\\hist3c_sources",
+          "pixelAtConfluence": null,
+          "unambiguousPixelMatch": false,
+          "sourceColorOrRiverAttributionCertified": false
+        },
+        {
+          "sourceId": "hist3c:map:raffelsperger-1841",
+          "nativePixelWindow": [
+            4200,
+            5570,
+            1850,
+            1450
+          ],
+          "sha256": "7c0fd8b155d6cd30ef379e90604ad3f0ac866b85d973a5e9baa3e19b27e17bce",
+          "file": "HIST3D_1841_Cibin_native.jpg",
+          "localRelativeFolder": "C:\\Users\\Public\\Documents\\hist3c_sources",
+          "pixelAtConfluence": null,
+          "unambiguousPixelMatch": false,
+          "sourceColorOrRiverAttributionCertified": false
+        }
+      ],
+      "historicalRasterObservation": "Cibin–Olt valley region present but thin drainage and administrative colors overlap; confluence pixel not uniquely fixed",
+      "secondaryGeographicCorroborationUrl": "https://hcl.usr.ro/sibiu/2018/h28",
+      "timeStability1835ToModern": "NOT_ESTABLISHED",
+      "physicalLandmarkCertifiedForMap1835": false,
+      "physicalLandmarkCertifiedForMap1841": false,
+      "fitEligible": false,
+      "blindHoldoutEligible": false,
+      "outcome": "EXTERNAL_MODERN_REFERENCE_IDENTIFIED_HISTORICAL_PIXEL_NOT_QUALIFIED"
+    }
+  ],
+  "safeguards": {
+    "originalBoundaryDigitizationBasedOnThesePoints": 0,
+    "acceptedFitGCP1835": 0,
+    "acceptedFitGCP1841": 0,
+    "acceptedBlindHoldoutGCP1835": 0,
+    "acceptedBlindHoldoutGCP1841": 0,
+    "georeferenceRecalculated": false,
+    "canonicalGeometryEdited": false,
+    "actuaLChanged": false,
+    "independentSecondReaderHistoricalPixelAudit": false
+  },
+  "overallVerdict": "HOLD_PHYSICAL_GCP_PENDING_UNIQUE_ORIGINAL_PIXEL_AND_HISTORICAL_STABILITY"
+}
