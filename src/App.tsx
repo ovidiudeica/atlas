@@ -1285,10 +1285,10 @@ export default function App() {
   const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
   const editorialSymbols=currentNode&&!officialSymbols?withGlobalSymbols(currentNode,editorialSymbolsForEntity(currentNode)):null;
   const headerCoatSrc=currentNode?coatImageForEntity(currentNode,import.meta.env.BASE_URL):null;
-  const historicalDetails=historicalCardActive&&historyCatalog&&historyQualifications&&historicalSelectedVersionId?
+  const historicalDetails=historicalCardActive&&historyCatalog&&historyQualifications&&historySelectedVersionId?
     <HistoricalPilotEntityCard
       catalog={historyCatalog} qualification={historyQualifications}
-      versionId={historicalSelectedVersionId} year={historyYear}
+      versionId={historySelectedVersionId} year={historyYear}
       lang={lang} labels={t} onSelect={chooseHistoricalVersion}
       onMap={locateHistoricalVersion}/> : null;
   const details=<section className="detail-content">
