@@ -1,0 +1,72 @@
+{
+  "schema": "atlas-historical-geodata-supplement-qa-v1",
+  "observedAt": "2026-11-22",
+  "scope": "Geodata GIS source-only supplementary import, read-only, no ACTUAL changes",
+  "inputs": [
+    {
+      "collection": "RASSM/HURI",
+      "driveFileId": "1RYz3eOdyyZHhyxKWso2IsM0LxsWAENCj",
+      "name": "HURI_RASSM_raioane_91_entitati_8_snapshoturi.geojson",
+      "sha256": "60569c218122617c8d65daa6b3720a4fd5d0db1d91c508b11ceb8bd8bf9fa45b",
+      "polygons": 91,
+      "uniqueCoordinateGeometries": 30,
+      "geometryValid": 91,
+      "dating": "eight cartographic snapshots 1927–1937, not legal intervals"
+    },
+    {
+      "collection": "RASSM/HURI",
+      "driveFileId": "1UuqrgZTymT4Rxa2exeN4W6XzoZBrXBbE",
+      "name": "HURI_RASSM_contururi_8_snapshoturi_1927_1937.geojson",
+      "sha256": "b29dce1c55d6bb3ba027c9e93b73b9406f36a25be8f29d8dd3f244aa89422138",
+      "polygons": 8,
+      "uniqueCoordinateGeometries": 5,
+      "geometryValid": 8,
+      "dating": "eight cartographic snapshots 1927–1937, not legal intervals"
+    },
+    {
+      "collection": "Transilvania 1860 (districte)",
+      "driveFileId": "1NUP3hl-bgGTr_Ln4o8GSUHGIGYFSuCLD",
+      "name": "districte_transilvania_1860.geojson",
+      "sha256": "2e72107cc06d035ce1337daca79520d37b42d4b30dfad464cd6aa4735c766091",
+      "polygons": 52,
+      "uniqueCoordinateGeometries": 52,
+      "geometryValid": 52,
+      "dating": "undated; filename's 1860 has not been independently substantiated"
+    }
+  ],
+  "supplemental": {
+    "originalFiles": 3,
+    "sourcePolygonOccurrences": 151,
+    "exactCoordinateGeometryAssets": 87,
+    "exactReuseAliases": 64,
+    "topologicallyValid": 151,
+    "invalidSourcePolygons": 0,
+    "snapshotOnlyUses": 99,
+    "undatedUses": 52,
+    "legalBoundaryCertifications": 0,
+    "qualifiedHierarchyEdges": 0,
+    "actualHistoricalBridges": 0,
+    "rightsStatus": "HOLD_PENDING_REUSE_CONFIRMATION"
+  },
+  "aggregatedWithExistingOHM": {
+    "originalSourceFiles": 142,
+    "sourcePolygonOccurrences": 290,
+    "logicalGeometryAssets": 212,
+    "exactReuseAliases": 78,
+    "geometryShards": 32
+  },
+  "existingHistoGISPilot": {
+    "geometryAssets": 53,
+    "sourceVersions": 54,
+    "untouched": true
+  },
+  "policy": {
+    "sourceDataOriginalsUnchanged": true,
+    "geographicCoordinatesUnchanged": true,
+    "sourceGeometryDifferentFromLegalBoundary": true,
+    "sourceFolderNotAdministrativeParent": true,
+    "adminCurrentDataUntouched": true,
+    "sourceRightsReviewRequired": true,
+    "developmentBranchOnly": true
+  }
+}
