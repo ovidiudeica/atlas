@@ -20,6 +20,10 @@ test('historical source index: 139 OHM versions use 125 exact logical geometry a
  assert.equal(index.geometryDuplicates.length,14);
  assert.equal(index.geometryAssets,125);
  assert.deepEqual(index.countsBySource,{OHM:139});
+ assert.equal(index.entries.filter(e=>e.sourceGroup.startsWith('Județe istorice/')).length,19);
+ assert.equal(index.entries.filter(e=>e.sourceGroup.startsWith('Comitate istorice/')).length,77);
+ assert.equal(index.entries.filter(e=>!e.sourceGroup.startsWith('Județe istorice/') &&
+   !e.sourceGroup.startsWith('Comitate istorice/')).length,43);
  assert.ok(index.entries.every(e=>e.status==='source_candidate_not_certified'));
 });
 
