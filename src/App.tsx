@@ -7,6 +7,12 @@ import { territorialRoleLabel as roleLabel, municipalRoleClarification } from '.
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
 import { HistoricalPilotTree, HistoricalPilotEntityCard } from './components/HistoricalPilot';
+import { ActualHistoryConnections } from './components/HistoricalEvidenceSections';
+import {
+  loadIndependentHistoricalAdmissions,
+  validateIndependentHistoricalAdmissions,
+  type HistoricalIndependentAdmissions
+} from './data/historicalIndependentAdmissions.mjs';
 import {
   loadHistoricalPilotCatalog,loadHistoricalPilotGeometries,
   validateHistoricalPilotCatalog, type PilotHistoricalCatalog
@@ -163,7 +169,28 @@ const WORDS = {
     historyPilotMap: 'Locate source polygon',
     historyPilotStatus: 'Evidence qualification',
     historyPilotSourceName: 'The source label has not yet been independently translated.',
-    historyPilotLoading: 'Loading the historical source pilot…'
+    historyPilotLoading: 'Loading the historical source pilot…',
+    historicalDocumentaryEvidence: 'Independent documentary attestations',
+    historicalDocumentaryQualified: 'Independently attested (date only)',
+    historicalDocumentaryReview: 'Under independent review',
+    historicalDocumentaryMoment: 'Attested on',
+    historicalDocumentaryType: 'Documented historical type',
+    historicalDocumentaryScope: 'Limited historical scope',
+    historicalDocumentaryLegalCaveat: 'Only the cited historical date and stated name/type are independently attested. Source boundaries, continuity over the entire period and direct parentage are not certified.',
+    historicalDocumentarySource: 'Independent source',
+    historicalDocumentaryMembership: 'Documented territorial membership',
+    historicalDocumentaryNoMembership: 'The legal text confirms territorial inclusion, not a directly certified administrative parent or boundary.',
+    historicalDocumentaryException: 'Unresolved discrepancy',
+    historicalOverlapTitle: 'Historical territorial correspondences',
+    historicalOverlapNotice: 'Measured intersection between historical source geometry (1907 reference) and the current ACTUAL cartographic snapshot (2026).',
+    historicalOverlapGoToHistory: 'View historical source entity',
+    historicalOverlapGoToActual: 'View current ACTUAL entity',
+    historicalOverlapSourcePeriod: 'Historical version',
+    historicalOverlapMeasuredAt: 'Source comparison',
+    historicalOverlapHistoricalCoverage: 'Historical polygon covered',
+    historicalOverlapCurrentCoverage: 'Current polygon covered',
+    historicalOverlapNoContinuity: 'Spatial intersection does not imply the same administrative institution, legal border, or a direct succession.',
+    historicalOverlapCurrentTitle: 'Current administrative counterparts'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -275,7 +302,28 @@ const WORDS = {
     historyPilotMap: 'Încadrează conturul din sursă',
     historyPilotStatus: 'Calificare probatorie',
     historyPilotSourceName: 'Eticheta sursei nu a fost încă tradusă independent.',
-    historyPilotLoading: 'Se încarcă pilotul istoric…'
+    historyPilotLoading: 'Se încarcă pilotul istoric…',
+    historicalDocumentaryEvidence: 'Atestări documentare independente',
+    historicalDocumentaryQualified: 'Atestat independent (numai la data indicată)',
+    historicalDocumentaryReview: 'În verificare independentă',
+    historicalDocumentaryMoment: 'Atestat la',
+    historicalDocumentaryType: 'Tip istoric documentat',
+    historicalDocumentaryScope: 'Domeniul limitat al atestării',
+    historicalDocumentaryLegalCaveat: 'Sunt documentate independent numai data, denumirea și tipul precizate. Hotarele sursei, continuitatea întregii perioade și subordonarea administrativă directă nu sunt certificate.',
+    historicalDocumentarySource: 'Sursă independentă',
+    historicalDocumentaryMembership: 'Apartenență teritorială documentată',
+    historicalDocumentaryNoMembership: 'Actul confirmă includerea teritorială, nu automat un părinte administrativ direct și nici hotarul.',
+    historicalDocumentaryException: 'Neconcordanță nerezolvată',
+    historicalOverlapTitle: 'Corespondențe teritoriale istorice',
+    historicalOverlapNotice: 'Intersecție măsurată între geometria istorică din sursă (referință 1907) și geometria ACTUAL (2026).',
+    historicalOverlapGoToHistory: 'Deschide entitatea istorică din sursă',
+    historicalOverlapGoToActual: 'Deschide entitatea actuală',
+    historicalOverlapSourcePeriod: 'Versiunea istorică',
+    historicalOverlapMeasuredAt: 'Comparație între surse',
+    historicalOverlapHistoricalCoverage: 'Acoperire poligon istoric',
+    historicalOverlapCurrentCoverage: 'Acoperire poligon actual',
+    historicalOverlapNoContinuity: 'Suprapunerea spațială nu implică aceeași instituție administrativă, același hotar juridic sau succesiune directă.',
+    historicalOverlapCurrentTitle: 'Corespondențe administrative actuale'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -350,11 +398,13 @@ export default function App() {
   // moduleVisible. No unreviewed polygon is loaded as a certified ACTUAL shard.
   const [historyCatalog,setHistoryCatalog] = useState<PilotHistoricalCatalog|null>(null);
   const [historyQualifications,setHistoryQualifications] = useState<HistoricalQualification|null>(null);
+  const [historyAdmissions,setHistoryAdmissions] = useState<HistoricalIndependentAdmissions|null>(null);
   const [historyGeometries,setHistoryGeometries] = useState<FeatureCollection|null>(null);
   const [historyPreviewEnabled,setHistoryPreviewEnabled] = useState(false);
   const [historyYear,setHistoryYear] = useState(1835);
   const [historySelectedVersionId,setHistorySelectedVersionId] = useState<string|null>(null);
   const [historyLoading,setHistoryLoading] = useState(false);
+  const [historyGeometryLoading,setHistoryGeometryLoading] = useState(false);
   const [historyError,setHistoryError] = useState<string|null>(null);
   // Independent module geometry selections share one map without owning
   // each other's selections; the Administrative array retains persistence.
