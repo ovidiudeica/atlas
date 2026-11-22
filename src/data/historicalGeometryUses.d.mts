@@ -28,10 +28,29 @@ export interface HistoricalGeometryUse {
   notes?: { ro?: string; en?: string };
 }
 
+/**
+ * Selected from the *single* website-wide WORDS[lang] translations in App.
+ * Components must never own an independent RO/EN switch or string map.
+ */
+export interface GeometryUsageLabels {
+  geometryUsesTitle: string;
+  geometryUsesNote: string;
+  geometryUseStatus: string;
+  geometryUseNoSource: string;
+  geometryEvidenceQualified: string;
+  geometryEvidenceCandidate: string;
+  geometryEvidenceReview: string;
+  referenceDatePrefix: string;
+  undatedPeriod: string;
+  untilPrefix: string;
+  fromPrefix: string;
+  source: string;
+}
+
 export function sortHistoricalGeometryUses(uses: readonly HistoricalGeometryUse[]): HistoricalGeometryUse[];
 export function historicalUsesForGeometry(uses: readonly HistoricalGeometryUse[], geometryId: string): HistoricalGeometryUse[];
 export function formatHistoricalDate(date: HistoricalDate | null | undefined, lang?: 'ro' | 'en'): string;
-export function formatHistoricalUse(use: HistoricalGeometryUse, lang?: 'ro' | 'en'): string;
+export function formatHistoricalUse(use: HistoricalGeometryUse, lang: 'ro' | 'en', labels: Pick<GeometryUsageLabels, 'referenceDatePrefix' | 'undatedPeriod' | 'untilPrefix' | 'fromPrefix'>): string;
 export function validateHistoricalGeometryRegister(
   geometries: readonly HistoricalGeometryRecord[],
   uses: readonly HistoricalGeometryUse[]
