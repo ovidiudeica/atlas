@@ -27,17 +27,23 @@ export function validateGeodataHistoricalIndex(index){
    fail(!files.has(shard.file),'Duplicate shard');
    files.set(shard.file,shard.count);
  }
+ const duplicates=new Map();
+ for(const pair of index.geometryDuplicates||[]){
+   const [canonical,alias]=pair;
+   fail(present(canonical)&&present(alias)&&canonical!==alias&&!duplicates.has(alias),
+     'Duplicate geometry mapping is malformed');
+   duplicates.set(alias,canonical);
+ }
  const ids=new Set(),geometryIds=new Set(),counts=new Map();
  for(const entry of index.entries||[]){
    fail(present(entry.id)&&!ids.has(entry.id),'Unknown or duplicate historical source ID');
    ids.add(entry.id);
    fail(entry.sourceFamily==='OHM'&&entry.status==='source_candidate_not_certified',
      'Unverified OHM source promoted to legal boundary');
-   fail(present(entry.geometryId)&&!geometryIds.has(entry.geometryId),
-     'Unqualified source geometry ID collision');
+   const canonical=duplicates.get(entry.id)||entry.id;
+   fail(entry.geometryId==='geom:'+canonical&&entry.featureId===entry.id,
+     'Geometry-use reference lost source identity or unverified sharing');
    geometryIds.add(entry.geometryId);
-   fail(entry.geometryId==='geom:'+entry.id && entry.featureId===entry.id,
-     'Geometry use lost source identity');
    fail(object(entry.displayName)&&present(entry.displayName.ro)&&present(entry.displayName.en),
      'Missing historical labels');
    fail(object(entry.sourcePeriod)&&entry.sourcePeriod.sourceOnly===true&&
@@ -49,6 +55,13 @@ export function validateGeodataHistoricalIndex(index){
    counts.set(entry.geometryShard,(counts.get(entry.geometryShard)||0)+1);
  }
  fail(Array.isArray(index.entries)&&index.entries.length>0,'No historical source records');
+ fail(Number.isSafeInteger(index.geometryAssets)&&index.geometryAssets===geometryIds.size &&
+      geometryIds.size===ids.size-duplicates.size,
+   'Logical geometry assets / source uses not reconciled');
+ for(const [alias,canonical] of duplicates){
+   fail(ids.has(alias)&&ids.has(canonical)&&!duplicates.has(canonical),
+     'Shared geometry mapping points to missing source or cyclic alias');
+ }
  for(const [file,count] of files)fail(counts.get(file)===count,'Shard index count mismatch '+file);
  return {ok:errors.length===0,errors};
 }
