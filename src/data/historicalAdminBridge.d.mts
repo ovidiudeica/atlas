@@ -51,7 +51,7 @@ export interface BridgeReferenceCatalogues {
 export declare const BRIDGE_KINDS: readonly BridgeKind[];
 export declare const BRIDGE_EVIDENCE: readonly EvidenceStatus[];
 export function validateHistoricalPeriod(period: unknown): period is HistoricalPeriod;
-export function formatHistoricalPeriod(period: HistoricalPeriod, lang?: 'ro'|'en'): string;
+export function formatHistoricalPeriod(period: HistoricalPeriod, lang?: 'ro'|'en', options?: {snapshotPrefix?: string} | null): string;
 export function periodContainsYear(period: HistoricalPeriod, year: number): boolean;
 export function validateHistoricalAdminBridge(
   links: readonly HistoricalAdminLink[],
