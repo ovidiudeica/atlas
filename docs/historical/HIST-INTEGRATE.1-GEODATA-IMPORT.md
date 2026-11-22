@@ -1,5 +1,7 @@
 # HIST-INTEGRATE.1 — integrarea sistematică a poligoanelor-sursă Geodata GIS în Istoric
 
+> **Actualizare HIST-INTEGRATE.1b (22 noiembrie 2026):** în aceeași ramură a fost integrat și lotul de 99 reprezentări RASSM/HURI (91 raioane + 8 contururi, snapshoturi 1927–1937) și 52 poligoane din colecția Transilvania cu **datare neconfirmată**. Indexul comun are acum **290 utilizări-sursă, 212 geometrii logice exacte, 78 reutilizări, 32 sharduri**. Raportul de mai jos descrie stadiul inițial OHM de 139 fișiere, nu totalul curent. Detalii în [HIST-INTEGRATE.1-SUPPLEMENT.md](HIST-INTEGRATE.1-SUPPLEMENT.md). Drepturile surselor noi sunt în HOLD; nu s-a făcut merge/deploy și nu s-au certificat hotare.
+
 **Stadiu:** sursele OHM importate complet într-un branch de dezvoltare; raport închis doar pentru colecția OHM-Boundaries, **NU** pentru întreg Geodata GIS. **Fără merge/deploy** înainte de CI, drepturi și QA.
 
 ## Proveniență / date
@@ -26,9 +28,9 @@ Modulul nu a inventat din foldere relațiile părinte–copil și nu a certifica
 | Sursă | Inventar observat / stadiu | Decizie de import |
 |---|---|---|
 | HistoGIS v9.0 | arhivă 41,5 MB; pilot existent 53 geometrii / 54 versiuni; export Europa 2.617 entități, 101 MB, CC BY 4.0 | **Pilot integrat anterior**; exportul Europa și colecțiile istorice din 1512/1834/1860 rămân de importat, fără dublarea celor 54 versiuni |
-| Transilvania 1860 | fișier GeoJSON cu 52 poligoane; README recunoaște etichetă „1860” neconfirmată, posibil conținut din Mosaic 1910 | **Nu publicați sub anul 1860** până la calificarea cronologiei și drepturilor |
+| Transilvania 1860 | 52 poligoane înregistrate în catalogul-sursă, dar perioada rămâne nulă; posibil Mosaic 1910 | **Integrat ca sursă fără datare**; HOLD pentru drepturi și cronologie |
 | ICR Maps | 20 KMZ sursă; provin din multiple hărți My Maps | inventar sursă disponibil, selecție și drepturi per strat încă nefinalizate |
-| RASSM | 1.396 fișiere de lucru, inclusiv 160 GeoJSON și 69 GeoPackage | **Nu importați în bloc rezultatele de lucru drept hotare canonice**; necesară selectarea geometriilor-sursă și stărilor temporale |
+| RASSM | 99 reprezentări HURI din două fișiere GeoJSON integrate; celelalte 1.396 fișiere de lucru necesită selecție și audit | **Snapshoturile HURI sunt surse candidate**; restul nu se importă automat drept hotare canonice |
 | DARMC | trei arhive ZIP, două servicii regionale exportate și registru QA | de integrat după citirea licențelor și a atributelor cronologice originale |
 | Mosaic | 11 arhive-sursă și README cu condiții noncomerciale pentru unele resurse | în așteptarea drepturilor de redistribuire |
 | Russian Empire 1897 | arhivă ZIP, README și documentație | inventar disponibil; geometriile trebuie examinate înainte de adoptarea versiunilor |
