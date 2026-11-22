@@ -14,6 +14,7 @@ const dir=new URL('../public/data/historical/v1/',import.meta.url);
 const read=name=>JSON.parse(readFileSync(new URL(name,dir),'utf8'));
 const catalog=read('catalog.json'),quality=read('qualification.json'),review=read('boundary-parentage-review.json');
 const version=n=>'histogis-v9:version:'+n;
+const spatial=JSON.parse(readFileSync(new URL('../docs/historical/qa/HIST-MODULE.3b-spatial-candidates.json',import.meta.url),'utf8'));
 
 test('HIST3b official register is independently sourced and fail-closed',()=>{
  assert.deepEqual(validateHistoricalBoundaryReview(catalog,quality,review),{ok:true,errors:[]});
@@ -136,4 +137,29 @@ test('Any artificial promotion, missing law child or false independent control f
  invalid(d=>d.boundaryDisputes[0].legalBoundaryQualified=true);
  invalid(d=>d.boundaryDisputes=d.boundaryDisputes.filter(x=>x.sourceTopologyVerdict!=='blocked_spatial_contradiction'));
  invalid(d=>d.pilotArchiveSha256='0'.repeat(64));
+});
+
+
+test('Independent source geometry check is NOT FIT/HOLDOUT or a direct-parent recommendation',()=>{
+ assert.equal(spatial.schema,'hist-module-3b-spatial-candidates-v1');
+ assert.equal(spatial.sourceArchiveSha256,catalog.sourceArchiveSha256);
+ assert.equal(spatial.count,8);
+ assert.equal(spatial.independentOriginalMapComparisonPerformed,false);
+ assert.equal(spatial.sourceGeometryOnly,true);
+ assert.equal(spatial.spatialParentageIsNotAdministrativeParentage,true);
+ for(const record of spatial.items){
+   assert.equal(record.inferredAdministrativeParent,null);
+   assert.equal(record.boundaryCertified,false);
+   assert.equal(record.fitGcpCount,0);
+   assert.equal(record.holdoutGcpCount,0);
+   assert.ok(record.topContemporaneousSpatialContainers.every(x=>x.provesLegalParent===false));
+   const reviewRow=review.boundaryDisputes.find(x=>x.sourceRelationId===record.sourceRelationId);
+   assert.equal(record.originalSourceVerdict,reviewRow?.sourceTopologyVerdict);
+ }
+ const blocked=spatial.items.filter(x=>x.originalSourceVerdict==='blocked_spatial_contradiction');
+ assert.equal(blocked.length,2);
+ for(const b of blocked) {
+   assert.deepEqual(b.topContemporaneousSpatialContainers.map(x=>x.versionId),[version(9915)]);
+   assert.equal(b.topContemporaneousSpatialContainers[0].childAreaInsidePercent,100);
+ }
 });
