@@ -1,0 +1,179 @@
+{
+  "count": 8,
+  "crs": "EPSG:3035",
+  "independentOriginalMapComparisonPerformed": false,
+  "items": [
+    {
+      "assignedSourceParent": "Innere Szolnok",
+      "boundaryCertified": false,
+      "childSourceName": "Doboka",
+      "fitGcpCount": 0,
+      "holdoutGcpCount": 0,
+      "inferredAdministrativeParent": null,
+      "originalSourceVerdict": "blocked_spatial_contradiction",
+      "sourceOutsidePercentEqualArea": 100,
+      "sourceRelationId": "histogis-v9:hierarchy:12324:12328:1815-09-06",
+      "topContemporaneousSpatialContainers": [
+        {
+          "childAreaInsidePercent": 100,
+          "outsidePercent": 0,
+          "provesLegalParent": false,
+          "sourceName": "Großfürstentum Siebenbürgen",
+          "sourceOriginalType": "Grand Principality",
+          "versionId": "histogis-v9:version:9915"
+        }
+      ]
+    },
+    {
+      "assignedSourceParent": "Großfürstentum Siebenbürgen",
+      "boundaryCertified": false,
+      "childSourceName": "Bistritz",
+      "fitGcpCount": 0,
+      "holdoutGcpCount": 0,
+      "inferredAdministrativeParent": null,
+      "originalSourceVerdict": "requires_boundary_reconciliation",
+      "sourceOutsidePercentEqualArea": 0.228619,
+      "sourceRelationId": "histogis-v9:hierarchy:12330:9915:1815-09-06",
+      "topContemporaneousSpatialContainers": [
+        {
+          "childAreaInsidePercent": 99.771381,
+          "outsidePercent": 0.228619,
+          "provesLegalParent": false,
+          "sourceName": "Großfürstentum Siebenbürgen",
+          "sourceOriginalType": "Grand Principality",
+          "versionId": "histogis-v9:version:9915"
+        }
+      ]
+    },
+    {
+      "assignedSourceParent": "Unterweißenburg",
+      "boundaryCertified": false,
+      "childSourceName": "Mühlbach",
+      "fitGcpCount": 0,
+      "holdoutGcpCount": 0,
+      "inferredAdministrativeParent": null,
+      "originalSourceVerdict": "blocked_spatial_contradiction",
+      "sourceOutsidePercentEqualArea": 100,
+      "sourceRelationId": "histogis-v9:hierarchy:12383:12406:1815-09-06",
+      "topContemporaneousSpatialContainers": [
+        {
+          "childAreaInsidePercent": 100,
+          "outsidePercent": 0,
+          "provesLegalParent": false,
+          "sourceName": "Großfürstentum Siebenbürgen",
+          "sourceOriginalType": "Grand Principality",
+          "versionId": "histogis-v9:version:9915"
+        }
+      ]
+    },
+    {
+      "assignedSourceParent": "Großfürstentum Siebenbürgen",
+      "boundaryCertified": false,
+      "childSourceName": "Kövár",
+      "fitGcpCount": 0,
+      "holdoutGcpCount": 0,
+      "inferredAdministrativeParent": null,
+      "originalSourceVerdict": "requires_boundary_reconciliation",
+      "sourceOutsidePercentEqualArea": 3.004871,
+      "sourceRelationId": "histogis-v9:hierarchy:12391:9915:1815-09-06",
+      "topContemporaneousSpatialContainers": [
+        {
+          "childAreaInsidePercent": 96.995129,
+          "outsidePercent": 3.004871,
+          "provesLegalParent": false,
+          "sourceName": "Großfürstentum Siebenbürgen",
+          "sourceOriginalType": "Grand Principality",
+          "versionId": "histogis-v9:version:9915"
+        }
+      ]
+    },
+    {
+      "assignedSourceParent": "Großfürstentum Siebenbürgen",
+      "boundaryCertified": false,
+      "childSourceName": "Zărand",
+      "fitGcpCount": 0,
+      "holdoutGcpCount": 0,
+      "inferredAdministrativeParent": null,
+      "originalSourceVerdict": "requires_boundary_reconciliation",
+      "sourceOutsidePercentEqualArea": 0.401048,
+      "sourceRelationId": "histogis-v9:hierarchy:12392:9915:1815-09-06",
+      "topContemporaneousSpatialContainers": [
+        {
+          "childAreaInsidePercent": 99.598952,
+          "outsidePercent": 0.401048,
+          "provesLegalParent": false,
+          "sourceName": "Großfürstentum Siebenbürgen",
+          "sourceOriginalType": "Grand Principality",
+          "versionId": "histogis-v9:version:9915"
+        }
+      ]
+    },
+    {
+      "assignedSourceParent": "Großfürstentum Siebenbürgen",
+      "boundaryCertified": false,
+      "childSourceName": "Hunyad",
+      "fitGcpCount": 0,
+      "holdoutGcpCount": 0,
+      "inferredAdministrativeParent": null,
+      "originalSourceVerdict": "requires_boundary_reconciliation",
+      "sourceOutsidePercentEqualArea": 0.771978,
+      "sourceRelationId": "histogis-v9:hierarchy:12401:9915:1815-09-06",
+      "topContemporaneousSpatialContainers": [
+        {
+          "childAreaInsidePercent": 99.228022,
+          "outsidePercent": 0.771978,
+          "provesLegalParent": false,
+          "sourceName": "Großfürstentum Siebenbürgen",
+          "sourceOriginalType": "Grand Principality",
+          "versionId": "histogis-v9:version:9915"
+        }
+      ]
+    },
+    {
+      "assignedSourceParent": "Großfürstentum Siebenbürgen",
+      "boundaryCertified": false,
+      "childSourceName": "Kraszna",
+      "fitGcpCount": 0,
+      "holdoutGcpCount": 0,
+      "inferredAdministrativeParent": null,
+      "originalSourceVerdict": "requires_boundary_reconciliation",
+      "sourceOutsidePercentEqualArea": 2.029978,
+      "sourceRelationId": "histogis-v9:hierarchy:12404:9915:1815-09-06",
+      "topContemporaneousSpatialContainers": [
+        {
+          "childAreaInsidePercent": 97.970022,
+          "outsidePercent": 2.029978,
+          "provesLegalParent": false,
+          "sourceName": "Großfürstentum Siebenbürgen",
+          "sourceOriginalType": "Grand Principality",
+          "versionId": "histogis-v9:version:9915"
+        }
+      ]
+    },
+    {
+      "assignedSourceParent": "Großfürstentum Siebenbürgen",
+      "boundaryCertified": false,
+      "childSourceName": "Mittlere Szolnok",
+      "fitGcpCount": 0,
+      "holdoutGcpCount": 0,
+      "inferredAdministrativeParent": null,
+      "originalSourceVerdict": "requires_boundary_reconciliation",
+      "sourceOutsidePercentEqualArea": 5.892093,
+      "sourceRelationId": "histogis-v9:hierarchy:12405:9915:1815-09-06",
+      "topContemporaneousSpatialContainers": [
+        {
+          "childAreaInsidePercent": 94.107907,
+          "outsidePercent": 5.892093,
+          "provesLegalParent": false,
+          "sourceName": "Großfürstentum Siebenbürgen",
+          "sourceOriginalType": "Grand Principality",
+          "versionId": "histogis-v9:version:9915"
+        }
+      ]
+    }
+  ],
+  "schema": "hist-module-3b-spatial-candidates-v1",
+  "sourceArchiveSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+  "sourceGeometryOnly": true,
+  "spatialParentageIsNotAdministrativeParentage": true
+}
