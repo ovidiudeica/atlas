@@ -1,12 +1,12 @@
 # HIST-MODULE.1 — Shared geometry and chronological use in Entity panel
 
-Status: **data contract and reusable view component prepared; historical datasets not yet admitted into the website**.
+Status: **data contract and reusable Entity view component prepared, integrated with existing global i18n labels; historical datasets not yet admitted into the website**.
 
 ## Requirement
 
 One unique physical geometry may serve any number of documented historical entities and temporal versions. The source geometry is stored **once**, while each historical use is a separate record pointing to the same `geometryId`. In the **Entity** detail panel, selecting the geometry must list **all uses of that geometry**, ordered chronologically, including uses outside the currently selected year.
 
-The `HistoricalGeometryUseSection` component implements this list, to be wired into the panel once the historical entity/geometry catalogue exists. It receives the shared geometry identifier, all temporal-use records and the active RO/EN language. It does not fetch, duplicate or infer boundaries.
+The generic `GeometryUsesSection` implements this list for the **existing shared Entity panel**, to be wired in once the historical catalogue exists. It receives the shared geometry identifier, all temporal-use records, the **website-global `lang`**, and the corresponding labels from **the one `App.WORDS[lang]` translation registry**. It creates neither a separate RO/EN selector nor module-specific language state. It does not fetch, duplicate or infer boundaries.
 
 ### Canonical relationships
 
@@ -41,7 +41,8 @@ Card example (illustrative only, **not an assertion that the following entities 
 
 - `src/data/historicalGeometryUses.mjs` — validation, chronology, reference-vs-period formatting, deduplication integrity.
 - `src/data/historicalGeometryUses.d.mts` — strict TypeScript contract.
-- `src/components/HistoricalGeometryUseSection.tsx` — bilingual panel section for the Historical module, **ready to connect**.
+- `src/components/GeometryUsesSection.tsx` — module-independent Entity panel section using global RO/EN labels and state, **ready to connect**.
+- `src/App.tsx` — adds geometry-use UI labels to the existing global EN/RO translation registry, not a new translation system.
 - `tests/historicalGeometryUses.test.mjs` — sorting, shared-geometry reuse, BCE, precision, invalid intervals, duplicate/dangling IDs.
 
-**Next integration gate:** admit the first qualified historical geometry catalogue and connect `HistoricalGeometryUseSection` to historical selection inside the existing Entity pane. Until then, the existing Historical module remains a placeholder; the new component must not display fictional records.
+**Next integration gate:** admit the first qualified historical geometry catalogue and connect `GeometryUsesSection` to historical selection inside the existing Entity pane. Until then, the existing Historical module remains a placeholder; the new component must not display fictional records.
