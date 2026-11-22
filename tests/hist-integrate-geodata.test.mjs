@@ -10,15 +10,16 @@ const base=new URL('../public/data/historical/v1/geodata/',import.meta.url);
 const read=name=>JSON.parse(readFileSync(new URL(name,base),'utf8'));
 const index=read('index.json');
 
-test('historical source index: 139 source versions use 125 shared logical OHM geometries',()=>{
+test('historical source index: 290 source occurrences use 212 exact logical geometry assets',()=>{
  assert.deepEqual(validateGeodataHistoricalIndex(index),{ok:true,errors:[]});
- assert.equal(index.entries.length,139);
- assert.equal(index.shards.length,29);
- assert.equal(index.shards.reduce((n,s)=>n+s.count,0),139);
+ assert.equal(index.entries.length,290);
+ assert.equal(index.shards.length,32);
+ assert.equal(index.shards.reduce((n,s)=>n+s.count,0),290);
  assert.equal(index.notCanonicalHierarchy,true);
  assert.equal(index.notLegalBoundaryCertification,true);
- assert.equal(index.geometryDuplicates.length,14);
- assert.equal(index.geometryAssets,125);
+ assert.equal(index.geometryDuplicates.length,78);
+ assert.equal(index.geometryAssets,212);
+ assert.deepEqual(index.countsBySource,{OHM:139,HURI:99,TRANSILVANIA_COLLECTION:52});
  assert.ok(index.entries.every(e=>e.status==='source_candidate_not_certified'));
 });
 
@@ -28,12 +29,20 @@ test('source geom coordinates, types and original OSM relation identifiers are i
    const data=read(shard.file);
    assert.deepEqual(validateGeodataGeometryShard(data,index,shard.file),{ok:true,errors:[]});
    assert.equal(data.features.length,shard.count);
-   for(const feature of data.features){
-     assert.ok(!ids.has(feature.id));
-     ids.add(feature.id);
-     assert.equal(feature.properties.atlas_historical_boundary_certified,false);
+   for(let i=0;i<data.features.length;i++){
+     const feature=data.features[i];
      assert.ok(['Polygon','MultiPolygon'].includes(feature.geometry.type));
-     assert.equal(feature.id,'ohm-r'+feature.properties.ohm_relation_id);
+     if(shard.file.startsWith('ohm-')){
+       assert.ok(!ids.has(feature.id));
+       ids.add(feature.id);
+       assert.equal(feature.properties.atlas_historical_boundary_certified,false);
+       assert.equal(feature.id,'ohm-r'+feature.properties.ohm_relation_id);
+     }else{
+       const match=index.entries.find(e=>e.geometryShard===shard.file&&e.sourceFeatureIndex===i);
+       assert.ok(match);
+       assert.equal(match.boundaryCertification,undefined);
+       assert.equal(match.sourceRightsStatus,'HOLD_PENDING_REUSE_CONFIRMATION');
+     }
    }
  }
  assert.equal(ids.size,139);
@@ -70,4 +79,40 @@ test('fail closed on fictional source certification, ID collision, path and time
  reject(x=>{x.entries[0].sourceDriveFileId=null;x.entries[0].sourcePath='';});
  reject(x=>x.entries[0].sourceFileSha256='missing');
  reject(x=>x.shards[0].count=999);
+});
+
+test('HURI RASSM snapshots are dated only at their exact source observation',()=>{
+ const huri=index.entries.filter(e=>e.sourceFamily==='HURI');
+ assert.equal(huri.length,99);
+ assert.equal(huri.filter(e=>e.sourceGroup.includes('raioane')).length,91);
+ assert.equal(huri.filter(e=>e.sourceGroup.includes('contururi')).length,8);
+ assert.equal(new Set(huri.map(e=>e.sourcePeriod.start)).size,8);
+ for(const e of huri){
+   assert.equal(e.sourcePeriod.kind,'snapshot');
+   assert.equal(e.sourcePeriod.start,e.sourcePeriod.end);
+   assert.equal(geodataSourceAtDate(e,e.sourcePeriod.start),true);
+   assert.equal(e.sourceRightsStatus,'HOLD_PENDING_REUSE_CONFIRMATION');
+   assert.equal(geodataSourceAtDate(e,'1940-01-01'),false);
+ }
+});
+test('Transilvania collection 1860 label is not asserted as a historical snapshot',()=>{
+ const trans=index.entries.filter(e=>e.sourceFamily==='TRANSILVANIA_COLLECTION');
+ assert.equal(trans.length,52);
+ for(const e of trans){
+   assert.deepEqual([e.sourcePeriod.start,e.sourcePeriod.end],[null,null]);
+   assert.equal(e.sourcePeriod.kind,'undated');
+   assert.equal(geodataSourceAtDate(e,'1860-01-01'),false);
+   assert.equal(e.sourceRightsStatus,'HOLD_PENDING_REUSE_CONFIRMATION');
+ }
+ assert.equal(geodataSourcesAtYear(index,1860).filter(e=>e.sourceFamily==='TRANSILVANIA_COLLECTION').length,0);
+});
+test('supplemental source ID, temporal status and rights cannot be silently promoted',()=>{
+ const e=index.entries.find(x=>x.sourceFamily==='TRANSILVANIA_COLLECTION');
+ const bad=structuredClone(index);
+ const t=bad.entries.find(x=>x.id===e.id);
+ t.sourcePeriod.start='1860-01-01';t.sourcePeriod.end='1860-12-31';
+ assert.equal(validateGeodataHistoricalIndex(bad).ok,false);
+ const bad2=structuredClone(index);
+ bad2.entries.find(x=>x.id===e.id).sourceRightsStatus='REDISTRIBUTION_APPROVED';
+ assert.equal(validateGeodataHistoricalIndex(bad2).ok,false);
 });
