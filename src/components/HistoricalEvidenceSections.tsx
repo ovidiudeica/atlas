@@ -50,6 +50,20 @@ const stamp=(period:{kind:'snapshot';at:{year:number;month?:number;day?:number}}
 const sourceLabel=(admissions:HistoricalIndependentAdmissions,id:string)=>
   admissions.sources.find(s=>s.id===id);
 
+function BridgeSourceLinks({admissions,sourceIds}:{
+ admissions:HistoricalIndependentAdmissions;sourceIds:string[];
+}){
+ return <div className="history-overlap-sources">
+   <a href="https://doi.org/10.5281/zenodo.4432081"
+     target="_blank" rel="noopener noreferrer">HistoGIS v9.0 · CC BY 4.0</a>
+   {sourceIds.map(id=>{
+     const source=sourceLabel(admissions,id);
+     return source?<a key={id} href={source.url} target="_blank"
+       rel="noopener noreferrer">{source.title}</a>:null;
+   })}
+ </div>;
+}
+
 export function HistoricalDocumentaryEvidence({
   admissions,catalog,versionId,lang,labels
 }:{
@@ -123,6 +137,7 @@ export function ActualHistoryConnections({
        {' '}{link.geometryComparison.actualCoveragePercent.toFixed(2)}%
      </div>
      <div><small>{labels.historicalOverlapMeasuredAt}: 1907 ↔ 2026</small></div>
+     <BridgeSourceLinks admissions={admissions!} sourceIds={link.sourceIds}/>
      <button type="button" className="history-overlap-nav"
        onClick={()=>onOpenHistorical(link.historicalVersionId)}>
        {labels.historicalOverlapGoToHistory}
@@ -156,6 +171,7 @@ export function HistoricalActualConnections({
          {' '}{labels.historicalOverlapCurrentCoverage}:
          {' '}{link.geometryComparison.actualCoveragePercent.toFixed(2)}%
        </div>
+       <BridgeSourceLinks admissions={admissions!} sourceIds={link.sourceIds}/>
        <button type="button" className="history-overlap-nav"
          onClick={()=>onOpenActual(link.actualId)}>{labels.historicalOverlapGoToActual}</button>
      </li>)}
