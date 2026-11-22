@@ -1,0 +1,210 @@
+{
+  "schema": "atlas-geodata-ohm-directory-list-v1",
+  "at": "2026-11-22",
+  "dirs": [
+    {
+      "name": "Transcarpatia",
+      "id": "1gdB8uQFFy7ZZaloQpVVm11r_pWa1Hvsm",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1BN4YU2LF3STpijE3YfnusNjIwcVD8aPI",
+          "mime": "application/json",
+          "size": "3440"
+        },
+        {
+          "name": "OHM-r2857483.source.json.gz",
+          "id": "10Fu-tJpJmW1RhtGz6T9bU8q7hYXwlDrD",
+          "mime": "application/x-gzip",
+          "size": "52242"
+        },
+        {
+          "name": "OHM-r2857483.geojson",
+          "id": "1ZwPbJzO2cJJJ6rTSQwuKLwh6ZPFAmpez",
+          "mime": "application/octet-stream",
+          "size": "152630"
+        }
+      ]
+    },
+    {
+      "name": "Frontiera Militară a Banatului",
+      "id": "1NP8m9v-IPJoQl88aUz4FANnIVuq1vkOs",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1aIQoPZ5Pl0JM__B7eOC2QsCC1Br_xu5R",
+          "mime": "application/json",
+          "size": "6351"
+        },
+        {
+          "name": "OHM-r2746841.source.json.gz",
+          "id": "1u1zD8JCa8xJC9v3mSaQu3tZX3x_68-ua",
+          "mime": "application/x-gzip",
+          "size": "13290"
+        },
+        {
+          "name": "OHM-r2746841.geojson",
+          "id": "18gAYunbyYKWpuIhwCSjMWCSf-uXp2O8d",
+          "mime": "application/octet-stream",
+          "size": "32971"
+        },
+        {
+          "name": "OHM-r2746840.source.json.gz",
+          "id": "16p63SgWvNbtHbYoxBIpnldtrqGmYVmZa",
+          "mime": "application/x-gzip",
+          "size": "23964"
+        },
+        {
+          "name": "OHM-r2746840.geojson",
+          "id": "1IN08u8elyD3M5MKWxpdQNFLqjISDqqOe",
+          "mime": "application/octet-stream",
+          "size": "61682"
+        },
+        {
+          "name": "OHM-r2746839.source.json.gz",
+          "id": "1fx6xIbHVWu-x1IFrUZse9LDrmZ9XwgsZ",
+          "mime": "application/x-gzip",
+          "size": "13634"
+        },
+        {
+          "name": "OHM-r2746839.geojson",
+          "id": "1B0qEcqMx6LI1WrwkMqZZ1ilK-5EbsQNK",
+          "mime": "application/octet-stream",
+          "size": "33947"
+        }
+      ]
+    },
+    {
+      "name": "Banatul Timișoarei",
+      "id": "1GPDJRKOPjmFNCvfuasHYg2k4Xv1UwVbX",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1mWVnPSKaOTCPNv1TOSb1oWU1uY9ddkI-",
+          "mime": "application/json",
+          "size": "4412"
+        },
+        {
+          "name": "OHM-r2747562.source.json.gz",
+          "id": "1kPVnryawI1TrGNPGjRdfLoR6sBbS6Zjt",
+          "mime": "application/x-gzip",
+          "size": "23784"
+        },
+        {
+          "name": "OHM-r2747562.geojson",
+          "id": "17ezShScNYiSFn1ohO3Ay6CTuFfwve1Pt",
+          "mime": "application/octet-stream",
+          "size": "62103"
+        },
+        {
+          "name": "OHM-r2746573.source.json.gz",
+          "id": "1wppV7U2XR0wvkQOpXdroh-p89Qd1hIIN",
+          "mime": "application/x-gzip",
+          "size": "29649"
+        },
+        {
+          "name": "OHM-r2746573.geojson",
+          "id": "1SZDTd2nVUfUn4Gf8vcT9CR8bS6RcwCgb",
+          "mime": "application/octet-stream",
+          "size": "77124"
+        }
+      ]
+    },
+    {
+      "name": "Districtul Bucovina",
+      "id": "1iIQ57VKClV6lR1jhsqCJ4slCbGgfp_nl",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1NDwS6KKRZiCpHTzhDqqoKAI5UNeHC0Rt",
+          "mime": "application/json",
+          "size": "5339"
+        },
+        {
+          "name": "OHM-r2746745.source.json.gz",
+          "id": "1NOir8KsvQ3zO0IP1uArHY7OcqgwCGcEG",
+          "mime": "application/x-gzip",
+          "size": "81381"
+        },
+        {
+          "name": "OHM-r2746745.geojson",
+          "id": "1hGUnR1BjSiauWSwdSNqeS3H9YVqHT57t",
+          "mime": "application/octet-stream",
+          "size": "236765"
+        },
+        {
+          "name": "OHM-r2746744.source.json.gz",
+          "id": "17WSk7RRxLnIUbsFZLz_hcck4dR4_krsZ",
+          "mime": "application/x-gzip",
+          "size": "81366"
+        },
+        {
+          "name": "OHM-r2746744.geojson",
+          "id": "1oIV421Q633ZvZnzjUBYT9NjNSc1Co-4f",
+          "mime": "application/octet-stream",
+          "size": "236749"
+        }
+      ]
+    },
+    {
+      "name": "Russian Empire 1897",
+      "id": "1T2RoWTDPOYjm4LejM3_WlRwKtvbiTc0Z",
+      "files": [
+        {
+          "name": "README.md",
+          "id": "1I9Gppu8979y_Ci1LfY64kFSaesLsYrHi",
+          "mime": "text/markdown",
+          "size": "3915"
+        },
+        {
+          "name": "Russian Empire Historical GIS Maps (1897).rtf",
+          "id": "1VwWpwf5Upi2V_G_bpUVy_uIqz1KnzoH_",
+          "mime": "application/rtf",
+          "size": "1008"
+        },
+        {
+          "name": "dataverse_files.zip",
+          "id": "1r42fZtP3obx2ZidsVX13gPFaa3ifK-Ki",
+          "mime": "application/zip",
+          "size": "2780793"
+        }
+      ]
+    },
+    {
+      "name": "OHM Țara Chioarului???",
+      "id": "15rSwAE4KZOXwT-xWgJTs4LHgQrA87d3X",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "11aeOWzdqoF2dic4lE4x5cNPSUdY_fI-I",
+          "mime": "application/json",
+          "size": "4878"
+        },
+        {
+          "name": "OHM-r2747434.source.json.gz",
+          "id": "1P3GnVZbnwzFSTL_40KpovqOOh8OIJHil",
+          "mime": "application/x-gzip",
+          "size": "12953"
+        },
+        {
+          "name": "OHM-r2747434.geojson",
+          "id": "1jb7iSmXxfPqyiIqbbq-LH_AM_2ulJsT3",
+          "mime": "application/octet-stream",
+          "size": "35233"
+        },
+        {
+          "name": "OHM-r2747435.source.json.gz",
+          "id": "1-IoqsEzFURFGdM0MTffNPiT9fl2slwXy",
+          "mime": "application/x-gzip",
+          "size": "13093"
+        },
+        {
+          "name": "OHM-r2747435.geojson",
+          "id": "1keKhTKW9MA6r44OJwUzekBBb8NhMf0kZ",
+          "mime": "application/octet-stream",
+          "size": "35390"
+        }
+      ]
+    }
+  ]
+}
