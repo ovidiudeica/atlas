@@ -54,6 +54,9 @@ export const REVIEW_DECISIONS:readonly SpatialReviewDecision[];
 export function validateHistoricalQualification(
   catalog:PilotHistoricalCatalog,qualification:HistoricalQualification
 ):{ok:boolean;errors:string[]};
+export function loadHistoricalPilotQualification(
+  catalog:PilotHistoricalCatalog,baseUrl?:string
+):Promise<HistoricalQualification>;
 export function historicalDateInPeriod(
   period:HistoricalPeriod,iso:string
 ):boolean;
