@@ -50,11 +50,11 @@ Pentru formatele KMZ/GPKG/SHP va exista conversie strict tehnică în GeoJSON, c
 
 Geometriile OHM au proveniență din OpenHistoricalMap și manifeste cu observația „no explicit relation-level license tag”; cadrul de licențiere și eventualele drepturi asupra surselor/cartografiilor de origine trebuie clarificate înaintea publicării. Setul Transilvania 1860 are propria proveniență, iar permisiunea pentru redistribuție trebuie verificată independent. Importul într-un **PR draft** nu este echivalent cu promovarea comercială, aprobarea juridică sau publicarea pe website. Existența unui contur nu înseamnă că versiunea ori perioada sa sunt independente de sursa declarată.
 
-**Verdict lot 1:** 12 fișiere preluate efectiv în branch, 63 de versiuni/ocurențe de poligon și 59 de geometrii distincte logic; afișarea pregătită în modul Istoric, fără schimbarea catalogului ACTUAL. Acesta este **un import efectiv parțial**, nu „toate geometriile Geodata GIS importate”.
+**Verdict lot extins:** 30 de fișiere preluate efectiv în branch, 81 de versiuni/ocurențe de poligon și 77 de geometrii distincte logic; afișarea pregătită în modul Istoric, fără schimbarea catalogului ACTUAL. Acesta este **un import efectiv parțial**, nu „toate geometriile Geodata GIS importate”.
 
 ## Porțile înainte de integrare
 
-1. Reproducerea celor 12 surse din Drive la SHA-256 original, validarea GeoJSON, verificarea numărului de feature și a reutilizării fizice.
+1. Reproducerea celor 30 de surse din Drive la SHA-256 original, validarea GeoJSON, verificarea numărului de feature și a reutilizării fizice.
 2. `node --test tests/hist-geodata-import.test.mjs`; `npm test`, `npm run build`; teste Chromium desktop/mobil; CI pe SHA exact.
 3. Calificarea drepturilor de reutilizare pentru materialele aduse în distribuția publică.
 4. Fără hotare/părinți juridici inventați, fără modificări ale `public/data/phase4`; admiterile istorice definitive se tratează separat, după dezvoltarea completă a catalogului.
