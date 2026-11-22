@@ -1,0 +1,378 @@
+{
+  "schema": "atlas-geodata-ohm-leaf-inventory-v1",
+  "collection": "Comitate istorice",
+  "dirs": [
+    {
+      "name": "Comitatul Zemplén",
+      "id": "1xC2xjcU10Gmz9BEpEqPjD_Y0tXZ2Ymn9",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "190bwtVDqXFyIyrwXshBbyoLn8BPMl110",
+          "mime": "application/json",
+          "size": "13624"
+        },
+        {
+          "name": "OHM-r2929720.source.json.gz",
+          "id": "1TnrPn3n_lROoVtBJbLk4-sYyEVu_6Co2",
+          "mime": "application/x-gzip",
+          "size": "37229"
+        },
+        {
+          "name": "OHM-r2929720.geojson",
+          "id": "1UYZhelkqrv2iqdPGyy_7or7nqQ1P1EJZ",
+          "mime": "application/octet-stream",
+          "size": "104817"
+        },
+        {
+          "name": "OHM-r2829508.source.json.gz",
+          "id": "1_c_2se8_RGppjdNjPn3FikTc-MB_LERN",
+          "mime": "application/x-gzip",
+          "size": "37136"
+        },
+        {
+          "name": "OHM-r2829508.geojson",
+          "id": "1hPtEUj7eWllKtcWzYqGVglXGKku6lDgn",
+          "mime": "application/octet-stream",
+          "size": "104656"
+        },
+        {
+          "name": "OHM-r2929704.source.json.gz",
+          "id": "1iTM8ENfQG5KBIZAmbRtq0pGEjiw6Rflq",
+          "mime": "application/x-gzip",
+          "size": "37798"
+        },
+        {
+          "name": "OHM-r2929704.geojson",
+          "id": "1nz60u3MqeXtV47GWqbEdDQU2zlr-Npbe",
+          "mime": "application/octet-stream",
+          "size": "106598"
+        },
+        {
+          "name": "OHM-r2829504.source.json.gz",
+          "id": "1nVBg97kpSGHdIWo4cAju-BB4UJmupI8L",
+          "mime": "application/x-gzip",
+          "size": "34111"
+        },
+        {
+          "name": "OHM-r2829504.geojson",
+          "id": "1KRaIMRoMH_Izoan9CtDGWOwcXBMkc2Rj",
+          "mime": "application/octet-stream",
+          "size": "95502"
+        },
+        {
+          "name": "OHM-r2829461.source.json.gz",
+          "id": "1rbfFYQwPAv5evFzWfsETsRd1qH-dF4Ir",
+          "mime": "application/x-gzip",
+          "size": "33708"
+        },
+        {
+          "name": "OHM-r2829461.geojson",
+          "id": "1EUV5LP_6w9dBzxcvwkzRJSd8aTcmEpUx",
+          "mime": "application/octet-stream",
+          "size": "93613"
+        },
+        {
+          "name": "OHM-r2829507.source.json.gz",
+          "id": "1yFNIiWs8yApd4cfZKeYbDN_Pv6tnssHI",
+          "mime": "application/x-gzip",
+          "size": "30840"
+        },
+        {
+          "name": "OHM-r2829507.geojson",
+          "id": "1O8qUHLMMKoRQTVFg0is8Cje1zjaf0p6t",
+          "mime": "application/octet-stream",
+          "size": "85518"
+        },
+        {
+          "name": "OHM-r2829738.source.json.gz",
+          "id": "1LrUzY9121Oau-_vTbwEB_d4CEDiyfDIF",
+          "mime": "application/x-gzip",
+          "size": "27716"
+        },
+        {
+          "name": "OHM-r2829738.geojson",
+          "id": "10hGQAxeqiRuCpOD2rkDjGhrKawNHkgvz",
+          "mime": "application/octet-stream",
+          "size": "76832"
+        },
+        {
+          "name": "OHM-r2829721.source.json.gz",
+          "id": "1AIv0H8fesq5xDoYAb7VoPFOp3ftrz3Sn",
+          "mime": "application/x-gzip",
+          "size": "28459"
+        },
+        {
+          "name": "OHM-r2829721.geojson",
+          "id": "163dCcWypEfjCdhdoM61FAwjPgj1KgTQI",
+          "mime": "application/octet-stream",
+          "size": "78987"
+        }
+      ]
+    },
+    {
+      "name": "Comitatul Szabolcs",
+      "id": "186AC3AAm8dEhIFQzdLSqwb3nF9OIxK_s",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1FnfBn-TJNd80XOyewEp4fx7VO9oSHt4b",
+          "mime": "application/json",
+          "size": "9334"
+        },
+        {
+          "name": "OHM-r2829510.source.json.gz",
+          "id": "1dvPmnVFbTqocu20-CYFMcQ_1A2rf3mrD",
+          "mime": "application/x-gzip",
+          "size": "30231"
+        },
+        {
+          "name": "OHM-r2829510.geojson",
+          "id": "1wkX4m0WHV_XijJ_1Baj4WG8EitdLe5XX",
+          "mime": "application/octet-stream",
+          "size": "83341"
+        },
+        {
+          "name": "OHM-r2829379.source.json.gz",
+          "id": "1RwD0wZpYenJ2ODrZn1AY0UfHQqR3cg4-",
+          "mime": "application/x-gzip",
+          "size": "16313"
+        },
+        {
+          "name": "OHM-r2829379.geojson",
+          "id": "1AeiUmh0g_hGDZqQSSWJfF6EWVAGInkbw",
+          "mime": "application/octet-stream",
+          "size": "43362"
+        },
+        {
+          "name": "OHM-r2829717.source.json.gz",
+          "id": "1e8IKODvTlgwE9-twfqzs0oeLnKEIZwna",
+          "mime": "application/x-gzip",
+          "size": "26207"
+        },
+        {
+          "name": "OHM-r2829717.geojson",
+          "id": "1PI0xPgdvYcmB-NcpKHUKDbgFeo1hqQAj",
+          "mime": "application/octet-stream",
+          "size": "68774"
+        },
+        {
+          "name": "OHM-r2829719.source.json.gz",
+          "id": "1M7zaeKRNpQWuHZmDF1kCiiBbMDXhBbRN",
+          "mime": "application/x-gzip",
+          "size": "23177"
+        },
+        {
+          "name": "OHM-r2829719.geojson",
+          "id": "14yuqeqHluNnANo1N-2ULub9kDK-GvKNH",
+          "mime": "application/octet-stream",
+          "size": "60796"
+        },
+        {
+          "name": "OHM-r2829716.source.json.gz",
+          "id": "1tN5Md_QX_QHgTnSfPXOsm72GNVyrQFu-",
+          "mime": "application/x-gzip",
+          "size": "21240"
+        },
+        {
+          "name": "OHM-r2829716.geojson",
+          "id": "1QZjSiBLpo3F8Wz5nN4MiM17MVYU2hGq8",
+          "mime": "application/octet-stream",
+          "size": "55394"
+        }
+      ]
+    },
+    {
+      "name": "Comitatul Csongrád",
+      "id": "14Es8SHnj39v02TxXSxAfPD0dlkAKQbh0",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1ztk7AKmzaaRVqigdRKSWlSqTyYGtD1P0",
+          "mime": "application/json",
+          "size": "9378"
+        },
+        {
+          "name": "OHM-r2829220.source.json.gz",
+          "id": "1jRa2H95WYZLo_ZJbtYFfqHXIKVMvPR5C",
+          "mime": "application/x-gzip",
+          "size": "10127"
+        },
+        {
+          "name": "OHM-r2829220.geojson",
+          "id": "1kJKmtUermnJtRa_V5MpZh3zStg2pGXPv",
+          "mime": "application/octet-stream",
+          "size": "26009"
+        },
+        {
+          "name": "OHM-r2829219.source.json.gz",
+          "id": "1knuybQtpcoLAigmR1Bn_vTWQizEa4KmK",
+          "mime": "application/x-gzip",
+          "size": "10116"
+        },
+        {
+          "name": "OHM-r2829219.geojson",
+          "id": "121EN3Y8eqluS2NtGjzfLvSiJCSfky148",
+          "mime": "application/octet-stream",
+          "size": "25959"
+        },
+        {
+          "name": "OHM-r2829221.source.json.gz",
+          "id": "101AWg5VUtwfpNQMSg0oPqhatwJ_jbfRj",
+          "mime": "application/x-gzip",
+          "size": "8571"
+        },
+        {
+          "name": "OHM-r2829221.geojson",
+          "id": "164T913AlbN2Sf7uZwdGeT3MaCOGTn9AW",
+          "mime": "application/octet-stream",
+          "size": "21425"
+        },
+        {
+          "name": "OHM-r2829212.source.json.gz",
+          "id": "1SbyMsCFUs6jjTLcBu6UWZg_w0ADLZYDB",
+          "mime": "application/x-gzip",
+          "size": "10333"
+        },
+        {
+          "name": "OHM-r2829212.geojson",
+          "id": "175AoIcg9uPcb09uRDlrqrKLD6DynJRyq",
+          "mime": "application/octet-stream",
+          "size": "26226"
+        },
+        {
+          "name": "OHM-r2829086.source.json.gz",
+          "id": "1sdajGet0ILWGVx6dvIGsfLTUN9AzmXno",
+          "mime": "application/x-gzip",
+          "size": "12486"
+        },
+        {
+          "name": "OHM-r2829086.geojson",
+          "id": "1pEl4bi__axKRKSJ0Rx3En_UALFohvWNl",
+          "mime": "application/octet-stream",
+          "size": "32149"
+        }
+      ]
+    },
+    {
+      "name": "Comitatul Csanád-Arad-Torontál",
+      "id": "1puPtrsIZJNdA55VLwPyHrYn7QJLYCwn7",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1ec3xkk9vqbMOEApujt3rwh1W44R19CDr",
+          "mime": "application/json",
+          "size": "3372"
+        },
+        {
+          "name": "OHM-r2829215.source.json.gz",
+          "id": "1br0NO1hA2U7T2ln1t8py2HtbgEPQOwgg",
+          "mime": "application/x-gzip",
+          "size": "13322"
+        },
+        {
+          "name": "OHM-r2829215.geojson",
+          "id": "1jhpqP2BpU3J4NRwmqp6QdBcq80aZWoHQ",
+          "mime": "application/octet-stream",
+          "size": "34908"
+        }
+      ]
+    },
+    {
+      "name": "Comitatul Ung",
+      "id": "19IWlB0lBSldYO4HuiPUJEnSArbSdfrfQ",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1TQigi-qx5LMSZMplz248tTuHjSkN06d8",
+          "mime": "application/json",
+          "size": "3330"
+        },
+        {
+          "name": "OHM-r2929703.source.json.gz",
+          "id": "1eL82dnFdOfYmDIxidkKgAs6tiVb59tzk",
+          "mime": "application/x-gzip",
+          "size": "20017"
+        },
+        {
+          "name": "OHM-r2929703.geojson",
+          "id": "1zySNkFDLvL9xw2ZH5Y4xAWY6r9vtRdEi",
+          "mime": "application/octet-stream",
+          "size": "55163"
+        }
+      ]
+    },
+    {
+      "name": "Comitatul Bereg-Ugocsa",
+      "id": "1SdRsRQV7-Sqp-FGu_SKP5vgN7ufWuWxF",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1vrDCNa5NEjmkk6PLx4bAk9T01jxgI8rh",
+          "mime": "application/json",
+          "size": "3314"
+        },
+        {
+          "name": "OHM-r2829534.source.json.gz",
+          "id": "1OKRt2isMREljW7NsGRIs1dSpj0V4P5Xb",
+          "mime": "application/x-gzip",
+          "size": "18535"
+        },
+        {
+          "name": "OHM-r2829534.geojson",
+          "id": "1J8b0ORtV5dJbWGKFTm3dhL2jchpN-k1z",
+          "mime": "application/octet-stream",
+          "size": "50196"
+        }
+      ]
+    },
+    {
+      "name": "Comitatul Bereg",
+      "id": "1n4mrqG-WioyiK0N0h6IQ7rHXdEO0VBhg",
+      "files": [
+        {
+          "name": "manifest.json",
+          "id": "1Sb1z7JFEBuqZQv8CQ1_Kei3FUonMRZFo",
+          "mime": "application/json",
+          "size": "6262"
+        },
+        {
+          "name": "OHM-r2829533.source.json.gz",
+          "id": "12dKyStzg0UIKaZMEyimLzN1-V9dPCpTf",
+          "mime": "application/x-gzip",
+          "size": "16803"
+        },
+        {
+          "name": "OHM-r2829533.geojson",
+          "id": "1goT_gbgQVBtB_FV4Ckmubl-ZZrTTelQA",
+          "mime": "application/octet-stream",
+          "size": "45882"
+        },
+        {
+          "name": "OHM-r2929705.source.json.gz",
+          "id": "1msOBFu3rINe48AGC4e_nooTAkV7gsh2m",
+          "mime": "application/x-gzip",
+          "size": "14644"
+        },
+        {
+          "name": "OHM-r2929705.geojson",
+          "id": "1bu64ky2h4AgMzdZ3LE25n5Gk0pkNEYjm",
+          "mime": "application/octet-stream",
+          "size": "39419"
+        },
+        {
+          "name": "OHM-r2829532.source.json.gz",
+          "id": "1vJwWVlLkaCdYsCZ2Gb4JGR8EbJP058Js",
+          "mime": "application/x-gzip",
+          "size": "14153"
+        },
+        {
+          "name": "OHM-r2829532.geojson",
+          "id": "1M6bvs73AqGjvd4fJuGl-LoYClnXpziIh",
+          "mime": "application/octet-stream",
+          "size": "37844"
+        }
+      ]
+    }
+  ]
+}
