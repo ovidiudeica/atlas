@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {
   validateGeodataHistoricalIndex,validateGeodataGeometryShard,
   geodataSourceAtDate,geodataSourcesAtYear
@@ -115,4 +116,18 @@ test('supplemental source ID, temporal status and rights cannot be silently prom
  const bad2=structuredClone(index);
  bad2.entries.find(x=>x.id===e.id).sourceRightsStatus='REDISTRIBUTION_APPROVED';
  assert.equal(validateGeodataHistoricalIndex(bad2).ok,false);
+});
+
+test('supplement source payloads reconstruct original Drive SHA-256 (BOM tracked)',()=>{
+ const expected={
+  'huri-rassm-raioane.geojson':'60569c218122617c8d65daa6b3720a4fd5d0db1d91c508b11ceb8bd8bf9fa45b',
+  'huri-rassm-contururi.geojson':'b29dce1c55d6bb3ba027c9e93b73b9406f36a25be8f29d8dd3f244aa89422138',
+  'transilvania-1860-districte.geojson':'2e72107cc06d035ce1337daca79520d37b42d4b30dfad464cd6aa4735c766091'
+ };
+ for(const [filename,originalHash] of Object.entries(expected)){
+   const rendered=readFileSync(new URL(filename,base));
+   const original=filename.startsWith('huri-')?
+     Buffer.concat([Buffer.from([0xef,0xbb,0xbf]),rendered]):rendered;
+   assert.equal(createHash('sha256').update(original).digest('hex'),originalHash);
+ }
 });
