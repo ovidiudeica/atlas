@@ -37,11 +37,12 @@ Generatorul reproductibil: scripts/historical/build_pilot_catalog.py . Nu accept
 
 ## Fișiere implementate
 
-- public/data/historical/v1/catalog.json: inventarul cu entități, versiuni, surse, geometrii, utilizări, relații candidate și QA; bridge, events și symbols sunt goale, pentru că nu inventăm informații.
+- public/data/historical/v1/catalog.json: inventarul cu entități, versiuni, surse, geometrii, utilizări, relații candidate și QA; bridge, events, symbols și geometryDecisions sunt goale, pentru că nu inventăm informații.
 - public/data/historical/v1/geometry.geojson: 53 de geometrii-sursă distincte și complete, fără simplificare sau reparare. Atribuirea și licența se găsesc în catalog și în această documentație.
 - scripts/historical/build_pilot_catalog.py: extragere reproductibilă cu SHA de sursă verificat, date exacte, deduplicare strictă și verificare de topologie.
 - src/data/historicalCatalog.mjs și .d.mts: încărcare independentă de ACTUAL, validare, căutare de versiuni, relații la o dată exactă și acces la utilizările unei geometrii.
 - src/data/historicalGeometryUses.mjs și .d.mts: model temporal unic, controlul identităților geometrice și ordonarea cronologică.
+- src/data/historicalLifeCycle.mjs și .d.mts: contractul pentru înființări, desființări, reforme, redenumiri, divizări/fuziuni, succesiuni, simboluri istorice datate și decizii asupra geometriilor concurente. Validează sursele, drepturile grafice și cel mult o geometrie principală admisă simultan.
 - src/components/GeometryUsesSection.tsx: secțiune comună pentru panoul Entitate, cu dicționarul EN/RO global.
 - src/App.tsx: numai etichete noi în același dicționar; modulul Istoric încă nu este activat cu date candidate în hartă.
 
@@ -58,4 +59,6 @@ Catalogul Administrativ cu 4.283 de entități, sursele OSMB, codurile SIRUTA/CU
 Executați cu Python 3.10+ și Shapely 2+:
 python scripts/historical/build_pilot_catalog.py --zip PATH/histogis-data-v9.0.zip --out public/data/historical/v1
 
-Se compară ambele fișiere regenerate bit-cu-bit și rezultatele QA. Apoi: npm test, npm run build, CI pe SHA-ul exact. Etapa următoare HIST-MODULE.2: verificarea independentă a surselor, a perioadelor și a relațiilor, urmată de integrarea controlată a arborelui și a selecțiilor în modulul Istoric, fără contaminarea datelor ACTUAL.
+Se compară ambele fișiere regenerate bit-cu-bit și rezultatele QA. Apoi: npm test, npm run build, CI pe SHA-ul exact. Teste suplimentare HIST-MODULE.1: evenimente cu succesori multipli, drepturile simbolurilor și interzicerea a două geometrii principale admise simultan. Pilotul are zero evenimente, zero simboluri și zero verdicte geometrice deja admise.
+
+Etapa următoare HIST-MODULE.2: verificarea independentă a surselor, a perioadelor și a relațiilor, urmată de integrarea controlată a arborelui și a selecțiilor în modulul Istoric, fără contaminarea datelor ACTUAL.
