@@ -10,14 +10,19 @@
 | OHM-Boundaries / Bucovina | 4 | 4 |
 | OHM-Boundaries / Comitatul Zărand | 2 | 2 |
 | OHM-Boundaries / Județul Iași | 1 | 1 |
+| OHM-Boundaries / Regatul României | 9 | 9 |
+| OHM-Boundaries / Principatul Moldovei | 2 | 2 |
+| OHM-Boundaries / Țara Românească | 4 | 4 |
+| OHM-Boundaries / Principatele Unite | 2 | 2 |
+| OHM-Boundaries / RSS Moldovenească | 1 | 1 |
 | Transilvania 1860 / districte | 1 | 52 |
-| **Total nou importat în acest PR** | **12** | **63** |
+| **Total nou importat în acest PR** | **30** | **81** |
 
-Catalogul separat `public/data/historical/geodata-source/v1/catalog.json` inventariază **59 de geometrii distincte logic**, **63 de utilizări**, fiecare cu fișier, `featureIndex`, `geometryAssetId`, identificator de entitate sursă, perioadă **declarată de sursă** (nu validată automat), proveniență și statut `NOT_CERTIFIED`. Patru utilizări reutilizează geometrii identice; sursele originale rămân separat și intacte.
+Catalogul separat `public/data/historical/geodata-source/v1/catalog.json` inventariază **77 de geometrii distincte logic**, **81 de utilizări**, fiecare cu fișier, `featureIndex`, `geometryAssetId`, identificator de entitate sursă, perioadă **declarată de sursă** (nu validată automat), proveniență și statut `NOT_CERTIFIED`. Patru utilizări reutilizează geometrii identice; sursele originale rămân separat și intacte.
 
 Fiecare fișier original se găsește sub `public/data/historical/geodata-source/v1/`, cu cale, ID de fișier Google Drive și hash SHA-256 din manifeste originale OHM, respectiv din `SHA256SUMS.txt` pentru 1860. Nu s-au executat simplificări, reproiecții, buffer, intersection ori dissolve. Am păstrat toate atributele-sursă inclusiv `fixme:s`, notele de cronologie și câmpurile KML ale districtelor. Sursele OHM includ explicit unele date *arbitrar alese*, în special la Bucovina; acestea **nu** devin intervale istorice certificate.
 
-Catalogul HistoGIS v9 existent rămâne intact: **53 de geometrii distincte**, 54 de versiuni istorice, 52 de relații candidate. Nu adunăm mecanic 53+59 ca număr de **geometrii distincte în toate sursele** fără un test intercolecții; 59 privește strict noul lot.
+Catalogul HistoGIS v9 existent rămâne intact: **53 de geometrii distincte**, 54 de versiuni istorice, 52 de relații candidate. Nu adunăm mecanic 53+77 ca număr de **geometrii distincte în toate sursele** fără un test intercolecții; 77 privește strict noul lot.
 
 ## Interfață
 
