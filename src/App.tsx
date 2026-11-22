@@ -7,6 +7,8 @@ import { territorialRoleLabel as roleLabel, municipalRoleClarification } from '.
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
 import { HistoricalPilotTree, HistoricalPilotEntityCard } from './components/HistoricalPilot';
+import { HistoricalGeodataBrowser,HistoricalGeodataEntityCard,
+  type HistoricalGeodataSelection } from './components/HistoricalGeodataBrowser';
 import {
   loadHistoricalBoundaryReview, type HistoricalBoundaryReview
 } from './data/historicalBoundaryReview.mjs';
@@ -471,6 +473,7 @@ export default function App() {
   const [historyPreviewEnabled,setHistoryPreviewEnabled] = useState(false);
   const [historyYear,setHistoryYear] = useState(1835);
   const [historySelectedVersionId,setHistorySelectedVersionId] = useState<string|null>(null);
+  const [historicalGeodataSelection,setHistoricalGeodataSelection] = useState<HistoricalGeodataSelection|null>(null);
   const [historyLoading,setHistoryLoading] = useState(false);
   const [historyGeometryLoading,setHistoryGeometryLoading] = useState(false);
   const [historyError,setHistoryError] = useState<string|null>(null);
@@ -557,10 +560,15 @@ export default function App() {
   const currentNode=selected?nodes.get(selected) || null:null;
   const historicalSelectedVersion = historyCatalog?.versions.find(
     v=>v.id===historySelectedVersionId) || null;
-  const historicalCardActive = Boolean(historyPreviewEnabled &&
+  const historicalPilotCardActive = Boolean(historyPreviewEnabled &&
     selectedModule==='historical' && historicalSelectedVersion &&
     historyCatalog && historyQualifications);
-  const shownCardName = historicalCardActive&&historicalSelectedVersion ?
+  const historicalSourceCardActive = Boolean(historicalGeodataSelection &&
+    selectedModule==='historical');
+  const historicalCardActive = historicalPilotCardActive||historicalSourceCardActive;
+  const shownCardName = historicalSourceCardActive&&historicalGeodataSelection ?
+    historicalGeodataSelection.entry.displayName[lang] :
+    historicalPilotCardActive&&historicalSelectedVersion ?
     (historicalSelectedVersion.name[lang]||historicalSelectedVersion.name.ro) :
     currentNode ? cardNameOf(currentNode,lang) : null;
   const cardRoles=currentNode?entityCardRoles(currentNode):null;
@@ -831,6 +839,13 @@ export default function App() {
       instance.addLayer({id:'historical-pilot-outline',type:'line',source:'historical-pilot',
         paint:{'line-color':'#bd781e','line-width':3,'line-opacity':0.92,
           'line-dasharray':[3,2]}});
+      // Geodata GIS source assets are separate from the HistoGIS pilot and ACTUAL.
+      instance.addSource('historical-geodata',{type:'geojson',data:EMPTY_FEATURES});
+      instance.addLayer({id:'historical-geodata-fill',type:'fill',source:'historical-geodata',
+        paint:{'fill-color':'#1d879d','fill-opacity':0.14}});
+      instance.addLayer({id:'historical-geodata-outline',type:'line',source:'historical-geodata',
+        paint:{'line-color':'#0b7586','line-width':3,'line-opacity':0.93,
+          'line-dasharray':[4,2]}});
       instance.on('mousemove','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         instance.setFilter('entity-hover',['==',['get','atlasId'],typeof id==='string'?id:'__none__']);
@@ -842,7 +857,7 @@ export default function App() {
         // The historical source outline has selection priority over the
         // overlapping ACTUAL fill, while both remain separate data layers.
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill']}).length)return;
+          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -853,7 +868,7 @@ export default function App() {
       for(const boundaryLayer of ['entity-outline','entity-stat-outline'])
         instance.on('click',boundaryLayer,event=>{
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill']}).length)return;
+          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -877,7 +892,7 @@ export default function App() {
       }
       instance.on('click','country-fill',event=>{
         if(instance.queryRenderedFeatures(event.point,{
-          layers:['historical-pilot-fill']}).length)return;
+          layers:['historical-pilot-fill','historical-geodata-fill']}).length)return;
         const country=event.features?.[0]?.properties?.id;
         if(country==='ro'||country==='md'){
           setSelected(country==='ro'?'osm-r90689':'osm-r58974');
@@ -996,6 +1011,15 @@ export default function App() {
       ...feature,properties:{...feature.properties,versionId:historicalSelectedVersion.id}
     }]});
   },[ready,historyPreviewEnabled,historyGeometries,historicalSelectedVersion,historyYear]);
+  useEffect(()=>{
+    if(!ready||!mapRef.current)return;
+    const source=mapRef.current.getSource('historical-geodata') as GeoJSONSource|undefined;
+    if(!source)return;
+    if(selectedModule!=='historical'||!historicalGeodataSelection){
+      source.setData(EMPTY_FEATURES);return;
+    }
+    source.setData({type:'FeatureCollection',features:[historicalGeodataSelection.feature]});
+  },[ready,selectedModule,historicalGeodataSelection]);
 
   const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
@@ -1030,6 +1054,7 @@ export default function App() {
     }
     setToolsOpen(false);setToolSection(null);
     setHistorySelectedVersionId(id);
+    setHistoricalGeodataSelection(null);
     setSelected(null);
     setSelectedModule('historical');
     setDetailPanelOpen(true);
@@ -1068,11 +1093,30 @@ export default function App() {
       padding:window.innerWidth<=700?36:85,duration:650,maxZoom:9
     });
   }
+  function chooseHistoricalGeodata(selection:HistoricalGeodataSelection){
+    setHistorySelectedVersionId(null);
+    setHistoricalGeodataSelection(selection);
+    setSelected(null);setSelectedModule('historical');setDetailPanelOpen(true);
+    setToolsOpen(false);setToolSection(null);
+    if(mapRef.current){
+      mapRef.current.fitBounds(bboxOfGeometry(selection.feature.geometry),{
+        padding:window.innerWidth<=700?36:85,duration:650,maxZoom:9
+      });
+    }
+    if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+    else if(window.innerWidth<1100)setModulePanelOpen(false);
+  }
+  function locateHistoricalGeodata(){
+    if(!historicalGeodataSelection||!mapRef.current)return;
+    mapRef.current.fitBounds(bboxOfGeometry(historicalGeodataSelection.feature.geometry),{
+      padding:window.innerWidth<=700?36:85,duration:650,maxZoom:9
+    });
+  }
   function setHistoricalReviewEnabled(enabled:boolean){
     setHistoryPreviewEnabled(enabled);
     if(!enabled){
       setHistorySelectedVersionId(null);
-      if(selectedModule==='historical'){
+      if(selectedModule==='historical'&&!historicalGeodataSelection){
         setSelectedModule(selected?'administrative':null);
         setDetailPanelOpen(false);
         if(drawer==='detail')setDrawer(null);
@@ -1173,12 +1217,18 @@ export default function App() {
   // selections owned by another module. The global reset restores RO + MD.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
   const localSelectionActive=module==='historical'?
-    (historyPreviewEnabled||historySelectedVersionId!==null):
+    (historyPreviewEnabled||historySelectedVersionId!==null||historicalGeodataSelection!==null):
     moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
       adminFilters,statFilters,selected,selectedModule);
   function resetLocalModule(id:ModuleId){
     if(id==='historical'){
-      if(!historyPreviewEnabled && !historySelectedVersionId)return;
+      if(!historyPreviewEnabled && !historySelectedVersionId && !historicalGeodataSelection)return;
+      if(historicalGeodataSelection && selectedModule==='historical'){
+        setSelectedModule(selected?'administrative':null);
+        setDetailPanelOpen(false);
+        if(drawer==='detail')setDrawer(null);
+      }
+      setHistoricalGeodataSelection(null);
       setHistoricalReviewEnabled(false);
       setHistoryYear(1835);
       return;
@@ -1207,6 +1257,7 @@ export default function App() {
     }
   }
   const resetAllSelections=()=>{
+    setHistoricalGeodataSelection(null);
     setHistoryPreviewEnabled(false);
     setHistorySelectedVersionId(null);
     setHistoryYear(1835);
@@ -1457,7 +1508,11 @@ export default function App() {
     </div>
   </section>;
 
-  const historicalPanel=<HistoricalPilotTree
+  const historicalPanel=<>
+    <HistoricalGeodataBrowser year={historyYear} lang={lang}
+      selectedId={historicalGeodataSelection?.entry.id||null}
+      onSelect={chooseHistoricalGeodata}/>
+    <HistoricalPilotTree
     catalog={historyCatalog} qualification={historyQualifications}
     admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
     georefRegister={historyGeorefRegister} georefResults={historyGeorefResults}
@@ -1477,7 +1532,8 @@ export default function App() {
           if(drawer==='detail')setDrawer(null);
         }
       }
-    }} onSelect={chooseHistoricalVersion}/>;
+    }} onSelect={chooseHistoricalVersion}/>
+  </>;
 
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
@@ -1486,7 +1542,10 @@ export default function App() {
   const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
   const editorialSymbols=currentNode&&!officialSymbols?withGlobalSymbols(currentNode,editorialSymbolsForEntity(currentNode)):null;
   const headerCoatSrc=currentNode?coatImageForEntity(currentNode,import.meta.env.BASE_URL):null;
-  const historicalDetails=historicalCardActive&&historyCatalog&&historyQualifications&&historySelectedVersionId?
+  const historicalDetails=historicalSourceCardActive&&historicalGeodataSelection?
+    <HistoricalGeodataEntityCard selection={historicalGeodataSelection}
+      lang={lang} onLocate={locateHistoricalGeodata}/> :
+    historicalPilotCardActive&&historyCatalog&&historyQualifications&&historySelectedVersionId?
     <HistoricalPilotEntityCard
       catalog={historyCatalog} qualification={historyQualifications}
       admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
