@@ -11,11 +11,3 @@ export interface HistoricalGeodataTemporalProjection {
   administrativeParentsQualified:0;crossModuleIdentityQualified:0;
 }
 export declare function projectGeodataHistoricalSourceCatalog(index:GeodataSourceIndex):HistoricalGeodataTemporalProjection;
-export declare function federatedHistoricalSourceOverview(pilot:unknown,sourceProjection:HistoricalGeodataTemporalProjection):{
- schema:'atlas-historical-federated-source-overview-v1';
- histogisEntities:number;histogisVersions:number;histogisGeometries:number;
- geodataProvisionalEntities:number;geodataDatedSourceVersions:number;
- geodataUndatedGeometryReferences:number;geodataGeometryAssets:number;
- qualifiedCrossCatalogueIdentityLinks:0;coordinateEquivalenceAcrossSources:'not_assessed';
- historicalHierarchyMerge:'prohibited_without_independent_evidence';
-};
