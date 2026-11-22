@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { EntityCardSection } from './EntityCardSection';
 import { GeometryUsesSection } from './GeometryUsesSection';
+import {
+  HistoricalDocumentaryEvidence, HistoricalActualConnections,
+  type HistoricalEvidenceLabels
+} from './HistoricalEvidenceSections';
+import {
+  independentAttestationsForVersion,
+  type HistoricalIndependentAdmissions
+} from '../data/historicalIndependentAdmissions.mjs';
 import { formatHistoricalPeriod } from '../data/historicalAdminBridge.mjs';
 import {
   geometryUsesInHistoricalCatalog, versionsForHistoricalEntity,
@@ -11,7 +19,7 @@ import {
   type HistoricalReviewTree
 } from '../data/historicalQualification.mjs';
 
-export interface HistoricalLabels {
+export interface HistoricalLabels extends HistoricalEvidenceLabels {
   historyPilotTitle: string;
   historyPilotEnable: string;
   historyPilotDisable: string;
@@ -69,11 +77,12 @@ function periodOf(v:HistoricalVersion,lang:Locale) {
  * opt-in. No administrative polygons or ACTUAL selections are modified.
  */
 export function HistoricalPilotTree({
-  catalog,qualification,year,preview,selectedVersionId,lang,labels,
+  catalog,qualification,admissions,year,preview,selectedVersionId,lang,labels,
   loading,error,onYear,onPreview,onSelect
 }:{
   catalog:PilotHistoricalCatalog|null;
   qualification:HistoricalQualification|null;
+  admissions:HistoricalIndependentAdmissions|null;
   year:number;
   preview:boolean;
   selectedVersionId:string|null;
@@ -99,6 +108,8 @@ export function HistoricalPilotTree({
     const expanded=!collapsed.includes(version.id);
     const selected=selectedVersionId===version.id;
     const label=titleOf(version,lang);
+    const facts=independentAttestationsForVersion(admissions,version.id,
+      {qualifiedOnly:true});
     return <div className="territory-branch" key={version.id}>
       <div className={'tree-line'+(selected?' is-selected':'')} role="treeitem"
         aria-level={depth+1} aria-selected={selected}
@@ -116,6 +127,10 @@ export function HistoricalPilotTree({
           onClick={()=>onSelect(version.id)}>
           <span className="tree-label-heading"><span className="node-name">{label}</span></span>
           <span className="node-level">{version.sourceOriginalType} · {periodOf(version,lang)}</span>
+          {facts.length>0&&<span className="history-verified-snapshot">
+            {labels.historicalDocumentaryQualified}:
+            {' '}{facts.map(f=>f.attestedAt.at.year).join(', ')}
+          </span>}
           {warning&&<span className="node-disambiguation" role="note">
             {labels.historyPilotSpatialWarning}</span>}
         </button>
@@ -148,6 +163,12 @@ export function HistoricalPilotTree({
       </label>}
     </div>}
     {tree&&<div className="history-pilot-review">
+      {admissions&&<p className="history-admissions-summary">
+        {labels.historicalDocumentaryQualified}:
+        {' '}{admissions.identityAttestations.filter(x=>x.evidenceStatus==='qualified').length}
+        {' · '}{labels.historicalDocumentaryMembership}:
+        {' '}{admissions.relationAttestations.length}
+      </p>}
       <p className="tree-hint">{labels.historyPilotCandidate}: {tree.candidateRelations}
         {' · '}{labels.historyPilotSpatialWarning}: {qualification!.counts.requires_boundary_reconciliation}
         {' · '}{labels.historyPilotNoParent}: {tree.rejected.length}</p>
@@ -168,16 +189,20 @@ export function HistoricalPilotTree({
 }
 
 export function HistoricalPilotEntityCard({
-  catalog,qualification,versionId,year,lang,labels,onSelect,onMap
+  catalog,qualification,admissions,versionId,year,lang,labels,onSelect,onMap,
+  onSelectActual,actualName
 }:{
   catalog:PilotHistoricalCatalog;
   qualification:HistoricalQualification;
+  admissions:HistoricalIndependentAdmissions|null;
   versionId:string;
   year:number;
   lang:Locale;
   labels:HistoricalLabels;
   onSelect:(versionId:string)=>void;
   onMap:()=>void;
+  onSelectActual:(id:string)=>void;
+  actualName:(id:string)=>string;
 }) {
   const version=catalog.versions.find(v=>v.id===versionId);
   if(!version)return null;
@@ -217,6 +242,8 @@ export function HistoricalPilotEntityCard({
         {identity?.untranslatedSourceLabel&&
           <p className="note">{labels.historyPilotSourceName}</p>}
       </EntityCardSection>
+      <HistoricalDocumentaryEvidence admissions={admissions} catalog={catalog}
+        versionId={versionId} lang={lang} labels={labels}/>
       <EntityCardSection title={labels.historyPilotVersions} kind="hierarchy">
         <ol className="historical-geometry-uses">
           {variants.map(v=><li key={v.id}>
@@ -249,7 +276,12 @@ export function HistoricalPilotEntityCard({
       <GeometryUsesSection geometryId={version.geometryId}
         uses={catalog.geometryUses} lang={lang} labels={labels}/>
       <EntityCardSection title={labels.historyPilotCurrent} kind="administrative">
-        <p className="note">{labels.historyPilotNoBridge}</p>
+        {admissions?.bridges.some(b=>b.historicalVersionId===versionId)?
+          <HistoricalActualConnections admissions={admissions}
+            historicalEntityId={version.entityId} versionId={versionId}
+            actualName={actualName} lang={lang} labels={labels}
+            onOpenActual={onSelectActual}/>:
+          <p className="note">{labels.historyPilotNoBridge}</p>}
       </EntityCardSection>
       <EntityCardSection title={labels.historyPilotSources} kind="cartographic">
         <p className="note">{labels.historyPilotSource}</p>
