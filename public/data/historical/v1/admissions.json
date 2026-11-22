@@ -596,7 +596,9 @@
         "historicalCoveragePercent": 50.14002,
         "actualCoveragePercent": 61.26594
       },
-      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred."
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Herzogtum Bukowina",
+      "historicalSourceType": "Duchy"
     },
     {
       "id": "hist3:bridge:11756:osm-r2077868",
@@ -629,7 +631,9 @@
         "historicalCoveragePercent": 100,
         "actualCoveragePercent": 6.13413
       },
-      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred."
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Suczawa",
+      "historicalSourceType": "District Captaincy"
     },
     {
       "id": "hist3:bridge:11756:osm-r10495794",
@@ -662,7 +666,9 @@
         "historicalCoveragePercent": 6.07179,
         "actualCoveragePercent": 65.76029
       },
-      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred."
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Suczawa",
+      "historicalSourceType": "District Captaincy"
     },
     {
       "id": "hist3:bridge:11751:osm-r10495792",
@@ -695,7 +701,9 @@
         "historicalCoveragePercent": 1.72983,
         "actualCoveragePercent": 100
       },
-      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred."
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Radautz",
+      "historicalSourceType": "District Captaincy"
     },
     {
       "id": "hist3:bridge:11383:osm-r10495796",
@@ -728,7 +736,9 @@
         "historicalCoveragePercent": 5.33096,
         "actualCoveragePercent": 93.45305
       },
-      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred."
+      "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
+      "historicalSourceName": "Kimpolung",
+      "historicalSourceType": "District Captaincy"
     }
   ],
   "geometryDecisions": [],
