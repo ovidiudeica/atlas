@@ -173,10 +173,10 @@ export function validateOriginalMapFitHoldout(pilot,review,register,results){
 
 export async function loadOriginalMapFitHoldout(pilot,review,baseUrl=import.meta.env?.BASE_URL??'/'){
  const base=baseUrl.replace(/\/?$/,'/')+'data/historical/v1/';
- const qa=baseUrl.replace(/\/?$/,'/')+'data/historical/qa/';
+ const qa=base;
  const [a,b]=await Promise.all([
    fetch(base+'georeferencing-3c.json'),
-   fetch(qa+'HIST-MODULE.3c-FIT-HOLDOUT.json')]);
+   fetch(qa+'georeferencing-3c-results.json')]);
  if(!a.ok||!b.ok)throw Error('HIST3c QA source HTTP '+a.status+'/'+b.status);
  const register=await a.json(),results=await b.json();
  const checked=validateOriginalMapFitHoldout(pilot,review,register,results);
@@ -185,9 +185,6 @@ export async function loadOriginalMapFitHoldout(pilot,review,baseUrl=import.meta
 }
 
 export function fitHoldoutCaseForVersion(register,versionId){
- const original=register?.boundaryCases||[];
- return original.filter(r=>r.sourceRelationId.includes(':')&&(
-   r.sourceRelationId.split(':').slice(2,4).join(':') &&
-   (r.sourceRelationId.startsWith('histogis-v9:hierarchy:')&&
-    r.sourceRelationId.includes(':'+versionId.split(':').at(-1)+':'))));
+ return (register?.boundaryCases||[]).filter(r=>
+   r.childVersionId===versionId||r.parentVersionId===versionId);
 }
