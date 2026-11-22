@@ -2068,6 +2068,50 @@ async function historical1851OriginalReviewSmoke(cdp) {
  }
 }
 
+/* HIST-MODULE.3c: real recovered 1835/1841 raster FIT/HOLDOUT verdicts.
+ * A numeric trial is never an independently certified historic boundary.
+ */
+async function historicalOriginalGeorefSmoke(cdp){
+  for(const width of [1440,390]){
+    const mobile=width<700;
+    const p=await cdp.page(width,900,mobile,site+'?lang=ro');
+    const panel=mobile?'.drawer-tree':'.tree-sidebar';
+    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+      'HIST3c ACTUAL map unchanged '+width);
+    await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+    await p.wait("!!document.querySelector('"+panel+" .history-pilot-option input')",
+      'HIST3c original map QA loaded '+width);
+    assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-3c-summary')"),
+      false,'HIST3c original trial cannot be mistaken for a default certified tree '+width);
+    await p.eval("document.querySelector('"+panel+" .history-pilot-option input').click()");
+    await p.wait("!!document.querySelector('"+panel+" .history-3c-summary')",
+      'HIST3c source trial summary rendered '+width);
+    await p.eval("document.querySelector('"+panel+" .history-3c-summary>summary').click()");
+    const data=await p.eval("document.querySelector('"+panel+" .history-3c-summary')?.textContent");
+    assert.match(data,/FIT\/HOLDOUT/,'source quality category '+width);
+    assert.match(data,/1835/,'Streit original reference '+width);
+    assert.match(data,/1841/,'Raffelsperger original reference '+width);
+    assert.match(data,/9[,.]59\s*km/,'Streit HOLDOUT RMSE '+width);
+    assert.match(data,/7[,.]68\s*km/,'Raffelsperger HOLDOUT RMSE '+width);
+    assert.match(data,/0\/8/,'No 1835/1841 legally certified boundary '+width);
+    assert.match(data,/2\/2/,'Both exploratory registrations rejected '+width);
+    assert.match(data,/neorb|necertificat|nu trec|respin/i,'provisional controls expressly warned '+width);
+    assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-3c-map-qa').length"),
+      2,'Exactly two original raster trials '+width);
+    assert.equal(await p.eval("document.documentElement.scrollWidth-innerWidth<=1"),true,
+      'HIST3c no horizontal overflow '+width);
+    await p.snap((mobile?'mobile':'desktop')+'-hist-module-3c-rejected-original-fitholdout.png');
+    if(!mobile){
+      await p.eval("document.querySelector('.tree-sidebar .module-reset').click()");
+      await p.wait("!document.querySelector('.tree-sidebar .history-3c-summary')",
+        'Historical local reset hides trial, ACTUAL remains');
+      assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.mapReady==='true'"),
+        true,'ACTUAL remains ready after HIST3c reset');
+    }
+    await p.close();
+  }
+}
+
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
@@ -2114,6 +2158,7 @@ try{
   await historicalPilotSmoke(client);
   await historicalIndependentSmoke(client);
   await historical1851OriginalReviewSmoke(client);
+  await historicalOriginalGeorefSmoke(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
