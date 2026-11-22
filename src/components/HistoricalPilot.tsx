@@ -2,6 +2,11 @@ import { useState } from 'react';
 import { EntityCardSection } from './EntityCardSection';
 import { GeometryUsesSection } from './GeometryUsesSection';
 import {
+  HistoricalLaw1851Tree, HistoricalBoundaryDocumentarySection,
+  type HistoricalReviewLabels
+} from './HistoricalOriginalReview';
+import type {HistoricalBoundaryReview} from '../data/historicalBoundaryReview.mjs';
+import {
   HistoricalDocumentaryEvidence, HistoricalActualConnections,
   type HistoricalEvidenceLabels
 } from './HistoricalEvidenceSections';
@@ -19,7 +24,7 @@ import {
   type HistoricalReviewTree
 } from '../data/historicalQualification.mjs';
 
-export interface HistoricalLabels extends HistoricalEvidenceLabels {
+export interface HistoricalLabels extends HistoricalEvidenceLabels, HistoricalReviewLabels {
   historyPilotTitle: string;
   historyPilotEnable: string;
   historyPilotDisable: string;
@@ -77,12 +82,13 @@ function periodOf(v:HistoricalVersion,lang:Locale) {
  * opt-in. No administrative polygons or ACTUAL selections are modified.
  */
 export function HistoricalPilotTree({
-  catalog,qualification,admissions,year,preview,selectedVersionId,lang,labels,
+  catalog,qualification,admissions,boundaryReview,year,preview,selectedVersionId,lang,labels,
   loading,error,onYear,onPreview,onSelect
 }:{
   catalog:PilotHistoricalCatalog|null;
   qualification:HistoricalQualification|null;
   admissions:HistoricalIndependentAdmissions|null;
+  boundaryReview:HistoricalBoundaryReview|null;
   year:number;
   preview:boolean;
   selectedVersionId:string|null;
@@ -183,18 +189,21 @@ export function HistoricalPilotTree({
           {tree.unlinked.map(v=>renderVersion(v,0,new Set()))}
         </div>
       </details>}
+      <HistoricalLaw1851Tree review={boundaryReview} year={year} lang={lang}
+        labels={labels} onSelect={onSelect}/>
       <p className="source-caveat">{labels.historyPilotReviewNote}</p>
     </div>}
   </section>;
 }
 
 export function HistoricalPilotEntityCard({
-  catalog,qualification,admissions,versionId,year,lang,labels,onSelect,onMap,
+  catalog,qualification,admissions,boundaryReview,versionId,year,lang,labels,onSelect,onMap,
   onSelectActual,actualName
 }:{
   catalog:PilotHistoricalCatalog;
   qualification:HistoricalQualification;
   admissions:HistoricalIndependentAdmissions|null;
+  boundaryReview:HistoricalBoundaryReview|null;
   versionId:string;
   year:number;
   lang:Locale;
@@ -244,6 +253,9 @@ export function HistoricalPilotEntityCard({
       </EntityCardSection>
       <HistoricalDocumentaryEvidence admissions={admissions} catalog={catalog}
         versionId={versionId} lang={lang} labels={labels}/>
+      <HistoricalBoundaryDocumentarySection review={boundaryReview}
+        catalog={catalog} versionId={versionId} year={year} lang={lang}
+        labels={labels} onSelect={onSelect}/>
       <EntityCardSection title={labels.historyPilotVersions} kind="hierarchy">
         <ol className="historical-geometry-uses">
           {variants.map(v=><li key={v.id}>
