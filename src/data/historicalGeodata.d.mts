@@ -1,10 +1,10 @@
 import type {Feature,Polygon,MultiPolygon} from 'geojson';
 export interface GeodataSourceEntry {
   id:string;
-  sourceFamily:'OHM';
+  sourceFamily:'OHM'|'HURI'|'TRANSILVANIA_COLLECTION';
   sourceGroup:string;
   displayName:{ro:string;en:string};
-  sourcePeriod:{start:string|null;end:string|null;sourceOnly:true;notes?:string|null};
+  sourcePeriod:{start:string|null;end:string|null;sourceOnly:true;kind?:'snapshot'|'undated';notes?:string|null};
   sourceType:string|null;
   geometryId:string;
   featureId:string;
@@ -14,7 +14,10 @@ export interface GeodataSourceEntry {
   sourceFileSha256:string;
   geometryValidSource:boolean;
   sourceFilename:string;
-  sourceRelationId:number;
+  sourceRelationId:number|null;
+  sourceFeatureIndex?:number;
+  sourceExternalId?:string;
+  sourceRightsStatus?:'HOLD_PENDING_REUSE_CONFIRMATION';
   provenance:string;
   status:'source_candidate_not_certified';
   sourceTagWarnings:string[];
@@ -31,6 +34,8 @@ export interface GeodataSourceIndex {
   geometryDuplicates:[string,string][];
   shards:{file:string;count:number}[];
   entries:GeodataSourceEntry[];
+  sourceFamilies?:string[];
+  sourceRightsReviewRequired?:boolean;
   missingSources:string;
 }
 export type GeodataSourceFeature=Feature<Polygon|MultiPolygon>;
