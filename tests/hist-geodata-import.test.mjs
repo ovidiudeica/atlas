@@ -6,12 +6,12 @@ import {validateGeodataSourceCatalog,geodataVersionAttestedAtYear,geodataPeriodL
 const root=new URL('../public/data/historical/geodata-source/v1/',import.meta.url);
 const catalog=JSON.parse(readFileSync(new URL('catalog.json',root),'utf8'));
 
-test('HIST-GEODATA: exactly 12 original source files, 63 source uses, 59 distinct geometry assets',()=>{
+test('HIST-GEODATA: exactly 30 original source files, 81 source uses, 77 distinct geometry assets',()=>{
  assert.deepEqual(validateGeodataSourceCatalog(catalog),{ok:true,errors:[]});
- assert.equal(catalog.historicalPolygonSourcesCount,12);
- assert.equal(catalog.sourcePolygonOccurrences,63);
- assert.equal(catalog.uniqueGeometryAssets,59);
- assert.equal(catalog.versions.filter(v=>v.sourceCollection==='OHM').length,11);
+ assert.equal(catalog.historicalPolygonSourcesCount,30);
+ assert.equal(catalog.sourcePolygonOccurrences,81);
+ assert.equal(catalog.uniqueGeometryAssets,77);
+ assert.equal(catalog.versions.filter(v=>v.sourceCollection==='OHM').length,29);
  assert.equal(catalog.versions.filter(v=>v.sourceCollection==='Transilvania 1860').length,52);
 });
 test('HIST-GEODATA: every source version refers to unchanged existing GeoJSON feature',()=>{
@@ -28,7 +28,7 @@ test('HIST-GEODATA: every source version refers to unchanged existing GeoJSON fe
   assert.equal(v.boundaryCertification,'NOT_CERTIFIED');
   assert.equal(v.administrativeParentStatus,'NOT_QUALIFIED');
  }
- assert.equal(byFile.size,12);
+ assert.equal(byFile.size,30);
 });
 test('HIST-GEODATA: physically identical source geometry is only one logical asset',()=>{
  const seen=new Map();
