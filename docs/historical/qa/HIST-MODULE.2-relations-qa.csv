@@ -1,0 +1,53 @@
+﻿id,parentId,parentName,childId,childName,parentType,childType,periodStart,periodEnd,wgs84OutsidePct,equalAreaOutsidePct,equalAreaOverlapPct,childValid,parentValid,qualification,legalBoundaryCertified,directParentCertified
+histogis-v9:hierarchy:11361:9970:1868-08-31,9970,Herzogtum Bukowina,11361,Radautz,Duchy,District Captaincy,1868,1893,4.9e-05,8e-06,99.999992,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11362:9936:1864-03-08,9936,Herzogtum Bukowina,11362,Czernowitz (Stadt),Kingdom,Statutory City,1864,1867,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11362:9970:1867-12-22,9970,Herzogtum Bukowina,11362,Czernowitz (Stadt),Duchy,Statutory City,1867,1918,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11378:9970:1868-08-31,9970,Herzogtum Bukowina,11378,Suczawa,Duchy,District Captaincy,1868,1893,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11383:9970:1868-08-31,9970,Herzogtum Bukowina,11383,Kimpolung,Duchy,District Captaincy,1868,1918,6e-06,1e-06,99.999999,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11415:9970:1868-08-31,9970,Herzogtum Bukowina,11415,Czernowitz,Duchy,District Captaincy,1868,1918,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11416:9970:1868-08-31,9970,Herzogtum Bukowina,11416,Kotzman,Duchy,District Captaincy,1868,1905,0.0,1e-06,99.999999,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11425:9970:1868-08-31,9970,Herzogtum Bukowina,11425,Storozynetz,Duchy,District Captaincy,1868,1903,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11426:9970:1868-08-31,9970,Herzogtum Bukowina,11426,Sereth,Duchy,District Captaincy,1868,1918,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11494:9970:1868-08-31,9970,Herzogtum Bukowina,11494,Wiznitz,Duchy,District Captaincy,1868,1903,3.8e-05,1.1e-05,99.999989,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11751:9970:1893-10-01,9970,Herzogtum Bukowina,11751,Radautz,Duchy,District Captaincy,1893,1918,5.7e-05,9e-06,99.999991,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11752:9970:1893-10-01,9970,Herzogtum Bukowina,11752,Gurahumora,Duchy,District Captaincy,1893,1918,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11756:9970:1893-10-01,9970,Herzogtum Bukowina,11756,Suczawa,Duchy,District Captaincy,1893,1918,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11838:9970:1905-10-01,9970,Herzogtum Bukowina,11838,Zastawna,Duchy,District Captaincy,1905,1918,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11839:9970:1903-10-01,9970,Herzogtum Bukowina,11839,Storozynetz,Duchy,District Captaincy,1903,1918,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11840:9970:1903-10-01,9970,Herzogtum Bukowina,11840,Wiznitz,Duchy,District Captaincy,1903,1918,3.8e-05,1.3e-05,99.999987,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11843:9970:1903-10-01,9970,Herzogtum Bukowina,11843,Waschkoutz am Czeremosch,Duchy,District Captaincy,1903,1918,1.7e-05,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:11844:9970:1905-10-01,9970,Herzogtum Bukowina,11844,Kotzman,Duchy,District Captaincy,1905,1918,0.0,3e-06,99.999997,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12272:9936:1849-03-05,9936,Herzogtum Bukowina,12272,Czernowitz,Kingdom,County,1849,1849,1.7e-05,3e-06,99.999997,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12319:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12319,Udvarhely,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12320:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12320,Aranyos,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12321:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12321,Reps,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12322:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12322,Maros,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12323:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12323,Kockelburg,Grand Principality,County,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12324:12328:1815-09-06,12328,Innere Szolnok,12324,Doboka,County,County,1815,1849,100.0,100.0,0.0,True,True,blocked_spatial_contradiction,False,False
+histogis-v9:hierarchy:12325:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12325,Thorenburg,Grand Principality,County,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12326:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12326,Háromszék,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12328:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12328,Innere Szolnok,Grand Principality,County,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12330:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12330,Bistritz,Grand Principality,District,1815,1849,0.229521,0.228619,99.771381,True,True,requires_boundary_reconciliation,False,False
+histogis-v9:hierarchy:12382:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12382,Fagaras,Grand Principality,District,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12383:12406:1815-09-06,12406,Unterweißenburg,12383,Mühlbach,County,Seat,1815,1849,100.0,100.0,0.0,True,True,blocked_spatial_contradiction,False,False
+histogis-v9:hierarchy:12391:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12391,Kövár,Grand Principality,District,1815,1849,3.012162,3.004871,96.995129,True,True,requires_boundary_reconciliation,False,False
+histogis-v9:hierarchy:12392:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12392,Zărand,Grand Principality,County,1815,1849,0.400916,0.401048,99.598952,True,True,requires_boundary_reconciliation,False,False
+histogis-v9:hierarchy:12395:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12395,Mediasch,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12396:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12396,Csík,Grand Principality,Seat,1815,1849,3e-06,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12397:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12397,Schäßburg,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12398:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12398,Groß-Schenk,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12399:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12399,Kronstadt,Grand Principality,District,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12400:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12400,Broos,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12401:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12401,Hunyad,Grand Principality,County,1815,1849,0.768664,0.771978,99.228022,True,True,requires_boundary_reconciliation,False,False
+histogis-v9:hierarchy:12402:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12402,Reißmarkt,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12403:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12403,Leschkirch,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12404:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12404,Kraszna,Grand Principality,County,1815,1849,2.035377,2.029978,97.970022,True,True,requires_boundary_reconciliation,False,False
+histogis-v9:hierarchy:12405:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12405,Mittlere Szolnok,Grand Principality,County,1815,1849,5.891318,5.892093,94.107907,True,True,requires_boundary_reconciliation,False,False
+histogis-v9:hierarchy:12406:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12406,Unterweißenburg,Grand Principality,County,1815,1849,0.000803,0.000802,99.999198,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12407:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12407,Klausenburg,Grand Principality,County,1815,1849,0.000668,0.00067,99.99933,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12408:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12408,Hermanstadt,Grand Principality,Seat,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12409:9915:1815-09-06,9915,Großfürstentum Siebenbürgen,12409,Oberweißenburg,Grand Principality,County,1815,1849,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12657:9915:1851-05-16,9915,Großfürstentum Siebenbürgen,12657,Klausenburg,Grand Principality,County,1851,1854,0.000374,0.000375,99.999625,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12658:9915:1851-05-16,9915,Großfürstentum Siebenbürgen,12658,Maros-Vásárhely,Grand Principality,County,1851,1854,1e-06,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12659:9915:1851-05-16,9915,Großfürstentum Siebenbürgen,12659,Dées,Grand Principality,County,1851,1854,0.000481,0.000477,99.999523,True,True,spatially_consistent_source_candidate,False,False
+histogis-v9:hierarchy:12660:9915:1851-05-16,9915,Großfürstentum Siebenbürgen,12660,Hermannstadt,Grand Principality,County,1851,1854,0.0,0.0,100.0,True,True,spatially_consistent_source_candidate,False,False

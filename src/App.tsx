@@ -6,6 +6,15 @@ import { compareTreeSiblings } from './data/treeOrder.mjs';
 import { territorialRoleLabel as roleLabel, municipalRoleClarification } from './data/roleLabels.mjs';
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
+import { HistoricalPilotTree, HistoricalPilotEntityCard } from './components/HistoricalPilot';
+import {
+  loadHistoricalPilotCatalog,loadHistoricalPilotGeometries,
+  validateHistoricalPilotCatalog, type PilotHistoricalCatalog
+} from './data/historicalCatalog.mjs';
+import {
+  loadHistoricalPilotQualification, historicalDateInPeriod,
+  type HistoricalQualification
+} from './data/historicalQualification.mjs';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { SymbolAuditSummary } from './components/SymbolAuditSummary';
 import { symbolAuditFor } from './data/symbolAudit.mjs';
@@ -124,7 +133,37 @@ const WORDS = {
     geometryEvidenceQualified: 'Source-qualified',
     geometryEvidenceCandidate: 'Candidate, not yet admitted',
     geometryEvidenceReview: 'Under review',
-    referenceDatePrefix: 'Attested in '
+    referenceDatePrefix: 'Attested in ',
+    historyPilotTitle: 'Historical source pilot',
+    historyPilotEnable: 'Explore the unverified HistoGIS pilot',
+    historyPilotDisable: 'Hide unverified pilot',
+    historyPilotWarning: 'SOURCE PILOT · Boundaries and parentage are not independently certified.',
+    historyPilotSource: 'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0 · historical intervals as reported by the source',
+    historyPilotYear: 'Year (state on 1 July)',
+    historyPilotNoRoots: 'No source version is documented for this year.',
+    historyPilotUnlinked: 'Unlinked or disputed units',
+    historyPilotUnlinkedNote: 'These versions are kept available, without inventing a parent or joining incompatible polygons.',
+    historyPilotCandidate: 'Source candidate relations',
+    historyPilotSpatialWarning: 'Geometric discrepancy — review required',
+    historyPilotOpen: 'Source children for this year',
+    historyPilotSelected: 'Selected historical version',
+    historyPilotYears: 'Source-reported period',
+    historyPilotIdentity: 'Historical identity',
+    historyPilotOriginalName: 'Original source name',
+    historyPilotOriginalType: 'Source administrative type',
+    historyPilotVersions: 'Chronological versions',
+    historyPilotHierarchy: 'Historical parent and children (candidates)',
+    historyPilotNoParent: 'Parent not confirmed',
+    historyPilotNoChildren: 'No source children documented for the selected year.',
+    historyPilotGeometry: 'Geometry',
+    historyPilotSources: 'Sources and rights',
+    historyPilotCurrent: 'Present-day administrative situation',
+    historyPilotNoBridge: 'No independently verified relation with ACTUAL has been admitted. This is not evidence that the current territory has no administration.',
+    historyPilotReviewNote: 'These are source-supplied proposals, not a certified legal or exhaustive historical hierarchy.',
+    historyPilotMap: 'Locate source polygon',
+    historyPilotStatus: 'Evidence qualification',
+    historyPilotSourceName: 'The source label has not yet been independently translated.',
+    historyPilotLoading: 'Loading the historical source pilot…'
   },
   ro: {
     title: 'Atlas Teritorial', tagline: 'Geografie · Istorie · Comunități',
@@ -206,7 +245,37 @@ const WORDS = {
     geometryEvidenceQualified: 'Calificat după sursă',
     geometryEvidenceCandidate: 'Candidat, încă neadmis',
     geometryEvidenceReview: 'În verificare',
-    referenceDatePrefix: 'Atestat în '
+    referenceDatePrefix: 'Atestat în ',
+    historyPilotTitle: 'Arbore istoric — pilot documentar',
+    historyPilotEnable: 'Explorează pilotul HistoGIS necertificat',
+    historyPilotDisable: 'Ascunde pilotul necertificat',
+    historyPilotWarning: 'PILOT DOCUMENTAR · Hotarele și relațiile de subordonare nu sunt certificate independent.',
+    historyPilotSource: 'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0 · intervale conform sursei',
+    historyPilotYear: 'Anul (stare la 1 iulie)',
+    historyPilotNoRoots: 'Nu există o versiune documentată în sursă pentru acest an.',
+    historyPilotUnlinked: 'Unități nelegate sau disputate',
+    historyPilotUnlinkedNote: 'Păstrăm versiunile fără a inventa părinți și fără a conecta poligoane incompatibile.',
+    historyPilotCandidate: 'Relații candidate din sursă',
+    historyPilotSpatialWarning: 'Neconcordanță geometrică — necesită verificare',
+    historyPilotOpen: 'Copii conform sursei pentru acest an',
+    historyPilotSelected: 'Versiunea istorică selectată',
+    historyPilotYears: 'Perioadă conform sursei',
+    historyPilotIdentity: 'Identitate istorică',
+    historyPilotOriginalName: 'Denumire în sursa originală',
+    historyPilotOriginalType: 'Tip administrativ în sursă',
+    historyPilotVersions: 'Versiuni cronologice',
+    historyPilotHierarchy: 'Părinți și copii istorici (candidați)',
+    historyPilotNoParent: 'Părinte neconfirmat',
+    historyPilotNoChildren: 'Nu sunt copii documentați pentru anul selectat.',
+    historyPilotGeometry: 'Geometrie',
+    historyPilotSources: 'Surse și drepturi',
+    historyPilotCurrent: 'Situația administrativă actuală',
+    historyPilotNoBridge: 'Nu a fost admisă încă o corespondență verificată independent cu ACTUAL. Aceasta nu înseamnă că teritoriul nu are administrare actuală.',
+    historyPilotReviewNote: 'Acestea sunt propuneri din sursă, nu o ierarhie istorică juridică sau exhaustivă certificată.',
+    historyPilotMap: 'Încadrează conturul din sursă',
+    historyPilotStatus: 'Calificare probatorie',
+    historyPilotSourceName: 'Eticheta sursei nu a fost încă tradusă independent.',
+    historyPilotLoading: 'Se încarcă pilotul istoric…'
   }
 } as const;
 const BOUNDS: [[number,number],[number,number]] = [[19.8,42.65],[30.8,48.6]];
@@ -277,6 +346,16 @@ export default function App() {
   // selection source in this release is Administrative.
   const [selectedModule,setSelectedModule] = useState<ModuleId|null>(
     SHARED_STATE.entity?'administrative':null);
+  // Historical preview is independent from ACTUAL canonical identities and
+  // moduleVisible. No unreviewed polygon is loaded as a certified ACTUAL shard.
+  const [historyCatalog,setHistoryCatalog] = useState<PilotHistoricalCatalog|null>(null);
+  const [historyQualifications,setHistoryQualifications] = useState<HistoricalQualification|null>(null);
+  const [historyGeometries,setHistoryGeometries] = useState<FeatureCollection|null>(null);
+  const [historyPreviewEnabled,setHistoryPreviewEnabled] = useState(false);
+  const [historyYear,setHistoryYear] = useState(1835);
+  const [historySelectedVersionId,setHistorySelectedVersionId] = useState<string|null>(null);
+  const [historyLoading,setHistoryLoading] = useState(false);
+  const [historyError,setHistoryError] = useState<string|null>(null);
   // Independent module geometry selections share one map without owning
   // each other's selections; the Administrative array retains persistence.
   const [moduleVisible,setModuleVisible] = useState(()=>makeModuleVisibility(restoreVisible()));
@@ -358,6 +437,14 @@ export default function App() {
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
+  const historicalSelectedVersion = historyCatalog?.versions.find(
+    v=>v.id===historySelectedVersionId) || null;
+  const historicalCardActive = Boolean(historyPreviewEnabled &&
+    selectedModule==='historical' && historicalSelectedVersion &&
+    historyCatalog && historyQualifications);
+  const shownCardName = historicalCardActive&&historicalSelectedVersion ?
+    (historicalSelectedVersion.name[lang]||historicalSelectedVersion.name.ro) :
+    currentNode ? cardNameOf(currentNode,lang) : null;
   const cardRoles=currentNode?entityCardRoles(currentNode):null;
   // These are presentation-tree children for the ACTIVE tree view, never
   // mutations to the canonical administrative/legal parent identifiers.
@@ -396,6 +483,25 @@ export default function App() {
       .catch(e=>{if(active)setCatalogError(String(e));});
     return ()=>{active=false;};
   },[]);
+  useEffect(()=>{
+    if(module!=='historical'||!modulePanelOpen||historyCatalog||historyLoading||historyError)return;
+    let active=true;
+    setHistoryLoading(true);
+    loadHistoricalPilotCatalog().then(async pilot=>{
+      const [qualifications,geometry]=await Promise.all([
+        loadHistoricalPilotQualification(pilot),loadHistoricalPilotGeometries()
+      ]);
+      const result=validateHistoricalPilotCatalog(pilot,geometry);
+      if(!result.ok)throw Error(result.errors.join('; '));
+      if(!active)return;
+      setHistoryCatalog(pilot);
+      setHistoryQualifications(qualifications);
+      setHistoryGeometries(geometry as FeatureCollection);
+    }).catch(e=>{if(active)setHistoryError(String(e));})
+      .finally(()=>{if(active)setHistoryLoading(false);});
+    return ()=>{active=false;setHistoryLoading(false);};
+  },[module,modulePanelOpen,historyCatalog,historyError]);
+
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
   useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
   useEffect(()=>{
@@ -567,6 +673,17 @@ export default function App() {
           'line-opacity':0.94,'line-dasharray':[3,2]}});
       instance.addLayer({id:'entity-hover',type:'line',source:'entities',paint:{'line-color':'#1d7e65','line-width':3},filter:['==',['get','atlasId'],'__none__']});
       instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
+      // Independent historical source; never inserted into the certified
+      // administrative feature collection, style or geometry shard cache.
+      instance.addSource('historical-pilot',{type:'geojson',data:EMPTY_FEATURES});
+      // Pilot attribution is displayed in its opt-in panel and Entity card.
+      // A global MapLibre attribution for an initially empty pilot source
+      // caused overlap with the scale control at mobile 390px.
+      instance.addLayer({id:'historical-pilot-fill',type:'fill',source:'historical-pilot',
+        paint:{'fill-color':'#d0953e','fill-opacity':0.09}});
+      instance.addLayer({id:'historical-pilot-outline',type:'line',source:'historical-pilot',
+        paint:{'line-color':'#bd781e','line-width':3,'line-opacity':0.92,
+          'line-dasharray':[3,2]}});
       instance.on('mousemove','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         instance.setFilter('entity-hover',['==',['get','atlasId'],typeof id==='string'?id:'__none__']);
@@ -575,6 +692,10 @@ export default function App() {
         instance.setFilter('entity-hover',['==',['get','atlasId'],'__none__']);
       });
       instance.on('click','entity-fill',event=>{
+        // The historical source outline has selection priority over the
+        // overlapping ACTUAL fill, while both remain separate data layers.
+        if(instance.queryRenderedFeatures(event.point,{
+          layers:['historical-pilot-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -584,6 +705,8 @@ export default function App() {
       });
       for(const boundaryLayer of ['entity-outline','entity-stat-outline'])
         instance.on('click',boundaryLayer,event=>{
+        if(instance.queryRenderedFeatures(event.point,{
+          layers:['historical-pilot-fill']}).length)return;
         const id=event.features?.[0]?.properties?.atlasId;
         if(typeof id==='string'){
           setSelected(id);setSelectedModule('administrative');setDetailPanelOpen(true);
@@ -591,7 +714,23 @@ export default function App() {
           else if(window.innerWidth<1100)setModulePanelOpen(false);
         }
       });
+      for(const layer of ['historical-pilot-fill','historical-pilot-outline']){
+        instance.on('click',layer,event=>{
+          const versionId=event.features?.[0]?.properties?.versionId;
+          if(typeof versionId!=='string')return;
+          setHistorySelectedVersionId(versionId);
+          setSelected(null);
+          setSelectedModule('historical');
+          setDetailPanelOpen(true);
+          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+          else if(window.innerWidth<1100)setModulePanelOpen(false);
+        });
+        instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
+        instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
+      }
       instance.on('click','country-fill',event=>{
+        if(instance.queryRenderedFeatures(event.point,{
+          layers:['historical-pilot-fill']}).length)return;
         const country=event.features?.[0]?.properties?.id;
         if(country==='ro'||country==='md'){
           setSelected(country==='ro'?'osm-r90689':'osm-r58974');
@@ -693,6 +832,24 @@ export default function App() {
     m.setPaintProperty('backdrop','background-color',basemap==='dark'?'#14241e':'#f1f5ef');
   },[basemap,ready]);
 
+  useEffect(()=>{
+    if(!ready||!mapRef.current)return;
+    const source=mapRef.current.getSource('historical-pilot') as GeoJSONSource|undefined;
+    if(!source)return;
+    if(!historyPreviewEnabled || !historicalSelectedVersion || !historyGeometries ||
+        !historicalDateInPeriod(historicalSelectedVersion.period,
+          String(historyYear).padStart(4,'0')+'-07-01')){
+      source.setData(EMPTY_FEATURES);
+      return;
+    }
+    const feature=historyGeometries.features.find(
+      f=>f.properties?.geometryId===historicalSelectedVersion.geometryId);
+    if(!feature){source.setData(EMPTY_FEATURES);return;}
+    source.setData({type:'FeatureCollection',features:[{
+      ...feature,properties:{...feature.properties,versionId:historicalSelectedVersion.id}
+    }]});
+  },[ready,historyPreviewEnabled,historyGeometries,historicalSelectedVersion,historyYear]);
+
   const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
     const s=new Set(old);for(const id of ids)if(show)s.add(id);else s.delete(id);return [...s];
@@ -704,6 +861,54 @@ export default function App() {
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
+  function chooseHistoricalVersion(id:string){
+    const version=historyCatalog?.versions.find(v=>v.id===id);
+    if(!historyPreviewEnabled || !version)return;
+    if(!historicalDateInPeriod(version.period,
+      String(historyYear).padStart(4,'0')+'-07-01')){
+      // The year control uses a representative July date. Moving between
+      // versions must not silently display a polygon outside its interval.
+      const start=version.period.kind==='interval'?version.period.start:version.period.at;
+      const end=version.period.kind==='interval'?version.period.end:version.period.at;
+      if(start&&end){
+        const y=Math.max(1815,start.year);
+        const firstJuly=start.month&&start.month>7?y+1:y;
+        for(let attempt=firstJuly;attempt<=Math.min(end.year,1918);attempt++){
+          if(historicalDateInPeriod(version.period,
+              String(attempt).padStart(4,'0')+'-07-01')){
+            setHistoryYear(attempt);break;
+          }
+        }
+      }
+    }
+    setToolsOpen(false);setToolSection(null);
+    setHistorySelectedVersionId(id);
+    setSelected(null);
+    setSelectedModule('historical');
+    setDetailPanelOpen(true);
+    if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+    else if(window.innerWidth<1100)setModulePanelOpen(false);
+  }
+  function locateHistoricalVersion(){
+    if(!historicalSelectedVersion||!historyGeometries||!mapRef.current)return;
+    const feature=historyGeometries.features.find(f=>
+      f.properties?.geometryId===historicalSelectedVersion.geometryId);
+    if(!feature)return;
+    mapRef.current.fitBounds(bboxOfGeometry(feature.geometry),{
+      padding:window.innerWidth<=700?36:85,duration:650,maxZoom:9
+    });
+  }
+  function setHistoricalReviewEnabled(enabled:boolean){
+    setHistoryPreviewEnabled(enabled);
+    if(!enabled){
+      setHistorySelectedVersionId(null);
+      if(selectedModule==='historical'){
+        setSelectedModule(selected?'administrative':null);
+        setDetailPanelOpen(false);
+        if(drawer==='detail')setDrawer(null);
+      }
+    }
+  }
   function chooseRelated(id:string){
     // Only card-internal navigation moves focus to a new card's heading.
     pendingCardNavigationRef.current=id;
@@ -797,9 +1002,17 @@ export default function App() {
   // Home moves only the camera; a local reset never touches the camera or
   // selections owned by another module. The global reset restores RO + MD.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
-  const localSelectionActive=moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
-    adminFilters,statFilters,selected,selectedModule);
+  const localSelectionActive=module==='historical'?
+    (historyPreviewEnabled||historySelectedVersionId!==null):
+    moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
+      adminFilters,statFilters,selected,selectedModule);
   function resetLocalModule(id:ModuleId){
+    if(id==='historical'){
+      if(!historyPreviewEnabled && !historySelectedVersionId)return;
+      setHistoricalReviewEnabled(false);
+      setHistoryYear(1835);
+      return;
+    }
     if(!moduleHasSelections(moduleVisible,id,DEFAULT_VISIBLE,
       adminFilters,statFilters,selected,selectedModule))return;
     // The reset control becomes disabled when complete; move focus to its
@@ -824,6 +1037,9 @@ export default function App() {
     }
   }
   const resetAllSelections=()=>{
+    setHistoryPreviewEnabled(false);
+    setHistorySelectedVersionId(null);
+    setHistoryYear(1835);
     navigationEpoch.current++; // Cancel stale asynchronous camera movements.
     setNavBusy(false);
     setModuleVisible(makeModuleVisibility(DEFAULT_VISIBLE));
@@ -1071,6 +1287,26 @@ export default function App() {
     </div>
   </section>;
 
+  const historicalPanel=<HistoricalPilotTree
+    catalog={historyCatalog} qualification={historyQualifications}
+    year={historyYear} preview={historyPreviewEnabled}
+    selectedVersionId={historySelectedVersionId}
+    lang={lang} labels={t} loading={historyLoading} error={historyError}
+    onPreview={setHistoricalReviewEnabled}
+    onYear={year=>{
+      setHistoryYear(year);
+      const active=historicalSelectedVersion&&historicalDateInPeriod(
+        historicalSelectedVersion.period,String(year).padStart(4,'0')+'-07-01');
+      if(historicalSelectedVersion&&!active){
+        setHistorySelectedVersionId(null);
+        if(selectedModule==='historical'){
+          setSelectedModule(selected?'administrative':null);
+          setDetailPanelOpen(false);
+          if(drawer==='detail')setDrawer(null);
+        }
+      }
+    }} onSelect={chooseHistoricalVersion}/>;
+
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
   // SIM-R4.1: the heading shows the same coat as the tree, with a neutral
@@ -1078,6 +1314,12 @@ export default function App() {
   const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
   const editorialSymbols=currentNode&&!officialSymbols?withGlobalSymbols(currentNode,editorialSymbolsForEntity(currentNode)):null;
   const headerCoatSrc=currentNode?coatImageForEntity(currentNode,import.meta.env.BASE_URL):null;
+  const historicalDetails=historicalCardActive&&historyCatalog&&historyQualifications&&historySelectedVersionId?
+    <HistoricalPilotEntityCard
+      catalog={historyCatalog} qualification={historyQualifications}
+      versionId={historySelectedVersionId} year={historyYear}
+      lang={lang} labels={t} onSelect={chooseHistoricalVersion}
+      onMap={locateHistoricalVersion}/> : null;
   const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
@@ -1492,7 +1734,7 @@ export default function App() {
           <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
           <button className={lang==='ro'?'active':''} aria-pressed={lang==='ro'} onClick={()=>setLang('ro')}>RO</button>
         </div>
-        {currentNode&&<button type="button" className="header-entity-action" aria-label={t.openDetail}
+        {(currentNode||historicalCardActive)&&<button type="button" className="header-entity-action" aria-label={t.openDetail}
           title={t.openDetail} aria-expanded={detailPanelOpen}
           onClick={()=>{
             if(detailPanelOpen){closeDetailPanel();return;}
@@ -1523,7 +1765,7 @@ export default function App() {
               aria-label={t.close} title={t.close} onClick={closeModulePanel}>×</button>
           </div>
         </div>
-        {module==='administrative'?treePanel:
+        {module==='administrative'?treePanel:module==='historical'?historicalPanel:
           <section className="tree-content">
             <p className="planned-module-description">{t.planned}</p>
           </section>}
@@ -1568,12 +1810,23 @@ export default function App() {
         </div>
         {details}
       </aside>}
+      {historicalCardActive&&detailPanelOpen&&<aside className="detail-sidebar"
+        aria-label={t.details+': '+(shownCardName||'')}>
+        <h2 className="sr-only">{t.details}</h2>
+        <div className="pane-toolbar">
+          <span aria-hidden="true">{t.details}</span>
+          <button type="button" className="pane-close" aria-label={t.close} title={t.close}
+            onClick={closeDetailPanel}>×</button>
+        </div>
+        {historicalDetails}
+      </aside>}
     </div>
     {drawer&&<div className="drawer-screen" role="presentation" onClick={()=>{
       if(drawer==='tree')closeModulePanel();else closeDetailPanel();
     }}>
       <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true"
         aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
+          historicalCardActive?t.details+': '+(shownCardName||''):
           t.details+(currentNode?': '+cardNameOf(currentNode,lang):'')}
         onClick={e=>e.stopPropagation()}>
         <h2 className="sr-only">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
@@ -1594,10 +1847,10 @@ export default function App() {
               }}>×</button>
           </div>
         </div>
-        {drawer==='tree'?(module==='administrative'?treePanel:
+        {drawer==='tree'?(module==='administrative'?treePanel:module==='historical'?historicalPanel:
           <section className="tree-content">
             <p className="planned-module-description">{t.planned}</p>
-          </section>):details}
+          </section>):historicalCardActive?historicalDetails:details}
       </div>
     </div>}
   </div>;
