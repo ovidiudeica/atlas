@@ -675,8 +675,10 @@ export default function App() {
       instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
       // Independent historical source; never inserted into the certified
       // administrative feature collection, style or geometry shard cache.
-      instance.addSource('historical-pilot',{type:'geojson',data:EMPTY_FEATURES,
-        attribution:'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0'});
+      instance.addSource('historical-pilot',{type:'geojson',data:EMPTY_FEATURES});
+      // Pilot attribution is displayed in its opt-in panel and Entity card.
+      // A global MapLibre attribution for an initially empty pilot source
+      // caused overlap with the scale control at mobile 390px.
       instance.addLayer({id:'historical-pilot-fill',type:'fill',source:'historical-pilot',
         paint:{'fill-color':'#d0953e','fill-opacity':0.09}});
       instance.addLayer({id:'historical-pilot-outline',type:'line',source:'historical-pilot',
