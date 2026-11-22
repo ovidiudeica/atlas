@@ -13,7 +13,7 @@ export interface HistoricalGeodataSelection {
 const labels={
   ro:{
     title:'Geodata GIS — geometrii istorice',subtitle:'Poligoane istorice din colecțiile existente, păstrate ca versiuni ale surselor. Afișarea nu certifică juridic hotarele sau ierarhia.',
-    search:'Caută entitate sau perioadă',onlyYear:'Numai versiunile atestate de sursă pentru anul selectat',
+    search:'Caută entitate sau perioadă',onlyYear:'Numai versiunile cu interval-sursă care intersectează anul selectat',
     loading:'Se încarcă inventarul istoric…',loadGeom:'Se încarcă geometria originală…',
     empty:'Nu există versiuni ale sursei pentru acest filtru.',warning:'Geometrie-sursă necertificată',
     period:'Perioada declarată de sursă',source:'Sursă și proveniență',
@@ -25,7 +25,7 @@ const labels={
   },
   en:{
     title:'Geodata GIS — historical source geometries',subtitle:'Existing historical polygons are preserved as source versions. Display does not certify legal boundaries or hierarchy.',
-    search:'Find entity or period',onlyYear:'Show only source-attested versions for the selected year',
+    search:'Find entity or period',onlyYear:'Only source versions whose dates intersect the selected year',
     loading:'Loading historical source inventory…',loadGeom:'Loading original source geometry…',
     empty:'No source version matches this filter.',warning:'Uncertified source geometry',
     period:'Source-reported period',source:'Source and provenance',
