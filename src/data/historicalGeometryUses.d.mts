@@ -43,10 +43,10 @@ export interface HistoricalGeometryVersionRef {
   period: HistoricalPeriod;
 }
 
-export function sortHistoricalGeometryUses(uses: HistoricalGeometryUse[]): HistoricalGeometryUse[];
-export function historicalUsesForGeometry(uses: HistoricalGeometryUse[], geometryId: string): HistoricalGeometryUse[];
+export function sortHistoricalGeometryUses(uses: readonly HistoricalGeometryUse[]): HistoricalGeometryUse[];
+export function historicalUsesForGeometry(uses: readonly HistoricalGeometryUse[], geometryId: string): HistoricalGeometryUse[];
 export function formatHistoricalUse(use: HistoricalGeometryUse, lang: 'ro'|'en', labels: Pick<GeometryUsageLabels,'referenceDatePrefix'>): string;
 export function validateHistoricalGeometryRegister(
-  geometries: HistoricalGeometryRecord[], uses: HistoricalGeometryUse[],
-  versions?: HistoricalGeometryVersionRef[]
+  geometries: readonly HistoricalGeometryRecord[], uses: readonly HistoricalGeometryUse[],
+  versions?: readonly HistoricalGeometryVersionRef[]
 ): {geometryCount: number; usageCount: number};
