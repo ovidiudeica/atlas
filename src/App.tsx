@@ -710,6 +710,7 @@ export default function App() {
           const versionId=event.features?.[0]?.properties?.versionId;
           if(typeof versionId!=='string')return;
           setHistorySelectedVersionId(versionId);
+          setSelected(null);
           setSelectedModule('historical');
           setDetailPanelOpen(true);
           if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
@@ -853,6 +854,7 @@ export default function App() {
     if(!historyPreviewEnabled || !historyCatalog?.versions.some(v=>v.id===id))return;
     setToolsOpen(false);setToolSection(null);
     setHistorySelectedVersionId(id);
+    setSelected(null);
     setSelectedModule('historical');
     setDetailPanelOpen(true);
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
@@ -1283,13 +1285,13 @@ export default function App() {
   const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
   const editorialSymbols=currentNode&&!officialSymbols?withGlobalSymbols(currentNode,editorialSymbolsForEntity(currentNode)):null;
   const headerCoatSrc=currentNode?coatImageForEntity(currentNode,import.meta.env.BASE_URL):null;
-  const details=historicalCardActive&&historyCatalog&&historyQualifications&&historicalSelectedVersionId?
+  const historicalDetails=historicalCardActive&&historyCatalog&&historyQualifications&&historicalSelectedVersionId?
     <HistoricalPilotEntityCard
       catalog={historyCatalog} qualification={historyQualifications}
       versionId={historicalSelectedVersionId} year={historyYear}
       lang={lang} labels={t} onSelect={chooseHistoricalVersion}
-      onMap={locateHistoricalVersion}/>
-    :<section className="detail-content">
+      onMap={locateHistoricalVersion}/> : null;
+  const details=<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
         <span className="flag flag--coat" aria-hidden="true">
@@ -1769,8 +1771,8 @@ export default function App() {
           {(geomError||rootGeomError||geometryRetryBusy)&&<button type="button" className="geometry-retry" disabled={geometryRetryBusy} onClick={retryGeometry}>{t.retryGeometry}</button>}
         </div>}
       </main>
-      {(currentNode||historicalCardActive)&&detailPanelOpen&&<aside className="detail-sidebar"
-        aria-label={t.details+': '+(shownCardName||'')}>
+      {currentNode&&detailPanelOpen&&<aside className="detail-sidebar"
+        aria-label={t.details+': '+cardNameOf(currentNode,lang)}>
         <h2 className="sr-only">{t.details}</h2>
         <div className="pane-toolbar">
           <span aria-hidden="true">{t.details}</span>
@@ -1779,13 +1781,24 @@ export default function App() {
         </div>
         {details}
       </aside>}
+      {historicalCardActive&&detailPanelOpen&&<aside className="detail-sidebar"
+        aria-label={t.details+': '+(shownCardName||'')}>
+        <h2 className="sr-only">{t.details}</h2>
+        <div className="pane-toolbar">
+          <span aria-hidden="true">{t.details}</span>
+          <button type="button" className="pane-close" aria-label={t.close} title={t.close}
+            onClick={closeDetailPanel}>×</button>
+        </div>
+        {historicalDetails}
+      </aside>}
     </div>
     {drawer&&<div className="drawer-screen" role="presentation" onClick={()=>{
       if(drawer==='tree')closeModulePanel();else closeDetailPanel();
     }}>
       <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true"
         aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
-          t.details+(shownCardName?': '+shownCardName:'')}
+          historicalCardActive?t.details+': '+(shownCardName||''):
+          t.details+(currentNode?': '+cardNameOf(currentNode,lang):'')}
         onClick={e=>e.stopPropagation()}>
         <h2 className="sr-only">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
             t.details}</h2>
@@ -1808,7 +1821,7 @@ export default function App() {
         {drawer==='tree'?(module==='administrative'?treePanel:module==='historical'?historicalPanel:
           <section className="tree-content">
             <p className="planned-module-description">{t.planned}</p>
-          </section>):details}
+          </section>):historicalCardActive?historicalDetails:details}
       </div>
     </div>}
   </div>;
