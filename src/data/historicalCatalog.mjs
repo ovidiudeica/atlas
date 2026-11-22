@@ -19,7 +19,8 @@ function requireUnique(rows, key, errors) {
   if (!Array.isArray(rows)) { errors.push(key + ' must be an array'); return new Map(); }
   const seen = new Map();
   for (const row of rows) {
-    const id = row?.id ?? row?.geometryId ?? row?.useId;
+    const id = key === 'geometryUses' ? row?.useId :
+      key === 'geometries' ? row?.geometryId : row?.id;
     if (!nonempty(id) || seen.has(id)) errors.push(key + ': duplicate/missing ID ' + id);
     else seen.set(id, row);
   }
@@ -40,6 +41,8 @@ function inWindow(period, iso) {
   if (!validateHistoricalPeriod(period) || !/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(iso))
     return false;
   const [y, m, d] = iso.split('-').map(Number);
+  if (!validateHistoricalPeriod({kind: 'snapshot', at: {year:y,month:m,day:d}}))
+    return false;
   const key = y * 10000 + m * 100 + d;
   if (period.kind === 'snapshot') {
     return dateNumber(period.at, -Infinity) <= key &&
