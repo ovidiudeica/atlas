@@ -13,7 +13,7 @@ export interface HistoricalGeodataSelection {
 }
 const labels={
   ro:{
-    title:'Geodata GIS — geometrii istorice',subtitle:'Poligoane istorice din colecțiile existente, păstrate ca versiuni ale surselor. Afișarea nu certifică juridic hotarele sau ierarhia.',
+    title:'OpenHistoricalMap — catalog istoric',subtitle:'139 de versiuni-sursă OHM. Geometriile și perioadele provin din OpenHistoricalMap; hotarele și ierarhiile nu sunt certificate independent.',
     search:'Caută entitate sau perioadă',onlyYear:'Numai versiunile cu interval-sursă care intersectează anul selectat',
     loading:'Se încarcă inventarul istoric…',loadGeom:'Se încarcă geometria originală…',
     empty:'Nu există versiuni ale sursei pentru acest filtru.',warning:'Geometrie-sursă necertificată',
@@ -22,10 +22,10 @@ const labels={
     notes:'Observații ale sursei',sourceName:'Colecție',uncertain:'Interval incert / sursă necalificată',
     identity:'Identitate istorică (sursă)',sourceId:'ID sursă',original:'Fișierul original din Drive',
     noHierarchy:'Apartenența la un grup de colecție nu este o relație părinte–copil certificată.',
-    indexed:'versiuni importate'
+    indexed:'versiuni OHM'
   },
   en:{
-    title:'Geodata GIS — historical source geometries',subtitle:'Existing historical polygons are preserved as source versions. Display does not certify legal boundaries or hierarchy.',
+    title:'OpenHistoricalMap — historical catalogue',subtitle:'139 OHM source versions. Geometries and periods come from OpenHistoricalMap; boundaries and hierarchies are not independently certified.',
     search:'Find entity or period',onlyYear:'Only source versions whose dates intersect the selected year',
     loading:'Loading historical source inventory…',loadGeom:'Loading original source geometry…',
     empty:'No source version matches this filter.',warning:'Uncertified source geometry',
@@ -34,7 +34,7 @@ const labels={
     notes:'Source observations',sourceName:'Collection',uncertain:'Unverified source interval',
     identity:'Historical identity (source)',sourceId:'Source ID',original:'Original Drive file',
     noHierarchy:'A source collection group is not a certified administrative parent–child relationship.',
-    indexed:'imported versions'
+    indexed:'OHM versions'
   }
 };
 const dateLabel=(e:GeodataSourceEntry,lang:Locale)=>
@@ -43,8 +43,8 @@ const dateLabel=(e:GeodataSourceEntry,lang:Locale)=>
     (lang==='ro'?'Atestat în ':'Attested in ')+e.sourcePeriod.start?.slice(0,4):
   (e.sourcePeriod.start?.slice(0,4)||'?')+'–'+(e.sourcePeriod.end?.slice(0,4)||'?');
 
-export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
- year:number;lang:Locale;
+export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId}:{
+ year:number;onYear:(year:number)=>void;lang:Locale;
  onSelect:(selection:HistoricalGeodataSelection)=>void;
  selectedId:string|null;
 }){
@@ -95,7 +95,11 @@ export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
    <label className="history-source-search">{t.search}
      <input type="search" value={query} onChange={e=>setQuery(e.target.value)} />
    </label>
-   <label className="history-pilot-option">
+   <label className="history-source-year">{lang==='ro'?'An de referință':'Reference year'}
+     <input type="number" min={1000} max={2100} value={year}
+       onChange={event=>{const n=Number(event.target.value);if(Number.isInteger(n)&&n>=1000&&n<=2100)onYear(n);}} />
+   </label>
+   <label className="history-source-year-filter">
      <input type="checkbox" checked={yearOnly} onChange={e=>setYearOnly(e.target.checked)}/>
      {t.onlyYear}: {year}
    </label>
