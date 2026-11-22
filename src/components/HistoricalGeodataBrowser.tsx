@@ -36,10 +36,11 @@ const labels={
     indexed:'imported versions'
   }
 };
-const dateLabel=(e:GeodataSourceEntry)=>
-  e.sourcePeriod.kind==='undated'?'Datare neverificată / Undated':
-  e.sourcePeriod.kind==='snapshot'?'Atestat la '+e.sourcePeriod.start:
-  (e.sourcePeriod.start||'?')+' – '+(e.sourcePeriod.end||'?');
+const dateLabel=(e:GeodataSourceEntry,lang:Locale)=>
+  e.sourcePeriod.kind==='undated'?(lang==='ro'?'Datare neverificată':'Undated / unverified'):
+  e.sourcePeriod.kind==='snapshot'?
+    (lang==='ro'?'Atestat în ':'Attested in ')+e.sourcePeriod.start?.slice(0,4):
+  (e.sourcePeriod.start?.slice(0,4)||'?')+'–'+(e.sourcePeriod.end?.slice(0,4)||'?');
 
 export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
  year:number;lang:Locale;
@@ -106,7 +107,7 @@ export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
            <button type="button" className="tree-label" onClick={()=>void selectEntry(e)}
              disabled={busy!==null} aria-current={selectedId===e.id?'true':undefined}>
              <span className="tree-label-heading"><span className="node-name">{e.displayName[lang]}</span></span>
-             <span className="node-level">{dateLabel(e)} · {e.sourceRelationId??e.sourceExternalId??e.id}</span>
+             <span className="node-level">{dateLabel(e,lang)} · {e.sourceRelationId??e.sourceExternalId??e.id}</span>
            </button>
          </div>)}
        </div>
@@ -126,7 +127,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
    <div className="entity-card" key={entry.id}>
      <header className="entity-title">
        <span className="flag flag--coat" aria-hidden="true">◇</span>
-       <div><h3>{entry.displayName[lang]}</h3><small>{dateLabel(entry)}</small></div>
+       <div><h3>{entry.displayName[lang]}</h3><small>{dateLabel(entry,lang)}</small></div>
      </header>
      <p className="source-caveat"><strong>{t.warning}</strong></p>
      <div className="entity-actions">
@@ -136,7 +137,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
        <dl className="metadata">
          <dt>{t.sourceId}</dt><dd>{entry.sourceFamily==='OHM'? 'OHM relation '+entry.sourceRelationId : entry.sourceExternalId??entry.id}</dd>
          <dt>{t.kind}</dt><dd>{entry.sourceType||'—'}</dd>
-         <dt>{t.period}</dt><dd>{dateLabel(entry)} ({t.uncertain})</dd>
+         <dt>{t.period}</dt><dd>{dateLabel(entry,lang)} ({t.uncertain})</dd>
          <dt>{t.geometry}</dt><dd>{entry.geometryId}</dd>
        </dl>
      </EntityCardSection>
