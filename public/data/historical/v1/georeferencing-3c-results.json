@@ -1,0 +1,442 @@
+{
+  "acceptedLegalHistoricalBoundaryPolygons": 0,
+  "acceptedOriginalMapGeoreferencing": 0,
+  "acceptedReparentings": 0,
+  "blindHoldout": false,
+  "eightCases": [
+    {
+      "childName": "Doboka",
+      "decision": "BLOCKED_SOURCE_PARENT",
+      "fitHoldoutGeoreferencingAccepted": false,
+      "legalBoundaryCertified": false,
+      "newHistoricalGeometryId": null,
+      "original1835LineDigitized": false,
+      "original1841LineDigitized": false,
+      "parentName": "Innere Szolnok",
+      "reassignedLegalParent": null,
+      "sourceBaselineDecision": "blocked_spatial_contradiction",
+      "sourceOutsidePercent": 100,
+      "sourceRelationId": "histogis-v9:hierarchy:12324:12328:1815-09-06"
+    },
+    {
+      "childName": "Bistritz",
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fitHoldoutGeoreferencingAccepted": false,
+      "legalBoundaryCertified": false,
+      "newHistoricalGeometryId": null,
+      "original1835LineDigitized": false,
+      "original1841LineDigitized": false,
+      "parentName": "Großfürstentum Siebenbürgen",
+      "reassignedLegalParent": null,
+      "sourceBaselineDecision": "requires_boundary_reconciliation",
+      "sourceOutsidePercent": 0.228619,
+      "sourceRelationId": "histogis-v9:hierarchy:12330:9915:1815-09-06"
+    },
+    {
+      "childName": "Mühlbach",
+      "decision": "BLOCKED_SOURCE_PARENT",
+      "fitHoldoutGeoreferencingAccepted": false,
+      "legalBoundaryCertified": false,
+      "newHistoricalGeometryId": null,
+      "original1835LineDigitized": false,
+      "original1841LineDigitized": false,
+      "parentName": "Unterweißenburg",
+      "reassignedLegalParent": null,
+      "sourceBaselineDecision": "blocked_spatial_contradiction",
+      "sourceOutsidePercent": 100,
+      "sourceRelationId": "histogis-v9:hierarchy:12383:12406:1815-09-06"
+    },
+    {
+      "childName": "Kövár",
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fitHoldoutGeoreferencingAccepted": false,
+      "legalBoundaryCertified": false,
+      "newHistoricalGeometryId": null,
+      "original1835LineDigitized": false,
+      "original1841LineDigitized": false,
+      "parentName": "Großfürstentum Siebenbürgen",
+      "reassignedLegalParent": null,
+      "sourceBaselineDecision": "requires_boundary_reconciliation",
+      "sourceOutsidePercent": 3.004871,
+      "sourceRelationId": "histogis-v9:hierarchy:12391:9915:1815-09-06"
+    },
+    {
+      "childName": "Zărand",
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fitHoldoutGeoreferencingAccepted": false,
+      "legalBoundaryCertified": false,
+      "newHistoricalGeometryId": null,
+      "original1835LineDigitized": false,
+      "original1841LineDigitized": false,
+      "parentName": "Großfürstentum Siebenbürgen",
+      "reassignedLegalParent": null,
+      "sourceBaselineDecision": "requires_boundary_reconciliation",
+      "sourceOutsidePercent": 0.401048,
+      "sourceRelationId": "histogis-v9:hierarchy:12392:9915:1815-09-06"
+    },
+    {
+      "childName": "Hunyad",
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fitHoldoutGeoreferencingAccepted": false,
+      "legalBoundaryCertified": false,
+      "newHistoricalGeometryId": null,
+      "original1835LineDigitized": false,
+      "original1841LineDigitized": false,
+      "parentName": "Großfürstentum Siebenbürgen",
+      "reassignedLegalParent": null,
+      "sourceBaselineDecision": "requires_boundary_reconciliation",
+      "sourceOutsidePercent": 0.771978,
+      "sourceRelationId": "histogis-v9:hierarchy:12401:9915:1815-09-06"
+    },
+    {
+      "childName": "Kraszna",
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fitHoldoutGeoreferencingAccepted": false,
+      "legalBoundaryCertified": false,
+      "newHistoricalGeometryId": null,
+      "original1835LineDigitized": false,
+      "original1841LineDigitized": false,
+      "parentName": "Großfürstentum Siebenbürgen",
+      "reassignedLegalParent": null,
+      "sourceBaselineDecision": "requires_boundary_reconciliation",
+      "sourceOutsidePercent": 2.029978,
+      "sourceRelationId": "histogis-v9:hierarchy:12404:9915:1815-09-06"
+    },
+    {
+      "childName": "Mittlere Szolnok",
+      "decision": "HOLD_ORIGINAL_BOUNDARY_RECONCILIATION",
+      "fitHoldoutGeoreferencingAccepted": false,
+      "legalBoundaryCertified": false,
+      "newHistoricalGeometryId": null,
+      "original1835LineDigitized": false,
+      "original1841LineDigitized": false,
+      "parentName": "Großfürstentum Siebenbürgen",
+      "reassignedLegalParent": null,
+      "sourceBaselineDecision": "requires_boundary_reconciliation",
+      "sourceOutsidePercent": 5.892093,
+      "sourceRelationId": "histogis-v9:hierarchy:12405:9915:1815-09-06"
+    }
+  ],
+  "independentHistoGISDigitizationUsedInFit": false,
+  "maps": [
+    {
+      "approvedForBoundaryTracing": false,
+      "archiveSha256": "02e55f68e870aa6e8c65ff12a71e2a080a2787443eaa0e8a58e7c3fe83d1408a",
+      "blindIndependentHoldout": false,
+      "certificationDecision": "HOLD",
+      "fitCount": 7,
+      "fitHoldoutDisjoint": true,
+      "fitRMSEMeters": 5521.2053,
+      "fitReferenceIsIndependentOfHistoGIS": true,
+      "geotransformNative": [
+        5207541.873183895,
+        201.547668443,
+        49.348606102,
+        2853754.368258702,
+        39.140776556,
+        -224.896486582
+      ],
+      "historicalBoundaryCertified": false,
+      "holdoutCount": 4,
+      "holdoutMaxMeters": 15864.7905,
+      "holdoutRMSEMeters": 9594.1732,
+      "limitations": "Approximate manually interpreted town symbols; uncertain modern city-centre reference; holdout non-blind; source projection/datum unproven.",
+      "model": "affine_2d_least_squares_no_historical_datum_assumed",
+      "passNumericTrialGates": false,
+      "points": [
+        {
+          "errorMeters": 5969.6203,
+          "id": "Cluj",
+          "pixelNative": [
+            596.4075,
+            663.8017
+          ],
+          "placeName": "Klausenburg / Cluj",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 6462.0935,
+          "id": "Sibiu",
+          "pixelNative": [
+            779.9175,
+            1144.1343
+          ],
+          "placeName": "Hermannstadt / Sibiu",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:geodatos-romania",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 2675.2182,
+          "id": "Brasov",
+          "pixelNative": [
+            1287.1188,
+            1221.8539
+          ],
+          "placeName": "Kronstadt / Brașov",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:geodatos-romania",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 4987.6618,
+          "id": "AlbaIulia",
+          "pixelNative": [
+            511.0244,
+            1024.3697
+          ],
+          "placeName": "Karlsburg / Alba Iulia",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 1960.8294,
+          "id": "TarguMures",
+          "pixelNative": [
+            913.7269,
+            791.2109
+          ],
+          "placeName": "Maros-Vásárhely / Târgu Mureș",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 8234.7545,
+          "id": "Turda",
+          "pixelNative": [
+            611.7,
+            742.7954
+          ],
+          "placeName": "Thorda / Turda",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 5683.4269,
+          "id": "Zalau",
+          "pixelNative": [
+            365.7456,
+            498.1698
+          ],
+          "placeName": "Zilah / Zalău",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:geodatos-romania",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 15864.7905,
+          "id": "Deva",
+          "pixelNative": [
+            347.9044,
+            1131.3934
+          ],
+          "placeName": "Déva / Deva",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:geodatos-romania",
+          "role": "HOLDOUT"
+        },
+        {
+          "errorMeters": 4346.559,
+          "id": "Sighisoara",
+          "pixelNative": [
+            974.8969,
+            953.0205
+          ],
+          "placeName": "Schäßburg / Sighișoara",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "HOLDOUT"
+        },
+        {
+          "errorMeters": 5664.4639,
+          "id": "Fagaras",
+          "pixelNative": [
+            1043.7131,
+            1145.4084
+          ],
+          "placeName": "Fogaras / Făgăraș",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:fagaras",
+          "role": "HOLDOUT"
+        },
+        {
+          "errorMeters": 8094.5868,
+          "id": "Bistrita",
+          "pixelNative": [
+            926.4706,
+            475.2362
+          ],
+          "placeName": "Bistritz / Bistrița",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:geodatos-romania",
+          "role": "HOLDOUT"
+        }
+      ],
+      "sourceFileVerified": true,
+      "sourceId": "hist3c:map:streit-1835",
+      "suitableForCanonicalHistoricalGeometry": false,
+      "targetCRS": "EPSG:3035",
+      "year": 1835
+    },
+    {
+      "approvedForBoundaryTracing": false,
+      "archiveSha256": "c3b0f75ba204744405cb20e5f2af004d4514a108d131540c3a608cbb53dc7d87",
+      "blindIndependentHoldout": false,
+      "certificationDecision": "HOLD",
+      "fitCount": 7,
+      "fitHoldoutDisjoint": true,
+      "fitRMSEMeters": 5368.026,
+      "fitReferenceIsIndependentOfHistoGIS": true,
+      "geotransformNative": [
+        5165583.521421041,
+        39.332137943,
+        10.45030047,
+        2877241.30659915,
+        2.407288993,
+        -44.131116766
+      ],
+      "historicalBoundaryCertified": false,
+      "holdoutCount": 3,
+      "holdoutMaxMeters": 10499.2055,
+      "holdoutRMSEMeters": 7681.5979,
+      "limitations": "Approximate manually interpreted town symbols; uncertain modern city-centre reference; holdout non-blind; source projection/datum unproven.",
+      "model": "affine_2d_least_squares_no_historical_datum_assumed",
+      "passNumericTrialGates": false,
+      "points": [
+        {
+          "errorMeters": 2816.2981,
+          "id": "Cluj",
+          "pixelNative": [
+            3931.8882,
+            3675.3817
+          ],
+          "placeName": "Klausenburg / Cluj",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 3728.9704,
+          "id": "Dej",
+          "pixelNative": [
+            4314.9953,
+            2701.1032
+          ],
+          "placeName": "Dées / Dej",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:dej",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 5237.8834,
+          "id": "Bistrita",
+          "pixelNative": [
+            5497.9224,
+            2580.1583
+          ],
+          "placeName": "Bistritz / Bistrița",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:geodatos-romania",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 3298.8553,
+          "id": "Sibiu",
+          "pixelNative": [
+            4671.2176,
+            5966.616
+          ],
+          "placeName": "Hermannstadt / Sibiu",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:geodatos-romania",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 5127.5522,
+          "id": "Brasov",
+          "pixelNative": [
+            7527.7176,
+            5966.616
+          ],
+          "placeName": "Kronstadt / Brașov",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:geodatos-romania",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 5569.6318,
+          "id": "Sighisoara",
+          "pixelNative": [
+            6210.3671,
+            4797.4818
+          ],
+          "placeName": "Schäßburg / Sighișoara",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 9178.3825,
+          "id": "TarguMures",
+          "pixelNative": [
+            5894.4718,
+            4078.5314
+          ],
+          "placeName": "Maros-Vásárhely / Târgu Mureș",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "FIT"
+        },
+        {
+          "errorMeters": 10499.2055,
+          "id": "Fagaras",
+          "pixelNative": [
+            6667.4071,
+            5650.8154
+          ],
+          "placeName": "Fogaras / Făgăraș",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:fagaras",
+          "role": "HOLDOUT"
+        },
+        {
+          "errorMeters": 7862.317,
+          "id": "Turda",
+          "pixelNative": [
+            4348.6012,
+            4152.4422
+          ],
+          "placeName": "Thorda / Turda",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:openadmindata",
+          "role": "HOLDOUT"
+        },
+        {
+          "errorMeters": 2229.6851,
+          "id": "Medias",
+          "pixelNative": [
+            5155.1424,
+            4999.0566
+          ],
+          "placeName": "Mediasch / Mediaș",
+          "positionQuality": "provisional_visual_only_not_ground_survey",
+          "referenceSourceId": "ref:medias",
+          "role": "HOLDOUT"
+        }
+      ],
+      "sourceFileVerified": true,
+      "sourceId": "hist3c:map:raffelsperger-1841",
+      "suitableForCanonicalHistoricalGeometry": false,
+      "targetCRS": "EPSG:3035",
+      "year": 1841
+    }
+  ],
+  "pointConfidence": "provisional_visual",
+  "schema": "atlas-historical-fit-holdout-results-v1",
+  "scope": "exploratory_two_original_rasters_not_legal_or_canonical"
+}
