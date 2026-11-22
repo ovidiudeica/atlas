@@ -139,7 +139,7 @@ const WORDS = {
     historyPilotDisable: 'Hide unverified pilot',
     historyPilotWarning: 'SOURCE PILOT · Boundaries and parentage are not independently certified.',
     historyPilotSource: 'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0 · historical intervals as reported by the source',
-    historyPilotYear: 'Year of reference',
+    historyPilotYear: 'Year (state on 1 July)',
     historyPilotNoRoots: 'No source version is documented for this year.',
     historyPilotUnlinked: 'Unlinked or disputed units',
     historyPilotUnlinkedNote: 'These versions are kept available, without inventing a parent or joining incompatible polygons.',
@@ -251,7 +251,7 @@ const WORDS = {
     historyPilotDisable: 'Ascunde pilotul necertificat',
     historyPilotWarning: 'PILOT DOCUMENTAR · Hotarele și relațiile de subordonare nu sunt certificate independent.',
     historyPilotSource: 'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0 · intervale conform sursei',
-    historyPilotYear: 'Anul de referință',
+    historyPilotYear: 'Anul (stare la 1 iulie)',
     historyPilotNoRoots: 'Nu există o versiune documentată în sursă pentru acest an.',
     historyPilotUnlinked: 'Unități nelegate sau disputate',
     historyPilotUnlinkedNote: 'Păstrăm versiunile fără a inventa părinți și fără a conecta poligoane incompatibile.',
@@ -499,7 +499,7 @@ export default function App() {
       setHistoryGeometries(geometry as FeatureCollection);
     }).catch(e=>{if(active)setHistoryError(String(e));})
       .finally(()=>{if(active)setHistoryLoading(false);});
-    return ()=>{active=false;};
+    return ()=>{active=false;setHistoryLoading(false);};
   },[module,modulePanelOpen,historyCatalog,historyError]);
 
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
@@ -675,7 +675,8 @@ export default function App() {
       instance.addLayer({id:'entity-highlight',type:'line',source:'entities',paint:{'line-color':'#e3a12f','line-width':4},filter:['==',['get','atlasId'],'__none__']});
       // Independent historical source; never inserted into the certified
       // administrative feature collection, style or geometry shard cache.
-      instance.addSource('historical-pilot',{type:'geojson',data:EMPTY_FEATURES});
+      instance.addSource('historical-pilot',{type:'geojson',data:EMPTY_FEATURES,
+        attribution:'HistoGIS v9.0 (ACDH-CH) · CC BY 4.0'});
       instance.addLayer({id:'historical-pilot-fill',type:'fill',source:'historical-pilot',
         paint:{'fill-color':'#d0953e','fill-opacity':0.09}});
       instance.addLayer({id:'historical-pilot-outline',type:'line',source:'historical-pilot',
