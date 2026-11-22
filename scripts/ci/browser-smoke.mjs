@@ -1932,181 +1932,41 @@ async function simR5Audit(cdp){
  }
 }
 
-/* HIST-MODULE.2 — actual desktop/mobile source-preview regression.
- * Source candidates must remain opt-in, identified and non-certified; ACTUAL
- * selections and layout continue to work unchanged.
+/* HIST-OHM-CORE: OHM is the only active historical geometry source.
+ * HistoGIS pilot and other supplemental geometries are retired from public UI.
  */
-async function historicalPilotSmoke(cdp){
-  for (const width of [1440,390]){
-    const mobile=width<700;
-    const p=await cdp.page(width,900,mobile,site+'?lang=ro');
-    const panel=mobile?'.drawer-tree':'.tree-sidebar';
-    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
-      'HIST-MODULE.2 map ready '+width);
-    await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
-    await p.wait("!!document.querySelector('"+panel+" .history-pilot-option input')",
-      'Historical pilot and qualification loaded '+width);
-    assert.equal(await p.eval("document.querySelector('"+panel+" .history-pilot-option input').checked"),
-      false,'Historical pilot requires explicit opt-in '+width);
-    assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-pilot-review')"),
-      false,'No unverified tree on module open '+width);
-    const disclaimer=await p.eval("document.querySelector('"+panel+" .source-caveat')?.textContent");
-    assert.match(disclaimer,/necertificat|certificate|certificat/i,'Source disclaimer '+width);
-    await p.eval("document.querySelector('"+panel+" .history-pilot-option input').click()");
-    await p.wait("!!document.querySelector('"+panel+" .history-pilot-review .tree-list .tree-label')",
-      'Candidate source tree opt-in '+width);
-    const labels=await p.eval("[...document.querySelectorAll('"+panel+" .history-pilot-review .tree-list .node-name')].map(e=>e.textContent)");
-    assert(labels.some(x=>x.includes('Siebenbürgen')),
-      'Transylvania source root available '+width+': '+JSON.stringify(labels));
-    await p.eval("document.querySelector('"+panel+" .history-pilot-review .tree-list .tree-label').click()");
-    const entity=mobile?'.drawer-detail .history-entity-detail':'.detail-sidebar .history-entity-detail';
-    await p.wait("!!document.querySelector('"+entity+" .entity-title h3')",
-      'Historical source Entity card '+width);
-    const card=await p.eval("document.querySelector('"+entity+"')?.textContent");
-    assert.match(card,/HistoGIS/i,'Source provenance in card '+width);
-    assert.match(card,/necertificat|certificate|certificat/i,'Uncertified card label '+width);
-    assert.equal(await p.eval("document.documentElement.scrollWidth-innerWidth<=1"),true,
-      'No horizontal overflow '+width);
-    await p.snap((mobile?'mobile':'desktop')+'-hist-module-2-source-preview.png');
-    if(!mobile){
-      await p.eval("document.querySelector('.tree-sidebar .module-reset').click()");
-      await p.wait("!document.querySelector('.tree-sidebar .history-pilot-review')",
-        'Historical local reset hides source tree');
-      assert.equal(await p.eval("!!document.querySelector('.detail-sidebar .history-entity-detail')"),
-        false,'Historical local reset closes only source card');
-      assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.mapReady==='true'"),
-        true,'ACTUAL map remains ready after Historical reset');
-    }
-    await p.close();
-  }
-}
-
-/* HIST-MODULE.3 — actual bidirectional navigation, labels and source scope.
- * At no point does a geometry overlap become a legal or institutional match.
- */
-async function historicalIndependentSmoke(cdp){
-  const p=await cdp.page(1440,900,false,
-    site+'?entity=osm-r2077868&lang=ro');
-  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
-    'HIST3 ACTUAL map ready');
-  await p.wait("document.querySelectorAll('.detail-sidebar .history-overlap-nav').length===2",
-    'HIST3 two documented source-overlap links for Suceava county');
-  const actualSection=await p.eval("document.querySelector('.detail-sidebar .entity-card-section:has(.history-overlap-nav)')?.textContent");
-  assert.match(actualSection,/Corespondențe teritoriale istorice/);
-  assert.match(actualSection,/Bucovina|Bukowina/);
-  assert.match(actualSection,/1907/);
-  assert.match(actualSection,/2026/);
-  assert.match(actualSection,/intersecție|suprapunere/i);
-  await p.eval("document.querySelector('.detail-sidebar .entity-card-section:has(.history-overlap-nav) summary').click()");
-  await p.eval("document.querySelector('.detail-sidebar .history-overlap-nav').click()");
-  await p.wait("!!document.querySelector('.detail-sidebar .history-entity-detail .entity-title')",
-    'HIST3 historical card opens from ACTUAL');
-  const historicalCard=await p.eval("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent");
-  assert.match(historicalCard,/HistoGIS/);
-  assert.match(historicalCard,/necertificat|certificate/i);
-  assert.match(historicalCard,/Atestări documentare independente/);
-  assert.match(historicalCard,/Situația administrativă actuală/);
-  assert.match(historicalCard,/Su[cz]eava/i);
-  const linkCount=await p.eval("document.querySelectorAll('.detail-sidebar .history-current-links .history-overlap-nav').length");
-  assert.equal(linkCount,1,'Bucovina 9970 links to current Suceava county');
-  await p.snap('desktop-hist-module-3-documentary-crosslink.png');
-  await p.eval("document.querySelector('.detail-sidebar .history-current-links .history-overlap-nav').click()");
-  await p.wait("!!document.querySelector('.detail-sidebar .entity-card')&&!document.querySelector('.detail-sidebar .history-entity-detail')",
-    'HIST3 reverse link returns to ACTUAL');
-  await p.eval("document.querySelector('.language button:first-child').click()");
-  await p.wait("document.documentElement.lang==='en'",
-    'HIST3 global EN switch');
-  const en=await p.eval("document.querySelector('.detail-sidebar .entity-card-section:has(.history-overlap-nav)')?.textContent");
-  assert.match(en,/Historical territorial correspondences/);
-  assert.match(en,/Spatial intersection does not imply/);
-  await p.close();
-}
-
-/* HIST-MODULE.3b: law-only 1851 administrative hierarchy must not be
- * confused with the still-unqualified HistoGIS geometric candidate tree. */
-async function historical1851OriginalReviewSmoke(cdp) {
- for(const width of [1440,390]) {
-   const mobile=width<700;
-   const p=await cdp.page(width,900,mobile,site+'?lang=ro');
-   const panel=mobile?'.drawer-tree':'.tree-sidebar';
-   await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
-     'HIST3b map ready '+width);
-   await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
-   await p.wait("!!document.querySelector('"+panel+" .history-pilot-option input')",
-     'HIST3b official registry loaded '+width);
-   assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-law-1851')"),
-     false,'1851 law must not appear without explicit review '+width);
-   await p.eval("document.querySelector('"+panel+" .history-pilot-option input').click()");
-   await p.wait("!!document.querySelector('"+panel+" .history-pilot-year input')",
-     'HIST3b year selector '+width);
-   await p.eval("(()=>{const x=document.querySelector('"+panel+" .history-pilot-year input');const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;setter.call(x,'1851');x.dispatchEvent(new Event('input',{bubbles:true}));x.dispatchEvent(new Event('change',{bubbles:true}));})()");
-   await p.wait("!!document.querySelector('"+panel+" .history-law-1851')",
-     'HIST3b statute-only 1851 hierarchy '+width);
-   await p.eval("document.querySelector('"+panel+" .history-law-1851>summary').click()");
-   assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-law-region').length"),5,
-     'Exactly five administrative Kreise '+width);
-   assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-law-region li').length"),36,
-     'Exactly 36 law-only political Bezirkshauptmannschaften '+width);
-   const norm=await p.eval("document.querySelector('"+panel+" .history-law-1851')?.textContent");
-   assert.match(norm,/Karlsburg/,'Missing fifth Kreis is not omitted');
-   assert.match(norm,/fără poligon|fără poligoane|fără un poligon|poligon/i,
-     'Law nodes must be described as non-polygon evidence');
-   assert.match(norm,/nu|NU|necertificat/,'Legal snapshot caveat');
-   await p.snap((mobile?'mobile':'desktop')+'-hist-module-3b-1851-normative-hierarchy.png');
-   if(!mobile) {
-     await p.eval("document.querySelector('"+panel+" .history-law-region>summary').click()");
-     await p.eval("document.querySelector('"+panel+" .history-law-region .history-law-open').click()");
-     await p.wait("!!document.querySelector('.detail-sidebar .history-entity-detail .entity-title h3')",
-       'HIST3b legal Kreis source-card evidence '+width);
-     const card=await p.eval("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent");
-     assert.match(card,/1851/);
-     assert.match(card,/Părinte direct prevăzut/);
-   }
-   assert.equal(await p.eval("document.documentElement.scrollWidth-innerWidth<=1"),true,
-     'No 1851 law hierarchy horizontal overflow '+width);
-   await p.close();
- }
-}
-
-/* HIST-MODULE.3c: real recovered 1835/1841 raster FIT/HOLDOUT verdicts.
- * A numeric trial is never an independently certified historic boundary.
- */
-async function historicalOriginalGeorefSmoke(cdp){
+async function historicalOhmSmoke(cdp){
   for(const width of [1440,390]){
     const mobile=width<700;
     const p=await cdp.page(width,900,mobile,site+'?lang=ro');
     const panel=mobile?'.drawer-tree':'.tree-sidebar';
     await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
-      'HIST3c ACTUAL map unchanged '+width);
+      'OHM: map ready '+width);
     await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
-    await p.wait("!!document.querySelector('"+panel+" .history-pilot-option input')",
-      'HIST3c original map QA loaded '+width);
-    assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-3c-summary')"),
-      false,'HIST3c original trial cannot be mistaken for a default certified tree '+width);
-    await p.eval("document.querySelector('"+panel+" .history-pilot-option input').click()");
-    await p.wait("!!document.querySelector('"+panel+" .history-3c-summary')",
-      'HIST3c source trial summary rendered '+width);
-    await p.eval("document.querySelector('"+panel+" .history-3c-summary>summary').click()");
-    const data=await p.eval("document.querySelector('"+panel+" .history-3c-summary')?.textContent");
-    assert.match(data,/FIT\/HOLDOUT/,'source quality category '+width);
-    assert.match(data,/1835/,'Streit original reference '+width);
-    assert.match(data,/1841/,'Raffelsperger original reference '+width);
-    assert.match(data,/9[,.]59\s*km/,'Streit HOLDOUT RMSE '+width);
-    assert.match(data,/7[,.]68\s*km/,'Raffelsperger HOLDOUT RMSE '+width);
-    assert.match(data,/0\/8/,'No 1835/1841 legally certified boundary '+width);
-    assert.match(data,/2\/2/,'Both exploratory registrations rejected '+width);
-    assert.match(data,/neorb|necertificat|nu trec|respin/i,'provisional controls expressly warned '+width);
-    assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-3c-map-qa').length"),
-      2,'Exactly two original raster trials '+width);
+    await p.wait("!!document.querySelector('"+panel+" .history-geodata-groups details')",
+      'OHM: catalogue indexed '+width);
+    const summary=await p.eval("document.querySelector('"+panel+" .history-geodata-pane')?.textContent");
+    assert.match(summary,/OpenHistoricalMap/,'OHM source heading '+width);
+    assert.match(summary,/139/,'OHM 139 versions '+width);
+    assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-pilot-review')"),
+      false,'HistoGIS pilot is retired '+width);
+    await p.eval("document.querySelector('"+panel+" .history-geodata-groups details:first-child summary').click()");
+    await p.eval("document.querySelector('"+panel+" .history-geodata-groups details:first-child .tree-label').click()");
+    const entity=mobile?'.drawer-detail .history-entity-detail':'.detail-sidebar .history-entity-detail';
+    await p.wait("!!document.querySelector('"+entity+" .entity-title h3')",
+      'OHM: source Entity card '+width);
+    const card=await p.eval("document.querySelector('"+entity+"')?.textContent");
+    assert.match(card,/OHM relation/,'OHM relation provenance '+width);
+    assert.match(card,/necertificat/i,'Source remains uncertified '+width);
     assert.equal(await p.eval("document.documentElement.scrollWidth-innerWidth<=1"),true,
-      'HIST3c no horizontal overflow '+width);
-    await p.snap((mobile?'mobile':'desktop')+'-hist-module-3c-rejected-original-fitholdout.png');
+      'OHM no horizontal overflow '+width);
+    await p.snap((mobile?'mobile':'desktop')+'-historical-ohm-source.png');
     if(!mobile){
       await p.eval("document.querySelector('.tree-sidebar .module-reset').click()");
-      await p.wait("!document.querySelector('.tree-sidebar .history-3c-summary')",
-        'Historical local reset hides trial, ACTUAL remains');
+      await p.wait("!document.querySelector('.detail-sidebar .history-entity-detail')",
+        'OHM local reset clears the source selection');
       assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.mapReady==='true'"),
-        true,'ACTUAL remains ready after HIST3c reset');
+        true,'ACTUAL map remains ready after Historical local reset');
     }
     await p.close();
   }
@@ -2155,10 +2015,7 @@ try{
   await simR6Exceptions(client);
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
-  await historicalPilotSmoke(client);
-  await historicalIndependentSmoke(client);
-  await historical1851OriginalReviewSmoke(client);
-  await historicalOriginalGeorefSmoke(client);
+  await historicalOhmSmoke(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
