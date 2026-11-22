@@ -598,7 +598,20 @@
       },
       "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
       "historicalSourceName": "Herzogtum Bukowina",
-      "historicalSourceType": "Duchy"
+      "historicalSourceType": "Duchy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 22,
+          "month": 12,
+          "year": 1867
+        }
+      }
     },
     {
       "id": "hist3:bridge:11756:osm-r2077868",
@@ -633,7 +646,20 @@
       },
       "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
       "historicalSourceName": "Suczawa",
-      "historicalSourceType": "District Captaincy"
+      "historicalSourceType": "District Captaincy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 1,
+          "month": 10,
+          "year": 1893
+        }
+      }
     },
     {
       "id": "hist3:bridge:11756:osm-r10495794",
@@ -668,7 +694,20 @@
       },
       "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
       "historicalSourceName": "Suczawa",
-      "historicalSourceType": "District Captaincy"
+      "historicalSourceType": "District Captaincy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 1,
+          "month": 10,
+          "year": 1893
+        }
+      }
     },
     {
       "id": "hist3:bridge:11751:osm-r10495792",
@@ -703,7 +742,20 @@
       },
       "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
       "historicalSourceName": "Radautz",
-      "historicalSourceType": "District Captaincy"
+      "historicalSourceType": "District Captaincy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 1,
+          "month": 10,
+          "year": 1893
+        }
+      }
     },
     {
       "id": "hist3:bridge:11383:osm-r10495796",
@@ -738,7 +790,20 @@
       },
       "note": "A measured intersection of HistoGIS source geometry and OSMB ACTUAL 2026 cartographic geometry. Neither legal border nor institutional identity is inferred.",
       "historicalSourceName": "Kimpolung",
-      "historicalSourceType": "District Captaincy"
+      "historicalSourceType": "District Captaincy",
+      "historicalSourcePeriod": {
+        "end": {
+          "day": 31,
+          "month": 10,
+          "year": 1918
+        },
+        "kind": "interval",
+        "start": {
+          "day": 31,
+          "month": 8,
+          "year": 1868
+        }
+      }
     }
   ],
   "geometryDecisions": [],
