@@ -80,6 +80,17 @@ function toNumber(p, end) {
     (d.day ?? (end ? 31 : 1));
 }
 
+export async function loadHistoricalPilotQualification(catalog,
+  baseUrl = import.meta.env?.BASE_URL ?? '/') {
+  const prefix = baseUrl.replace(/\/?$/, '/') + 'data/historical/v1/';
+  const response = await fetch(prefix + 'qualification.json');
+  if (!response.ok) throw Error('Historical qualification HTTP ' + response.status);
+  const qualification = await response.json();
+  const gate = validateHistoricalQualification(catalog, qualification);
+  if (!gate.ok) throw Error('Historical qualification invalid: ' + gate.errors.join('; '));
+  return qualification;
+}
+
 export function historicalDateInPeriod(period, iso) {
   if (!validateHistoricalPeriod(period) || !/^\d{4}-\d{2}-\d{2}$/.test(iso))
     return false;
