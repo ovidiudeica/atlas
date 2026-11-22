@@ -37,6 +37,8 @@ const labels={
   }
 };
 const dateLabel=(e:GeodataSourceEntry)=>
+  e.sourcePeriod.kind==='undated'?'Datare neverificată / Undated':
+  e.sourcePeriod.kind==='snapshot'?'Atestat la '+e.sourcePeriod.start:
   (e.sourcePeriod.start||'?')+' – '+(e.sourcePeriod.end||'?');
 
 export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
@@ -64,7 +66,7 @@ export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
    for(const e of index.entries){
      if(dateIds&&!dateIds.has(e.id))continue;
      if(term&&!([e.displayName.ro,e.displayName.en,e.sourceGroup,
-       e.sourcePeriod.start||'',e.sourcePeriod.end||'',String(e.sourceRelationId)]
+       e.sourcePeriod.start||'',e.sourcePeriod.end||'',String(e.sourceRelationId??e.sourceExternalId??e.id)]
        .some(s=>s.toLocaleLowerCase().includes(term))))continue;
      const list=groups.get(e.sourceGroup)||[];list.push(e);groups.set(e.sourceGroup,list);
    }
@@ -83,7 +85,7 @@ export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
  return <section className="tree-content history-geodata-pane" aria-label={t.title}>
    <h3>{t.title}</h3>
    <p className="source-caveat">{t.subtitle}</p>
-   <p className="note">{index?.entries.length||0} {t.indexed} · OHM-Boundaries</p>
+   <p className="note">{index?.entries.length||0} {t.indexed} · {index?.sourceFamilies?.join(' / ')||'OHM-Boundaries'}</p>
    {!index&&!error&&<p role="status">{t.loading}</p>}
    <label className="history-source-search">{t.search}
      <input type="search" value={query} onChange={e=>setQuery(e.target.value)} />
@@ -104,7 +106,7 @@ export function HistoricalGeodataBrowser({year,lang,onSelect,selectedId}:{
            <button type="button" className="tree-label" onClick={()=>void selectEntry(e)}
              disabled={busy!==null} aria-current={selectedId===e.id?'true':undefined}>
              <span className="tree-label-heading"><span className="node-name">{e.displayName[lang]}</span></span>
-             <span className="node-level">{dateLabel(e)} · {e.sourceRelationId}</span>
+             <span className="node-level">{dateLabel(e)} · {e.sourceRelationId??e.sourceExternalId??e.id}</span>
            </button>
          </div>)}
        </div>
@@ -132,7 +134,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
      </div>
      <EntityCardSection title={t.identity} kind="identity">
        <dl className="metadata">
-         <dt>{t.sourceId}</dt><dd>OHM relation {entry.sourceRelationId}</dd>
+         <dt>{t.sourceId}</dt><dd>{entry.sourceFamily==='OHM'? 'OHM relation '+entry.sourceRelationId : entry.sourceExternalId??entry.id}</dd>
          <dt>{t.kind}</dt><dd>{entry.sourceType||'—'}</dd>
          <dt>{t.period}</dt><dd>{dateLabel(entry)} ({t.uncertain})</dd>
          <dt>{t.geometry}</dt><dd>{entry.geometryId}</dd>
@@ -140,7 +142,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
      </EntityCardSection>
      <EntityCardSection title={t.source} kind="cartographic">
        <dl className="metadata">
-         <dt>{t.sourceName}</dt><dd>{entry.sourceGroup} · OHM-Boundaries</dd>
+         <dt>{t.sourceName}</dt><dd>{entry.sourceGroup} · {entry.sourceFamily}</dd>
          <dt>{t.original}</dt>
          <dd>{entry.sourceDriveFileId ?
            <a href={'https://drive.google.com/file/d/'+entry.sourceDriveFileId+'/view'}
