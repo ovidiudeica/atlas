@@ -971,9 +971,17 @@ export default function App() {
   // Home moves only the camera; a local reset never touches the camera or
   // selections owned by another module. The global reset restores RO + MD.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
-  const localSelectionActive=moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
-    adminFilters,statFilters,selected,selectedModule);
+  const localSelectionActive=module==='historical'?
+    (historyPreviewEnabled||historySelectedVersionId!==null):
+    moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
+      adminFilters,statFilters,selected,selectedModule);
   function resetLocalModule(id:ModuleId){
+    if(id==='historical'){
+      if(!historyPreviewEnabled && !historySelectedVersionId)return;
+      setHistoricalReviewEnabled(false);
+      setHistoryYear(1835);
+      return;
+    }
     if(!moduleHasSelections(moduleVisible,id,DEFAULT_VISIBLE,
       adminFilters,statFilters,selected,selectedModule))return;
     // The reset control becomes disabled when complete; move focus to its
@@ -998,6 +1006,9 @@ export default function App() {
     }
   }
   const resetAllSelections=()=>{
+    setHistoryPreviewEnabled(false);
+    setHistorySelectedVersionId(null);
+    setHistoryYear(1835);
     navigationEpoch.current++; // Cancel stale asynchronous camera movements.
     setNavBusy(false);
     setModuleVisible(makeModuleVisibility(DEFAULT_VISIBLE));
@@ -1245,6 +1256,26 @@ export default function App() {
     </div>
   </section>;
 
+  const historicalPanel=<HistoricalPilotTree
+    catalog={historyCatalog} qualification={historyQualifications}
+    year={historyYear} preview={historyPreviewEnabled}
+    selectedVersionId={historySelectedVersionId}
+    lang={lang} labels={t} loading={historyLoading} error={historyError}
+    onPreview={setHistoricalReviewEnabled}
+    onYear={year=>{
+      setHistoryYear(year);
+      const active=historicalSelectedVersion&&historicalDateInPeriod(
+        historicalSelectedVersion.period,String(year).padStart(4,'0')+'-07-01');
+      if(historicalSelectedVersion&&!active){
+        setHistorySelectedVersionId(null);
+        if(selectedModule==='historical'){
+          setSelectedModule(selected?'administrative':null);
+          setDetailPanelOpen(false);
+          if(drawer==='detail')setDrawer(null);
+        }
+      }
+    }} onSelect={chooseHistoricalVersion}/>;
+
   // WEB-R4.0: state/callbacks stay in App; the sections are reusable view-only cards.
   // A new entity key resets expanded source records, never map selection/visibility.
   // SIM-R4.1: the heading shows the same coat as the tree, with a neutral
@@ -1252,7 +1283,13 @@ export default function App() {
   const officialSymbols=currentNode?officialSymbolsForEntity(currentNode):null;
   const editorialSymbols=currentNode&&!officialSymbols?withGlobalSymbols(currentNode,editorialSymbolsForEntity(currentNode)):null;
   const headerCoatSrc=currentNode?coatImageForEntity(currentNode,import.meta.env.BASE_URL):null;
-  const details=<section className="detail-content">
+  const details=historicalCardActive&&historyCatalog&&historyQualifications&&historicalSelectedVersionId?
+    <HistoricalPilotEntityCard
+      catalog={historyCatalog} qualification={historyQualifications}
+      versionId={historicalSelectedVersionId} year={historyYear}
+      lang={lang} labels={t} onSelect={chooseHistoricalVersion}
+      onMap={locateHistoricalVersion}/>
+    :<section className="detail-content">
     {currentNode?<div className="entity-card" key={currentNode.id}>
       <header className="entity-title">
         <span className="flag flag--coat" aria-hidden="true">
@@ -1666,7 +1703,7 @@ export default function App() {
           <button className={lang==='en'?'active':''} aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
           <button className={lang==='ro'?'active':''} aria-pressed={lang==='ro'} onClick={()=>setLang('ro')}>RO</button>
         </div>
-        {currentNode&&<button type="button" className="header-entity-action" aria-label={t.openDetail}
+        {(currentNode||historicalCardActive)&&<button type="button" className="header-entity-action" aria-label={t.openDetail}
           title={t.openDetail} aria-expanded={detailPanelOpen}
           onClick={()=>{
             if(detailPanelOpen){closeDetailPanel();return;}
@@ -1697,7 +1734,7 @@ export default function App() {
               aria-label={t.close} title={t.close} onClick={closeModulePanel}>×</button>
           </div>
         </div>
-        {module==='administrative'?treePanel:
+        {module==='administrative'?treePanel:module==='historical'?historicalPanel:
           <section className="tree-content">
             <p className="planned-module-description">{t.planned}</p>
           </section>}
@@ -1732,8 +1769,8 @@ export default function App() {
           {(geomError||rootGeomError||geometryRetryBusy)&&<button type="button" className="geometry-retry" disabled={geometryRetryBusy} onClick={retryGeometry}>{t.retryGeometry}</button>}
         </div>}
       </main>
-      {currentNode&&detailPanelOpen&&<aside className="detail-sidebar"
-        aria-label={t.details+': '+cardNameOf(currentNode,lang)}>
+      {(currentNode||historicalCardActive)&&detailPanelOpen&&<aside className="detail-sidebar"
+        aria-label={t.details+': '+(shownCardName||'')}>
         <h2 className="sr-only">{t.details}</h2>
         <div className="pane-toolbar">
           <span aria-hidden="true">{t.details}</span>
@@ -1748,7 +1785,7 @@ export default function App() {
     }}>
       <div className={'drawer drawer-'+drawer} role="dialog" aria-modal="true"
         aria-label={drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
-          t.details+(currentNode?': '+cardNameOf(currentNode,lang):'')}
+          t.details+(shownCardName?': '+shownCardName:'')}
         onClick={e=>e.stopPropagation()}>
         <h2 className="sr-only">{drawer==='tree'?(MODULES.find(x=>x.id===module)?.[lang]||t.tree):
             t.details}</h2>
@@ -1768,7 +1805,7 @@ export default function App() {
               }}>×</button>
           </div>
         </div>
-        {drawer==='tree'?(module==='administrative'?treePanel:
+        {drawer==='tree'?(module==='administrative'?treePanel:module==='historical'?historicalPanel:
           <section className="tree-content">
             <p className="planned-module-description">{t.planned}</p>
           </section>):details}
