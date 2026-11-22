@@ -51,6 +51,14 @@ test('HIST-GEODATA: 1860 snapshots never extend to other years; source ranges no
  assert.ok(o);
  assert.equal(geodataVersionAttestedAtYear(o,1860),true);
  assert.equal(geodataVersionAttestedAtYear(o,1880),false);
+ const onlyStart={...o,period:{kind:'source_interval',start:'1867',end:null}};
+ const onlyEnd={...o,period:{kind:'source_interval',start:null,end:'1867'}};
+ const undated={...o,period:{kind:'source_interval',start:null,end:null}};
+ assert.equal(geodataVersionAttestedAtYear(onlyStart,1867),true);
+ assert.equal(geodataVersionAttestedAtYear(onlyStart,1880),false);
+ assert.equal(geodataVersionAttestedAtYear(onlyEnd,1867),true);
+ assert.equal(geodataVersionAttestedAtYear(onlyEnd,1850),false);
+ assert.equal(geodataVersionAttestedAtYear(undated,1867),false);
 });
 test('HIST-GEODATA: unverified source cannot become certified by metadata mutation',()=>{
  for(const change of [
