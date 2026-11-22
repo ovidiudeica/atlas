@@ -55,8 +55,25 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
  const [query,setQuery]=useState('');
  const [yearOnly,setYearOnly]=useState(false);
  const t=labels[lang];
- useEffect(()=>{onFiltersActiveChange(Boolean(query.trim())||yearOnly);},
-   [query,yearOnly,onFiltersActiveChange]);
+ const term=query.trim().toLocaleLowerCase();
+ const filtering=Boolean(term)||yearOnly;
+ const headings=lang==='ro'?{
+   title:'Entități istorice',search:'Caută în catalog',searchHint:'Denumire, perioadă sau ID OHM',
+   clear:'Șterge căutarea',year:'An',yearFilter:'Filtrează după an',
+   groups:'grupuri-sursă',versions:'versiuni',results:'rezultate',
+   methodological:'Despre sursă și limite',
+   methodologicalBody:'Versiunile provin din OpenHistoricalMap. Grupele și perioadele reprezintă informații ale sursei, nu o ierarhie administrativă sau hotare certificate independent.',
+   version:'versiune',versionsPlural:'versiuni',unknown:'Neconfirmat'
+ }:{
+   title:'Historical entities',search:'Search catalogue',searchHint:'Name, period or OHM ID',
+   clear:'Clear search',year:'Year',yearFilter:'Filter by year',
+   groups:'source groups',versions:'versions',results:'matches',
+   methodological:'About the source and limitations',
+   methodologicalBody:'Versions come from OpenHistoricalMap. Grouping and dates are source information, not independently certified administrative hierarchy or legal boundaries.',
+   version:'version',versionsPlural:'versions',unknown:'Unverified'
+ };
+ useEffect(()=>{onFiltersActiveChange(filtering);},
+   [filtering,onFiltersActiveChange]);
  useEffect(()=>{
    let active=true;
    loadGeodataSourceIndex(import.meta.env.BASE_URL).then(data=>{if(active)setIndex(data);})
@@ -67,34 +84,38 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
  const grouped=useMemo(()=>{
    if(!index)return [];
    const dateIds=yearOnly?new Set(geodataSourcesAtYear(index,year).map(e=>e.id)):null;
-   const term=query.trim().toLocaleLowerCase();
    const groups=new Map<string,GeodataSourceEntry[]>();
-   for(const e of index.entries){
-     if(dateIds&&!dateIds.has(e.id))continue;
-     if(term&&!([e.displayName.ro,e.displayName.en,e.sourceGroup,
-       e.sourcePeriod.start||'',e.sourcePeriod.end||'',String(e.sourceRelationId??e.sourceExternalId??e.id)]
-       .some(s=>s.toLocaleLowerCase().includes(term))))continue;
-     const list=groups.get(e.sourceGroup)||[];list.push(e);groups.set(e.sourceGroup,list);
+   for(const entry of index.entries){
+     if(dateIds&&!dateIds.has(entry.id))continue;
+     if(term&&!([entry.displayName.ro,entry.displayName.en,entry.sourceGroup,
+       entry.sourcePeriod.start||'',entry.sourcePeriod.end||'',
+       String(entry.sourceRelationId??entry.sourceExternalId??entry.id)]
+       .some(value=>value.toLocaleLowerCase().includes(term))))continue;
+     const list=groups.get(entry.sourceGroup)||[];
+     list.push(entry);groups.set(entry.sourceGroup,list);
    }
-   return [...groups].sort((a,b)=>a[0].localeCompare(b[0],'ro')).map(([group,entries])=>
-     ({group,entries:entries.sort((a,b)=>((a.sourcePeriod.start||'')< (b.sourcePeriod.start||'')?-1:1))}));
- },[index,year,yearOnly,query]);
+   return [...groups].sort((a,b)=>a[0].localeCompare(b[0],'ro')).map(([group,entries])=>({
+     group,
+     entries:entries.sort((a,b)=>(a.sourcePeriod.start||'').localeCompare(b.sourcePeriod.start||'')||a.id.localeCompare(b.id))
+   }));
+ },[index,year,yearOnly,term]);
  type SourceCategory={id:'regions'|'judete'|'comitate';ro:string;en:string;count:number;
    groups:Array<{group:string;entries:GeodataSourceEntry[]}>};
  const categories=useMemo(()=>{
    const sections:SourceCategory[]=[
-     {id:'regions',ro:'State și regiuni istorice',en:'Historical states and regions',count:0,groups:[]},
-     {id:'judete',ro:'Județe istorice',en:'Historical counties',count:0,groups:[]},
-     {id:'comitate',ro:'Comitate istorice',en:'Historical comitates',count:0,groups:[]}
+     {id:'regions',ro:'State și regiuni',en:'States and regions',count:0,groups:[]},
+     {id:'judete',ro:'Județe',en:'Counties',count:0,groups:[]},
+     {id:'comitate',ro:'Comitate',en:'Comitates',count:0,groups:[]}
    ];
    for(const item of grouped){
-     const bucket=item.group.startsWith('Județe istorice/')?sections[1]:
+     const target=item.group.startsWith('Județe istorice/')?sections[1]:
        item.group.startsWith('Comitate istorice/')?sections[2]:sections[0];
-     bucket.groups.push(item);
-     bucket.count+=item.entries.length;
+     target.groups.push(item);
+     target.count+=item.entries.length;
    }
-   return sections.filter(x=>x.count>0);
+   return sections.filter(section=>section.count>0);
  },[grouped]);
+ const shownCount=categories.reduce((sum,category)=>sum+category.count,0);
  async function selectEntry(entry:GeodataSourceEntry){
    if(!index||busy)return;
    setBusy(entry.id);setError(null);
@@ -104,48 +125,100 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
    }catch(e){setError(String(e));}
    finally{setBusy(null);}
  }
- return <section className="tree-content history-geodata-pane" aria-label={t.title}>
-   <h3>{t.title}</h3>
-   <p className="source-caveat">{t.subtitle}</p>
-   <p className="note">{index?.entries.length||0} {t.indexed} · {index?.sourceFamilies?.join(' / ')||'OHM-Boundaries'}
-     {sourceProjection&&<> · {sourceProjection.versions.length} {lang==='ro'?'versiuni datate':'dated versions'}
-       {' · '}{sourceProjection.undatedGeometryReferences.length} {lang==='ro'?'surse fără dată certă':'undated sources'}</>}</p>
-   {!index&&!error&&<p role="status">{t.loading}</p>}
-   <label className="history-source-search">{t.search}
-     <input type="search" value={query} onChange={e=>setQuery(e.target.value)} />
-   </label>
-   <label className="history-source-year">{lang==='ro'?'An de referință':'Reference year'}
-     <input type="number" min={1000} max={2100} value={year}
-       onChange={event=>{const n=Number(event.target.value);if(Number.isInteger(n)&&n>=1000&&n<=2100)onYear(n);}} />
-   </label>
-   <label className="history-source-year-filter">
-     <input type="checkbox" checked={yearOnly} onChange={e=>setYearOnly(e.target.checked)}/>
-     {t.onlyYear}: {year}
-   </label>
-   {error&&<p role="alert">{error}</p>}
-   {busy&&<p role="status">{t.loadGeom}</p>}
-   {index&&grouped.length===0&&<p>{t.empty}</p>}
-   <div className="history-geodata-groups">
-     {categories.map(category=><details key={category.id} className="history-geodata-category">
-       <summary>{lang==='ro'?category.ro:category.en} ({category.count})</summary>
+ const versionButton=(entry:GeodataSourceEntry,withName:boolean)=>(
+   <button key={entry.id} type="button"
+     className={'history-version-button'+(selectedId===entry.id?' is-selected':'')}
+     onClick={()=>void selectEntry(entry)} disabled={busy!==null}
+     aria-pressed={selectedId===entry.id}
+     title={entry.displayName[lang]+' · OHM '+entry.sourceRelationId}>
+     {withName&&<span className="history-version-name">{entry.displayName[lang]}</span>}
+     <span className="history-version-details">
+       <span className="history-version-period">{dateLabel(entry,lang)}</span>
+       <span className="history-version-id">OHM {entry.sourceRelationId}</span>
+     </span>
+   </button>
+ );
+ return <section className="tree-content history-geodata-pane" aria-label={headings.title}>
+   <header className="history-catalog-heading">
+     <div className="history-catalog-heading-row">
+       <h3>{headings.title}</h3>
+       <span className="history-catalog-mark" title="OpenHistoricalMap">OHM</span>
+     </div>
+     <p className="history-catalog-stat" role="status">
+       {index&&sourceProjection?
+         <>{sourceProjection.entities.length} {headings.groups}
+           <span aria-hidden="true"> · </span>
+           {index.entries.length} {headings.versions}</>:
+         !error?t.loading:''}
+     </p>
+   </header>
+   <div className="history-catalog-filters">
+     <label className="history-filter-label" htmlFor="history-catalog-search">{headings.search}</label>
+     <div className="history-filter-search">
+       <span className="history-search-symbol" aria-hidden="true">⌕</span>
+       <input id="history-catalog-search" type="search" value={query}
+         placeholder={headings.searchHint} autoComplete="off"
+         onChange={event=>setQuery(event.target.value)}/>
+       {query&&<button type="button" className="history-search-clear"
+         onClick={()=>setQuery('')} aria-label={headings.clear} title={headings.clear}>×</button>}
+     </div>
+     <div className="history-filter-row">
+       <label className="history-filter-year">{headings.year}
+         <input type="number" min={1000} max={2100} value={year}
+           onChange={event=>{
+             const value=Number(event.target.value);
+             if(Number.isInteger(value)&&value>=1000&&value<=2100){
+               onYear(value);
+               setYearOnly(true);
+             }
+           }}/>
+       </label>
+       <label className="history-filter-checkbox">
+         <input type="checkbox" checked={yearOnly}
+           onChange={event=>setYearOnly(event.target.checked)}/>
+         <span>{headings.yearFilter}</span>
+       </label>
+     </div>
+     {filtering&&index&&<p className="history-filter-count" role="status">
+       {shownCount} {headings.results}
+     </p>}
+   </div>
+   {error&&<p className="history-catalog-error" role="alert">{error}</p>}
+   {busy&&<p className="history-catalog-loading" role="status">{t.loadGeom}</p>}
+   {index&&shownCount===0&&<p className="history-catalog-empty">{t.empty}</p>}
+   <div className="history-geodata-groups" aria-label={headings.title}>
+     {categories.map(category=><details key={category.id+(term?':search':':browse')}
+       className="history-geodata-category" defaultOpen={Boolean(term)||category.id==='regions'}>
+       <summary>
+         <span className="history-category-name">{lang==='ro'?category.ro:category.en}</span>
+         <span className="history-group-count">{category.count}</span>
+       </summary>
        <div className="history-geodata-category-entries">
-         {category.groups.map(({group,entries})=><details key={group} className="history-geodata-entity">
-           <summary>{group.split('/').pop()} ({entries.length})</summary>
-           <div className="tree-list" role="tree" aria-label={group}>
-             {entries.map(e=><div className="tree-line" key={e.id} role="treeitem"
-               aria-selected={selectedId===e.id}>
-               <button type="button" className="tree-label" onClick={()=>void selectEntry(e)}
-                 disabled={busy!==null} aria-current={selectedId===e.id?'true':undefined}>
-                 <span className="tree-label-heading"><span className="node-name">{e.displayName[lang]}</span></span>
-                 <span className="node-level">{dateLabel(e,lang)} · {e.sourceRelationId}</span>
-               </button>
-             </div>)}
-           </div>
-         </details>)}
+         {category.groups.map(({group,entries})=>{
+           const name=group.split('/').pop()||group;
+           return entries.length===1?
+             <div className="history-entity-single" key={group}>
+               {versionButton(entries[0],true)}
+             </div>:
+             <details key={group+(term?':search':':browse')}
+               className="history-geodata-entity" defaultOpen={Boolean(term)}>
+               <summary title={name}>
+                 <span className="history-source-entity-name">{name}</span>
+                 <span className="history-source-version-count">{entries.length}</span>
+               </summary>
+               <div className="history-source-versions"
+                 aria-label={name+' — '+headings.versionsPlural}>
+                 {entries.map(entry=>versionButton(entry,false))}
+               </div>
+             </details>;
+         })}
        </div>
      </details>)}
    </div>
-   <p className="note">{t.noHierarchy}</p>
+   <details className="history-catalog-method">
+     <summary>{headings.methodological}</summary>
+     <p>{headings.methodologicalBody}</p>
+   </details>
  </section>;
 }
 
