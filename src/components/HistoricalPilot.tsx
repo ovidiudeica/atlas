@@ -171,10 +171,10 @@ export function HistoricalPilotTree({
         <strong>{preview?labels.historyPilotDisable:labels.historyPilotEnable}</strong>
       </label>
       {preview&&<label className="history-pilot-year">{labels.historyPilotYear}
-        <input type="number" min="1417" max="1991" step="1" value={year}
+        <input type="number" min="1000" max="1999" step="1" value={year}
           onChange={e=>{
             const value=Number(e.target.value);
-            if(Number.isInteger(value)&&value>=1417&&value<=1991)onYear(value);
+            if(Number.isInteger(value)&&value>=1000&&value<=1999)onYear(value);
           }} />
       </label>}
     </div>}

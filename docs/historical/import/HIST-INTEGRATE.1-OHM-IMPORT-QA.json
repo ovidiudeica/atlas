@@ -1,0 +1,36 @@
+{
+  "schema": "atlas-hist-import-ohm-qa-v1",
+  "observedAt": "2026-11-22",
+  "sourceRoot": "G:/My Drive/Geodata GIS/OHM-Boundaries",
+  "originalSourceCount": 139,
+  "importedSourceVersions": 139,
+  "geometryAssets": 125,
+  "exactDuplicateAliases": 14,
+  "polygonSourceInvalidCount": 0,
+  "invalidSourceIds": [],
+  "sourceUnknownDateEndpointCount": 13,
+  "sourceUnknownDateEndpointIds": [
+    "ohm-r2943619",
+    "ohm-r2940712",
+    "ohm-r2945088",
+    "ohm-r2937887",
+    "ohm-r2943671",
+    "ohm-r2943493",
+    "ohm-r2943485",
+    "ohm-r2943652",
+    "ohm-r2943496",
+    "ohm-r2940721",
+    "ohm-r2945087",
+    "ohm-r2945089",
+    "ohm-r2943670"
+  ],
+  "shardCount": 29,
+  "categories": {
+    "other": 43,
+    "comitate": 77,
+    "judete": 19
+  },
+  "dataPolicy": "Original files and source coordinates unmodified. Rights and boundaries not automatically certified. No ACTUAL changes.",
+  "sourceManifestCount": 76,
+  "metadataGzipCount": 139
+}

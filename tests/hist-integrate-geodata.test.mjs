@@ -10,15 +10,15 @@ const base=new URL('../public/data/historical/v1/geodata/',import.meta.url);
 const read=name=>JSON.parse(readFileSync(new URL(name,base),'utf8'));
 const index=read('index.json');
 
-test('historical source index: 43 source versions use 36 shared logical OHM geometries',()=>{
+test('historical source index: 139 source versions use 125 shared logical OHM geometries',()=>{
  assert.deepEqual(validateGeodataHistoricalIndex(index),{ok:true,errors:[]});
- assert.equal(index.entries.length,43);
- assert.equal(index.shards.length,9);
- assert.equal(index.shards.reduce((n,s)=>n+s.count,0),43);
+ assert.equal(index.entries.length,139);
+ assert.equal(index.shards.length,29);
+ assert.equal(index.shards.reduce((n,s)=>n+s.count,0),139);
  assert.equal(index.notCanonicalHierarchy,true);
  assert.equal(index.notLegalBoundaryCertification,true);
- assert.equal(index.geometryDuplicates.length,7);
- assert.equal(index.geometryAssets,36);
+ assert.equal(index.geometryDuplicates.length,14);
+ assert.equal(index.geometryAssets,125);
  assert.ok(index.entries.every(e=>e.status==='source_candidate_not_certified'));
 });
 
@@ -36,7 +36,7 @@ test('source geom coordinates, types and original OSM relation identifiers are i
      assert.equal(feature.id,'ohm-r'+feature.properties.ohm_relation_id);
    }
  }
- assert.equal(ids.size,43);
+ assert.equal(ids.size,139);
 });
 
 test('OHM source dates are not automatically extended or legal-certified',()=>{
@@ -67,6 +67,7 @@ test('fail closed on fictional source certification, ID collision, path and time
  reject(x=>x.entries[0].sourcePeriod.sourceOnly=false);
  reject(x=>x.entries[0].sourcePeriod.start='eighteenth century');
  reject(x=>x.entries[0].geometryShard='../phase4/catalog.json.gz');
- reject(x=>x.entries[0].sourceDriveFileId='');
+ reject(x=>{x.entries[0].sourceDriveFileId=null;x.entries[0].sourcePath='';});
+ reject(x=>x.entries[0].sourceFileSha256='missing');
  reject(x=>x.shards[0].count=999);
 });

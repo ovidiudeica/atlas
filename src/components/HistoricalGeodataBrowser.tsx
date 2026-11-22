@@ -142,8 +142,12 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
        <dl className="metadata">
          <dt>{t.sourceName}</dt><dd>{entry.sourceGroup} · OHM-Boundaries</dd>
          <dt>{t.original}</dt>
-         <dd><a href={'https://drive.google.com/file/d/'+entry.sourceDriveFileId+'/view'}
-           target="_blank" rel="noopener noreferrer">{entry.sourceFilename}</a></dd>
+         <dd>{entry.sourceDriveFileId ?
+           <a href={'https://drive.google.com/file/d/'+entry.sourceDriveFileId+'/view'}
+             target="_blank" rel="noopener noreferrer">{entry.sourceFilename}</a> :
+           <a href={'https://www.openhistoricalmap.org/relation/'+entry.sourceRelationId}
+             target="_blank" rel="noopener noreferrer">{entry.sourceFilename}</a>}
+             <small> · {entry.sourcePath}</small></dd>
        </dl>
        {entry.sourcePeriod.notes&&<p className="source-caveat">{entry.sourcePeriod.notes}</p>}
        {entry.sourceTagWarnings.length>0&&

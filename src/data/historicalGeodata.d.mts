@@ -9,7 +9,10 @@ export interface GeodataSourceEntry {
   geometryId:string;
   featureId:string;
   geometryShard:string;
-  sourceDriveFileId:string;
+  sourceDriveFileId:string|null;
+  sourcePath:string;
+  sourceFileSha256:string;
+  geometryValidSource:boolean;
   sourceFilename:string;
   sourceRelationId:number;
   provenance:string;

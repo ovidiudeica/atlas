@@ -49,8 +49,12 @@ export function validateGeodataHistoricalIndex(index){
    fail(object(entry.sourcePeriod)&&entry.sourcePeriod.sourceOnly===true&&
        validDate(entry.sourcePeriod.start)&&validDate(entry.sourcePeriod.end),
      'Unverified historical date interval rewritten');
-   fail(present(entry.sourceDriveFileId)&&present(entry.sourceFilename)&&
-        Number.isSafeInteger(entry.sourceRelationId),'Original Drive provenance incomplete');
+   fail((present(entry.sourceDriveFileId)||present(entry.sourcePath))&&
+        present(entry.sourceFilename)&&present(entry.sourcePath)&&
+        /^[a-f0-9]{64}$/.test(entry.sourceFileSha256||'') &&
+        Number.isSafeInteger(entry.sourceRelationId),
+     'Original source file, hash or OHM identifier incomplete');
+   fail(typeof entry.geometryValidSource==='boolean','Missing source spatial validity QA');
    fail(files.has(entry.geometryShard),'Geometry shard not in inventory');
    counts.set(entry.geometryShard,(counts.get(entry.geometryShard)||0)+1);
  }
