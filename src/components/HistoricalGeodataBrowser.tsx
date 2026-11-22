@@ -37,6 +37,8 @@ const labels={
     indexed:'OHM versions'
   }
 };
+const foldedSearch=(value:string)=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase();
+
 const dateLabel=(e:GeodataSourceEntry,lang:Locale)=>
   e.sourcePeriod.kind==='undated'?(lang==='ro'?'Datare neverificată':'Undated / unverified'):
   e.sourcePeriod.kind==='snapshot'?
@@ -55,7 +57,7 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
  const [query,setQuery]=useState('');
  const [yearOnly,setYearOnly]=useState(false);
  const t=labels[lang];
- const term=query.trim().toLocaleLowerCase();
+ const term=foldedSearch(query.trim());
  const filtering=Boolean(term)||yearOnly;
  const headings=lang==='ro'?{
    title:'Entități istorice',search:'Caută în catalog',searchHint:'Denumire, perioadă sau ID OHM',
@@ -90,7 +92,7 @@ export function HistoricalGeodataBrowser({year,onYear,lang,onSelect,selectedId,o
      if(term&&!([entry.displayName.ro,entry.displayName.en,entry.sourceGroup,
        entry.sourcePeriod.start||'',entry.sourcePeriod.end||'',
        String(entry.sourceRelationId??entry.sourceExternalId??entry.id)]
-       .some(value=>value.toLocaleLowerCase().includes(term))))continue;
+       .some(value=>foldedSearch(value).includes(term))))continue;
      const list=groups.get(entry.sourceGroup)||[];
      list.push(entry);groups.set(entry.sourceGroup,list);
    }
