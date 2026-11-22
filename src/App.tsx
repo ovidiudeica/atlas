@@ -7,6 +7,9 @@ import { territorialRoleLabel as roleLabel, municipalRoleClarification } from '.
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
 import { HistoricalPilotTree, HistoricalPilotEntityCard } from './components/HistoricalPilot';
+import {
+  loadHistoricalBoundaryReview, type HistoricalBoundaryReview
+} from './data/historicalBoundaryReview.mjs';
 import { ActualHistoryConnections } from './components/HistoricalEvidenceSections';
 import {
   loadIndependentHistoricalAdmissions,
@@ -170,6 +173,20 @@ const WORDS = {
     historyPilotStatus: 'Evidence qualification',
     historyPilotSourceName: 'The source label has not yet been independently translated.',
     historyPilotLoading: 'Loading the historical source pilot…',
+    history3bTitle: '1851 legal hierarchy — normative snapshot only',
+    history3bLawParent: 'Direct parent prescribed by law',
+    history3bGazetteDate: 'Gazette publication date',
+    history3bLawOnly: 'law-only node; no independent polygon',
+    history3bNoGeometry: 'No standalone HistoGIS historical polygon verified for this legal unit.',
+    history3bLawWarning: 'RGBl 117/1851 prescribes five Kreise and 36 Bezirkshauptmannschaften. This proves a legal structure at publication, NOT its actual activation, whole duration or precise boundaries. Legal-only nodes are not shown as certified polygons.',
+    history3bReviewTitle: 'Original map / boundary and parentage review',
+    history3bBlocked: 'Invalid source parent, blocked',
+    history3bNeedsOriginal: 'Requires independent historic map verification',
+    history3bOutsideParent: 'Child area outside source parent (EPSG:3035)',
+    history3bSourceLink: 'Original documentary source',
+    history3bDirectLaw: 'Open HistoGIS Kreis candidate (law-bound reference)',
+    history3bNoFullPeriod: 'The documented legal snapshot does not certify parentage across the full HistoGIS interval.',
+    history3bNoGeoProof: 'HistoGIS outlines remain unverified historic boundaries. The independent 1841 original raster is recovered, but no independent FIT/HOLDOUT or new digitization has been admitted.',
     historicalDocumentaryEvidence: 'Independent documentary attestations',
     historicalDocumentaryQualified: 'Independently attested (date only)',
     historicalDocumentaryReview: 'Under independent review',
@@ -303,6 +320,20 @@ const WORDS = {
     historyPilotStatus: 'Calificare probatorie',
     historyPilotSourceName: 'Eticheta sursei nu a fost încă tradusă independent.',
     historyPilotLoading: 'Se încarcă pilotul istoric…',
+    history3bTitle: 'Ierarhia legală din 1851 — atestare punctuală',
+    history3bLawParent: 'Părinte direct prevăzut de actul normativ',
+    history3bGazetteDate: 'Data publicării în gazeta oficială',
+    history3bLawOnly: 'unitate documentară, fără poligon independent',
+    history3bNoGeometry: 'Nu este verificat niciun poligon HistoGIS distinct pentru această unitate legală.',
+    history3bLawWarning: 'RGBl 117/1851 prevede cinci cercuri și 36 de căpitănii districtuale. Dovedește structura normativă la publicare, NU activarea efectivă, întreaga perioadă sau hotarele exacte. Unitățile documentare nu sunt prezentate ca poligoane certificate.',
+    history3bReviewTitle: 'Verificarea hărților originale, hotarelor și părinților',
+    history3bBlocked: 'Părinte din sursă incompatibil — blocat',
+    history3bNeedsOriginal: 'Necesită verificare pe harta istorică originală',
+    history3bOutsideParent: 'Suprafața copilului în afara părintelui din sursă (EPSG:3035)',
+    history3bSourceLink: 'Sursă documentară originală',
+    history3bDirectLaw: 'Deschide cercul candidat HistoGIS (corespondență cu actul)',
+    history3bNoFullPeriod: 'Atestarea normativă punctuală nu certifică subordonarea pe întreaga perioadă HistoGIS.',
+    history3bNoGeoProof: 'Contururile HistoGIS rămân hotare istorice necertificate. Rasterul original independent din 1841 este recuperat, dar nu au fost admise FIT/HOLDOUT independente și nici noi digitizări.',
     historicalDocumentaryEvidence: 'Atestări documentare independente',
     historicalDocumentaryQualified: 'Atestat independent (numai la data indicată)',
     historicalDocumentaryReview: 'În verificare independentă',
@@ -399,6 +430,7 @@ export default function App() {
   const [historyCatalog,setHistoryCatalog] = useState<PilotHistoricalCatalog|null>(null);
   const [historyQualifications,setHistoryQualifications] = useState<HistoricalQualification|null>(null);
   const [historyAdmissions,setHistoryAdmissions] = useState<HistoricalIndependentAdmissions|null>(null);
+  const [historyBoundaryReview,setHistoryBoundaryReview] = useState<HistoricalBoundaryReview|null>(null);
   const [historyGeometries,setHistoryGeometries] = useState<FeatureCollection|null>(null);
   const [historyPreviewEnabled,setHistoryPreviewEnabled] = useState(false);
   const [historyYear,setHistoryYear] = useState(1835);
@@ -541,9 +573,10 @@ export default function App() {
     let active=true;
     setHistoryLoading(true);
     loadHistoricalPilotCatalog().then(async pilot=>{
-      const [qualifications,admissions]=await Promise.all([
-        loadHistoricalPilotQualification(pilot),
-        loadIndependentHistoricalAdmissions(pilot)
+      const qualifications=await loadHistoricalPilotQualification(pilot);
+      const [admissions,boundaryReview]=await Promise.all([
+        loadIndependentHistoricalAdmissions(pilot),
+        loadHistoricalBoundaryReview(pilot,qualifications)
       ]);
       const pilotGate=validateHistoricalPilotCatalog(pilot);
       if(!pilotGate.ok)throw Error(pilotGate.errors.join('; '));
@@ -556,6 +589,7 @@ export default function App() {
       setHistoryCatalog(pilot);
       setHistoryQualifications(qualifications);
       setHistoryAdmissions(admissions);
+      setHistoryBoundaryReview(boundaryReview);
     }).catch(e=>{if(active)setHistoryError(String(e));})
       .finally(()=>{if(active)setHistoryLoading(false);});
     return ()=>{active=false;};
@@ -1385,7 +1419,7 @@ export default function App() {
 
   const historicalPanel=<HistoricalPilotTree
     catalog={historyCatalog} qualification={historyQualifications}
-    admissions={historyAdmissions}
+    admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
     year={historyYear} preview={historyPreviewEnabled}
     selectedVersionId={historySelectedVersionId}
     lang={lang} labels={t} loading={historyLoading||historyGeometryLoading} error={historyError}
@@ -1414,7 +1448,7 @@ export default function App() {
   const historicalDetails=historicalCardActive&&historyCatalog&&historyQualifications&&historySelectedVersionId?
     <HistoricalPilotEntityCard
       catalog={historyCatalog} qualification={historyQualifications}
-      admissions={historyAdmissions}
+      admissions={historyAdmissions} boundaryReview={historyBoundaryReview}
       versionId={historySelectedVersionId} year={historyYear}
       lang={lang} labels={t} onSelect={chooseHistoricalVersion}
       onMap={locateHistoricalVersion}
