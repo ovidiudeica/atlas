@@ -2080,5 +2080,91 @@
       "administrativeParentStatus": "NOT_QUALIFIED",
       "sourceUrl": null
     }
+  ],
+  "sourceFiles": [
+    {
+      "relativePath": "ohm/bucovina/OHM-r2684081.geojson",
+      "driveFileId": "11tvCn6zklSW_E9Xe4crMU9jETQK3svvw",
+      "originalSha256": "3c57f365c17d0ea0895a7a553f32f77054a8b036db9afa990ee784ae4b6e6155",
+      "originalFileUrl": "https://drive.google.com/file/d/11tvCn6zklSW_E9Xe4crMU9jETQK3svvw/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/bucovina/OHM-r2746379.geojson",
+      "driveFileId": "1ij9lxaVFhHthXOmhhGPTpRnknmXld0Fc",
+      "originalSha256": "5cc647389d8c66385021a954a8db7d89922f47c2e96d5e56345268d8271a01ec",
+      "originalFileUrl": "https://drive.google.com/file/d/1ij9lxaVFhHthXOmhhGPTpRnknmXld0Fc/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/bucovina/OHM-r2746380.geojson",
+      "driveFileId": "1_G02NqivGT8uiTVAPnugv8Lo9xfI3dpa",
+      "originalSha256": "6fe3b2f2988bcd5557297811124320fb34f6b6a1f9cfdc6123ce6a7c7157d24b",
+      "originalFileUrl": "https://drive.google.com/file/d/1_G02NqivGT8uiTVAPnugv8Lo9xfI3dpa/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/bucovina/OHM-r2746401.geojson",
+      "driveFileId": "1wx3hnIEGsOpqnCo5HdMOqqvSSb_PUgiI",
+      "originalSha256": "ca0533e6f97679198ba8d3899a05defa16f0ec0b9efc66055286b9c44f1117fc",
+      "originalFileUrl": "https://drive.google.com/file/d/1wx3hnIEGsOpqnCo5HdMOqqvSSb_PUgiI/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/judetul-iasi/OHM-r2943493.geojson",
+      "driveFileId": "1FIOwYfKZ9rgqRDnIyHamWY328oRysxYC",
+      "originalSha256": "d34f61e819a3ac7492266d3f3b6893cfd6eacff4627fc4d277cd84898da62dd2",
+      "originalFileUrl": "https://drive.google.com/file/d/1FIOwYfKZ9rgqRDnIyHamWY328oRysxYC/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/transilvania/OHM-r2690518.geojson",
+      "driveFileId": "1ffFcGLq0ZJaMiWV8Y_2yH0OscFQbMlt3",
+      "originalSha256": "715218bdb97abf327d5679f85f40ba257bc31bd692dd1dc3fe85835e15ef0f64",
+      "originalFileUrl": "https://drive.google.com/file/d/1ffFcGLq0ZJaMiWV8Y_2yH0OscFQbMlt3/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/transilvania/OHM-r2747433.geojson",
+      "driveFileId": "18pUEkHhXRDt0CSYk4ixkE9TvTlbw9Uch",
+      "originalSha256": "4fe1caa1c4315fc6a1f5acaba93eb00bf65e948646de3b479fd0ccd61a5e7740",
+      "originalFileUrl": "https://drive.google.com/file/d/18pUEkHhXRDt0CSYk4ixkE9TvTlbw9Uch/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/transilvania/OHM-r2829384.geojson",
+      "driveFileId": "1iBqvNISklmcV4DVKo5lvpdvNp5XE1bb7",
+      "originalSha256": "dc26bfcc2d38f1e0ea58b4feafbe1a83c918f82c6e2ddf32018beca30a56d108",
+      "originalFileUrl": "https://drive.google.com/file/d/1iBqvNISklmcV4DVKo5lvpdvNp5XE1bb7/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/transilvania/OHM-r2878295.geojson",
+      "driveFileId": "1BXRrbQ3tc27KJaeKphdKWcDSxeMgWylR",
+      "originalSha256": "4a7303be62bcb10fd85970b2d167c73b93695a3a8b4e9099f4aa213d7617ab8d",
+      "originalFileUrl": "https://drive.google.com/file/d/1BXRrbQ3tc27KJaeKphdKWcDSxeMgWylR/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/zarand/OHM-r2747305.geojson",
+      "driveFileId": "1rMJplGOKQy7dii7kvh0KMCWy1yZorCv3",
+      "originalSha256": "c58e536b5d655d049747eba5de74f6c25432d65c7baba72ee7f373595d1aee4a",
+      "originalFileUrl": "https://drive.google.com/file/d/1rMJplGOKQy7dii7kvh0KMCWy1yZorCv3/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "ohm/zarand/OHM-r2747306.geojson",
+      "driveFileId": "1S74Tr8zdas32QZrhu7i1-RiL7LGIsERc",
+      "originalSha256": "4d34f3bca17e689c2897073770001290575b06c266b10b3b6183bd8263af87e1",
+      "originalFileUrl": "https://drive.google.com/file/d/1S74Tr8zdas32QZrhu7i1-RiL7LGIsERc/view",
+      "sourceShaBasis": "OHM source manifest"
+    },
+    {
+      "relativePath": "transilvania-1860/districte_transilvania_1860.geojson",
+      "driveFileId": "1NUP3hl-bgGTr_Ln4o8GSUHGIGYFSuCLD",
+      "originalSha256": "2e72107cc06d035ce1337daca79520d37b42d4b30dfad464cd6aa4735c766091",
+      "originalFileUrl": "https://drive.google.com/file/d/1NUP3hl-bgGTr_Ln4o8GSUHGIGYFSuCLD/view",
+      "sourceShaBasis": "SHA256SUMS.txt"
+    }
   ]
 }
