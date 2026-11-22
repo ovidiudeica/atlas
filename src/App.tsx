@@ -533,24 +533,47 @@ export default function App() {
       .catch(e=>{if(active)setCatalogError(String(e));});
     return ()=>{active=false;};
   },[]);
+  // Read-only historical metadata is loaded after ACTUAL, so Administrative
+  // Entity cards can show verified *spatial-only* historical comparisons.
+  // Large historical polygons remain lazy and are loaded only in Historical.
   useEffect(()=>{
-    if(module!=='historical'||!modulePanelOpen||historyCatalog||historyLoading||historyError)return;
+    if(catalog.length!==4283||historyCatalog||historyLoading||historyError)return;
     let active=true;
     setHistoryLoading(true);
     loadHistoricalPilotCatalog().then(async pilot=>{
-      const [qualifications,geometry]=await Promise.all([
-        loadHistoricalPilotQualification(pilot),loadHistoricalPilotGeometries()
+      const [qualifications,admissions]=await Promise.all([
+        loadHistoricalPilotQualification(pilot),
+        loadIndependentHistoricalAdmissions(pilot)
       ]);
-      const result=validateHistoricalPilotCatalog(pilot,geometry);
-      if(!result.ok)throw Error(result.errors.join('; '));
+      const pilotGate=validateHistoricalPilotCatalog(pilot);
+      if(!pilotGate.ok)throw Error(pilotGate.errors.join('; '));
+      const gate=validateIndependentHistoricalAdmissions(pilot,admissions,{
+        certificate:'CERTIFIED_CARTOGRAPHIC_SOURCE_WITH_ACCEPTED_EXCEPTIONS',
+        sourceSnapshotDate:'2026-10-05',entities:catalog
+      });
+      if(!gate.ok)throw Error(gate.errors.join('; '));
       if(!active)return;
       setHistoryCatalog(pilot);
       setHistoryQualifications(qualifications);
-      setHistoryGeometries(geometry as FeatureCollection);
+      setHistoryAdmissions(admissions);
     }).catch(e=>{if(active)setHistoryError(String(e));})
       .finally(()=>{if(active)setHistoryLoading(false);});
-    return ()=>{active=false;setHistoryLoading(false);};
-  },[module,modulePanelOpen,historyCatalog,historyError]);
+    return ()=>{active=false;};
+  },[catalog,historyCatalog,historyError]);
+
+  useEffect(()=>{
+    if(module!=='historical'||!modulePanelOpen||!historyCatalog||
+      historyGeometries||historyGeometryLoading||historyError)return;
+    let active=true;
+    setHistoryGeometryLoading(true);
+    loadHistoricalPilotGeometries().then(geometry=>{
+      const checked=validateHistoricalPilotCatalog(historyCatalog,geometry);
+      if(!checked.ok)throw Error(checked.errors.join('; '));
+      if(active)setHistoryGeometries(geometry as FeatureCollection);
+    }).catch(e=>{if(active)setHistoryError(String(e));})
+      .finally(()=>{if(active)setHistoryGeometryLoading(false);});
+    return ()=>{active=false;};
+  },[module,modulePanelOpen,historyCatalog,historyGeometries,historyError]);
 
   useEffect(()=>{document.documentElement.lang=lang;document.title=t.title;localStorage.setItem('atlas-lang',lang);},[lang,t.title]);
   useEffect(()=>{localStorage.setItem('atlas-simple',String(simplified));},[simplified]);
