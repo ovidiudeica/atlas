@@ -588,3 +588,46 @@
 @media(min-width:701px){.workspace:has(>.detail-sidebar) .maplibregl-ctrl-bottom-right{right:340px}}
 @media(min-width:1101px){.workspace:has(>.tree-sidebar) .maplibregl-ctrl-bottom-left{left:320px}}
 @media(min-width:701px) and (max-width:1100px){.workspace:has(>.tree-sidebar) .maplibregl-ctrl-bottom-left{left:300px}}
+
+
+/* HIST-MODULE.2 — opt-in source pilot; never styled as certified ACTUAL. */
+.history-pilot-pane .source-caveat,
+.history-entity-detail .source-caveat {
+  border-left:3px solid #936015;
+  padding:9px 12px;
+  background:#fff7e7;
+  color:#5b410f;
+  line-height:1.5;
+  border-radius:3px;
+}
+.history-pilot-pane .note,
+.history-entity-detail .note {line-height:1.5;overflow-wrap:anywhere}
+.history-pilot-controls{display:grid;gap:12px;margin:14px 0 12px}
+.history-pilot-option{display:flex;align-items:center;gap:10px;cursor:pointer;
+  padding:10px;border:1px solid #aa804b;background:#fffaf1;border-radius:9px;
+  color:#45300f;font-size:.91rem;line-height:1.4}
+.history-pilot-option input{min-width:20px;min-height:20px;flex-shrink:0}
+.history-pilot-year{display:flex;align-items:center;justify-content:space-between;
+  gap:10px;color:#35483b;font-weight:600;font-size:.91rem}
+.history-pilot-year input{width:98px;max-width:40%;min-height:44px;
+  border:1px solid #657c6d;border-radius:6px;padding:6px 9px;
+  font:inherit;background:white;color:#142d21}
+.history-pilot-review .tree-hint{line-height:1.5}
+.history-pilot-review .tree-list{margin-top:8px;max-height:none}
+.history-pilot-review .tree-line{align-items:flex-start}
+.history-pilot-review .tree-label{min-height:44px;text-align:left;white-space:normal}
+.history-pilot-review .node-level{font-size:.78rem;overflow-wrap:anywhere}
+.history-pilot-review .node-disambiguation{color:#704514;font-weight:600}
+.history-pilot-unlinked{margin-top:16px;padding:10px;
+  border:1px dashed #a08050;border-radius:7px}
+.history-pilot-unlinked summary{cursor:pointer;font-weight:650;min-height:40px}
+.history-entity-detail .metadata dd{overflow-wrap:anywhere}
+.history-entity-detail ul{margin:7px 0;padding-left:20px;overflow-wrap:anywhere}
+.history-entity-detail li{margin-bottom:7px}
+.history-entity-detail .entity-actions button{min-height:44px}
+.history-entity-detail .historical-geometry-uses button{min-height:40px}
+@media(max-width:700px){
+  .history-pilot-controls{gap:14px}
+  .history-pilot-review .tree-label{min-height:48px}
+  .history-pilot-option{min-height:48px}
+}
