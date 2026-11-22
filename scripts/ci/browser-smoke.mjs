@@ -351,8 +351,9 @@ async function desktop(cdp){
   await p.eval("document.querySelector('.tree-sidebar .tree-filters button:first-child').click()");
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   assert.equal(await p.eval("!!document.querySelector('.tree-sidebar')"),false,'Repeated module click closes panel');
-  await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
-  await p.wait("!!document.querySelector('.tree-sidebar .planned-module-description')",'Other module panel opens');
+  // Historical now owns an opt-in source pilot; Communities remains planned.
+  await p.eval("document.querySelector('.module-rail button:nth-child(3)').click()");
+  await p.wait("!!document.querySelector('.tree-sidebar .planned-module-description')",'Other planned module panel opens');
   assert.equal(await p.eval("!!document.querySelector('.module-notice')"),false,'No planned-module notice over map');
   await p.eval("document.querySelector('.module-rail button:first-child').click()");
   await p.wait("!!document.querySelector('.tree-sidebar input[type=search]')",'Returning to administrative module');
@@ -1931,6 +1932,55 @@ async function simR5Audit(cdp){
  }
 }
 
+/* HIST-MODULE.2 — actual desktop/mobile source-preview regression.
+ * Source candidates must remain opt-in, identified and non-certified; ACTUAL
+ * selections and layout continue to work unchanged.
+ */
+async function historicalPilotSmoke(cdp){
+  for (const width of [1440,390]){
+    const mobile=width<700;
+    const p=await cdp.page(width,900,mobile,site+'?lang=ro');
+    const panel=mobile?'.drawer-tree':'.tree-sidebar';
+    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+      'HIST-MODULE.2 map ready '+width);
+    await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+    await p.wait("!!document.querySelector('"+panel+" .history-pilot-option input')",
+      'Historical pilot and qualification loaded '+width);
+    assert.equal(await p.eval("document.querySelector('"+panel+" .history-pilot-option input').checked"),
+      false,'Historical pilot requires explicit opt-in '+width);
+    assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-pilot-review')"),
+      false,'No unverified tree on module open '+width);
+    const disclaimer=await p.eval("document.querySelector('"+panel+" .source-caveat')?.textContent");
+    assert.match(disclaimer,/necertificat|certificate|certificat/i,'Source disclaimer '+width);
+    await p.eval("document.querySelector('"+panel+" .history-pilot-option input').click()");
+    await p.wait("!!document.querySelector('"+panel+" .history-pilot-review .tree-list .tree-label')",
+      'Candidate source tree opt-in '+width);
+    const labels=await p.eval("[...document.querySelectorAll('"+panel+" .history-pilot-review .tree-list .node-name')].map(e=>e.textContent)");
+    assert(labels.some(x=>x.includes('Siebenbürgen')),
+      'Transylvania source root available '+width+': '+JSON.stringify(labels));
+    await p.eval("document.querySelector('"+panel+" .history-pilot-review .tree-list .tree-label').click()");
+    const entity=mobile?'.drawer-detail .history-entity-detail':'.detail-sidebar .history-entity-detail';
+    await p.wait("!!document.querySelector('"+entity+" .entity-title h3')",
+      'Historical source Entity card '+width);
+    const card=await p.eval("document.querySelector('"+entity+"')?.textContent");
+    assert.match(card,/HistoGIS/i,'Source provenance in card '+width);
+    assert.match(card,/necertificat|certificate|certificat/i,'Uncertified card label '+width);
+    assert.equal(await p.eval("document.documentElement.scrollWidth-innerWidth<=1"),true,
+      'No horizontal overflow '+width);
+    await p.snap((mobile?'mobile':'desktop')+'-hist-module-2-source-preview.png');
+    if(!mobile){
+      await p.eval("document.querySelector('.tree-sidebar .module-reset').click()");
+      await p.wait("!document.querySelector('.tree-sidebar .history-pilot-review')",
+        'Historical local reset hides source tree');
+      assert.equal(await p.eval("!!document.querySelector('.detail-sidebar .history-entity-detail')"),
+        false,'Historical local reset closes only source card');
+      assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.mapReady==='true'"),
+        true,'ACTUAL map remains ready after Historical reset');
+    }
+    await p.close();
+  }
+}
+
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
@@ -1974,6 +2024,7 @@ try{
   await simR6Exceptions(client);
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
+  await historicalPilotSmoke(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
