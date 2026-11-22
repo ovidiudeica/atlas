@@ -648,3 +648,9 @@
 .history-admissions-summary{font-size:.88rem;color:#264d37;line-height:1.5;
  margin:9px 0;background:#f3f8f4;padding:8px;border-left:3px solid #497c5b}
 .history-current-links .source-caveat{margin-top:10px}
+
+.history-overlap-sources{display:flex;flex-wrap:wrap;gap:5px 12px;
+  margin:5px 0 10px;font-size:.79rem;line-height:1.4}
+.history-overlap-sources a{color:#19563c;text-decoration:underline;
+  text-underline-offset:2px;overflow-wrap:anywhere}
+.history-overlap-sources a:focus-visible{outline:3px solid #245d40;outline-offset:3px}
