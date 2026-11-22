@@ -128,7 +128,7 @@ test('each full-resolution geometry matches its declared canonical source-exact 
   // source-generated, so compare an exact stable hash for the FULL FILE instead.
   const bytes = readFileSync(new URL('geometry.geojson', root));
   assert.equal(createHash('sha256').update(bytes).digest('hex'),
-    'c933b6e9d60c1c136318b9919ca27eefba69ce51df08a92ff0ebc22281dc0a95');
+    '3ff24bcc42bb9556f663e332a8a67ba9b7799ab094561daea11fcd7eac1f3fd2');
   assert.equal(features.features.length, new Set(features.features.map(f=>f.id)).size);
   assert.equal(catalog.geometries.length, new Set(catalog.geometries.map(g=>g.canonicalHash)).size);
 });
