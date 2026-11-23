@@ -10,16 +10,18 @@ import {projectGeodataHistoricalSourceCatalog} from '../src/data/historicalGeoda
 const base=new URL('../public/data/historical/v1/',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,base),'utf8'));
 const index=read('geodata/index.json'),parentage=read('ohm-parentage.json');
+const documentaryParents=read('documentary-parents.json');
 const countRoots=roots=>Object.values(roots).reduce((n,arr)=>n+arr.length,0);
 
 test('OHM temporal tree preserves 139 versions, 125 exact geometry assets, 76 source groups',()=>{
- assert.deepEqual(validateOhmParentage(index,parentage),{ok:true,errors:[]});
+ assert.deepEqual(validateOhmParentage(index,parentage,documentaryParents),{ok:true,errors:[]});
  const projection=projectGeodataHistoricalSourceCatalog(index);
- const tree=buildHistoricalOhmTree(index,parentage,1835);
+ const tree=buildHistoricalOhmTree(index,parentage,1835,documentaryParents);
  assert.deepEqual([tree.sourceVersionCount,tree.assetCount,tree.groupCount],[139,125,76]);
- assert.equal(tree.nodes.size,76);
+ assert.equal(tree.nodes.size,79);
+ assert.equal(tree.documentaryNodeCount,3);
  assert.equal(countRoots(tree.roots),73);
- assert.equal(tree.activeLinks.length,3);
+ assert.equal(tree.activeLinks.length,6);
  assert.deepEqual(tree.nodes.get('Transilvania').children.map(n=>n.group).sort(),[
    'Țara Chioarului',
    'Comitate istorice/Comitatul Kraszna',
@@ -32,7 +34,7 @@ test('OHM temporal tree preserves 139 versions, 125 exact geometry assets, 76 so
  assert.equal(new Set(projection.geometryUses.map(x=>x.geometryId)).size,125);
 });
 test('OHM exact geometry reuse across multiple periods never merges institutional IDs',()=>{
- const tree=buildHistoricalOhmTree(index,parentage,1850);
+ const tree=buildHistoricalOhmTree(index,parentage,1850,documentaryParents);
  const bukovina=tree.nodes.get('Bucovina');
  assert(bukovina);
  assert.equal(bukovina.versions.length,4);
@@ -49,8 +51,8 @@ test('OHM exact geometry reuse across multiple periods never merges institutiona
  assert.equal(bukovina.qualification,'provisional_source_identity');
 });
 test('1930 documentary parents are qualified without conflating old Suceava with Bukovina',()=>{
- const tree=buildHistoricalOhmTree(index,parentage,1930);
- assert.equal(tree.activeLinks.length,15);
+ const tree=buildHistoricalOhmTree(index,parentage,1930,documentaryParents);
+ assert.equal(tree.activeLinks.length,16);
  const romania=tree.nodes.get('Regatul României');
  assert(romania);
  const admitted=['Arad','Bacău','Botoșani','Covurlui','Dorohoi','Fălciu','Iași',
@@ -71,16 +73,16 @@ test('1930 documentary parents are qualified without conflating old Suceava with
  assert.equal(romania.children.every(n=>n.category==='counties'),true);
 });
 test('historic reorganization removes unqualified parentage without moving sources',()=>{
- const post=buildHistoricalOhmTree(index,parentage,1939);
- const pre=buildHistoricalOhmTree(index,parentage,1920);
+ const post=buildHistoricalOhmTree(index,parentage,1939,documentaryParents);
+ const pre=buildHistoricalOhmTree(index,parentage,1920,documentaryParents);
  assert.equal(post.activeLinks.length,0);
  assert.equal(pre.activeLinks.length,0);
  assert.equal(post.nodes.get('Regatul României').children.length,0);
  assert.equal(countRoots(post.roots),76);
- assert.equal(countRoots(pre.roots),76);
+ assert.equal(countRoots(pre.roots),77);
 });
 test('incomplete source periods do not claim 1930 geometry availability',()=>{
- const tree=buildHistoricalOhmTree(index,parentage,1930);
+ const tree=buildHistoricalOhmTree(index,parentage,1930,documentaryParents);
  const bacau=tree.nodes.get('Județe istorice/Județul Bacău');
  assert(bacau);
  assert.equal(bacau.versions.length,1);
@@ -96,7 +98,7 @@ test('invalid/unsourced and cyclic parenthood fails closed',()=>{
  const bad=change=>{
    const copy=structuredClone(parentage);
    change(copy);
-   assert.equal(validateOhmParentage(index,copy).ok,false);
+   assert.equal(validateOhmParentage(index,copy,documentaryParents).ok,false);
  };
  bad(x=>x.links[0].boundaryCertified=true);
  bad(x=>x.links[0].evidenceStatus='candidate');
@@ -110,7 +112,7 @@ test('invalid/unsourced and cyclic parenthood fails closed',()=>{
 });
 
 test('1930 official record admits 15 source identities and quarantines misidentified Suceava',()=>{
- const tree=buildHistoricalOhmTree(index,parentage,1930);
+ const tree=buildHistoricalOhmTree(index,parentage,1930,documentaryParents);
  for(const short of ['Jugastru','Moghilău','Tulcin']){
    const node=tree.nodes.get('Județe istorice/Județul '+short);
    assert.equal(node.parentGroup,null);
@@ -123,33 +125,33 @@ test('1930 official record admits 15 source identities and quarantines misidenti
    assert.equal(node.parentEvidence.boundaryCertified,false);
    assert.equal(node.activeEntries.length,0);
  }
- assert.equal(buildHistoricalOhmTree(index,parentage,1931).activeLinks.length,3,
+ assert.equal(buildHistoricalOhmTree(index,parentage,1931,documentaryParents).activeLinks.length,4,
    '1930 gazette evidence cannot be extended to 1931');
 });
 test('Partium membership extends to the documented 27 December 1860 transfer',()=>{
- const early=buildHistoricalOhmTree(index,parentage,1731);
- const partium=buildHistoricalOhmTree(index,parentage,1800);
- const transition=buildHistoricalOhmTree(index,parentage,1848);
- const beforeTransfer=buildHistoricalOhmTree(index,parentage,1860);
- const afterTransfer=buildHistoricalOhmTree(index,parentage,1861);
- assert.equal(early.activeLinks.length,0);
- assert.equal(partium.activeLinks.length,3);
- assert.equal(transition.activeLinks.length,3);
- assert.equal(beforeTransfer.activeLinks.length,3);
- assert.equal(afterTransfer.activeLinks.length,0);
+ const early=buildHistoricalOhmTree(index,parentage,1731,documentaryParents);
+ const partium=buildHistoricalOhmTree(index,parentage,1800,documentaryParents);
+ const transition=buildHistoricalOhmTree(index,parentage,1848,documentaryParents);
+ const beforeTransfer=buildHistoricalOhmTree(index,parentage,1860,documentaryParents);
+ const afterTransfer=buildHistoricalOhmTree(index,parentage,1861,documentaryParents);
+ assert.equal(early.activeLinks.length,1);
+ assert.equal(partium.activeLinks.length,6);
+ assert.equal(transition.activeLinks.length,6);
+ assert.equal(beforeTransfer.activeLinks.length,6);
+ assert.equal(afterTransfer.activeLinks.length,3);
  assert.equal(partium.nodes.get('Comitate istorice/Comitatul Zaránd').parentGroup,null,
    'Zaránd 1732 partition remains unresolved');
 });
 
 test('existing Principatele Unite parent gains eleven 1865 county children with no auto-qualified polygon',()=>{
- const tree=buildHistoricalOhmTree(index,parentage,1865);
+ const tree=buildHistoricalOhmTree(index,parentage,1865,documentaryParents);
  const parent=tree.nodes.get('Principatele Unite');
  const expected=['Bacău','Botoșani','Covurlui','Dorohoi','Fălciu','Iași','Putna','Roman',
    'Suceava','Tecuci','Tutova'];
  assert.deepEqual(parent.children.map(c=>c.group).sort(),
    expected.map(c=>'Județe istorice/Județul '+c).sort());
- assert.equal(tree.activeLinks.length,11);
- assert.equal(countRoots(tree.roots),65);
+ assert.equal(tree.activeLinks.length,14);
+ assert.equal(countRoots(tree.roots),64);
  for(const child of parent.children){
    assert.equal(child.activeEntries.length,0);
    assert.equal(child.parentEvidence.temporalAssertion,
@@ -158,15 +160,15 @@ test('existing Principatele Unite parent gains eleven 1865 county children with 
  }
  assert.equal(tree.nodes.get('Județe istorice/Județul Neamț').parentGroup,null);
  assert.equal(tree.nodes.get('Județe istorice/Județul Vaslui').parentGroup,null);
- assert.equal(buildHistoricalOhmTree(index,parentage,1866).activeLinks.length,0);
+ assert.equal(buildHistoricalOhmTree(index,parentage,1866,documentaryParents).activeLinks.length,3);
 });
 test('1925 official county list admits 15 source groups, separate Fălticeni/Bukovina identities',()=>{
- const tree=buildHistoricalOhmTree(index,parentage,1925);
- assert.equal(tree.activeLinks.length,15);
+ const tree=buildHistoricalOhmTree(index,parentage,1925,documentaryParents);
+ assert.equal(tree.activeLinks.length,16);
  assert.equal(tree.nodes.get('Regatul României').children.length,15);
  assert.equal(tree.nodes.get('Județe istorice/Județul Suceava').parentGroup,null);
- assert.equal(buildHistoricalOhmTree(index,parentage,1890).activeLinks.length,2);
- const suceava=buildHistoricalOhmTree(index,parentage,1890)
+ assert.equal(buildHistoricalOhmTree(index,parentage,1890,documentaryParents).activeLinks.length,4);
+ const suceava=buildHistoricalOhmTree(index,parentage,1890,documentaryParents)
    .nodes.get('Județe istorice/Județul Suceava');
  assert.equal(suceava.parentGroup,'Regatul României');
  assert.equal(suceava.parentEvidence.temporalAssertion,
