@@ -14,7 +14,7 @@ test('WEB-R3 Pages deploy: artifact name uniquely matches workflow run and attem
   assert.equal(workflow.split(expected).length-1,3,
     'one upload-pages-artifact name and two guarded deploy-pages artifact_name values must match');
   assert.match(workflow,/uses: actions\/upload-pages-artifact@v3\s*\n\s*with:\s*\n\s*name: github-pages-/);
-  assert.match(workflow,/uses: actions\/deploy-pages@v4\s*\n\s*with:\s*\n\s*artifact_name: github-pages-/);
+  assert.match(workflow,/uses: actions\/deploy-pages@v4(?:\s*\n\s*continue-on-error: true)?\s*\n\s*with:\s*\n\s*artifact_name: github-pages-/);
   assert.equal(workflow.split('uses: actions/upload-pages-artifact@v3').length-1,1,
     'Pages artifact must be uploaded exactly once per workflow attempt');
   assert.equal(workflow.split('uses: actions/deploy-pages@v4').length-1,2,
