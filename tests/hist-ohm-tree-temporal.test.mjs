@@ -151,7 +151,9 @@ test('existing Principatele Unite parent gains eleven 1865 county children with 
  assert.deepEqual(parent.children.map(c=>c.group).sort(),
    expected.map(c=>'Județe istorice/Județul '+c).sort());
  assert.equal(tree.activeLinks.length,14);
- assert.equal(countRoots(tree.roots),64);
+ assert.equal(countRoots(tree.roots),65);
+ assert.equal(tree.documentaryNodeCount,3,
+  'Austrian Empire, Russian Empire and Military Frontier are distinct documented roots in 1865');
  for(const child of parent.children){
    assert.equal(child.activeEntries.length,0);
    assert.equal(child.parentEvidence.temporalAssertion,
