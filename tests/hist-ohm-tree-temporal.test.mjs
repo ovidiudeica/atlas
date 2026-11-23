@@ -48,16 +48,17 @@ test('OHM exact geometry reuse across multiple periods never merges institutiona
    index.entries.find(x=>x.id===b)?.geometryId));
  assert.equal(bukovina.qualification,'provisional_source_identity');
 });
-test('only qualified and time-bound parentage creates children under the kingdom',()=>{
+test('1930 documentary parents are qualified without conflating old Suceava with Bukovina',()=>{
  const tree=buildHistoricalOhmTree(index,parentage,1930);
- assert.equal(tree.activeLinks.length,16);
+ assert.equal(tree.activeLinks.length,15);
  const romania=tree.nodes.get('Regatul României');
  assert(romania);
  const admitted=['Arad','Bacău','Botoșani','Covurlui','Dorohoi','Fălciu','Iași',
-   'Maramureș','Neamț','Putna','Roman','Suceava','Tecuci','Timiș-Torontal','Tutova','Vaslui'];
+   'Maramureș','Neamț','Putna','Roman','Tecuci','Timiș-Torontal','Tutova','Vaslui'];
  assert.deepEqual(romania.children.map(x=>x.group).sort(),
    admitted.map(x=>'Județe istorice/Județul '+x).sort());
- assert.equal(countRoots(tree.roots),60);
+ assert.equal(countRoots(tree.roots),61);
+ assert.equal(tree.nodes.get('Județe istorice/Județul Suceava').parentGroup,null);
  for(const child of romania.children){
    assert.equal(child.parentGroup,romania.group);
    assert.equal(child.parentEvidence.evidenceStatus,'qualified_membership_only');
@@ -108,14 +109,14 @@ test('invalid/unsourced and cyclic parenthood fails closed',()=>{
    parentSourceGroup:x.links[0].childSourceGroup}));
 });
 
-test('1930 official record admits all 16 documented counties, not WWII Transnistrian districts',()=>{
+test('1930 official record admits 15 source identities and quarantines misidentified Suceava',()=>{
  const tree=buildHistoricalOhmTree(index,parentage,1930);
  for(const short of ['Jugastru','Moghilău','Tulcin']){
    const node=tree.nodes.get('Județe istorice/Județul '+short);
    assert.equal(node.parentGroup,null);
  }
  for(const short of ['Bacău','Botoșani','Covurlui','Dorohoi','Fălciu','Iași','Neamț',
-   'Putna','Roman','Suceava','Tecuci','Tutova','Vaslui']){
+   'Putna','Roman','Tecuci','Tutova','Vaslui']){
    const node=tree.nodes.get('Județe istorice/Județul '+short);
    assert.equal(node.parentGroup,'Regatul României');
    assert.equal(node.parentEvidence.temporalAssertion,'1930_documentary_snapshot_not_continuity');
@@ -125,13 +126,49 @@ test('1930 official record admits all 16 documented counties, not WWII Transnist
  assert.equal(buildHistoricalOhmTree(index,parentage,1931).activeLinks.length,3,
    '1930 gazette evidence cannot be extended to 1931');
 });
-test('Partium membership exists only inside conservative 1733–1847 window',()=>{
+test('Partium membership extends to the documented 27 December 1860 transfer',()=>{
  const early=buildHistoricalOhmTree(index,parentage,1731);
  const partium=buildHistoricalOhmTree(index,parentage,1800);
- const later=buildHistoricalOhmTree(index,parentage,1848);
+ const transition=buildHistoricalOhmTree(index,parentage,1848);
+ const beforeTransfer=buildHistoricalOhmTree(index,parentage,1860);
+ const afterTransfer=buildHistoricalOhmTree(index,parentage,1861);
  assert.equal(early.activeLinks.length,0);
  assert.equal(partium.activeLinks.length,3);
- assert.equal(later.activeLinks.length,0);
+ assert.equal(transition.activeLinks.length,3);
+ assert.equal(beforeTransfer.activeLinks.length,3);
+ assert.equal(afterTransfer.activeLinks.length,0);
  assert.equal(partium.nodes.get('Comitate istorice/Comitatul Zaránd').parentGroup,null,
    'Zaránd 1732 partition remains unresolved');
+});
+
+test('existing Principatele Unite parent gains eleven 1865 county children with no auto-qualified polygon',()=>{
+ const tree=buildHistoricalOhmTree(index,parentage,1865);
+ const parent=tree.nodes.get('Principatele Unite');
+ const expected=['Bacău','Botoșani','Covurlui','Dorohoi','Fălciu','Iași','Putna','Roman',
+   'Suceava','Tecuci','Tutova'];
+ assert.deepEqual(parent.children.map(c=>c.group).sort(),
+   expected.map(c=>'Județe istorice/Județul '+c).sort());
+ assert.equal(tree.activeLinks.length,11);
+ assert.equal(countRoots(tree.roots),65);
+ for(const child of parent.children){
+   assert.equal(child.activeEntries.length,0);
+   assert.equal(child.parentEvidence.temporalAssertion,
+     '1865_annual_documentary_snapshot_not_a_legal_start_or_end');
+   assert.equal(uniqueSourceVersionAtYear(child,1865),null);
+ }
+ assert.equal(tree.nodes.get('Județe istorice/Județul Neamț').parentGroup,null);
+ assert.equal(tree.nodes.get('Județe istorice/Județul Vaslui').parentGroup,null);
+ assert.equal(buildHistoricalOhmTree(index,parentage,1866).activeLinks.length,0);
+});
+test('1925 official county list admits 15 source groups, separate Fălticeni/Bukovina identities',()=>{
+ const tree=buildHistoricalOhmTree(index,parentage,1925);
+ assert.equal(tree.activeLinks.length,15);
+ assert.equal(tree.nodes.get('Regatul României').children.length,15);
+ assert.equal(tree.nodes.get('Județe istorice/Județul Suceava').parentGroup,null);
+ assert.equal(buildHistoricalOhmTree(index,parentage,1890).activeLinks.length,2);
+ const suceava=buildHistoricalOhmTree(index,parentage,1890)
+   .nodes.get('Județe istorice/Județul Suceava');
+ assert.equal(suceava.parentGroup,'Regatul României');
+ assert.equal(suceava.parentEvidence.temporalAssertion,
+   '1890_county_report_administrative_snapshot');
 });

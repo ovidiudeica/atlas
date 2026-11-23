@@ -1,8 +1,8 @@
 {
   "schema": "atlas-historical-ohm-parentage-v1",
   "asOf": "2026-11-23",
-  "status": "TARGETED_INDEPENDENT_MEMBERSHIP_QUALIFICATION_WITH_EXPLICIT_LIMITS",
-  "description": "Time-scoped administrative parentage; source geometry and source-reported dates remain unqualified. Unlisted relations have unknown parentage.",
+  "status": "HIST_OHM_TREE_2B_INDEPENDENT_1865_AND_1925_MEMBERSHIP_REVIEW",
+  "description": "Historical parentage by dated documents; 1865 exact printed names checked from OCR recap with separate uncertain readings held; 1925 official list distinguishes old Suceava/Fălticeni from Bukovina Suceava; Partium until December 1860.",
   "prohibitions": [
     "no inferred parent from OHM folder",
     "no inferred parent from geometry overlap",
@@ -264,26 +264,6 @@
       "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
     },
     {
-      "id": "ohm-1930-suceava-to-romania",
-      "parentSourceGroup": "Regatul României",
-      "childSourceGroup": "Județe istorice/Județul Suceava",
-      "start": "1930-01-22",
-      "end": "1930-12-31",
-      "kind": "direct_administrative_membership",
-      "evidenceStatus": "qualified_membership_only",
-      "boundaryCertified": false,
-      "sourceIdentityCertified": false,
-      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
-      "evidence": [
-        {
-          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
-          "type": "primary_official_gazette",
-          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Suceava apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
-        }
-      ],
-      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
-    },
-    {
       "id": "ohm-1930-tecuci-to-romania",
       "parentSourceGroup": "Regatul României",
       "childSourceGroup": "Județe istorice/Județul Tecuci",
@@ -348,12 +328,12 @@
       "parentSourceGroup": "Transilvania",
       "childSourceGroup": "Țara Chioarului",
       "start": "1733-02-16",
-      "end": "1847-12-31",
+      "end": "1860-12-26",
       "kind": "direct_administrative_membership",
       "evidenceStatus": "qualified_membership_only",
       "boundaryCertified": false,
       "sourceIdentityCertified": false,
-      "temporalAssertion": "conservatively_bounded_governance_interval",
+      "temporalAssertion": "documented_partium_administration_up_to_1860_transition",
       "evidence": [
         {
           "url": "https://lexikon.katolikus.hu/P/Partium.html",
@@ -364,21 +344,26 @@
           "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
           "type": "peer_reviewed_historical_study",
           "detail": "Onojescu, Iudean, Popovici, Parliamentary Representation in Eastern Hungary, pp. 215–217: Partium (Kővár, Kraszna, Közép-Szolnok) rămâne în administrația Principatului Transilvaniei după 1732, cu schimbări ulterioare în 1848 și 1860."
+        },
+        {
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
+          "type": "independent_peer_reviewed_historical_study",
+          "detail": "Onojescu, Iudean, Popovici, pp. 215–217: Kővár district, Kraszna and Közép-Szolnok remained under the Principality of Transylvania until the imperial decision of 27 December 1860 transferring administration to Hungary; year 1861 must not inherit a Transylvanian direct parent."
         }
       ],
-      "note": "Califică raportul administrativ istoric dintre Partium și Transilvania numai pentru intervalul conservator 1733–1847; nu certifică suprafața OHM și nu presupune continuitate în reorganizările din 1848–1860."
+      "note": "Califică doar apartenența politică-administrativă documentată până la 26 decembrie 1860; 27 decembrie marchează transferul. Nu atestă că regimul intern, hotarul ori competențele au fost identice în fiecare subperioadă, inclusiv 1848–1851."
     },
     {
       "id": "ohm-partium-1733-kraszna-to-transilvania",
       "parentSourceGroup": "Transilvania",
       "childSourceGroup": "Comitate istorice/Comitatul Kraszna",
       "start": "1733-02-16",
-      "end": "1847-12-31",
+      "end": "1860-12-26",
       "kind": "direct_administrative_membership",
       "evidenceStatus": "qualified_membership_only",
       "boundaryCertified": false,
       "sourceIdentityCertified": false,
-      "temporalAssertion": "conservatively_bounded_governance_interval",
+      "temporalAssertion": "documented_partium_administration_up_to_1860_transition",
       "evidence": [
         {
           "url": "https://lexikon.katolikus.hu/P/Partium.html",
@@ -389,21 +374,26 @@
           "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
           "type": "peer_reviewed_historical_study",
           "detail": "Onojescu, Iudean, Popovici, Parliamentary Representation in Eastern Hungary, pp. 215–217: Partium (Kővár, Kraszna, Közép-Szolnok) rămâne în administrația Principatului Transilvaniei după 1732, cu schimbări ulterioare în 1848 și 1860."
+        },
+        {
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
+          "type": "independent_peer_reviewed_historical_study",
+          "detail": "Onojescu, Iudean, Popovici, pp. 215–217: Kővár district, Kraszna and Közép-Szolnok remained under the Principality of Transylvania until the imperial decision of 27 December 1860 transferring administration to Hungary; year 1861 must not inherit a Transylvanian direct parent."
         }
       ],
-      "note": "Califică raportul administrativ istoric dintre Partium și Transilvania numai pentru intervalul conservator 1733–1847; nu certifică suprafața OHM și nu presupune continuitate în reorganizările din 1848–1860."
+      "note": "Califică doar apartenența politică-administrativă documentată până la 26 decembrie 1860; 27 decembrie marchează transferul. Nu atestă că regimul intern, hotarul ori competențele au fost identice în fiecare subperioadă, inclusiv 1848–1851."
     },
     {
       "id": "ohm-partium-1733-kozep-szolnok-to-transilvania",
       "parentSourceGroup": "Transilvania",
       "childSourceGroup": "Comitate istorice/Comitatul Közép-Szolnok",
       "start": "1733-02-16",
-      "end": "1847-12-31",
+      "end": "1860-12-26",
       "kind": "direct_administrative_membership",
       "evidenceStatus": "qualified_membership_only",
       "boundaryCertified": false,
       "sourceIdentityCertified": false,
-      "temporalAssertion": "conservatively_bounded_governance_interval",
+      "temporalAssertion": "documented_partium_administration_up_to_1860_transition",
       "evidence": [
         {
           "url": "https://lexikon.katolikus.hu/P/Partium.html",
@@ -414,9 +404,684 @@
           "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
           "type": "peer_reviewed_historical_study",
           "detail": "Onojescu, Iudean, Popovici, Parliamentary Representation in Eastern Hungary, pp. 215–217: Partium (Kővár, Kraszna, Közép-Szolnok) rămâne în administrația Principatului Transilvaniei după 1732, cu schimbări ulterioare în 1848 și 1860."
+        },
+        {
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
+          "type": "independent_peer_reviewed_historical_study",
+          "detail": "Onojescu, Iudean, Popovici, pp. 215–217: Kővár district, Kraszna and Közép-Szolnok remained under the Principality of Transylvania until the imperial decision of 27 December 1860 transferring administration to Hungary; year 1861 must not inherit a Transylvanian direct parent."
         }
       ],
-      "note": "Califică raportul administrativ istoric dintre Partium și Transilvania numai pentru intervalul conservator 1733–1847; nu certifică suprafața OHM și nu presupune continuitate în reorganizările din 1848–1860."
+      "note": "Califică doar apartenența politică-administrativă documentată până la 26 decembrie 1860; 27 decembrie marchează transferul. Nu atestă că regimul intern, hotarul ori competențele au fost identice în fiecare subperioadă, inclusiv 1848–1851."
+    },
+    {
+      "id": "ohm-1865-bacau-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Bacău",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Bacău (OCR transcris \"Bac5:6\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Bacău; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-botosani-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Botoșani",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Botoșani (OCR transcris \"BotosanI\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Botoșani; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-covurlui-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Covurlui",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Covurlui (OCR transcris \"CovurluIu\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Covurlui; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-dorohoi-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Dorohoi",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Dorohoi (OCR transcris \"Doroholu\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Dorohoi; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-falciu-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Fălciu",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Fălciu (OCR transcris \"Fälciti\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Fălciu; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-iasi-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Iași",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Iași (OCR transcris \"Iasi\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Iași; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-putna-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Putna",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Putna (OCR transcris \"Putna\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Putna; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-roman-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Roman",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Roman (OCR transcris \"Romant\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Roman; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-suceava-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Suceava",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Suceava (OCR transcris \"Sucéva\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Suceava; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-tecuci-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Tecuci",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Tecuci (OCR transcris \"Tecuclu\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Tecuci; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1865-tutova-to-principatele-unite",
+      "parentSourceGroup": "Principatele Unite",
+      "childSourceGroup": "Județe istorice/Județul Tutova",
+      "start": "1865-01-01",
+      "end": "1865-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1865_annual_documentary_snapshot_not_a_legal_start_or_end",
+      "evidence": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "type": "contemporary_official_communal_index",
+          "detail": "Indicele comunelor României, Imprimeria Statului, 1865; recapitularea generală de la sfârșitul volumului enumără județul Tutova (OCR transcris \"Tutova\"). Verificare a apartenenței administrative la nivel de județ, nu a conturului OHM."
+        },
+        {
+          "url": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "type": "full_text_scan_transcription",
+          "detail": "Transcriere automată a facsimilului original, secțiunea finală RECAPITULAȚIE GENERALĂ, recunoaștere ortografică imperfectă; identificarea județului este individuală."
+        },
+        {
+          "url": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+          "type": "independent_historical_administrative_research",
+          "detail": "Inventarul județelor Principatelor Unite la 1864 include Tutova; control contextual suplimentar, fără probarea formei poligonului OHM."
+        }
+      ],
+      "note": "Snapshotul 1865 nu certifică data exactă a începerii/încetării subordonării. Geometria OHM începe la 1859 și nu are end_date; nu se poate bifa automat pentru 1865. Pentru Suceava se referă la vechiul județ moldovenesc cu centru la Fălticeni, nu la județul bucovinean numit Suceava după 1918."
+    },
+    {
+      "id": "ohm-1925-arad-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Arad",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Arad este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-bacau-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Bacău",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Bacău este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-botosani-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Botoșani",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Botoșani este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-covurlui-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Covurlui",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Covurlui este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-dorohoi-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Dorohoi",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Dorohoi este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-falciu-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Fălciu",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Fălciu este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-iasi-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Iași",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Iași este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-maramures-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Maramureș",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Maramureș este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-neamt-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Neamț",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Neamț este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-putna-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Putna",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Putna este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-roman-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Roman",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Roman este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-tecuci-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Tecuci",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Tecuci este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-timis-torontal-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Timiș-Torontal",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465: județul Timiș-Torontal este exceptat explicit de la noua împărțire în 68 județe, rămânând în forma actuală. Apartenența la Regat este atestată, conturul OHM nu."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-tutova-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Tutova",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Tutova este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1925-vaslui-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Vaslui",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1925_official_decree_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Vaslui este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1890-suceava-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Suceava",
+      "start": "1890-10-15",
+      "end": "1890-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1890_county_report_administrative_snapshot",
+      "evidence": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Monitorul_Oficial_al_Rom%C3%A2niei_1890-12-21%2C_nr._212.pdf",
+          "type": "contemporary_official_gazette",
+          "detail": "Monitorul Oficial nr. 212, 21 decembrie 1890, p. 5038: raportul județului Suceava din 15 octombrie 1890 identifică orașul Fălticeni drept reședință a județului, distinct de Bucovina austriacă."
+        }
+      ],
+      "note": "Raportul din 15 octombrie 1890 este fotografia administrativă; 31 decembrie este limită operațională, nu data desființării. Geometria OHM 1859→necunoscut nu devine automată pentru 1890."
+    },
+    {
+      "id": "ohm-1890-tecuci-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Tecuci",
+      "start": "1890-10-15",
+      "end": "1890-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1890_county_report_administrative_snapshot",
+      "evidence": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Monitorul_Oficial_al_Rom%C3%A2niei_1890-12-21%2C_nr._212.pdf",
+          "type": "contemporary_official_gazette",
+          "detail": "Monitorul Oficial nr. 212, 21 decembrie 1890, pp. 5038–5040: raportul consiliului județean Tecuci din sesiunea de 15 octombrie 1890 confirmă județul administrativ românesc."
+        }
+      ],
+      "note": "Raportul din 15 octombrie 1890 este fotografia administrativă; 31 decembrie este limită operațională, nu data desființării. Geometria OHM 1859→necunoscut nu devine automată pentru 1890."
     }
   ],
   "pending": "Restul grupurilor OHM au verdicte individuale în registrul HIST-OHM-TREE.2. Titlurile și geometriile OHM rămân surse provizorii; documentul istoric nu probează conturul.",
@@ -426,6 +1091,43 @@
     "oldQualifiedLinks": 3,
     "documentaryObservation1930": "1930-01-22 through calendar year only; no 1931+ inference",
     "partiumQualification": "1733-02-16–1847-12-31, interruption/transition in 1848 not interpolated",
-    "unqualified": "All other parentage remains non-admitted, listed in separate 76-group audit."
-  }
+    "unqualified": "All other parentage remains non-admitted, listed in separate 76-group audit.",
+    "admitted1865SourceRows": 11,
+    "held1865SourceRows": [
+      "Județul Neamț",
+      "Județul Vaslui"
+    ],
+    "admitted1925OfficialGazetteRows": 15,
+    "retracted1930IdentityMatch": [
+      "Județul Suceava"
+    ],
+    "partiumDocumentedUntil": "1860-12-26",
+    "temporalCaution": "All new periods are documentary observation windows, not asserted institutional inception/termination; no OHM border certification.",
+    "admitted1890OfficialCountyReports": 2
+  },
+  "retractedLinks": [
+    {
+      "id": "ohm-1930-suceava-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Suceava",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Suceava apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă.",
+      "status": "RETRACTED_IDENTITY_CONFLATION",
+      "retractedReason": "The original OHM county relation sourced to 1859 is the older Moldavian Suceava (Fălticeni), while Monitorul Oficial 7 October 1925 enumerates Fălticeni and a distinct Suceava (Bukovina). Thus the earlier 1930 Suceava county match cannot be treated as a qualified identity or direct parentage for this OHM source group.",
+      "retractionEvidenceUrl": "https://www.resurse.net/mo/1925/19251007.pdf"
+    }
+  ]
 }

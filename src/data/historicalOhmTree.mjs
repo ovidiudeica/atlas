@@ -13,6 +13,10 @@ const fullDate=x=>typeof x==='string'&&/^\d{4}-\d\d-\d\d$/.test(x)&&
   new Date(x+'T00:00:00Z').toISOString().slice(0,10)===x;
 const intersects=(a,b)=>a.start<=b.end&&b.start<=a.end;
 const pointIn=(link,date)=>date>=link.start&&date<=link.end;
+const overlapsCalendarYear=(link,year)=>{
+  const yr=String(year).padStart(4,'0');
+  return link.start<=yr+'-12-31'&&link.end>=yr+'-01-01';
+};
 export const entityIdFromGroup=group=>'ohm:provisional-entity:'+encodeURIComponent(group);
 export const ohmCategory=group=>group.startsWith('Județe istorice/')?'counties':
   group.startsWith('Comitate istorice/')?'comitates':'regions';
@@ -78,11 +82,12 @@ export function validateOhmParentage(index,register){
 }
 
 /**
- * Creates a forest for a reference year. The category root is UI-only;
- * a child is nested administratively ONLY when a documentary edge is active.
- * Independent administrative membership can be established for a year even
- * if an OHM source's geometry has no confirmed end date. Membership NEVER
- * implicitly certifies the boundary or the source's historical interval.
+ * Creates a forest for a selected calendar year. One documentary membership
+ * witnessed at ANY time in that year is exposed in the year-level browser,
+ * and its exact start/end dates remain on the edge. This does NOT infer
+ * membership on 1 July or uninterrupted status throughout that year.
+ * Source geometry availability uses the separate OHM year filter and is
+ * never certified by a documentary parent edge. The category root is UI-only.
  */
 export function buildHistoricalOhmTree(index,register,year){
   const valid=validateOhmParentage(index,register);
@@ -108,16 +113,21 @@ export function buildHistoricalOhmTree(index,register,year){
   for(const node of nodes.values())node.versions.sort((a,b)=>
     (a.sourcePeriod.start||'').localeCompare(b.sourcePeriod.start||'')||a.id.localeCompare(b.id));
   const date=String(year).padStart(4,'0')+'-07-01';
+  const annualLinks=register.links.filter(l=>overlapsCalendarYear(l,year));
+  // An entity that changes direct parent within the same calendar year
+  // cannot be assigned unambiguously by a year-only control. Defer it
+  // until date-specific navigation is available; never choose arbitrarily.
+  const counts=new Map();
+  for(const link of annualLinks)
+    counts.set(link.childSourceGroup,(counts.get(link.childSourceGroup)||0)+1);
+  const ambiguousAnnualParents=[...counts].filter(([,n])=>n>1).map(([g])=>g);
   const activeLinks=[];
-  for(const link of register.links){
-    if(!pointIn(link,date))continue;
+  for(const link of annualLinks){
+    if(counts.get(link.childSourceGroup)!==1)continue;
     const parent=nodes.get(link.parentSourceGroup),child=nodes.get(link.childSourceGroup);
     if(!parent||!child)continue;
-    // HIST-OHM-TREE.2: documentary institutional parentage is independent
-    // from polygon validity and source geometry period completeness.
-    // A county with OHM end_date=null may be a documented county in 1930;
-    // it belongs in the documentary tree with geometry availability marked
-    // unqualified. NEVER extend its OHM polygon into 1930 automatically.
+    // Documentary membership is separate from a source polygon's OHM
+    // time bounds. End=null never becomes a valid 1865/1890/1925 geometry.
     child.parentGroup=parent.group;child.parentEvidence=link;
     parent.children.push(child);
     activeLinks.push(link);
@@ -131,7 +141,8 @@ export function buildHistoricalOhmTree(index,register,year){
     for(const node of array)sortTree(node.children);
   }
   for(const array of Object.values(roots))sortTree(array);
-  return {year,referenceDate:date,sourceOnly:true,roots,nodes,
+  return {year,referenceDate:date,parentageTimeResolution:'calendar_year_documented_at_some_point',
+    ambiguousAnnualParents,sourceOnly:true,roots,nodes,
     activeLinks,assetCount:projection.geometries.length,
     geometryUses:projection.geometryUses,
     sourceVersionCount:projection.versions.length,

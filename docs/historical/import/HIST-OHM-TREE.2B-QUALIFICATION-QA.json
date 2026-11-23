@@ -1,0 +1,701 @@
+{
+  "schema": "atlas-historical-ohm-tree-2b-qualification-v1",
+  "asOf": "2026-11-23",
+  "scope": "existing_OHM_parents_only_1865_1890_1925_and_partium",
+  "sourceOnly": true,
+  "admissionPolicy": "documentary_membership_only_no_polygon_certification",
+  "originalOHMVersions": 139,
+  "originalGeometryAssets": 125,
+  "sourceGroups": 76,
+  "previousParentageLinks": 19,
+  "currentParentageLinks": 46,
+  "new1865Memberships": 11,
+  "held1865Memberships": 2,
+  "new1890Memberships": 2,
+  "new1925Memberships": 15,
+  "partiumExtendedLinks": 3,
+  "withdrawnHistoricalIdentityMatches": 1,
+  "verifiedSourceWitnesses": {
+    "index1865": {
+      "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+      "readableOcr": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+      "textLocation": "final recapitulation/general table",
+      "directVisualFacsimileRead": false,
+      "note": "Scan metadata confirms 108 pages; the available transcription has noisy OCR. Admissions distinguish 11 identifiable name rows from two ambiguous ones (Neamț/Vaslui). This is not a polygon validation."
+    },
+    "gazette1890": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Monitorul_Oficial_al_Rom%C3%A2niei_1890-12-21%2C_nr._212.pdf",
+      "printedPages": "5038–5040",
+      "claim": "Reports of Suceava with county seat Fălticeni and of Tecuci; administrative snapshot 15 October 1890"
+    },
+    "decree1925": {
+      "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+      "printedPage": "10923",
+      "decree": "Royal decree nr. 2465 / 25 September, published 7 October 1925",
+      "claim": "68 counties listed plus explicit unchanged exceptions Caraș-Severin, Timiș-Torontal; distinct names Fălticeni and Suceava"
+    },
+    "partium": {
+      "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
+      "pages": "215–217",
+      "claim": "District Kővár, Kraszna, Közép-Szolnok under Transylvanian administration until imperial decision 27 Dec 1860"
+    }
+  },
+  "cases1865": [
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-01",
+      "sourceGroup": "Județe istorice/Județul Bacău",
+      "ohmSourceRelationId": 2943619,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Bacău",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Bac5:6",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-bacau-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-02",
+      "sourceGroup": "Județe istorice/Județul Botoșani",
+      "ohmSourceRelationId": 2940712,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Botoșani",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "BotosanI",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-botosani-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-03",
+      "sourceGroup": "Județe istorice/Județul Covurlui",
+      "ohmSourceRelationId": 2945088,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Covurlui",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "CovurluIu",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-covurlui-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-04",
+      "sourceGroup": "Județe istorice/Județul Dorohoi",
+      "ohmSourceRelationId": 2937887,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Dorohoi",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Doroholu",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-dorohoi-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-05",
+      "sourceGroup": "Județe istorice/Județul Fălciu",
+      "ohmSourceRelationId": 2943671,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Fălciu",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Fälciti",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-falciu-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-06",
+      "sourceGroup": "Județe istorice/Județul Iași",
+      "ohmSourceRelationId": 2943493,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Iași",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Iasi",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-iasi-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-07",
+      "sourceGroup": "Județe istorice/Județul Neamț",
+      "ohmSourceRelationId": 2943485,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Neamț",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Is Térntt (ambiguu, nu se admite identificare)",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_AMBIGUOUS_HOLD",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "HOLD_NOT_ADMITTED",
+      "admissionId": null,
+      "sourceNameRisk": "Original OCR does not allow an independently legible individual county spelling; verify original printed recap before creating this 1865 edge.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": "Manual inspection of original 1865 scan/printed county heading"
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-08",
+      "sourceGroup": "Județe istorice/Județul Putna",
+      "ohmSourceRelationId": 2943652,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Putna",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Putna",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-putna-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-09",
+      "sourceGroup": "Județe istorice/Județul Roman",
+      "ohmSourceRelationId": 2943496,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Roman",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Romant",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-roman-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-10",
+      "sourceGroup": "Județe istorice/Județul Suceava",
+      "ohmSourceRelationId": 2940721,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Suceava",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Sucéva",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-suceava-to-principatele-unite",
+      "sourceNameRisk": "Historical Moldavian Suceava had its seat at Fălticeni. Do not merge with the separate Bukovinian Suceava county of 1925/1930.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-11",
+      "sourceGroup": "Județe istorice/Județul Tecuci",
+      "ohmSourceRelationId": 2945087,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Tecuci",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Tecuclu",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-tecuci-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-12",
+      "sourceGroup": "Județe istorice/Județul Tutova",
+      "ohmSourceRelationId": 2945089,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Tutova",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Tutova",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_RECOGNIZABLE_AND_CORROBORATED",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "ADMIT_DOCUMENTARY_1865_SNAPSHOT_ONLY",
+      "admissionId": "ohm-1865-tutova-to-principatele-unite",
+      "sourceNameRisk": "Historical county name is legible in recap OCR, administrative membership only.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": null
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2B-1865-13",
+      "sourceGroup": "Județe istorice/Județul Vaslui",
+      "ohmSourceRelationId": 2943670,
+      "originalOHMSourcePeriod": {
+        "start": "1859",
+        "end": null,
+        "sourceOnly": true,
+        "notes": null
+      },
+      "originalHistoricalCountyName": "Vaslui",
+      "extractedFrom": "Indicele comunelor României, 1865, Recapitulația generală (paginile finale ale reproducerii)",
+      "sourceCatalogue": {
+        "scanPage": "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+        "ocrText": "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html"
+      },
+      "ocrReading": "Vagulu (ambiguu, nu se admite identificare)",
+      "manualFacsimileVisualVerification": "NOT_COMPLETED_ORIGINAL_PDF_VISUAL_ACCESS_UNAVAILABLE",
+      "individualTranscribedNameVerdict": "OCR_AMBIGUOUS_HOLD",
+      "independentAdministrativeContextUrl": "https://www.academia.edu/11765188/Politici_administrativ_teritoriale_%C3%AEn_Rom%C3%A2nia_modern%C4%83_%C8%99i_contemporan%C4%83",
+      "membershipDecision": "HOLD_NOT_ADMITTED",
+      "admissionId": null,
+      "sourceNameRisk": "Original OCR does not allow an independently legible individual county spelling; verify original printed recap before creating this 1865 edge.",
+      "geometryCertifiedFor1865": false,
+      "institutionalContinuityCertified": false,
+      "nextAction": "Manual inspection of original 1865 scan/printed county heading"
+    }
+  ],
+  "cases1890": [
+    {
+      "child": "Județe istorice/Județul Suceava",
+      "linkId": "ohm-1890-suceava-to-regatul-romaniei",
+      "start": "1890-10-15",
+      "end": "1890-12-31",
+      "evidence": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Monitorul_Oficial_al_Rom%C3%A2niei_1890-12-21%2C_nr._212.pdf",
+          "type": "contemporary_official_gazette",
+          "detail": "Monitorul Oficial nr. 212, 21 decembrie 1890, p. 5038: raportul județului Suceava din 15 octombrie 1890 identifică orașul Fălticeni drept reședință a județului, distinct de Bucovina austriacă."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Tecuci",
+      "linkId": "ohm-1890-tecuci-to-regatul-romaniei",
+      "start": "1890-10-15",
+      "end": "1890-12-31",
+      "evidence": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Monitorul_Oficial_al_Rom%C3%A2niei_1890-12-21%2C_nr._212.pdf",
+          "type": "contemporary_official_gazette",
+          "detail": "Monitorul Oficial nr. 212, 21 decembrie 1890, pp. 5038–5040: raportul consiliului județean Tecuci din sesiunea de 15 octombrie 1890 confirmă județul administrativ românesc."
+        }
+      ],
+      "geometryCertified": false
+    }
+  ],
+  "cases1925": [
+    {
+      "child": "Județe istorice/Județul Arad",
+      "linkId": "ohm-1925-arad-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Arad este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Bacău",
+      "linkId": "ohm-1925-bacau-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Bacău este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Botoșani",
+      "linkId": "ohm-1925-botosani-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Botoșani este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Covurlui",
+      "linkId": "ohm-1925-covurlui-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Covurlui este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Dorohoi",
+      "linkId": "ohm-1925-dorohoi-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Dorohoi este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Fălciu",
+      "linkId": "ohm-1925-falciu-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Fălciu este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Iași",
+      "linkId": "ohm-1925-iasi-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Iași este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Maramureș",
+      "linkId": "ohm-1925-maramures-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Maramureș este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Neamț",
+      "linkId": "ohm-1925-neamt-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Neamț este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Putna",
+      "linkId": "ohm-1925-putna-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Putna este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Roman",
+      "linkId": "ohm-1925-roman-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Roman este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Tecuci",
+      "linkId": "ohm-1925-tecuci-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Tecuci este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Timiș-Torontal",
+      "linkId": "ohm-1925-timis-torontal-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465: județul Timiș-Torontal este exceptat explicit de la noua împărțire în 68 județe, rămânând în forma actuală. Apartenența la Regat este atestată, conturul OHM nu."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Tutova",
+      "linkId": "ohm-1925-tutova-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Tutova este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    },
+    {
+      "child": "Județe istorice/Județul Vaslui",
+      "linkId": "ohm-1925-vaslui-to-regatul-romaniei",
+      "start": "1925-10-07",
+      "end": "1925-12-31",
+      "documentaryObservationOnly": true,
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial nr. 220, 7 octombrie 1925, p. 10923, decretul nr. 2465, art. I: județul Vaslui este enumerat expres în lista oficială a județelor Regatului României. Nu confirmă poligonul OHM."
+        }
+      ],
+      "geometryCertified": false
+    }
+  ],
+  "transylvaniaPartium": [
+    {
+      "child": "Țara Chioarului",
+      "linkId": "ohm-partium-1733-chioar-to-transilvania",
+      "qualifiedThrough": "1860-12-26",
+      "exclusiveTransferDate": "1860-12-27",
+      "periodsWithChangingInternalAdministrationNeedSeparateReview": true
+    },
+    {
+      "child": "Comitate istorice/Comitatul Kraszna",
+      "linkId": "ohm-partium-1733-kraszna-to-transilvania",
+      "qualifiedThrough": "1860-12-26",
+      "exclusiveTransferDate": "1860-12-27",
+      "periodsWithChangingInternalAdministrationNeedSeparateReview": true
+    },
+    {
+      "child": "Comitate istorice/Comitatul Közép-Szolnok",
+      "linkId": "ohm-partium-1733-kozep-szolnok-to-transilvania",
+      "qualifiedThrough": "1860-12-26",
+      "exclusiveTransferDate": "1860-12-27",
+      "periodsWithChangingInternalAdministrationNeedSeparateReview": true
+    }
+  ],
+  "identityConflicts": [
+    {
+      "id": "ohm-1930-suceava-to-romania",
+      "status": "RETRACTED_IDENTITY_CONFLATION",
+      "reason": "The original OHM county relation sourced to 1859 is the older Moldavian Suceava (Fălticeni), while Monitorul Oficial 7 October 1925 enumerates Fălticeni and a distinct Suceava (Bukovina). Thus the earlier 1930 Suceava county match cannot be treated as a qualified identity or direct parentage for this OHM source group.",
+      "evidenceUrl": "https://www.resurse.net/mo/1925/19251007.pdf"
+    }
+  ],
+  "holds": [
+    {
+      "case": "HIST-OHM-TREE.2B-1865-Neamț",
+      "reason": "1865 OCR county row unreadable; earlier secondary and 1925 official source name are not a substitute for individual inspection of 1865 original"
+    },
+    {
+      "case": "HIST-OHM-TREE.2B-1865-Vaslui",
+      "reason": "1865 OCR county row unreadable; earlier secondary and 1925 official source name are not a substitute for individual inspection of 1865 original"
+    },
+    {
+      "case": "HIST-OHM-TREE.2B-1930-Suceava-identity",
+      "reason": "1925 official county names Fălticeni and Suceava are distinct; older OHM 1859 Suceava may not identify 1930 Bukovina Suceava"
+    }
+  ],
+  "geometryChanged": false,
+  "actualDataChanged": false,
+  "rightsCertificationChanged": false
+}

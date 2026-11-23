@@ -17,7 +17,9 @@ export interface OhmTreeNode {
  versions:GeodataSourceEntry[];children:OhmTreeNode[];activeEntries:GeodataSourceEntry[];
 }
 export interface OhmTree {
- year:number;referenceDate:string;sourceOnly:true;
+ year:number;referenceDate:string;
+ parentageTimeResolution:'calendar_year_documented_at_some_point';
+ ambiguousAnnualParents:string[];sourceOnly:true;
  roots:{regions:OhmTreeNode[];counties:OhmTreeNode[];comitates:OhmTreeNode[]};
  nodes:Map<string,OhmTreeNode>;activeLinks:OhmParentageLink[];
  assetCount:number;geometryUses:unknown[];sourceVersionCount:number;

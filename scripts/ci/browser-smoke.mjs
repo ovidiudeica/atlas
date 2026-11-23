@@ -1992,8 +1992,8 @@ async function historicalOhmSmoke(cdp){
    }
    await p.close();
  }
- // Narrow documentary parentage is time-bounded, not a timeless
- // spatial overlay. Exactly three edges are admitted at 1930, none in 1939.
+ // Documentary parentage is time-scoped and source identity-qualified.
+ // Old Moldavian Suceava must not be misidentified with 1930 Bukovina Suceava.
  const p=await cdp.page(1440,900,false,site+'?lang=ro');
  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
    'Temporal parentage map ready');
@@ -2004,12 +2004,12 @@ async function historicalOhmSmoke(cdp){
  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
    'OHM 1930 reference-year selected');
  await p.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.includes('Regatul României'));if(!row)throw Error('Romanian Kingdom node missing');row.querySelector('.history-tree-expand').click();})()");
- await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===16",
-   'Sixteen documented county memberships in 1930');
+ await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===15",
+   'Fifteen identity-qualified county memberships in 1930');
  assert.equal(await p.eval("document.querySelectorAll('.tree-sidebar .history-tree-row.has-qualified-parent').length"),
-   16,'All sixteen 1930 documentary county memberships shown');
+   15,'Only identity-qualified 1930 administrative county memberships shown');
  assert.equal(await p.eval("document.querySelectorAll('.tree-sidebar .history-tree-row.has-qualified-parent input[type=checkbox]:disabled').length"),
-   13,'Thirteen OHM county source periods incomplete; membership never certifies polygon');
+   12,'Twelve OHM county source periods incomplete; membership never certifies polygon');
  await p.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1939');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1939'",
    'OHM 1939 reference-year selected');
@@ -2021,6 +2021,14 @@ async function historicalOhmSmoke(cdp){
  await p.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.includes('Transilvania'));if(!row)throw Error('Transylvania node missing');row.querySelector('.history-tree-expand').click();})()");
  await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===3",
    'Conservatively qualified Partium administrative affiliation in 1800');
+ await p.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1865');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+ await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1865'",
+   'Principatele Unite 1865 reference year');
+ await p.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.includes('Principatele Unite'));if(!row)throw Error('Principatele Unite node missing');row.querySelector('.history-tree-expand').click();})()");
+ await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===11",
+   'Eleven verified 1865 counties nested under Principatele Unite');
+ assert.equal(await p.eval("document.querySelectorAll('.tree-sidebar .history-tree-row.has-qualified-parent input[type=checkbox]:disabled').length"),
+   11,'No 1865 OHM source polygon is automatically qualified for date');
  await p.close();
 }
 
