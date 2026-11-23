@@ -1,0 +1,1463 @@
+{
+  "schema": "atlas-historical-documentary-parent-qa-v1",
+  "asOf": "2026-11-23",
+  "sourceIndexUnchanged": true,
+  "activeGeometrySources": [
+    "OHM"
+  ],
+  "originalSourceVersions": 139,
+  "exactGeometryAssets": 125,
+  "originalOhmGroups": 76,
+  "documentaryParents": 11,
+  "documentaryParentIds": [
+    "doc:habsburg-monarchy",
+    "doc:austrian-empire",
+    "doc:galicia-lodomeria",
+    "doc:austrian-crownlands",
+    "doc:kingdom-hungary",
+    "doc:habsburg-military-frontier",
+    "doc:transnistria-governorate",
+    "doc:ukrainian-ssr",
+    "doc:ussr",
+    "doc:czechoslovakia",
+    "doc:russian-empire"
+  ],
+  "totalQualifiedTemporalLinks": 96,
+  "historicalQualifiedLinksPreserved": 46,
+  "newQualifiedTemporalLinks": 50,
+  "newOhmChildLinks": 47,
+  "newDocToDocLinks": 3,
+  "newOhmGroupsWithDocumentaryParent": 44,
+  "hungarian1911SnapshotLinks": 28,
+  "unmatchedOrUnqualifiedComitates": [
+    "Comitate istorice/Comitatul Békés-Csanád",
+    "Comitate istorice/Comitatul Bereg-Ugocsa",
+    "Comitate istorice/Comitatul Caraș",
+    "Comitate istorice/Comitatul Cenad",
+    "Comitate istorice/Comitatul Csanád-Arad-Torontál",
+    "Comitate istorice/Comitatul Közép-Szolnok",
+    "Comitate istorice/Comitatul Kraszna",
+    "Comitate istorice/Comitatul Severin",
+    "Comitate istorice/Comitatul Torontal",
+    "Comitate istorice/Comitatul Ung",
+    "Comitate istorice/Comitatul Zaránd"
+  ],
+  "noGeometryFabrication": true,
+  "noLegalBoundaryCertification": true,
+  "noCarryForwardOfSnapshotYears": true,
+  "noImplicitTerritorialAnnexationOfTransnistria": true,
+  "evidenceScopeNote": "All documentary parent links are bound to specific archival, contemporary, historical or encyclopedic sources and time windows; no documentary parent receives a polygon. A 1911 county enumeration demonstrates 1911 membership only, not a universal 1867–1918 county history.",
+  "newLinkIds": [
+    "ohm-1911-alba-de-jos-to-kingdom-hungary",
+    "ohm-1911-arad-to-kingdom-hungary",
+    "ohm-1911-bereg-to-kingdom-hungary",
+    "ohm-1911-bihor-to-kingdom-hungary",
+    "ohm-1911-bistrita-nasaud-to-kingdom-hungary",
+    "ohm-1911-brasov-to-kingdom-hungary",
+    "ohm-1911-bekes-to-kingdom-hungary",
+    "ohm-1911-caras-severin-to-kingdom-hungary",
+    "ohm-1911-ciuc-to-kingdom-hungary",
+    "ohm-1911-cluj-to-kingdom-hungary",
+    "ohm-1911-csongrad-to-kingdom-hungary",
+    "ohm-1911-fagaras-to-kingdom-hungary",
+    "ohm-1911-hunedoara-to-kingdom-hungary",
+    "ohm-1911-maramures-to-kingdom-hungary",
+    "ohm-1911-mures-turda-to-kingdom-hungary",
+    "ohm-1911-odorhei-to-kingdom-hungary",
+    "ohm-1911-sibiu-to-kingdom-hungary",
+    "ohm-1911-solnoc-dabaca-to-kingdom-hungary",
+    "ohm-1911-szabolcs-to-kingdom-hungary",
+    "ohm-1911-salaj-to-kingdom-hungary",
+    "ohm-1911-satmar-to-kingdom-hungary",
+    "ohm-1911-timis-to-kingdom-hungary",
+    "ohm-1911-trei-scaune-to-kingdom-hungary",
+    "ohm-1911-turda-aries-to-kingdom-hungary",
+    "ohm-1911-tarnava-mare-to-kingdom-hungary",
+    "ohm-1911-tarnava-mica-to-kingdom-hungary",
+    "ohm-1911-ugocea-to-kingdom-hungary",
+    "ohm-1911-zemplen-to-kingdom-hungary",
+    "doc-1718-banat-habsburg",
+    "doc-1751-banater-frontier-vienna",
+    "doc-1849-voivodina-austria",
+    "doc-1851-transylvania-austria",
+    "doc-1861-bukovina-austria",
+    "doc-1867-bukovina-austrian-crownlands",
+    "doc-1786-bukovina-district-galicia",
+    "doc-1786-galicia-habsburg",
+    "doc-1804-galicia-austria",
+    "doc-1878-bessarabia-russian-empire",
+    "doc-1921-transcarpathia-czechoslovakia",
+    "doc-1941-jugastru-transnistria-governorate",
+    "doc-1941-moghilau-transnistria-governorate",
+    "doc-1941-tulcin-transnistria-governorate",
+    "doc-1940-akkerman-ukrssr",
+    "doc-1940-izmail-ukrssr",
+    "doc-1945-izmail-ukrssr",
+    "doc-1940-chernivtsi-ukrssr",
+    "doc-1945-chernivtsi-ukrssr",
+    "doc-1946-transcarpathian-oblast-ukrssr",
+    "doc-1945-moldavian-ssr-ussr",
+    "doc-1945-ukrainian-ssr-ussr"
+  ],
+  "cases": [
+    {
+      "sourceGroup": "Banatul Timișoarei",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2746573,
+        2747562
+      ],
+      "documentaryParentLinks": [
+        "doc-1718-banat-habsburg"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Bucovina",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2684081,
+        2746379,
+        2746380,
+        2746401
+      ],
+      "documentaryParentLinks": [
+        "doc-1861-bukovina-austria",
+        "doc-1867-bukovina-austrian-crownlands"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Alba de Jos",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928927
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-alba-de-jos-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Arad",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829223,
+        2829224,
+        2829225,
+        2829740
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-arad-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Békés",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829207,
+        2829209,
+        2829217
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-bekes-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Békés-Csanád",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829205
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Bereg",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829532,
+        2829533,
+        2929705
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-bereg-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Bereg-Ugocsa",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829534
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Bihor",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829450
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-bihor-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Bistrița-Năsăud",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928938
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-bistrita-nasaud-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Brașov",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928931
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-brasov-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Caraș",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2747447,
+        2747448,
+        2747635
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Caraș-Severin",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2747633
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-caras-severin-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Cenad",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829208
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Ciuc",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928934
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-ciuc-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Cluj",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928936
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-cluj-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Csanád-Arad-Torontál",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829215
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Csongrád",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829086,
+        2829212,
+        2829219,
+        2829220,
+        2829221
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-csongrad-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Făgăraș",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928928
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-fagaras-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Hunedoara",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928925
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-hunedoara-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Közép-Szolnok",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2747430,
+        2747432
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-partium-1733-kozep-szolnok-to-transilvania"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Kraszna",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2747429,
+        2747431
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-partium-1733-kraszna-to-transilvania"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Maramureș",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829353,
+        2829357,
+        2829358
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-maramures-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Mureș-Turda",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928937
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-mures-turda-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Odorhei",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928933
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-odorhei-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Sălaj",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829407
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-salaj-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Sătmar",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829380,
+        2829381,
+        2829382,
+        2829383,
+        2928940
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-satmar-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Severin",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2747636
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Sibiu",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928926
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-sibiu-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Solnoc-Dăbâca",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928939
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-solnoc-dabaca-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Szabolcs",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829379,
+        2829510,
+        2829716,
+        2829717,
+        2829719
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-szabolcs-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Târnava-Mare",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928930
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-tarnava-mare-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Târnava-Mică",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928929
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-tarnava-mica-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Timiș",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2747449,
+        2747450,
+        2747632,
+        2747634
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-timis-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Torontal",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2747307,
+        2747308
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Trei Scaune",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928932
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-trei-scaune-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Turda-Arieș",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2928935
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-turda-aries-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Ugocea",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829351,
+        2829352
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-ugocea-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Ung",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2929703
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PENDING_SOURCE_TEMPORAL_DEFECT",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Zaránd",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2747305,
+        2747306
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "PENDING_PARTITIONED_PARENTAGE",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "groupType": "comitate",
+      "sourceRelationIds": [
+        2829461,
+        2829504,
+        2829507,
+        2829508,
+        2829721,
+        2829738,
+        2929704,
+        2929720
+      ],
+      "documentaryParentLinks": [
+        "ohm-1911-zemplen-to-kingdom-hungary"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Districtul Bucovina",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2746744,
+        2746745
+      ],
+      "documentaryParentLinks": [
+        "doc-1786-bukovina-district-galicia"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Frontiera Militară a Banatului",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2746839,
+        2746840,
+        2746841
+      ],
+      "documentaryParentLinks": [
+        "doc-1751-banater-frontier-vienna"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Gubernia Basarabia",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2694153,
+        2694154
+      ],
+      "documentaryParentLinks": [
+        "doc-1878-bessarabia-russian-empire"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Arad",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2829529
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1926-1938-arad-to-romania",
+        "ohm-1925-arad-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Bacău",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2943619
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-bacau-to-romania",
+        "ohm-1865-bacau-to-principatele-unite",
+        "ohm-1925-bacau-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Botoșani",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2940712
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-botosani-to-romania",
+        "ohm-1865-botosani-to-principatele-unite",
+        "ohm-1925-botosani-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Covurlui",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2945088
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-covurlui-to-romania",
+        "ohm-1865-covurlui-to-principatele-unite",
+        "ohm-1925-covurlui-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Dorohoi",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2937887
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-dorohoi-to-romania",
+        "ohm-1865-dorohoi-to-principatele-unite",
+        "ohm-1925-dorohoi-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Fălciu",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2943671
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-falciu-to-romania",
+        "ohm-1865-falciu-to-principatele-unite",
+        "ohm-1925-falciu-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Iași",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2943493
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-iasi-to-romania",
+        "ohm-1865-iasi-to-principatele-unite",
+        "ohm-1925-iasi-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Jugastru",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2698191
+      ],
+      "documentaryParentLinks": [
+        "doc-1941-jugastru-transnistria-governorate"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Maramureș",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2829519
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1926-1938-maramures-to-romania",
+        "ohm-1925-maramures-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Moghilău",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2698193
+      ],
+      "documentaryParentLinks": [
+        "doc-1941-moghilau-transnistria-governorate"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Neamț",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2943485
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-neamt-to-romania",
+        "ohm-1925-neamt-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Putna",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2943652
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-putna-to-romania",
+        "ohm-1865-putna-to-principatele-unite",
+        "ohm-1925-putna-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Roman",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2943496
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-roman-to-romania",
+        "ohm-1865-roman-to-principatele-unite",
+        "ohm-1925-roman-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Suceava",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2940721
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1865-suceava-to-principatele-unite",
+        "ohm-1890-suceava-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Tecuci",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2945087
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-tecuci-to-romania",
+        "ohm-1865-tecuci-to-principatele-unite",
+        "ohm-1925-tecuci-to-regatul-romaniei",
+        "ohm-1890-tecuci-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Timiș-Torontal",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2829528
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1926-1938-timis-torontal-to-romania",
+        "ohm-1925-timis-torontal-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Tulcin",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2698192
+      ],
+      "documentaryParentLinks": [
+        "doc-1941-tulcin-transnistria-governorate"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Tutova",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2945089
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-tutova-to-romania",
+        "ohm-1865-tutova-to-principatele-unite",
+        "ohm-1925-tutova-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Județe istorice/Județul Vaslui",
+      "groupType": "county",
+      "sourceRelationIds": [
+        2943670
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-1930-vaslui-to-romania",
+        "ohm-1925-vaslui-to-regatul-romaniei"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Principatele Unite",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2692354,
+        2746400
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "POLITICAL_ENTITY_ROOT",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Principatul Moldovei",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2694163,
+        2746689
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "POLITICAL_ENTITY_ROOT",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Regatul României",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2692219,
+        2693255,
+        2693256,
+        2693257,
+        2693258,
+        2693259,
+        2693260,
+        2693464,
+        2877966
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "POLITICAL_ENTITY_ROOT",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Regiunea Akkerman",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2960608
+      ],
+      "documentaryParentLinks": [
+        "doc-1940-akkerman-ukrssr"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Regiunea Cernăuți",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2960367
+      ],
+      "documentaryParentLinks": [
+        "doc-1940-chernivtsi-ukrssr",
+        "doc-1945-chernivtsi-ukrssr"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Regiunea Ismail",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2960607
+      ],
+      "documentaryParentLinks": [
+        "doc-1940-izmail-ukrssr",
+        "doc-1945-izmail-ukrssr"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Regiunea Transcarpatia",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2859183
+      ],
+      "documentaryParentLinks": [
+        "doc-1946-transcarpathian-oblast-ukrssr"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "RSS Moldovenească",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2694777
+      ],
+      "documentaryParentLinks": [
+        "doc-1945-moldavian-ssr-ussr"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Transcarpatia",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2857483
+      ],
+      "documentaryParentLinks": [
+        "doc-1921-transcarpathia-czechoslovakia"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Transilvania",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2690518,
+        2747433,
+        2829384,
+        2878295
+      ],
+      "documentaryParentLinks": [
+        "doc-1851-transylvania-austria"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    },
+    {
+      "sourceGroup": "Țara Chioarului",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2747434,
+        2747435
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [
+        "ohm-partium-1733-chioar-to-transilvania"
+      ],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+      ]
+    },
+    {
+      "sourceGroup": "Țara Românească",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2694164,
+        2929115,
+        2929116,
+        2929117
+      ],
+      "documentaryParentLinks": [],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "HOLD_OR_ROOT_NO_NEW_DOCUMENTARY_PARENT",
+      "priorVerdict": "POLITICAL_ENTITY_ROOT",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+      ]
+    },
+    {
+      "sourceGroup": "Voivodina Sârbească și Banatul Timișan",
+      "groupType": "region_or_state",
+      "sourceRelationIds": [
+        2694215
+      ],
+      "documentaryParentLinks": [
+        "doc-1849-voivodina-austria"
+      ],
+      "preservedPriorQualifiedLinks": [],
+      "documentaryStatus": "QUALIFIED_FOR_STATED_DOCUMENTARY_WINDOW",
+      "priorVerdict": "PARENT_OUTSIDE_OHM",
+      "sourceGeometryCertified": false,
+      "missingParentageActions": [
+        "Continue qualifying other time windows without extrapolation"
+      ]
+    }
+  ]
+}
