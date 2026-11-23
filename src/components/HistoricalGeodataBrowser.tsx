@@ -143,7 +143,12 @@ export function HistoricalGeodataBrowser({
      regions:FilteredOhmNode[];counties:FilteredOhmNode[];comitates:FilteredOhmNode[];
    };
    function filterNode(node:OhmTreeNode):FilteredOhmNode|null{
-     const available=yearOnly?node.activeEntries:node.versions;
+     // Documentary membership and OHM polygon time-validity are separate:
+     // preserve a qualified child in the time-filtered tree even when its
+     // OHM geometry has no end_date. Its entity checkbox stays disabled.
+     const available=yearOnly?
+       (node.activeEntries.length?node.activeEntries:
+         node.parentEvidence?node.versions:[]):node.versions;
      const groupMatch=Boolean(term)&&foldedSearch(node.group+' '+node.name.ro+' '+node.name.en).includes(term);
      const shownVersions=!term||groupMatch?available:
        available.filter(entry=>searchWords(entry).some(word=>foldedSearch(word).includes(term)));
@@ -225,11 +230,13 @@ export function HistoricalGeodataBrowser({
  }
  function renderNode(node:FilteredOhmNode,depth:number):React.ReactNode{
    const key=node.id;
-   const hasDetails=node.shownVersions.length>1||node.shownChildren.length>0;
-   const isExpanded=expanded.has(key)||Boolean(term);
    const active=uniqueSourceVersionAtYear(node,year);
+   const temporallyUnqualified=yearOnly&&!active&&node.shownVersions.length>0;
+   const hasDetails=node.shownVersions.length>1||node.shownChildren.length>0||
+     temporallyUnqualified;
+   const isExpanded=expanded.has(key)||Boolean(term);
    const quickEntry=(active&&node.shownVersions.some(e=>e.id===active.id)?active:null)||
-     (node.shownVersions.length===1?node.shownVersions[0]:null);
+     (!yearOnly&&node.shownVersions.length===1?node.shownVersions[0]:null);
    const activeChecked=Boolean(quickEntry&&visibleSet.has(quickEntry.id));
    const title=groupShortName(node.group);
    return <div key={key} className="history-tree-node" role="treeitem"
@@ -255,12 +262,14 @@ export function HistoricalGeodataBrowser({
          <span>{title}</span>
          {node.parentEvidence&&<span className="history-qualified-link" title={headings.sourceParent}>✓</span>}
        </button>
+       {temporallyUnqualified&&<span className="history-source-unqualified"
+         title={headings.notDated} aria-label={headings.notDated}>?</span>}
        <span className="history-source-version-count" title={headings.versionsPlural}>
          {node.shownVersions.length}
        </span>
      </div>
      {hasDetails&&isExpanded&&<div className="history-tree-children" role="group">
-       {node.shownVersions.length>1&&
+       {(node.shownVersions.length>1||temporallyUnqualified)&&
          <div className="history-source-versions" role="group" aria-label={title+' — '+headings.versionsPlural}>
            {node.shownVersions.map(renderVersion)}
          </div>}
