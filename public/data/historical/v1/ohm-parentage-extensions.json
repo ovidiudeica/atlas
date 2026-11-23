@@ -1,0 +1,30 @@
+{
+  "schema": "atlas-historical-ohm-parentage-v1",
+  "qualification": "HIST_OHM_TREE_4_SOURCE_ONLY_1928",
+  "links": [
+    {
+      "id": "ohm-1928-csanad-arad-torontal-to-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary-interwar",
+      "childSourceGroup": "Comitate istorice/Comitatul Csanád-Arad-Torontál",
+      "start": "1928-06-01",
+      "end": "1928-06-30",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "evidence": [
+        {
+          "url": "https://www.ksh.hu/statszemle_archive/all/1928/1928_06/1928_06_0648_0714.pdf",
+          "type": "contemporary_statistical_publication",
+          "detail": "1928 no. 6, p. 659: combined administrative comitat Csanád-Arad-Torontál exists in the Hungarian list; documentation period only, not geometric or institutional continuity."
+        },
+        {
+          "url": "https://net.jogtar.hu/ezer-ev-torveny?docid=92300035.TV",
+          "type": "contemporary_primary_statute",
+          "detail": "1923:XXXV §§11–12 lists and regulates provisional combined county administration; does not establish an exact 1923 source geometry."
+        }
+      ],
+      "note": "Conservative June 1928 documentary snapshot; no extrapolation to 1923, 1945, or any OHM geometry. Hungarian pre-1918 and interwar documentary parent identities remain separate."
+    }
+  ]
+}

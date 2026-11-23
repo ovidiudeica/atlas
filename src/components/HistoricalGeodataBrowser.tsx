@@ -10,11 +10,17 @@ import {
   type GeodataSourceEntry,type GeodataSourceFeature,type GeodataSourceIndex
 } from '../data/historicalGeodata.mjs';
 
+import {
+  loadRohgis1930Catalog,loadRohgis1930Feature,
+  toRohgisGeodataEntry,type Rohgis1930Catalog,type Rohgis1930Version
+} from '../data/historicalRohgis1930.mjs';
+
 type Locale='ro'|'en';
 export interface HistoricalGeodataSelection {
   entry:GeodataSourceEntry;
   feature:GeodataSourceFeature;
   parentEvidence?:OhmParentageLink|null;
+  sourceReportedParent?:string;
 }
 export interface HistoricalVisibilityChange {
   entry:GeodataSourceEntry;
@@ -79,6 +85,7 @@ export function HistoricalGeodataBrowser({
  const [index,setIndex]=useState<GeodataSourceIndex|null>(null);
  const [parentage,setParentage]=useState<OhmParentageRegister|null>(null);
  const [documentaryParents,setDocumentaryParents]=useState<HistoricalDocumentaryParentRegistry|null>(null);
+ const [rohgis,setRohgis]=useState<Rohgis1930Catalog|null>(null);
  const [error,setError]=useState<string|null>(null);
  const [busy,setBusy]=useState<string|null>(null);
  const [query,setQuery]=useState('');
@@ -138,17 +145,42 @@ export function HistoricalGeodataBrowser({
      fetch(base+'data/historical/v1/documentary-parents.json').then(async response=>{
        if(!response.ok)throw Error('Documentary parents HTTP '+response.status);
        return response.json() as Promise<HistoricalDocumentaryParentRegistry>;
+     }),
+     loadRohgis1930Catalog(base),
+     fetch(base+'data/historical/v1/documentary-parents-extensions.json').then(async response=>{
+       if(!response.ok)throw Error('Documentary extensions HTTP '+response.status);
+       return response.json() as Promise<HistoricalDocumentaryParentRegistry>;
+     }),
+     fetch(base+'data/historical/v1/ohm-parentage-extensions.json').then(async response=>{
+       if(!response.ok)throw Error('Parentage extensions HTTP '+response.status);
+       return response.json() as Promise<OhmParentageRegister>;
      })
-   ]).then(([sources,register,parents])=>{
-     const gate=validateOhmParentage(sources,register,parents);
+   ]).then(([sources,register,parents,rohgis1930,docExt,linkExt])=>{
+     const mergedParents={...parents,nodes:[...parents.nodes,...docExt.nodes]};
+     const mergedRegister={...register,links:[...register.links,...linkExt.links]};
+     const gate=validateOhmParentage(sources,mergedRegister,mergedParents);
      if(!gate.ok)throw Error('OHM parentage: '+gate.errors.join('; '));
-     if(active){setIndex(sources);setParentage(register);setDocumentaryParents(parents);}
+     if(active){setIndex(sources);setParentage(mergedRegister);setDocumentaryParents(mergedParents);setRohgis(rohgis1930);}
    }).catch(err=>{if(active)setError(String(err));});
    return ()=>{active=false;mounted.current=false;};
  },[]);
  const tree=useMemo(()=>index&&parentage&&documentaryParents?
    buildHistoricalOhmTree(index,parentage,year,documentaryParents):
    null,[index,parentage,documentaryParents,year]);
+ const rohgisCounties=useMemo(()=>{
+   if(year!==1930||!rohgis)return [] as {county:Rohgis1930Version;plasi:Rohgis1930Version[]}[];
+   const map=new Map<string,{county:Rohgis1930Version;plasi:Rohgis1930Version[]}>();
+   for(const version of rohgis.versions.filter(v=>v.kind==='judet'))
+     map.set(version.entityId,{county:version,plasi:[]});
+   for(const version of rohgis.versions.filter(v=>v.kind==='plasa'))
+     map.get(version.parentId)?.plasi.push(version);
+   for(const group of map.values())
+     group.plasi.sort((a,b)=>a.nameRo.localeCompare(b.nameRo,'ro'));
+   return [...map.values()].sort((a,b)=>a.county.nameRo.localeCompare(b.county.nameRo,'ro'));
+ },[rohgis,year]);
+ const matchesRohgis=(x:string)=>!term||foldedSearch(x).includes(term);
+ const hasRohgisMatch=rohgisCounties.some(group=>
+   matchesRohgis(group.county.nameRo)||group.plasi.some(v=>matchesRohgis(v.nameRo)));
  const filteredRoots=useMemo(()=>{
    if(!tree)return {regions:[],counties:[],comitates:[]} as {
      regions:FilteredOhmNode[];counties:FilteredOhmNode[];comitates:FilteredOhmNode[];
@@ -168,7 +200,8 @@ export function HistoricalGeodataBrowser({
        .filter((child):child is FilteredOhmNode=>child!==null);
      // Geometry-free documentary parents can appear as root institutions
      // during their evidenced dates, even without an OHM geometry/child.
-     if(!shownVersions.length&&!shownChildren.length&&
+     const sourceChild=node.group==='Regatul României'&&hasRohgisMatch;
+     if(!shownVersions.length&&!shownChildren.length&&!sourceChild&&
          (!node.documentaryOnly||(Boolean(term)&&!matches)))return null;
      return {...node,shownVersions,shownChildren};
    }
@@ -177,7 +210,7 @@ export function HistoricalGeodataBrowser({
      counties:tree.roots.counties.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null),
      comitates:tree.roots.comitates.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null)
    };
- },[tree,term,yearOnly]);
+ },[tree,term,yearOnly,hasRohgisMatch]);
  const matchedCount=useMemo(()=>{
    const ids=new Set<string>();
    const visit=(node:FilteredOhmNode)=>{
@@ -185,8 +218,13 @@ export function HistoricalGeodataBrowser({
      for(const child of node.shownChildren)visit(child);
    };
    for(const section of Object.values(filteredRoots))for(const root of section)visit(root);
+   for(const group of rohgisCounties){
+     const parentMatch=matchesRohgis(group.county.nameRo);
+     if(parentMatch)ids.add(group.county.versionId);
+     for(const v of group.plasi)if(parentMatch||matchesRohgis(v.nameRo))ids.add(v.versionId);
+   }
    return ids.size;
- },[filteredRoots]);
+ },[filteredRoots,rohgisCounties,term]);
  const sections=[
    {key:'regions' as const,ro:'State și regiuni',en:'States and regions'},
    {key:'counties' as const,ro:'Județe fără părinte calificat',en:'Counties without qualified parent'},
@@ -216,6 +254,77 @@ export function HistoricalGeodataBrowser({
      if(mounted.current)onVisibilityChange(changes,enable);
    }catch(e){if(mounted.current)setError(String(e));}
    finally{if(mounted.current)setBusy(null);}
+ }
+ async function selectRohgisVersion(version:Rohgis1930Version){
+   if(!rohgis||busy)return;
+   setBusy(version.versionId);setError(null);
+   try{
+     const feature=await loadRohgis1930Feature(rohgis,version,import.meta.env.BASE_URL);
+     const parent=version.kind==='plasa'?
+       rohgis.versions.find(v=>v.entityId===version.parentId)?.nameRo:null;
+     if(mounted.current)onSelect({
+       entry:toRohgisGeodataEntry(version),feature,
+       sourceReportedParent:version.kind==='plasa'?
+         (lang==='ro'?'Județul ':'County ')+(parent||'?'):
+         (lang==='ro'?'Regatul României':'Kingdom of Romania')
+     });
+   }catch(e){if(mounted.current)setError(String(e));}
+   finally{if(mounted.current)setBusy(null);}
+ }
+ async function toggleRohgisVersion(version:Rohgis1930Version,enable:boolean){
+   if(!rohgis||busy)return;
+   setBusy(version.versionId);setError(null);
+   try{
+     const entry=toRohgisGeodataEntry(version);
+     const changes=enable?[{entry,feature:await loadRohgis1930Feature(
+       rohgis,version,import.meta.env.BASE_URL)}]:[{entry}];
+     if(mounted.current)onVisibilityChange(changes,enable);
+   }catch(e){if(mounted.current)setError(String(e));}
+   finally{if(mounted.current)setBusy(null);}
+ }
+ function renderRohgisTree(){
+   const groups=rohgisCounties.filter(group=>
+     matchesRohgis(group.county.nameRo)||group.plasi.some(v=>matchesRohgis(v.nameRo)));
+   return <div className="history-tree-children history-rohgis-tree" role="group">
+     <p className="history-documentary-label">
+       {lang==='ro'?'Județe și plăși (1930) · RoHGIS · hotare-sursă necertificate':
+         'Counties and plăși (1930) · RoHGIS · uncertified source boundaries'}
+       {' · '}{groups.length} / 71
+     </p>
+     {groups.map(({county,plasi})=>{
+       const parentMatch=matchesRohgis(county.nameRo);
+       const shownPlasi=parentMatch?plasi:plasi.filter(v=>matchesRohgis(v.nameRo));
+       const open=expanded.has(county.entityId)||Boolean(term);
+       const isSelected=selectedId===county.versionId;
+       return <div key={county.entityId} className="history-tree-node" role="treeitem" aria-level={2}>
+         <div className="history-tree-row" style={{paddingLeft:10}}>
+           <button type="button" className="history-tree-expand" aria-expanded={open}
+             aria-label={(open?'Collapse ':'Expand ')+county.nameRo}
+             onClick={()=>toggleExpansion(county.entityId)}>
+             <span aria-hidden="true">{open?'▾':'▸'}</span>
+           </button>
+           <input type="checkbox" checked={visibleSet.has(county.versionId)} disabled={busy!==null}
+             aria-label={(lang==='ro'?'Afișează județul ':'Show county ')+county.nameRo}
+             onChange={e=>void toggleRohgisVersion(county,e.target.checked)}/>
+           <button type="button" className={'history-tree-name'+(isSelected?' is-selected':'')}
+             onClick={()=>void selectRohgisVersion(county)}>{county.nameRo}</button>
+           <span className="history-source-version-count">{plasi.length}</span>
+         </div>
+         {open&&<div className="history-tree-children" role="group">
+           {shownPlasi.map(plasa=><div key={plasa.entityId} className="history-tree-row"
+             role="treeitem" aria-level={3} style={{paddingLeft:25}}>
+             <span className="history-tree-leaf" aria-hidden="true"/>
+             <input type="checkbox" checked={visibleSet.has(plasa.versionId)} disabled={busy!==null}
+               aria-label={(lang==='ro'?'Afișează plasa ':'Show plasa ')+plasa.nameRo}
+               onChange={e=>void toggleRohgisVersion(plasa,e.target.checked)}/>
+             <button type="button" className={'history-tree-name'+
+               (selectedId===plasa.versionId?' is-selected':'')}
+               onClick={()=>void selectRohgisVersion(plasa)}>{plasa.nameRo}</button>
+           </div>)}
+         </div>}
+       </div>;
+     })}
+   </div>;
  }
  function setYearFilter(active:boolean){setYearOnly(active);}
  function toggleExpansion(id:string){
@@ -250,8 +359,9 @@ export function HistoricalGeodataBrowser({
    const key=node.id;
    const active=uniqueSourceVersionAtYear(node,year);
    const temporallyUnqualified=yearOnly&&!active&&node.shownVersions.length>0;
+   const hasRohgisChildren=node.group==='Regatul României'&&hasRohgisMatch;
    const hasDetails=Boolean(node.documentaryOnly)||node.shownVersions.length>1||
-     node.shownChildren.length>0||temporallyUnqualified;
+     node.shownChildren.length>0||temporallyUnqualified||hasRohgisChildren;
    const isExpanded=expanded.has(key)||Boolean(term);
    const quickEntry=(active&&node.shownVersions.some(e=>e.id===active.id)?active:null)||
      (!yearOnly&&node.shownVersions.length===1?node.shownVersions[0]:null);
@@ -310,6 +420,7 @@ export function HistoricalGeodataBrowser({
            {node.shownVersions.map(renderVersion)}
          </div>}
        {node.shownChildren.map(child=>renderNode(child,depth+1))}
+       {hasRohgisChildren&&renderRohgisTree()}
      </div>}
    </div>;
  }
@@ -322,7 +433,8 @@ export function HistoricalGeodataBrowser({
      <p className="history-catalog-stat" role="status">
        {tree?<>{tree.groupCount} {headings.groups} · {tree.sourceVersionCount} {headings.versions}
          {' · '}{tree.documentaryNodeCount} {headings.documentary}
-         {' · '}{visibleIds.length} {headings.visible}</>:t.loading}
+         {' · '}{visibleIds.length} {headings.visible}
+       {rohgis&&' · RoHGIS 1930: 71 / 494'}</>:t.loading}
      </p>
    </header>
    <div className="history-catalog-filters">
@@ -395,7 +507,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
  lang:Locale;
  onLocate:()=>void;
 }){
- const {entry,parentEvidence}=selection,t=labels[lang];
+ const {entry,parentEvidence,sourceReportedParent}=selection,t=labels[lang];
  return <section className="detail-content history-entity-detail">
    <div className="entity-card" key={entry.id}>
      <header className="entity-title">
@@ -412,6 +524,10 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
          <dt>{t.kind}</dt><dd>{entry.sourceType||'—'}</dd>
          <dt>{t.period}</dt><dd>{dateLabel(entry,lang)} ({t.uncertain})</dd>
          <dt>{t.geometry}</dt><dd>{entry.geometryId}</dd>
+         {sourceReportedParent&&<>
+           <dt>{lang==='ro'?'Părinte declarat de RoHGIS':'RoHGIS-reported parent'}</dt>
+           <dd>{sourceReportedParent}<small> ({lang==='ro'?'din atributele sursei, fără certificarea juridică a hotarului':'source attribute only, without legal boundary certification'})</small></dd>
+         </>}
          {parentEvidence&&<>
            <dt>{lang==='ro'?'Părinte administrativ':'Administrative parent'}</dt>
            <dd>{parentEvidence.parentSourceGroup}
@@ -424,6 +540,14 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
      <EntityCardSection title={t.source} kind="cartographic">
        <dl className="metadata">
          <dt>{t.sourceName}</dt><dd>{entry.sourceGroup} · {entry.sourceFamily}</dd>
+         {entry.sourceFamily==='ROHGIS'&&<>
+           <dt>{lang==='ro'?'Autori și drepturi':'Authors and reuse rights'}</dt>
+           <dd><a href="https://rohgis.ro/despre/" target="_blank" rel="noopener noreferrer">
+             RoHGIS · CC BY 4.0</a>
+             <small> · {entry.sourceType==='plasă'?'Cezar Buterez':'Andrei Nacu, Cezar Buterez'}
+             {' · '}{lang==='ro'?'vizualizare reproiectată, cu atribuire':'reprojected visualization with attribution'}</small>
+           </dd>
+         </>}
          <dt>{t.original}</dt>
          <dd>{entry.sourceDriveFileId ?
            <a href={'https://drive.google.com/file/d/'+entry.sourceDriveFileId+'/view'}

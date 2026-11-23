@@ -1,7 +1,7 @@
 import type {Feature,Polygon,MultiPolygon} from 'geojson';
 export interface GeodataSourceEntry {
   id:string;
-  sourceFamily:'OHM';
+  sourceFamily:'OHM'|'ROHGIS';
   sourceGroup:string;
   displayName:{ro:string;en:string};
   sourcePeriod:{start:string|null;end:string|null;sourceOnly:true;kind?:'snapshot'|'undated';notes?:string|null};
