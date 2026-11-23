@@ -25,7 +25,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 11
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 11
     },
     {
       "year": 1735,
@@ -42,7 +42,7 @@
           ]
         }
       ],
-      "sourceVersionsQualifiedAtReferenceDate": 11
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 11
     },
     {
       "year": 1800,
@@ -59,7 +59,7 @@
           ]
         }
       ],
-      "sourceVersionsQualifiedAtReferenceDate": 24
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 24
     },
     {
       "year": 1848,
@@ -67,7 +67,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 22
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 22
     },
     {
       "year": 1855,
@@ -75,7 +75,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 14
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 14
     },
     {
       "year": 1865,
@@ -83,7 +83,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 18
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 18
     },
     {
       "year": 1880,
@@ -91,7 +91,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 32
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 32
     },
     {
       "year": 1900,
@@ -99,7 +99,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 31
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 31
     },
     {
       "year": 1930,
@@ -129,7 +129,7 @@
           ]
         }
       ],
-      "sourceVersionsQualifiedAtReferenceDate": 8
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 8
     },
     {
       "year": 1931,
@@ -146,7 +146,7 @@
           ]
         }
       ],
-      "sourceVersionsQualifiedAtReferenceDate": 8
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 8
     },
     {
       "year": 1939,
@@ -154,7 +154,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 7
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 7
     },
     {
       "year": 1942,
@@ -162,7 +162,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 11
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 11
     },
     {
       "year": 1946,
@@ -170,7 +170,7 @@
       "documentaryLinks": 0,
       "topLevelSourceGroups": 76,
       "parents": [],
-      "sourceVersionsQualifiedAtReferenceDate": 7
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 7
     }
   ],
   "existingParents": [
@@ -872,7 +872,8 @@
     "present": "Three editorial disclosure categories; 76 source-group nodes remain present without a year filter; only time-scoped documentary edges produce actual child indentation.",
     "recommended": "Single source tree with true political roots and separate unmatched/uncertain section; children nested only under documented parents, with independent checkbox and source-version disclosure.",
     "checkboxRule": "No OHM auto-check when source version end date is null; documentary membership doesn't certify geometry",
-    "treeFilterRule": "Reference year is July 1; year-only toggle controls source geometry while historical parentage is independently time-scoped."
+    "treeFilterRule": "Reference year is July 1; year-only toggle controls source geometry while historical parentage is independently time-scoped.",
+    "sourcePeriodDisclaimer": "Dates are copied from OHM source; a bounded OHM interval is not an independently qualified historical boundary."
   },
   "guardrails": [
     "No geometric containment inferred as administrative membership",
