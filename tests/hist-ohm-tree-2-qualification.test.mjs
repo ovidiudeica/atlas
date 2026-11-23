@@ -33,7 +33,7 @@ test('every OHM group is audited individually with no missing or duplicated sour
    }
  }
 });
-test('only accepted documentary links enter parentage, holds never affect the tree',()=>{
+test('historical TREE.2 admitted links remain traceable after the 2B source-identity correction',()=>{
  assert.deepEqual(validateOhmParentage(index,parentage),{ok:true,errors:[]});
  const allLinkIds=new Set(parentage.links.map(x=>x.id));
  const admitted=qa.cases.filter(x=>x.acceptedLinkIds.length);
@@ -42,7 +42,13 @@ test('only accepted documentary links enter parentage, holds never affect the tr
  assert.equal(held.length,57);
  assert.equal(qa.acceptedSourceGroups,admitted.length);
  assert.equal(qa.pendingSourceGroups,held.length);
- assert.deepEqual(new Set(admitted.flatMap(x=>x.acceptedLinkIds)),allLinkIds);
+ const historicalIds=new Set(admitted.flatMap(x=>x.acceptedLinkIds));
+ const withdrawnIds=new Set((parentage.retractedLinks||[]).map(x=>x.id));
+ assert.equal(historicalIds.size,19);
+ assert([...historicalIds].every(id=>allLinkIds.has(id)||withdrawnIds.has(id)),
+   'Old qualified evidence remains represented as active or explicitly retracted');
+ assert(withdrawnIds.has('ohm-1930-suceava-to-romania'));
+ assert.equal(allLinkIds.has('ohm-1930-suceava-to-romania'),false);
  for(const row of held)assert(!row.verdict.startsWith('QUALIFIED_'));
  const stateRoots=qa.cases.filter(x=>x.verdict==='POLITICAL_ENTITY_ROOT');
  assert.equal(stateRoots.length,4);
@@ -51,10 +57,10 @@ test('only accepted documentary links enter parentage, holds never affect the tr
 test('1930 snapshot membership is independent of temporal evidence for OHM polygons',()=>{
  const tree=buildHistoricalOhmTree(index,parentage,1930);
  const kingdom=tree.nodes.get('Regatul României');
- assert.equal(kingdom.children.length,16);
- assert.equal(tree.activeLinks.length,16);
+ assert.equal(kingdom.children.length,15);
+ assert.equal(tree.activeLinks.length,15);
  const undated=kingdom.children.filter(x=>x.activeEntries.length===0);
- assert.equal(undated.length,13);
+ assert.equal(undated.length,12);
  assert(undated.every(node=>node.parentEvidence.temporalAssertion===
    '1930_documentary_snapshot_not_continuity'));
  assert.equal(tree.legalBoundariesCertified,false);
