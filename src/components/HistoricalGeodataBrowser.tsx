@@ -337,7 +337,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
  lang:Locale;
  onLocate:()=>void;
 }){
- const {entry}=selection,t=labels[lang];
+ const {entry,parentEvidence}=selection,t=labels[lang];
  return <section className="detail-content history-entity-detail">
    <div className="entity-card" key={entry.id}>
      <header className="entity-title">
@@ -354,6 +354,13 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
          <dt>{t.kind}</dt><dd>{entry.sourceType||'—'}</dd>
          <dt>{t.period}</dt><dd>{dateLabel(entry,lang)} ({t.uncertain})</dd>
          <dt>{t.geometry}</dt><dd>{entry.geometryId}</dd>
+         {parentEvidence&&<>
+           <dt>{lang==='ro'?'Părinte administrativ':'Administrative parent'}</dt>
+           <dd>{parentEvidence.parentSourceGroup}
+             <small> ({parentEvidence.start}–{parentEvidence.end}; {lang==='ro'?
+               'apartenență documentată, nu hotar certificat':'documented membership, not certified boundary'})</small>
+           </dd>
+         </>}
        </dl>
      </EntityCardSection>
      <EntityCardSection title={t.source} kind="cartographic">
@@ -370,6 +377,13 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
        {entry.sourcePeriod.notes&&<p className="source-caveat">{entry.sourcePeriod.notes}</p>}
        {entry.sourceTagWarnings.length>0&&
          <details><summary>{t.notes}</summary><ul>{entry.sourceTagWarnings.map(x=><li key={x}>{x}</li>)}</ul></details>}
+       {parentEvidence&&<details className="history-parentage-sources">
+         <summary>{lang==='ro'?'Dovezi pentru apartenența administrativă':'Administrative membership evidence'}</summary>
+         <ul>{parentEvidence.evidence.map(item=><li key={item.url}>
+           <a href={item.url} target="_blank" rel="noopener noreferrer">{item.type.replaceAll('_',' ')}</a>
+           <span> — {item.detail}</span>
+         </li>)}</ul>
+       </details>}
      </EntityCardSection>
    </div>
  </section>;
