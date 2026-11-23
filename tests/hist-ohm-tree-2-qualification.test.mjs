@@ -7,6 +7,7 @@ const root=new URL('../',import.meta.url);
 const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
 const index=read('public/data/historical/v1/geodata/index.json');
 const parentage=read('public/data/historical/v1/ohm-parentage.json');
+const documentaryParents=read('public/data/historical/v1/documentary-parents.json');
 const qa=read('docs/historical/import/HIST-OHM-TREE.2-QUALIFICATION-QA.json');
 
 test('every OHM group is audited individually with no missing or duplicated source versions',()=>{
@@ -34,7 +35,7 @@ test('every OHM group is audited individually with no missing or duplicated sour
  }
 });
 test('historical TREE.2 admitted links remain traceable after the 2B source-identity correction',()=>{
- assert.deepEqual(validateOhmParentage(index,parentage),{ok:true,errors:[]});
+ assert.deepEqual(validateOhmParentage(index,parentage,documentaryParents),{ok:true,errors:[]});
  const allLinkIds=new Set(parentage.links.map(x=>x.id));
  const admitted=qa.cases.filter(x=>x.acceptedLinkIds.length);
  const held=qa.cases.filter(x=>!x.acceptedLinkIds.length);
@@ -55,18 +56,18 @@ test('historical TREE.2 admitted links remain traceable after the 2B source-iden
  for(const row of stateRoots)assert.equal(row.acceptedLinkIds.length,0);
 });
 test('1930 snapshot membership is independent of temporal evidence for OHM polygons',()=>{
- const tree=buildHistoricalOhmTree(index,parentage,1930);
+ const tree=buildHistoricalOhmTree(index,parentage,1930,documentaryParents);
  const kingdom=tree.nodes.get('Regatul României');
  assert.equal(kingdom.children.length,15);
- assert.equal(tree.activeLinks.length,15);
+ assert.equal(tree.activeLinks.length,16);
  const undated=kingdom.children.filter(x=>x.activeEntries.length===0);
  assert.equal(undated.length,12);
  assert(undated.every(node=>node.parentEvidence.temporalAssertion===
    '1930_documentary_snapshot_not_continuity'));
  assert.equal(tree.legalBoundariesCertified,false);
  assert.equal(tree.qualifiedGeometryBorders,0);
- assert.equal(buildHistoricalOhmTree(index,parentage,1931).activeLinks.length,3);
- assert.equal(buildHistoricalOhmTree(index,parentage,1939).activeLinks.length,0);
+ assert.equal(buildHistoricalOhmTree(index,parentage,1931,documentaryParents).activeLinks.length,4);
+ assert.equal(buildHistoricalOhmTree(index,parentage,1939,documentaryParents).activeLinks.length,0);
 });
 test('Partium transitions, missing Hungarian rulers, Transnistria and Soviet oblasts stay guarded',()=>{
  const interesting={
@@ -85,5 +86,5 @@ test('Partium transitions, missing Hungarian rulers, Transnistria and Soviet obl
    assert.equal(row.verdict,status);
    assert.deepEqual(row.acceptedLinkIds,[]);
  }
- assert.equal(buildHistoricalOhmTree(index,parentage,1800).activeLinks.length,3);
+ assert.equal(buildHistoricalOhmTree(index,parentage,1800,documentaryParents).activeLinks.length,6);
 });
