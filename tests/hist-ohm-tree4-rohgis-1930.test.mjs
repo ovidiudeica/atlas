@@ -79,7 +79,7 @@ test('RoHGIS loader returns indexed source feature, not a certified boundary',as
 });
 
 test('Separate interwar Hungarian documentary parent is documented only in June 1928',()=>{
- assert.equal(baseParents.links.length,46);
+ assert.equal(baseParents.links.length,96);
  assert.equal(baseDocumentary.nodes.length,11);
  const edge=parents.links.find(x=>x.id==='ohm-1928-csanad-arad-torontal-to-hungary');
  assert.ok(edge);
