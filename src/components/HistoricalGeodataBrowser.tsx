@@ -173,9 +173,9 @@ export function HistoricalGeodataBrowser({
      return {...node,shownVersions,shownChildren};
    }
    return {
-     regions:tree.roots.regions.map(filterNode).filter((n):n is FilteredOhmNode=>n!==null),
-     counties:tree.roots.counties.map(filterNode).filter((n):n is FilteredOhmNode=>n!==null),
-     comitates:tree.roots.comitates.map(filterNode).filter((n):n is FilteredOhmNode=>n!==null)
+     regions:tree.roots.regions.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null),
+     counties:tree.roots.counties.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null),
+     comitates:tree.roots.comitates.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null)
    };
  },[tree,term,yearOnly]);
  const matchedCount=useMemo(()=>{
