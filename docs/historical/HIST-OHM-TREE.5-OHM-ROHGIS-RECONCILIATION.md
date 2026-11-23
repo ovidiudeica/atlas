@@ -6,6 +6,10 @@
 
 Artefact auditabil: `public/data/historical/v1/reconciliation/ohm-rohgis-1930.json`; reproducere geometrică: `python scripts/historical/reconcile_ohm_rohgis_1930.py` (Shapely, pyproj). Baze: `public/data/historical/v1/geodata/index.json` și `public/data/historical/v1/rohgis/catalog-1930.json`. Datele primare RoHGIS sunt reprezentate în 1930 exclusiv; OHM păstrează perioadele sale proprii.
 
+### Precizarea perioadelor RoHGIS
+
+Documentația sursei [geo-spatial.org / RoHGIS 2016](https://geo-spatial.org/vechi/download/rohgis) indică **1929–1938** pentru vectorul județelor și **1929–1933** pentru vectorul plășilor; anul **1930** este perioada de referință recomandată de autorii setului de județe, cu ajustări teritoriale care pot lipsi. Înregistrările de tip plasa sunt **494 geometrii/feature-uri din setul-sur­să**, nu o certificare independentă că au existat exact 494 plăși distincte la o singură dată calendaristică din 1930. Regula temporală exclusiv-1930 din atlas este un *filtru de conservare a sursei*, nu o demonstrație a stabilității fiecărui contur pe întregul an.
+
 ## Inventarul și metoda
 
 - **139 versiuni OHM**, cu 125 ID-uri geometrice interne (14 aliasuri deja documentate), față de **565 versiuni RoHGIS**, toate cu ID geometric propriu: 71 județe și 494 plăși.
