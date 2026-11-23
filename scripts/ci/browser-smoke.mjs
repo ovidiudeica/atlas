@@ -2068,6 +2068,74 @@ async function historicalOhmSmoke(cdp){
  await doc.close();
 }
 
+
+/* HIST-OHM-TREE.4 — real Chromium interactions for the published 1930 RoHGIS
+ * source hierarchy. Check temporal guards, source county parentage, an actual
+ * plasa feature request, one selected outline and CC BY 4.0 attribution.
+ */
+async function rohgis1930Smoke(cdp){
+ for(const width of [1440,390]){
+  const mobile=width<700;
+  const p=await cdp.page(width,900,mobile,site+'?lang=ro');
+  const panel=mobile?'.drawer-tree':'.tree-sidebar';
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+    'RoHGIS 1930 map initialized '+width);
+  await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+  await p.wait("!!document.querySelector('"+panel+" .history-geodata-pane')",
+    'Historical tree loaded for RoHGIS '+width);
+  await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1930');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
+    'RoHGIS 1930 reference year '+width);
+  await p.wait("document.querySelector('"+panel+" .history-catalog-stat')?.textContent?.includes('RoHGIS 1930: 71 / 494')",
+    'RoHGIS 71 counties / 494 plasi catalog loaded '+width);
+  await p.eval("(()=>{const rows=[...document.querySelectorAll('"+panel+" .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.trim()==='Regatul României');if(!row)throw Error('Kingdom of Romania historical parent missing');row.querySelector('.history-tree-expand').click();})()");
+  await p.wait("document.querySelectorAll('"+panel+" .history-rohgis-tree > .history-tree-node').length===71",
+    'Exactly 71 RoHGIS counties nested under Romania '+width);
+  const details=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const rows=[...root.querySelectorAll(':scope > .history-tree-node > .history-tree-row')];return {countyCount:rows.length,names:rows.slice(0,6).map(row=>row.querySelector('.history-tree-name')?.textContent?.trim())}})()");
+  assert.equal(details.countyCount,71,'1930 RoHGIS counties rendered '+width);
+  assert.ok(details.names.includes('Alba')||details.names.length===6,
+    'Source county labels are visible and not invented '+width);
+  await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const node=[...root.querySelectorAll(':scope > .history-tree-node')].find(x=>x.querySelector(':scope > .history-tree-row .history-tree-name')?.textContent?.trim()==='Arad');if(!node)throw Error('RoHGIS 1930 Arad county not found');node.querySelector(':scope > .history-tree-row .history-tree-expand').click();})()");
+  await p.wait("Array.from(document.querySelectorAll('"+panel+" .history-rohgis-tree .history-tree-row .history-tree-name')).some(x=>x.textContent.trim()==='Pecica')",
+    'Arad county expands to plasa Pecica '+width);
+  if(!mobile){
+    const count=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const node=[...root.querySelectorAll(':scope > .history-tree-node')].find(x=>x.querySelector(':scope > .history-tree-row .history-tree-name')?.textContent?.trim()==='Arad');return node.querySelectorAll(':scope > .history-tree-children > .history-tree-row').length})()");
+    assert.ok(count>=1,'Arad contains at least one RoHGIS plasa');
+    await p.eval("(()=>{const row=[...document.querySelectorAll('"+panel+" .history-rohgis-tree .history-tree-children > .history-tree-row')].find(x=>x.querySelector('.history-tree-name')?.textContent?.trim()==='Pecica');if(!row)throw Error('Pecica plasa not found');row.querySelector('input[type=checkbox]').click();})()");
+    await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='1'",
+      'Pecica geometry checkbox updates historic map selection');
+    assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.historyDistinctAssets"),
+      '1','One RoHGIS source polygon rendered, no duplicated geometry');
+    await p.eval("(()=>{const row=[...document.querySelectorAll('"+panel+" .history-rohgis-tree .history-tree-children > .history-tree-row')].find(x=>x.querySelector('.history-tree-name')?.textContent?.trim()==='Pecica');row.querySelector('.history-tree-name').click();})()");
+    await p.wait("document.querySelector('.detail-sidebar .history-entity-detail .entity-title h3')?.textContent?.includes('Pecica')",
+      'RoHGIS plasa opens selected Entity card');
+    const card=await p.eval("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent");
+    assert.match(card,/RoHGIS/,'RoHGIS provenance shown in Entity card');
+    assert.match(card,/Județul Arad/,'Pecica has source-reported historical county parent');
+    assert.match(card,/CC BY 4\.0/,'RoHGIS author/license attribution visible');
+    assert.match(card,/necertificat/i,'No artificial boundary certification');
+    await p.snap('desktop-rohgis-1930-arad-pecica-visible.png');
+    await p.eval("(()=>{const row=[...document.querySelectorAll('"+panel+" .history-rohgis-tree .history-tree-children > .history-tree-row')].find(x=>x.querySelector('.history-tree-name')?.textContent?.trim()==='Pecica');row.querySelector('input[type=checkbox]').click();})()");
+    await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='0'",
+      'Pecica checkbox can clear historical polygon selection');
+  }else{
+    await p.snap('mobile-rohgis-1930-arad-plasi.png');
+  }
+  await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1929');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1929'",
+    'RoHGIS year changes to 1929 '+width);
+  await p.wait("!document.querySelector('"+panel+" .history-rohgis-tree')",
+    '1930-only source hierarchy is not extrapolated to 1929 '+width);
+  await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1930');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
+    'RoHGIS 1930 restored '+width);
+  await p.wait("!!document.querySelector('"+panel+" .history-rohgis-tree')",
+    'RoHGIS 1930 restored without source identity loss '+width);
+  await p.close();
+ }
+ console.log('HIST-OHM-TREE.4 Chromium: 71 counties / 494 plasi, Arad > Pecica, geometry checkbox, source card, CC BY 4.0, 1929 exclusion, desktop and mobile PASS');
+}
+
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
@@ -2112,6 +2180,7 @@ try{
   await sourceHeadingDedup(client);
   await moduleScopedResets(client);
   await historicalOhmSmoke(client);
+  await rohgis1930Smoke(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
