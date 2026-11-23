@@ -1996,9 +1996,14 @@
       "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
       "evidence": [
         {
+          "url": "https://old.archives.gov.ua/Eng/Archives/ra25.php",
+          "type": "ukraine_state_archive_institutional_history",
+          "detail": "Arhivele de Stat ale Regiunii Cernăuți documentează funcționarea regiunii în RSS Ucraineană în 1940–1941, distinct de perioada de ocupație, și reluarea din 1944."
+        },
+        {
           "url": "https://history.state.gov/historicaldocuments/frus1940v01/d522",
           "type": "contemporary_diplomatic_document",
-          "detail": "Documentul SUA din 3 august 1940 consemnează includerea nordului Bucovinei în RSS Ucraineană; regiunea Cernăuți a fost organizată în august 1940."
+          "detail": "Raport diplomatic din 3 august 1940 privind includerea nordului Bucovinei în RSS Ucraineană."
         }
       ],
       "note": "Apartenență pe intervalul inițial sovietic, fără extrapolare în ocupația 1941–1944."
