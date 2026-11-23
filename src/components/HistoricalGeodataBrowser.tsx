@@ -146,11 +146,21 @@ export function HistoricalGeodataBrowser({
        if(!response.ok)throw Error('Documentary parents HTTP '+response.status);
        return response.json() as Promise<HistoricalDocumentaryParentRegistry>;
      }),
-     loadRohgis1930Catalog(base)
-   ]).then(([sources,register,parents,rohgis1930])=>{
-     const gate=validateOhmParentage(sources,register,parents);
+     loadRohgis1930Catalog(base),
+     fetch(base+'data/historical/v1/documentary-parents-extensions.json').then(async response=>{
+       if(!response.ok)throw Error('Documentary extensions HTTP '+response.status);
+       return response.json() as Promise<HistoricalDocumentaryParentRegistry>;
+     }),
+     fetch(base+'data/historical/v1/ohm-parentage-extensions.json').then(async response=>{
+       if(!response.ok)throw Error('Parentage extensions HTTP '+response.status);
+       return response.json() as Promise<OhmParentageRegister>;
+     })
+   ]).then(([sources,register,parents,rohgis1930,docExt,linkExt])=>{
+     const mergedParents={...parents,nodes:[...parents.nodes,...docExt.nodes]};
+     const mergedRegister={...register,links:[...register.links,...linkExt.links]};
+     const gate=validateOhmParentage(sources,mergedRegister,mergedParents);
      if(!gate.ok)throw Error('OHM parentage: '+gate.errors.join('; '));
-     if(active){setIndex(sources);setParentage(register);setDocumentaryParents(parents);setRohgis(rohgis1930);}
+     if(active){setIndex(sources);setParentage(mergedRegister);setDocumentaryParents(mergedParents);setRohgis(rohgis1930);}
    }).catch(err=>{if(active)setError(String(err));});
    return ()=>{active=false;mounted.current=false;};
  },[]);
@@ -530,6 +540,14 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
      <EntityCardSection title={t.source} kind="cartographic">
        <dl className="metadata">
          <dt>{t.sourceName}</dt><dd>{entry.sourceGroup} · {entry.sourceFamily}</dd>
+         {entry.sourceFamily==='ROHGIS'&&<>
+           <dt>{lang==='ro'?'Autori și drepturi':'Authors and reuse rights'}</dt>
+           <dd><a href="https://rohgis.ro/despre/" target="_blank" rel="noopener noreferrer">
+             RoHGIS · CC BY 4.0</a>
+             <small> · {entry.sourceType==='plasă'?'Cezar Buterez':'Andrei Nacu, Cezar Buterez'}
+             {' · '}{lang==='ro'?'vizualizare reproiectată, cu atribuire':'reprojected visualization with attribution'}</small>
+           </dd>
+         </>}
          <dt>{t.original}</dt>
          <dd>{entry.sourceDriveFileId ?
            <a href={'https://drive.google.com/file/d/'+entry.sourceDriveFileId+'/view'}
