@@ -82,6 +82,7 @@ export function HistoricalGeodataBrowser({
  const [query,setQuery]=useState('');
  const [yearOnly,setYearOnly]=useState(false);
  const [expanded,setExpanded]=useState<Set<string>>(()=>new Set());
+ const [openCategories,setOpenCategories]=useState<Set<string>>(()=>new Set(['regions']));
  const mounted=useRef(true);
  const t=labels[lang];
  const term=foldedSearch(query.trim());
@@ -227,7 +228,8 @@ export function HistoricalGeodataBrowser({
    const hasDetails=node.shownVersions.length>1||node.shownChildren.length>0;
    const isExpanded=expanded.has(key)||Boolean(term);
    const active=uniqueSourceVersionAtYear(node,year);
-   const quickEntry=active||(node.shownVersions.length===1?node.shownVersions[0]:null);
+   const quickEntry=(active&&node.shownVersions.some(e=>e.id===active.id)?active:null)||
+     (node.shownVersions.length===1?node.shownVersions[0]:null);
    const activeChecked=Boolean(quickEntry&&visibleSet.has(quickEntry.id));
    const title=groupShortName(node.group);
    return <div key={key} className="history-tree-node" role="treeitem"
@@ -314,7 +316,17 @@ export function HistoricalGeodataBrowser({
      {sections.filter(s=>filteredRoots[s.key].length>0).map(section=>
        <details key={section.key+(term?':search':':browse')}
          className="history-geodata-category"
-         open={Boolean(term)||section.key==='regions'}>
+         open={Boolean(term)||openCategories.has(section.key)}
+         onToggle={event=>{
+           if(term)return;
+           const isOpen=event.currentTarget.open;
+           setOpenCategories(previous=>{
+             if(previous.has(section.key)===isOpen)return previous;
+             const next=new Set(previous);
+             if(isOpen)next.add(section.key);else next.delete(section.key);
+             return next;
+           });
+         }}>
          <summary>
            <span className="history-category-name">{lang==='ro'?section.ro:section.en}</span>
            <span className="history-group-count">{filteredRoots[section.key].length}</span>
