@@ -39,6 +39,9 @@ test('2B individual original-source review never invents Neamț/Vaslui 1865 veri
 test('the 2B register has no temporal parent overlaps, fabricated legal boundaries or source mutations',()=>{
  assert.deepEqual(validateOhmParentage(index,ledger),{ok:true,errors:[]});
  assert.equal(ledger.links.length,46);
+ assert.equal(buildHistoricalOhmTree(index,ledger,1890).parentageTimeResolution,
+   'calendar_year_documented_at_some_point');
+ assert.deepEqual(buildHistoricalOhmTree(index,ledger,1890).ambiguousAnnualParents,[]);
  assert.equal(qa.cases1890.length,2);
  assert.equal(qa.cases1925.length,15);
  assert.equal(qa.transylvaniaPartium.length,3);
@@ -80,4 +83,32 @@ test('no incomplete OHM polygon is promoted to an active checked version by docu
    assert.equal(t.qualifiedGeometryBorders,0);
    assert.equal(t.legalBoundariesCertified,false);
  }
+});
+
+test('time-specific documentary snapshot is never asserted as July 1 membership',()=>{
+ for(const [year,expected] of [[1865,11],[1890,2],[1925,15],[1930,15]]){
+   const tree=buildHistoricalOhmTree(index,ledger,year);
+   assert.equal(tree.activeLinks.length,expected);
+   assert.equal(tree.referenceDate,year+'-07-01');
+   assert.equal(tree.parentageTimeResolution,'calendar_year_documented_at_some_point');
+ }
+ const links1890=buildHistoricalOhmTree(index,ledger,1890).activeLinks;
+ assert(links1890.every(x=>x.start==='1890-10-15'));
+ const links1925=buildHistoricalOhmTree(index,ledger,1925).activeLinks;
+ assert(links1925.every(x=>x.start==='1925-10-07'));
+ assert.equal(links1890.some(x=>x.start<='1890-07-01'),false);
+ assert.equal(links1925.some(x=>x.start<='1925-07-01'),false);
+});
+test('multiple non-overlapping direct parents within a single year do not fabricate a unique parent',()=>{
+ const copy=structuredClone(ledger);
+ const first=copy.links.find(x=>x.id==='ohm-1925-bacau-to-regatul-romaniei');
+ assert(first);
+ copy.links.push({...first,id:'ohm-test-temporal-change',
+   start:'1925-01-01',end:'1925-03-31',
+   parentSourceGroup:'Principatele Unite'});
+ assert.deepEqual(validateOhmParentage(index,copy),{ok:true,errors:[]});
+ const t=buildHistoricalOhmTree(index,copy,1925);
+ assert(t.ambiguousAnnualParents.includes(first.childSourceGroup));
+ assert.equal(t.nodes.get(first.childSourceGroup).parentGroup,null);
+ assert.equal(t.activeLinks.length,14);
 });
