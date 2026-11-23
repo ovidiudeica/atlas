@@ -14,8 +14,12 @@ const read=path=>JSON.parse(readFileSync(new URL(path,root),'utf8'));
 const source='public/data/historical/v1/rohgis/';
 const catalog=read(source+'catalog-1930.json');
 const ohmIndex=read('public/data/historical/v1/geodata/index.json');
-const parents=read('public/data/historical/v1/ohm-parentage.json');
-const documentary=read('public/data/historical/v1/documentary-parents.json');
+const baseParents=read('public/data/historical/v1/ohm-parentage.json');
+const parentExtensions=read('public/data/historical/v1/ohm-parentage-extensions.json');
+const parents={...baseParents,links:[...baseParents.links,...parentExtensions.links]};
+const baseDocumentary=read('public/data/historical/v1/documentary-parents.json');
+const docExtensions=read('public/data/historical/v1/documentary-parents-extensions.json');
+const documentary={...baseDocumentary,nodes:[...baseDocumentary.nodes,...docExtensions.nodes]};
 
 test('RoHGIS 1930 catalog admits only the 1930 source snapshot',()=>{
  const gate=validateRohgis1930Catalog(catalog);
@@ -75,6 +79,8 @@ test('RoHGIS loader returns indexed source feature, not a certified boundary',as
 });
 
 test('Separate interwar Hungarian documentary parent is documented only in June 1928',()=>{
+ assert.equal(baseParents.links.length,46);
+ assert.equal(baseDocumentary.nodes.length,11);
  const edge=parents.links.find(x=>x.id==='ohm-1928-csanad-arad-torontal-to-hungary');
  assert.ok(edge);
  assert.equal(edge.start,'1928-06-01');
