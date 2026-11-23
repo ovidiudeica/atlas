@@ -1042,6 +1042,46 @@
         }
       ],
       "note": "7 octombrie 1925 este data publicării decretului, nu o dată de început instituțional. 31 decembrie este doar limita de snapshot; nu presupune încetarea atunci. OHM geometry may be temporally incomplete."
+    },
+    {
+      "id": "ohm-1890-suceava-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Suceava",
+      "start": "1890-10-15",
+      "end": "1890-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1890_county_report_administrative_snapshot",
+      "evidence": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Monitorul_Oficial_al_Rom%C3%A2niei_1890-12-21%2C_nr._212.pdf",
+          "type": "contemporary_official_gazette",
+          "detail": "Monitorul Oficial nr. 212, 21 decembrie 1890, p. 5038: raportul județului Suceava din 15 octombrie 1890 identifică orașul Fălticeni drept reședință a județului, distinct de Bucovina austriacă."
+        }
+      ],
+      "note": "Raportul din 15 octombrie 1890 este fotografia administrativă; 31 decembrie este limită operațională, nu data desființării. Geometria OHM 1859→necunoscut nu devine automată pentru 1890."
+    },
+    {
+      "id": "ohm-1890-tecuci-to-regatul-romaniei",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Tecuci",
+      "start": "1890-10-15",
+      "end": "1890-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1890_county_report_administrative_snapshot",
+      "evidence": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Monitorul_Oficial_al_Rom%C3%A2niei_1890-12-21%2C_nr._212.pdf",
+          "type": "contemporary_official_gazette",
+          "detail": "Monitorul Oficial nr. 212, 21 decembrie 1890, pp. 5038–5040: raportul consiliului județean Tecuci din sesiunea de 15 octombrie 1890 confirmă județul administrativ românesc."
+        }
+      ],
+      "note": "Raportul din 15 octombrie 1890 este fotografia administrativă; 31 decembrie este limită operațională, nu data desființării. Geometria OHM 1859→necunoscut nu devine automată pentru 1890."
     }
   ],
   "pending": "Restul grupurilor OHM au verdicte individuale în registrul HIST-OHM-TREE.2. Titlurile și geometriile OHM rămân surse provizorii; documentul istoric nu probează conturul.",
@@ -1062,7 +1102,8 @@
       "Județul Suceava"
     ],
     "partiumDocumentedUntil": "1860-12-26",
-    "temporalCaution": "All new periods are documentary observation windows, not asserted institutional inception/termination; no OHM border certification."
+    "temporalCaution": "All new periods are documentary observation windows, not asserted institutional inception/termination; no OHM border certification.",
+    "admitted1890OfficialCountyReports": 2
   },
   "retractedLinks": [
     {
