@@ -2004,15 +2004,23 @@ async function historicalOhmSmoke(cdp){
  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
    'OHM 1930 reference-year selected');
  await p.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.includes('Regatul României'));if(!row)throw Error('Romanian Kingdom node missing');row.querySelector('.history-tree-expand').click();})()");
- await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===3",
-   'Three documented 1926-1938 direct children of Kingdom of Romania');
+ await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===16",
+   'Sixteen documented county memberships in 1930');
  assert.equal(await p.eval("document.querySelectorAll('.tree-sidebar .history-tree-row.has-qualified-parent').length"),
-   3,'Only three time-scoped parentage records shown');
+   16,'All sixteen 1930 documentary county memberships shown');
+ assert.equal(await p.eval("document.querySelectorAll('.tree-sidebar .history-tree-row.has-qualified-parent input[type=checkbox]:disabled').length"),
+   13,'Thirteen OHM county source periods incomplete; membership never certifies polygon');
  await p.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1939');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1939'",
    'OHM 1939 reference-year selected');
  await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===0",
-   'No 1926-1938 parentage extrapolated into 1939');
+   'No 1926-1938 or 1930-only membership extrapolated into 1939');
+ await p.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1800');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+ await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1800'",
+   'Transylvanian Partium reference year');
+ await p.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.includes('Transilvania'));if(!row)throw Error('Transylvania node missing');row.querySelector('.history-tree-expand').click();})()");
+ await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===3",
+   'Conservatively qualified Partium administrative affiliation in 1800');
  await p.close();
 }
 

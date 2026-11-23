@@ -1,0 +1,3062 @@
+{
+  "schema": "atlas-historical-ohm-parentage-qualification-v2",
+  "asOf": "2026-11-23",
+  "scope": "full_76_source_group_inventory",
+  "admissionPolicy": "ONLY_DOCUMENTARY_TIME_SCOPED_DIRECT_ADMINISTRATIVE_MEMBERSHIP",
+  "sourceOnly": true,
+  "noGeometryOrRightsCertification": true,
+  "sourceIndexSha256Status": "Original index file unchanged; byte-digest not recomputed here.",
+  "sourceVersionCount": 139,
+  "sourceGroupCount": 76,
+  "acceptedRelationCount": 19,
+  "acceptedSourceGroups": 19,
+  "pendingSourceGroups": 57,
+  "verdictCounts": {
+    "PARENT_OUTSIDE_OHM": 16,
+    "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED": 35,
+    "QUALIFIED_RELATION_IN_PERIOD": 19,
+    "PENDING_SOURCE_TEMPORAL_DEFECT": 1,
+    "PENDING_PARTITIONED_PARENTAGE": 1,
+    "POLITICAL_ENTITY_ROOT": 4
+  },
+  "evidenceCatalogue": {
+    "RomanianOfficial1930": {
+      "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+      "focus": "Monitorul Oficial nr. 17 bis, 22 Ianuarie 1930, p. 680, Decretul 43 şi tabelul judeţelor"
+    },
+    "PartiumAdministration": {
+      "url": "https://lexikon.katolikus.hu/P/Partium.html",
+      "focus": "1732 decree, 1733 enactment: Kraszna, Közép-Szolnok, Kővár under Transylvanian administration"
+    },
+    "PartiumResearch": {
+      "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
+      "focus": "Eastern Hungary research pp. 215–217: Partium 1732–1860 transition; 1876 restructure"
+    },
+    "HungarianCounties": {
+      "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925",
+      "focus": "1911 Britannica, Hungary Administrative Divisions: counties in Hungarian Kingdom after 1876, outside Transylvanian principality"
+    },
+    "TransnistriaGovernorate": {
+      "url": "https://rtsa.ro/rtsa/index.php/rtsa/article/download/166/162/323",
+      "focus": "V. Stănică, Administraţia teritoriului României în timpul celui de-al doilea război mondial, p. 111: 13 judeţe in governorate of Transnistria incl. Iugastru, Moghilău, Tulcin"
+    },
+    "ChernivtsiArchives": {
+      "url": "https://old.archives.gov.ua/Eng/Publicat/Chernivci_booklet.pdf",
+      "focus": "Chernivtsi regional State Archives: Chernivtsi oblast formed as Ukrainian SSR oblast 7 Aug 1940"
+    },
+    "TranscarpathiaCSR": {
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CU%5CSubcarpathianRuthenia.htm",
+      "focus": "Czechoslovak province 1920–1938, Czechoslovakia absent in OHM"
+    },
+    "TranscarpathiaUkrSSR": {
+      "url": "https://www.mek.oszk.hu/22700/22757/22757.pdf",
+      "focus": "Transcarpathian oblast creation / 1946 Ukrainian SSR legislation"
+    },
+    "IzmailAkkerman": {
+      "url": "https://edu.lvivcenter.org/en/modules/izmail-region-in-soviet-memory-eng/",
+      "focus": "Akkerman region and transformation to Izmail, part of Ukrainian SSR"
+    },
+    "USSRMoldavia": {
+      "url": "https://history.state.gov/historicaldocuments/frus1940v01/d522",
+      "focus": "US Foreign Relations 1940: MSSR formed from portions of Bessarabia / MASSR and USSR"
+    },
+    "BukovinaGalicia": {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/nana.12415",
+      "focus": "1849 separation from Galicia, 1861 provincial autonomy; do not infer district as child of duchy"
+    },
+    "BanatVoivodina": {
+      "url": "https://www.banat.ro/XIX.pdf",
+      "focus": "1849 voivodina created as direct imperial administrative territory, not child of Banatul Timișoarei"
+    },
+    "PrincipalityContext": {
+      "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925",
+      "focus": "Historical administrative scope of Hungarian Crown; not evidence that earlier principalities were its direct subunits"
+    }
+  },
+  "methodology": "Each group inventoried with all OHM relation IDs, source windows, per-case verdict, candidate absent parent and documentary references. A contextual citation does NOT certify a pending direct parent. A qualified parent link is admitted only via the separate date-scoped parentage register. No temporal interval extrapolation and no geometry change.",
+  "cases": [
+    {
+      "caseId": "HIST-OHM-TREE.2-001",
+      "sourceGroup": "Banatul Timișoarei",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2746573,
+        2747562
+      ],
+      "sourceVersionIds": [
+        "ohm-r2746573",
+        "ohm-r2747562"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2746573",
+          "start": "1718-07-21",
+          "end": "1751"
+        },
+        {
+          "sourceId": "ohm-r2747562",
+          "start": "1751",
+          "end": "1778-06-06"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Monarhia Habsburgică, administraţie bănăţeană de epocă",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "BanatVoivodina",
+          "url": "https://www.banat.ro/XIX.pdf"
+        }
+      ],
+      "reason": "Două versiuni 1718–1778; provincia imperială nu este subordonată vreunei entităţi OHM contemporane.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-002",
+      "sourceGroup": "Bucovina",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2684081,
+        2746379,
+        2746380,
+        2746401
+      ],
+      "sourceVersionIds": [
+        "ohm-r2684081",
+        "ohm-r2746379",
+        "ohm-r2746380",
+        "ohm-r2746401"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2684081",
+          "start": "1861-02-26",
+          "end": "1878-07-13"
+        },
+        {
+          "sourceId": "ohm-r2746379",
+          "start": "1849-03-04",
+          "end": "1860-08-06"
+        },
+        {
+          "sourceId": "ohm-r2746380",
+          "start": "1774",
+          "end": "1786-08-06"
+        },
+        {
+          "sourceId": "ohm-r2746401",
+          "start": "1878-07-13",
+          "end": "1918"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Galicia / Monarhia Habsburgică / Imperiul Austriac, variabil în timp",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "BukovinaGalicia",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/nana.12415"
+        }
+      ],
+      "reason": "Corespondenţa dintre Ducat şi district este o succesiune de regimuri, nu relaţie părinte–copil între poligoane cu acelaşi contur.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-003",
+      "sourceGroup": "Comitate istorice/Comitatul Alba de Jos",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928927
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928927"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928927",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Alba de Jos este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-004",
+      "sourceGroup": "Comitate istorice/Comitatul Arad",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829223,
+        2829224,
+        2829225,
+        2829740
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829223",
+        "ohm-r2829224",
+        "ohm-r2829225",
+        "ohm-r2829740"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829223",
+          "start": "1854-04-24",
+          "end": "1860-10-20"
+        },
+        {
+          "sourceId": "ohm-r2829224",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        },
+        {
+          "sourceId": "ohm-r2829225",
+          "start": "1744",
+          "end": "1790-04-26"
+        },
+        {
+          "sourceId": "ohm-r2829740",
+          "start": "1790-04-26",
+          "end": "1850-09-13"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Arad este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-005",
+      "sourceGroup": "Comitate istorice/Comitatul Békés",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829207,
+        2829209,
+        2829217
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829207",
+        "ohm-r2829209",
+        "ohm-r2829217"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829207",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        },
+        {
+          "sourceId": "ohm-r2829209",
+          "start": "1790-04-26",
+          "end": "1850-09-13"
+        },
+        {
+          "sourceId": "ohm-r2829217",
+          "start": "1921-07-26",
+          "end": "1946-02-01"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Békés este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia. Intervalele de după 1920 trebuie examinate distinct faţă de cele de dinaintea tratatului; numele identic nu probează aceeaşi subordonare în toate versiunile.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-006",
+      "sourceGroup": "Comitate istorice/Comitatul Békés-Csanád",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829205
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829205"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829205",
+          "start": "1854-04-06",
+          "end": "1860-10-20"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Békés-Csanád este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-007",
+      "sourceGroup": "Comitate istorice/Comitatul Bereg",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829532,
+        2829533,
+        2929705
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829532",
+        "ohm-r2829533",
+        "ohm-r2929705"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829532",
+          "start": "1200",
+          "end": "1850-09-13"
+        },
+        {
+          "sourceId": "ohm-r2829533",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        },
+        {
+          "sourceId": "ohm-r2929705",
+          "start": "1860-10-20",
+          "end": "1876-06-19"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Bereg este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-008",
+      "sourceGroup": "Comitate istorice/Comitatul Bereg-Ugocsa",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829534
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829534"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829534",
+          "start": "1850-09-13",
+          "end": "1860-10-20"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Bereg-Ugocsa este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-009",
+      "sourceGroup": "Comitate istorice/Comitatul Bihor",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829450
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829450"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829450",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Bihor este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-010",
+      "sourceGroup": "Comitate istorice/Comitatul Bistrița-Năsăud",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928938
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928938"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928938",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Bistrița-Năsăud este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-011",
+      "sourceGroup": "Comitate istorice/Comitatul Brașov",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928931
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928931"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928931",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Brașov este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-012",
+      "sourceGroup": "Comitate istorice/Comitatul Caraș",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2747447,
+        2747448,
+        2747635
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747447",
+        "ohm-r2747448",
+        "ohm-r2747635"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747447",
+          "start": "1860-12-27",
+          "end": "1873-08-08"
+        },
+        {
+          "sourceId": "ohm-r2747448",
+          "start": "1779-04-23",
+          "end": "1849-11-18"
+        },
+        {
+          "sourceId": "ohm-r2747635",
+          "start": "1873-08-08",
+          "end": "1881"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Caraș este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-013",
+      "sourceGroup": "Comitate istorice/Comitatul Caraș-Severin",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2747633
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747633"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747633",
+          "start": "1881",
+          "end": "1920-06-04"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Caraș-Severin este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-014",
+      "sourceGroup": "Comitate istorice/Comitatul Cenad",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829208
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829208"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829208",
+          "start": "1790-04-26",
+          "end": "1850-09-13"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Cenad este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-015",
+      "sourceGroup": "Comitate istorice/Comitatul Ciuc",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928934
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928934"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928934",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Ciuc este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-016",
+      "sourceGroup": "Comitate istorice/Comitatul Cluj",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928936
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928936"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928936",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Cluj este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-017",
+      "sourceGroup": "Comitate istorice/Comitatul Csanád-Arad-Torontál",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829215
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829215"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829215",
+          "start": "1923",
+          "end": "1945"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Csanád-Arad-Torontál este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia. Intervalele de după 1920 trebuie examinate distinct faţă de cele de dinaintea tratatului; numele identic nu probează aceeaşi subordonare în toate versiunile.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-018",
+      "sourceGroup": "Comitate istorice/Comitatul Csongrád",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829086,
+        2829212,
+        2829219,
+        2829220,
+        2829221
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829086",
+        "ohm-r2829212",
+        "ohm-r2829219",
+        "ohm-r2829220",
+        "ohm-r2829221"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829086",
+          "start": "1790-04-26",
+          "end": "1876-06-19"
+        },
+        {
+          "sourceId": "ohm-r2829212",
+          "start": "1876-06-19",
+          "end": "1908-09-21"
+        },
+        {
+          "sourceId": "ohm-r2829219",
+          "start": "1921-07-26",
+          "end": "1941-12-14"
+        },
+        {
+          "sourceId": "ohm-r2829220",
+          "start": "1941-12-14",
+          "end": "1944"
+        },
+        {
+          "sourceId": "ohm-r2829221",
+          "start": "1908-09-21",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Csongrád este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia. Intervalele de după 1920 trebuie examinate distinct faţă de cele de dinaintea tratatului; numele identic nu probează aceeaşi subordonare în toate versiunile.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-019",
+      "sourceGroup": "Comitate istorice/Comitatul Făgăraș",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928928
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928928"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928928",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Făgăraș este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-020",
+      "sourceGroup": "Comitate istorice/Comitatul Hunedoara",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928925
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928925"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928925",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Hunedoara este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-021",
+      "sourceGroup": "Comitate istorice/Comitatul Közép-Szolnok",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2747430,
+        2747432
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747430",
+        "ohm-r2747432"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747430",
+          "start": "1860-12-27",
+          "end": "1876-06-19"
+        },
+        {
+          "sourceId": "ohm-r2747432",
+          "start": "1650",
+          "end": "1851-05-12"
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Transilvania, numai 1733–1847",
+      "acceptedLinkIds": [
+        "ohm-partium-1733-kozep-szolnok-to-transilvania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "PartiumAdministration",
+          "url": "https://lexikon.katolikus.hu/P/Partium.html"
+        },
+        {
+          "key": "PartiumResearch",
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry"
+        }
+      ],
+      "reason": "Pentru comitatul Közép-Szolnok este calificată administrarea de către Transilvania în intervalul conservator 1733–1847. Versiunile ulterioare 1860–1876 cer un părinte nou; nu se extinde relaţia în Ungaria dualistă.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-022",
+      "sourceGroup": "Comitate istorice/Comitatul Kraszna",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2747429,
+        2747431
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747429",
+        "ohm-r2747431"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747429",
+          "start": "1860-12-27",
+          "end": "1876-06-18"
+        },
+        {
+          "sourceId": "ohm-r2747431",
+          "start": "1164",
+          "end": "1851-05-12"
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Transilvania, numai 1733–1847",
+      "acceptedLinkIds": [
+        "ohm-partium-1733-kraszna-to-transilvania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "PartiumAdministration",
+          "url": "https://lexikon.katolikus.hu/P/Partium.html"
+        },
+        {
+          "key": "PartiumResearch",
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry"
+        }
+      ],
+      "reason": "Pentru comitatul Kraszna este calificată administrarea de către Transilvania în intervalul conservator 1733–1847. Versiunile ulterioare 1860–1876 cer un părinte nou; nu se extinde relaţia în Ungaria dualistă.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-023",
+      "sourceGroup": "Comitate istorice/Comitatul Maramureș",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829353,
+        2829357,
+        2829358
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829353",
+        "ohm-r2829357",
+        "ohm-r2829358"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829353",
+          "start": "1850-09-13",
+          "end": "1860-10-19"
+        },
+        {
+          "sourceId": "ohm-r2829357",
+          "start": "1860-10-20",
+          "end": "1920-06-03"
+        },
+        {
+          "sourceId": "ohm-r2829358",
+          "start": "1402",
+          "end": "1850-09-13"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Maramureș este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-024",
+      "sourceGroup": "Comitate istorice/Comitatul Mureș-Turda",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928937
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928937"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928937",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Mureș-Turda este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-025",
+      "sourceGroup": "Comitate istorice/Comitatul Odorhei",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928933
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928933"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928933",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Odorhei este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-026",
+      "sourceGroup": "Comitate istorice/Comitatul Sălaj",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829407
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829407"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829407",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Sălaj este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-027",
+      "sourceGroup": "Comitate istorice/Comitatul Sătmar",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829380,
+        2829381,
+        2829382,
+        2829383,
+        2928940
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829380",
+        "ohm-r2829381",
+        "ohm-r2829382",
+        "ohm-r2829383",
+        "ohm-r2928940"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829380",
+          "start": "1699-01-26",
+          "end": "1800"
+        },
+        {
+          "sourceId": "ohm-r2829381",
+          "start": "1860-10-20",
+          "end": "1876-06-19"
+        },
+        {
+          "sourceId": "ohm-r2829382",
+          "start": "1850-09-13",
+          "end": "1860-10-20"
+        },
+        {
+          "sourceId": "ohm-r2829383",
+          "start": "1800",
+          "end": "1850-09-13"
+        },
+        {
+          "sourceId": "ohm-r2928940",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Sătmar este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-028",
+      "sourceGroup": "Comitate istorice/Comitatul Severin",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2747636
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747636"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747636",
+          "start": "1873-08-08",
+          "end": "1881"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Severin este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-029",
+      "sourceGroup": "Comitate istorice/Comitatul Sibiu",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928926
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928926"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928926",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Sibiu este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-030",
+      "sourceGroup": "Comitate istorice/Comitatul Solnoc-Dăbâca",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928939
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928939"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928939",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Solnoc-Dăbâca este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-031",
+      "sourceGroup": "Comitate istorice/Comitatul Szabolcs",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829379,
+        2829510,
+        2829716,
+        2829717,
+        2829719
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829379",
+        "ohm-r2829510",
+        "ohm-r2829716",
+        "ohm-r2829717",
+        "ohm-r2829719"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829379",
+          "start": "1854-04-06",
+          "end": "1860-10-20"
+        },
+        {
+          "sourceId": "ohm-r2829510",
+          "start": "1876-06-19",
+          "end": "1923"
+        },
+        {
+          "sourceId": "ohm-r2829716",
+          "start": "1699-01-26",
+          "end": "1800"
+        },
+        {
+          "sourceId": "ohm-r2829717",
+          "start": "1824",
+          "end": "1850-09-13"
+        },
+        {
+          "sourceId": "ohm-r2829719",
+          "start": "1800",
+          "end": "1824"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Szabolcs este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-032",
+      "sourceGroup": "Comitate istorice/Comitatul Târnava-Mare",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928930
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928930"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928930",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Târnava-Mare este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-033",
+      "sourceGroup": "Comitate istorice/Comitatul Târnava-Mică",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928929
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928929"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928929",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Târnava-Mică este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-034",
+      "sourceGroup": "Comitate istorice/Comitatul Timiș",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2747449,
+        2747450,
+        2747632,
+        2747634
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747449",
+        "ohm-r2747450",
+        "ohm-r2747632",
+        "ohm-r2747634"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747449",
+          "start": "1860-12-27",
+          "end": "1873-08-08"
+        },
+        {
+          "sourceId": "ohm-r2747450",
+          "start": "1779-04-23",
+          "end": "1849-11-18"
+        },
+        {
+          "sourceId": "ohm-r2747632",
+          "start": "1873-08-08",
+          "end": "1881"
+        },
+        {
+          "sourceId": "ohm-r2747634",
+          "start": "1881",
+          "end": "1920-06-04"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Timiș este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-035",
+      "sourceGroup": "Comitate istorice/Comitatul Torontal",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2747307,
+        2747308
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747307",
+        "ohm-r2747308"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747307",
+          "start": "1860-12-27",
+          "end": "1873-08-08"
+        },
+        {
+          "sourceId": "ohm-r2747308",
+          "start": "1779-04-23",
+          "end": "1849-11-18"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Torontal este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-036",
+      "sourceGroup": "Comitate istorice/Comitatul Trei Scaune",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928932
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928932"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928932",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Trei Scaune este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-037",
+      "sourceGroup": "Comitate istorice/Comitatul Turda-Arieș",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2928935
+      ],
+      "sourceVersionIds": [
+        "ohm-r2928935"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2928935",
+          "start": "1876-06-19",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Turda-Arieș este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-038",
+      "sourceGroup": "Comitate istorice/Comitatul Ugocea",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829351,
+        2829352
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829351",
+        "ohm-r2829352"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829351",
+          "start": "1790-04-26",
+          "end": "1850-09-12"
+        },
+        {
+          "sourceId": "ohm-r2829352",
+          "start": "1860-10-20",
+          "end": "1920-06-03"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Ugocea este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-039",
+      "sourceGroup": "Comitate istorice/Comitatul Ung",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2929703
+      ],
+      "sourceVersionIds": [
+        "ohm-r2929703"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2929703",
+          "start": "1876-06-19",
+          "end": "1876-06-19"
+        }
+      ],
+      "verdict": "PENDING_SOURCE_TEMPORAL_DEFECT",
+      "candidateParent": "Regatul Ungariei, neimportat",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Sursa OHM are interval început=sfârşit 19 iunie 1876; este posibil un marcaj de schimbare, nu o versiune utilizabilă. Necesită revizuirea relaţiei originale înainte de calificare.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-040",
+      "sourceGroup": "Comitate istorice/Comitatul Zaránd",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2747305,
+        2747306
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747305",
+        "ohm-r2747306"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747305",
+          "start": "1860-12-27",
+          "end": "1876-06-19"
+        },
+        {
+          "sourceId": "ohm-r2747306",
+          "start": "1744",
+          "end": "1851-05-12"
+        }
+      ],
+      "verdict": "PENDING_PARTITIONED_PARENTAGE",
+      "candidateParent": "Parţial Transilvania / parţial Ungaria după 1732; tranziţie 1848 şi 1860",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "PartiumAdministration",
+          "url": "https://lexikon.katolikus.hu/P/Partium.html"
+        },
+        {
+          "key": "PartiumResearch",
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry"
+        }
+      ],
+      "reason": "Decretul din 1732 a împărţit Zaránd; în absenţa dovezii că întregul contur OHM este segmentul rămas sub Transilvania, nu putem admite administrativ întreg comitatul sub acelaşi părinte.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-041",
+      "sourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "sourceClass": "comitate",
+      "sourceRelations": [
+        2829461,
+        2829504,
+        2829507,
+        2829508,
+        2829721,
+        2829738,
+        2929704,
+        2929720
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829461",
+        "ohm-r2829504",
+        "ohm-r2829507",
+        "ohm-r2829508",
+        "ohm-r2829721",
+        "ohm-r2829738",
+        "ohm-r2929704",
+        "ohm-r2929720"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829461",
+          "start": "1850-09-13",
+          "end": "1860-10-20"
+        },
+        {
+          "sourceId": "ohm-r2829504",
+          "start": "1860-10-20",
+          "end": "1876-06-19"
+        },
+        {
+          "sourceId": "ohm-r2829507",
+          "start": "1824",
+          "end": "1850-09-13"
+        },
+        {
+          "sourceId": "ohm-r2829508",
+          "start": "1910",
+          "end": "1913"
+        },
+        {
+          "sourceId": "ohm-r2829721",
+          "start": "1050",
+          "end": "1800"
+        },
+        {
+          "sourceId": "ohm-r2829738",
+          "start": "1800",
+          "end": "1824"
+        },
+        {
+          "sourceId": "ohm-r2929704",
+          "start": "1876-06-19",
+          "end": "1910"
+        },
+        {
+          "sourceId": "ohm-r2929720",
+          "start": "1913",
+          "end": "1921-07-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM_OR_DATE_UNRESOLVED",
+      "candidateParent": "Regatul Ungariei / administraţia imperială austriacă, după etapă (niciuna importată ca părinte)",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "HungarianCounties",
+          "url": "https://en.wikisource.org/wiki/Page%3AEB1911_-_Volume_13.djvu/925"
+        }
+      ],
+      "reason": "Comitatul Zemplén este un caz de administraţie comitatensă maghiară/imperială. După 1867/1876, comitatele nu erau subordonate Principatului Transilvaniei. Pentru versiunile anterioare sunt necesare instituţia părinte şi datarea de epocă; geometriile OHM singure nu pot califica relaţia.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-042",
+      "sourceGroup": "Districtul Bucovina",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2746744,
+        2746745
+      ],
+      "sourceVersionIds": [
+        "ohm-r2746744",
+        "ohm-r2746745"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2746744",
+          "start": "1786-08-06",
+          "end": "1849-03-04"
+        },
+        {
+          "sourceId": "ohm-r2746745",
+          "start": "1860-08-06",
+          "end": "1861-02-26"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Regatul Galiţiei şi Lodomeriei / administraţia imperială",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "BukovinaGalicia",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/nana.12415"
+        }
+      ],
+      "reason": "Intervalele 1786–1849 şi 1860–1861 sunt alternanţe administrative faţă de Ducat; nu se poate introduce artificial sub Bucovina.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-043",
+      "sourceGroup": "Frontiera Militară a Banatului",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2746839,
+        2746840,
+        2746841
+      ],
+      "sourceVersionIds": [
+        "ohm-r2746839",
+        "ohm-r2746840",
+        "ohm-r2746841"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2746839",
+          "start": "1751",
+          "end": "1849-11-18"
+        },
+        {
+          "sourceId": "ohm-r2746840",
+          "start": "1849-11-18",
+          "end": "1860-12-27"
+        },
+        {
+          "sourceId": "ohm-r2746841",
+          "start": "1860-12-27",
+          "end": "1873-08-08"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Administraţia militară a Monarhiei Habsburgice",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "BanatVoivodina",
+          "url": "https://www.banat.ro/XIX.pdf"
+        }
+      ],
+      "reason": "Administraţie de frontieră separată; nu se subordonează automat provinciei civile vecine.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-044",
+      "sourceGroup": "Gubernia Basarabia",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2694153,
+        2694154
+      ],
+      "sourceVersionIds": [
+        "ohm-r2694153",
+        "ohm-r2694154"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2694153",
+          "start": "1856-03-30",
+          "end": "1878-07-13"
+        },
+        {
+          "sourceId": "ohm-r2694154",
+          "start": "1878-07-13",
+          "end": "1918"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Imperiul Rus",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [],
+      "reason": "Gubernie imperială; Imperiul Rus nu este reprezentat în acest lot OHM. Relaţia documentară individuală rămâne de completat.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-045",
+      "sourceGroup": "Județe istorice/Județul Arad",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2829529
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829529"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829529",
+          "start": "1921-07-26",
+          "end": "1950-09-06"
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1926-1938-arad-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Arad este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-046",
+      "sourceGroup": "Județe istorice/Județul Bacău",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2943619
+      ],
+      "sourceVersionIds": [
+        "ohm-r2943619"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2943619",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-bacau-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Bacău este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-047",
+      "sourceGroup": "Județe istorice/Județul Botoșani",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2940712
+      ],
+      "sourceVersionIds": [
+        "ohm-r2940712"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2940712",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-botosani-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Botoșani este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-048",
+      "sourceGroup": "Județe istorice/Județul Covurlui",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2945088
+      ],
+      "sourceVersionIds": [
+        "ohm-r2945088"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2945088",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-covurlui-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Covurlui este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-049",
+      "sourceGroup": "Județe istorice/Județul Dorohoi",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2937887
+      ],
+      "sourceVersionIds": [
+        "ohm-r2937887"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2937887",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-dorohoi-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Dorohoi este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-050",
+      "sourceGroup": "Județe istorice/Județul Fălciu",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2943671
+      ],
+      "sourceVersionIds": [
+        "ohm-r2943671"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2943671",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-falciu-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Fălciu este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-051",
+      "sourceGroup": "Județe istorice/Județul Iași",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2943493
+      ],
+      "sourceVersionIds": [
+        "ohm-r2943493"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2943493",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-iasi-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Iași este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-052",
+      "sourceGroup": "Județe istorice/Județul Jugastru",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2698191
+      ],
+      "sourceVersionIds": [
+        "ohm-r2698191"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2698191",
+          "start": "1941-08-19",
+          "end": "1944-03-31"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Guvernământul Transnistriei (1941–1944), absent din OHM",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "TransnistriaGovernorate",
+          "url": "https://rtsa.ro/rtsa/index.php/rtsa/article/download/166/162/323"
+        }
+      ],
+      "reason": "Judeţul Jugastru din administraţia românească temporară a Transnistriei nu este copilul direct al Regatului României; intermediarul Guvernământul Transnistriei lipseşte din catalog.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-053",
+      "sourceGroup": "Județe istorice/Județul Maramureș",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2829519
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829519"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829519",
+          "start": "1921",
+          "end": "1940-08-29"
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1926-1938-maramures-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Maramureș este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-054",
+      "sourceGroup": "Județe istorice/Județul Moghilău",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2698193
+      ],
+      "sourceVersionIds": [
+        "ohm-r2698193"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2698193",
+          "start": "1941-08-19",
+          "end": "1944-03-31"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Guvernământul Transnistriei (1941–1944), absent din OHM",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "TransnistriaGovernorate",
+          "url": "https://rtsa.ro/rtsa/index.php/rtsa/article/download/166/162/323"
+        }
+      ],
+      "reason": "Judeţul Moghilău din administraţia românească temporară a Transnistriei nu este copilul direct al Regatului României; intermediarul Guvernământul Transnistriei lipseşte din catalog.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-055",
+      "sourceGroup": "Județe istorice/Județul Neamț",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2943485
+      ],
+      "sourceVersionIds": [
+        "ohm-r2943485"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2943485",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-neamt-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Neamț este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-056",
+      "sourceGroup": "Județe istorice/Județul Putna",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2943652
+      ],
+      "sourceVersionIds": [
+        "ohm-r2943652"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2943652",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-putna-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Putna este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-057",
+      "sourceGroup": "Județe istorice/Județul Roman",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2943496
+      ],
+      "sourceVersionIds": [
+        "ohm-r2943496"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2943496",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-roman-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Roman este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-058",
+      "sourceGroup": "Județe istorice/Județul Suceava",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2940721
+      ],
+      "sourceVersionIds": [
+        "ohm-r2940721"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2940721",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-suceava-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Suceava este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-059",
+      "sourceGroup": "Județe istorice/Județul Tecuci",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2945087
+      ],
+      "sourceVersionIds": [
+        "ohm-r2945087"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2945087",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-tecuci-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Tecuci este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-060",
+      "sourceGroup": "Județe istorice/Județul Timiș-Torontal",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2829528
+      ],
+      "sourceVersionIds": [
+        "ohm-r2829528"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2829528",
+          "start": "1920-06-04",
+          "end": "1950-09-06"
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1926-1938-timis-torontal-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Timiș-Torontal este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-061",
+      "sourceGroup": "Județe istorice/Județul Tulcin",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2698192
+      ],
+      "sourceVersionIds": [
+        "ohm-r2698192"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2698192",
+          "start": "1941-08-19",
+          "end": "1944-03-31"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Guvernământul Transnistriei (1941–1944), absent din OHM",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "TransnistriaGovernorate",
+          "url": "https://rtsa.ro/rtsa/index.php/rtsa/article/download/166/162/323"
+        }
+      ],
+      "reason": "Judeţul Tulcin din administraţia românească temporară a Transnistriei nu este copilul direct al Regatului României; intermediarul Guvernământul Transnistriei lipseşte din catalog.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-062",
+      "sourceGroup": "Județe istorice/Județul Tutova",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2945089
+      ],
+      "sourceVersionIds": [
+        "ohm-r2945089"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2945089",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-tutova-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Tutova este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-063",
+      "sourceGroup": "Județe istorice/Județul Vaslui",
+      "sourceClass": "county",
+      "sourceRelations": [
+        2943670
+      ],
+      "sourceVersionIds": [
+        "ohm-r2943670"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2943670",
+          "start": "1859",
+          "end": null
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [
+        "ohm-1930-vaslui-to-romania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Judeţul Vaslui este documentat ca unitate administrativă a Regatului; numai raportul de apartenenţă pentru intervalul probat este admis. Geometria OHM şi eventualele intervale fără sfârşit nu sunt certificate.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": false,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-064",
+      "sourceGroup": "Principatele Unite",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2692354,
+        2746400
+      ],
+      "sourceVersionIds": [
+        "ohm-r2692354",
+        "ohm-r2746400"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2692354",
+          "start": "1878-07-13",
+          "end": "1881-03-14"
+        },
+        {
+          "sourceId": "ohm-r2746400",
+          "start": "1859-02-05",
+          "end": "1878-07-13"
+        }
+      ],
+      "verdict": "POLITICAL_ENTITY_ROOT",
+      "candidateParent": "Statul Principatelor Unite",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [],
+      "reason": "Este o entitate politică de rang superior; tranziţia 1859–1881 nu se codifică drept relaţie părinte–copil cu Regatul României.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-065",
+      "sourceGroup": "Principatul Moldovei",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2694163,
+        2746689
+      ],
+      "sourceVersionIds": [
+        "ohm-r2694163",
+        "ohm-r2746689"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2694163",
+          "start": "1812-05-28",
+          "end": "1856-03-30"
+        },
+        {
+          "sourceId": "ohm-r2746689",
+          "start": "1856-03-30",
+          "end": "1859-02-05"
+        }
+      ],
+      "verdict": "POLITICAL_ENTITY_ROOT",
+      "candidateParent": "Principatul Moldovei",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [],
+      "reason": "Raporturile istorice de suzeranitate/protectorat nu constituie automat subordonare administrativă directă.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-066",
+      "sourceGroup": "Regatul României",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2692219,
+        2693255,
+        2693256,
+        2693257,
+        2693258,
+        2693259,
+        2693260,
+        2693464,
+        2877966
+      ],
+      "sourceVersionIds": [
+        "ohm-r2692219",
+        "ohm-r2693255",
+        "ohm-r2693256",
+        "ohm-r2693257",
+        "ohm-r2693258",
+        "ohm-r2693259",
+        "ohm-r2693260",
+        "ohm-r2693464",
+        "ohm-r2877966"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2692219",
+          "start": "1881-03-14",
+          "end": "1913-08-29"
+        },
+        {
+          "sourceId": "ohm-r2693255",
+          "start": "1941-08-19",
+          "end": "1944-04-01"
+        },
+        {
+          "sourceId": "ohm-r2693256",
+          "start": "1940-09-07",
+          "end": "1941-08-19"
+        },
+        {
+          "sourceId": "ohm-r2693257",
+          "start": "1940-08-30",
+          "end": "1940-09-07"
+        },
+        {
+          "sourceId": "ohm-r2693258",
+          "start": "1940-06-28",
+          "end": "1940-08-30"
+        },
+        {
+          "sourceId": "ohm-r2693259",
+          "start": "1921",
+          "end": "1940-06-28"
+        },
+        {
+          "sourceId": "ohm-r2693260",
+          "start": "1913-08-30",
+          "end": "1918"
+        },
+        {
+          "sourceId": "ohm-r2693464",
+          "start": "1919",
+          "end": "1921"
+        },
+        {
+          "sourceId": "ohm-r2877966",
+          "start": "1945-03-09",
+          "end": "1947-12-30"
+        }
+      ],
+      "verdict": "POLITICAL_ENTITY_ROOT",
+      "candidateParent": "Regatul României",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "RomanianOfficial1930",
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf"
+        }
+      ],
+      "reason": "Stat istoric; cele 16 legături judeţene sunt subordonări către acest părinte, nu către o provincie modernă.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-067",
+      "sourceGroup": "Regiunea Akkerman",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2960608
+      ],
+      "sourceVersionIds": [
+        "ohm-r2960608"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2960608",
+          "start": "1940-08-07",
+          "end": "1940-12-07"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "RSS Ucraineană",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "IzmailAkkerman",
+          "url": "https://edu.lvivcenter.org/en/modules/izmail-region-in-soviet-memory-eng/"
+        }
+      ],
+      "reason": "Regiunea sovietică din 1940; tranziţia către Ismail este de identitate/denumire sau reorganizare, nu părinte–copil.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-068",
+      "sourceGroup": "Regiunea Cernăuți",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2960367
+      ],
+      "sourceVersionIds": [
+        "ohm-r2960367"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2960367",
+          "start": "1940-08-07",
+          "end": "1991-08-24"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "RSS Ucraineană",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "ChernivtsiArchives",
+          "url": "https://old.archives.gov.ua/Eng/Publicat/Chernivci_booklet.pdf"
+        }
+      ],
+      "reason": "Regiune sovietică 1940–1991, cu întreruperi de control în timpul războiului; nu se ataşează RSS Moldoveneşti.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-069",
+      "sourceGroup": "Regiunea Ismail",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2960607
+      ],
+      "sourceVersionIds": [
+        "ohm-r2960607"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2960607",
+          "start": "1940-12-07",
+          "end": "1954-02-15"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "RSS Ucraineană",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "IzmailAkkerman",
+          "url": "https://edu.lvivcenter.org/en/modules/izmail-region-in-soviet-memory-eng/"
+        }
+      ],
+      "reason": "Regiune sovietică; contur comun cu Akkerman nu înseamnă subordonare una faţă de cealaltă.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-070",
+      "sourceGroup": "Regiunea Transcarpatia",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2859183
+      ],
+      "sourceVersionIds": [
+        "ohm-r2859183"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2859183",
+          "start": "1946-01-22",
+          "end": "1991-08-24"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "RSS Ucraineană",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "TranscarpathiaUkrSSR",
+          "url": "https://www.mek.oszk.hu/22700/22757/22757.pdf"
+        }
+      ],
+      "reason": "Oblast sovietică post-1946; nu este copilul Transcarpatiei interbelice deşi numele şi zona se aseamănă.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-071",
+      "sourceGroup": "RSS Moldovenească",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2694777
+      ],
+      "sourceVersionIds": [
+        "ohm-r2694777"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2694777",
+          "start": "1944",
+          "end": "1991-05-22"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "URSS",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "USSRMoldavia",
+          "url": "https://history.state.gov/historicaldocuments/frus1940v01/d522"
+        }
+      ],
+      "reason": "Republică unională; URSS nu se regăseşte în catalogul OHM.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-072",
+      "sourceGroup": "Transcarpatia",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2857483
+      ],
+      "sourceVersionIds": [
+        "ohm-r2857483"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2857483",
+          "start": "1920-08-10",
+          "end": "1938-11-02"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Republica Cehoslovacă",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "TranscarpathiaCSR",
+          "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CU%5CSubcarpathianRuthenia.htm"
+        }
+      ],
+      "reason": "Provincia cehoslovacă 1920–1938; nu se ataşează retroactiv Transilvaniei.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-073",
+      "sourceGroup": "Transilvania",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2690518,
+        2747433,
+        2829384,
+        2878295
+      ],
+      "sourceVersionIds": [
+        "ohm-r2690518",
+        "ohm-r2747433",
+        "ohm-r2829384",
+        "ohm-r2878295"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2690518",
+          "start": "1732-12-31",
+          "end": "1765"
+        },
+        {
+          "sourceId": "ohm-r2747433",
+          "start": "1711-04-29",
+          "end": "1732-12-31"
+        },
+        {
+          "sourceId": "ohm-r2829384",
+          "start": "1851-05-12",
+          "end": "1867-05-29"
+        },
+        {
+          "sourceId": "ohm-r2878295",
+          "start": "1765",
+          "end": "1851-05-12"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Monarhia Habsburgică / Coroana Ungariei în funcţie de epocă",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "PartiumResearch",
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry"
+        }
+      ],
+      "reason": "Unitate istorică majoră; 3 copii Partium probaţi numai 1733–1847, fără alte atribuiri implicite.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-074",
+      "sourceGroup": "Țara Chioarului",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2747434,
+        2747435
+      ],
+      "sourceVersionIds": [
+        "ohm-r2747434",
+        "ohm-r2747435"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2747434",
+          "start": "1860-12-27",
+          "end": "1876"
+        },
+        {
+          "sourceId": "ohm-r2747435",
+          "start": "1650",
+          "end": "1851-05-12"
+        }
+      ],
+      "verdict": "QUALIFIED_RELATION_IN_PERIOD",
+      "candidateParent": "Transilvania",
+      "acceptedLinkIds": [
+        "ohm-partium-1733-chioar-to-transilvania"
+      ],
+      "evidenceReferences": [
+        {
+          "key": "PartiumAdministration",
+          "url": "https://lexikon.katolikus.hu/P/Partium.html"
+        },
+        {
+          "key": "PartiumResearch",
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry"
+        }
+      ],
+      "reason": "Admitere limitată 1733–1847; perioada OHM ulterioară 1860–1876 necesită altă soluţie de apartenenţă administrativă.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Păstrează temporalitatea şi reanalizează perioadele din afara intervalului documentat."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-075",
+      "sourceGroup": "Țara Românească",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2694164,
+        2929115,
+        2929116,
+        2929117
+      ],
+      "sourceVersionIds": [
+        "ohm-r2694164",
+        "ohm-r2929115",
+        "ohm-r2929116",
+        "ohm-r2929117"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2694164",
+          "start": "1417",
+          "end": "1420"
+        },
+        {
+          "sourceId": "ohm-r2929115",
+          "start": "1420",
+          "end": "1538"
+        },
+        {
+          "sourceId": "ohm-r2929116",
+          "start": "1538",
+          "end": "1829-09-14"
+        },
+        {
+          "sourceId": "ohm-r2929117",
+          "start": "1829-09-14",
+          "end": "1859-02-05"
+        }
+      ],
+      "verdict": "POLITICAL_ENTITY_ROOT",
+      "candidateParent": "Principatul Ţării Româneşti",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [],
+      "reason": "Principat istoric; dependenţele de suzeranitate nu sunt relaţii administrative directe cu entităţile acestui catalog.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    },
+    {
+      "caseId": "HIST-OHM-TREE.2-076",
+      "sourceGroup": "Voivodina Sârbească și Banatul Timișan",
+      "sourceClass": "state_or_region",
+      "sourceRelations": [
+        2694215
+      ],
+      "sourceVersionIds": [
+        "ohm-r2694215"
+      ],
+      "dateWindows": [
+        {
+          "sourceId": "ohm-r2694215",
+          "start": "1849-11-18",
+          "end": "1860-12-27"
+        }
+      ],
+      "verdict": "PARENT_OUTSIDE_OHM",
+      "candidateParent": "Imperiul Austriac",
+      "acceptedLinkIds": [],
+      "evidenceReferences": [
+        {
+          "key": "BanatVoivodina",
+          "url": "https://www.banat.ro/XIX.pdf"
+        }
+      ],
+      "reason": "Provincia imperială creată în 1849 a fost administrată direct de Viena; Banatul Timişoarei nu era părintele.",
+      "geometryBoundaryCertified": false,
+      "qualifiedSourcePeriodEnd": true,
+      "sourceOnly": true,
+      "administrativeParentsInferredFromGeometry": false,
+      "nextAction": "Identifică părintele lipsă şi sursa administrativă individuală înaintea unei admiteri."
+    }
+  ]
+}

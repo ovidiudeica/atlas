@@ -79,9 +79,10 @@ export function validateOhmParentage(index,register){
 
 /**
  * Creates a forest for a reference year. The category root is UI-only;
- *  a child is nested administratively ONLY when a documentary edge is active.
- * All 139 source-version uses remain addressable, even if temporal matching
- * is uncertain; a missing source end-date never means current-year membership.
+ * a child is nested administratively ONLY when a documentary edge is active.
+ * Independent administrative membership can be established for a year even
+ * if an OHM source's geometry has no confirmed end date. Membership NEVER
+ * implicitly certifies the boundary or the source's historical interval.
  */
 export function buildHistoricalOhmTree(index,register,year){
   const valid=validateOhmParentage(index,register);
@@ -111,9 +112,12 @@ export function buildHistoricalOhmTree(index,register,year){
   for(const link of register.links){
     if(!pointIn(link,date))continue;
     const parent=nodes.get(link.parentSourceGroup),child=nodes.get(link.childSourceGroup);
-    // Preserve the hierarchy only where BOTH source groups have a
-    // dated version for this reference year. Undated nodes stay unlinked.
-    if(!parent?.activeEntries.length||!child?.activeEntries.length)continue;
+    if(!parent||!child)continue;
+    // HIST-OHM-TREE.2: documentary institutional parentage is independent
+    // from polygon validity and source geometry period completeness.
+    // A county with OHM end_date=null may be a documented county in 1930;
+    // it belongs in the documentary tree with geometry availability marked
+    // unqualified. NEVER extend its OHM polygon into 1930 automatically.
     child.parentGroup=parent.group;child.parentEvidence=link;
     parent.children.push(child);
     activeLinks.push(link);
