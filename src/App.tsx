@@ -1771,6 +1771,9 @@ export default function App() {
       </aside>}
       <main className="map-area" data-map-ready={ready&&rootsLoaded?'true':'false'}
         data-map-visible-count={mapVisible.length}
+        data-history-checked-count={historyVisibleIds.length}
+        data-history-distinct-assets={new Set(Object.values(historyVisible).map(r=>r.entry.geometryId)).size}
+        data-history-year={historyYear}
         data-ro-style={rootStyles.get(ROOT_IDS[0])?.key}
         data-md-style={rootStyles.get(ROOT_IDS[1])?.key} onPointerDown={event=>{
         if(event.target instanceof Element && event.target.closest('.maplibregl-canvas-container'))closeModulePanel();
