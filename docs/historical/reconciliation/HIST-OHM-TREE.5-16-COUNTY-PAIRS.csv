@@ -1,0 +1,17 @@
+name,ohm_id,rohgis_id,iou,sym_km2,haus_km,ohm_period,temporal,geometry_equal,share_geometry_id,ohm_only_km2,rohgis_only_km2
+Arad,ohm-r2829529,rohgis:county:1930:arad,0.97881471,134.565011,4.930327,1921-07-26--1950-09-06,CONTAINS_1930_NOT_CERTIFIED,false,false,93.888956,40.676055
+Bacău,ohm-r2943619,rohgis:county:1930:bacau,0.97731834,101.411441,4.617798,1859--?,END_UNKNOWN,false,false,58.425767,42.985675
+Botoșani,ohm-r2940712,rohgis:county:1930:botosani,0.95973396,125.527111,4.289004,1859--?,END_UNKNOWN,false,false,102.725223,22.801888
+Covurlui,ohm-r2945088,rohgis:county:1930:covurlui,0.95481521,123.048365,3.492754,1859--?,END_UNKNOWN,false,false,54.144813,68.903552
+Dorohoi,ohm-r2937887,rohgis:county:1930:dorohoi,0.97499117,73.322740,4.992500,1859--?,END_UNKNOWN,false,false,29.631722,43.691018
+Fălciu,ohm-r2943671,rohgis:county:1930:falciu,0.94875158,109.797290,5.055099,1859--?,END_UNKNOWN,false,false,83.693329,26.103960
+Iași,ohm-r2943493,rohgis:county:1930:iasi,0.94741289,177.820654,6.789621,1859--?,END_UNKNOWN,false,false,37.272776,140.547878
+Maramureș,ohm-r2829519,rohgis:county:1930:maramures,0.98959708,35.834806,2.156995,1921--1940-08-29,CONTAINS_1930_NOT_CERTIFIED,false,false,17.822798,18.012008
+Neamț,ohm-r2943485,rohgis:county:1930:neamt,0.78981370,1007.356282,33.954298,1859--?,END_UNKNOWN,false,false,190.755475,816.600807
+Putna,ohm-r2943652,rohgis:county:1930:putna,0.92709458,258.862803,5.606156,1859--?,END_UNKNOWN,false,false,71.951473,186.911330
+Roman,ohm-r2943496,rohgis:county:1930:roman,0.92051066,158.655169,6.950582,1859--?,END_UNKNOWN,false,false,52.707348,105.947821
+Suceava,ohm-r2940721,rohgis:county:1930:suceava,0.00057506,4405.521657,66.551954,1859--?,END_UNKNOWN,false,false,3355.731872,1049.789785
+Tecuci,ohm-r2945087,rohgis:county:1930:tecuci,0.92604762,184.725604,4.617798,1859--?,END_UNKNOWN,false,false,83.707969,101.017634
+Timiș-Torontal,ohm-r2829528,rohgis:county:1930:timis-torontal,0.98967072,78.095965,1.859056,1920-06-04--1950-09-06,CONTAINS_1930_NOT_CERTIFIED,false,false,32.893066,45.202899
+Tutova,ohm-r2945089,rohgis:county:1930:tutova,0.91920340,207.876080,5.055099,1859--?,END_UNKNOWN,false,false,67.504627,140.371453
+Vaslui,ohm-r2943670,rohgis:county:1930:vaslui,0.92212743,181.442020,6.954001,1859--?,END_UNKNOWN,false,false,122.682393,58.759627
