@@ -2030,6 +2030,42 @@ async function historicalOhmSmoke(cdp){
  assert.equal(await p.eval("document.querySelectorAll('.tree-sidebar .history-tree-row.has-qualified-parent input[type=checkbox]:disabled').length"),
    11,'No 1865 OHM source polygon is automatically qualified for date');
  await p.close();
+
+ // HIST-OHM-TREE.3: documentary parents without GeoJSON must appear as
+ // qualified temporal hierarchy nodes, never as artificial map features.
+ const doc=await cdp.page(1440,900,false,site+'?lang=ro');
+ await doc.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+   'Historical documentary parent map ready');
+ await doc.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+ await doc.wait("!!document.querySelector('.tree-sidebar .history-tree-node')",
+   'OHM documentary parent catalogue loaded');
+ await doc.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1911');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+ await doc.wait("document.querySelector('.map-area')?.dataset.historyYear==='1911'",
+   'Hungarian kingdom documentary year');
+ await doc.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(r=>r.querySelector('.history-tree-name')?.textContent?.includes('Regatul Ungariei'));if(!row)throw Error('Kingdom of Hungary documentary parent missing');if(row.querySelector('input[type=checkbox]'))throw Error('Documentary parent must not have a polygon checkbox');row.querySelector('.history-tree-expand').click();})()");
+ await doc.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===28",
+   'All 28 individually named 1911 comitates nested under documentary Hungary');
+ assert.equal(await doc.eval("document.querySelector('.map-area')?.dataset.historyCheckedCount"),
+   '0','Documentary parent expansion did not add artificial map geometries');
+ assert.equal(await doc.eval("document.querySelectorAll('.tree-sidebar .history-documentary-mark').length>=1"),
+   true,'Visible geometry-free parent indicator');
+ await doc.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1942');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+ await doc.wait("document.querySelector('.map-area')?.dataset.historyYear==='1942'",
+   'Occupation governorate documentary year');
+ await doc.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(r=>r.querySelector('.history-tree-name')?.textContent?.includes('Guvernământul Transnistriei'));if(!row)throw Error('Transnistria occupation governorate missing');row.querySelector('.history-tree-expand').click();})()");
+ await doc.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===3",
+   'Three occupation-administered counties under Transnistria, not Romanian Kingdom');
+ await doc.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1946');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+ await doc.wait("document.querySelector('.map-area')?.dataset.historyYear==='1946'",
+   'Soviet documentary ancestor year');
+ await doc.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(r=>r.querySelector('.history-tree-name')?.textContent?.includes('Uniunea Republicilor Sovietice Socialiste'));if(!row)throw Error('USSR documentary ancestor missing');row.querySelector('.history-tree-expand').click();})()");
+ await doc.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(r=>r.querySelector('.history-tree-name')?.textContent?.includes('Republica Sovietică Socialistă Ucraineană'));if(!row)throw Error('Ukrainian SSR documented child missing');row.querySelector('.history-tree-expand').click();})()");
+ await doc.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===5",
+   'USSR > Ukrainian SSR > three oblasts plus Moldavian SSR');
+ assert.equal(await doc.eval("document.querySelector('.map-area')?.dataset.historyCheckedCount"),
+   '0','Documentary-only ancestors never add map polygons');
+ await doc.snap('desktop-documentary-parents-without-geometry.png');
+ await doc.close();
 }
 
 try{
