@@ -52,6 +52,9 @@ Zaránd rămâne HOLD din cauza împărțirii din 1732; comitatele reformei 1876
 
 ## D. Rezultatul temporal al arborelui
 
+**Semantica selectorului de an:** la selectarea unui an, arborele include o relație administrativă dacă există dovezi pentru **cel puțin o zi din anul respectiv**. Perioadele exacte ale relației rămân în registru și card; afișarea în lista anului 1890 sau 1925 **nu dovedește** că relația exista la 1 iulie ori că era valabilă întregul an. O eventuală schimbare de părinte în cursul anului este blocată ca ambiguă până când există un selector cu dată completă. Disponibilitatea versiunilor geometrice OHM este evaluată și afișată **separat**, fără completarea intervalelor nule.
+
+
 | An de referință (1 iulie) | Părinte existent | Copii documentați |
 |---:|---|---:|
 | 1800 | Transilvania | 3 |
