@@ -958,3 +958,47 @@
 .history-tree-version-row input:disabled+.history-version-button{
   border-left:2px dotted #d5b576;
 }
+
+/* HIST-OHM-TREE.3: geometry-free historical institutions are documentary
+ * ancestors, never virtual/fabricated polygon features or active checkboxes. */
+.history-documentary-no-checkbox{
+  display:flex;align-items:center;justify-content:center;flex:0 0 18px;
+  width:18px;height:18px;color:#607365;font-size:15px;line-height:1;
+}
+.history-documentary-mark{
+  display:inline-flex;justify-content:center;align-items:center;
+  flex:0 0 auto;min-height:22px;padding:3px 5px;border-radius:5px;
+  font-size:9px;font-weight:800;letter-spacing:.4px;line-height:1;
+  background:#ebf0ec;border:1px solid #c9d9d0;color:#3e614a;
+}
+.history-tree-row:has(.history-documentary-mark){
+  background:#f5f8f5;
+}
+.history-tree-row:has(.history-documentary-mark) .history-tree-name{
+  color:#194631;font-weight:760;
+}
+.history-documentary-details{
+  padding:8px 9px 12px;margin:4px 4px 10px;
+  background:#f7faf8;border:1px solid #d5e4d9;border-radius:7px;
+  color:#355746;min-width:0;font-size:11px;line-height:1.48;
+}
+.history-documentary-details p{margin:4px 0 7px}
+.history-documentary-details .history-documentary-label{
+  margin:8px 0 3px;font-size:10.5px;color:#496554;font-weight:750;
+}
+.history-documentary-period{
+  font-weight:700;font-variant-numeric:tabular-nums;
+  color:#254e36;
+}
+.history-documentary-details ul{
+  padding-left:18px;margin:2px 0 0;
+}
+.history-documentary-details li{
+  margin:6px 0;overflow-wrap:anywhere;
+}
+.history-documentary-details a{
+  color:#155a43;text-decoration:underline;text-underline-offset:2px;
+}
+.history-documentary-details a:focus-visible{
+  outline:3px solid #946217;outline-offset:2px;
+}
