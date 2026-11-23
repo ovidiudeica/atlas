@@ -34,4 +34,4 @@ Original plăși: https://drive.google.com/file/d/1WLnoTCnxx41x-oP6aECkKlCS-HJlU
 
 Verificare: node --test tests/hist-ohm-tree4-rohgis-1930.test.mjs; npm test; npm run build.
 
-Stadiu drepturi: HOLD PENDING REUSE CONFIRMATION pentru republicarea RoHGIS. Ramura este destinată revizuirii; nu se face merge și publicare în GitHub Pages înainte de calificarea drepturilor. Fișierele Drive și modulul ACTUAL rămân nemodificate.
+Licență verificată: RoHGIS publică datele sub Creative Commons Attribution 4.0 International (https://rohgis.ro/despre/), cu obligația de atribuire; geometria județelor este atribuită lui Andrei Nacu și Cezar Buterez, cea a plășilor lui Cezar Buterez. Au fost reproiectate numai copiile de afișare WGS84, nu originalele EPSG:3844. Identitatea juridică a hotarelor rămâne necertificată. Baza OHM și fișierele Drive rămân nemodificate. Parentajul documentar suplimentar este păstrat în registrele -extensions.json, nu în registrul istoric înghețat.
