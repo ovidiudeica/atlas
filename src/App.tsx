@@ -7,7 +7,8 @@ import { territorialRoleLabel as roleLabel, municipalRoleClarification } from '.
 import { PMR_CADASTRAL_SOURCE, pmrCadastralSeatCode } from './data/pmrCadastral.mjs';
 import { EntityCardSection } from './components/EntityCardSection';
 import { HistoricalGeodataBrowser,HistoricalGeodataEntityCard,
-  type HistoricalGeodataSelection } from './components/HistoricalGeodataBrowser';
+  type HistoricalGeodataSelection,type HistoricalVisibilityChange } from './components/HistoricalGeodataBrowser';
+import {geodataSourceAtDate} from './data/historicalGeodata.mjs';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { SymbolAuditSummary } from './components/SymbolAuditSummary';
 import { symbolAuditFor } from './data/symbolAudit.mjs';
@@ -381,6 +382,9 @@ export default function App() {
     SHARED_STATE.entity?'administrative':null);
   // HIST-OHM-CORE: the only active historical source is OpenHistoricalMap.
   const [historyYear,setHistoryYear] = useState(1835);
+  const [historyYearOnly,setHistoryYearOnly] = useState(false);
+  const [historyVisible,setHistoryVisible] = useState<Record<string,HistoricalGeodataSelection>>({});
+  const historicalMapSelectionsRef=useRef<Record<string,HistoricalGeodataSelection>>({});
   const [historyFilterActive,setHistoryFilterActive] = useState(false);
   const [historyResetEpoch,setHistoryResetEpoch] = useState(0);
   const [historicalGeodataSelection,setHistoricalGeodataSelection] = useState<HistoricalGeodataSelection|null>(null);
@@ -465,6 +469,7 @@ export default function App() {
   const visibleSet = useMemo(()=>new Set(visible),[visible]);
   const expandedSet = useMemo(()=>new Set(expanded),[expanded]);
   const currentNode=selected?nodes.get(selected) || null:null;
+  const historyVisibleIds=useMemo(()=>Object.keys(historyVisible),[historyVisible]);
   const historicalSourceCardActive = Boolean(historicalGeodataSelection && selectedModule==='historical');
   const historicalCardActive = historicalSourceCardActive;
   const shownCardName = historicalSourceCardActive&&historicalGeodataSelection ?
@@ -688,6 +693,23 @@ export default function App() {
       instance.addLayer({id:'historical-geodata-outline',type:'line',source:'historical-geodata',
         paint:{'line-color':'#0b7586','line-width':3,'line-opacity':0.93,
           'line-dasharray':[4,2]}});
+      // Source polygons can be checked independently, including across modules.
+      // Every rendered feature carries a source-version ID; equal geometry
+      // assets are drawn once and are never inserted in the ACTUAL source.
+      for(const layer of ['historical-geodata-fill','historical-geodata-outline']){
+        instance.on('click',layer,event=>{
+          const id=event.features?.[0]?.properties?.atlasHistoricalSourceId;
+          if(typeof id!=='string')return;
+          const record=historicalMapSelectionsRef.current[id];
+          if(!record)return;
+          setHistoricalGeodataSelection(record);
+          setSelected(null);setSelectedModule('historical');setDetailPanelOpen(true);
+          if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
+          else if(window.innerWidth<1100)setModulePanelOpen(false);
+        });
+        instance.on('mouseenter',layer,()=>{instance.getCanvas().style.cursor='pointer';});
+        instance.on('mouseleave',layer,()=>{instance.getCanvas().style.cursor='';});
+      }
       instance.on('mousemove','entity-fill',event=>{
         const id=event.features?.[0]?.properties?.atlasId;
         instance.setFilter('entity-hover',['==',['get','atlasId'],typeof id==='string'?id:'__none__']);
@@ -826,11 +848,28 @@ export default function App() {
     if(!ready||!mapRef.current)return;
     const source=mapRef.current.getSource('historical-geodata') as GeoJSONSource|undefined;
     if(!source)return;
-    if(selectedModule!=='historical'||!historicalGeodataSelection){
-      source.setData(EMPTY_FEATURES);return;
-    }
-    source.setData({type:'FeatureCollection',features:[historicalGeodataSelection.feature]});
-  },[ready,selectedModule,historicalGeodataSelection]);
+    const at=String(historyYear).padStart(4,'0')+'-07-01';
+    const chosen=Object.values(historyVisible).filter(record=>
+      !historyYearOnly||geodataSourceAtDate(record.entry,at));
+    if(selectedModule==='historical'&&historicalGeodataSelection)
+      chosen.push(historicalGeodataSelection);
+    // One map feature per exact shared geometry, regardless of source period.
+    // The last entry is the selected Entity-card version when selected.
+    const unique=new Map<string,HistoricalGeodataSelection>();
+    for(const record of chosen)unique.set(record.entry.geometryId,record);
+    const mapSelections:Record<string,HistoricalGeodataSelection>={};
+    const features=[...unique.values()].map(record=>{
+      mapSelections[record.entry.id]=record;
+      return {...record.feature,id:record.entry.id,properties:{
+        ...record.feature.properties,
+        atlasHistoricalSourceId:record.entry.id,
+        atlasHistoricalGeometryId:record.entry.geometryId,
+        atlasHistoricalSelected:record.entry.id===historicalGeodataSelection?.entry.id
+      }};
+    });
+    historicalMapSelectionsRef.current=mapSelections;
+    source.setData({type:'FeatureCollection',features});
+  },[ready,historyVisible,historyYearOnly,historyYear,selectedModule,historicalGeodataSelection]);
 
   const toggleVisible = useCallback((id:string)=>setVisible(old=>old.includes(id)?old.filter(x=>x!==id):[...old,id]),[]);
   const toggleChildren = useCallback((ids:string[],show:boolean)=>setVisible(old=>{
@@ -843,6 +882,16 @@ export default function App() {
     if(window.innerWidth<=700){setModulePanelOpen(false);setDrawer('detail');}
     else if(window.innerWidth<1100)setModulePanelOpen(false);
   },[]);
+  function changeHistoricalVisibility(changes:HistoricalVisibilityChange[],show:boolean){
+    setHistoryVisible(previous=>{
+      const next={...previous};
+      for(const change of changes){
+        if(show&&change.feature)next[change.entry.id]={entry:change.entry,feature:change.feature};
+        if(!show)delete next[change.entry.id];
+      }
+      return next;
+    });
+  }
   function chooseHistoricalGeodata(selection:HistoricalGeodataSelection){
     setHistoricalGeodataSelection(selection);
     setSelected(null);setSelectedModule('historical');setDetailPanelOpen(true);
@@ -955,18 +1004,22 @@ export default function App() {
   // selections owned by another module. The global reset restores RO + MD.
   const reset=()=>mapRef.current?.fitBounds(BOUNDS,{padding:45,duration:650});
   const localSelectionActive=module==='historical'?
-    (historicalGeodataSelection!==null||historyFilterActive||historyYear!==1835):
+    (historicalGeodataSelection!==null||historyVisibleIds.length>0||
+     historyFilterActive||historyYearOnly||historyYear!==1835):
     moduleHasSelections(moduleVisible,module,DEFAULT_VISIBLE,
       adminFilters,statFilters,selected,selectedModule);
   function resetLocalModule(id:ModuleId){
     if(id==='historical'){
-      if(!historicalGeodataSelection&&!historyFilterActive&&historyYear===1835)return;
+      if(!historicalGeodataSelection&&!historyVisibleIds.length&&
+          !historyFilterActive&&!historyYearOnly&&historyYear===1835)return;
       if(historicalGeodataSelection && selectedModule==='historical'){
         setSelectedModule(selected?'administrative':null);
         setDetailPanelOpen(false);
         if(drawer==='detail')setDrawer(null);
       }
       setHistoricalGeodataSelection(null);
+      setHistoryVisible({});
+      setHistoryYearOnly(false);
       setHistoryYear(1835);
       setHistoryFilterActive(false);
       setHistoryResetEpoch(x=>x+1);
@@ -997,6 +1050,8 @@ export default function App() {
   }
   const resetAllSelections=()=>{
     setHistoricalGeodataSelection(null);
+    setHistoryVisible({});
+    setHistoryYearOnly(false);
     setHistoryFilterActive(false);
     setHistoryResetEpoch(x=>x+1);
     setHistoryYear(1835);
@@ -1249,6 +1304,8 @@ export default function App() {
 
   const historicalPanel=<HistoricalGeodataBrowser key={historyResetEpoch}
     year={historyYear} onYear={setHistoryYear} onFiltersActiveChange={setHistoryFilterActive}
+    onYearFilterChange={setHistoryYearOnly} visibleIds={historyVisibleIds}
+    onVisibilityChange={changeHistoricalVisibility}
     lang={lang} selectedId={historicalGeodataSelection?.entry.id||null}
     onSelect={chooseHistoricalGeodata}/>;
 
@@ -1714,6 +1771,9 @@ export default function App() {
       </aside>}
       <main className="map-area" data-map-ready={ready&&rootsLoaded?'true':'false'}
         data-map-visible-count={mapVisible.length}
+        data-history-checked-count={historyVisibleIds.length}
+        data-history-distinct-assets={new Set(Object.values(historyVisible).map(r=>r.entry.geometryId)).size}
+        data-history-year={historyYear}
         data-ro-style={rootStyles.get(ROOT_IDS[0])?.key}
         data-md-style={rootStyles.get(ROOT_IDS[1])?.key} onPointerDown={event=>{
         if(event.target instanceof Element && event.target.closest('.maplibregl-canvas-container'))closeModulePanel();

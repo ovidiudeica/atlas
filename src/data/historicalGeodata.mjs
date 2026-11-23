@@ -154,3 +154,19 @@ export async function loadGeodataSourceFeature(index,entry,base='/'){
    return feature;
  }catch(err){cached.delete(cacheKey);throw err}
 }
+
+/**
+ * Runtime geometry sharing: all dated versions pointing at the same exact
+ * coordinate asset resolve to ONE canonical immutable OHM feature. Source
+ * version identity/provenance still comes from the requested index entry.
+ */
+export async function loadGeodataSharedAsset(index,entry,base='/'){
+ if(!entry||!index?.entries?.some(e=>e.id===entry.id))
+   throw Error('Historical version is not indexed');
+ const canonicalId=entry.geometryId?.startsWith('geom:')?
+   entry.geometryId.slice(5):null;
+ const canonical=index.entries.find(e=>e.id===canonicalId);
+ if(!canonical||canonical.geometryId!==entry.geometryId)
+   throw Error('Shared historical geometry asset has no canonical source');
+ return loadGeodataSourceFeature(index,canonical,base);
+}

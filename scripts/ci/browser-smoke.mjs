@@ -1932,60 +1932,88 @@ async function simR5Audit(cdp){
  }
 }
 
-/* HIST-OHM-CORE: OHM is the only active historical geometry source.
- * HistoGIS pilot and other supplemental geometries are retired from public UI.
- */
+/* HIST-OHM-TREE.1 — parent/child OHM tree, version-level checkboxes,
+ * geometry sharing and module-local reset, desktop and mobile. */
 async function historicalOhmSmoke(cdp){
-  for(const width of [1440,390]){
-    const mobile=width<700;
-    const p=await cdp.page(width,900,mobile,site+'?lang=ro');
-    const panel=mobile?'.drawer-tree':'.tree-sidebar';
-    await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
-      'OHM: map ready '+width);
-    await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
-    await p.wait("!!document.querySelector('"+panel+" .history-geodata-groups details')",
-      'OHM: catalogue indexed '+width);
-    const summary=await p.eval("document.querySelector('"+panel+" .history-geodata-pane')?.textContent");
-    assert.match(summary,/Entități istorice/,'Compact historical heading '+width);
-    assert.match(summary,/139/,'OHM 139 versions '+width);
-    assert.equal(await p.eval("!!document.querySelector('"+panel+" .history-pilot-review')"),
-      false,'HistoGIS pilot is retired '+width);
-    const headingSize=await p.eval("parseFloat(getComputedStyle(document.querySelector('"+panel+" .history-catalog-heading h3')).fontSize)");
-    assert(headingSize<=19,'Historical heading fits a narrow panel '+width);
-    assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-geodata-category').length"),
-      3,'OHM category coverage remains separate');
-    const layoutOk=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-geodata-pane');const search=root.querySelector('.history-filter-search').getBoundingClientRect();const row=root.querySelector('.history-filter-row').getBoundingClientRect();const year=root.querySelector('.history-filter-year').getBoundingClientRect();const checkbox=root.querySelector('.history-filter-checkbox').getBoundingClientRect();const bounds=root.getBoundingClientRect();return search.left>=bounds.left-1&&search.right<=bounds.right+1&&year.right<checkbox.left&&row.top>search.bottom&&row.right<=bounds.right+1;})()");
-    assert.equal(layoutOk,true,'Search and temporal controls remain aligned '+width);
-    assert.equal(await p.eval("document.querySelector('"+panel+" .history-geodata-category:first-child').open"),
-      true,'First OHM catalogue section is visible on opening '+width);
-    await p.eval("(()=>{const el=document.querySelector('"+panel+" #history-catalog-search');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'Bucovina');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
-    await p.wait("!!document.querySelector('"+panel+" .history-filter-count')",
-      'OHM search yields filtered groups '+width);
-    assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-geodata-category').length"),
-      1,'OHM source search narrows categories '+width);
-    await p.eval("document.querySelector('"+panel+" .history-search-clear').click()");
-    await p.wait("document.querySelectorAll('"+panel+" .history-geodata-category').length===3",
-      'OHM clear search restores original categories '+width);
-    await p.eval("document.querySelector('"+panel+" .history-geodata-category:first-child .history-geodata-entity:first-child > summary').click()");
-    await p.eval("document.querySelector('"+panel+" .history-geodata-category:first-child .history-geodata-entity:first-child .history-version-button').click()");
-    const entity=mobile?'.drawer-detail .history-entity-detail':'.detail-sidebar .history-entity-detail';
-    await p.wait("!!document.querySelector('"+entity+" .entity-title h3')",
-      'OHM: source Entity card '+width);
-    const card=await p.eval("document.querySelector('"+entity+"')?.textContent");
-    assert.match(card,/OHM relation/,'OHM relation provenance '+width);
-    assert.match(card,/necertificat/i,'Source remains uncertified '+width);
-    assert.equal(await p.eval("document.documentElement.scrollWidth-innerWidth<=1"),true,
-      'OHM no horizontal overflow '+width);
-    await p.snap((mobile?'mobile':'desktop')+'-historical-ohm-source.png');
-    if(!mobile){
-      await p.eval("document.querySelector('.tree-sidebar .module-reset').click()");
-      await p.wait("!document.querySelector('.detail-sidebar .history-entity-detail')",
-        'OHM local reset clears the source selection');
-      assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.mapReady==='true'"),
-        true,'ACTUAL map remains ready after Historical local reset');
-    }
-    await p.close();
-  }
+ for(const width of [1440,390]){
+   const mobile=width<700;
+   const p=await cdp.page(width,900,mobile,site+'?lang=ro');
+   const panel=mobile?'.drawer-tree':'.tree-sidebar';
+   await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+     'OHM tree map ready '+width);
+   await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+   await p.wait("!!document.querySelector('"+panel+" .history-tree-node')",
+     'OHM source tree mounted '+width);
+   const summary=await p.eval("document.querySelector('"+panel+" .history-geodata-pane')?.textContent");
+   assert.match(summary,/Entități istorice/,'Historical tree title '+width);
+   assert.match(summary,/139/,'OHM 139 source versions retained '+width);
+   assert.match(summary,/76/,'OHM 76 source-group entities retained '+width);
+   assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-geodata-category').length"),
+     3,'OHM source categories preserved '+width);
+   assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-tree-row input[type=checkbox]').length>0"),
+     true,'OHM per-entity visibility checkboxes '+width);
+   const layoutOk=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-geodata-pane');const search=root.querySelector('.history-filter-search').getBoundingClientRect();const row=root.querySelector('.history-filter-row').getBoundingClientRect();const year=root.querySelector('.history-filter-year').getBoundingClientRect();const checkbox=root.querySelector('.history-filter-checkbox').getBoundingClientRect();const bounds=root.getBoundingClientRect();return search.left>=bounds.left-1&&search.right<=bounds.right+1&&year.right<checkbox.left&&row.top>search.bottom&&row.right<=bounds.right+1;})()");
+   assert.equal(layoutOk,true,'OHM search and year controls fit '+width);
+   assert.equal(await p.eval("document.querySelector('"+panel+" .history-geodata-category:first-child').open"),
+     true,'OHM first source category expanded '+width);
+   await p.eval("(()=>{const el=document.querySelector('"+panel+" #history-catalog-search');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'Bucovina');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+   await p.wait("!!document.querySelector('"+panel+" .history-filter-count')",
+     'OHM filtered source tree '+width);
+   assert.equal(await p.eval("document.querySelectorAll('"+panel+" .history-geodata-category').length"),
+     1,'OHM matched source category only '+width);
+   await p.wait("document.querySelectorAll('"+panel+" .history-tree-node:first-child .history-tree-version-row input[type=checkbox]').length>=2",
+     'Multiple Bucovina versions available '+width);
+   await p.eval("document.querySelectorAll('"+panel+" .history-tree-node:first-child .history-tree-version-row input[type=checkbox]')[0].click()");
+   await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='1'",
+     'First OHM shared geometry checked '+width);
+   await p.eval("document.querySelectorAll('"+panel+" .history-tree-node:first-child .history-tree-version-row input[type=checkbox]')[1].click()");
+   await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='2'",
+     'Second temporal source version checked '+width);
+   assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.historyDistinctAssets"),
+     '1','Identical Bucovina source coordinates render through one asset '+width);
+   await p.eval("document.querySelector('"+panel+" .history-tree-node:first-child .history-tree-version-row .history-version-button').click()");
+   const entity=mobile?'.drawer-detail .history-entity-detail':'.detail-sidebar .history-entity-detail';
+   await p.wait("!!document.querySelector('"+entity+" .entity-title h3')",
+     'OHM source-version card '+width);
+   const card=await p.eval("document.querySelector('"+entity+"')?.textContent");
+   assert.match(card,/OHM relation/,'Source identity retained '+width);
+   assert.match(card,/necertificat/i,'No invented certified borders '+width);
+   assert.equal(await p.eval("document.documentElement.scrollWidth-innerWidth<=1"),
+     true,'OHM tree no horizontal overflow '+width);
+   await p.snap((mobile?'mobile':'desktop')+'-ohm-temporal-tree-checked-assets.png');
+   if(!mobile){
+     await p.eval("document.querySelector('.tree-sidebar .module-reset').click()");
+     await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='0'",
+       'OHM local reset cleared all checked polygons');
+     await p.wait("!document.querySelector('.detail-sidebar .history-entity-detail')",
+       'OHM local reset closed its card');
+     assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.mapReady==='true'"),
+       true,'ACTUAL map remains ready after Historical reset');
+   }
+   await p.close();
+ }
+ // Narrow documentary parentage is time-bounded, not a timeless
+ // spatial overlay. Exactly three edges are admitted at 1930, none in 1939.
+ const p=await cdp.page(1440,900,false,site+'?lang=ro');
+ await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'",
+   'Temporal parentage map ready');
+ await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+ await p.wait("!!document.querySelector('.tree-sidebar .history-tree-node')",
+   'OHM parentage source loaded');
+ await p.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1930');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+ await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
+   'OHM 1930 reference-year selected');
+ await p.eval("(()=>{const rows=[...document.querySelectorAll('.tree-sidebar .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.includes('Regatul României'));if(!row)throw Error('Romanian Kingdom node missing');row.querySelector('.history-tree-expand').click();})()");
+ await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===3",
+   'Three documented 1926-1938 direct children of Kingdom of Romania');
+ assert.equal(await p.eval("document.querySelectorAll('.tree-sidebar .history-tree-row.has-qualified-parent').length"),
+   3,'Only three time-scoped parentage records shown');
+ await p.eval("(()=>{const el=document.querySelector('.tree-sidebar .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1939');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+ await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1939'",
+   'OHM 1939 reference-year selected');
+ await p.wait("document.querySelectorAll('.tree-sidebar .history-qualified-link').length===0",
+   'No 1926-1938 parentage extrapolated into 1939');
+ await p.close();
 }
 
 try{

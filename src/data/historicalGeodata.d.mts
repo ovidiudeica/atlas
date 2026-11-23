@@ -46,3 +46,5 @@ export declare function geodataSourcesAtYear(index:GeodataSourceIndex,year:numbe
 export declare function validateGeodataGeometryShard(shard:unknown,index:GeodataSourceIndex,file:string):{ok:boolean;errors:string[]};
 export declare function loadGeodataSourceIndex(base?:string):Promise<GeodataSourceIndex>;
 export declare function loadGeodataSourceFeature(index:GeodataSourceIndex,entry:GeodataSourceEntry,base?:string):Promise<GeodataSourceFeature>;
+
+export declare function loadGeodataSharedAsset(index:GeodataSourceIndex,entry:GeodataSourceEntry,base?:string):Promise<GeodataSourceFeature>;

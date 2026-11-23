@@ -1,0 +1,88 @@
+{
+  "schema": "atlas-historical-ohm-parentage-v1",
+  "asOf": "2026-11-23",
+  "status": "PARTIAL_INDEPENDENT_DOCUMENTARY_QUALIFICATION",
+  "description": "Time-scoped administrative parentage; source geometry and source-reported dates remain unqualified. Unlisted relations have unknown parentage.",
+  "prohibitions": [
+    "no inferred parent from OHM folder",
+    "no inferred parent from geometry overlap",
+    "no dates extended beyond documented interval",
+    "no implied boundary certification",
+    "no implied same institutional identity across different source groups"
+  ],
+  "links": [
+    {
+      "id": "ohm-1926-1938-arad-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Arad",
+      "start": "1926-01-01",
+      "end": "1938-08-13",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "evidence": [
+        {
+          "url": "https://www.cjarad.ro/files-td/uploads-PATJ-Anexe-Partea_scris-1._Faza_II.I_-_Analiza_situatia_existenta.pdf",
+          "type": "county_official_administrative_history",
+          "detail": "p. 99: 1925 unification effective 1 January 1926; Arad county under Romanian kingdom, subsequent 1938 county organization as part of Ținutul Timiș"
+        },
+        {
+          "url": "https://opac.bibliotecaarad.ro/bib/7651",
+          "type": "contemporary_law_catalogue",
+          "detail": "Lege pentru Unificarea Administrativă, Monitorul Oficial no. 128 / 14 June 1925"
+        }
+      ],
+      "note": "Only the historical county's time-scoped state membership, not OHM polygon accuracy or institutional identity across all versions."
+    },
+    {
+      "id": "ohm-1926-1938-maramures-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Maramureș",
+      "start": "1926-01-01",
+      "end": "1938-08-13",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "evidence": [
+        {
+          "url": "https://bjmures.ro/wp-content/uploads/2024/02/C00123.pdf",
+          "type": "published_historical_administrative_study",
+          "detail": "Unificarea administrativă a României întregite (1918–1925): Maramureș among Romania's interwar counties"
+        },
+        {
+          "url": "https://opac.bibliotecaarad.ro/bib/7651",
+          "type": "contemporary_law_catalogue",
+          "detail": "1925 unification law metadata"
+        }
+      ],
+      "note": "Historical state membership only; not an OHM geometry or timeline certification."
+    },
+    {
+      "id": "ohm-1926-1938-timis-torontal-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Timiș-Torontal",
+      "start": "1926-01-01",
+      "end": "1938-08-13",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "evidence": [
+        {
+          "url": "https://www.cjarad.ro/files-td/uploads-PATJ-Anexe-Partea_scris-1._Faza_II.I_-_Analiza_situatia_existenta.pdf",
+          "type": "county_official_administrative_history",
+          "detail": "p. 99, describes 1926 reform and later 1938 Ținutul Timiș encompassing Timiș-Torontal"
+        },
+        {
+          "url": "https://bjmures.ro/wp-content/uploads/2024/02/C00123.pdf",
+          "type": "published_historical_administrative_study",
+          "detail": "Identifies Timiș-Torontal among Banat counties in interwar Romanian administration"
+        }
+      ],
+      "note": "Historical state membership only; new 1938 regional intermediate parent is not present in this OHM catalogue."
+    }
+  ],
+  "pending": "Other OHM entities await individually verified parentage. Unqualified groups are rendered as roots in their source-classification section."
+}
