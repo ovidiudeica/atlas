@@ -1,0 +1,886 @@
+{
+  "schema": "atlas-historical-ohm-existing-parents-audit-v1",
+  "asOf": "2026-11-23",
+  "sourceIndex": {
+    "sha": "e78495d726db9d82cfa3c5771fcd5ffbe70f7f3d",
+    "sourceVersions": 139,
+    "uniqueGeometryAssets": 125,
+    "entitySourceGroups": 76,
+    "highLevelSourceGroups": 18,
+    "countyGroups": 19,
+    "comitateGroups": 39
+  },
+  "documentaryParentage": {
+    "sha": "2257cad803766e52259a2e90ddb0e900305a1118",
+    "qualifiedDirectLinks": 19,
+    "qualifiedParents": [
+      "Regatul României",
+      "Transilvania"
+    ]
+  },
+  "currentTreeSnapshots": [
+    {
+      "year": 1730,
+      "referenceDate": "1730-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 11
+    },
+    {
+      "year": 1735,
+      "referenceDate": "1735-07-01",
+      "documentaryLinks": 3,
+      "topLevelSourceGroups": 73,
+      "parents": [
+        {
+          "group": "Transilvania",
+          "children": [
+            "Țara Chioarului",
+            "Comitate istorice/Comitatul Kraszna",
+            "Comitate istorice/Comitatul Közép-Szolnok"
+          ]
+        }
+      ],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 11
+    },
+    {
+      "year": 1800,
+      "referenceDate": "1800-07-01",
+      "documentaryLinks": 3,
+      "topLevelSourceGroups": 73,
+      "parents": [
+        {
+          "group": "Transilvania",
+          "children": [
+            "Țara Chioarului",
+            "Comitate istorice/Comitatul Kraszna",
+            "Comitate istorice/Comitatul Közép-Szolnok"
+          ]
+        }
+      ],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 24
+    },
+    {
+      "year": 1848,
+      "referenceDate": "1848-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 22
+    },
+    {
+      "year": 1855,
+      "referenceDate": "1855-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 14
+    },
+    {
+      "year": 1865,
+      "referenceDate": "1865-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 18
+    },
+    {
+      "year": 1880,
+      "referenceDate": "1880-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 32
+    },
+    {
+      "year": 1900,
+      "referenceDate": "1900-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 31
+    },
+    {
+      "year": 1930,
+      "referenceDate": "1930-07-01",
+      "documentaryLinks": 16,
+      "topLevelSourceGroups": 60,
+      "parents": [
+        {
+          "group": "Regatul României",
+          "children": [
+            "Județe istorice/Județul Arad",
+            "Județe istorice/Județul Maramureș",
+            "Județe istorice/Județul Timiș-Torontal",
+            "Județe istorice/Județul Bacău",
+            "Județe istorice/Județul Botoșani",
+            "Județe istorice/Județul Covurlui",
+            "Județe istorice/Județul Dorohoi",
+            "Județe istorice/Județul Fălciu",
+            "Județe istorice/Județul Iași",
+            "Județe istorice/Județul Neamț",
+            "Județe istorice/Județul Putna",
+            "Județe istorice/Județul Roman",
+            "Județe istorice/Județul Suceava",
+            "Județe istorice/Județul Tecuci",
+            "Județe istorice/Județul Tutova",
+            "Județe istorice/Județul Vaslui"
+          ]
+        }
+      ],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 8
+    },
+    {
+      "year": 1931,
+      "referenceDate": "1931-07-01",
+      "documentaryLinks": 3,
+      "topLevelSourceGroups": 73,
+      "parents": [
+        {
+          "group": "Regatul României",
+          "children": [
+            "Județe istorice/Județul Arad",
+            "Județe istorice/Județul Maramureș",
+            "Județe istorice/Județul Timiș-Torontal"
+          ]
+        }
+      ],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 8
+    },
+    {
+      "year": 1939,
+      "referenceDate": "1939-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 7
+    },
+    {
+      "year": 1942,
+      "referenceDate": "1942-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 11
+    },
+    {
+      "year": 1946,
+      "referenceDate": "1946-07-01",
+      "documentaryLinks": 0,
+      "topLevelSourceGroups": 76,
+      "parents": [],
+      "sourceVersionsWithBothOHMTimeBoundsAtReferenceDate": 7
+    }
+  ],
+  "existingParents": [
+    {
+      "group": "Banatul Timișoarei",
+      "sourceRelations": [
+        2746573,
+        2747562
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "Frontiera Militară a Banatului had distinct administration; no automatic containment"
+    },
+    {
+      "group": "Bucovina",
+      "sourceRelations": [
+        2684081,
+        2746379,
+        2746380,
+        2746401
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "These represent historically alternating administrative arrangements, not parent-child"
+    },
+    {
+      "group": "Districtul Bucovina",
+      "sourceRelations": [
+        2746744,
+        2746745
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "These represent historically alternating administrative arrangements, not parent-child"
+    },
+    {
+      "group": "Frontiera Militară a Banatului",
+      "sourceRelations": [
+        2746839,
+        2746840,
+        2746841
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "No qualified direct child in current OHM catalog; leave as documentary/source root"
+    },
+    {
+      "group": "Gubernia Basarabia",
+      "sourceRelations": [
+        2694153,
+        2694154
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "No qualified direct child in current OHM catalog; leave as documentary/source root"
+    },
+    {
+      "group": "Principatele Unite",
+      "sourceRelations": [
+        2692354,
+        2746400
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "PRIORITY_CANDIDATE_PARENT",
+      "auditNote": "Candidate: 13 Moldavian counties in 1865, not admitted; original 1865 index must be checked individually"
+    },
+    {
+      "group": "Principatul Moldovei",
+      "sourceRelations": [
+        2694163,
+        2746689
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "OHM Moldavian county geometries start in 1859; do not backdate those polygons into the principality"
+    },
+    {
+      "group": "Regatul României",
+      "sourceRelations": [
+        2692219,
+        2693255,
+        2693256,
+        2693257,
+        2693258,
+        2693259,
+        2693260,
+        2693464,
+        2877966
+      ],
+      "qualifiedDirectLinks": [
+        {
+          "id": "ohm-1926-1938-arad-to-romania",
+          "childGroup": "Județe istorice/Județul Arad",
+          "start": "1926-01-01",
+          "end": "1938-08-13"
+        },
+        {
+          "id": "ohm-1926-1938-maramures-to-romania",
+          "childGroup": "Județe istorice/Județul Maramureș",
+          "start": "1926-01-01",
+          "end": "1938-08-13"
+        },
+        {
+          "id": "ohm-1926-1938-timis-torontal-to-romania",
+          "childGroup": "Județe istorice/Județul Timiș-Torontal",
+          "start": "1926-01-01",
+          "end": "1938-08-13"
+        },
+        {
+          "id": "ohm-1930-bacau-to-romania",
+          "childGroup": "Județe istorice/Județul Bacău",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-botosani-to-romania",
+          "childGroup": "Județe istorice/Județul Botoșani",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-covurlui-to-romania",
+          "childGroup": "Județe istorice/Județul Covurlui",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-dorohoi-to-romania",
+          "childGroup": "Județe istorice/Județul Dorohoi",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-falciu-to-romania",
+          "childGroup": "Județe istorice/Județul Fălciu",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-iasi-to-romania",
+          "childGroup": "Județe istorice/Județul Iași",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-neamt-to-romania",
+          "childGroup": "Județe istorice/Județul Neamț",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-putna-to-romania",
+          "childGroup": "Județe istorice/Județul Putna",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-roman-to-romania",
+          "childGroup": "Județe istorice/Județul Roman",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-suceava-to-romania",
+          "childGroup": "Județe istorice/Județul Suceava",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-tecuci-to-romania",
+          "childGroup": "Județe istorice/Județul Tecuci",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-tutova-to-romania",
+          "childGroup": "Județe istorice/Județul Tutova",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        },
+        {
+          "id": "ohm-1930-vaslui-to-romania",
+          "childGroup": "Județe istorice/Județul Vaslui",
+          "start": "1930-01-22",
+          "end": "1930-12-31"
+        }
+      ],
+      "childCountEver": 16,
+      "childCount1800": 0,
+      "childCount1930": 16,
+      "auditDisposition": "EXISTING_QUALIFIED_CHILDREN",
+      "auditNote": "16 county children in documentary 1930 tree, only 3 have OHM geometry dated in 1930; post-1930 continuation not presumed"
+    },
+    {
+      "group": "Regiunea Akkerman",
+      "sourceRelations": [
+        2960608
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "Identical geometry and succession are not an administrative parent-child edge"
+    },
+    {
+      "group": "Regiunea Cernăuți",
+      "sourceRelations": [
+        2960367
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "No qualified direct child in current OHM catalog; leave as documentary/source root"
+    },
+    {
+      "group": "Regiunea Ismail",
+      "sourceRelations": [
+        2960607
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "Identical geometry and succession are not an administrative parent-child edge"
+    },
+    {
+      "group": "Regiunea Transcarpatia",
+      "sourceRelations": [
+        2859183
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "Different governing administrations/periods; not an administrative parent-child edge"
+    },
+    {
+      "group": "RSS Moldovenească",
+      "sourceRelations": [
+        2694777
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "No qualified direct child in current OHM catalog; leave as documentary/source root"
+    },
+    {
+      "group": "Transcarpatia",
+      "sourceRelations": [
+        2857483
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "Different governing administrations/periods; not an administrative parent-child edge"
+    },
+    {
+      "group": "Transilvania",
+      "sourceRelations": [
+        2690518,
+        2747433,
+        2829384,
+        2878295
+      ],
+      "qualifiedDirectLinks": [
+        {
+          "id": "ohm-partium-1733-chioar-to-transilvania",
+          "childGroup": "Țara Chioarului",
+          "start": "1733-02-16",
+          "end": "1847-12-31"
+        },
+        {
+          "id": "ohm-partium-1733-kraszna-to-transilvania",
+          "childGroup": "Comitate istorice/Comitatul Kraszna",
+          "start": "1733-02-16",
+          "end": "1847-12-31"
+        },
+        {
+          "id": "ohm-partium-1733-kozep-szolnok-to-transilvania",
+          "childGroup": "Comitate istorice/Comitatul Közép-Szolnok",
+          "start": "1733-02-16",
+          "end": "1847-12-31"
+        }
+      ],
+      "childCountEver": 3,
+      "childCount1800": 3,
+      "childCount1930": 0,
+      "auditDisposition": "EXISTING_QUALIFIED_CHILDREN",
+      "auditNote": "3 qualified Partium children in 1733–1847. Later comitate from 1876 must not be attached under Transylvania"
+    },
+    {
+      "group": "Țara Chioarului",
+      "sourceRelations": [
+        2747434,
+        2747435
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "No qualified direct child in current OHM catalog; leave as documentary/source root"
+    },
+    {
+      "group": "Țara Românească",
+      "sourceRelations": [
+        2694164,
+        2929115,
+        2929116,
+        2929117
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "No qualified direct child in current OHM catalog; leave as documentary/source root"
+    },
+    {
+      "group": "Voivodina Sârbească și Banatul Timișan",
+      "sourceRelations": [
+        2694215
+      ],
+      "qualifiedDirectLinks": [],
+      "childCountEver": 0,
+      "childCount1800": 0,
+      "childCount1930": 0,
+      "auditDisposition": "NO_QUALIFIED_CHILD",
+      "auditNote": "No qualified direct child in current OHM catalog; leave as documentary/source root"
+    }
+  ],
+  "priorityCandidate": {
+    "parentGroup": "Principatele Unite",
+    "proposalStatus": "AUDIT_ONLY_DO_NOT_APPLY_TO_ACTIVE_PARENTAGE_REGISTER",
+    "childCount": 13,
+    "children": [
+      {
+        "childGroup": "Județe istorice/Județul Bacău",
+        "sourceRelation": 2943619,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Botoșani",
+        "sourceRelation": 2940712,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Covurlui",
+        "sourceRelation": 2945088,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Dorohoi",
+        "sourceRelation": 2937887,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Fălciu",
+        "sourceRelation": 2943671,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Iași",
+        "sourceRelation": 2943493,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Neamț",
+        "sourceRelation": 2943485,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Putna",
+        "sourceRelation": 2943652,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Roman",
+        "sourceRelation": 2943496,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Suceava",
+        "sourceRelation": 2940721,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Tecuci",
+        "sourceRelation": 2945087,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Tutova",
+        "sourceRelation": 2945089,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      },
+      {
+        "childGroup": "Județe istorice/Județul Vaslui",
+        "sourceRelation": 2943670,
+        "sourcePeriod": {
+          "start": "1859",
+          "end": null,
+          "sourceOnly": true,
+          "notes": null
+        },
+        "parentGroup": "Principatele Unite",
+        "referenceYear": 1865,
+        "verdict": "CANDIDATE_NOT_ADMITTED",
+        "documentaryEvidence": [
+          "https://commons.wikimedia.org/wiki/File:Indicele_Comunelor_Romaniei_1865.pdf",
+          "https://pdfcoffee.com/indicele-comunelor-romaniei-1865-pdf-free.html",
+          "https://www.cjbotosani.ro/files/H001_20260128.pdf"
+        ],
+        "limitation": "Confirm county heading and individual listing in the original 1865 communal index. The OHM 1859–unknown source period cannot certify 1865 geometry; document institutional identity separately before parentage admission."
+      }
+    ],
+    "potentialTopLevelSourceGroupsAfterQualification": 63,
+    "evidenceBoundary": "Must confirm each county in primary 1865 index; do not promote raw 1859–null OHM polygons as valid for 1865.",
+    "referenceYear": 1865
+  },
+  "holdExamples": [
+    {
+      "groups": [
+        "Comitate istorice/Comitatul Zaránd",
+        "Transilvania"
+      ],
+      "reason": "Zaránd was partitioned in 1732; full OHM polygon cannot be attached without partition-qualified source."
+    },
+    {
+      "groups": [
+        "Comitate istorice/Comitatul Arad",
+        "Transilvania"
+      ],
+      "reason": "Some 1709–1732 administrative/fiscal arrangements were mixed; not an independently qualified direct child."
+    },
+    {
+      "groups": [
+        "Comitate istorice/Comitatul Maramureș",
+        "Transilvania"
+      ],
+      "reason": "Pre-1732 administration contested/mixed; county later incorporated into Hungary; no timeless Transylvania parent."
+    },
+    {
+      "groups": [
+        "Bucovina",
+        "Districtul Bucovina"
+      ],
+      "reason": "Temporally alternative status with shared geometry; succession/identity research, not parent-child."
+    },
+    {
+      "groups": [
+        "Regiunea Akkerman",
+        "Regiunea Ismail"
+      ],
+      "reason": "Administrative succession/renaming with identical geometry asset; not direct territorial subordination."
+    },
+    {
+      "groups": [
+        "Comitate istorice/Comitatul Kraszna",
+        "Comitate istorice/Comitatul Sălaj"
+      ],
+      "reason": "1876 merger/administrative territorial change; not a parent-child relationship."
+    },
+    {
+      "groups": [
+        "Comitate istorice/Comitatul Közép-Szolnok",
+        "Comitate istorice/Comitatul Sălaj"
+      ],
+      "reason": "1876 merger/administrative territorial change; not a parent-child relationship."
+    },
+    {
+      "groups": [
+        "Principatul Moldovei",
+        "Principatele Unite"
+      ],
+      "reason": "Political succession/union, not county hierarchy."
+    },
+    {
+      "groups": [
+        "Țara Românească",
+        "Principatele Unite"
+      ],
+      "reason": "Political succession/union, not county hierarchy."
+    },
+    {
+      "groups": [
+        "Banatul Timișoarei",
+        "Frontiera Militară a Banatului"
+      ],
+      "reason": "Distinct civil/military administration; no direct parentage evidenced."
+    },
+    {
+      "groups": [
+        "Transilvania",
+        "Comitate istorice/Comitatul Alba de Jos"
+      ],
+      "reason": "OHM county version 1876+ falls in Hungarian Kingdom, after Transylvanian administrative integration; not a child of historical Principality of Transylvania."
+    }
+  ],
+  "displayModel": {
+    "present": "Three editorial disclosure categories; 76 source-group nodes remain present without a year filter; only time-scoped documentary edges produce actual child indentation.",
+    "recommended": "Single source tree with true political roots and separate unmatched/uncertain section; children nested only under documented parents, with independent checkbox and source-version disclosure.",
+    "checkboxRule": "No OHM auto-check when source version end date is null; documentary membership doesn't certify geometry",
+    "treeFilterRule": "Reference year is July 1; year-only toggle controls source geometry while historical parentage is independently time-scoped.",
+    "sourcePeriodDisclaimer": "Dates are copied from OHM source; a bounded OHM interval is not an independently qualified historical boundary."
+  },
+  "guardrails": [
+    "No geometric containment inferred as administrative membership",
+    "No duplicate OHM assets",
+    "No automatic identification of historical successors as parent-child",
+    "No backdating post-1859 OHM source county polygons into Principatul Moldovei",
+    "Do not attach Hungarian counties after 1867 beneath Transilvania"
+  ],
+  "nextGate": "Review audit, verify 1865 original county headings individually, then implement attachments to Principatele Unite with dated documentary membership and no auto-certified polygon."
+}
