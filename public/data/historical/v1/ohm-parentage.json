@@ -2016,12 +2016,12 @@
       "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
       "evidence": [
         {
-          "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pagesTRTranscarpathia.htm",
-          "type": "historical_encyclopedia_context",
-          "detail": "Regiunile din vestul Ucrainei au funcționat în RSS Ucraineană după al doilea război mondial; Cernăuți este documentată independent ca oblast sovietic."
+          "url": "https://old.archives.gov.ua/Eng/Archives/ra25.php",
+          "type": "ukraine_state_archive_institutional_history",
+          "detail": "State Archives of Chernivtsi Oblast: Ukrainian SSR Chernivtsi regional administrative records are documented for 1940–1941 and 1944–1991, distinct from wartime Romanian administration."
         }
       ],
-      "note": "Acest reper privind Cernăuți necesită verificare arhivistică țintită pentru atestarea cronologiei exacte de reconstrucție; nu certifică un hotar."
+      "note": "1945–1990 este interval documentar conservator pentru subordonarea sovietică; nu se certifică limitele OHM şi nu se presupune administraţie sovietică în anii ocupaţiei."
     },
     {
       "id": "doc-1946-transcarpathian-oblast-ukrssr",
