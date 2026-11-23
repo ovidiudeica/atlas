@@ -2,7 +2,8 @@ import {useEffect,useMemo,useRef,useState} from 'react';
 import {EntityCardSection} from './EntityCardSection';
 import {
   buildHistoricalOhmTree,validateOhmParentage,uniqueSourceVersionAtYear,
-  groupShortName,type OhmParentageLink,type OhmParentageRegister,type OhmTreeNode
+  groupShortName,type OhmParentageLink,type OhmParentageRegister,type OhmTreeNode,
+  type HistoricalDocumentaryParentRegistry
 } from '../data/historicalOhmTree.mjs';
 import {
   geodataSourceAtDate,loadGeodataSharedAsset,loadGeodataSourceIndex,
@@ -77,6 +78,7 @@ export function HistoricalGeodataBrowser({
 }){
  const [index,setIndex]=useState<GeodataSourceIndex|null>(null);
  const [parentage,setParentage]=useState<OhmParentageRegister|null>(null);
+ const [documentaryParents,setDocumentaryParents]=useState<HistoricalDocumentaryParentRegistry|null>(null);
  const [error,setError]=useState<string|null>(null);
  const [busy,setBusy]=useState<string|null>(null);
  const [query,setQuery]=useState('');
@@ -92,6 +94,8 @@ export function HistoricalGeodataBrowser({
    title:'Entități istorice',search:'Caută în arbore',searchHint:'Denumire, perioadă sau ID OHM',
    clear:'Șterge căutarea',year:'An',yearFilter:'Filtrează după an',
    groups:'grupuri-sursă',versions:'versiuni',results:'rezultate',
+   documentary:'părinți fără geometrie',noGeometry:'Fără geometrie · doar documentar',
+   documentation:'Dovezi istorice',documentWindow:'Perioadă documentată (nu dată de înființare/desființare)',
    methodological:'Despre ierarhie și limite',
    methodologicalBody:'Arborele folosește doar relații administrative cu documente și perioade definite. Unitățile fără părinte verificat rămân separate. Geometriile și intervalele OHM sunt surse de lucru, nu hotare juridice certificate.',
    independent:'Legături documentate pentru anul ales',
@@ -105,6 +109,8 @@ export function HistoricalGeodataBrowser({
    title:'Historical entities',search:'Search tree',searchHint:'Name, period or OHM ID',
    clear:'Clear search',year:'Year',yearFilter:'Filter by year',
    groups:'source groups',versions:'versions',results:'matches',
+   documentary:'geometry-free parents',noGeometry:'No geometry · documentary only',
+   documentation:'Historical sources',documentWindow:'Documented window (not institutional birth/death)',
    methodological:'About hierarchy and limitations',
    methodologicalBody:'The tree uses only documented and time-scoped administrative links. Entities without verified parents remain separate. OHM geometry and dates remain working source data, not certified legal borders.',
    independent:'Documented links for reference year',
@@ -128,39 +134,48 @@ export function HistoricalGeodataBrowser({
      fetch(base+'data/historical/v1/ohm-parentage.json').then(async response=>{
        if(!response.ok)throw Error('Parentage register HTTP '+response.status);
        return response.json() as Promise<OhmParentageRegister>;
+     }),
+     fetch(base+'data/historical/v1/documentary-parents.json').then(async response=>{
+       if(!response.ok)throw Error('Documentary parents HTTP '+response.status);
+       return response.json() as Promise<HistoricalDocumentaryParentRegistry>;
      })
-   ]).then(([sources,register])=>{
-     const gate=validateOhmParentage(sources,register);
+   ]).then(([sources,register,parents])=>{
+     const gate=validateOhmParentage(sources,register,parents);
      if(!gate.ok)throw Error('OHM parentage: '+gate.errors.join('; '));
-     if(active){setIndex(sources);setParentage(register);}
+     if(active){setIndex(sources);setParentage(register);setDocumentaryParents(parents);}
    }).catch(err=>{if(active)setError(String(err));});
    return ()=>{active=false;mounted.current=false;};
  },[]);
- const tree=useMemo(()=>index&&parentage?
-   buildHistoricalOhmTree(index,parentage,year):null,[index,parentage,year]);
+ const tree=useMemo(()=>index&&parentage&&documentaryParents?
+   buildHistoricalOhmTree(index,parentage,year,documentaryParents):
+   null,[index,parentage,documentaryParents,year]);
  const filteredRoots=useMemo(()=>{
    if(!tree)return {regions:[],counties:[],comitates:[]} as {
      regions:FilteredOhmNode[];counties:FilteredOhmNode[];comitates:FilteredOhmNode[];
    };
-   function filterNode(node:OhmTreeNode):FilteredOhmNode|null{
-     // Documentary membership and OHM polygon time-validity are separate:
-     // preserve a qualified child in the time-filtered tree even when its
-     // OHM geometry has no end_date. Its entity checkbox stays disabled.
+   function filterNode(node:OhmTreeNode,inheritedMatch=false):FilteredOhmNode|null{
+     // Institutional hierarchy is documentary. Source geometry date
+     // qualification remains separate, including for undated OHM children.
      const available=yearOnly?
        (node.activeEntries.length?node.activeEntries:
          node.parentEvidence?node.versions:[]):node.versions;
-     const groupMatch=Boolean(term)&&foldedSearch(node.group+' '+node.name.ro+' '+node.name.en).includes(term);
-     const shownVersions=!term||groupMatch?available:
+     const groupMatch=Boolean(term)&&foldedSearch(
+       node.group+' '+node.name.ro+' '+node.name.en).includes(term);
+     const matches=inheritedMatch||groupMatch;
+     const shownVersions=!term||matches?available:
        available.filter(entry=>searchWords(entry).some(word=>foldedSearch(word).includes(term)));
-     const shownChildren=node.children.map(child=>filterNode(child))
+     const shownChildren=node.children.map(child=>filterNode(child,matches))
        .filter((child):child is FilteredOhmNode=>child!==null);
-     if(!shownVersions.length&&!shownChildren.length)return null;
+     // Geometry-free documentary parents can appear as root institutions
+     // during their evidenced dates, even without an OHM geometry/child.
+     if(!shownVersions.length&&!shownChildren.length&&
+         (!node.documentaryOnly||(Boolean(term)&&!matches)))return null;
      return {...node,shownVersions,shownChildren};
    }
    return {
-     regions:tree.roots.regions.map(filterNode).filter((n):n is FilteredOhmNode=>n!==null),
-     counties:tree.roots.counties.map(filterNode).filter((n):n is FilteredOhmNode=>n!==null),
-     comitates:tree.roots.comitates.map(filterNode).filter((n):n is FilteredOhmNode=>n!==null)
+     regions:tree.roots.regions.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null),
+     counties:tree.roots.counties.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null),
+     comitates:tree.roots.comitates.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null)
    };
  },[tree,term,yearOnly]);
  const matchedCount=useMemo(()=>{
@@ -235,13 +250,13 @@ export function HistoricalGeodataBrowser({
    const key=node.id;
    const active=uniqueSourceVersionAtYear(node,year);
    const temporallyUnqualified=yearOnly&&!active&&node.shownVersions.length>0;
-   const hasDetails=node.shownVersions.length>1||node.shownChildren.length>0||
-     temporallyUnqualified;
+   const hasDetails=Boolean(node.documentaryOnly)||node.shownVersions.length>1||
+     node.shownChildren.length>0||temporallyUnqualified;
    const isExpanded=expanded.has(key)||Boolean(term);
    const quickEntry=(active&&node.shownVersions.some(e=>e.id===active.id)?active:null)||
      (!yearOnly&&node.shownVersions.length===1?node.shownVersions[0]:null);
    const activeChecked=Boolean(quickEntry&&visibleSet.has(quickEntry.id));
-   const title=groupShortName(node.group);
+   const title=node.documentaryOnly?node.name[lang]:groupShortName(node.group);
    return <div key={key} className="history-tree-node" role="treeitem"
      aria-level={depth+1} aria-expanded={hasDetails?isExpanded:undefined}>
      <div className={'history-tree-row'+(node.parentEvidence?' has-qualified-parent':'')}
@@ -251,11 +266,14 @@ export function HistoricalGeodataBrowser({
          aria-expanded={isExpanded} onClick={()=>toggleExpansion(key)}>
          <span aria-hidden="true">{isExpanded?'▾':'▸'}</span>
        </button>:<span className="history-tree-leaf" aria-hidden="true"/>}
-       <input type="checkbox" disabled={!quickEntry||busy!==null}
-         checked={activeChecked}
-         aria-label={(activeChecked?headings.hide:headings.show)+' · '+title}
-         title={quickEntry?dateLabel(quickEntry,lang):headings.notDated}
-         onChange={event=>{if(quickEntry)void changeVisibility([quickEntry],event.target.checked);}}/>
+       {node.documentaryOnly?
+         <span className="history-documentary-no-checkbox"
+           aria-label={headings.noGeometry} title={headings.noGeometry}>—</span>:
+         <input type="checkbox" disabled={!quickEntry||busy!==null}
+           checked={activeChecked}
+           aria-label={(activeChecked?headings.hide:headings.show)+' · '+title}
+           title={quickEntry?dateLabel(quickEntry,lang):headings.notDated}
+           onChange={event=>{if(quickEntry)void changeVisibility([quickEntry],event.target.checked);}}/>}
        <button type="button" className="history-tree-name"
          title={node.parentEvidence?headings.sourceParent:headings.pending}
          onClick={()=>{
@@ -267,11 +285,26 @@ export function HistoricalGeodataBrowser({
        </button>
        {temporallyUnqualified&&<span className="history-source-unqualified"
          title={headings.notDated} aria-label={headings.notDated}>?</span>}
-       <span className="history-source-version-count" title={headings.versionsPlural}>
-         {node.shownVersions.length}
-       </span>
+       {node.documentaryOnly?
+         <span className="history-documentary-mark" title={headings.noGeometry}>DOC</span>:
+         <span className="history-source-version-count" title={headings.versionsPlural}>
+           {node.shownVersions.length}
+         </span>}
      </div>
      {hasDetails&&isExpanded&&<div className="history-tree-children" role="group">
+       {node.documentaryOnly&&<div className="history-documentary-details">
+         <p>{headings.noGeometry}</p>
+         <p className="history-documentary-label">{headings.documentWindow}</p>
+         {node.documentedWindows?.map(w=><p key={w.start+'-'+w.end}
+           className="history-documentary-period">{w.start} — {w.end}</p>)}
+         <p className="history-documentary-label">{headings.documentation}</p>
+         <ul>{node.evidence?.map(item=><li key={item.url}>
+           <a href={item.url} target="_blank" rel="noopener noreferrer">
+             {item.type.replaceAll('_',' ')}
+           </a>
+           <span> — {item.detail}</span>
+         </li>)}</ul>
+       </div>}
        {(node.shownVersions.length>1||temporallyUnqualified)&&
          <div className="history-source-versions" role="group" aria-label={title+' — '+headings.versionsPlural}>
            {node.shownVersions.map(renderVersion)}
@@ -288,6 +321,7 @@ export function HistoricalGeodataBrowser({
      </div>
      <p className="history-catalog-stat" role="status">
        {tree?<>{tree.groupCount} {headings.groups} · {tree.sourceVersionCount} {headings.versions}
+         {' · '}{tree.documentaryNodeCount} {headings.documentary}
          {' · '}{visibleIds.length} {headings.visible}</>:t.loading}
      </p>
    </header>

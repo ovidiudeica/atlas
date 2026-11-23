@@ -1,0 +1,317 @@
+{
+  "schema": "atlas-historical-documentary-parents-v1",
+  "asOf": "2026-11-23",
+  "policy": "NO_GEOMETRY; no administrative parent inferred from containment; documentary windows are conservative evidence scope, not founding/dissolution dates.",
+  "sourceOnly": true,
+  "legalBoundariesCertified": false,
+  "nodes": [
+    {
+      "id": "doc:habsburg-monarchy",
+      "names": {
+        "ro": "Monarhia Habsburgică",
+        "en": "Habsburg Monarchy"
+      },
+      "kind": "composite_monarchy",
+      "documentedWindows": [
+        {
+          "start": "1718-07-21",
+          "end": "1803-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://www.ceeol.com/search/article-detail?id=983852",
+          "type": "independent_historical_reference",
+          "detail": "Banatul Timișoarei a fost o provincie a Casei de Habsburg, administrată de structuri centrale de la Viena, distinct de comitatele Regatului Ungariei."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:austrian-empire",
+      "names": {
+        "ro": "Imperiul Austriac",
+        "en": "Austrian Empire"
+      },
+      "kind": "empire",
+      "documentedWindows": [
+        {
+          "start": "1804-01-01",
+          "end": "1866-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "type": "independent_historical_reference",
+          "detail": "Administrația imperială austriacă în reorganizările 1849–1860 și regimurile teritoriilor coroanei; anul-limită din catalog este un interval conservator de lucru."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:galicia-lodomeria",
+      "names": {
+        "ro": "Regatul Galiției și Lodomeriei",
+        "en": "Kingdom of Galicia and Lodomeria"
+      },
+      "kind": "crownland",
+      "documentedWindows": [
+        {
+          "start": "1786-01-01",
+          "end": "1848-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://study.scicenter.online/history-ukraine/ukrainian-lands-under-habsburg-rule-1772-105691.html",
+          "type": "independent_historical_reference",
+          "detail": "Bucovina a funcționat sub administrația Galiției înaintea separării ca provincie austriacă; documentul susține contextul instituțional."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:austrian-crownlands",
+      "names": {
+        "ro": "Țările Coroanei Austriece (Cisleithania)",
+        "en": "Austrian Crown Lands (Cisleithania)"
+      },
+      "kind": "imperial_half",
+      "documentedWindows": [
+        {
+          "start": "1867-01-01",
+          "end": "1917-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://study.scicenter.online/history-ukraine/the-administrative-and-socioeconomic-structure-105757.html",
+          "type": "independent_historical_reference",
+          "detail": "Teritoriile austriece ale monarhiei dualiste, separate administrativ de cele ale Coroanei Ungariei după 1867; Bucovina era teritoriu de coroană."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:kingdom-hungary",
+      "names": {
+        "ro": "Regatul Ungariei",
+        "en": "Kingdom of Hungary"
+      },
+      "kind": "kingdom",
+      "documentedWindows": [
+        {
+          "start": "1867-01-01",
+          "end": "1918-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "independent_historical_reference",
+          "detail": "Recensământul/descrierea administrativă din 1911 enumeră explicit comitatele regatului, inclusiv cele ale Transilvaniei după reforma din 1876."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:habsburg-military-frontier",
+      "names": {
+        "ro": "Administrația Frontierei Militare Habsburgice",
+        "en": "Habsburg Military Frontier Administration"
+      },
+      "kind": "military_system",
+      "documentedWindows": [
+        {
+          "start": "1751-01-01",
+          "end": "1872-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://www.academia.edu/51080504/The_Local_Elite_in_Central_Government_Service_Banat_Military_Frontier_Officers_in_the_18_th_Century",
+          "type": "independent_historical_reference",
+          "detail": "Frontiera Militară a Banatului era administrată prin structurile militare centrale de la Viena, nu ca județ civil al Regatului Ungariei."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:transnistria-governorate",
+      "names": {
+        "ro": "Guvernământul Transnistriei (administrație de ocupație)",
+        "en": "Transnistria Governorate (occupation administration)"
+      },
+      "kind": "occupation_administration",
+      "documentedWindows": [
+        {
+          "start": "1941-09-12",
+          "end": "1944-03-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://administrare.info/istorie/administrarea-teritoriului-romaniei-in-timpul-celui-de-al-doilea-razboi-mondial/",
+          "type": "independent_historical_reference",
+          "detail": "Ordonanța nr. 8 din 12 septembrie 1941 reglementa provincia administrată de România, cu treisprezece județe; acest regim nu certifică anexarea sau suveranitatea teritorială."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:ukrainian-ssr",
+      "names": {
+        "ro": "Republica Sovietică Socialistă Ucraineană",
+        "en": "Ukrainian Soviet Socialist Republic"
+      },
+      "kind": "union_republic",
+      "documentedWindows": [
+        {
+          "start": "1940-01-01",
+          "end": "1990-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://history.state.gov/historicaldocuments/frus1940v01/d522",
+          "type": "independent_historical_reference",
+          "detail": "Documentul diplomatic contemporan consemnează includerea nordului Bucovinei și a unor județe basarabene în RSS Ucraineană; ulterior oblasturile au fost subdiviziuni ale RSSU."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:ussr",
+      "names": {
+        "ro": "Uniunea Republicilor Sovietice Socialiste",
+        "en": "Union of Soviet Socialist Republics"
+      },
+      "kind": "union_state",
+      "documentedWindows": [
+        {
+          "start": "1940-01-01",
+          "end": "1990-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CM%5CO%5CMoldavianSovietSocialistRepublic.htm",
+          "type": "independent_historical_reference",
+          "detail": "RSS Moldovenească era una dintre republicile unionale sovietice; catalogul nu revendică prin aceasta continuitate administrativă în perioade de control militar schimbat."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:czechoslovakia",
+      "names": {
+        "ro": "Republica Cehoslovacă",
+        "en": "Czechoslovak Republic"
+      },
+      "kind": "republic",
+      "documentedWindows": [
+        {
+          "start": "1920-01-01",
+          "end": "1937-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CU%5CSubcarpathianRuthenia.htm",
+          "type": "independent_historical_reference",
+          "detail": "Rutenia Subcarpatică făcea parte din Cehoslovacia în anii 1920–1938, cu statut administrativ și autonomie modificată în 1938."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    },
+    {
+      "id": "doc:russian-empire",
+      "names": {
+        "ro": "Imperiul Rus",
+        "en": "Russian Empire"
+      },
+      "kind": "empire",
+      "documentedWindows": [
+        {
+          "start": "1856-01-01",
+          "end": "1916-12-31",
+          "dateStatus": "EVIDENCE_SCOPE_NOT_INSTITUTIONAL_BIRTH_OR_DEATH"
+        }
+      ],
+      "geometryId": null,
+      "geometryStatus": "NO_GEOMETRY_DOCUMENTARY_NODE",
+      "sourceFamily": "HISTORICAL_DOCUMENTARY_PARENT",
+      "identityReviewStatus": "DOCUMENTED_PARENT_INSTITUTION_NOT_CERTIFIED_BOUNDARY",
+      "evidence": [
+        {
+          "url": "https://pressto.amu.edu.pl/bp/article/view/19029",
+          "type": "independent_historical_reference",
+          "detail": "Basarabia era administrată în cadrul Imperiului Rus în secolul al XIX-lea; recunoașterea guberniei în 1873 necesită distincție față de stadiul anterior de oblast."
+        }
+      ],
+      "provenance": "Historical documentary parent assembled for OHM hierarchy, not imported from an OHM relation.",
+      "noLegalBoundaryCertification": true
+    }
+  ]
+}

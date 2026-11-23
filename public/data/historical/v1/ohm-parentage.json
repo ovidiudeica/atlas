@@ -1,8 +1,8 @@
 {
   "schema": "atlas-historical-ohm-parentage-v1",
   "asOf": "2026-11-23",
-  "status": "HIST_OHM_TREE_2B_INDEPENDENT_1865_AND_1925_MEMBERSHIP_REVIEW",
-  "description": "Historical parentage by dated documents; 1865 exact printed names checked from OCR recap with separate uncertain readings held; 1925 official list distinguishes old Suceava/Fălticeni from Bukovina Suceava; Partium until December 1860.",
+  "status": "HIST_OHM_TREE_3_DOCUMENTARY_PARENT_NODES_WITH_1911_GAZETTEER_AND_PERIOD_GATES",
+  "description": "Parentage of imported OHM source groups and geometry-free documentary institutions; 1911 county group qualification relies on contemporary named gazetteer; snapshots do not prove uninterrupted tenure or boundary validity.",
   "prohibitions": [
     "no inferred parent from OHM folder",
     "no inferred parent from geometry overlap",
@@ -1082,6 +1082,1011 @@
         }
       ],
       "note": "Raportul din 15 octombrie 1890 este fotografia administrativă; 31 decembrie este limită operațională, nu data desființării. Geometria OHM 1859→necunoscut nu devine automată pentru 1890."
+    },
+    {
+      "id": "ohm-1911-alba-de-jos-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Alba de Jos",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Alsó-Fehér este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Alba de Jos / Alsó-Fehér nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-arad-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Arad",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Arad este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Arad / Arad nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-bereg-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Bereg",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Bereg este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Bereg / Bereg nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-bihor-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Bihor",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Bihar este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Bihor / Bihar nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-bistrita-nasaud-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Bistrița-Năsăud",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Besztercze-Naszód este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Bistrița-Năsăud / Besztercze-Naszód nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-brasov-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Brașov",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Brassó este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Brașov / Brassó nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-bekes-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Békés",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Békés este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Békés / Békés nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-caras-severin-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Caraș-Severin",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Krassó-Szörény este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Caraș-Severin / Krassó-Szörény nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-ciuc-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Ciuc",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Csík este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Ciuc / Csík nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-cluj-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Cluj",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Kolozs este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Cluj / Kolozs nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-csongrad-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Csongrád",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Csongrád este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Csongrád / Csongrád nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-fagaras-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Făgăraș",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Fogaras este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Făgăraș / Fogaras nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-hunedoara-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Hunedoara",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Hunyad este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Hunedoara / Hunyad nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-maramures-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Maramureș",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Máramaros este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Maramureș / Máramaros nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-mures-turda-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Mureș-Turda",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Maros-Torda este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Mureș-Turda / Maros-Torda nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-odorhei-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Odorhei",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Udvarhely este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Odorhei / Udvarhely nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-sibiu-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Sibiu",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Szeben este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Sibiu / Szeben nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-solnoc-dabaca-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Solnoc-Dăbâca",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Szolnok-Doboka este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Solnoc-Dăbâca / Szolnok-Doboka nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-szabolcs-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Szabolcs",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Szabolcs este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Szabolcs / Szabolcs nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-salaj-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Sălaj",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Szilágy este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Sălaj / Szilágy nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-satmar-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Sătmar",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Szatmár este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Sătmar / Szatmár nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-timis-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Timiș",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Temes este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Timiș / Temes nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-trei-scaune-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Trei Scaune",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Háromszék este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Trei Scaune / Háromszék nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-turda-aries-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Turda-Arieș",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Torda-Aranyos este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Turda-Arieș / Torda-Aranyos nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-tarnava-mare-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Târnava-Mare",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Nagy-Küküllö este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Târnava-Mare / Nagy-Küküllö nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-tarnava-mica-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Târnava-Mică",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Kis-Küküllö este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Târnava-Mică / Kis-Küküllö nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-ugocea-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Ugocea",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Ugocsa este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Ugocea / Ugocsa nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "ohm-1911-zemplen-to-kingdom-hungary",
+      "parentSourceGroup": "doc:kingdom-hungary",
+      "childSourceGroup": "Comitate istorice/Comitatul Zemplén",
+      "start": "1911-01-01",
+      "end": "1911-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1911_contemporary_named_county_snapshot_only",
+      "evidence": [
+        {
+          "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hungary",
+          "type": "contemporary_administrative_gazetteer",
+          "detail": "1911 Encyclopædia Britannica, Hungary, Administrative Divisions: comitatul Zemplén este enumerat nominal în unul dintre cele șapte cercuri ale Regatului Ungariei."
+        }
+      ],
+      "note": "Apartenență administrativă doar pentru observația 1911; identitatea tradusă Zemplén / Zemplén nu certifică hotarul OHM și nu justifică prelungirea automată în 1912 sau 1918."
+    },
+    {
+      "id": "doc-1718-banat-habsburg",
+      "parentSourceGroup": "doc:habsburg-monarchy",
+      "childSourceGroup": "Banatul Timișoarei",
+      "start": "1718-07-21",
+      "end": "1777-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://www.ceeol.com/search/article-detail?id=983852",
+          "type": "independent_historical_study",
+          "detail": "Banatul a devenit, prin Pacea de la Passarowitz (1718), provincie direct administrată de Curtea vieneză, distinctă de Regatul Ungariei."
+        }
+      ],
+      "note": "Interval conservator, fără afirmarea unei subordonări administrative ungare."
+    },
+    {
+      "id": "doc-1751-banater-frontier-vienna",
+      "parentSourceGroup": "doc:habsburg-military-frontier",
+      "childSourceGroup": "Frontiera Militară a Banatului",
+      "start": "1751-01-01",
+      "end": "1872-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://www.academia.edu/51080504/The_Local_Elite_in_Central_Government_Service_Banat_Military_Frontier_Officers_in_the_18_th_Century",
+          "type": "historical_administrative_research",
+          "detail": "Frontiera militară a Banatului a fost sub control militar central vienez, distinctă de sistemul comitatens maghiar, până la demilitarizarea din 1872."
+        }
+      ],
+      "note": "Structură de administrație militară, nu provincie civilă."
+    },
+    {
+      "id": "doc-1849-voivodina-austria",
+      "parentSourceGroup": "doc:austrian-empire",
+      "childSourceGroup": "Voivodina Sârbească și Banatul Timișan",
+      "start": "1849-11-18",
+      "end": "1860-12-26",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://www.academia.edu/44904885/Zoran_Stevanovi%C4%87_Vojvodstvo_Srbija_i_Tami%C5%A1ki_Banat_1849_1861_",
+          "type": "historical_study",
+          "detail": "Patenta din 18 noiembrie 1849 a instituit voivodina ca țară de coroană imperială; nu era un comitat al Regatului Ungariei."
+        }
+      ],
+      "note": "Regim imperial de coroană, perioada controlată 1849–1860."
+    },
+    {
+      "id": "doc-1851-transylvania-austria",
+      "parentSourceGroup": "doc:austrian-empire",
+      "childSourceGroup": "Transilvania",
+      "start": "1851-05-12",
+      "end": "1866-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "type": "historical_monograph",
+          "detail": "Administrația imperială austriacă și statutul distinct al Transilvaniei în neoabsolutismul habsburgic; subordonarea Ungariei nu se deduce pentru această etapă."
+        }
+      ],
+      "note": "Suveranitate imperială în intervalul conservator, fără certificare juridică de hotar."
+    },
+    {
+      "id": "doc-1861-bukovina-austria",
+      "parentSourceGroup": "doc:austrian-empire",
+      "childSourceGroup": "Bucovina",
+      "start": "1861-02-26",
+      "end": "1866-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://study.scicenter.online/history-ukraine/ukrainian-lands-under-habsburg-rule-1772-105691.html",
+          "type": "historical_administrative_study",
+          "detail": "Bucovina a funcționat ca provincie austriacă distinctă în perioada 1861–1866, înaintea instaurării dualismului austro-ungar."
+        }
+      ],
+      "note": "Calificarea instituției, nu a coordonatelor originale OHM."
+    },
+    {
+      "id": "doc-1867-bukovina-austrian-crownlands",
+      "parentSourceGroup": "doc:austrian-crownlands",
+      "childSourceGroup": "Bucovina",
+      "start": "1867-01-01",
+      "end": "1917-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://study.scicenter.online/history-ukraine/the-administrative-and-socioeconomic-structure-105757.html",
+          "type": "historical_administrative_study",
+          "detail": "Bucovina se afla în partea austriacă a monarhiei dualiste, nu în Regatul Ungariei, ca țară de coroană."
+        }
+      ],
+      "note": "Interval conservator; la schimbarea monarhiei în 1918 se cere altă versiune instituțională."
+    },
+    {
+      "id": "doc-1786-bukovina-district-galicia",
+      "parentSourceGroup": "doc:galicia-lodomeria",
+      "childSourceGroup": "Districtul Bucovina",
+      "start": "1786-08-06",
+      "end": "1848-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://study.scicenter.online/history-ukraine/ukrainian-lands-under-habsburg-rule-1772-105691.html",
+          "type": "historical_administrative_study",
+          "detail": "Bucovina funcționa ca o circumscripție în cadrul administrației Galiției înaintea separării administrative de la mijlocul secolului XIX."
+        }
+      ],
+      "note": "Nu echivala Districtul Bucovina cu Ducatul Bucovinei ca subordonare sau aceeași instituție."
+    },
+    {
+      "id": "doc-1786-galicia-habsburg",
+      "parentSourceGroup": "doc:habsburg-monarchy",
+      "childSourceGroup": "doc:galicia-lodomeria",
+      "start": "1786-01-01",
+      "end": "1803-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://study.scicenter.online/history-ukraine/ukrainian-lands-under-habsburg-rule-1772-105691.html",
+          "type": "historical_administrative_study",
+          "detail": "Regatul Galiției și Lodomeriei era țară de coroană habsburgică în secolul XVIII; atestare numai pentru intervalul selectat."
+        }
+      ],
+      "note": "Relație între două entități documentare fără geometrie."
+    },
+    {
+      "id": "doc-1804-galicia-austria",
+      "parentSourceGroup": "doc:austrian-empire",
+      "childSourceGroup": "doc:galicia-lodomeria",
+      "start": "1804-01-01",
+      "end": "1848-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://study.scicenter.online/history-ukraine/ukrainian-lands-under-habsburg-rule-1772-105691.html",
+          "type": "historical_administrative_study",
+          "detail": "Regatul Galiției și Lodomeriei era provincie a Imperiului Austriac în prima jumătate a secolului XIX."
+        }
+      ],
+      "note": "Legătură instituțională; data 1804 marchează doar schimbarea cadrului monarhic în acest model."
+    },
+    {
+      "id": "doc-1878-bessarabia-russian-empire",
+      "parentSourceGroup": "doc:russian-empire",
+      "childSourceGroup": "Gubernia Basarabia",
+      "start": "1878-07-13",
+      "end": "1916-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://pressto.amu.edu.pl/bp/article/view/19029",
+          "type": "peer_reviewed_historical_study",
+          "detail": "Gubernia Basarabiei era o unitate a Imperiului Rus după recâștigarea sudului Basarabiei în 1878; transformarea oblastului în gubernie a avut loc în 1873."
+        }
+      ],
+      "note": "Nu se completează perioada 1856–1873 cu presupunerea că exista aceeași structură de gubernie."
+    },
+    {
+      "id": "doc-1921-transcarpathia-czechoslovakia",
+      "parentSourceGroup": "doc:czechoslovakia",
+      "childSourceGroup": "Transcarpatia",
+      "start": "1921-01-01",
+      "end": "1937-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CU%5CSubcarpathianRuthenia.htm",
+          "type": "encyclopedia_of_ukraine",
+          "detail": "Rutenia Subcarpatică era provincie a Cehoslovaciei între 1920–1938; statutul autonom s-a modificat în 1938."
+        }
+      ],
+      "note": "Interval conservator 1921–1937. Nu se deduce apartenența în 1939."
+    },
+    {
+      "id": "doc-1941-jugastru-transnistria-governorate",
+      "parentSourceGroup": "doc:transnistria-governorate",
+      "childSourceGroup": "Județe istorice/Județul Jugastru",
+      "start": "1941-09-12",
+      "end": "1944-03-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://administrare.info/istorie/administrarea-teritoriului-romaniei-in-timpul-cel-de-al-doilea-razboi-mondial/",
+          "type": "historical_administrative_study",
+          "detail": "Ordonanța nr. 8 din 12 septembrie 1941: județul Jugastru era subdiviziune a Guvernământului Transnistriei, o administrație românească de ocupație, nu anexare teritorială."
+        }
+      ],
+      "note": "Administrație de ocupație; unitatea nu se plasează direct sub Regatul României ca teritoriu anexat."
+    },
+    {
+      "id": "doc-1941-moghilau-transnistria-governorate",
+      "parentSourceGroup": "doc:transnistria-governorate",
+      "childSourceGroup": "Județe istorice/Județul Moghilău",
+      "start": "1941-09-12",
+      "end": "1944-03-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://administrare.info/istorie/administrarea-teritoriului-romaniei-in-timpul-cel-de-al-doilea-razboi-mondial/",
+          "type": "historical_administrative_study",
+          "detail": "Ordonanța nr. 8 din 12 septembrie 1941: județul Moghilău era subdiviziune a Guvernământului Transnistriei, o administrație românească de ocupație, nu anexare teritorială."
+        }
+      ],
+      "note": "Administrație de ocupație; unitatea nu se plasează direct sub Regatul României ca teritoriu anexat."
+    },
+    {
+      "id": "doc-1941-tulcin-transnistria-governorate",
+      "parentSourceGroup": "doc:transnistria-governorate",
+      "childSourceGroup": "Județe istorice/Județul Tulcin",
+      "start": "1941-09-12",
+      "end": "1944-03-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://administrare.info/istorie/administrarea-teritoriului-romaniei-in-timpul-cel-de-al-doilea-razboi-mondial/",
+          "type": "historical_administrative_study",
+          "detail": "Ordonanța nr. 8 din 12 septembrie 1941: județul Tulcin era subdiviziune a Guvernământului Transnistriei, o administrație românească de ocupație, nu anexare teritorială."
+        }
+      ],
+      "note": "Administrație de ocupație; unitatea nu se plasează direct sub Regatul României ca teritoriu anexat."
+    },
+    {
+      "id": "doc-1940-akkerman-ukrssr",
+      "parentSourceGroup": "doc:ukrainian-ssr",
+      "childSourceGroup": "Regiunea Akkerman",
+      "start": "1940-08-07",
+      "end": "1940-12-06",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://history.state.gov/historicaldocuments/frus1940v01/d522",
+          "type": "contemporary_diplomatic_document",
+          "detail": "Notele diplomatice din 1940 atestă integrarea Akkermanului în RSS Ucraineană; oblastul Akkerman a funcționat înaintea transformării din decembrie 1940."
+        }
+      ],
+      "note": "Nu se confundă Regiunea Akkerman cu un copil al Regiunii Ismail."
+    },
+    {
+      "id": "doc-1940-izmail-ukrssr",
+      "parentSourceGroup": "doc:ukrainian-ssr",
+      "childSourceGroup": "Regiunea Ismail",
+      "start": "1940-12-07",
+      "end": "1941-06-21",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://edu.lvivcenter.org/en/modules/izmail-region-in-soviet-memory-eng/",
+          "type": "historical_research",
+          "detail": "Regiunea Ismail era oblast al RSS Ucraineană din 1940 până la ocuparea teritoriului în 1941."
+        }
+      ],
+      "note": "Întrerupere de administrație efectivă în al doilea război mondial."
+    },
+    {
+      "id": "doc-1945-izmail-ukrssr",
+      "parentSourceGroup": "doc:ukrainian-ssr",
+      "childSourceGroup": "Regiunea Ismail",
+      "start": "1945-01-01",
+      "end": "1954-02-14",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://edu.lvivcenter.org/en/modules/izmail-region-in-soviet-memory-eng/",
+          "type": "historical_research",
+          "detail": "Regiunea Ismail a funcționat în RSS Ucraineană în perioada postbelică până la desființarea din februarie 1954."
+        }
+      ],
+      "note": "Reluarea postbelică tratată separat față de 1940–1941."
+    },
+    {
+      "id": "doc-1940-chernivtsi-ukrssr",
+      "parentSourceGroup": "doc:ukrainian-ssr",
+      "childSourceGroup": "Regiunea Cernăuți",
+      "start": "1940-08-07",
+      "end": "1941-06-21",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://old.archives.gov.ua/Eng/Archives/ra25.php",
+          "type": "ukraine_state_archive_institutional_history",
+          "detail": "Arhivele de Stat ale Regiunii Cernăuți documentează funcționarea regiunii în RSS Ucraineană în 1940–1941, distinct de perioada de ocupație, și reluarea din 1944."
+        },
+        {
+          "url": "https://history.state.gov/historicaldocuments/frus1940v01/d522",
+          "type": "contemporary_diplomatic_document",
+          "detail": "Raport diplomatic din 3 august 1940 privind includerea nordului Bucovinei în RSS Ucraineană."
+        }
+      ],
+      "note": "Apartenență pe intervalul inițial sovietic, fără extrapolare în ocupația 1941–1944."
+    },
+    {
+      "id": "doc-1945-chernivtsi-ukrssr",
+      "parentSourceGroup": "doc:ukrainian-ssr",
+      "childSourceGroup": "Regiunea Cernăuți",
+      "start": "1945-01-01",
+      "end": "1990-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://old.archives.gov.ua/Eng/Archives/ra25.php",
+          "type": "ukraine_state_archive_institutional_history",
+          "detail": "State Archives of Chernivtsi Oblast: Ukrainian SSR Chernivtsi regional administrative records are documented for 1940–1941 and 1944–1991, distinct from wartime Romanian administration."
+        }
+      ],
+      "note": "1945–1990 este interval documentar conservator pentru subordonarea sovietică; nu se certifică limitele OHM şi nu se presupune administraţie sovietică în anii ocupaţiei."
+    },
+    {
+      "id": "doc-1946-transcarpathian-oblast-ukrssr",
+      "parentSourceGroup": "doc:ukrainian-ssr",
+      "childSourceGroup": "Regiunea Transcarpatia",
+      "start": "1946-01-22",
+      "end": "1990-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pagesTRTranscarpathia.htm",
+          "type": "encyclopedia_of_ukraine",
+          "detail": "Transcarpatia a fost transferată de Cehoslovacia către RSS Ucraineană prin acordul din 1945; organele oblastului erau organizate în ianuarie 1946."
+        }
+      ],
+      "note": "Nu se confundă Regiunea Transcarpatia sovietică cu provincia cehoslovacă omonimă."
+    },
+    {
+      "id": "doc-1945-moldavian-ssr-ussr",
+      "parentSourceGroup": "doc:ussr",
+      "childSourceGroup": "RSS Moldovenească",
+      "start": "1945-01-01",
+      "end": "1990-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CM%5CO%5CMoldavianSovietSocialistRepublic.htm",
+          "type": "encyclopedia_of_ukraine",
+          "detail": "RSS Moldovenească era republică unională a URSS, înființată în august 1940; legătura administrativă de aici privește intervalul postbelic."
+        }
+      ],
+      "note": "Nu presupune existența neîntreruptă a aceluiași control efectiv în perioada 1941–1944."
+    },
+    {
+      "id": "doc-1945-ukrainian-ssr-ussr",
+      "parentSourceGroup": "doc:ussr",
+      "childSourceGroup": "doc:ukrainian-ssr",
+      "start": "1945-01-01",
+      "end": "1990-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "documentary_direct_administrative_membership_window_not_boundary",
+      "evidence": [
+        {
+          "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CM%5CO%5CMoldavianSovietSocialistRepublic.htm",
+          "type": "encyclopedia_of_ukraine",
+          "detail": "RSS Ucraineană era republică unională în URSS; lanțul URSS–RSS Ucraineană–oblast este documentar și fără geometrii inventate."
+        }
+      ],
+      "note": "Relație între două entități documentare fără geometrie; nu califică suveranitatea juridică a hotarelor."
     }
   ],
   "pending": "Restul grupurilor OHM au verdicte individuale în registrul HIST-OHM-TREE.2. Titlurile și geometriile OHM rămân surse provizorii; documentul istoric nu probează conturul.",
@@ -1129,5 +2134,7 @@
       "retractedReason": "The original OHM county relation sourced to 1859 is the older Moldavian Suceava (Fălticeni), while Monitorul Oficial 7 October 1925 enumerates Fălticeni and a distinct Suceava (Bukovina). Thus the earlier 1930 Suceava county match cannot be treated as a qualified identity or direct parentage for this OHM source group.",
       "retractionEvidenceUrl": "https://www.resurse.net/mo/1925/19251007.pdf"
     }
-  ]
+  ],
+  "documentaryParentRegistry": "data/historical/v1/documentary-parents.json",
+  "parentagePolicy": "IDs beginning doc: are independent geometry-free documentary entities in separate registry; no OHM geometry or identity is inferred."
 }
