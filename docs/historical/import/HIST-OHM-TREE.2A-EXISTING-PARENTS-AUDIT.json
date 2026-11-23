@@ -534,7 +534,6 @@
   ],
   "priorityCandidate": {
     "parentGroup": "Principatele Unite",
-    "year": 1865,
     "proposalStatus": "AUDIT_ONLY_DO_NOT_APPLY_TO_ACTIVE_PARENTAGE_REGISTER",
     "childCount": 13,
     "children": [
@@ -787,7 +786,8 @@
       }
     ],
     "potentialTopLevelSourceGroupsAfterQualification": 63,
-    "evidenceBoundary": "Must confirm each county in primary 1865 index; do not promote raw 1859–null OHM polygons as valid for 1865."
+    "evidenceBoundary": "Must confirm each county in primary 1865 index; do not promote raw 1859–null OHM polygons as valid for 1865.",
+    "referenceYear": 1865
   },
   "holdExamples": [
     {
