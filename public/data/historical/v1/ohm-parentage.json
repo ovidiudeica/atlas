@@ -1,7 +1,7 @@
 {
   "schema": "atlas-historical-ohm-parentage-v1",
   "asOf": "2026-11-23",
-  "status": "PARTIAL_INDEPENDENT_DOCUMENTARY_QUALIFICATION",
+  "status": "TARGETED_INDEPENDENT_MEMBERSHIP_QUALIFICATION_WITH_EXPLICIT_LIMITS",
   "description": "Time-scoped administrative parentage; source geometry and source-reported dates remain unqualified. Unlisted relations have unknown parentage.",
   "prohibitions": [
     "no inferred parent from OHM folder",
@@ -82,7 +82,350 @@
         }
       ],
       "note": "Historical state membership only; new 1938 regional intermediate parent is not present in this OHM catalogue."
+    },
+    {
+      "id": "ohm-1930-bacau-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Bacău",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Bacău apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-botosani-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Botoșani",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Botoșani apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-covurlui-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Covurlui",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Covurlui apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-dorohoi-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Dorohoi",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Dorohoi apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-falciu-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Fălciu",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Fălciu apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-iasi-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Iași",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Iași apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-neamt-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Neamț",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Neamț apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-putna-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Putna",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Putna apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-roman-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Roman",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Roman apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-suceava-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Suceava",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Suceava apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-tecuci-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Tecuci",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Tecuci apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-tutova-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Tutova",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Tutova apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-1930-vaslui-to-romania",
+      "parentSourceGroup": "Regatul României",
+      "childSourceGroup": "Județe istorice/Județul Vaslui",
+      "start": "1930-01-22",
+      "end": "1930-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "1930_documentary_snapshot_not_continuity",
+      "evidence": [
+        {
+          "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+          "type": "primary_official_gazette",
+          "detail": "Monitorul Oficial, Partea I, nr. 17 bis / 22 ianuarie 1930, p. 680, Decretul nr. 43: județul Vaslui apare individual în repartizarea teritorială a celor 322 plăși pe județe; demonstrează județ din Regatul României în ianuarie 1930, nu perimetrul OHM."
+        }
+      ],
+      "note": "Calificare doar pentru anul de observație 1930; 31 decembrie este limită operațională a snapshotului, nu o încetare administrativă. Perioada geometrică OHM nu este extinsă."
+    },
+    {
+      "id": "ohm-partium-1733-chioar-to-transilvania",
+      "parentSourceGroup": "Transilvania",
+      "childSourceGroup": "Țara Chioarului",
+      "start": "1733-02-16",
+      "end": "1847-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "conservatively_bounded_governance_interval",
+      "evidence": [
+        {
+          "url": "https://lexikon.katolikus.hu/P/Partium.html",
+          "type": "historical_legal_reference",
+          "detail": "Partium, decretul imperial din 31 decembrie 1732 ratificat la 16 februarie 1733: Districtul Chioar/Kővárvidék intră în administrația Transilvaniei; reconfigurarea din 1848 exclude extrapolarea."
+        },
+        {
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
+          "type": "peer_reviewed_historical_study",
+          "detail": "Onojescu, Iudean, Popovici, Parliamentary Representation in Eastern Hungary, pp. 215–217: Partium (Kővár, Kraszna, Közép-Szolnok) rămâne în administrația Principatului Transilvaniei după 1732, cu schimbări ulterioare în 1848 și 1860."
+        }
+      ],
+      "note": "Califică raportul administrativ istoric dintre Partium și Transilvania numai pentru intervalul conservator 1733–1847; nu certifică suprafața OHM și nu presupune continuitate în reorganizările din 1848–1860."
+    },
+    {
+      "id": "ohm-partium-1733-kraszna-to-transilvania",
+      "parentSourceGroup": "Transilvania",
+      "childSourceGroup": "Comitate istorice/Comitatul Kraszna",
+      "start": "1733-02-16",
+      "end": "1847-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "conservatively_bounded_governance_interval",
+      "evidence": [
+        {
+          "url": "https://lexikon.katolikus.hu/P/Partium.html",
+          "type": "historical_legal_reference",
+          "detail": "Partium, decretul imperial din 31 decembrie 1732 ratificat la 16 februarie 1733: Kraszna/Crasna intră în administrația Transilvaniei; reconfigurarea din 1848 exclude extrapolarea."
+        },
+        {
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
+          "type": "peer_reviewed_historical_study",
+          "detail": "Onojescu, Iudean, Popovici, Parliamentary Representation in Eastern Hungary, pp. 215–217: Partium (Kővár, Kraszna, Közép-Szolnok) rămâne în administrația Principatului Transilvaniei după 1732, cu schimbări ulterioare în 1848 și 1860."
+        }
+      ],
+      "note": "Califică raportul administrativ istoric dintre Partium și Transilvania numai pentru intervalul conservator 1733–1847; nu certifică suprafața OHM și nu presupune continuitate în reorganizările din 1848–1860."
+    },
+    {
+      "id": "ohm-partium-1733-kozep-szolnok-to-transilvania",
+      "parentSourceGroup": "Transilvania",
+      "childSourceGroup": "Comitate istorice/Comitatul Közép-Szolnok",
+      "start": "1733-02-16",
+      "end": "1847-12-31",
+      "kind": "direct_administrative_membership",
+      "evidenceStatus": "qualified_membership_only",
+      "boundaryCertified": false,
+      "sourceIdentityCertified": false,
+      "temporalAssertion": "conservatively_bounded_governance_interval",
+      "evidence": [
+        {
+          "url": "https://lexikon.katolikus.hu/P/Partium.html",
+          "type": "historical_legal_reference",
+          "detail": "Partium, decretul imperial din 31 decembrie 1732 ratificat la 16 februarie 1733: Közép-Szolnok/Solnocul de Mijloc intră în administrația Transilvaniei; reconfigurarea din 1848 exclude extrapolarea."
+        },
+        {
+          "url": "https://www.academia.edu/26742369/Parliamentary_Representation_in_Eastern_Hungary_1861_1918_Preliminary_Results_of_a_Prosopographic_Inquiry",
+          "type": "peer_reviewed_historical_study",
+          "detail": "Onojescu, Iudean, Popovici, Parliamentary Representation in Eastern Hungary, pp. 215–217: Partium (Kővár, Kraszna, Közép-Szolnok) rămâne în administrația Principatului Transilvaniei după 1732, cu schimbări ulterioare în 1848 și 1860."
+        }
+      ],
+      "note": "Califică raportul administrativ istoric dintre Partium și Transilvania numai pentru intervalul conservator 1733–1847; nu certifică suprafața OHM și nu presupune continuitate în reorganizările din 1848–1860."
     }
   ],
-  "pending": "Other OHM entities await individually verified parentage. Unqualified groups are rendered as roots in their source-classification section."
+  "pending": "Restul grupurilor OHM au verdicte individuale în registrul HIST-OHM-TREE.2. Titlurile și geometriile OHM rămân surse provizorii; documentul istoric nu probează conturul.",
+  "qualificationScope": {
+    "admissionBasis": "historical_membership_only",
+    "newQualifiedLinks": 16,
+    "oldQualifiedLinks": 3,
+    "documentaryObservation1930": "1930-01-22 through calendar year only; no 1931+ inference",
+    "partiumQualification": "1733-02-16–1847-12-31, interruption/transition in 1848 not interpolated",
+    "unqualified": "All other parentage remains non-admitted, listed in separate 76-group audit."
+  }
 }
