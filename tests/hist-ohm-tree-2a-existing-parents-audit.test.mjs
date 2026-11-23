@@ -30,7 +30,9 @@ test('2A snapshots are preserved as immutable 19-link historical baselines',()=>
    assert.equal(snapshot.topLevelSourceGroups,76-snapshot.documentaryLinks);
  }
  // A baseline audit is NOT asserted to match the new live 2B register.
- assert.equal(parentage.links.length,46);
+ const historicLinks=parentage.links.filter(l=>!l.id.startsWith('doc-')&&!l.id.startsWith('ohm-1911-'));
+ assert.equal(historicLinks.length,46);
+ assert.equal(parentage.links.length,96,'TREE.3 adds fifty new links without rewriting 2A/2B evidence');
 });
 
 test('1865 parent attachment is only a candidate, with 13 geometry-uncertain OHM versions',()=>{
