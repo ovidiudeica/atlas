@@ -5,7 +5,7 @@ import {
   groupShortName,type OhmParentageLink,type OhmParentageRegister,type OhmTreeNode
 } from '../data/historicalOhmTree.mjs';
 import {
-  loadGeodataSharedAsset,loadGeodataSourceIndex,
+  geodataSourceAtDate,loadGeodataSharedAsset,loadGeodataSourceIndex,
   type GeodataSourceEntry,type GeodataSourceFeature,type GeodataSourceIndex
 } from '../data/historicalGeodata.mjs';
 
@@ -96,7 +96,7 @@ export function HistoricalGeodataBrowser({
    methodologicalBody:'Arborele folosește doar relații administrative cu documente și perioade definite. Unitățile fără părinte verificat rămân separate. Geometriile și intervalele OHM sunt surse de lucru, nu hotare juridice certificate.',
    independent:'Legături documentate pentru anul ales',
    version:'Versiune OHM',versionsPlural:'Versiuni geometrice',
-   notDated:'Nu există o singură versiune temporală confirmată pentru acest an. Alege explicit o versiune din lista de mai jos.',
+   notDated:'Apartenența administrativă este documentată, dar valabilitatea geometriei OHM în acest an nu este verificată. Dezactivează filtrul temporal pentru a examina versiunea-sursă.',
    show:'Afișează geometria',hide:'Ascunde geometria',
    sourceParent:'Părinte documentat, fără certificarea geometriei',
    pending:'Fără părinte administrativ calificat în anul ales',
@@ -109,7 +109,7 @@ export function HistoricalGeodataBrowser({
    methodologicalBody:'The tree uses only documented and time-scoped administrative links. Entities without verified parents remain separate. OHM geometry and dates remain working source data, not certified legal borders.',
    independent:'Documented links for reference year',
    version:'OHM version',versionsPlural:'Geometry versions',
-   notDated:'There is no single temporally confirmed version for this year. Select a source version explicitly below.',
+   notDated:'Administrative membership is documented, but the OHM geometry is not dated reliably for this year. Turn off the temporal filter to inspect the source version.',
    show:'Show geometry',hide:'Hide geometry',
    sourceParent:'Documented parent, without boundary certification',
    pending:'No qualified administrative parent for reference year',
@@ -212,9 +212,12 @@ export function HistoricalGeodataBrowser({
  }
  function renderVersion(entry:GeodataSourceEntry){
    const checked=visibleSet.has(entry.id);
+   const isSourceDated=geodataSourceAtDate(entry,String(year).padStart(4,'0')+'-07-01');
+   const blockedByUnqualifiedGeometry=yearOnly&&!isSourceDated;
    return <div key={entry.id} className="history-tree-version-row" role="treeitem"
      aria-selected={selectedId===entry.id}>
-     <input type="checkbox" checked={checked} disabled={busy!==null}
+     <input type="checkbox" checked={checked} disabled={busy!==null||blockedByUnqualifiedGeometry}
+       title={blockedByUnqualifiedGeometry?headings.notDated:undefined}
        aria-label={(checked?headings.hide:headings.show)+' · '+entry.displayName[lang]+' '+dateLabel(entry,lang)}
        onChange={event=>void changeVisibility([entry],event.target.checked)}/>
      <button type="button" className={'history-version-button'+(selectedId===entry.id?' is-selected':'')}
