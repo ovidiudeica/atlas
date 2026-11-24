@@ -6,6 +6,7 @@ export interface GeodataSourceEntry {
   displayName:{ro:string;en:string};
   sourcePeriod:{start:string|null;end:string|null;sourceOnly:true;kind?:'snapshot'|'undated';notes?:string|null};
   sourceType:string|null;
+  sourceRank?:'II'|'III';
   geometryId:string;
   featureId:string;
   geometryShard:string;

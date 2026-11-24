@@ -30,12 +30,17 @@ test('RoHGIS 1930 catalog admits only the 1930 source snapshot',()=>{
  const counties=catalog.versions.filter(v=>v.kind==='judet');
  const plasi=catalog.versions.filter(v=>v.kind==='plasa');
  assert.equal(counties.length,71);
- assert.equal(plasi.length,494);
+ assert.equal(plasi.length,322);
+ const urban=catalog.versions.filter(v=>v.kind==='urban_unit');
+ assert.equal(urban.length,172);
+ assert.ok(plasi.every(v=>v.sourceRank==='II'));
+ assert.ok(urban.every(v=>v.sourceRank==='III'));
+ assert.equal(new Set([...plasi,...urban].map(v=>v.entityId)).size,494);
  assert.equal(new Set(catalog.versions.map(v=>v.geometryId)).size,565);
- assert.equal(new Set(plasi.map(v=>v.entityId)).size,494);
+ assert.equal(new Set(plasi.map(v=>v.entityId)).size,322);
  const countyIds=new Set(counties.map(v=>v.entityId));
  for(const v of counties)assert.equal(v.parentId,catalog.documentaryStateRoot);
- for(const v of plasi)assert.ok(countyIds.has(v.parentId));
+ for(const v of [...plasi,...urban])assert.ok(countyIds.has(v.parentId));
  assert.ok(plasi.filter(v=>v.nameRo===plasi[0].nameRo).length>=1);
 });
 

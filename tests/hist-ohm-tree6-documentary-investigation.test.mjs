@@ -78,7 +78,8 @@ test('TREE.6: 1930 official 322 plăși cannot silently certify 494 multiyear Ro
  assert.equal(evidence.plasiDiscrepancy.rohgisPlasiFeatures1929to1933,494);
  assert.equal(evidence.plasiDiscrepancy.difference,172);
  assert.match(evidence.plasiDiscrepancy.status,/HOLD/);
- assert.equal(rohgis.versions.filter(v=>v.kind==='plasa').length,494);
+ assert.equal(rohgis.versions.filter(v=>v.kind==='plasa').length,322);
+ assert.equal(rohgis.versions.filter(v=>v.kind==='urban_unit').length,172);
  assert.equal(rohgis.yearFilterRestriction,'ONLY_1930');
  assert.ok(evidence.restrictions.includes('NO_CROSS_SOURCE_GEOMETRY_ID_REUSE'));
  assert.ok(evidence.restrictions.includes('NEVER_INFER_MISSING_OHM_END_FROM_1930_COUNTY_NAME'));

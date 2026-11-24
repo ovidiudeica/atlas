@@ -2086,8 +2086,8 @@ async function rohgis1930Smoke(cdp){
   await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1930');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
   await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
     'RoHGIS 1930 reference year '+width);
-  await p.wait("document.querySelector('"+panel+" .history-catalog-stat')?.textContent?.includes('RoHGIS 1930: 71 / 494')",
-    'RoHGIS 71 counties / 494 plasi catalog loaded '+width);
+  await p.wait("document.querySelector('"+panel+" .history-catalog-stat')?.textContent?.includes('RoHGIS 1930: 71 județe / 322 plăși / 172 unități urbane')",
+    'RoHGIS 71 counties / 322 plasi / 172 urban units catalog loaded '+width);
   await p.eval("(()=>{const rows=[...document.querySelectorAll('"+panel+" .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.trim()==='Regatul României');if(!row)throw Error('Kingdom of Romania historical parent missing');row.querySelector('.history-tree-expand').click();})()");
   await p.wait("document.querySelectorAll('"+panel+" .history-rohgis-tree > .history-tree-node').length===71",
     'Exactly 71 RoHGIS counties nested under Romania '+width);
@@ -2100,7 +2100,9 @@ async function rohgis1930Smoke(cdp){
     'Arad county expands to plasa Pecica '+width);
   if(!mobile){
     const count=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const node=[...root.querySelectorAll(':scope > .history-tree-node')].find(x=>x.querySelector(':scope > .history-tree-row .history-tree-name')?.textContent?.trim()==='Arad');return node.querySelectorAll(':scope > .history-tree-children > .history-tree-row').length})()");
-    assert.ok(count>=1,'Arad contains at least one RoHGIS plasa');
+    assert.equal(count,10,'Arad retains ten source subunits');
+    const ranks=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const node=[...root.querySelectorAll(':scope > .history-tree-node')].find(x=>x.querySelector(':scope > .history-tree-row .history-tree-name')?.textContent?.trim()==='Arad');return [node.querySelectorAll('[data-rohgis-kind=plasa]').length,node.querySelectorAll('[data-rohgis-kind=urban_unit]').length]})()");
+    assert.deepEqual(ranks,[9,1],'Arad separates rank II and III');
     await p.eval("(()=>{const row=[...document.querySelectorAll('"+panel+" .history-rohgis-tree .history-tree-children > .history-tree-row')].find(x=>x.querySelector('.history-tree-name')?.textContent?.trim()==='Pecica');if(!row)throw Error('Pecica plasa not found');row.querySelector('input[type=checkbox]').click();})()");
     await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='1'",
       'Pecica geometry checkbox updates historic map selection');

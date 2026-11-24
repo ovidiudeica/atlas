@@ -25,7 +25,7 @@ def main():
     source = conn.execute('select id,Nume,"Județ",Rang,geometry from rohgis_plasi_1929_1933 order by id').fetchall()
     conn.close()
     records = {r["sourceRecordId"]: r for r in audit["records"]}
-    versions = {int(v["sourceRecordId"]):v for v in catalog["versions"] if v["kind"] == "plasa"}
+    versions = {int(v["sourceRecordId"]):v for v in catalog["versions"] if v["kind"] != "judet"}
     assert len(source) == len(records) == len(versions) == 494
     assert set(records) == set(versions) == {r[0] for r in source}
     county_counts = collections.Counter()
@@ -40,6 +40,7 @@ def main():
         a, v = records[i], versions[i]
         assert (name, county, rank) == (a["name"], a["county"], a["sourceRank"])
         assert (name, county) == (v["nameRo"], v["sourceParentLabel"])
+        assert v['sourceRank'] == rank and v['kind'] == ('plasa' if rank == 'II' else 'urban_unit')
         assert v["geometryId"] == a["geometryId"] == "rohgis:geom:" + digest
         assert v["entityId"] == a["entityId"] and v["versionId"] == a["versionId"]
         assert rank in {"II", "III"}

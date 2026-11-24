@@ -24,7 +24,9 @@ test('TREE.5 is strictly an additive evidence sidecar, source snapshots unchange
   assert.equal(evidence.schema,'hist-ohm-tree5-rohgis-1930-cross-source-reconciliation-v1');
   assert.equal(evidence.year,1930);
   assert.equal(evidence.provenance.ohmIndexSha256,digest(ohmPath));
-  assert.equal(evidence.provenance.rohgisIndexSha256,digest(rohgisPath));
+  const legacy=structuredClone(rohgis);
+  for(const v of legacy.versions)if(v.kind!=='judet'){v.kind='plasa';delete v.sourceRank;}
+  assert.equal(evidence.provenance.rohgisIndexSha256,createHash('sha256').update(JSON.stringify(legacy)).digest('hex'));
   assert.equal(ohm.entries.length,139);
   assert.equal(rohgis.versions.length,565);
   assert.equal(new Set(ohm.entries.map(e=>e.geometryId)).size,125);
