@@ -1,0 +1,43 @@
+name: HIST-OHM-TREE.10c source recovery (audit only)
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/workflows/historical-census-recovery.yml']
+permissions:
+  contents: read
+jobs:
+  recover:
+    if: github.head_ref == 'audit/hist-ohm-tree10c-census-recovery'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Recover open public scans
+        shell: bash
+        run: |
+          set -u
+          mkdir -p recovery
+          for item in rusyn census-neamt decree; do
+            case "$item" in
+              rusyn) url='https://rusynsociety.com/wp-content/uploads/2022/05/recensamantul_1930.pdf';;
+              census-neamt) url='https://bibgtkneamt.ebibliophil.ro/d.php?l=bjn_recansamant-1930-vol-2-pdf-jwg553k9';;
+              decree) url='https://www.resurse.net/mo/1930/19300122bis.pdf';;
+            esac
+            printf '%s %s\n' "$item" "$url" | tee -a recovery/fetch.log
+            if curl --fail --location --retry 1 --connect-timeout 10 --max-time 75 --max-filesize 450000000 --output "recovery/$item.part" "$url" && head -c 5 "recovery/$item.part" | grep -q '%PDF-'; then
+              mv "recovery/$item.part" "recovery/$item.pdf"
+              sha256sum "recovery/$item.pdf" | tee -a recovery/fetch.log
+              wc -c "recovery/$item.pdf" | tee -a recovery/fetch.log
+              if command -v pdfinfo >/dev/null; then pdfinfo "recovery/$item.pdf" | tee -a recovery/fetch.log; fi
+            else
+              echo "$item not recovered as a PDF" | tee -a recovery/fetch.log
+              rm -f "recovery/$item.part"
+            fi
+          done
+      - name: Preserve recovered original bytes and log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: historical-census-recovery-10c
+          path: recovery/
+          retention-days: 7
+          if-no-files-found: error
