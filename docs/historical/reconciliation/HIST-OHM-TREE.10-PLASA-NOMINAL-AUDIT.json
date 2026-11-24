@@ -1,7 +1,7 @@
 {
   "schema": "hist-ohm-tree10-plasa-nominal-audit-v1",
   "stage": "HIST-OHM-TREE.10",
-  "status": "INDIVIDUAL_OCR_COLLATION_PARTIAL_LEGAL_HOLD",
+  "status": "ALL_322_CONTEMPORARY_NOMINAL_CANDIDATES_LEGAL_HOLD",
   "referenceYear": 1930,
   "baseRankAudit": {
     "blobSha": "8646ec17539546bd105c6e0869e2c50370601938"
@@ -23,6 +23,17 @@
       "act": "Decizia 1809 P din 30.01.1930",
       "effectiveDate": "1930-01-01",
       "method": "Indexed OCR, current appointment destination only; not earlier office. Facsimile unavailable."
+    },
+    "MO52II": {
+      "url": "https://ro.scribd.com/document/377345246/Monitorul-Oficial-Nr-52-5-Martie-1930-Partea-II",
+      "date": "1930-03-05",
+      "printedPage": 1941,
+      "method": "Judicial notice, OCR columns interleaved; not constitutive act."
+    },
+    "CENSUS_PRELIMINARY": {
+      "url": "https://ro.scribd.com/document/442285188/1930-Recensamant-Cifre-preliminare-populatia-pdf",
+      "referenceDate": "1930-12-29",
+      "method": "Indexed search excerpt, not visual collation; statistical attestation only."
     }
   },
   "summary": {
@@ -30,22 +41,26 @@
     "annex": 297,
     "appointments": 281,
     "both": 257,
-    "any": 321,
+    "any": 322,
     "statuses": {
       "NORMALIZED_NAME_CANDIDATE": 229,
       "OCR_AMBIGUITY_HOLD": 15,
       "NOMINAL_VARIANT_CANDIDATE": 75,
-      "HOLD_NOMINAL": 1,
-      "SEAT_VERSUS_UNIT_NAME_HOLD": 2
+      "HOLD_NOMINAL": 0,
+      "SEAT_VERSUS_UNIT_NAME_HOLD": 2,
+      "OTHER_CONTEMPORARY_NAME_CANDIDATE": 1
     },
-    "legallyCertified": 0
+    "legallyCertified": 0,
+    "otherContemporaryOnly": 1,
+    "annexOrAppointment": 321
   },
   "restrictions": [
     "No normalized or variant name promoted to canonical legal label.",
     "Null nameReading means normalized match candidate; no diplomatic transcription claimed.",
     "OCR damage and seat versus unit-name differences remain HOLD.",
     "County-level count matching does not certify individual names or boundaries.",
-    "No inferred end date, continuity or geometry change."
+    "No inferred end date, continuity or geometry change.",
+    "For Dunărea (Vlașca), other contemporary evidence establishes a name candidate, not the missing January heading or appointment."
   ],
   "records": [
     {
@@ -1223,14 +1238,33 @@
       "county": "Vlașca",
       "sourceRank": "II",
       "priorNominalStatus": "PENDING_LEGAL_NAME_COLLATION",
-      "evidence": [],
-      "matchStatus": "HOLD_NOMINAL",
+      "evidence": [
+        {
+          "source": "MO52II",
+          "kind": "JUDICIAL_NOTICE_OCR",
+          "indexedLine": 2691,
+          "printedPage": 1941,
+          "nameReading": "Dunärea",
+          "comparison": "NORMALIZED_NAME_CANDIDATE",
+          "facsimileVerified": false
+        },
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "kind": "OFFICIAL_STATISTICAL_URBAN_RURAL_TABLE_OCR",
+          "locator": "Vlașca, Plasa DunArea (search-index excerpt)",
+          "nameReading": "DunArea",
+          "comparison": "NORMALIZED_NAME_CANDIDATE",
+          "facsimileVerified": false
+        }
+      ],
+      "matchStatus": "OTHER_CONTEMPORARY_NAME_CANDIDATE",
       "legalEffectiveDateCandidate": "1930-01-01",
       "legalEndDate": null,
       "legalNameCertified": false,
       "continuousValidityCertified": false,
       "legalBoundaryCertified": false,
-      "canonicalChangeAdmitted": false
+      "canonicalChangeAdmitted": false,
+      "notes": "Decree annex OCR p.725 lists communes in this area but omits the heading; do not reconstruct the heading from context alone. March notice and preliminary census give the unit name and county."
     },
     {
       "sourceRecordId": 56,
