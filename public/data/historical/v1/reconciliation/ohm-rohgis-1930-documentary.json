@@ -1,0 +1,673 @@
+{
+  "schema": "hist-ohm-tree6-documentary-reconciliation-v1",
+  "stage": "HIST-OHM-TREE.6",
+  "year": 1930,
+  "status": "SOURCE_ONLY_PARTIAL_DOCUMENTARY_QUALIFICATION_NO_BOUNDARY_CERTIFICATION",
+  "priorAudit": "public/data/historical/v1/reconciliation/ohm-rohgis-1930.json",
+  "scope": {
+    "ohmOpenEndedCases": 13,
+    "priorityCases": [
+      "Suceava",
+      "Neamț"
+    ],
+    "remainingCases": 11
+  },
+  "sources": [
+    {
+      "id": "MO1930",
+      "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+      "type": "CONTEMPORARY_OFFICIAL",
+      "claim": "322 national plasi, 1930 county counts, effective 1930-01-01"
+    },
+    {
+      "id": "MO1929_INDEX",
+      "url": "https://geo-spatial.org/vechi/download/romania-limitele-administrative-ale-jude-elor-interbelice-1930",
+      "type": "SECONDARY_CITATION_TO_DECREE_4036",
+      "claim": "Original Monitorul Oficial nr.274/9 Dec 1929 has not been individually collated"
+    },
+    {
+      "id": "NATURA1931",
+      "url": "https://dspace.bcucluj.ro/bitstream/123456789/68039/1/BCUCLUJ_FP_493856_1931_020_005.pdf",
+      "type": "CONTEMPORARY_TESTIMONY",
+      "claim": "Vasile Ciurea, Suceava-Moldova Fălticeni name chain"
+    },
+    {
+      "id": "NEWS1929",
+      "url": "https://dspace.bcucluj.ro/bitstream/123456789/166443/1/BCUCLUJ_FP_P1487_1929_002_0683.pdf",
+      "type": "CONTEMPORARY_PRESS",
+      "claim": "Fălticeni named Baia in 1929 reform, effect 1930"
+    },
+    {
+      "id": "NEAMT1936",
+      "url": "https://bibgtkneamt.ebibliophil.ro/d.php?l=bjn_buletinul-oficial-al-judetului-neamt-pdf-mtm6tbsp",
+      "type": "CONTEMPORARY_INTERESTED_PREFECTURE_TESTIMONY",
+      "claim": "1926/1930 border commune transfer reports; 1936 proposals explicitly not enacted"
+    },
+    {
+      "id": "ARCHIVE_BAIA",
+      "url": "https://biblioteca-digitala.ro/reviste/Revista-arhivelor/050_Revista-arhivelor_L_3_1973.pdf",
+      "type": "LATER_ARCHIVAL_GUIDE",
+      "claim": "Name chain and 1925 commune transfers"
+    },
+    {
+      "id": "ARCHIVE_NEAMT",
+      "url": "https://biblioteca-digitala.ro/reviste/carte/arhivele-nationale/Indrumator-arhivele-statului-neamt_1993.pdf",
+      "type": "LATER_ARCHIVAL_GUIDE",
+      "claim": "Neamț–Roman plasi chronological register"
+    },
+    {
+      "id": "ROHGIS",
+      "url": "https://geo-spatial.org/vechi/download/rohgis",
+      "type": "DATASET_METADATA",
+      "claim": "County 1929-1938 and plasi 1929-1933 geodata source"
+    }
+  ],
+  "situationSuceava": {
+    "different1930BucovinianSuceava": true,
+    "moldavianNameYearEnd": 1923,
+    "exact1923DayUnresolved": true,
+    "historicalNames": [
+      "Suceava (Moldova)",
+      "Fălticeni",
+      "Baia"
+    ],
+    "oldOHMAreaSqKm": 3358.266783,
+    "oldOHMOverlaySqKm": {
+      "Baia": 2144.57181,
+      "Neamț": 799.18358,
+      "Câmpulung": 385.44532
+    },
+    "equivalenceOfGeometry": false
+  },
+  "situationNeamt": {
+    "rohgisMinusOhmSqKm": 816.60081,
+    "portionAlsoInOhmOldSuceavaSqKm": 799.18358,
+    "transferClaims": [
+      {
+        "date": "1926-01-01",
+        "from": "Neamț",
+        "to": "Fălticeni (later Baia)",
+        "communes": [
+          "Țibucani",
+          "Păstrăveni",
+          "Timișești",
+          "Răucești"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1926-01-01",
+        "from": "Neamț",
+        "to": "Roman",
+        "communes": [
+          "Bârgăoani",
+          "Budeștii-Ghicăi",
+          "Bozieni",
+          "Talpa"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1926-01-01",
+        "from": "Neamț",
+        "to": "Bacău",
+        "communes": [
+          "Frumoasa"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1926-01-01",
+        "from": "Bacău",
+        "to": "Neamț",
+        "communes": [
+          "Blăgești",
+          "Buda",
+          "Valea lui Ion"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1926-01-01",
+        "from": "Fălticeni (later Baia)",
+        "to": "Neamț",
+        "communes": [
+          "Crucea",
+          "Broșteni",
+          "Mădei",
+          "Borca",
+          "Farcașa"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1926-01-01",
+        "from": "Ciuc",
+        "to": "Neamț",
+        "communes": [
+          "Bicazul Ardelean",
+          "Tulgheș",
+          "Corbu",
+          "Bilbor",
+          "Borsec"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1930-01-01",
+        "from": "Neamț",
+        "to": "Ciuc",
+        "communes": [
+          "Bicazul Ardelean",
+          "Tulgheș"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1930-01-01",
+        "from": "Neamț",
+        "to": "Mureș",
+        "communes": [
+          "Corbu",
+          "Bilbor",
+          "Borsec"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1930-01-01",
+        "from": "Neamț",
+        "to": "Bacău",
+        "communes": [
+          "Blăgești",
+          "Buda",
+          "Valea lui Ion"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1930-01-01",
+        "from": "Baia",
+        "to": "Neamț",
+        "communes": [
+          "Țibucani",
+          "Păstrăveni"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1930-01-01",
+        "from": "Roman",
+        "to": "Neamț",
+        "communes": [
+          "Bârgăoani",
+          "Talpa"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1930-01-01",
+        "from": "Bacău",
+        "to": "Neamț",
+        "communes": [
+          "Frumoasa"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "RETROSPECTIVE_REPORT_REQUIRES_ORIGINAL_STATUTE"
+      },
+      {
+        "date": "1936-PROPOSED",
+        "from": "Neamț",
+        "to": "Baia",
+        "communes": [
+          "Crucea",
+          "Broșteni",
+          "Mădei",
+          "Borca",
+          "Farcașa"
+        ],
+        "source": "NEAMT1936",
+        "enactedStatus": "NOT_ENACTED_IN_SOURCE"
+      }
+    ],
+    "warning": "1936 prefect advocated against proposals; proposed 1936 transfers may not be marked enacted"
+  },
+  "plasiDiscrepancy": {
+    "nationalCountOfficialAt1930": 322,
+    "rohgisPlasiFeatures1929to1933": 494,
+    "difference": 172,
+    "status": "DOCUMENTARY_CONFLICT_HOLD_NO_AUTOMATIC_DEDUPLICATION"
+  },
+  "cases": [
+    {
+      "ohmId": "ohm-r2943619",
+      "rohgisId": "rohgis:county:1930:bacau",
+      "nameRo": "Bacău",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 5,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.97731834,
+        "ohmOnlySqKm": 58.425767,
+        "rohgisOnlySqKm": 42.985675,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Putna",
+            "overlapSqKm": 14.93,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Tecuci",
+            "overlapSqKm": 14.83,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "NAMED_BORDER_TRANSFER_REPORT",
+      "individualFinding": "1936 Neamț report lists Frumoasa, Blăgești, Buda, Valea lui Ion moves in 1926/1930. Needs original decrees.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2940712",
+      "rohgisId": "rohgis:county:1930:botosani",
+      "nameRo": "Botoșani",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 3,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.95973396,
+        "ohmOnlySqKm": 102.725223,
+        "rohgisOnlySqKm": 22.801888,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Iași",
+            "overlapSqKm": 43.11,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Dorohoi",
+            "overlapSqKm": 27.8,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "Neighbors Iași, Dorohoi, Bukovinian Suceava; neither identified border statute nor identical geometry.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2945088",
+      "rohgisId": "rohgis:county:1930:covurlui",
+      "nameRo": "Covurlui",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 2,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.95481521,
+        "ohmOnlySqKm": 54.144813,
+        "rohgisOnlySqKm": 68.903552,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Tecuci",
+            "overlapSqKm": 24.44,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Tutova",
+            "overlapSqKm": 23.67,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "Neighbors Tecuci, Tutova; verify commune annexes from 1929.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2937887",
+      "rohgisId": "rohgis:county:1930:dorohoi",
+      "nameRo": "Dorohoi",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 3,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.97499117,
+        "ohmOnlySqKm": 29.631722,
+        "rohgisOnlySqKm": 43.691018,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Rădăuți",
+            "overlapSqKm": 9.53,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Botoșani",
+            "overlapSqKm": 8.21,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "Neighbors Rădăuți, Botoșani, Hotin; verify 1925/1929 annexes.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2943671",
+      "rohgisId": "rohgis:county:1930:falciu",
+      "nameRo": "Fălciu",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 2,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.94875158,
+        "ohmOnlySqKm": 83.693329,
+        "rohgisOnlySqKm": 26.10396,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Tutova",
+            "overlapSqKm": 58.85,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Iași",
+            "overlapSqKm": 17.96,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "Main OHM-only area lies under RoHGIS Tutova; verify 1929 Prut boundary and commune annexes separately.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2943493",
+      "rohgisId": "rohgis:county:1930:iasi",
+      "nameRo": "Iași",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 3,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.94741289,
+        "ohmOnlySqKm": 37.272776,
+        "rohgisOnlySqKm": 140.547878,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Vaslui",
+            "overlapSqKm": 20.94,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Baia",
+            "overlapSqKm": 7.91,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "RoHGIS-only area overlaps older OHM Vaslui/Botoșani; needs 1929 commune annex.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2943485",
+      "rohgisId": "rohgis:county:1930:neamt",
+      "nameRo": "Neamț",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 4,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.7898137,
+        "ohmOnlySqKm": 190.755475,
+        "rohgisOnlySqKm": 816.600807,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Baia",
+            "overlapSqKm": 100.81,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Roman",
+            "overlapSqKm": 75.14,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "CONTEMPORARY_BORDER_CHANGES_REPORTED",
+      "individualFinding": "Neamț prefect report 1936 names commune transfers effective 1926 and 1930. Strong overlap of enlarged RoHGIS Neamț with old OHM Suceava, but actual legal transfer polygon not proved.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2943652",
+      "rohgisId": "rohgis:county:1930:putna",
+      "nameRo": "Putna",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 3,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.92709458,
+        "ohmOnlySqKm": 71.951473,
+        "rohgisOnlySqKm": 186.91133,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Tecuci",
+            "overlapSqKm": 47.06,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Râmnicu Sărat",
+            "overlapSqKm": 13.61,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "Border changes with Tecuci and Râmnicu Sărat not documentarily allocated.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2943496",
+      "rohgisId": "rohgis:county:1930:roman",
+      "nameRo": "Roman",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 2,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.92051066,
+        "ohmOnlySqKm": 52.707348,
+        "rohgisOnlySqKm": 105.947821,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Vaslui",
+            "overlapSqKm": 24.38,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Baia",
+            "overlapSqKm": 10.07,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "NAMED_BORDER_TRANSFER_REPORT",
+      "individualFinding": "1936 Neamț report lists Bârgăoani, Budeștii-Ghicăi, Bozieni and Talpa transferred to Roman in 1926 and Bârgăoani/Talpa returned in 1930. Needs original decrees.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2940721",
+      "rohgisId": "rohgis:county:1930:suceava",
+      "nameRo": "Suceava",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 3,
+      "isSameInstitutionAs1930NamedCounty": false,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.00057506,
+        "ohmOnlySqKm": 3355.731872,
+        "rohgisOnlySqKm": 1049.789785,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Baia",
+            "overlapSqKm": 2144.57,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Neamț",
+            "overlapSqKm": 799.18,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Câmpulung",
+            "overlapSqKm": 385.45,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "CONTEMPORARY_RENAMING_CONFIRMED",
+      "individualFinding": "Renamed Suceava (Moldova, seat Fălticeni) → Fălticeni in 1923 → Baia in 1929/1930. Not identical to Bukovinian 1930 Suceava. Exact 1923 day unresolved.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2945087",
+      "rohgisId": "rohgis:county:1930:tecuci",
+      "nameRo": "Tecuci",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 3,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.92604762,
+        "ohmOnlySqKm": 83.707969,
+        "rohgisOnlySqKm": 101.017634,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Tutova",
+            "overlapSqKm": 35.04,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Covurlui",
+            "overlapSqKm": 20.57,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "Border with Tutova, Covurlui, Putna requires individual 1929 commune annex.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2945089",
+      "rohgisId": "rohgis:county:1930:tutova",
+      "nameRo": "Tutova",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 3,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.9192034,
+        "ohmOnlySqKm": 67.504627,
+        "rohgisOnlySqKm": 140.371453,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Covurlui",
+            "overlapSqKm": 38.9,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Tecuci",
+            "overlapSqKm": 14.69,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "Border with Fălciu, Tecuci, Covurlui requires individual 1929 commune annex.",
+      "legalBoundaryCertified": false
+    },
+    {
+      "ohmId": "ohm-r2943670",
+      "rohgisId": "rohgis:county:1930:vaslui",
+      "nameRo": "Vaslui",
+      "ohmStart": "1859",
+      "ohmEnd": null,
+      "officiallyNamed1930": true,
+      "officialPlasi1930": 2,
+      "isSameInstitutionAs1930NamedCounty": null,
+      "geometryIdSharingAdmitted": false,
+      "geometricComparison": {
+        "iou": 0.92212743,
+        "ohmOnlySqKm": 122.682393,
+        "rohgisOnlySqKm": 58.759627,
+        "oldOHMResidualIn1930Counties": [
+          {
+            "county": "Iași",
+            "overlapSqKm": 73.06,
+            "interpretation": "SPATIAL_ONLY"
+          },
+          {
+            "county": "Tutova",
+            "overlapSqKm": 21.21,
+            "interpretation": "SPATIAL_ONLY"
+          }
+        ]
+      },
+      "evidenceLevel": "1930_OFFICIAL_NAME_ONLY",
+      "individualFinding": "Border with Iași, Tutova, Fălciu requires individual 1929 commune annex.",
+      "legalBoundaryCertified": false
+    }
+  ],
+  "restrictions": [
+    "NEVER_INFER_MISSING_OHM_END_FROM_1930_COUNTY_NAME",
+    "NO_CROSS_SOURCE_GEOMETRY_ID_REUSE",
+    "NO_AUTOMATIC_NEW_BOUNDARY",
+    "NO_LEGAL_STATUS_FOR_UNVERIFIED_BORDER_TRANSFER"
+  ],
+  "sourceLimitations": [
+    "1925/1929 original commune annexes not fully obtained or collated",
+    "PDF raster screenshots were unavailable; public text extraction used",
+    "Exact 1923 day conflicts across contemporary and later accounts"
+  ]
+}
