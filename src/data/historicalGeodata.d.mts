@@ -1,4 +1,5 @@
 import type {Feature,Polygon,MultiPolygon} from 'geojson';
+import type {UrbanClassification} from './historicalRohgisUrban1930.mjs';
 export interface GeodataSourceEntry {
   id:string;
   sourceFamily:'OHM'|'ROHGIS';
@@ -7,6 +8,7 @@ export interface GeodataSourceEntry {
   sourcePeriod:{start:string|null;end:string|null;sourceOnly:true;kind?:'snapshot'|'undated';notes?:string|null};
   sourceType:string|null;
   sourceRank?:'II'|'III';
+  urbanClassification?:UrbanClassification;
   geometryId:string;
   featureId:string;
   geometryShard:string;

@@ -1,0 +1,2144 @@
+{
+  "schema": "hist-ohm-tree9a-urban-evidence-v1",
+  "stage": "HIST-OHM-TREE.9a",
+  "status": "ALL_84_OFFICIAL_ATTESTATIONS_LOCATED_LEGAL_FACSIMILE_HOLD",
+  "baseAudit": {
+    "path": "docs/historical/reconciliation/HIST-OHM-TREE.9-URBAN-QUALIFICATION.json",
+    "blobSha": "503e6fc25274e15b0bdac0b90cec5b18d34ca5b8"
+  },
+  "sources": {
+    "CENSUS_IX": {
+      "title": "Recensământul general al populației României din 29 decemvrie 1930, vol. IX, ICS, 1940",
+      "url": "https://bibgtkneamt.ebibliophil.ro/d.php?l=bjn_recensamantul-general-al-populatiei-romaniei-din-29-decemvrie-1930-vol-9-pdf-qgd7pfqy",
+      "indexedMirror": "https://ro.scribd.com/document/725867607/Bjn-Recensamantul-General-Al-Populatiei-Romaniei-Din-29-Decemvrie-1930-Vol-9-PDF-Qgd7pfqy",
+      "locator": "Part I pp.6–10 county tables, pp.11–13 alphabetical, pp.14–16 by population size",
+      "note": "Indexed excerpts only; original PDF retrieval returned 520, screenshot unavailable."
+    },
+    "CENSUS_II": {
+      "url": "https://bibgtkneamt.ebibliophil.ro/d.php?l=bjn_recansamant-1930-vol-2-pdf-jwg553k9",
+      "title": "Census 1930 vol II, 1938",
+      "note": "Indexed extract only"
+    },
+    "CENSUS_PRELIMINARY": {
+      "url": "https://ro.scribd.com/document/442285188/1930-Recensamant-Cifre-preliminare-populatia-pdf",
+      "alternate": "https://fr.scribd.com/document/365212320/1930-Recensamant-Cifre-preliminare-populatia-pdf",
+      "title": "Populațiunea actuală a României, cifrele preliminare, 1931",
+      "note": "Urban subsection distinguishes municipalities by explicit label; preliminary population figures are NOT adopted."
+    },
+    "AS1930": {
+      "url": "https://ro.scribd.com/document/494027053/Anuarul-Statistic-Al-Romaniei-1930",
+      "title": "Anuarul Statistic al României 1930",
+      "note": "Urban category only, not legal subtype."
+    },
+    "MO220": {
+      "url": "https://www.resurse.net/mo/1925/19251007.pdf",
+      "title": "Monitorul Oficial 220, 7 Oct 1925, decree 2465, art I",
+      "note": "Earlier normative status, not proof of continuity to Dec 1930. Screenshot cache miss."
+    }
+  },
+  "summary": {
+    "total": 84,
+    "statisticalSubtype": 61,
+    "otherOfficial": 23,
+    "sourceOnly": 0,
+    "priorMunicipalActs": 5,
+    "demographicValuesFound": 7,
+    "agreesPoint": 3,
+    "agreesPolygon": 4,
+    "officialAttestationAny": 84,
+    "definitiveCensusSubtype": 45,
+    "preliminaryOnlySubtype": 16,
+    "priorNormativeAny": 13,
+    "fullyLegallyCertified": 0
+  },
+  "records": [
+    {
+      "sourceRecordId": 10,
+      "entityId": "rohgis:plasa:1930:10",
+      "versionId": "rohgis:plasa:1930:10:version:1930",
+      "geometryId": "rohgis:geom:fff441bebc757d8eef2f2b92",
+      "name": "Urlați",
+      "county": "Prahova",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 63",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 28,
+      "entityId": "rohgis:plasa:1930:28",
+      "versionId": "rohgis:plasa:1930:28:version:1930",
+      "geometryId": "rohgis:geom:8c76a44deeeea13bfe5b3e7f",
+      "name": "Slobozia",
+      "county": "Ialomița",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 48",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 33,
+      "entityId": "rohgis:plasa:1930:33",
+      "versionId": "rohgis:plasa:1930:33:version:1930",
+      "geometryId": "rohgis:geom:f28831a8d09d8db74e835266",
+      "name": "Măcin",
+      "county": "Tulcea",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Tulcea, Măcin",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 34,
+      "entityId": "rohgis:plasa:1930:34",
+      "versionId": "rohgis:plasa:1930:34:version:1930",
+      "geometryId": "rohgis:geom:e5422dce767976448762f79f",
+      "name": "Isaccea",
+      "county": "Tulcea",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Tulcea, Isaccea",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 53,
+      "entityId": "rohgis:plasa:1930:53",
+      "versionId": "rohgis:plasa:1930:53:version:1930",
+      "geometryId": "rohgis:geom:0672fd342bcc17bd8a5584e8",
+      "name": "Giurgiu",
+      "county": "Vlașca",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Vlașca, Giurgiu",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 55,
+      "entityId": "rohgis:plasa:1930:55",
+      "versionId": "rohgis:plasa:1930:55:version:1930",
+      "geometryId": "rohgis:geom:073de1eaf6d710e60d6812af",
+      "name": "Zimnicea",
+      "county": "Teleorman",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Teleorman, Zimnicea",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 60,
+      "entityId": "rohgis:plasa:1930:60",
+      "versionId": "rohgis:plasa:1930:60:version:1930",
+      "geometryId": "rohgis:geom:c1d536494488fae4eec6c7e0",
+      "name": "Tulcea",
+      "county": "Tulcea",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Tulcea, Tulcea",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 61,
+      "entityId": "rohgis:plasa:1930:61",
+      "versionId": "rohgis:plasa:1930:61:version:1930",
+      "geometryId": "rohgis:geom:6398a8ed63953c7096b094aa",
+      "name": "Sulina",
+      "county": "Tulcea",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 75",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 65,
+      "entityId": "rohgis:plasa:1930:65",
+      "versionId": "rohgis:plasa:1930:65:version:1930",
+      "geometryId": "rohgis:geom:f7ace1849adcfd08e753e89c",
+      "name": "Babadag",
+      "county": "Tulcea",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Tulcea, Babadag",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 82,
+      "entityId": "rohgis:plasa:1930:82",
+      "versionId": "rohgis:plasa:1930:82:version:1930",
+      "geometryId": "rohgis:geom:68203e9e38af9c6425d6a81d",
+      "name": "Sinaia",
+      "county": "Prahova",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 61",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 92,
+      "entityId": "rohgis:plasa:1930:92",
+      "versionId": "rohgis:plasa:1930:92:version:1930",
+      "geometryId": "rohgis:geom:191d1d9ef516c9b42cfb9180",
+      "name": "Bârlad",
+      "county": "Tutova",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 9",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 102,
+      "entityId": "rohgis:plasa:1930:102",
+      "versionId": "rohgis:plasa:1930:102:version:1930",
+      "geometryId": "rohgis:geom:6ab7f6c515cf1d184790c5c5",
+      "name": "Comrat",
+      "county": "Tighina",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 166",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 538–553",
+          "explicitSubtype": null,
+          "level": "PRIOR_NORMATIVE_URBAN_CATEGORY_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 106,
+      "entityId": "rohgis:plasa:1930:106",
+      "versionId": "rohgis:plasa:1930:106:version:1930",
+      "geometryId": "rohgis:geom:d16710f6d70517e1a0597323",
+      "name": "Tecuci",
+      "county": "Tecuci",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 81",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 109,
+      "entityId": "rohgis:plasa:1930:109",
+      "versionId": "rohgis:plasa:1930:109:version:1930",
+      "geometryId": "rohgis:geom:28add32aa5252d8bed8301d1",
+      "name": "Huși",
+      "county": "Fălciu",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 42",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 114,
+      "entityId": "rohgis:plasa:1930:114",
+      "versionId": "rohgis:plasa:1930:114:version:1930",
+      "geometryId": "rohgis:geom:a2f414a1538a679f4b58a28d",
+      "name": "Târgu Săcuesc",
+      "county": "Trei Scaune",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 46",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 118,
+      "entityId": "rohgis:plasa:1930:118",
+      "versionId": "rohgis:plasa:1930:118:version:1930",
+      "geometryId": "rohgis:geom:11f0572cb090749b09b63bae",
+      "name": "Brașov",
+      "county": "Brașov",
+      "proposedSubtype": "municipiu",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Brașov §50, urban subsection, Brașov",
+          "explicitSubtype": "municipiu",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 517–522",
+          "explicitSubtype": "municipiu",
+          "level": "PRIOR_NORMATIVE_ACT_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 125,
+      "entityId": "rohgis:plasa:1930:125",
+      "versionId": "rohgis:plasa:1930:125:version:1930",
+      "geometryId": "rohgis:geom:3456779047f1274576c5aea3",
+      "name": "Alexandria",
+      "county": "Teleorman",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Teleorman, Alexandria",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 126,
+      "entityId": "rohgis:plasa:1930:126",
+      "versionId": "rohgis:plasa:1930:126:version:1930",
+      "geometryId": "rohgis:geom:bb3d7cee8a02a553b60db44d",
+      "name": "Turnu Măgurele",
+      "county": "Teleorman",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Teleorman, Turnu Măgurele",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 128,
+      "entityId": "rohgis:plasa:1930:128",
+      "versionId": "rohgis:plasa:1930:128:version:1930",
+      "geometryId": "rohgis:geom:8c50ccedd1efb485b5392032",
+      "name": "Roșiori-de-Vede",
+      "county": "Teleorman",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, Teleorman, Roșiori-de-Vede",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 131,
+      "entityId": "rohgis:plasa:1930:131",
+      "versionId": "rohgis:plasa:1930:131:version:1930",
+      "geometryId": "rohgis:geom:ed8243cc385f1da3e6bc05d3",
+      "name": "Corabia",
+      "county": "Romanați",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Romanați §4, urban subsection, Corabia",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 134,
+      "entityId": "rohgis:plasa:1930:134",
+      "versionId": "rohgis:plasa:1930:134:version:1930",
+      "geometryId": "rohgis:geom:f76e0561682eeb7e53672956",
+      "name": "Caracal",
+      "county": "Romanați",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Romanați §4, urban subsection, Caracal",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 140,
+      "entityId": "rohgis:plasa:1930:140",
+      "versionId": "rohgis:plasa:1930:140:version:1930",
+      "geometryId": "rohgis:geom:8f97a08667de33dceaceadee",
+      "name": "Câmpulung",
+      "county": "Muscel",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 54",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 146,
+      "entityId": "rohgis:plasa:1930:146",
+      "versionId": "rohgis:plasa:1930:146:version:1930",
+      "geometryId": "rohgis:geom:caa358b9285ac3cd3cf29fa8",
+      "name": "Vaslui",
+      "county": "Vaslui",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 89",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 152,
+      "entityId": "rohgis:plasa:1930:152",
+      "versionId": "rohgis:plasa:1930:152:version:1930",
+      "geometryId": "rohgis:geom:5a700590332a0f7824876af3",
+      "name": "Brăila",
+      "county": "Brăila",
+      "proposedSubtype": "municipiu",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 38",
+          "explicitSubtype": "municipiu",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 517–522",
+          "explicitSubtype": "municipiu",
+          "level": "PRIOR_NORMATIVE_ACT_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 167,
+      "entityId": "rohgis:plasa:1930:167",
+      "versionId": "rohgis:plasa:1930:167:version:1930",
+      "geometryId": "rohgis:geom:a6cffa95cac6f2ae707b77be",
+      "name": "Mihăileni",
+      "county": "Dorohoi",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 49",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 169,
+      "entityId": "rohgis:plasa:1930:169",
+      "versionId": "rohgis:plasa:1930:169:version:1930",
+      "geometryId": "rohgis:geom:c770527052b38688b054172a",
+      "name": "Suceava",
+      "county": "Suceava",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 186",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 172,
+      "entityId": "rohgis:plasa:1930:172",
+      "versionId": "rohgis:plasa:1930:172:version:1930",
+      "geometryId": "rohgis:geom:0f11bd3dfa2e1b0a3e9655e1",
+      "name": "Roman",
+      "county": "Roman",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 65",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 177,
+      "entityId": "rohgis:plasa:1930:177",
+      "versionId": "rohgis:plasa:1930:177:version:1930",
+      "geometryId": "rohgis:geom:ed614f0ee11cdacbf9b017e8",
+      "name": "Tuzla",
+      "county": "Cetatea Albă",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 148",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 183,
+      "entityId": "rohgis:plasa:1930:183",
+      "versionId": "rohgis:plasa:1930:183:version:1930",
+      "geometryId": "rohgis:geom:c50f0a1ffe4ab9d1b702395e",
+      "name": "Bender",
+      "county": "Tighina",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 165",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 192,
+      "entityId": "rohgis:plasa:1930:192",
+      "versionId": "rohgis:plasa:1930:192:version:1930",
+      "geometryId": "rohgis:geom:4509afd3f4a059cdfa32840e",
+      "name": "Miercurea Ciuc",
+      "county": "Ciuc",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Ciuc §51, urban subsection, Miercurea Ciuc",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 197,
+      "entityId": "rohgis:plasa:1930:197",
+      "versionId": "rohgis:plasa:1930:197:version:1930",
+      "geometryId": "rohgis:geom:542b9fed0dc6431d773939c6",
+      "name": "Sfântu Gheorghe",
+      "county": "Trei Scaune",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 43",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 204,
+      "entityId": "rohgis:plasa:1930:204",
+      "versionId": "rohgis:plasa:1930:204:version:1930",
+      "geometryId": "rohgis:geom:238603977dfdee2f97a495af",
+      "name": "Sighișoara",
+      "county": "Târnava Mare",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 41",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 207,
+      "entityId": "rohgis:plasa:1930:207",
+      "versionId": "rohgis:plasa:1930:207:version:1930",
+      "geometryId": "rohgis:geom:5a0314d11d1580841030fcd2",
+      "name": "Făgăraș",
+      "county": "Făgăraș",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 18",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 241,
+      "entityId": "rohgis:plasa:1930:241",
+      "versionId": "rohgis:plasa:1930:241:version:1930",
+      "geometryId": "rohgis:geom:e70293d769a641c2cbeaeef9",
+      "name": "Drăgășani",
+      "county": "Vâlcea",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 31",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 243,
+      "entityId": "rohgis:plasa:1930:243",
+      "versionId": "rohgis:plasa:1930:243:version:1930",
+      "geometryId": "rohgis:geom:7d116bb27964cae37d61b664",
+      "name": "Balș",
+      "county": "Romanați",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Romanați §4, urban subsection, Balș",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 248,
+      "entityId": "rohgis:plasa:1930:248",
+      "versionId": "rohgis:plasa:1930:248:version:1930",
+      "geometryId": "rohgis:geom:e86196f1ea73392bc4912d0c",
+      "name": "Turnu Severin",
+      "county": "Mehedinți",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 86",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 251,
+      "entityId": "rohgis:plasa:1930:251",
+      "versionId": "rohgis:plasa:1930:251:version:1930",
+      "geometryId": "rohgis:geom:8a02982311e585d82998d59f",
+      "name": "Strehaia",
+      "county": "Mehedinți",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 73",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 254,
+      "entityId": "rohgis:plasa:1930:254",
+      "versionId": "rohgis:plasa:1930:254:version:1930",
+      "geometryId": "rohgis:geom:ac25d88f74203a58718e9224",
+      "name": "Blaj",
+      "county": "Târnava Mică",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 9",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 258,
+      "entityId": "rohgis:plasa:1930:258",
+      "versionId": "rohgis:plasa:1930:258:version:1930",
+      "geometryId": "rohgis:geom:7e7cc6e8acad8e4b789ad862",
+      "name": "Mediaș",
+      "county": "Târnava Mare",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 26",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 264,
+      "entityId": "rohgis:plasa:1930:264",
+      "versionId": "rohgis:plasa:1930:264:version:1930",
+      "geometryId": "rohgis:geom:57f2274cb0569d65c38b4601",
+      "name": "Câmpulung Moldovenesc",
+      "county": "Câmpulung",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 169",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 267,
+      "entityId": "rohgis:plasa:1930:267",
+      "versionId": "rohgis:plasa:1930:267:version:1930",
+      "geometryId": "rohgis:geom:f5d9406798c69fffb79722bd",
+      "name": "Vatra Dornei",
+      "county": "Câmpulung",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 172",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 269,
+      "entityId": "rohgis:plasa:1930:269",
+      "versionId": "rohgis:plasa:1930:269:version:1930",
+      "geometryId": "rohgis:geom:0589a494d743c91739eeb18f",
+      "name": "Solca",
+      "county": "Suceava",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 187",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 289,
+      "entityId": "rohgis:plasa:1930:289",
+      "versionId": "rohgis:plasa:1930:289:version:1930",
+      "geometryId": "rohgis:geom:5114ad2f3ad761f87b7914f5",
+      "name": "Soroca",
+      "county": "Soroca",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 163",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 298,
+      "entityId": "rohgis:plasa:1930:298",
+      "versionId": "rohgis:plasa:1930:298:version:1930",
+      "geometryId": "rohgis:geom:88f032eac39061d6f200dabb",
+      "name": "Sadagura",
+      "county": "Cernăuți",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 176",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 299,
+      "entityId": "rohgis:plasa:1930:299",
+      "versionId": "rohgis:plasa:1930:299:version:1930",
+      "geometryId": "rohgis:geom:e5d5b1791bca808b8a49c7e2",
+      "name": "Cozmeni",
+      "county": "Cernăuți",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 175",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 538–553",
+          "explicitSubtype": null,
+          "level": "PRIOR_NORMATIVE_URBAN_CATEGORY_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 310,
+      "entityId": "rohgis:plasa:1930:310",
+      "versionId": "rohgis:plasa:1930:310:version:1930",
+      "geometryId": "rohgis:geom:8540e0250b8639315ce05f5a",
+      "name": "Vășcăuți-pe-Ceremuș",
+      "county": "Storojineț",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 183",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 538–553",
+          "explicitSubtype": null,
+          "level": "PRIOR_NORMATIVE_URBAN_CATEGORY_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 314,
+      "entityId": "rohgis:plasa:1930:314",
+      "versionId": "rohgis:plasa:1930:314:version:1930",
+      "geometryId": "rohgis:geom:dc85c93e9f904c9ff49a133f",
+      "name": "Storojineț",
+      "county": "Storojineț",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 182",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 316,
+      "entityId": "rohgis:plasa:1930:316",
+      "versionId": "rohgis:plasa:1930:316:version:1930",
+      "geometryId": "rohgis:geom:9139242ecf326303e6a56636",
+      "name": "Vijnița",
+      "county": "Storojineț",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 184",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 538–553",
+          "explicitSubtype": null,
+          "level": "PRIOR_NORMATIVE_URBAN_CATEGORY_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 337,
+      "entityId": "rohgis:plasa:1930:337",
+      "versionId": "rohgis:plasa:1930:337:version:1930",
+      "geometryId": "rohgis:geom:13f7a49091f5a6da46da6056",
+      "name": "Abrud",
+      "county": "Alba",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Alba §49, urban subsection, Abrud",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 340,
+      "entityId": "rohgis:plasa:1930:340",
+      "versionId": "rohgis:plasa:1930:340:version:1930",
+      "geometryId": "rohgis:geom:fac28abbc798fe58f06f16c0",
+      "name": "Aiud",
+      "county": "Alba",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Alba §49, urban subsection, Aiud",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 342,
+      "entityId": "rohgis:plasa:1930:342",
+      "versionId": "rohgis:plasa:1930:342:version:1930",
+      "geometryId": "rohgis:geom:58f9ef8982979fb0b6807eef",
+      "name": "Turda",
+      "county": "Turda",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 48",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 345,
+      "entityId": "rohgis:plasa:1930:345",
+      "versionId": "rohgis:plasa:1930:345:version:1930",
+      "geometryId": "rohgis:geom:f1afb7de12891f05ab28f85a",
+      "name": "Huedin",
+      "county": "Cluj",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Cluj §52, urban subsection, Huedin",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 349,
+      "entityId": "rohgis:plasa:1930:349",
+      "versionId": "rohgis:plasa:1930:349:version:1930",
+      "geometryId": "rohgis:geom:c35e203e6607a4e97caccb63",
+      "name": "Orăștie",
+      "county": "Hunedoara",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 208",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 350,
+      "entityId": "rohgis:plasa:1930:350",
+      "versionId": "rohgis:plasa:1930:350:version:1930",
+      "geometryId": "rohgis:geom:754d38e2df5a6cc3f78dd6b1",
+      "name": "Petroșani",
+      "county": "Hunedoara",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 209",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 354,
+      "entityId": "rohgis:plasa:1930:354",
+      "versionId": "rohgis:plasa:1930:354:version:1930",
+      "geometryId": "rohgis:geom:2c862435b6f86ba39dbc5c0a",
+      "name": "Alba-Iulia",
+      "county": "Alba",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Alba §49, urban subsection, Alba-Iulia",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 355,
+      "entityId": "rohgis:plasa:1930:355",
+      "versionId": "rohgis:plasa:1930:355:version:1930",
+      "geometryId": "rohgis:geom:4e1de91aa513b58c6359c589",
+      "name": "Sebeș",
+      "county": "Alba",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Alba §49, urban subsection, Sebeș",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 360,
+      "entityId": "rohgis:plasa:1930:360",
+      "versionId": "rohgis:plasa:1930:360:version:1930",
+      "geometryId": "rohgis:geom:84645926bc500619cf7aaace",
+      "name": "Bistrița",
+      "county": "Năsăud",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 214",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 363,
+      "entityId": "rohgis:plasa:1930:363",
+      "versionId": "rohgis:plasa:1930:363:version:1930",
+      "geometryId": "rohgis:geom:0616595c4c6c9b56ccf81c12",
+      "name": "Reghin",
+      "county": "Mureș",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 212",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 374,
+      "entityId": "rohgis:plasa:1930:374",
+      "versionId": "rohgis:plasa:1930:374:version:1930",
+      "geometryId": "rohgis:geom:fb205d3d7c7f69cd3fe43b83",
+      "name": "Năsăud",
+      "county": "Năsăud",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 215",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 538–553",
+          "explicitSubtype": null,
+          "level": "PRIOR_NORMATIVE_URBAN_CATEGORY_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 379,
+      "entityId": "rohgis:plasa:1930:379",
+      "versionId": "rohgis:plasa:1930:379:version:1930",
+      "geometryId": "rohgis:geom:38480691f5e9fdb0bf9d99b0",
+      "name": "Carei",
+      "county": "Sălaj",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 220",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 538–553",
+          "explicitSubtype": null,
+          "level": "PRIOR_NORMATIVE_URBAN_CATEGORY_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 390,
+      "entityId": "rohgis:plasa:1930:390",
+      "versionId": "rohgis:plasa:1930:390:version:1930",
+      "geometryId": "rohgis:geom:c939a68806929fd8b22d78a9",
+      "name": "Gherla",
+      "county": "Someș",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 226",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 403,
+      "entityId": "rohgis:plasa:1930:403",
+      "versionId": "rohgis:plasa:1930:403:version:1930",
+      "geometryId": "rohgis:geom:d0c79e448a77660a48d5411e",
+      "name": "Șimleu Silvaniei",
+      "county": "Sălaj",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 221",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 406,
+      "entityId": "rohgis:plasa:1930:406",
+      "versionId": "rohgis:plasa:1930:406:version:1930",
+      "geometryId": "rohgis:geom:02f4206b909cc22244304d44",
+      "name": "Zalău",
+      "county": "Sălaj",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 219",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 412,
+      "entityId": "rohgis:plasa:1930:412",
+      "versionId": "rohgis:plasa:1930:412:version:1930",
+      "geometryId": "rohgis:geom:08f50b5ba5e54ef3e75ceaad",
+      "name": "Caransebeș",
+      "county": "Severin",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Severin §66, urban subsection, Caransebeș",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 416,
+      "entityId": "rohgis:plasa:1930:416",
+      "versionId": "rohgis:plasa:1930:416:version:1930",
+      "geometryId": "rohgis:geom:63f40640c024ec191c0b2d86",
+      "name": "Hațeg",
+      "county": "Hunedoara",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 206",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 420,
+      "entityId": "rohgis:plasa:1930:420",
+      "versionId": "rohgis:plasa:1930:420:version:1930",
+      "geometryId": "rohgis:geom:c5cb65c9ddbf6e461f903e3f",
+      "name": "Lugoj",
+      "county": "Severin",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Severin §66, urban subsection, Lugoj",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 422,
+      "entityId": "rohgis:plasa:1930:422",
+      "versionId": "rohgis:plasa:1930:422:version:1930",
+      "geometryId": "rohgis:geom:145d39b0531abb5c25e49bb6",
+      "name": "Reșița",
+      "county": "Caraș",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 36",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 429,
+      "entityId": "rohgis:plasa:1930:429",
+      "versionId": "rohgis:plasa:1930:429:version:1930",
+      "geometryId": "rohgis:geom:857de8415d8af0c19182829f",
+      "name": "Lipova",
+      "county": "Timiș-Torontal",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Timiș-Torontal §67, urban subsection, Lipova",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 434,
+      "entityId": "rohgis:plasa:1930:434",
+      "versionId": "rohgis:plasa:1930:434:version:1930",
+      "geometryId": "rohgis:geom:b40b8881fa9082938ca8510a",
+      "name": "Timișoara",
+      "county": "Timiș-Torontal",
+      "proposedSubtype": "municipiu",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Timiș-Torontal §67, urban subsection, Timișoara",
+          "explicitSubtype": "municipiu",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 517–522",
+          "explicitSubtype": "municipiu",
+          "level": "PRIOR_NORMATIVE_ACT_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 436,
+      "entityId": "rohgis:plasa:1930:436",
+      "versionId": "rohgis:plasa:1930:436:version:1930",
+      "geometryId": "rohgis:geom:786f979ff8327afb30cd933e",
+      "name": "Orșova",
+      "county": "Severin",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Severin §66, urban subsection, Orșova",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 439,
+      "entityId": "rohgis:plasa:1930:439",
+      "versionId": "rohgis:plasa:1930:439:version:1930",
+      "geometryId": "rohgis:geom:95eec7e2f61248e43e33f2a0",
+      "name": "Hunedoara",
+      "county": "Hunedoara",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 207",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 443,
+      "entityId": "rohgis:plasa:1930:443",
+      "versionId": "rohgis:plasa:1930:443:version:1930",
+      "geometryId": "rohgis:geom:10ef86fb1cc3a20c0cfab0e7",
+      "name": "Deva",
+      "county": "Hunedoara",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 205",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 444,
+      "entityId": "rohgis:plasa:1930:444",
+      "versionId": "rohgis:plasa:1930:444:version:1930",
+      "geometryId": "rohgis:geom:e555eff42457d1c6dd316143",
+      "name": "Arad",
+      "county": "Arad",
+      "proposedSubtype": "municipiu",
+      "evidence": [
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 517–522",
+          "explicitSubtype": "municipiu",
+          "level": "PRIOR_NORMATIVE_ACT_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 458,
+      "entityId": "rohgis:plasa:1930:458",
+      "versionId": "rohgis:plasa:1930:458:version:1930",
+      "geometryId": "rohgis:geom:cb473a9e82490800aeb6d8b3",
+      "name": "Salonta",
+      "county": "Bihor",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 256",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 538–553",
+          "explicitSubtype": null,
+          "level": "PRIOR_NORMATIVE_URBAN_CATEGORY_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 461,
+      "entityId": "rohgis:plasa:1930:461",
+      "versionId": "rohgis:plasa:1930:461:version:1930",
+      "geometryId": "rohgis:geom:681b63e952a16b90459c6758",
+      "name": "Oradea",
+      "county": "Bihor",
+      "proposedSubtype": "municipiu",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 254",
+          "explicitSubtype": "municipiu",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        },
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 517–522",
+          "explicitSubtype": "municipiu",
+          "level": "PRIOR_NORMATIVE_ACT_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 478,
+      "entityId": "rohgis:plasa:1930:478",
+      "versionId": "rohgis:plasa:1930:478:version:1930",
+      "geometryId": "rohgis:geom:a09626e03dd75d8b95dfd5fd",
+      "name": "Gheorghieni",
+      "county": "Ciuc",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_PRELIMINARY",
+          "referenceDate": "1930-12-29",
+          "locator": "Ciuc §51, urban subsection, Gheorghieni",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_PRELIMINARY_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 480,
+      "entityId": "rohgis:plasa:1930:480",
+      "versionId": "rohgis:plasa:1930:480:version:1930",
+      "geometryId": "rohgis:geom:0872f80e3faac6d8c43617d5",
+      "name": "Diciosânmartin",
+      "county": "Târnava Mică",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "MO220",
+          "referenceDate": "1925-09-25",
+          "locator": "p.10923, decree 2465 art. I, indexed lines 538–553",
+          "explicitSubtype": null,
+          "level": "PRIOR_NORMATIVE_URBAN_CATEGORY_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 481,
+      "entityId": "rohgis:plasa:1930:481",
+      "versionId": "rohgis:plasa:1930:481:version:1930",
+      "geometryId": "rohgis:geom:2f9ffd8133ade58b713e2d6b",
+      "name": "Beiuș",
+      "county": "Bihor",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 7",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 482,
+      "entityId": "rohgis:plasa:1930:482",
+      "versionId": "rohgis:plasa:1930:482:version:1930",
+      "geometryId": "rohgis:geom:08f4f36f9a55ecf0d396d977",
+      "name": "Baia de Aramă",
+      "county": "Mehedinți",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 5",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        },
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 21, Baia-de-Aramă",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 483,
+      "entityId": "rohgis:plasa:1930:483",
+      "versionId": "rohgis:plasa:1930:483:version:1930",
+      "geometryId": "rohgis:geom:23ff453f5959a2891cebff6b",
+      "name": "Urziceni",
+      "county": "Ialomița",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 49",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 484,
+      "entityId": "rohgis:plasa:1930:484",
+      "versionId": "rohgis:plasa:1930:484:version:1930",
+      "geometryId": "rohgis:geom:8a7ec329205da6d86ccad2ef",
+      "name": "Pitești",
+      "county": "Argeș",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 35",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 486,
+      "entityId": "rohgis:plasa:1930:486",
+      "versionId": "rohgis:plasa:1930:486:version:1930",
+      "geometryId": "rohgis:geom:6d823a41a76f419f8bcc996d",
+      "name": "Dorohoi",
+      "county": "Dorohoi",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 30",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 490,
+      "entityId": "rohgis:plasa:1930:490",
+      "versionId": "rohgis:plasa:1930:490:version:1930",
+      "geometryId": "rohgis:geom:9d2eede0e3a4d17f75a20af2",
+      "name": "Turtucaia",
+      "county": "Durostor",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Vechiul Regat, nr. 84",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    },
+    {
+      "sourceRecordId": 491,
+      "entityId": "rohgis:plasa:1930:491",
+      "versionId": "rohgis:plasa:1930:491:version:1930",
+      "geometryId": "rohgis:geom:8ea21d013c8993e14efc60b8",
+      "name": "Curtea de Argeș",
+      "county": "Argeș",
+      "proposedSubtype": "oraș",
+      "evidence": [
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 36",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
+        }
+      ],
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
+      "legalSubtypeCertified": false,
+      "canonicalChangeAdmitted": false,
+      "legalBoundaryCertified": false
+    }
+  ],
+  "populationReconciliation": [
+    {
+      "sourceRecordId": 43,
+      "entityId": "rohgis:plasa:1930:43",
+      "name": "Medgidia",
+      "county": "Constanța",
+      "sourceValues": {
+        "polygon": 2764,
+        "point": 6466
+      },
+      "referenceDate": "1930-12-29",
+      "metric": "POPULATIA_STATORNICA",
+      "value": 6466,
+      "source": "CENSUS_IX",
+      "locator": "Part I, county Constanța, row Medgidia",
+      "note": "2,764 appears in Mangalia row; likely transcription carryover; mechanism not proven",
+      "suburban": null,
+      "agreesWith": "POINT",
+      "facsimileVerified": false,
+      "geometryPopulationScopeVerified": false,
+      "canonicalChangeAdmitted": false
+    },
+    {
+      "sourceRecordId": 55,
+      "entityId": "rohgis:plasa:1930:55",
+      "name": "Zimnicea",
+      "county": "Teleorman",
+      "sourceValues": {
+        "polygon": 44225,
+        "point": 10879
+      },
+      "referenceDate": "1930-12-29",
+      "metric": "POPULATIA_STATORNICA",
+      "value": 10879,
+      "source": "CENSUS_IX",
+      "locator": "Part I, county Teleorman, row Zimnicea",
+      "note": "5,320 + 5,559; asterisk includes suburban communes",
+      "suburban": true,
+      "agreesWith": "POINT",
+      "facsimileVerified": false,
+      "geometryPopulationScopeVerified": false,
+      "canonicalChangeAdmitted": false
+    },
+    {
+      "sourceRecordId": 87,
+      "entityId": "rohgis:plasa:1930:87",
+      "name": "Câmpina",
+      "county": "Prahova",
+      "sourceValues": {
+        "polygon": 43068,
+        "point": 16918
+      },
+      "referenceDate": "1930-12-29",
+      "metric": "POPULATIA_STATORNICA",
+      "value": 16918,
+      "source": "CENSUS_IX",
+      "locator": "Part I, row 59, Câmpina; also vol II indexed extract",
+      "note": "8,399 + 8,519; asterisk includes suburban communes",
+      "suburban": true,
+      "agreesWith": "POINT",
+      "facsimileVerified": false,
+      "geometryPopulationScopeVerified": false,
+      "canonicalChangeAdmitted": false
+    },
+    {
+      "sourceRecordId": 177,
+      "entityId": "rohgis:plasa:1930:177",
+      "name": "Tuzla",
+      "county": "Cetatea Albă",
+      "sourceValues": {
+        "polygon": 3146,
+        "point": 8624
+      },
+      "referenceDate": "1930-12-29",
+      "metric": "POPULATIA_STATORNICA",
+      "value": 3146,
+      "source": "CENSUS_IX",
+      "locator": "Part I, row 148, Tuzla, Cetatea-Albă",
+      "note": "1,553 + 1,593; asterisk includes suburban communes",
+      "suburban": true,
+      "agreesWith": "POLYGON",
+      "facsimileVerified": false,
+      "geometryPopulationScopeVerified": false,
+      "canonicalChangeAdmitted": false
+    },
+    {
+      "sourceRecordId": 211,
+      "entityId": "rohgis:plasa:1930:211",
+      "name": "Râmnicu Vâlcea",
+      "county": "Vâlcea",
+      "sourceValues": {
+        "polygon": 15648,
+        "point": 15634
+      },
+      "referenceDate": "1930-12-29",
+      "metric": "POPULATIA_STATORNICA",
+      "value": 15648,
+      "source": "CENSUS_II",
+      "locator": "Urban population row Râmnicu-Vâlcea, indexed text; corroborated by Enciclopedia Vâlcea vol II, citing vol I pp 773–777",
+      "note": "7,899 + 7,749 in secondary source; territorial components require checking",
+      "suburban": null,
+      "agreesWith": "POLYGON",
+      "facsimileVerified": false,
+      "geometryPopulationScopeVerified": false,
+      "canonicalChangeAdmitted": false
+    },
+    {
+      "sourceRecordId": 248,
+      "entityId": "rohgis:plasa:1930:248",
+      "name": "Turnu Severin",
+      "county": "Mehedinți",
+      "sourceValues": {
+        "polygon": 21107,
+        "point": 21207
+      },
+      "referenceDate": "1930-12-29",
+      "metric": "POPULATIA_STATORNICA",
+      "value": 21107,
+      "source": "CENSUS_IX",
+      "locator": "Part I, table by population size, row 48 Turnu-Severin; also vol I and II",
+      "note": "10,903 + 10,204",
+      "suburban": true,
+      "agreesWith": "POLYGON",
+      "facsimileVerified": false,
+      "geometryPopulationScopeVerified": false,
+      "canonicalChangeAdmitted": false
+    },
+    {
+      "sourceRecordId": 266,
+      "entityId": "rohgis:plasa:1930:266",
+      "name": "Piatra Neamț",
+      "county": "Neamț",
+      "sourceValues": {
+        "polygon": 29827,
+        "point": 29829
+      },
+      "referenceDate": "1930-12-29",
+      "metric": "POPULATIA_STATORNICA",
+      "value": 29827,
+      "source": "CENSUS_IX",
+      "locator": "Part I, table by population size, Piatra-Neamț row",
+      "note": "14,515 + 15,312; asterisk",
+      "suburban": true,
+      "agreesWith": "POLYGON",
+      "facsimileVerified": false,
+      "geometryPopulationScopeVerified": false,
+      "canonicalChangeAdmitted": false
+    }
+  ],
+  "restrictions": [
+    "Statistical classification is not a constitutive legal act.",
+    "No inference of validity throughout 1930 from a dated census or 1925 decree.",
+    "No modifications to canonical data or geometry; preserve original conflicting population attributes.",
+    "Suburban inclusion, footnotes, and geographic extent require facsimile collation.",
+    "The 88 earlier attestations are not re-certified by this stage."
+  ]
+}

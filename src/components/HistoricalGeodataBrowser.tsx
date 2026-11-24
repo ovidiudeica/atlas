@@ -16,6 +16,20 @@ import {
 } from '../data/historicalRohgis1930.mjs';
 
 type Locale='ro'|'en';
+const urbanSubtypeLabel=(subtype:'municipiu'|'oraș',lang:Locale)=>lang==='ro'?subtype:subtype==='municipiu'?'Municipality':'Town';
+const urbanEvidenceLabels={
+ ro:{OFFICIAL_TEXT_OCR_ATTESTATION:'Text oficial contemporan (OCR)', '1930_STATISTICAL_SUBTYPE_ATTESTED_OCR':'Statut atestat statistic în 1930 (OCR)',OTHER_OFFICIAL_ATTESTATION_OCR:'Altă atestare oficială (OCR); statutul propus rămâne de verificat'},
+ en:{OFFICIAL_TEXT_OCR_ATTESTATION:'Contemporary official text (OCR)', '1930_STATISTICAL_SUBTYPE_ATTESTED_OCR':'Subtype attested in 1930 statistical sources (OCR)',OTHER_OFFICIAL_ATTESTATION_OCR:'Other official attestation (OCR); proposed subtype still under review'}
+};
+const urbanItemLabels:Record<string,{ro:string;en:string}>={
+ OFFICIAL_TEXT_OCR_ATTESTATION:{ro:'Text oficial contemporan',en:'Contemporary official text'},
+ OFFICIAL_STATISTICAL_OCR:{ro:'Recensământ definitiv',en:'Final census'},
+ OFFICIAL_PRELIMINARY_STATISTICAL_OCR:{ro:'Recensământ preliminar',en:'Preliminary census'},
+ OFFICIAL_URBAN_LIST_OCR:{ro:'Listă oficială de comune urbane (fără subtip explicit)',en:'Official urban commune list (no explicit subtype)'},
+ PRIOR_NORMATIVE_ACT_OCR:{ro:'Act normativ anterior (nu dovedește continuitatea)',en:'Earlier normative act (continuity not established)'},
+ PRIOR_NORMATIVE_URBAN_CATEGORY_OCR:{ro:'Categorie urbană în act anterior',en:'Urban category in earlier act'}
+};
+
 export interface HistoricalGeodataSelection {
   entry:GeodataSourceEntry;
   feature:GeodataSourceFeature;
@@ -183,8 +197,9 @@ export function HistoricalGeodataBrowser({
    return [...map.values()].sort((a,b)=>a.county.nameRo.localeCompare(b.county.nameRo,'ro'));
  },[rohgis,year]);
  const matchesRohgis=(x:string)=>!term||foldedSearch(x).includes(term);
+ const matchesRohgisVersion=(v:Rohgis1930Version)=>matchesRohgis(v.nameRo)||Boolean(v.urbanClassification&&[v.urbanClassification.pointAlias??'',v.urbanClassification.subtype,urbanSubtypeLabel(v.urbanClassification.subtype,'en'),v.urbanClassification.subtype==='municipiu'?'municipii municipalities':'orașe towns'].some(matchesRohgis));
  const hasRohgisMatch=rohgisCounties.some(group=>
-   matchesRohgis(group.county.nameRo)||[...group.plasi,...group.urban].some(v=>matchesRohgis(v.nameRo)));
+   matchesRohgis(group.county.nameRo)||[...group.plasi,...group.urban].some(v=>matchesRohgisVersion(v)));
  const filteredRoots=useMemo(()=>{
    if(!tree)return {regions:[],counties:[],comitates:[]} as {
      regions:FilteredOhmNode[];counties:FilteredOhmNode[];comitates:FilteredOhmNode[];
@@ -225,7 +240,7 @@ export function HistoricalGeodataBrowser({
    for(const group of rohgisCounties){
      const parentMatch=matchesRohgis(group.county.nameRo);
      if(parentMatch)ids.add(group.county.versionId);
-     for(const v of [...group.plasi,...group.urban])if(parentMatch||matchesRohgis(v.nameRo))ids.add(v.versionId);
+     for(const v of [...group.plasi,...group.urban])if(parentMatch||matchesRohgisVersion(v))ids.add(v.versionId);
    }
    return ids.size;
  },[filteredRoots,rohgisCounties,term]);
@@ -288,7 +303,7 @@ export function HistoricalGeodataBrowser({
  }
  function renderRohgisTree(){
    const groups=rohgisCounties.filter(group=>
-     matchesRohgis(group.county.nameRo)||[...group.plasi,...group.urban].some(v=>matchesRohgis(v.nameRo)));
+     matchesRohgis(group.county.nameRo)||[...group.plasi,...group.urban].some(v=>matchesRohgisVersion(v)));
    return <div className="history-tree-children history-rohgis-tree" role="group">
      <p className="history-documentary-label">
        {lang==='ro'?'Județe, plăși și unități urbane (1930) · RoHGIS · hotare-sursă necertificate':
@@ -297,8 +312,10 @@ export function HistoricalGeodataBrowser({
      </p>
      {groups.map(({county,plasi,urban})=>{
        const parentMatch=matchesRohgis(county.nameRo);
-       const shownPlasi=parentMatch?plasi:plasi.filter(v=>matchesRohgis(v.nameRo));
-       const shownUrban=parentMatch?urban:urban.filter(v=>matchesRohgis(v.nameRo));
+       const shownPlasi=parentMatch?plasi:plasi.filter(v=>matchesRohgisVersion(v));
+       const shownUrban=parentMatch?urban:urban.filter(v=>matchesRohgisVersion(v));
+       const shownMunicipii=shownUrban.filter(v=>v.urbanClassification?.subtype==='municipiu');
+       const shownOrase=shownUrban.filter(v=>v.urbanClassification?.subtype==='oraș');
        const open=expanded.has(county.entityId)||Boolean(term);
        const isSelected=selectedId===county.versionId;
        return <div key={county.entityId} className="history-tree-node" role="treeitem" aria-level={2}>
@@ -316,12 +333,12 @@ export function HistoricalGeodataBrowser({
            <span className="history-source-version-count" title={lang==='ro'?'Plăși / unități urbane':'Plăși / urban units'}>{plasi.length} / {urban.length}</span>
          </div>
          {open&&<div className="history-tree-children" role="group">
-           {([['plasa',shownPlasi],['urban_unit',shownUrban]] as const).map(([kind,units])=>units.length>0&&<Fragment key={kind}>
-             <p className="history-documentary-label" role="presentation">{kind==='plasa'?'Plăși':lang==='ro'?'Unități urbane (rang III)':'Urban units (rank III)'} · {units.length}</p>
-             {units.map(unit=><div key={unit.entityId} data-rohgis-kind={kind} className="history-tree-row" role="treeitem" aria-level={3} style={{paddingLeft:25}}>
+           {([['plasa',shownPlasi],['municipiu',shownMunicipii],['oraș',shownOrase]] as const).map(([kind,units])=>units.length>0&&<Fragment key={kind}>
+             <p className="history-documentary-label" role="presentation">{kind==='plasa'?'Plăși':kind==='municipiu'?(lang==='ro'?'Municipii (clasificare documentară)':'Municipalities (documentary classification)'):(lang==='ro'?'Orașe (clasificare documentară)':'Towns (documentary classification)')} · {units.length}</p>
+             {units.map(unit=><div key={unit.entityId} data-rohgis-kind={unit.kind} data-urban-subtype={unit.urbanClassification?.subtype} className="history-tree-row" role="treeitem" aria-level={3} style={{paddingLeft:25}}>
                <span className="history-tree-leaf" aria-hidden="true"/>
                <input type="checkbox" checked={visibleSet.has(unit.versionId)} disabled={busy!==null}
-                 aria-label={(kind==='plasa'?(lang==='ro'?'Afișează plasa ':'Show plasa '):(lang==='ro'?'Afișează unitatea urbană ':'Show urban unit '))+unit.nameRo}
+                 aria-label={(kind==='plasa'?(lang==='ro'?'Afișează plasa ':'Show plasa '):(lang==='ro'?'Afișează '+kind+' ':'Show '+(kind==='municipiu'?'municipality':'town')+' '))+unit.nameRo}
                  onChange={e=>void toggleRohgisVersion(unit,e.target.checked)}/>
                <button type="button" className={'history-tree-name'+(selectedId===unit.versionId?' is-selected':'')}
                  onClick={()=>void selectRohgisVersion(unit)}>{unit.nameRo}</button>
@@ -440,7 +457,7 @@ export function HistoricalGeodataBrowser({
        {tree?<>{tree.groupCount} {headings.groups} · {tree.sourceVersionCount} {headings.versions}
          {' · '}{tree.documentaryNodeCount} {headings.documentary}
          {' · '}{visibleIds.length} {headings.visible}
-       {rohgis&&year===1930&&(lang==='ro'?' · RoHGIS 1930: 71 județe / 322 plăși / 172 unități urbane':' · RoHGIS 1930: 71 counties / 322 plăși / 172 urban units')}</>:t.loading}
+       {rohgis&&year===1930&&(lang==='ro'?' · RoHGIS 1930: 71 județe / 322 plăși / 172 unități urbane (20 municipii / 152 orașe, clasificare documentară)':' · RoHGIS 1930: 71 counties / 322 plăși / 172 urban units (20 municipalities / 152 towns, documentary classification)')}</>:t.loading}
      </p>
    </header>
    <div className="history-catalog-filters">
@@ -514,6 +531,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
  onLocate:()=>void;
 }){
  const {entry,parentEvidence,sourceReportedParent}=selection,t=labels[lang];
+ const urban=entry.urbanClassification;
  return <section className="detail-content history-entity-detail">
    <div className="entity-card" key={entry.id}>
      <header className="entity-title">
@@ -543,6 +561,32 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
          </>}
        </dl>
      </EntityCardSection>
+     {urban&&<EntityCardSection title={lang==='ro'?'Clasificare administrativă documentară':'Documentary administrative classification'} kind="administrative">
+       <dl className="metadata">
+         <dt>{lang==='ro'?'Statut propus (1930)':'Proposed subtype (1930)'}</dt><dd data-urban-subtype={urban.subtype}>{urbanSubtypeLabel(urban.subtype,lang)}</dd>
+         <dt>{lang==='ro'?'Nivel probatoriu':'Evidence level'}</dt><dd data-urban-evidence={urban.evidenceLevel}>{urbanEvidenceLabels[lang][urban.evidenceLevel]}</dd>
+         <dt>{lang==='ro'?'Statut în stratul punctiform RoHGIS':'Status in RoHGIS point layer'}</dt><dd>{urban.pointStatus?urbanSubtypeLabel(urban.pointStatus,lang):(lang==='ro'?'Absent din stratul de puncte':'Missing from point layer')}{urban.pointAlias&&<small> · {urban.pointAlias}</small>}</dd>
+       </dl>
+       <p className="source-caveat">{lang==='ro'?'Clasificare propusă; facsimile neverificate, statut juridic și continuitate temporală necertificate. Hotarul și apartenența administrativă nu sunt certificate.':'Proposed classification; facsimiles not verified, legal status and temporal continuity not certified. Boundary and administrative membership are not certified.'}</p>
+       <details className="history-parentage-sources">
+         <summary>{lang==='ro'?'Atestări individuale':'Individual attestations'} · {urban.evidence.length}</summary>
+         <ul>{urban.evidence.map((e,i)=><li key={e.source+'-'+i}>
+           <a href={e.url} target="_blank" rel="noopener noreferrer">{e.title}</a>
+           <span> — {urbanItemLabels[e.level]?.[lang]??e.level} · {e.referenceDate} · {e.locator}</span>
+           {e.explicitSubtype&&<small> · {urbanSubtypeLabel(e.explicitSubtype,lang)}</small>}
+           {e.note&&<small> · {e.note}</small>}
+         </li>)}</ul>
+       </details>
+       {urban.population&&<details className="history-parentage-sources">
+         <summary>{lang==='ro'?'Reconciliere demografică (recensământ)':'Population reconciliation (census)'}</summary>
+         <dl className="metadata">
+           <dt>{lang==='ro'?'Populația statornică · 29.12.1930':'Resident population · 29 Dec 1930'}</dt><dd>{urban.population.value.toLocaleString(lang==='ro'?'ro-RO':'en-GB')}</dd>
+           <dt>{lang==='ro'?'Valori originale (poligon / punct)':'Original values (polygon / point)'}</dt><dd>{urban.population.sourceValues.polygon} / {urban.population.sourceValues.point}</dd>
+           <dt>{lang==='ro'?'Sursă statistică':'Statistical source'}</dt><dd><a href={urban.population.url} target="_blank" rel="noopener noreferrer">{urban.population.title}</a> · {urban.population.locator}</dd>
+         </dl>
+         <p className="source-caveat">{lang==='ro'?'Valoare extrasă textual, separată de datele GIS. Componența teritorială și facsimilul nu sunt verificate; pot fi incluse comune suburbane.':'Textual extraction, separate from GIS attributes. Territorial scope and facsimile not verified; suburban communes may be included.'}</p>
+       </details>}
+     </EntityCardSection>}
      <EntityCardSection title={t.source} kind="cartographic">
        <dl className="metadata">
          <dt>{t.sourceName}</dt><dd>{entry.sourceGroup} · {entry.sourceFamily}</dd>
