@@ -1,0 +1,139 @@
+{
+  "schema": "hist-ohm-tree10d-extraction-audit-v1",
+  "stage": "HIST-OHM-TREE.10d",
+  "status": "NATIONAL_CANDIDATE_EXTRACTION_COMPLETE_COVERAGE_NOT_FULL_COLLATION",
+  "referenceDate": "1930-12-29",
+  "source": {
+    "title": "Recensământul general al populației României din 29 decemvrie 1930, vol. II, 1938",
+    "fullPdfSha256": "1da483ff86007fce11674d1084b467f444d6e0ad0a4e8273c5d8d2555d94a0e7",
+    "fullPdfPages": 944,
+    "rankIIGpkgSha256": "4d7e58fbdd42cd82c9bd75eda25b3b45adc6f8e7821cb2273ae93a786a9a2275",
+    "tableLocators": [
+      {
+        "part": "1",
+        "source": "census-neamt.pdf",
+        "printedPages": "2–518, even pages",
+        "pdfOffset": 158
+      },
+      {
+        "part": "2",
+        "source": "census-neamt.pdf",
+        "printedPages": "522–780",
+        "pdfOffset": 158
+      },
+      {
+        "part": "3",
+        "source": "rusyn.pdf",
+        "printedPages": "2–518, even pages",
+        "pdfOffset": 4
+      }
+    ]
+  },
+  "summary": {
+    "counties": 71,
+    "plasi": 322,
+    "withHeadingCandidate": 322,
+    "withExactNormalizedHeading": 283,
+    "withDetailedRows": 322,
+    "withOrdinalRows": 296,
+    "ordinalSlots": 13517,
+    "ordinalOccurrences": 23431,
+    "unnumberedOccurrences": 16937,
+    "rawPageSets": 772,
+    "expectedPageSets": 777,
+    "statusCounts": {
+      "SINGLE_NORMALIZED_NAME_CANDIDATE": 5558,
+      "REPEATED_NORMALIZED_NAME_CANDIDATE": 6131,
+      "CONFLICTING_OCR_READINGS_HOLD": 1081,
+      "NAME_MISSING_HOLD": 570,
+      "POSSIBLE_NONVILLAGE_OR_FOOTNOTE_HOLD": 76,
+      "VISUAL_ROW_TRANSCRIPTION_CANDIDATE": 101
+    },
+    "unnumberedHold": 187,
+    "fullyCertified": 0,
+    "canonicalChanges": 0
+  },
+  "visualSections": [
+    {
+      "sourceRecordId": 455,
+      "county": "Bihor",
+      "heading": "Beiuș",
+      "printedPages": [
+        58,
+        60
+      ],
+      "rows": 62
+    },
+    {
+      "sourceRecordId": 318,
+      "county": "Rădăuți",
+      "heading": "Putilei",
+      "printedPages": [
+        356
+      ],
+      "rows": 15
+    },
+    {
+      "sourceRecordId": 431,
+      "county": "Timiș-Torontal",
+      "heading": "Ciacova",
+      "printedPages": [
+        470
+      ],
+      "rows": 24
+    }
+  ],
+  "pagesWithoutExtractedRows": [
+    {
+      "sourcePart": 1,
+      "printedPage": 26,
+      "pdfPage": 184
+    },
+    {
+      "sourcePart": 1,
+      "printedPage": 290,
+      "pdfPage": 448
+    },
+    {
+      "sourcePart": 1,
+      "printedPage": 402,
+      "pdfPage": 560
+    },
+    {
+      "sourcePart": 1,
+      "printedPage": 436,
+      "pdfPage": 594
+    },
+    {
+      "sourcePart": 1,
+      "printedPage": 464,
+      "pdfPage": 622
+    }
+  ],
+  "deliverables": {
+    "archive": {
+      "name": "HIST-OHM-TREE.10d.zip",
+      "bytes": 6878996,
+      "sha256": "70298321fb7e16c67e4bba26481c0f5e8eef005238ae2aa546bc727082e40343",
+      "storage": "Generated conversation artifact, not committed into GitHub"
+    },
+    "files": {
+      "plasi.json": "b971ce0bcf4a9c4853ba624b1a6610794486794fd32ee95f01c92747556047d3",
+      "village-candidates.jsonl": "be15afb3a2485e6ed7848384c0a8d720722c297240b5edfa32864259f4b40baa",
+      "village-candidates.csv": "7bd2e09e3a0b8668474b157912d6f6c735509e6a03833c87de6a562a837ba242",
+      "unnumbered-candidates.jsonl": "73ce6b1a2dbc32d838bef0c89089d51dd57b7256c1b4acc696b99ebc7ae407cc",
+      "unnumbered-candidates.csv": "30fefabbace40238baed2ffc85b3f00cd48622a897a05e20c8b1b8297e7c4e5e",
+      "raw-page-rows.jsonl": "22679267d78de262cbf57f150793f391ff5665e104ad5abff3ec7fc68b904371"
+    }
+  },
+  "qualityRestrictions": [
+    "Source parts repeat census tables, not independent legal sources.",
+    "322/322 is source plasa coverage, not exhaustive or certified village list.",
+    "Exact normalized heading can match an explicit candidate alias, not necessarily source name or literal print.",
+    "OCR-derived ordinal slots can contain wrong ordinals, missing rows, duplicated or incorrectly bounded sections; unnumbered occurrences are not unique additional villages.",
+    "Lexical QA quarantines obvious footnote/non-village candidates, not exhaustive.",
+    "Five pages in part 1 yielded no text rows; not missing scans. Alternate part/copy available.",
+    "All 322 geometry IDs rechecked against original GPKG, unchanged. No legal parentage, names, boundaries or canonical changes certified.",
+    "Full decree annex and Indicatorul 1932 remain unrecovered. Do not add village/commune nodes based solely on candidate register."
+  ]
+}
