@@ -1,7 +1,7 @@
 {
   "schema": "hist-ohm-tree9a-urban-evidence-v1",
   "stage": "HIST-OHM-TREE.9a",
-  "status": "PARTIAL_OFFICIAL_ATTESTATION_DEMOGRAPHIC_REFERENCE_RECONCILED_OCR",
+  "status": "ALL_84_OFFICIAL_ATTESTATIONS_LOCATED_LEGAL_FACSIMILE_HOLD",
   "baseAudit": {
     "path": "docs/historical/reconciliation/HIST-OHM-TREE.9-URBAN-QUALIFICATION.json",
     "blobSha": "503e6fc25274e15b0bdac0b90cec5b18d34ca5b8"
@@ -38,13 +38,18 @@
   },
   "summary": {
     "total": 84,
-    "statisticalSubtype": 60,
-    "otherOfficial": 15,
-    "sourceOnly": 9,
+    "statisticalSubtype": 61,
+    "otherOfficial": 23,
+    "sourceOnly": 0,
     "priorMunicipalActs": 5,
     "demographicValuesFound": 7,
     "agreesPoint": 3,
-    "agreesPolygon": 4
+    "agreesPolygon": 4,
+    "officialAttestationAny": 84,
+    "definitiveCensusSubtype": 45,
+    "preliminaryOnlySubtype": 16,
+    "priorNormativeAny": 13,
+    "fullyLegallyCertified": 0
   },
   "records": [
     {
@@ -370,8 +375,16 @@
       "name": "Târgu Săcuesc",
       "county": "Trei Scaune",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 46",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -728,8 +741,16 @@
       "name": "Sfântu Gheorghe",
       "county": "Trei Scaune",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 43",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -742,8 +763,16 @@
       "name": "Sighișoara",
       "county": "Târnava Mare",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 41",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -756,8 +785,16 @@
       "name": "Făgăraș",
       "county": "Făgăraș",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 18",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -858,8 +895,16 @@
       "name": "Blaj",
       "county": "Târnava Mică",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 9",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -872,8 +917,16 @@
       "name": "Mediaș",
       "county": "Târnava Mare",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 26",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -1149,8 +1202,16 @@
       "name": "Turda",
       "county": "Turda",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 48",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -1507,8 +1568,16 @@
       "name": "Reșița",
       "county": "Caraș",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 36",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -1762,8 +1831,16 @@
       "name": "Beiuș",
       "county": "Bihor",
       "proposedSubtype": "oraș",
-      "evidence": [],
-      "status": "ROHGIS_ONLY_HOLD",
+      "evidence": [
+        {
+          "source": "AS1930",
+          "referenceDate": "1930-12-29",
+          "locator": "Populația comunelor urbane, Transilvania, nr. 7",
+          "explicitSubtype": null,
+          "level": "OFFICIAL_URBAN_LIST_OCR"
+        }
+      ],
+      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
@@ -1783,9 +1860,16 @@
           "locator": "Populația comunelor urbane, Vechiul Regat, nr. 5",
           "explicitSubtype": null,
           "level": "OFFICIAL_URBAN_LIST_OCR"
+        },
+        {
+          "source": "CENSUS_IX",
+          "referenceDate": "1930-12-29",
+          "locator": "Part I, urban population by county, row 21, Baia-de-Aramă",
+          "explicitSubtype": "oraș",
+          "level": "OFFICIAL_STATISTICAL_OCR"
         }
       ],
-      "status": "OTHER_OFFICIAL_ATTESTATION_OCR",
+      "status": "1930_STATISTICAL_SUBTYPE_ATTESTED_OCR",
       "legalSubtypeCertified": false,
       "canonicalChangeAdmitted": false,
       "legalBoundaryCertified": false
