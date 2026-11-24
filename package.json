@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node scripts/ci/rohgis-production-smoke.mjs && node --test tests/*.test.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.2",
