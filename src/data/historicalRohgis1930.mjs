@@ -2,6 +2,7 @@
  * HIST-OHM-TREE.4 — verified source-only RoHGIS 1930 adapter.
  * OHM source versions, institutional identity and legal boundaries remain distinct.
  */
+import {attachRohgisUrbanClassification} from './historicalRohgisUrban1930.mjs';
 export const ROHGIS_1930_SCHEMA='hist-ohm-tree4-rohgis-1930-catalog-v1';
 const safeShard=path=>typeof path==='string'&&/^geom\/(judete|plasi)-\d{2}\.geojson$/.test(path);
 const isObject=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
@@ -70,6 +71,7 @@ export function toRohgisGeodataEntry(v){
     displayName:{ro:v.nameRo,en:v.nameRo},
     sourcePeriod:{start:v.start,end:v.end,kind:'snapshot',sourceOnly:true,notes:'RoHGIS 1930 only; boundaries unverified independently'},
     sourceType:isCounty?'județ':isUrban?'unitate urbană':'plasă',...(isCounty?{}:{sourceRank:v.sourceRank}),geometryId:v.geometryId,
+    ...(v.urbanClassification?{urbanClassification:v.urbanClassification}:{}),
     featureId:v.entityId,geometryShard:v.geometryShard,
     sourceDriveFileId:v.sourceDriveFileId,
     sourcePath:'Geodata GIS/RoHGIS/'+(isCounty?'Limitele județelor existente între anii 1929-1938':'Limitele plășilor din perioada 1929-1933'),
@@ -86,7 +88,9 @@ export async function loadRohgis1930Catalog(base='/'){
   const data=await response.json();
   const result=validateRohgis1930Catalog(data);
   if(!result.ok)throw Error('RoHGIS 1930 catalogue invalid: '+result.errors.join('; '));
-  return data;
+  const evidenceResponse=await fetch(base+'data/historical/v1/rohgis/urban-classification-1930.json');
+  if(!evidenceResponse.ok)throw Error('RoHGIS urban evidence HTTP '+evidenceResponse.status);
+  return attachRohgisUrbanClassification(data,await evidenceResponse.json());
 }
 const cached=new Map();
 export async function loadRohgis1930Feature(catalog,version,base='/'){

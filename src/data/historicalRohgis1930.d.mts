@@ -1,4 +1,5 @@
 import type {Feature,Polygon,MultiPolygon} from 'geojson';
+import type {UrbanClassification} from './historicalRohgisUrban1930.mjs';
 import type {GeodataSourceEntry} from './historicalGeodata.mjs';
 export interface Rohgis1930Version {
  entityId:string; versionId:string; geometryId:string; geometryShard:string;
@@ -8,6 +9,7 @@ export interface Rohgis1930Version {
  boundaryCertified:false;crossFamilyIdentityCertified:false;
  temporalStatus:'DOCUMENTARY_1930_SNAPSHOT_ONLY';
  sourceCollectionPeriod:string;
+ urbanClassification?:UrbanClassification;
 }
 export interface Rohgis1930Catalog {
  schema:'hist-ohm-tree4-rohgis-1930-catalog-v1';

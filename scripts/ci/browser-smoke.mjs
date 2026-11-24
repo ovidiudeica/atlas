@@ -2100,6 +2100,7 @@ async function rohgis1930Smoke(cdp){
     'Arad county expands to plasa Pecica '+width);
   await p.wait("document.querySelectorAll('"+panel+" .history-rohgis-tree [data-rohgis-kind=plasa]').length===9&&document.querySelectorAll('"+panel+" .history-rohgis-tree [data-rohgis-kind=urban_unit]').length===1",
     'Arad exposes nine plasi and one urban unit '+width);
+  await p.wait("!!document.querySelector('"+panel+" .history-rohgis-tree [data-urban-subtype=municipiu]')",'Arad municipality documentary classification '+width);
   if(!mobile){
     const count=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const node=[...root.querySelectorAll(':scope > .history-tree-node')].find(x=>x.querySelector(':scope > .history-tree-row .history-tree-name')?.textContent?.trim()==='Arad');return node.querySelectorAll(':scope > .history-tree-children > .history-tree-row').length})()");
     assert.equal(count,10,'Arad retains ten source subunits');
@@ -2133,6 +2134,10 @@ async function rohgis1930Smoke(cdp){
     assert.match(urbanCard,/unitate urbană/i);
     assert.match(urbanCard,/Județul Arad/);
     assert.match(urbanCard,/Cezar Buterez/);
+    assert.match(urbanCard,/Statut propus/);
+    assert.match(urbanCard,/Nivel probatoriu/);
+    assert.match(urbanCard,/statut juridic și continuitate temporală necertificate/);
+    assert.equal(await p.eval("document.querySelector('.detail-sidebar .history-entity-detail [data-urban-subtype]')?.dataset.urbanSubtype"),'municipiu');
     await p.snap('desktop-rohgis-1930-arad-urban-unit.png');
     await p.eval("document.querySelector('"+panel+" .history-rohgis-tree [data-rohgis-kind=urban_unit] input[type=checkbox]').click()");
     await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='0'",
