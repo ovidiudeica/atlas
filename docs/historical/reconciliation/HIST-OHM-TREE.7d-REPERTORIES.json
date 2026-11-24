@@ -1,0 +1,271 @@
+{
+  "schema": "hist-ohm-tree7d-alternative-repertories-v1",
+  "stage": "HIST-OHM-TREE.7d",
+  "status": "PARTIAL_PRIMARY_TEXT_AND_SECTORAL_CORROBORATION",
+  "sources": {
+    "AS1926": {
+      "url": "https://dspace.bcucluj.ro/bitstream/123456789/64150/1/BCUCLUJ_FP_186593_1925.pdf",
+      "locator": "pp. 6–7, administrative table for 1926; OCR, screenshot cache miss"
+    },
+    "MO109": {
+      "url": "https://ro.scribd.com/document/676001663/Monitorul-Oficial-al-Romaniei-Partea-1-nr-109-23-mai-1929",
+      "locator": "Decizia 8673; OCR; sectoral jurisdiction only"
+    },
+    "MO17bis": {
+      "url": "https://www.resurse.net/mo/1930/19300122bis.pdf",
+      "locator": "22.01.1930, Decret 152/20.01.1930, rectificări și decretul plășilor 43/10.01.1930; OCR; screenshots failed"
+    }
+  },
+  "counts": {
+    "cases": 13,
+    "plasi1926": 74,
+    "plasi1930": 38,
+    "national1926": 498,
+    "national1930": 322,
+    "rohgisFeatures1929to1933": 494
+  },
+  "cases": [
+    {
+      "name": "Bacău",
+      "ohmId": "ohm-r2943619",
+      "name1926": "Bacău",
+      "name1930": "Bacău",
+      "plasi1926": 8,
+      "plasi1930": 5,
+      "gendarmerie1929": {
+        "sections": 8,
+        "posts": 46,
+        "observations": "Dărmănești, Doftana; organizarea sectorială a legiunii Bacău"
+      },
+      "civilEvidence": "Decretul 152: modificări ale circumscripțiilor Bacău; pct. 27 al rectificărilor înlocuiește integral anexa 2 pentru Bacău (p. 9150–9153 din MO 274/1929).",
+      "locators": "MO109 l.2857–2879; MO17bis l.269–310,762–767",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Botoșani",
+      "ohmId": "ohm-r2940712",
+      "name1926": "Botoșani",
+      "name1930": "Botoșani",
+      "plasi1926": 6,
+      "plasi1930": 3,
+      "gendarmerie1929": {
+        "sections": 6,
+        "posts": 39,
+        "observations": "Popeni la postul Leorda; verificare individuală a omonimiei"
+      },
+      "civilEvidence": "Rectificarea MO52/1930 privind consilierii, nu hotarul (7b).",
+      "locators": "MO109 l.3246–3262",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Covurlui",
+      "ohmId": "ohm-r2945088",
+      "name1926": "Covurlui",
+      "name1930": "Covurlui",
+      "plasi1926": 4,
+      "plasi1930": 2,
+      "gendarmerie1929": {
+        "sections": 4,
+        "posts": 20,
+        "observations": "Cudalbi și Pechea: posturi din Covurlui"
+      },
+      "civilEvidence": "Număr de plăși oficial; niciun transfer punctual civil nou identificat.",
+      "locators": "MO109 l.4328–4363",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Dorohoi",
+      "ohmId": "ohm-r2937887",
+      "name1926": "Dorohoi",
+      "name1930": "Dorohoi",
+      "plasi1926": 6,
+      "plasi1930": 3,
+      "gendarmerie1929": {
+        "sections": 6,
+        "posts": 28,
+        "observations": "Cândeștii-Noi și Cândeștii-Vechi, postul Grămești (OCR)"
+      },
+      "civilEvidence": "Pct. 10: Mitocu din Hănțești capătă consiliu sătesc; nu mutare interjudețeană.",
+      "locators": "MO109 l.4674–4688; MO17bis l.455–457",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Fălciu",
+      "ohmId": "ohm-r2943671",
+      "name1926": "Fălciu",
+      "name1930": "Fălciu",
+      "plasi1926": 6,
+      "plasi1930": 2,
+      "gendarmerie1929": {
+        "sections": 9,
+        "posts": 30,
+        "observations": "Rășcani în postul Jigălia; Șuletea la Epureni, legiunea Tutova (control sectorial)"
+      },
+      "civilEvidence": "Număr de plăși oficial; nu a fost identificată o nouă rectificare civilă a frontierei cu Cahul.",
+      "locators": "MO109 l.4924–4928,4978–4985,8780–8784",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Iași",
+      "ohmId": "ohm-r2943493",
+      "name1926": "Iași",
+      "name1930": "Iași",
+      "plasi1926": 5,
+      "plasi1930": 3,
+      "gendarmerie1929": {
+        "sections": 5,
+        "posts": 29,
+        "observations": "Legiunea Iași, antet verificat; lista integrală a comunelor nu este transcrisă"
+      },
+      "civilEvidence": "Pct. 12: Sculeni rămâne în Iași, comuna rurală Tigănași, eliminat din tabelele Bălți. Rectificare explicită de apartenență interjudețeană, NU transfer dedus.",
+      "locators": "MO109 l.5489–5497; MO17bis l.350–378, p.629",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Neamț",
+      "ohmId": "ohm-r2943485",
+      "name1926": "Neamț",
+      "name1930": "Neamț",
+      "plasi1926": 6,
+      "plasi1930": 4,
+      "gendarmerie1929": {
+        "sections": 6,
+        "posts": 29,
+        "observations": "Bilbor, Borsec, Corbu, Tulgheș, Bicazul Ardelean în legiunea Neamț; Blăgești, Buda, Valea lui Ion în postul Blăgești; Crucea/Broșteni/Mădei/Borca/Farcașa"
+      },
+      "civilEvidence": "1930: Bicazul Ardelean și Tulgheș la Ciuc; Bilbor, Borsec, Corbu la Mureș, plasa Toplița. Pct. 15 Borca→Broșteni, reședința Broșteni; pct. 30 înlocuiește circumscripțiile Neamț; decretul 152 reglementează Dumbrava-Roșie, Dărmănești și Orbic. Nu se certifică toate transferurile relatate în 1936.",
+      "locators": "MO109 l.6278–6338,6373–6377; MO17bis l.202–213,399–402,809–815,2782–2838,4096–4106,4231–4248",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Putna",
+      "ohmId": "ohm-r2943652",
+      "name1926": "Putna",
+      "name1930": "Putna",
+      "plasi1926": 8,
+      "plasi1930": 3,
+      "gendarmerie1929": {
+        "sections": 7,
+        "posts": 32,
+        "observations": "Vulturu și Mândrești în aria postului Vulturu (Putna); Nămoloasa-Târg și Nămoloasa-Sat în postul Nămoloasa-Târg (Râmnicu-Sărat)"
+      },
+      "civilEvidence": "Vulturu este un contra-indiciu față de lista din 7, care nu permite concluzia unei apartenențe civile automate. Necesită verificarea anexelor și eventualelor schimbări 1926–1929.",
+      "locators": "MO109 l.6799–6802,6826–6830,7059",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Roman",
+      "ohmId": "ohm-r2943496",
+      "name1926": "Roman",
+      "name1930": "Roman",
+      "plasi1926": 4,
+      "plasi1930": 2,
+      "gendarmerie1929": {
+        "sections": 4,
+        "posts": 28,
+        "observations": "Talpa în aria postului Văleni, legiunea Roman"
+      },
+      "civilEvidence": "Număr de plăși oficial; revenirea Talpa/Bârgăoani la Neamț nu a fost colationată individual din anexa civilă.",
+      "locators": "MO109 l.7073–7090",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Suceava moldovenească",
+      "ohmId": "ohm-r2940721",
+      "name1926": "Fălticeni",
+      "name1930": "Baia",
+      "plasi1926": 5,
+      "plasi1930": 3,
+      "gendarmerie1929": {
+        "sections": 5,
+        "posts": 26,
+        "observations": "Fălticeni: Topile și Gâștești în postul Moțca; Păstrăveni și Țibucani în postul Miroslăvești; Bunești în postul omonim"
+      },
+      "civilEvidence": "Decret 152/20.01.1930, pct. 1: Topile și Gâștești din Cristești (Baia) formează comuna suburbană Topile lângă Pașcani. Rectificare: Miroslăvești → Stolniceni-Prăjescu, cu reședința acolo; în 1926 Fălticeni și Suceava bucovineană figurează separat. Data exactă din 1923 rămâne necertificată.",
+      "locators": "MO109 l.4997–5000,5024,5055–5065; MO17bis l.158–161,390–394",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Tecuci",
+      "ohmId": "ohm-r2945087",
+      "name1926": "Tecuci",
+      "name1930": "Tecuci",
+      "plasi1926": 5,
+      "plasi1930": 3,
+      "gendarmerie1929": {
+        "sections": 5,
+        "posts": 27,
+        "observations": "Corbița, Homocea, Ivești în legiunea Tecuci"
+      },
+      "civilEvidence": "Pct. 22 rectifică numărul consilierilor Nicorești (15→12), nu hotarul.",
+      "locators": "MO109 l.8046–8049,8056–8075; MO17bis l.351–353",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Tutova",
+      "ohmId": "ohm-r2945089",
+      "name1926": "Tutova",
+      "name1930": "Tutova",
+      "plasi1926": 7,
+      "plasi1930": 3,
+      "gendarmerie1929": {
+        "sections": 7,
+        "posts": 29,
+        "observations": "Șuletea în aria postului Epureni; Stoeșești în aria postului Zorleni (OCR)"
+      },
+      "civilEvidence": "Pct. 7 schimbă regimul unor sate din consiliu în adunare sătească, nu județul; exemple Băcani și Pogana.",
+      "locators": "MO109 l.8725–8728,8780–8784,8824; MO17bis l.356–398",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    },
+    {
+      "name": "Vaslui",
+      "ohmId": "ohm-r2943670",
+      "name1926": "Vaslui",
+      "name1930": "Vaslui",
+      "plasi1926": 4,
+      "plasi1930": 2,
+      "gendarmerie1929": {
+        "sections": 5,
+        "posts": 24,
+        "observations": "Codăești, Dobrovăț, Scânteia în legiunea Vaslui"
+      },
+      "civilEvidence": "Decretul 152, pct. 13, admite comasări interne, ex. Halitul cu Ipatele; Alexeni cu Tungujei. Nu se deduce transferul către Iași/Roman.",
+      "locators": "MO109 l.8831–8850; MO17bis l.173–194",
+      "sourcePeriodEnd": null,
+      "legalBoundaryCertified": false,
+      "geometrySharingAdmitted": false
+    }
+  ],
+  "controls": {
+    "original1923Recovered": false,
+    "original1929IssuesRecovered": 0,
+    "facsimileDiplomaticCollation": false,
+    "canonicalChanges": 0,
+    "geometryChanges": 0
+  },
+  "note": "Counts are source snapshots and do not infer geometry periods. Suceava Moldovan matched to Fălticeni/Baia for documentary comparison only; Bucovinian Suceava separate (1926: 4 plasi, 1929: 3 sections/16 posts, 1930: 3 plasi)."
+}

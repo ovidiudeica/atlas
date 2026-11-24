@@ -53,7 +53,8 @@ test('HIST-OHM-TREE.5 individually qualifies all 704 source versions and 16 coun
   assert.equal(rohgis.versions.length, 565);
   assert.equal(new Set(rohgis.versions.map(v => v.geometryId)).size, 565);
   assert.equal(rohgis.versions.filter(v => v.kind === 'judet').length, 71);
-  assert.equal(rohgis.versions.filter(v => v.kind === 'plasa').length, 494);
+  assert.equal(rohgis.versions.filter(v => v.kind === 'plasa').length, 322);
+  assert.equal(rohgis.versions.filter(v => v.kind === 'urban_unit').length, 172);
   assert.equal(rohgis.yearFilterRestriction, 'ONLY_1930');
   assert.ok(rohgis.versions.every(v => v.start === '1930-01-01' && v.end === '1930-12-31'));
   assert.ok(rohgis.versions.every(v => !v.boundaryCertified && !v.crossFamilyIdentityCertified));
@@ -85,8 +86,8 @@ test('HIST-OHM-TREE.5 individually qualifies all 704 source versions and 16 coun
   assert.equal(pairs.filter(p => p.temporal === 'END_UNKNOWN').length, 13);
   assert.equal(ohmCounties.filter(c => !pairedOHM.has(c.id)).length, 3);
   assert.equal(rohgis.versions.filter(c => c.kind === 'judet' && !pairedRo.has(c.entityId)).length, 55);
-  assert.equal(rohgis.versions.filter(c => c.kind === 'plasa' && !pairedRo.has(c.entityId)).length, 494);
-  assert.ok(rohgis.versions.filter(c => c.kind === 'plasa').every(c =>
+  assert.equal(rohgis.versions.filter(c => c.kind !== 'judet' && !pairedRo.has(c.entityId)).length, 494);
+  assert.ok(rohgis.versions.filter(c => c.kind !== 'judet').every(c =>
     rohgisById.get(c.parentId)?.kind === 'judet'));
   const suceava = pairs.find(p => p.name === 'Suceava');
   assert.ok(suceava && suceava.iou < 0.001);

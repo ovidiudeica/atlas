@@ -35,6 +35,7 @@ def build(countyfile,plasafile,out):
     plasa=gpd.read_file(plasafile,layer=SOURCES['plasi']['layer'])
     assert county.crs.to_epsg()==3844 and plasa.crs.to_epsg()==3844
     assert len(county)==71 and len(plasa)==494
+    assert plasa['Rang'].value_counts().to_dict()=={'II':322,'III':172}
     assert county['Nume'].is_unique and plasa['id'].is_unique
     assert county.geometry.notnull().all() and plasa.geometry.notnull().all()
     assert county.is_valid.all() and plasa.is_valid.all()
@@ -62,7 +63,8 @@ def build(countyfile,plasafile,out):
             else: plasa.loc[plasa.entity_id==r.entity_id,'geometry_id']=geometry_id
             source_versions.append({
                 'entityId':r.entity_id,'versionId':r.entity_id+':version:1930','geometryId':geometry_id,
-                'parentId':r.parent_id,'nameRo':str(r[name_field]),'kind':kind,
+                'parentId':r.parent_id,'nameRo':str(r[name_field]),'kind':kind if kind=='judet' or r['Rang']=='II' else 'urban_unit',
+                **({'sourceRank':str(r['Rang'])} if kind=='plasa' else {}),
                 'start':'1930-01-01','end':'1930-12-31',
                 'temporalStatus':'DOCUMENTARY_1930_SNAPSHOT_ONLY',
                 'sourceCollectionPeriod':SOURCES[source_key]['periodLabel'],
@@ -103,12 +105,13 @@ def build(countyfile,plasafile,out):
     qa={
         'schema':'hist-ohm-tree4-rohgis-1930-qa-v1',
         'observedAt':datetime.date.today().isoformat(),'sourceCrs':'EPSG:3844',
-        'countyCount':len(county),'plasaCount':len(plasa),
+        'countyCount':len(county),'plasaCount':int((plasa['Rang']=='II').sum()),'urbanUnitCount':int((plasa['Rang']=='III').sum()),'subunitSourceFeatureCount':len(plasa),
         'countyUniqueNames':len(county_ids),'plasaUniqueSourceIds':int(plasa.id.nunique()),
         'invalidGeometries':int((~county.is_valid).sum()+(~plasa.is_valid).sum()),
         'orphans':int((~plasa['Județ'].isin(county_names)).sum()),
         'geometryUniqueExactWkb':len(geom_assets),'exactGeometryAliases':len(duplicate_uses),
-        'duplicatePlasaLabelsWithinSameCounty':int(plasa.duplicated(['Județ','Nume']).sum()),
+        'duplicatePlasaLabelsWithinSameCounty':int(plasa[plasa['Rang']=='II'].duplicated(['Județ','Nume']).sum()),
+        'duplicateSourceLabelsAcrossRanks':int(plasa.duplicated(['Județ','Nume']).sum()),
         'countyGapTotalSqKm':round(sum(r['countyNotInPlasiSqKm'] for r in county_qa),6),
         'plasiExcessTotalSqKm':round(sum(r['plasiOutsideCountySqKm'] for r in county_qa),6),
         'plasiPairOverlapTotalSqKm':round(sum(r['plasiPairOverlapSqKm'] for r in county_qa),6),
@@ -169,8 +172,8 @@ def build(countyfile,plasafile,out):
 ## Reguli
 
 - Datele „1929–1938” / „1929–1933” din numele colecţiilor **nu justifică** invariabilitatea hotarului în toţi aceşti ani. Afişarea temporală automată este limitată la fotografia **1930**.
-- Fiecare dintre {len(plasa)} plăşi are un judeţ-părinte **raportat de câmpul sursei** `Județ`; asocierea nu este certificare juridică independentă.
-- La nivelul 1930, `Regatul României → județe → plăși` este legătura de navigaţie vizată. Reconcilierea identităţilor OHM/RoHGIS rămâne neaprobată până la surse şi verificări individuale. În special, „Suceava” veche OHM (cu Fălticeni) nu trebuie confundată cu județul Bucovinei din 1930.
+- Fiecare dintre {len(plasa)} înregistrări (322 plăși, 172 unități urbane) are un judeţ-părinte **raportat de câmpul sursei** `Județ`; asocierea nu este certificare juridică independentă.
+- La nivelul 1930, `Regatul României → județe → plăși și unități urbane` este legătura de navigaţie vizată. Reconcilierea identităţilor OHM/RoHGIS rămâne neaprobată până la surse şi verificări individuale. În special, „Suceava” veche OHM (cu Fălticeni) nu trebuie confundată cu județul Bucovinei din 1930.
 - `geometry_id` se refoloseşte **numai** dacă SHA256 din WKB-ul EPSG:3844 este identic. Nu se aproximează, nu se repară automat, nu se face `snap` sau uniune pentru a forţa egalitatea.
 - Diferențele între poligoanele județene și totalul plășilor: {qa['countyGapTotalSqKm']:.6f} km² din județe nu intră în uniunea plășilor; {qa['plasiExcessTotalSqKm']:.6f} km² din plăși depășesc poligoanele județelor. Acestea sunt **diferențe tehnice ale setului de date**, nu modificări istorice demonstrate.
 

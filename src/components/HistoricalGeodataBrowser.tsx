@@ -1,4 +1,4 @@
-import {useEffect,useMemo,useRef,useState} from 'react';
+import {Fragment,useEffect,useMemo,useRef,useState} from 'react';
 import {EntityCardSection} from './EntityCardSection';
 import {
   buildHistoricalOhmTree,validateOhmParentage,uniqueSourceVersionAtYear,
@@ -168,19 +168,23 @@ export function HistoricalGeodataBrowser({
    buildHistoricalOhmTree(index,parentage,year,documentaryParents):
    null,[index,parentage,documentaryParents,year]);
  const rohgisCounties=useMemo(()=>{
-   if(year!==1930||!rohgis)return [] as {county:Rohgis1930Version;plasi:Rohgis1930Version[]}[];
-   const map=new Map<string,{county:Rohgis1930Version;plasi:Rohgis1930Version[]}>();
+   if(year!==1930||!rohgis)return [] as {county:Rohgis1930Version;plasi:Rohgis1930Version[];urban:Rohgis1930Version[]}[];
+   const map=new Map<string,{county:Rohgis1930Version;plasi:Rohgis1930Version[];urban:Rohgis1930Version[]}>();
    for(const version of rohgis.versions.filter(v=>v.kind==='judet'))
-     map.set(version.entityId,{county:version,plasi:[]});
+     map.set(version.entityId,{county:version,plasi:[],urban:[]});
    for(const version of rohgis.versions.filter(v=>v.kind==='plasa'))
      map.get(version.parentId)?.plasi.push(version);
-   for(const group of map.values())
+   for(const version of rohgis.versions.filter(v=>v.kind==='urban_unit'))
+     map.get(version.parentId)?.urban.push(version);
+   for(const group of map.values()){
      group.plasi.sort((a,b)=>a.nameRo.localeCompare(b.nameRo,'ro'));
+     group.urban.sort((a,b)=>a.nameRo.localeCompare(b.nameRo,'ro'));
+   }
    return [...map.values()].sort((a,b)=>a.county.nameRo.localeCompare(b.county.nameRo,'ro'));
  },[rohgis,year]);
  const matchesRohgis=(x:string)=>!term||foldedSearch(x).includes(term);
  const hasRohgisMatch=rohgisCounties.some(group=>
-   matchesRohgis(group.county.nameRo)||group.plasi.some(v=>matchesRohgis(v.nameRo)));
+   matchesRohgis(group.county.nameRo)||[...group.plasi,...group.urban].some(v=>matchesRohgis(v.nameRo)));
  const filteredRoots=useMemo(()=>{
    if(!tree)return {regions:[],counties:[],comitates:[]} as {
      regions:FilteredOhmNode[];counties:FilteredOhmNode[];comitates:FilteredOhmNode[];
@@ -221,7 +225,7 @@ export function HistoricalGeodataBrowser({
    for(const group of rohgisCounties){
      const parentMatch=matchesRohgis(group.county.nameRo);
      if(parentMatch)ids.add(group.county.versionId);
-     for(const v of group.plasi)if(parentMatch||matchesRohgis(v.nameRo))ids.add(v.versionId);
+     for(const v of [...group.plasi,...group.urban])if(parentMatch||matchesRohgis(v.nameRo))ids.add(v.versionId);
    }
    return ids.size;
  },[filteredRoots,rohgisCounties,term]);
@@ -260,11 +264,11 @@ export function HistoricalGeodataBrowser({
    setBusy(version.versionId);setError(null);
    try{
      const feature=await loadRohgis1930Feature(rohgis,version,import.meta.env.BASE_URL);
-     const parent=version.kind==='plasa'?
+     const parent=version.kind!=='judet'?
        rohgis.versions.find(v=>v.entityId===version.parentId)?.nameRo:null;
      if(mounted.current)onSelect({
        entry:toRohgisGeodataEntry(version),feature,
-       sourceReportedParent:version.kind==='plasa'?
+       sourceReportedParent:version.kind!=='judet'?
          (lang==='ro'?'Județul ':'County ')+(parent||'?'):
          (lang==='ro'?'Regatul României':'Kingdom of Romania')
      });
@@ -284,16 +288,17 @@ export function HistoricalGeodataBrowser({
  }
  function renderRohgisTree(){
    const groups=rohgisCounties.filter(group=>
-     matchesRohgis(group.county.nameRo)||group.plasi.some(v=>matchesRohgis(v.nameRo)));
+     matchesRohgis(group.county.nameRo)||[...group.plasi,...group.urban].some(v=>matchesRohgis(v.nameRo)));
    return <div className="history-tree-children history-rohgis-tree" role="group">
      <p className="history-documentary-label">
-       {lang==='ro'?'Județe și plăși (1930) · RoHGIS · hotare-sursă necertificate':
-         'Counties and plăși (1930) · RoHGIS · uncertified source boundaries'}
+       {lang==='ro'?'Județe, plăși și unități urbane (1930) · RoHGIS · hotare-sursă necertificate':
+         'Counties, plăși and urban units (1930) · RoHGIS · uncertified source boundaries'}
        {' · '}{groups.length} / 71
      </p>
-     {groups.map(({county,plasi})=>{
+     {groups.map(({county,plasi,urban})=>{
        const parentMatch=matchesRohgis(county.nameRo);
        const shownPlasi=parentMatch?plasi:plasi.filter(v=>matchesRohgis(v.nameRo));
+       const shownUrban=parentMatch?urban:urban.filter(v=>matchesRohgis(v.nameRo));
        const open=expanded.has(county.entityId)||Boolean(term);
        const isSelected=selectedId===county.versionId;
        return <div key={county.entityId} className="history-tree-node" role="treeitem" aria-level={2}>
@@ -308,19 +313,20 @@ export function HistoricalGeodataBrowser({
              onChange={e=>void toggleRohgisVersion(county,e.target.checked)}/>
            <button type="button" className={'history-tree-name'+(isSelected?' is-selected':'')}
              onClick={()=>void selectRohgisVersion(county)}>{county.nameRo}</button>
-           <span className="history-source-version-count">{plasi.length}</span>
+           <span className="history-source-version-count" title={lang==='ro'?'Plăși / unități urbane':'Plăși / urban units'}>{plasi.length} / {urban.length}</span>
          </div>
          {open&&<div className="history-tree-children" role="group">
-           {shownPlasi.map(plasa=><div key={plasa.entityId} className="history-tree-row"
-             role="treeitem" aria-level={3} style={{paddingLeft:25}}>
-             <span className="history-tree-leaf" aria-hidden="true"/>
-             <input type="checkbox" checked={visibleSet.has(plasa.versionId)} disabled={busy!==null}
-               aria-label={(lang==='ro'?'Afișează plasa ':'Show plasa ')+plasa.nameRo}
-               onChange={e=>void toggleRohgisVersion(plasa,e.target.checked)}/>
-             <button type="button" className={'history-tree-name'+
-               (selectedId===plasa.versionId?' is-selected':'')}
-               onClick={()=>void selectRohgisVersion(plasa)}>{plasa.nameRo}</button>
-           </div>)}
+           {([['plasa',shownPlasi],['urban_unit',shownUrban]] as const).map(([kind,units])=>units.length>0&&<Fragment key={kind}>
+             <p className="history-documentary-label" role="presentation">{kind==='plasa'?'Plăși':lang==='ro'?'Unități urbane (rang III)':'Urban units (rank III)'} · {units.length}</p>
+             {units.map(unit=><div key={unit.entityId} data-rohgis-kind={kind} className="history-tree-row" role="treeitem" aria-level={3} style={{paddingLeft:25}}>
+               <span className="history-tree-leaf" aria-hidden="true"/>
+               <input type="checkbox" checked={visibleSet.has(unit.versionId)} disabled={busy!==null}
+                 aria-label={(kind==='plasa'?(lang==='ro'?'Afișează plasa ':'Show plasa '):(lang==='ro'?'Afișează unitatea urbană ':'Show urban unit '))+unit.nameRo}
+                 onChange={e=>void toggleRohgisVersion(unit,e.target.checked)}/>
+               <button type="button" className={'history-tree-name'+(selectedId===unit.versionId?' is-selected':'')}
+                 onClick={()=>void selectRohgisVersion(unit)}>{unit.nameRo}</button>
+             </div>)}
+           </Fragment>)}
          </div>}
        </div>;
      })}
@@ -434,7 +440,7 @@ export function HistoricalGeodataBrowser({
        {tree?<>{tree.groupCount} {headings.groups} · {tree.sourceVersionCount} {headings.versions}
          {' · '}{tree.documentaryNodeCount} {headings.documentary}
          {' · '}{visibleIds.length} {headings.visible}
-       {rohgis&&' · RoHGIS 1930: 71 / 494'}</>:t.loading}
+       {rohgis&&year===1930&&(lang==='ro'?' · RoHGIS 1930: 71 județe / 322 plăși / 172 unități urbane':' · RoHGIS 1930: 71 counties / 322 plăși / 172 urban units')}</>:t.loading}
      </p>
    </header>
    <div className="history-catalog-filters">
@@ -521,7 +527,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
      <EntityCardSection title={t.identity} kind="identity">
        <dl className="metadata">
          <dt>{t.sourceId}</dt><dd>{entry.sourceFamily==='OHM'? 'OHM relation '+entry.sourceRelationId : entry.sourceExternalId??entry.id}</dd>
-         <dt>{t.kind}</dt><dd>{entry.sourceType||'—'}</dd>
+         <dt>{t.kind}</dt><dd>{lang==='en'&&entry.sourceFamily==='ROHGIS'?(entry.sourceType==='unitate urbană'?'Urban unit':entry.sourceType==='județ'?'County':'Plasa'):entry.sourceType||'—'}{entry.sourceRank&&<small> ({lang==='ro'?'rang-sursă':'source rank'} {entry.sourceRank})</small>}</dd>
          <dt>{t.period}</dt><dd>{dateLabel(entry,lang)} ({t.uncertain})</dd>
          <dt>{t.geometry}</dt><dd>{entry.geometryId}</dd>
          {sourceReportedParent&&<>
@@ -544,7 +550,7 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
            <dt>{lang==='ro'?'Autori și drepturi':'Authors and reuse rights'}</dt>
            <dd><a href="https://rohgis.ro/despre/" target="_blank" rel="noopener noreferrer">
              RoHGIS · CC BY 4.0</a>
-             <small> · {entry.sourceType==='plasă'?'Cezar Buterez':'Andrei Nacu, Cezar Buterez'}
+             <small> · {entry.sourceRank?'Cezar Buterez':'Andrei Nacu, Cezar Buterez'}
              {' · '}{lang==='ro'?'vizualizare reproiectată, cu atribuire':'reprojected visualization with attribution'}</small>
            </dd>
          </>}

@@ -29,7 +29,7 @@ export function validateRohgis1930Catalog(data){
     if(!v||typeof v.entityId!=='string'||ids.has(v.entityId))
       errors.push('Missing or duplicate RoHGIS entity ID');
     ids.add(v?.entityId);
-    if(v.kind!=='judet'&&v.kind!=='plasa')errors.push('Unknown RoHGIS source rank');
+    if(!((v.kind==='judet'&&v.sourceRank===undefined)||(v.kind==='plasa'&&v.sourceRank==='II')||(v.kind==='urban_unit'&&v.sourceRank==='III')))errors.push('Invalid RoHGIS kind/source rank');
     countKind.set(v.kind,(countKind.get(v.kind)||0)+1);
     if(typeof v.geometryId!=='string'||!/^rohgis:geom:[0-9a-f]{24}$/.test(v.geometryId))
       errors.push('Bad RoHGIS shared-geometry identifier');
@@ -43,14 +43,14 @@ export function validateRohgis1930Catalog(data){
     if(!safeShard(v.geometryShard)||!counts.has(v.geometryShard))
       errors.push('Version references an unindexed RoHGIS shard');
     counted.set(v.geometryShard,(counted.get(v.geometryShard)||0)+1);
-    if(v.kind==='plasa'&&!counties.has(v.parentId))
-      errors.push('Plasa without source-reported county parent: '+v.entityId);
+    if(v.kind!=='judet'&&!counties.has(v.parentId))
+      errors.push('Subunit without source-reported county parent: '+v.entityId);
     if(v.kind==='judet'&&v.parentId!==data.documentaryStateRoot)
       errors.push('County parent must be the documented state root');
     if(!sha(v.sourceHashSha256)||typeof v.sourceDriveFileId!=='string')
       errors.push('Missing source hash or source identifier');
   }
-  if(countKind.get('judet')!==71||countKind.get('plasa')!==494)
+  if(countKind.get('judet')!==71||countKind.get('plasa')!==322||countKind.get('urban_unit')!==172)
     errors.push('Incorrect number of RoHGIS county or plasa entities');
   if(assets.size!==data.geometryAssetCount||assets.size!==565||
      data.duplicateGeometryUses?.length!==0)
@@ -64,11 +64,12 @@ export function rohgis1930VersionsAtYear(catalog,year){
 }
 export function toRohgisGeodataEntry(v){
   const isCounty=v.kind==='judet';
+  const isUrban=v.kind==='urban_unit';
   return {
-    id:v.versionId,sourceFamily:'ROHGIS',sourceGroup:'RoHGIS/'+(isCounty?'Județe':'Plăși')+' 1930/'+v.nameRo,
+    id:v.versionId,sourceFamily:'ROHGIS',sourceGroup:'RoHGIS/'+(isCounty?'Județe':isUrban?'Unități urbane':'Plăși')+' 1930/'+v.nameRo,
     displayName:{ro:v.nameRo,en:v.nameRo},
     sourcePeriod:{start:v.start,end:v.end,kind:'snapshot',sourceOnly:true,notes:'RoHGIS 1930 only; boundaries unverified independently'},
-    sourceType:isCounty?'județ':'plasă',geometryId:v.geometryId,
+    sourceType:isCounty?'județ':isUrban?'unitate urbană':'plasă',...(isCounty?{}:{sourceRank:v.sourceRank}),geometryId:v.geometryId,
     featureId:v.entityId,geometryShard:v.geometryShard,
     sourceDriveFileId:v.sourceDriveFileId,
     sourcePath:'Geodata GIS/RoHGIS/'+(isCounty?'Limitele județelor existente între anii 1929-1938':'Limitele plășilor din perioada 1929-1933'),

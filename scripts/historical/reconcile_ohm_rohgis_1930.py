@@ -77,7 +77,12 @@ def main():
     catalog_ro = json.loads(RO.read_text(encoding='utf-8'))
     audit = json.loads(AUDIT.read_text(encoding='utf-8'))
     assert audit['provenance']['ohmIndexSha256'] == digest(OHM)
-    assert audit['provenance']['rohgisIndexSha256'] == digest(RO)
+    legacy = json.loads(RO.read_text(encoding='utf-8'))
+    for v in legacy['versions']:
+        if v['kind'] != 'judet':
+            v['kind'] = 'plasa'
+            v.pop('sourceRank')
+    assert audit['provenance']['rohgisIndexSha256'] == hashlib.sha256(json.dumps(legacy, ensure_ascii=False, separators=(',', ':')).encode('utf-8')).hexdigest()
     assert audit['stage'] == 'HIST-OHM-TREE.5'
     assert catalog_ro['yearFilterRestriction'] == 'ONLY_1930'
     assert not catalog_ro['historicalLegalBoundariesCertified']
@@ -160,7 +165,7 @@ def main():
     print('HIST-OHM-TREE.5: PASS')
     print('139 OHM + 565 RoHGIS polygons valid; 78,535 comparisons, 0 exact shared geometries.')
     print('16 same-name county cases; 3 OHM periods include 1930, 13 ends missing.')
-    print('71 counties + 494 plasi retained, no cross-family geometryId promotions.')
+    print('71 counties + 322 plasi + 172 rank III units retained, no cross-family geometryId promotions.')
 
 
 if __name__ == '__main__':

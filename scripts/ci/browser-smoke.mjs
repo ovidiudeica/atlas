@@ -2086,8 +2086,8 @@ async function rohgis1930Smoke(cdp){
   await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1930');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
   await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
     'RoHGIS 1930 reference year '+width);
-  await p.wait("document.querySelector('"+panel+" .history-catalog-stat')?.textContent?.includes('RoHGIS 1930: 71 / 494')",
-    'RoHGIS 71 counties / 494 plasi catalog loaded '+width);
+  await p.wait("document.querySelector('"+panel+" .history-catalog-stat')?.textContent?.includes('RoHGIS 1930: 71 județe / 322 plăși / 172 unități urbane')",
+    'RoHGIS 71 counties / 322 plasi / 172 urban units catalog loaded '+width);
   await p.eval("(()=>{const rows=[...document.querySelectorAll('"+panel+" .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.trim()==='Regatul României');if(!row)throw Error('Kingdom of Romania historical parent missing');row.querySelector('.history-tree-expand').click();})()");
   await p.wait("document.querySelectorAll('"+panel+" .history-rohgis-tree > .history-tree-node').length===71",
     'Exactly 71 RoHGIS counties nested under Romania '+width);
@@ -2098,9 +2098,13 @@ async function rohgis1930Smoke(cdp){
   await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const node=[...root.querySelectorAll(':scope > .history-tree-node')].find(x=>x.querySelector(':scope > .history-tree-row .history-tree-name')?.textContent?.trim()==='Arad');if(!node)throw Error('RoHGIS 1930 Arad county not found');node.querySelector(':scope > .history-tree-row .history-tree-expand').click();})()");
   await p.wait("Array.from(document.querySelectorAll('"+panel+" .history-rohgis-tree .history-tree-row .history-tree-name')).some(x=>x.textContent.trim()==='Pecica')",
     'Arad county expands to plasa Pecica '+width);
+  await p.wait("document.querySelectorAll('"+panel+" .history-rohgis-tree [data-rohgis-kind=plasa]').length===9&&document.querySelectorAll('"+panel+" .history-rohgis-tree [data-rohgis-kind=urban_unit]').length===1",
+    'Arad exposes nine plasi and one urban unit '+width);
   if(!mobile){
     const count=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const node=[...root.querySelectorAll(':scope > .history-tree-node')].find(x=>x.querySelector(':scope > .history-tree-row .history-tree-name')?.textContent?.trim()==='Arad');return node.querySelectorAll(':scope > .history-tree-children > .history-tree-row').length})()");
-    assert.ok(count>=1,'Arad contains at least one RoHGIS plasa');
+    assert.equal(count,10,'Arad retains ten source subunits');
+    const ranks=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const node=[...root.querySelectorAll(':scope > .history-tree-node')].find(x=>x.querySelector(':scope > .history-tree-row .history-tree-name')?.textContent?.trim()==='Arad');return [node.querySelectorAll('[data-rohgis-kind=plasa]').length,node.querySelectorAll('[data-rohgis-kind=urban_unit]').length]})()");
+    assert.deepEqual(ranks,[9,1],'Arad separates rank II and III');
     await p.eval("(()=>{const row=[...document.querySelectorAll('"+panel+" .history-rohgis-tree .history-tree-children > .history-tree-row')].find(x=>x.querySelector('.history-tree-name')?.textContent?.trim()==='Pecica');if(!row)throw Error('Pecica plasa not found');row.querySelector('input[type=checkbox]').click();})()");
     await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='1'",
       'Pecica geometry checkbox updates historic map selection');
@@ -2118,6 +2122,21 @@ async function rohgis1930Smoke(cdp){
     await p.eval("(()=>{const row=[...document.querySelectorAll('"+panel+" .history-rohgis-tree .history-tree-children > .history-tree-row')].find(x=>x.querySelector('.history-tree-name')?.textContent?.trim()==='Pecica');row.querySelector('input[type=checkbox]').click();})()");
     await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='0'",
       'Pecica checkbox can clear historical polygon selection');
+    await p.eval("document.querySelector('"+panel+" .history-rohgis-tree [data-rohgis-kind=urban_unit] input[type=checkbox]').click()");
+    await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='1'",
+      'Arad urban unit geometry is independently selectable');
+    assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.historyDistinctAssets"),'1');
+    await p.eval("document.querySelector('"+panel+" .history-rohgis-tree [data-rohgis-kind=urban_unit] .history-tree-name').click()");
+    await p.wait("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent?.includes('rang-sursă III')",
+      'Rank III source evidence visible in Entity card');
+    const urbanCard=await p.eval("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent");
+    assert.match(urbanCard,/unitate urbană/i);
+    assert.match(urbanCard,/Județul Arad/);
+    assert.match(urbanCard,/Cezar Buterez/);
+    await p.snap('desktop-rohgis-1930-arad-urban-unit.png');
+    await p.eval("document.querySelector('"+panel+" .history-rohgis-tree [data-rohgis-kind=urban_unit] input[type=checkbox]').click()");
+    await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='0'",
+      'Arad urban unit geometry clears independently');
   }else{
     await p.snap('mobile-rohgis-1930-arad-plasi.png');
   }
@@ -2133,7 +2152,7 @@ async function rohgis1930Smoke(cdp){
     'RoHGIS 1930 restored without source identity loss '+width);
   await p.close();
  }
- console.log('HIST-OHM-TREE.4 Chromium: 71 counties / 494 plasi, Arad > Pecica, geometry checkbox, source card, CC BY 4.0, 1929 exclusion, desktop and mobile PASS');
+ console.log('HIST-OHM-TREE.4 Chromium: 71 counties / 322 plasi / 172 urban units, Arad > Pecica and Arad urban unit, geometry checkbox, source card, CC BY 4.0, 1929 exclusion, desktop and mobile PASS');
 }
 
 try{

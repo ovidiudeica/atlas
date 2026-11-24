@@ -2,7 +2,7 @@ import type {Feature,Polygon,MultiPolygon} from 'geojson';
 import type {GeodataSourceEntry} from './historicalGeodata.mjs';
 export interface Rohgis1930Version {
  entityId:string; versionId:string; geometryId:string; geometryShard:string;
- parentId:string;nameRo:string;kind:'judet'|'plasa';
+ parentId:string;nameRo:string;kind:'judet'|'plasa'|'urban_unit';sourceRank?:'II'|'III';
  start:'1930-01-01';end:'1930-12-31';
  sourceDriveFileId:string;sourceRecordId:string;sourceHashSha256:string;
  boundaryCertified:false;crossFamilyIdentityCertified:false;
