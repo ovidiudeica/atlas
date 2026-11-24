@@ -1,0 +1,145 @@
+{
+  "schema": "hist-ohm-tree10e-reconciliation-audit-v1",
+  "stage": "HIST-OHM-TREE.10e",
+  "status": "FIRST_PASS_PARTIAL_CANDIDATE_QUALIFICATION",
+  "referenceDate": "1930-12-29",
+  "priorAudit": {
+    "path": "docs/historical/reconciliation/HIST-OHM-TREE.10d-EXTRACTION-AUDIT.json",
+    "blobSha": "6a959befa9c12a865b5e0a18d46fb8219cc27a25"
+  },
+  "sourcePdfSha256": "1da483ff86007fce11674d1084b467f444d6e0ad0a4e8273c5d8d2555d94a0e7",
+  "summary": {
+    "counties": 71,
+    "plasi": 322,
+    "originalOrdinalSlots": 13517,
+    "additionalVisualPositions": 18,
+    "priorHold": 1727,
+    "priorityRequalifiedCandidates": 278,
+    "newHoldsFromPreviouslyNonHold": 8,
+    "remainingHold": 1457,
+    "netHoldReduction": 270,
+    "missingHold": 416,
+    "conflictingHold": 937,
+    "footnoteHold": 58,
+    "structuralHold": 46,
+    "visualRows": 394,
+    "visualPages": 6,
+    "visualExistingSlots": 376,
+    "structuralRejectedNumberedOccurrences": 111,
+    "structuralAffectedSlots": 110,
+    "structuralRejectedUnnumberedOccurrences": 1,
+    "unnumberedOccurrences": 16937,
+    "linkedUnnumbered": 3330,
+    "unlinkedUnnumbered": 13607,
+    "exactUniqueNameLinks": 2148,
+    "twoAnchorEqualSpanLinks": 1182,
+    "duplicateNameOrdinalWarnings": 268,
+    "plasiWithRemainingHold": 236,
+    "priorityPageSourcePairs": 465,
+    "fullyStatisticallyCertified": 0,
+    "legallyCertified": 0,
+    "canonicalChanges": 0
+  },
+  "statusCounts": {
+    "CROSS_TABLE_NORMALIZED_CANDIDATE": 1092,
+    "SINGLE_NORMALIZED_NAME_CANDIDATE": 4309,
+    "VISUAL_ROW_RECHECKED_CANDIDATE": 376,
+    "REPEATED_NORMALIZED_NAME_CANDIDATE": 6042,
+    "CONFLICTING_OCR_READINGS_HOLD": 937,
+    "STRUCTURAL_CONTRADICTION_HOLD": 46,
+    "NAME_MISSING_HOLD": 416,
+    "CROSS_TABLE_NORMALIZED_CANDIDATE_WITH_ALTERNATIVES": 139,
+    "POSSIBLE_NONVILLAGE_OR_FOOTNOTE_HOLD": 58,
+    "BRACKETED_TWO_TABLE_NAME_CANDIDATE": 1,
+    "VISUAL_ROW_TRANSCRIPTION_CANDIDATE": 101
+  },
+  "visualPageSourcePairs": [
+    {
+      "part": 1,
+      "page": 4,
+      "plasaIds": [
+        357,
+        338,
+        356,
+        358
+      ]
+    },
+    {
+      "part": 1,
+      "page": 74,
+      "plasaIds": [
+        276,
+        271
+      ]
+    },
+    {
+      "part": 1,
+      "page": 162,
+      "plasaIds": [
+        139,
+        123
+      ]
+    },
+    {
+      "part": 1,
+      "page": 204,
+      "plasaIds": [
+        247,
+        246
+      ]
+    },
+    {
+      "part": 2,
+      "page": 599,
+      "plasaIds": [
+        218
+      ]
+    },
+    {
+      "part": 3,
+      "page": 130,
+      "plasaIds": [
+        194,
+        193,
+        190,
+        191
+      ]
+    }
+  ],
+  "structuralExamples": [
+    {
+      "part": 1,
+      "page": 162,
+      "wrongId": 139,
+      "correctId": 123
+    },
+    {
+      "part": 3,
+      "page": 130,
+      "wrongId": 194,
+      "correctId": 193
+    },
+    {
+      "part": 2,
+      "page": 599,
+      "wrongId": 138,
+      "correctId": 218
+    }
+  ],
+  "deliverable": {
+    "filename": "HIST-OHM-TREE.10e.zip",
+    "bytes": 9083795,
+    "sha256": "d493910531e9466327e5caf6054f2c782a2e9f14f41084d100d855303f4e99d0",
+    "manifestSha256": "8c9125a5898bb366db019754c63f9b644e62981429a68f262ac680402fd40fd5",
+    "summarySha256": "a56269bf78f8ff90825ad1e2c83e7e6f2fe902adc945b999a9194ea83d010f17",
+    "storage": "Conversation artifact; full register not committed to repository."
+  },
+  "restrictions": [
+    "Both parts and alternate copy repeat one census; agreement is statistical corroboration, not independent legal evidence.",
+    "Manual readings are candidate transcriptions; six pages do not constitute exhaustive visual collation.",
+    "Preserve every source occurrence and original position. Additional visual positions are separate; counts are not unique national village counts.",
+    "All remaining HOLD records and unlinked unnumbered occurrences remain quarantined; 139 corroborated candidates retain alternatives, 268 duplicate-name warnings require review.",
+    "No legal membership, geometry, canonical names, dates, or parentage changed.",
+    "No renewed search for Indicatorul 1932 was made."
+  ]
+}
