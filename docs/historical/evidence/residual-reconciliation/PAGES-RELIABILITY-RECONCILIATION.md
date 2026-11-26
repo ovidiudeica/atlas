@@ -1,0 +1,7 @@
+# Reconciliere tehnică GitHub Pages — PR #157
+
+Rularea 45283494833 a trimis cu succes artefactul github-pages-45283494833-2. Logul autentificat a înregistrat id-ul 14869818689 și apoi eșecul găsirii acelui nume în lookup-ul Pages. Cauza infrastructurală și durata exactă a decalajului rămân nedemonstrate. Rularea distinctă 45285324890 a trecut CI și Pages. Închiderea #157 fără merge a consemnat publicarea reușită și verificarea de merge încă așteptată după schimbarea bazei. [Eșecul istoric](https://github.com/ovidiudeica/atlas/actions/runs/45283494833) · [Deployment-ul ulterior](https://github.com/ovidiudeica/atlas/actions/runs/45285324890)
+
+#157 păstrează numele pe run și attempt, așteaptă fix 15 secunde și încearcă din nou exclusiv deployment-ul după o pauză de 30 secunde când prima încercare eșuează. #166 verifică existența unui singur artefact neexpirat cu numele exact prin cel mult 30 de verificări la 5 secunde și eșuează înaintea deployment-ului dacă artefactul nu este disponibil. Există o singură încercare de deployment. Retry-ul după un eșec al acțiunii rămâne comportament unic al propunerii #157. Verificarea după publicare compară SHA-256 pentru 18 fișiere RoHGIS și index.html.
+
+Commitul integrat #166 este dd1b961405af50e3f1a77fc118a048a407979ad9. Workflow-ul și testul de fiabilitate din main au exact aceleași bloburi ca la integrare. Originalele istorice sunt conservate byte cu byte. Succesul testelor offline (#157, #166, main, câte 3/3) validează contracte statice, iar incidentul real rămâne cu verdictul original.
