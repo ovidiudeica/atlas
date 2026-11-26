@@ -2083,12 +2083,20 @@ async function rohgis1930Smoke(cdp){
   await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
   await p.wait("!!document.querySelector('"+panel+" .history-geodata-pane')",
     'Historical tree loaded for RoHGIS '+width);
+  await p.wait("!!document.querySelector('"+panel+" .history-rohgis-jump')",
+    'RoHGIS shortcut available after source catalog load '+width);
   // Reproduce partial year edits: the draft must survive a React render.
   for(const draft of ['1','19','193']){
     await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'"+draft+"');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
     await p.wait("document.querySelector('"+panel+" .history-filter-year input')?.value==='"+draft+"'&&document.querySelector('.map-area')?.dataset.historyYear==='1835'",
       'Partial year remains editable without committing an invalid year '+width);
   }
+  await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1930');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
+    'Full typed year commits after partial edits '+width);
+  await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1929');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1929'",
+    'Switch to adjacent year before using shortcut '+width);
   await p.eval("document.querySelector('"+panel+" .history-rohgis-jump').click()");
   await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
     'One-click RoHGIS 1930 reference year '+width);
