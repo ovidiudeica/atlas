@@ -33,7 +33,7 @@ Diferențele publicate față de prima sursă sunt de circa **6–27 m**, ceea c
 
 În `first-independent-ground-anchor-register.json` sunt **6 repere fizice**: Cetatea Chioarului (fotografia 2), Cetatea Rupea, bisericile fortificate din Prejmer, Codlea și Hărman și Biserica Neagră Brașov (fotografia 8). Pentru fiecare s-au separat coordonatele punctuale actuale candidate, fișele patrimoniale, fotografia MNL, eventualul pixel identificat și motivul respingerii la calificarea GCP. Hărman rămâne cu coordonate moderne discordante. Două simboluri din fotografia 8 (Rupea și Prejmer) au pixeli, dar **nu identifică univoc clădirile în cauză**.
 
-Un [KMZ privat din Drive](https://drive.google.com/file/d/1k2CSfYATlb5gKCO-TnD6z92GUlywUAza/view) despre administrația Transilvaniei de la începutul secolului XIX a fost identificat **numai prin metadate**. Nu este presupus etalon geodezic independent și nu a fost copiat/republicat.
+Un KMZ privat din Drive (disponibil de la custode prin registrul privat de recuperare) despre administrația Transilvaniei de la începutul secolului XIX a fost identificat **numai prin metadate**. Nu este presupus etalon geodezic independent și nu a fost copiat/republicat.
 
 ## 3. Georeferențiere: poartă fail-closed
 
