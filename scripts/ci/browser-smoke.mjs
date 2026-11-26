@@ -2083,12 +2083,25 @@ async function rohgis1930Smoke(cdp){
   await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
   await p.wait("!!document.querySelector('"+panel+" .history-geodata-pane')",
     'Historical tree loaded for RoHGIS '+width);
+  await p.wait("!!document.querySelector('"+panel+" .history-rohgis-jump')",
+    'RoHGIS shortcut available after source catalog load '+width);
+  // Reproduce partial year edits: the draft must survive a React render.
+  for(const draft of ['1','19','193']){
+    await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'"+draft+"');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+    await p.wait("document.querySelector('"+panel+" .history-filter-year input')?.value==='"+draft+"'&&document.querySelector('.map-area')?.dataset.historyYear==='1835'",
+      'Partial year remains editable without committing an invalid year '+width);
+  }
   await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1930');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
   await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
-    'RoHGIS 1930 reference year '+width);
+    'Full typed year commits after partial edits '+width);
+  await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1929');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1929'",
+    'Switch to adjacent year before using shortcut '+width);
+  await p.eval("document.querySelector('"+panel+" .history-rohgis-jump').click()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'",
+    'One-click RoHGIS 1930 reference year '+width);
   await p.wait("document.querySelector('"+panel+" .history-catalog-stat')?.textContent?.includes('RoHGIS 1930: 71 județe / 322 plăși / 172 unități urbane')",
     'RoHGIS 71 counties / 322 plasi / 172 urban units catalog loaded '+width);
-  await p.eval("(()=>{const rows=[...document.querySelectorAll('"+panel+" .history-tree-row')];const row=rows.find(el=>el.querySelector('.history-tree-name')?.textContent?.trim()==='Regatul României');if(!row)throw Error('Kingdom of Romania historical parent missing');row.querySelector('.history-tree-expand').click();})()");
   await p.wait("document.querySelectorAll('"+panel+" .history-rohgis-tree > .history-tree-node').length===71",
     'Exactly 71 RoHGIS counties nested under Romania '+width);
   const details=await p.eval("(()=>{const root=document.querySelector('"+panel+" .history-rohgis-tree');const rows=[...root.querySelectorAll(':scope > .history-tree-node > .history-tree-row')];return {countyCount:rows.length,names:rows.slice(0,6).map(row=>row.querySelector('.history-tree-name')?.textContent?.trim())}})()");

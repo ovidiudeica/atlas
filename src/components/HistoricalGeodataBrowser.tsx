@@ -104,6 +104,7 @@ export function HistoricalGeodataBrowser({
  const [busy,setBusy]=useState<string|null>(null);
  const [query,setQuery]=useState('');
  const [yearOnly,setYearOnly]=useState(false);
+ const [yearDraft,setYearDraft]=useState(String(year));
  const [expanded,setExpanded]=useState<Set<string>>(()=>new Set());
  const [openCategories,setOpenCategories]=useState<Set<string>>(()=>new Set(['regions']));
  const mounted=useRef(true);
@@ -142,6 +143,7 @@ export function HistoricalGeodataBrowser({
    pending:'No qualified administrative parent for reference year',
    visible:'checked geometries'
  };
+ useEffect(()=>{setYearDraft(String(year));},[year]);
  useEffect(()=>{onFiltersActiveChange(filtering);},
    [filtering,onFiltersActiveChange]);
  useEffect(()=>{onYearFilterChange(yearOnly);},
@@ -350,6 +352,12 @@ export function HistoricalGeodataBrowser({
    </div>;
  }
  function setYearFilter(active:boolean){setYearOnly(active);}
+ function openRohgis1930(){
+   setQuery('');setYearDraft('1930');onYear(1930);setYearFilter(true);
+   const kingdom=tree?.nodes.get('Regatul României');
+   if(kingdom)setExpanded(old=>new Set([...old,kingdom.id]));
+   setOpenCategories(old=>new Set([...old,'regions']));
+ }
  function toggleExpansion(id:string){
    setExpanded(old=>{
      const next=new Set(old);
@@ -472,13 +480,15 @@ export function HistoricalGeodataBrowser({
      </div>
      <div className="history-filter-row">
        <label className="history-filter-year">{headings.year}
-         <input type="number" min={1000} max={2100} value={year}
+         <input type="number" min={1000} max={2100} value={yearDraft}
            onChange={event=>{
-             const value=Number(event.target.value);
-             if(Number.isInteger(value)&&value>=1000&&value<=2100){
+             const raw=event.target.value;
+             setYearDraft(raw);
+             const value=Number(raw);
+             if(/^\d{4}$/.test(raw)&&Number.isInteger(value)&&value>=1000&&value<=2100){
                onYear(value);setYearFilter(true);
              }
-           }}/>
+           }} onBlur={()=>setYearDraft(String(year))}/>
        </label>
        <label className="history-filter-checkbox">
          <input type="checkbox" checked={yearOnly}
@@ -486,6 +496,9 @@ export function HistoricalGeodataBrowser({
          <span>{headings.yearFilter}</span>
        </label>
      </div>
+     {rohgis&&tree&&<button type="button" className="history-rohgis-jump" onClick={openRohgis1930}>
+       {lang==='ro'?'1930 — Județe și plăși':'1930 — Counties and plăși'}
+     </button>}
      {filtering&&tree&&<p className="history-filter-count" role="status">
        {matchedCount} {headings.results}
      </p>}
