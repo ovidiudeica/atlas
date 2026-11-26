@@ -29,8 +29,8 @@ Geografia RoHGIS: https://rohgis.ro/geografic/
 Harta 1930: https://geo-spatial.org/vechi/download/romania-limitele-administrative-ale-jude-elor-interbelice-1930
 Legea 1923:XXXV: https://net.jogtar.hu/ezer-ev-torveny?docid=92300035.TV
 KSH 1928: https://www.ksh.hu/statszemle_archive/all/1928/1928_06/1928_06_0648_0714.pdf
-Original județe: https://drive.google.com/file/d/1Bz7JCOGI3p7f0nEgvsNXi5HbEt-t5CqJ/view
-Original plăși: https://drive.google.com/file/d/1WLnoTCnxx41x-oP6aECkKlCS-HJlUTPp/view
+Original județe: arhivă privată disponibilă de la custode prin registrul privat de recuperare
+Original plăși: arhivă privată disponibilă de la custode prin registrul privat de recuperare
 
 Verificare: node --test tests/hist-ohm-tree4-rohgis-1930.test.mjs; npm test; npm run build.
 
