@@ -15,6 +15,11 @@ import {
   toRohgisGeodataEntry,type Rohgis1930Catalog,type Rohgis1930Version
 } from '../data/historicalRohgis1930.mjs';
 
+import {
+  buildSupplementalTree,loadSupplementalCatalog,loadSupplementalFeature,
+  type SupplementalCatalog,type SupplementalNode,type SupplementalRelation
+} from '../data/historicalSupplemental.mjs';
+
 type Locale='ro'|'en';
 const urbanSubtypeLabel=(subtype:'municipiu'|'oraș',lang:Locale)=>lang==='ro'?subtype:subtype==='municipiu'?'Municipality':'Town';
 const urbanEvidenceLabels={
@@ -35,6 +40,7 @@ export interface HistoricalGeodataSelection {
   feature:GeodataSourceFeature;
   parentEvidence?:OhmParentageLink|null;
   sourceReportedParent?:string;
+  supplementalRelation?:SupplementalRelation;
 }
 export interface HistoricalVisibilityChange {
   entry:GeodataSourceEntry;
@@ -100,6 +106,8 @@ export function HistoricalGeodataBrowser({
  const [parentage,setParentage]=useState<OhmParentageRegister|null>(null);
  const [documentaryParents,setDocumentaryParents]=useState<HistoricalDocumentaryParentRegistry|null>(null);
  const [rohgis,setRohgis]=useState<Rohgis1930Catalog|null>(null);
+ const [supplemental,setSupplemental]=useState<SupplementalCatalog|null>(null);
+ const [supplementalError,setSupplementalError]=useState<string|null>(null);
  const [error,setError]=useState<string|null>(null);
  const [busy,setBusy]=useState<string|null>(null);
  const [query,setQuery]=useState('');
@@ -152,6 +160,9 @@ export function HistoricalGeodataBrowser({
    mounted.current=true;
    let active=true;
    const base=import.meta.env.BASE_URL;
+   // Independent load: a supplemental failure must not block OHM / 1930.
+   loadSupplementalCatalog(base).then(data=>{if(active)setSupplemental(data);})
+     .catch(err=>{if(active)setSupplementalError(String(err));});
    Promise.all([
      loadGeodataSourceIndex(base),
      fetch(base+'data/historical/v1/ohm-parentage.json').then(async response=>{
@@ -232,6 +243,8 @@ export function HistoricalGeodataBrowser({
      comitates:tree.roots.comitates.map(node=>filterNode(node)).filter((n):n is FilteredOhmNode=>n!==null)
    };
  },[tree,term,yearOnly,hasRohgisMatch]);
+ const supplementalTree=useMemo(()=>buildSupplementalTree(supplemental,year,yearOnly,query),
+   [supplemental,year,yearOnly,query]);
  const matchedCount=useMemo(()=>{
    const ids=new Set<string>();
    const visit=(node:FilteredOhmNode)=>{
@@ -244,8 +257,13 @@ export function HistoricalGeodataBrowser({
      if(parentMatch)ids.add(group.county.versionId);
      for(const v of [...group.plasi,...group.urban])if(parentMatch||matchesRohgisVersion(v))ids.add(v.versionId);
    }
+   const visitSupplemental=(node:SupplementalNode)=>{
+     ids.add(node.entry.id);node.children.forEach(visitSupplemental);
+   };
+   for(const family of supplementalTree)for(const region of family.groups)
+     region.roots.forEach(visitSupplemental);
    return ids.size;
- },[filteredRoots,rohgisCounties,term]);
+ },[filteredRoots,rohgisCounties,supplementalTree,term]);
  const sections=[
    {key:'regions' as const,ro:'State și regiuni',en:'States and regions'},
    {key:'counties' as const,ro:'Județe fără părinte calificat',en:'Counties without qualified parent'},
@@ -302,6 +320,58 @@ export function HistoricalGeodataBrowser({
      if(mounted.current)onVisibilityChange(changes,enable);
    }catch(e){if(mounted.current)setError(String(e));}
    finally{if(mounted.current)setBusy(null);}
+ }
+ async function selectSupplemental(node:SupplementalNode){
+   if(!supplemental||busy)return;
+   const entry=node.entry;
+   setBusy(entry.id);setError(null);
+   try{
+     const feature=await loadSupplementalFeature(supplemental,entry,import.meta.env.BASE_URL);
+     const parent=node.parent&&supplemental.entries.find(e=>e.id===node.parent?.parentId);
+     if(mounted.current)onSelect({entry,feature,
+       supplementalRelation:node.parent??undefined,
+       sourceReportedParent:parent?parent.displayName[lang]:undefined});
+   }catch(e){if(mounted.current)setError(String(e));}
+   finally{if(mounted.current)setBusy(null);}
+ }
+ async function toggleSupplemental(node:SupplementalNode,enable:boolean){
+   if(!supplemental||busy)return;
+   const entry=node.entry;
+   setBusy(entry.id);setError(null);
+   try{
+     const changes=enable?[{entry,feature:await loadSupplementalFeature(
+       supplemental,entry,import.meta.env.BASE_URL)}]:[{entry}];
+     if(mounted.current)onVisibilityChange(changes,enable);
+   }catch(e){if(mounted.current)setError(String(e));}
+   finally{if(mounted.current)setBusy(null);}
+ }
+ function renderSupplemental(node:SupplementalNode,depth:number):React.ReactNode{
+   const entry=node.entry,checked=visibleSet.has(entry.id);
+   const hasChildren=node.children.length>0;
+   const open=expanded.has(entry.id)||Boolean(term);
+   const title=entry.displayName[lang];
+   return <div key={entry.id} className="history-supplemental-node" role="treeitem"
+       data-supplemental-version={entry.id} aria-level={depth+1}
+       aria-expanded={hasChildren?open:undefined}>
+     <div className="history-tree-row" style={{paddingLeft:Math.min(depth,10)*10}}>
+       {hasChildren?<button type="button" className="history-tree-expand" aria-expanded={open}
+         aria-label={(open?'Collapse ':'Expand ')+title} onClick={()=>toggleExpansion(entry.id)}>
+         <span aria-hidden="true">{open?'▾':'▸'}</span>
+       </button>:<span className="history-tree-leaf" aria-hidden="true"/>}
+       <input type="checkbox" checked={checked} disabled={busy!==null}
+         aria-label={(checked?headings.hide:headings.show)+' · '+title+' · '+dateLabel(entry,lang)}
+         onChange={event=>void toggleSupplemental(node,event.target.checked)}/>
+       <button type="button" className={'history-tree-name'+(selectedId===entry.id?' is-selected':'')}
+         onClick={()=>void selectSupplemental(node)} title={entry.sourceType||title}>
+         <span>{title}</span><small> · {dateLabel(entry,lang)}</small>
+       </button>
+       {node.parent&&<span className="history-source-unqualified"
+         title={lang==='ro'?'Relație declarată de sursă, necertificată':'Source-reported relation, uncertified'}>~</span>}
+     </div>
+     {hasChildren&&open&&<div className="history-tree-children" role="group">
+       {node.children.map(child=>renderSupplemental(child,depth+1))}
+     </div>}
+   </div>;
  }
  function renderRohgisTree(){
    const groups=rohgisCounties.filter(group=>
@@ -530,6 +600,33 @@ export function HistoricalGeodataBrowser({
          </div>
        </details>)}
    </div>}
+   {supplementalError&&<p className="history-catalog-error" role="status">
+     {lang==='ro'?'Sursele complementare nu au putut fi încărcate: ':'Supplementary sources could not load: '}{supplementalError}
+   </p>}
+   {supplementalTree.map(({collection,groups})=><details key={collection.id+(term?':search':':browse')}
+     className="history-catalog-method history-supplemental-category"
+     data-supplemental-family={collection.sourceFamily} open={Boolean(term)||openCategories.has(collection.id)}
+     onToggle={event=>{
+       if(term||event.target!==event.currentTarget)return;
+       const isOpen=event.currentTarget.open;
+       setOpenCategories(previous=>{
+         if(previous.has(collection.id)===isOpen)return previous;
+         const next=new Set(previous);
+         if(isOpen)next.add(collection.id);else next.delete(collection.id);
+         return next;
+       });
+     }}>
+     <summary>{collection.name[lang]}</summary>
+     <p className="history-documentary-label">{lang==='ro'?
+       'Geometrii-sursă și relații candidate pentru anul ales; nu constituie ierarhie juridică certificată.':
+       'Source geometries and candidate relations for the selected year; not a certified legal hierarchy.'}</p>
+     {groups.map(group=><div key={group.id} data-supplemental-region={group.id}>
+       <p className="history-documentary-label">{group.name[lang]}</p>
+       <div className="history-tree-forest" role="tree" aria-label={group.name[lang]}>
+         {group.roots.map(root=>renderSupplemental(root,0))}
+       </div>
+     </div>)}
+   </details>)}
    {tree&&<details className="history-catalog-method">
      <summary>{headings.methodological}</summary>
      <p>{headings.methodologicalBody}</p>
@@ -543,7 +640,8 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
  lang:Locale;
  onLocate:()=>void;
 }){
- const {entry,parentEvidence,sourceReportedParent}=selection,t=labels[lang];
+ const {entry,parentEvidence,sourceReportedParent,supplementalRelation}=selection,t=labels[lang];
+ const citation=entry.sourceCitation;
  const urban=entry.urbanClassification;
  return <section className="detail-content history-entity-detail">
    <div className="entity-card" key={entry.id}>
@@ -559,11 +657,17 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
        <dl className="metadata">
          <dt>{t.sourceId}</dt><dd>{entry.sourceFamily==='OHM'? 'OHM relation '+entry.sourceRelationId : entry.sourceExternalId??entry.id}</dd>
          <dt>{t.kind}</dt><dd>{lang==='en'&&entry.sourceFamily==='ROHGIS'?(entry.sourceType==='unitate urbană'?'Urban unit':entry.sourceType==='județ'?'County':'Plasa'):entry.sourceType||'—'}{entry.sourceRank&&<small> ({lang==='ro'?'rang-sursă':'source rank'} {entry.sourceRank})</small>}</dd>
-         <dt>{t.period}</dt><dd>{dateLabel(entry,lang)} ({t.uncertain})</dd>
+         <dt>{t.period}</dt><dd>{entry.sourceAdapter==='supplemental'&&entry.sourcePeriod.kind!=='undated'?
+           (entry.sourcePeriod.start??'?')+' — '+(entry.sourcePeriod.end??'?'):dateLabel(entry,lang)} ({t.uncertain})</dd>
          <dt>{t.geometry}</dt><dd>{entry.geometryId}</dd>
          {sourceReportedParent&&<>
-           <dt>{lang==='ro'?'Părinte declarat de RoHGIS':'RoHGIS-reported parent'}</dt>
+           <dt>{entry.sourceAdapter==='supplemental'?(lang==='ro'?'Relație-părinte candidată':'Candidate parent relation'):(lang==='ro'?'Părinte declarat de RoHGIS':'RoHGIS-reported parent')}</dt>
            <dd>{sourceReportedParent}<small> ({lang==='ro'?'din atributele sursei, fără certificarea juridică a hotarului':'source attribute only, without legal boundary certification'})</small></dd>
+         </>}
+         {supplementalRelation&&<>
+           <dt>{lang==='ro'?'Intervalul relației-sursă':'Source relation interval'}</dt>
+           <dd>{supplementalRelation.start} — {supplementalRelation.end}
+             <small> · {lang==='ro'?'necertificată juridic':'not legally certified'}</small></dd>
          </>}
          {parentEvidence&&<>
            <dt>{lang==='ro'?'Părinte administrativ':'Administrative parent'}</dt>
@@ -611,8 +715,19 @@ export function HistoricalGeodataEntityCard({selection,lang,onLocate}:{
              {' · '}{lang==='ro'?'vizualizare reproiectată, cu atribuire':'reprojected visualization with attribution'}</small>
            </dd>
          </>}
-         <dt>{t.original}</dt>
-         <dd>{entry.sourceDriveFileId ?
+         {citation&&<>
+           <dt>{lang==='ro'?'Autori și licență':'Authors and licence'}</dt>
+           <dd>{citation.creator} · <a href={citation.url} target="_blank" rel="noopener noreferrer">{citation.title}</a>
+             {' · '}<a href={citation.licenseUrl} target="_blank" rel="noopener noreferrer">{citation.license}</a></dd>
+           <dt>{lang==='ro'?'Adaptare':'Adaptation'}</dt><dd>{citation.adaptation}</dd>
+           <dt>{lang==='ro'?'Baza drepturilor':'Reuse rights basis'}</dt><dd>{citation.basis}</dd>
+           <dt>{lang==='ro'?'Referințe originale':'Original references'}</dt>
+           <dd>{citation.sourceUrls.map((url,i)=><Fragment key={url}>
+             {i>0?' · ':''}<a href={url} target="_blank" rel="noopener noreferrer">{lang==='ro'?'Sursa':'Source'} {i+1}</a>
+           </Fragment>)}</dd>
+         </>}
+         <dt>{entry.sourceAdapter==='supplemental'?(lang==='ro'?'Fișier-sursă':'Source file'):t.original}</dt>
+         <dd>{citation?<a href={citation.url} target="_blank" rel="noopener noreferrer">{entry.sourceFilename}</a>:entry.sourceDriveFileId ?
            <a href={'https://drive.google.com/file/d/'+entry.sourceDriveFileId+'/view'}
              target="_blank" rel="noopener noreferrer">{entry.sourceFilename}</a> :
            <a href={'https://www.openhistoricalmap.org/relation/'+entry.sourceRelationId}

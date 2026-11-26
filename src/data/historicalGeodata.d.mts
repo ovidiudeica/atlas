@@ -2,10 +2,12 @@ import type {Feature,Polygon,MultiPolygon} from 'geojson';
 import type {UrbanClassification} from './historicalRohgisUrban1930.mjs';
 export interface GeodataSourceEntry {
   id:string;
-  sourceFamily:'OHM'|'ROHGIS';
+  sourceFamily:string;
+  sourceAdapter?:'supplemental';
+  sourceCitation?:{license:string;licenseUrl:string;creator:string;title:string;url:string;basis:string;adaptation:string;sourceUrls:string[]};
   sourceGroup:string;
   displayName:{ro:string;en:string};
-  sourcePeriod:{start:string|null;end:string|null;sourceOnly:true;kind?:'snapshot'|'undated';notes?:string|null};
+  sourcePeriod:{start:string|null;end:string|null;sourceOnly:true;kind?:'interval'|'snapshot'|'undated';notes?:string|null};
   sourceType:string|null;
   sourceRank?:'II'|'III';
   urbanClassification?:UrbanClassification;
