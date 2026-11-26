@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "spatial_layer_counts": {
+    "RASSM_EXTERNAL_ADMITTED": 0,
+    "RASSM_INTERNAL_ADMITTED": 0,
+    "RASSM_EXTERNAL_CANDIDATES": 2663,
+    "RASSM_INTERNAL_CANDIDATES": 1224,
+    "RASSM_HISTORICAL_RECONSTRUCTIONS": 4,
+    "RASSM_MODERN_CONTINUITY": 37,
+    "RASSM_UNRESOLVED_SEGMENTS": 2621,
+    "RASSM_GCP_AND_DATUM": 22,
+    "INVESTIGATED_CASES": 36,
+    "HURI_1937_DISTRICTS_REFERENCE_C": 14
+  },
+  "all_vector_crs": "EPSG:4326",
+  "modern_source_WKB_and_provenance_identical": true,
+  "unchanged_district_polygons": 14,
+  "new_polygons_created": 0,
+  "relative_QGIS_datasources_verified": true,
+  "endpoint_connectivity_diagnostics": {
+    "RASSM_EXTERNAL_CANDIDATES": {
+      "edges": 2663,
+      "endpoint_components": 1,
+      "degree1_nodes": 0,
+      "method": "Endpoint diagnostic at1e-10degrees; no coordinate mutation; partial source traces need not form a closed network"
+    },
+    "RASSM_INTERNAL_CANDIDATES": {
+      "edges": 1224,
+      "endpoint_components": 4,
+      "degree1_nodes": 15,
+      "method": "Endpoint diagnostic at1e-10degrees; no coordinate mutation; partial source traces need not form a closed network"
+    },
+    "RASSM_HISTORICAL_RECONSTRUCTIONS": {
+      "edges": 4,
+      "endpoint_components": 4,
+      "degree1_nodes": 8,
+      "method": "Endpoint diagnostic at1e-10degrees; no coordinate mutation; partial source traces need not form a closed network"
+    }
+  }
+}

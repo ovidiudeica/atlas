@@ -1,0 +1,166 @@
+{
+  "qgis_version": "3.44.13-Solothurn",
+  "project_reopened": true,
+  "relative_paths": true,
+  "layers": [
+    {
+      "name": "14 raioane candidate1937 - C - Tiraspol temporal contestat",
+      "valid": true,
+      "features": 14
+    },
+    {
+      "name": "66 inregistrari consilii/obiecte - geometrii D",
+      "valid": true,
+      "features": 66
+    },
+    {
+      "name": "91 raioane sursa nemodificate - 8 instantanee C",
+      "valid": true,
+      "features": 91
+    },
+    {
+      "name": "Arce1937 M1-M5 - corespondenta geometrica; toate C",
+      "valid": true,
+      "features": 3887
+    },
+    {
+      "name": "Dubasari hidro4.347km - C - nu frontiera",
+      "valid": true,
+      "features": 3
+    },
+    {
+      "name": "Evenimente administrative - fara poligoane inventate",
+      "valid": true,
+      "features": 13
+    },
+    {
+      "name": "HURI exterior1937 - sursa C",
+      "valid": true,
+      "features": 1
+    },
+    {
+      "name": "ICR nedatat - C",
+      "valid": true,
+      "features": 1
+    },
+    {
+      "name": "Incertitudini - temporal si geometric C",
+      "valid": true,
+      "features": 3887
+    },
+    {
+      "name": "OSMB497 obiecte actuale, arce unice - snapshoturi2026",
+      "valid": true,
+      "features": 1402
+    },
+    {
+      "name": "OSMB historic/statistical - piste C, nu administratia actuala",
+      "valid": true,
+      "features": 41
+    },
+    {
+      "name": "OSM Standard - © OpenStreetMap contributors - context actual",
+      "valid": true,
+      "features": null
+    },
+    {
+      "name": "Provenienta si drepturi",
+      "valid": true,
+      "features": 12
+    }
+  ],
+  "all_valid": true,
+  "independent_geodesic_lengths": [
+    {
+      "episode": "1927-03-01",
+      "kind": "EXTERNAL",
+      "qgis_geodesic_m": 938914.479733279
+    },
+    {
+      "episode": "1928-08-15",
+      "kind": "EXTERNAL",
+      "qgis_geodesic_m": 938914.4797332871
+    },
+    {
+      "episode": "1932-03-20",
+      "kind": "EXTERNAL",
+      "qgis_geodesic_m": 941310.4742763672
+    },
+    {
+      "episode": "1932-10-25",
+      "kind": "EXTERNAL",
+      "qgis_geodesic_m": 941310.4742763672
+    },
+    {
+      "episode": "1933-04-01",
+      "kind": "EXTERNAL",
+      "qgis_geodesic_m": 941310.4742763672
+    },
+    {
+      "episode": "1933-12-15",
+      "kind": "EXTERNAL",
+      "qgis_geodesic_m": 941310.4742763672
+    },
+    {
+      "episode": "1934-05-30",
+      "kind": "EXTERNAL",
+      "qgis_geodesic_m": 941310.4742762033
+    },
+    {
+      "episode": "1937-01-15",
+      "kind": "EXTERNAL",
+      "qgis_geodesic_m": 941310.474276343
+    },
+    {
+      "episode": "1927-03-01",
+      "kind": "INTERNAL",
+      "qgis_geodesic_m": 447365.9745495431
+    },
+    {
+      "episode": "1928-08-15",
+      "kind": "INTERNAL",
+      "qgis_geodesic_m": 447365.9745495431
+    },
+    {
+      "episode": "1932-03-20",
+      "kind": "INTERNAL",
+      "qgis_geodesic_m": 452903.5190910228
+    },
+    {
+      "episode": "1932-10-25",
+      "kind": "INTERNAL",
+      "qgis_geodesic_m": 452903.5190910228
+    },
+    {
+      "episode": "1933-04-01",
+      "kind": "INTERNAL",
+      "qgis_geodesic_m": 452903.5190910228
+    },
+    {
+      "episode": "1933-12-15",
+      "kind": "INTERNAL",
+      "qgis_geodesic_m": 452903.5190910228
+    },
+    {
+      "episode": "1934-05-30",
+      "kind": "INTERNAL",
+      "qgis_geodesic_m": 452903.5190910228
+    },
+    {
+      "episode": "1937-01-15",
+      "kind": "INTERNAL",
+      "qgis_geodesic_m": 525399.980906442
+    }
+  ],
+  "osm_rendered": true,
+  "osm_visual_verified": true,
+  "OSM_is_historical_proof": false,
+  "overview_extent_derived_from_actual_feature": true,
+  "extent_3857": [
+    3166106.8001305386,
+    5856659.620218723,
+    3358649.9465443566,
+    6152758.738177658
+  ],
+  "visual_observation": "Overview, NE and Dubasari reviewed: historical coloured arcs, ICR dashed contour and OSM background visible."
+}

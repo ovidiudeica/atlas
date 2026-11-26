@@ -1,0 +1,9 @@
+# HIST-RASSM.PROOF.6-C
+
+An official1988MSSR administrative reference now corroborates Camenca10January1969 and Grigoriopol21June1971 and records their1April1988composition. Original1958/1959/1969/1971decrees and delimitation annexes remain missing. A newly recovered archive finding aid supplies narrower1958–1959retrieval leads, not the acts themselves. Four2020/2025Ukrainian code pairs identify administrative-centre localities, not boundary geometries. Partial-predecessor clauses are retained; Lypetska appears underPodilsk in both versions.
+
+The same512PROOF.2pilot arcs remain geometrically unchanged:158external49.980077km and354uniqueinternal148.198230km. A targeted MD–UA modern-reference screen yields four point intersections and zero linear overlap.100m is a search threshold, not accuracy or legal applicability. There are zero newly admitted M1/A/Bkilometres, zero complete geometric chains, zero new historical reconstruction and zero physical GCPs. The five earlier nominal traces are retained and not counted anew.
+
+Full native scans, GIS, source hashes and portable QGIS are in the[private research package](../../historical/rassm/PROVENANCE.md). Native scans with unclear rights are not published here. Public registers contain original analysis and attributed Ukrainian official data; ©OpenStreetMapcontributors/ODbL,https://www.openstreetmap.org/copyright. Join stable arc IDs to corridor_gaps.csv for outstanding evidence and method. A source recovered, a normative annex identified, a cartographic annex verified, candidate geometry, historically founded geometry and legal certification are separate statuses.
+
+Research additions only, based onmain51a55fac9bb9b02f4dadf666e150deac724569dc. NoACTUAL/canonical/applicationchanges, no merge, PR119–124preserved; no repeated32722record audit. Read the32-point report and validation records.

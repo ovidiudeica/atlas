@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "project_actually_opened": true,
+  "all_layers_valid": true,
+  "all_vector_records_actually_iterated": true,
+  "project_layer_count": 31,
+  "vector_layers_and_tables": 28,
+  "all_local_sources_inside_extracted_package": true,
+  "relative_datasources": true,
+  "online_OSM_optional_and_disabled": true,
+  "offline_render_succeeded": true,
+  "render_errors": 0,
+  "nonwhite_sample_pixels": 506,
+  "stable_pilot_IDs": 512,
+  "empty_admission_tables_real_in_GPKG": true,
+  "original_project_binary_preserved": true,
+  "empty_memory_display_note": "Original zero-feature display schemas reference real empty canonical GPKG tables, retaining documented PROOF6 runtime workaround; no invented features",
+  "layers": [
+    {
+      "name": "45 modern OSMB source arcs C",
+      "provider": "ogr",
+      "features": 45
+    },
+    {
+      "name": "512 unchanged historical pilot candidates C",
+      "provider": "ogr",
+      "features": 512
+    },
+    {
+      "name": "ADMINISTRATIVE_EVENTS - research evidence only",
+      "provider": "ogr",
+      "features": 4
+    },
+    {
+      "name": "BOUNDARY_CONTINUITY - research evidence only",
+      "provider": "ogr",
+      "features": 512
+    },
+    {
+      "name": "C1_CAMENCA - research evidence only",
+      "provider": "ogr",
+      "features": 64
+    },
+    {
+      "name": "C2_TIRASPOL - research evidence only",
+      "provider": "ogr",
+      "features": 133
+    },
+    {
+      "name": "C3_GRIGORIOPOL - research evidence only",
+      "provider": "ogr",
+      "features": 126
+    },
+    {
+      "name": "C4_UKRAINE - research evidence only",
+      "provider": "ogr",
+      "features": 189
+    },
+    {
+      "name": "COUNCILS_1988_PRIMARY_REFERENCE - research evidence only",
+      "provider": "ogr",
+      "features": 38
+    },
+    {
+      "name": "Dubasari axis and envelopes C - not legal frontier",
+      "provider": "ogr",
+      "features": 3
+    },
+    {
+      "name": "Dubasari historical water C",
+      "provider": "ogr",
+      "features": 1
+    },
+    {
+      "name": "EXTERNAL_ADMITTED - research evidence only",
+      "provider": "memory",
+      "features": 0
+    },
+    {
+      "name": "Five inherited nominal C traces - zero new",
+      "provider": "ogr",
+      "features": 5
+    },
+    {
+      "name": "HURI 1927-03-01 reference only",
+      "provider": "ogr",
+      "features": 11
+    },
+    {
+      "name": "HURI 1928-08-15 reference only",
+      "provider": "ogr",
+      "features": 11
+    },
+    {
+      "name": "HURI 1932-03-20 reference only",
+      "provider": "ogr",
+      "features": 11
+    },
+    {
+      "name": "HURI 1932-10-25 reference only",
+      "provider": "ogr",
+      "features": 11
+    },
+    {
+      "name": "HURI 1933-04-01 reference only",
+      "provider": "ogr",
+      "features": 11
+    },
+    {
+      "name": "HURI 1933-12-15 reference only",
+      "provider": "ogr",
+      "features": 11
+    },
+    {
+      "name": "HURI 1934-05-30 reference only",
+      "provider": "ogr",
+      "features": 11
+    },
+    {
+      "name": "HURI 1937-01-15 reference only",
+      "provider": "ogr",
+      "features": 14
+    },
+    {
+      "name": "INTERNAL_ADMITTED - research evidence only",
+      "provider": "memory",
+      "features": 0
+    },
+    {
+      "name": "MD_UA_TREATY_SCOPE - research evidence only",
+      "provider": "ogr",
+      "features": 1
+    },
+    {
+      "name": "Modern MD UA OSMB reference C - no official delimitation",
+      "provider": "ogr",
+      "features": 62
+    },
+    {
+      "name": "SOURCES_AND_DECISIONS - research evidence only",
+      "provider": "ogr",
+      "features": 26
+    },
+    {
+      "name": "UKRAINE_CENTRE_CODE_CROSSWALK - research evidence only",
+      "provider": "ogr",
+      "features": 4
+    },
+    {
+      "name": "UKRAINE_PREDECESSOR_TEXT - research evidence only",
+      "provider": "ogr",
+      "features": 110
+    },
+    {
+      "name": "UNRESOLVED_BOUNDARIES - research evidence only",
+      "provider": "ogr",
+      "features": 512
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "qgis_version": "3.44.13-Solothurn",
+  "project_reopened": true,
+  "relative_paths": true,
+  "all_layers_valid": true,
+  "layers": [
+    {
+      "name": "22 GCP cadru nominal - fara admitere absoluta",
+      "valid": true,
+      "provider": "ogr",
+      "features": 22
+    },
+    {
+      "name": "2 componente locale mostenite - nerezolvate C",
+      "valid": true,
+      "provider": "ogr",
+      "features": 2
+    },
+    {
+      "name": "Anvelopa apei istorice - C",
+      "valid": true,
+      "provider": "ogr",
+      "features": 1
+    },
+    {
+      "name": "Distante axa-HURI - diagnostic C",
+      "valid": true,
+      "provider": "ogr",
+      "features": 88
+    },
+    {
+      "name": "Dubasari catalog1936 / recunoastere1933 - raster diagnostic C",
+      "valid": true,
+      "provider": "gdal",
+      "features": null
+    },
+    {
+      "name": "HURI 1934/1937 si ICR - limite sursa C",
+      "valid": true,
+      "provider": "ogr",
+      "features": 3
+    },
+    {
+      "name": "Hidrografie noua din scan - C - NU hotar juridic",
+      "valid": true,
+      "provider": "ogr",
+      "features": 3
+    },
+    {
+      "name": "OSM Standard - geografie moderna - nu proba istorica",
+      "valid": true,
+      "provider": "wms",
+      "features": null
+    },
+    {
+      "name": "Sector MC-DUB36-01 - cercetare C",
+      "valid": true,
+      "provider": "ogr",
+      "features": 1
+    }
+  ],
+  "independent_lengths": [
+    {
+      "feature": "WEST_ENVELOPE",
+      "qgis_geodesic_length_m": 4404.586195806964,
+      "valid": true
+    },
+    {
+      "feature": "AXIS_CANDIDATE",
+      "qgis_geodesic_length_m": 4346.9498483056095,
+      "valid": true
+    },
+    {
+      "feature": "EAST_ENVELOPE",
+      "qgis_geodesic_length_m": 4401.535867366165,
+      "valid": true
+    }
+  ],
+  "osm_render_produced": true,
+  "osm_visual_verified": true,
+  "osm_role": "Modern geography only, no GCP, no boundary certification",
+  "visual_observations": [
+    "Image-derived river lies within/near present Dubasari impoundment and downstream channel; no reservoir shoreline GCP used",
+    "Cocieri and Corjova geographic context consistent; scan contains pre-reservoir river, not current shoreline",
+    "HURI west-source line has conspicuous offset from historical course; ICR is nearer but remains undated and uncertified"
+  ],
+  "physical_GCP_admitted": 0
+}

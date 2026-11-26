@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "actual_Drive_downloads": [
+    {
+      "name": "RASSM_QGIS_PORTABLE_C.zip",
+      "bytes": 5414562,
+      "local_sha256": "e58a2bf56b85ad57044a3021db376aa604b1bb4abc07b2413f96f417487f31dc",
+      "Drive_download_sha256": "e58a2bf56b85ad57044a3021db376aa604b1bb4abc07b2413f96f417487f31dc",
+      "equal": true
+    },
+    {
+      "name": "RASSM_LATEST_RESEARCH_C.gpkg",
+      "bytes": 25100288,
+      "local_sha256": "e7a90d7f68723f34fd3576353c5fe2a1bedc7ec0393c4a0aaf47ba143e1740f9",
+      "Drive_download_sha256": "e7a90d7f68723f34fd3576353c5fe2a1bedc7ec0393c4a0aaf47ba143e1740f9",
+      "equal": true
+    }
+  ],
+  "downloaded_GPKG_integrity": "ok",
+  "downloaded_ZIP_integrity": "ok",
+  "ZIP_manifest_hashes_verified": 4
+}

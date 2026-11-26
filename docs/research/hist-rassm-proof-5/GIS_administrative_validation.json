@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "input_PROOF2_sha256": "4ae9ec315841246a07d3678bfda045d14c2e5a2567547835624c0172f605b494",
+  "input_PROOF4_sha256": "9749eeba08e891cc6dbbe0be7f2351f37dacca20a12b15a5ff181fe5eb2ab266",
+  "general_reconciliation_rerun": false,
+  "pilot_arcs": 512,
+  "all_pilot_WKB_unchanged": true,
+  "exact_OSMB_source_WKB_and_metadata_unchanged": true,
+  "unique_shared_internal_arcs": true,
+  "inherited_four_trace_WKB_unchanged": true,
+  "new_trace_independent_native_pixel_reading": true,
+  "new_polygons_created": 0,
+  "source_districts_unchanged": 91,
+  "source_episodes": 8,
+  "metric_crs": "EPSG:32635 diagnostics; WGS84Geod lengths",
+  "all_vector_crs": "EPSG:4326",
+  "all_geometries_valid": true,
+  "layer_counts": {
+    "RASSM_HISTORICAL_CONTINUITY": 0,
+    "RASSM_EXTERNAL_ADMITTED": 0,
+    "RASSM_INTERNAL_ADMITTED": 0,
+    "RASSM_CURRENT_OSMB_ARCS": 45,
+    "RASSM_HISTORICAL_CANDIDATES": 512,
+    "RASSM_RECONSTRUCTED_ARCS": 5,
+    "RASSM_UNRESOLVED_ARCS": 512,
+    "RASSM_DISTRICT_REFERENCE_8_EPISODES_C": 91
+  },
+  "administrative_event_count": 12,
+  "events_have_source_records": true,
+  "complete_geometric_chains": 0,
+  "admitted_trace_periods": 0,
+  "physical_GCP_admitted": 0,
+  "absolute_accuracy_m": null,
+  "symmetric_difference_inherited_districts_m2": 0,
+  "endpoint_topology": {
+    "C1": {
+      "EXTERNAL": {
+        "edges": 40,
+        "endpoint_components": 1,
+        "degree1_nodes": 2,
+        "maximum_degree": 2,
+        "geodesic_m": 12480.484708769209,
+        "endpoint_method": "1e-10degree diagnostic only; source coordinates unchanged"
+      },
+      "INTERNAL": {
+        "edges": 24,
+        "endpoint_components": 1,
+        "degree1_nodes": 2,
+        "maximum_degree": 2,
+        "geodesic_m": 10947.312458383325,
+        "endpoint_method": "1e-10degree diagnostic only; source coordinates unchanged"
+      }
+    },
+    "C2": {
+      "EXTERNAL": {
+        "edges": 55,
+        "endpoint_components": 1,
+        "degree1_nodes": 2,
+        "maximum_degree": 2,
+        "geodesic_m": 12499.71433430921,
+        "endpoint_method": "1e-10degree diagnostic only; source coordinates unchanged"
+      },
+      "INTERNAL": {
+        "edges": 78,
+        "endpoint_components": 1,
+        "degree1_nodes": 2,
+        "maximum_degree": 2,
+        "geodesic_m": 34365.61994946692,
+        "endpoint_method": "1e-10degree diagnostic only; source coordinates unchanged"
+      }
+    },
+    "C3": {
+      "EXTERNAL": {
+        "edges": 34,
+        "endpoint_components": 1,
+        "degree1_nodes": 2,
+        "maximum_degree": 2,
+        "geodesic_m": 12499.93755556582,
+        "endpoint_method": "1e-10degree diagnostic only; source coordinates unchanged"
+      },
+      "INTERNAL": {
+        "edges": 92,
+        "endpoint_components": 1,
+        "degree1_nodes": 2,
+        "maximum_degree": 2,
+        "geodesic_m": 35879.3230597809,
+        "endpoint_method": "1e-10degree diagnostic only; source coordinates unchanged"
+      }
+    },
+    "C4": {
+      "EXTERNAL": {
+        "edges": 29,
+        "endpoint_components": 1,
+        "degree1_nodes": 2,
+        "maximum_degree": 2,
+        "geodesic_m": 12499.94086494455,
+        "endpoint_method": "1e-10degree diagnostic only; source coordinates unchanged"
+      },
+      "INTERNAL": {
+        "edges": 160,
+        "endpoint_components": 1,
+        "degree1_nodes": 3,
+        "maximum_degree": 3,
+        "geodesic_m": 67005.97417286265,
+        "endpoint_method": "1e-10degree diagnostic only; source coordinates unchanged"
+      }
+    }
+  },
+  "all_pilot_WKB_verified_against_original_PROOF2": true,
+  "inherited_district_WKB_verified": 91,
+  "internal_overlap_diagnostic_m": 5.820766091346741e-11
+}

@@ -1,0 +1,134 @@
+{
+  "isolated_cwd": true,
+  "network_needed": false,
+  "prior_package_needed": false,
+  "files": [
+    {
+      "file": "02_GCP_SI_GEOREFERENTIERE/GCP_independente.csv",
+      "sha256": "6ccf5fe4ad8fffcb5c829921f983ec840bb98cd53fa12ed7cb77757fded231dc",
+      "match": true
+    },
+    {
+      "file": "02_GCP_SI_GEOREFERENTIERE/reziduuri_fit_holdout.csv",
+      "sha256": "360da6d14a6bae8fb5a68cf2a9bc06242f98072ad6524d2e8becbbb90fbeb218",
+      "match": true
+    },
+    {
+      "file": "02_GCP_SI_GEOREFERENTIERE/transformari.json",
+      "sha256": "ea053b8d812a22687140d81f1adfc34a454b6be51beee57a21fb24450b7342b7",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/apa_istorica_C.geojson",
+      "sha256": "2512b6552b8d893047df4004ffe8282cb8f317ff2df4378e1fdb0292ad8caa0d",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/diferente_locale_C.geojson",
+      "sha256": "7dd929ff07e9b1e7eb3eeefedad47ee85a856a6be9d8ff4aa9be3a17885cbdc7",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/digitizare_hidrografie_pixeli.csv",
+      "sha256": "d8ca6bc6598475cbdb78a884fb3ace156c4d1164252524132c92eb27d00fa2d6",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/gcp_cadru_nominal.geojson",
+      "sha256": "0f35f4fd3dd8dafd610d59378f7a3932f13458d8deaa6b8d7ccb53a4f68454c9",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/hidrografie_noua_C.geojson",
+      "sha256": "f6dc1161d059896d2335a12babcd1a9e68603f0c3f8c86a4773fd863a2a7d413",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/limite_sursa_decupate_C.geojson",
+      "sha256": "47565d8b664e67dbb54b41e355b2e84f420d58bb8c7b64ebd49abde3309b3014",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/registrul_modificarilor.csv",
+      "sha256": "fd61031b7fa6dc892498d5ff0906df230bd860b6f213cfff643b1c81e65dba71",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/sector_studiu_MC.geojson",
+      "sha256": "f9c7260d02ada5de3aec19dd730931f6a9ed82b4f6f728320b60622dfbe4fa1d",
+      "match": true
+    },
+    {
+      "file": "03_RECONSTRUCTIE_SECTOR/vectori_distanta_HURI_C.geojson",
+      "sha256": "684ae3e2e09b67e3d8b19bd8b55383a8bfdc1ed348f7c06741b24ce8ccaa4c91",
+      "match": true
+    },
+    {
+      "file": "04_VALIDARE/audit_GIS.json",
+      "sha256": "565b2e03a26f3512814b8588484ef59a219630fcc19ae9633987d097b8df8c03",
+      "match": true
+    },
+    {
+      "file": "04_VALIDARE/componente_locale_nerezolvate.csv",
+      "sha256": "f8eac13bc0be22923332b96e8e2ab0fdb1852a026b680f22de9a27d15557303e",
+      "match": true
+    },
+    {
+      "file": "04_VALIDARE/distante_axa_HURI_ICR.csv",
+      "sha256": "9ebe62480c556e88a7595754fb44df58c33be711de2d3289e6261a9cdadec377",
+      "match": true
+    }
+  ],
+  "gpkg_layers": [
+    {
+      "layer": "hidrografie_noua_C",
+      "features": 3,
+      "crs": "EPSG:4326",
+      "geometry_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "apa_istorica_C",
+      "features": 1,
+      "crs": "EPSG:4326",
+      "geometry_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "gcp_cadru_nominal",
+      "features": 22,
+      "crs": "EPSG:4326",
+      "geometry_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "sector_studiu_MC",
+      "features": 1,
+      "crs": "EPSG:4326",
+      "geometry_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "limite_sursa_decupate_C",
+      "features": 3,
+      "crs": "EPSG:4326",
+      "geometry_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "vectori_distanta_HURI_C",
+      "features": 88,
+      "crs": "EPSG:4326",
+      "geometry_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "diferente_locale_C",
+      "features": 2,
+      "crs": "EPSG:4326",
+      "geometry_identical": true,
+      "attributes_identical": true
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,17 @@
+{
+  "test": "Printed kilometer grid versus independent printed graticule, using fixed PROOF1 frame fit; no refit on these4 points",
+  "internal_holdouts": 4,
+  "physical_absolute_GCP": 0,
+  "ellipsoid_RMSE_nominal_m": {
+    "bessel": 17.10464371302999,
+    "krass": 635.6155455674638,
+    "WGS84": 543.4462254373466
+  },
+  "conclusion": "Printed Gauss-Kruger zone5 grid is much more consistent with Bessel than Krassovsky/WGS84. Sheet-specific datum realization and transformation to modern WGS84 are still not authenticated.",
+  "historical_projection_candidate": "+proj=tmerc +lat_0=0 +lon_0=27 +k=1 +x_0=5500000 +y_0=0 +ellps=bessel +units=m",
+  "datum_1932_assignment": "HYPOTHESIS_SUPPORTED_BY_GENERAL_GEODETIC_HISTORY_NOT_AUTHENTICATED_FOR_THIS_SHEET",
+  "absolute_uncertainty_m": null,
+  "boundary_admitted_A_B": false,
+  "context_source": "https://gki.com.ua/files/uploads/documents/Norms/Poloj_pro_poriadok_vstanovl_koordynat_96-99.pdf",
+  "source_scan_sha256": "88afe2666fa5dacaa9bc74f4f50e3663b2c98cbd1399be5c453a946540b2f5ed"
+}

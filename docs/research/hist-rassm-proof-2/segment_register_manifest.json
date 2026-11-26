@@ -1,0 +1,31 @@
+{
+  "records": 32722,
+  "columns": [
+    "arc_id",
+    "episode",
+    "kind",
+    "sector",
+    "unit_a",
+    "unit_b",
+    "unit_ids",
+    "adjacent_raion_names",
+    "source",
+    "source_osm_ids",
+    "length_geodesic_m",
+    "mean_m",
+    "p95_m",
+    "max_m",
+    "M_category",
+    "partial_role",
+    "geometric_effective",
+    "certainty",
+    "independent_historical_continuity_proven"
+  ],
+  "uncompressed_sha256": "8a168ac9fb573915ab815bafc76ce0c74589eb6e0a91fc3874d3f1af1c42d7d7",
+  "gzip_sha256": "b3fb4a3e19947765f43bc5d2ae0440a31fcbe8d0a1b56cc2e88ddc0f130f196b",
+  "gzip_bytes": 1739352,
+  "full_registry_sha256": "0510851d808a6af6ad32b8679f1682886625b5c79275bee3bbe6f029db0e312b",
+  "full_registry_location": "Private Drive11 package,01_OSMB_RECONCILIERE/RASSM_OSMB_corespondențe_segmente.csv",
+  "historical_admission": "All C; no M1 or A/B admitted",
+  "attribution": "OSM-Boundaries pinned exports; © OpenStreetMap contributors, ODbL; HURI/ICR research references, no canonical geometry changed"
+}

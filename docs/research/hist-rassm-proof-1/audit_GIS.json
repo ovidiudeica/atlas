@@ -1,0 +1,115 @@
+{
+  "verdict": "PROOF.1-C",
+  "boundary_admitted_A_or_B": 0,
+  "new_hydrographic_features_C": 4,
+  "gcp_relative_frame_n": 22,
+  "gcp_fit_n": 14,
+  "gcp_holdout_n": 8,
+  "gcp_absolute_admitted_n": 0,
+  "source_references_modified": false,
+  "canonical_geometry_modified": false,
+  "geometry_checks": [
+    {
+      "feature": "west",
+      "valid": true,
+      "simple": true,
+      "empty": false,
+      "parts": 1,
+      "geodesic_length_m": 4404.586195806964,
+      "vertices": 47
+    },
+    {
+      "feature": "axis",
+      "valid": true,
+      "simple": true,
+      "empty": false,
+      "parts": 1,
+      "geodesic_length_m": 4346.9498483056095,
+      "vertices": 47
+    },
+    {
+      "feature": "east",
+      "valid": true,
+      "simple": true,
+      "empty": false,
+      "parts": 1,
+      "geodesic_length_m": 4401.535867366165,
+      "vertices": 47
+    },
+    {
+      "feature": "water_area",
+      "valid": true,
+      "simple": true,
+      "empty": false,
+      "parts": 1,
+      "geodesic_length_m": 9391.597685032404,
+      "vertices": 95
+    }
+  ],
+  "simplification": [
+    {
+      "tolerance_m": 5,
+      "vertices": 19,
+      "hausdorff_m": 4.991978897995757,
+      "length_change_m": -0.8676013597214478,
+      "used_in_delivery": false
+    },
+    {
+      "tolerance_m": 10,
+      "vertices": 15,
+      "hausdorff_m": 7.261050210041423,
+      "length_change_m": -1.8728548070312172,
+      "used_in_delivery": false
+    },
+    {
+      "tolerance_m": 25,
+      "vertices": 8,
+      "hausdorff_m": 24.084188057302192,
+      "length_change_m": -15.415554137054642,
+      "used_in_delivery": false
+    },
+    {
+      "tolerance_m": 50,
+      "vertices": 4,
+      "hausdorff_m": 44.25434763940856,
+      "length_change_m": -42.51555863964768,
+      "used_in_delivery": false
+    }
+  ],
+  "comparisons": [
+    {
+      "reference": "1934-05-30",
+      "n": 88,
+      "mean_m": 879.7190711643059,
+      "median_m": 823.2090036198117,
+      "p95_m": 1072.1902128676006,
+      "max_m": 1113.4539622667003
+    },
+    {
+      "reference": "1937-01-15",
+      "n": 88,
+      "mean_m": 879.7190711684526,
+      "median_m": 823.2090036305163,
+      "p95_m": 1072.1902128590568,
+      "max_m": 1113.453962255252
+    },
+    {
+      "reference": "ICR-undated",
+      "n": 88,
+      "mean_m": 180.9519103601873,
+      "median_m": 187.99662020981248,
+      "p95_m": 356.0859081251408,
+      "max_m": 412.52337427184216
+    }
+  ],
+  "local_diff_components": 2,
+  "local_diff_ids": [
+    "R5-1927-HI-001",
+    "R5-1937-HI-001"
+  ],
+  "absolute_positional_uncertainty_m": null,
+  "legal_frontier_position": "NOT_DETERMINED",
+  "territorial_area_correction_km2": null,
+  "nominal_water_paint_area_km2": 1.0066632167022078,
+  "axis_geodesic_length_m": 4346.9498483056095
+}

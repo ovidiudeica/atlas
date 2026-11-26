@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "independent_empty_workspace": true,
+  "network_used": false,
+  "cache_used": false,
+  "byte_identical_files": {
+    "trace_lengths.csv": true,
+    "independent_symbols_C.geojson": true,
+    "nominal_georeferencing.json": true
+  },
+  "vector_features_WKB_and_attributes_identical": 4,
+  "raster_pixels_and_transform_identical": true,
+  "baseline_reconciliation_rerun": false
+}

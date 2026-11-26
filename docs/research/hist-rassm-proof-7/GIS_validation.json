@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "SQLite_integrity": "ok",
+  "pilot_ID_WKB_exact_match_PROOF6": true,
+  "pilot_count": 512,
+  "all_vector_crs_EPSG4326": true,
+  "all_vectors_valid": true,
+  "layer_counts": {
+    "RASSM_PROOF7_EXTERNAL_ADMITTED_AB": 0,
+    "RASSM_PROOF7_INTERNAL_ADMITTED_AB": 0,
+    "RASSM_PROOF7_EXTERNAL_CANDIDATES": 158,
+    "RASSM_PROOF7_INTERNAL_CANDIDATES": 354,
+    "RASSM_PROOF7_UNRESOLVED": 512,
+    "RASSM_PROOF7_INDEPENDENT_TRACES": 5,
+    "RETAINED_MODERN_OSMB_C": 45,
+    "RETAINED_DISTRICT_EPISODES_C": 91
+  },
+  "required_registers": 11,
+  "source_files_SHA_verified": 9,
+  "new_geometric_evidence_arc_count": 0,
+  "new_AB_count": 0,
+  "new_physical_GCP_count": 0
+}

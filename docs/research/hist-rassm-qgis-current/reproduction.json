@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "fresh_output": true,
+  "network_used": false,
+  "all_WKB_and_attributes_identical": true,
+  "vector_features_compared": 3261,
+  "attribute_records_compared": 34064
+}

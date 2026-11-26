@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "actual_QGIS_open": true,
+  "all_layer_records_iterated": true,
+  "layers": 26,
+  "all_local_sources_single_portable_GPKG": true,
+  "relative_paths": true,
+  "offline_render": true,
+  "nonwhite_sample_pixels": 275,
+  "empty_admissions_real_OGR": true,
+  "layer_records": [
+    {
+      "name": "158 exterior pilot — candidați C",
+      "features": 158,
+      "valid": true
+    },
+    {
+      "name": "354 interior pilot unic — candidați C",
+      "features": 354,
+      "valid": true
+    },
+    {
+      "name": "HURI 1927-03-01 — referință C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1928-08-15 — referință C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1932-03-20 — referință C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1932-10-25 — referință C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1933-04-01 — referință C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1933-12-15 — referință C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1934-05-30 — referință C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1937-01-15 — referință C",
+      "features": 14,
+      "valid": true
+    },
+    {
+      "name": "PROOF7_ARCHIVAL_TARGETS — cercetare, fără certificare juridică",
+      "features": 20,
+      "valid": true
+    },
+    {
+      "name": "PROOF7_boundary_admissions — cercetare, fără certificare juridică",
+      "features": 0,
+      "valid": true
+    },
+    {
+      "name": "PROOF7_comparison_PROOF6_PROOF7 — cercetare, fără certificare juridică",
+      "features": 17,
+      "valid": true
+    },
+    {
+      "name": "PROOF7_georeferencing — cercetare, fără certificare juridică",
+      "features": 0,
+      "valid": true
+    },
+    {
+      "name": "PROOF7_independent_GCP — cercetare, fără certificare juridică",
+      "features": 0,
+      "valid": true
+    },
+    {
+      "name": "PROOF7_original_maps — cercetare, fără certificare juridică",
+      "features": 4,
+      "valid": true
+    },
+    {
+      "name": "PROOF7_primary_sources — cercetare, fără certificare juridică",
+      "features": 9,
+      "valid": true
+    },
+    {
+      "name": "PROOF7_source_authentication — cercetare, fără certificare juridică",
+      "features": 9,
+      "valid": true
+    },
+    {
+      "name": "RASSM_PROOF7_EXTERNAL_ADMITTED_AB — cercetare, fără certificare juridică",
+      "features": 0,
+      "valid": true
+    },
+    {
+      "name": "RASSM_PROOF7_INDEPENDENT_TRACES — cercetare, fără certificare juridică",
+      "features": 5,
+      "valid": true
+    },
+    {
+      "name": "RASSM_PROOF7_INTERNAL_ADMITTED_AB — cercetare, fără certificare juridică",
+      "features": 0,
+      "valid": true
+    },
+    {
+      "name": "RASSM_PROOF7_SOURCE_EVIDENCE — cercetare, fără certificare juridică",
+      "features": 9,
+      "valid": true
+    },
+    {
+      "name": "RASSM_PROOF7_TEMPORAL_CONTINUITY — cercetare, fără certificare juridică",
+      "features": 512,
+      "valid": true
+    },
+    {
+      "name": "RASSM_PROOF7_UNCERTAINTY — cercetare, fără certificare juridică",
+      "features": 512,
+      "valid": true
+    },
+    {
+      "name": "RASSM_PROOF7_UNRESOLVED — cercetare, fără certificare juridică",
+      "features": 512,
+      "valid": true
+    },
+    {
+      "name": "RETAINED_MODERN_OSMB_C — cercetare, fără certificare juridică",
+      "features": 45,
+      "valid": true
+    }
+  ]
+}

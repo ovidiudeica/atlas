@@ -1,0 +1,4 @@
+exec(open('work/proof3/acquire_maps.py',encoding='utf-8').read().split('targets=')[0])
+targets=[('MASSR1930_official_1280.png','https://commons.wikimedia.org/wiki/Special:Redirect/file/Massr_map.png?width=1280'),('Ukraine1939_official_960.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/Map_of_Ukraine_MASSR_1939.jpg?width=960'),('ethnic1928_official_1280.jpg','https://commons.wikimedia.org/wiki/Special:Redirect/file/Harta_etnica_rassm.jpg?width=1280'),('history_cartography_2.pdf','https://history.org.ua/LiberUA/978-966-02-5328-5/2.pdf'),('RGO1939catalog.html','https://geoportal.rgo.ru/catalog/obshchegeograficheskie-atlasy-rossii/atlasy-sssr-i-rossii-xx-veka/karmannyy-atlas-sssr-1939?items_per_page=50&tiles=1')]
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:rows=list(ex.map(get,targets))
+(P/'acquisition_derivatives.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

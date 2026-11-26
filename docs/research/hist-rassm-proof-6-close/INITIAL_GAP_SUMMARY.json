@@ -1,0 +1,47 @@
+{
+  "original_expected_files": 80,
+  "initial_present_files": 17,
+  "missing_recoverable": 63,
+  "original_files_rebuild_required": 0,
+  "original_binary_all_verified": true,
+  "duplicates": [],
+  "unrecoverable_technical_blockers": 0,
+  "initial_existing_sources_all_downloaded_and_SHA256_verified": true,
+  "historical_artifacts_intentionally_not_produced": [
+    {
+      "relative": "Original_Camenca_1959_decree_and_boundary_annex",
+      "state": "INTENTIONALLY_NOT_PRODUCED",
+      "reason": "Original historical evidence not recovered; not a missing technical deliverable"
+    },
+    {
+      "relative": "Original_Camenca_1969_decree_and_boundary_annex",
+      "state": "INTENTIONALLY_NOT_PRODUCED",
+      "reason": "Original historical evidence not recovered; not a missing technical deliverable"
+    },
+    {
+      "relative": "Original_Grigoriopol_1958_decree_and_boundary_annex",
+      "state": "INTENTIONALLY_NOT_PRODUCED",
+      "reason": "Original historical evidence not recovered; not a missing technical deliverable"
+    },
+    {
+      "relative": "Original_Grigoriopol_1971_decree_and_boundary_annex",
+      "state": "INTENTIONALLY_NOT_PRODUCED",
+      "reason": "Original historical evidence not recovered; not a missing technical deliverable"
+    },
+    {
+      "relative": "MD_UA_1995_1999_original_protocol_map_album",
+      "state": "INTENTIONALLY_NOT_PRODUCED",
+      "reason": "Original historical evidence not recovered; not a missing technical deliverable"
+    },
+    {
+      "relative": "Historical_Ukrainian_predecessor_council_polygons",
+      "state": "INTENTIONALLY_NOT_PRODUCED",
+      "reason": "Original historical evidence not recovered; not a missing technical deliverable"
+    },
+    {
+      "relative": "New_PROOF6_AB_M1_or_physical_GCP_geometry",
+      "state": "INTENTIONALLY_NOT_PRODUCED",
+      "reason": "Original historical evidence not recovered; not a missing technical deliverable"
+    }
+  ]
+}

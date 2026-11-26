@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "fresh_output_directory": true,
+  "network_used": false,
+  "full_reconciliation_rerun": false,
+  "byte_identical_files": {
+    "03_GEOREFERENTIERE/native_frame.json": true,
+    "03_GEOREFERENTIERE/GCP_native_MSE5.csv": true,
+    "10_RAPORT_FINAL/sources.csv": true,
+    "10_RAPORT_FINAL/decisions_per_arc.csv": true,
+    "10_RAPORT_FINAL/four_trace_reassessment.csv": true,
+    "10_RAPORT_FINAL/summary.json": true
+  },
+  "vector_features_WKB_and_attributes_identical": 6621,
+  "native_diagnostic_raster_pixels_transform_identical": true
+}
