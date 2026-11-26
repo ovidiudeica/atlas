@@ -1,0 +1,3578 @@
+{
+  "schema": "atlas-historical-supplemental-v1",
+  "asOf": "2026-11-26",
+  "sourceOnly": true,
+  "legalBoundariesCertified": false,
+  "crs": "EPSG:4326",
+  "collections": [
+    {
+      "id": "histogis-v9-regional",
+      "sourceFamily": "HISTOGIS",
+      "name": {
+        "ro": "HistoGIS — sursă complementară",
+        "en": "HistoGIS — supplementary source"
+      },
+      "citation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection"
+      },
+      "regions": {
+        "transylvania": {
+          "ro": "Transilvania",
+          "en": "Transylvania"
+        },
+        "bukovina": {
+          "ro": "Bucovina",
+          "en": "Bukovina"
+        }
+      }
+    }
+  ],
+  "geometryShards": [
+    {
+      "file": "histogis-v9-regional.geojson",
+      "count": 53,
+      "sourceGitBlob": "3331fc364075edbef32742adf01f54e4ee6c6171"
+    }
+  ],
+  "assets": [
+    {
+      "id": "histogis-v9:geometry:022ad50280d4ada6643792f2",
+      "featureId": "histogis-v9:geometry:022ad50280d4ada6643792f2",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "022ad50280d4ada6643792f272a1253d0f065c4d38e775901e65571b2afef985",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:0993febd9e174a8120216bef",
+      "featureId": "histogis-v9:geometry:0993febd9e174a8120216bef",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "0993febd9e174a8120216befdc4e764d93c2c5a28593782c24e073e43bbf9e05",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:0ba02b8bb790bb0bd9219a69",
+      "featureId": "histogis-v9:geometry:0ba02b8bb790bb0bd9219a69",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "0ba02b8bb790bb0bd9219a69761a253792d3ee7fe3e62a35bc5e9fd86f8936fc",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:0ba4deadbaece76d24a101fe",
+      "featureId": "histogis-v9:geometry:0ba4deadbaece76d24a101fe",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "0ba4deadbaece76d24a101fea803d9203eeb4d426b8dd145a7e5110d1db18ba8",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:1101b2e846ef34446961ae0c",
+      "featureId": "histogis-v9:geometry:1101b2e846ef34446961ae0c",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "1101b2e846ef34446961ae0cc33306630b9577b90d341af31eb625801380cecd",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:1123a4323223850f2af0a17b",
+      "featureId": "histogis-v9:geometry:1123a4323223850f2af0a17b",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "1123a4323223850f2af0a17b83df94ca68fac8d6dfd521e34b36b8462cc844c2",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:116346f0dbd796c752d91148",
+      "featureId": "histogis-v9:geometry:116346f0dbd796c752d91148",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "116346f0dbd796c752d91148d89af8fbed35dbe3f3cd2ed308d36ddf63586e1f",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:1aa39d24da36d9e8c0ce7cff",
+      "featureId": "histogis-v9:geometry:1aa39d24da36d9e8c0ce7cff",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "1aa39d24da36d9e8c0ce7cffbc515b72a9bed79a2d6040a076b73f345391a47d",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:1c3138c5ae70397b9367b6aa",
+      "featureId": "histogis-v9:geometry:1c3138c5ae70397b9367b6aa",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "1c3138c5ae70397b9367b6aa4920eed8bcc88e8ebcc54830c3c207d43927270f",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:1e9f04409dcbd68f04f2ddfa",
+      "featureId": "histogis-v9:geometry:1e9f04409dcbd68f04f2ddfa",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "1e9f04409dcbd68f04f2ddfaaeb5ce824e5b56499a3905df920fcdec0b1ae7fe",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:1fc55c7f17b5e843cbaf1f45",
+      "featureId": "histogis-v9:geometry:1fc55c7f17b5e843cbaf1f45",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "1fc55c7f17b5e843cbaf1f45517b89729c48e29782703e672d5cf102a93951d5",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:2751a0031ad540db9d1a8842",
+      "featureId": "histogis-v9:geometry:2751a0031ad540db9d1a8842",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "2751a0031ad540db9d1a88422af7b0141ad44472de8e5305ed6c52725dc342dc",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:279c00e8ff1f93ec24e9ca5a",
+      "featureId": "histogis-v9:geometry:279c00e8ff1f93ec24e9ca5a",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "279c00e8ff1f93ec24e9ca5adb62d44f6c584c089640a696196fe03bb9ecfba1",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:27e2d0ab233adbc4ddbf043d",
+      "featureId": "histogis-v9:geometry:27e2d0ab233adbc4ddbf043d",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "27e2d0ab233adbc4ddbf043dbb354d1aa10187bf3f8e473e0248379337f6e70a",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:27fa3112b6e8777ccb8bcebc",
+      "featureId": "histogis-v9:geometry:27fa3112b6e8777ccb8bcebc",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "27fa3112b6e8777ccb8bcebcce2e0a2f4545fcbcc08fa43d347431d61d646add",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:2b3d01bb368059c64336b3c5",
+      "featureId": "histogis-v9:geometry:2b3d01bb368059c64336b3c5",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "2b3d01bb368059c64336b3c599d8053735ceb0206fe5299e2d30f287a4655381",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:2e30a8437627dc41ceecac39",
+      "featureId": "histogis-v9:geometry:2e30a8437627dc41ceecac39",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "2e30a8437627dc41ceecac390fe98f2c4c1b7ba803931eee8dba75d6ebebec88",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:2e864cee33a97cadc40fc558",
+      "featureId": "histogis-v9:geometry:2e864cee33a97cadc40fc558",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "2e864cee33a97cadc40fc558965f3544d7aa412a6b2d42288531c8fec1756dc4",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:315f21dffce19e3abf091b35",
+      "featureId": "histogis-v9:geometry:315f21dffce19e3abf091b35",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "315f21dffce19e3abf091b354c43b6aac8e9322de12633af25c82e873f5fb94a",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:366d2869414a6e1515a3bc44",
+      "featureId": "histogis-v9:geometry:366d2869414a6e1515a3bc44",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "366d2869414a6e1515a3bc44d47f318c3ff6840cf89bb6fe57e8baf1c82d55d9",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:435d561f5c2f7fef23bee385",
+      "featureId": "histogis-v9:geometry:435d561f5c2f7fef23bee385",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "435d561f5c2f7fef23bee38543e89bf33640b8add67668df92881c58522a8ba1",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:481d1cb4c6bc91833811fb3c",
+      "featureId": "histogis-v9:geometry:481d1cb4c6bc91833811fb3c",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "481d1cb4c6bc91833811fb3cf98c8bb7ec7d9a301088b8db854669fc89defc95",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:5468a9a3a383b76164041c79",
+      "featureId": "histogis-v9:geometry:5468a9a3a383b76164041c79",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "5468a9a3a383b76164041c79492eb6650e8f3c9c21b47cb7c583c488a8b29324",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:5812009f77d84965e3cfb4b2",
+      "featureId": "histogis-v9:geometry:5812009f77d84965e3cfb4b2",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "5812009f77d84965e3cfb4b26f75f1e525d802027395e62719e701d7188ce089",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:58eb1d3d4117d80b3cd59cf9",
+      "featureId": "histogis-v9:geometry:58eb1d3d4117d80b3cd59cf9",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "58eb1d3d4117d80b3cd59cf970313c8df358f754f55ee4672636c92180e58151",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:5b0c0e897205fdc01dd8a934",
+      "featureId": "histogis-v9:geometry:5b0c0e897205fdc01dd8a934",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "5b0c0e897205fdc01dd8a9347ed434e886efccc33d105529105105d4440ef806",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:5f800f9c61a658e0edced595",
+      "featureId": "histogis-v9:geometry:5f800f9c61a658e0edced595",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "5f800f9c61a658e0edced595459607438f9c98503d6b0312ac5c9f0b566f1dc9",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:62783b069d289a4db6999abf",
+      "featureId": "histogis-v9:geometry:62783b069d289a4db6999abf",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "62783b069d289a4db6999abf815356192dd71ecc5f6c38ba98505e2a295eab93",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:6f7d229ffaba1db467cf14ac",
+      "featureId": "histogis-v9:geometry:6f7d229ffaba1db467cf14ac",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "6f7d229ffaba1db467cf14ac3a82c8b4c9e24128debe96c180d6ffe44f53480a",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:730aa330bb421baf02328e81",
+      "featureId": "histogis-v9:geometry:730aa330bb421baf02328e81",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "730aa330bb421baf02328e81b6d6fd75438de0602f794b2e861331df002fcf91",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:7398bfe325cd009c193209cb",
+      "featureId": "histogis-v9:geometry:7398bfe325cd009c193209cb",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "7398bfe325cd009c193209cbf235728b5d359e2cce0a7cee73fca881cfb650f5",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:7bf97e1a58d9fdd2601d8951",
+      "featureId": "histogis-v9:geometry:7bf97e1a58d9fdd2601d8951",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "7bf97e1a58d9fdd2601d8951a9851270ec2520849dcfe237f4b15dc36a0c924b",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:7cbaaef6c423b51ae49495dd",
+      "featureId": "histogis-v9:geometry:7cbaaef6c423b51ae49495dd",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "7cbaaef6c423b51ae49495dd11229150082a01599a196fb77aad05c700fa9de0",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:8194c3ff8fc271c99db44500",
+      "featureId": "histogis-v9:geometry:8194c3ff8fc271c99db44500",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "8194c3ff8fc271c99db445007946931c718f69312d8211b97386b66d6be5dd65",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:86d8987dff2eae9299c49dac",
+      "featureId": "histogis-v9:geometry:86d8987dff2eae9299c49dac",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "86d8987dff2eae9299c49dacb3af65983f52a9efaef50968dfee69a0bd018f5e",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:8b6c918d1353685578bf78a7",
+      "featureId": "histogis-v9:geometry:8b6c918d1353685578bf78a7",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "8b6c918d1353685578bf78a70a0ffa5db97a6e49af6b9f4fcbf484884e4e2685",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:910a504a4fa62c425a05731e",
+      "featureId": "histogis-v9:geometry:910a504a4fa62c425a05731e",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "910a504a4fa62c425a05731e6cfd1a08990896a5ce2e25347fad45165fe6cf5c",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:9e5d8a80390abdcc3a6be739",
+      "featureId": "histogis-v9:geometry:9e5d8a80390abdcc3a6be739",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "9e5d8a80390abdcc3a6be739a272f0263e58f0434cfd672177a8617926627845",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:9f70f2618756defa14762662",
+      "featureId": "histogis-v9:geometry:9f70f2618756defa14762662",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "9f70f2618756defa1476266291b305b05371fc2903d818eda6e3f1ab7344c1bd",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:a6fd67635a148ee7a7a6964a",
+      "featureId": "histogis-v9:geometry:a6fd67635a148ee7a7a6964a",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "a6fd67635a148ee7a7a6964afb8fe1eaf7b3059bda4087cede7f3c3aaaf2ee65",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:a709a9420c3d9870bcf24cc0",
+      "featureId": "histogis-v9:geometry:a709a9420c3d9870bcf24cc0",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "a709a9420c3d9870bcf24cc025b3832b656fbb7f2c2325a3a3952cee21b06aa0",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:a8d98fa766ab88d6f462ba54",
+      "featureId": "histogis-v9:geometry:a8d98fa766ab88d6f462ba54",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "a8d98fa766ab88d6f462ba54d52e29c12a2471b3a16de39499be3b57fff45a0d",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:aa1129a3b75f996d3b4d37d2",
+      "featureId": "histogis-v9:geometry:aa1129a3b75f996d3b4d37d2",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "aa1129a3b75f996d3b4d37d2cf707d600739d47c8ae7e09d942ef443412c2f96",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:ae2c08226a1a4dd9a59de089",
+      "featureId": "histogis-v9:geometry:ae2c08226a1a4dd9a59de089",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "ae2c08226a1a4dd9a59de08941512e5c34ab2af934aa9489ab5f9541cf05bf45",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:aee82ab8d644e5f9da8e18eb",
+      "featureId": "histogis-v9:geometry:aee82ab8d644e5f9da8e18eb",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "aee82ab8d644e5f9da8e18eb678bd4344e184d8e2d1acd2133350076643dee25",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:b6ba5148619a22c7b3d1d24a",
+      "featureId": "histogis-v9:geometry:b6ba5148619a22c7b3d1d24a",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "b6ba5148619a22c7b3d1d24a726a9e05eff61af31c93953fa2e8f43f23d9bf67",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:bc75fd940b13cc9af0da5777",
+      "featureId": "histogis-v9:geometry:bc75fd940b13cc9af0da5777",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "bc75fd940b13cc9af0da5777db1aba83a906156cb42171d30069ad9f7b95514c",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:c3d80b0224cb7d858d16fd0b",
+      "featureId": "histogis-v9:geometry:c3d80b0224cb7d858d16fd0b",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "c3d80b0224cb7d858d16fd0b5f7c602f9f1c3079bfce804263b5f211e8d68daf",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:cfab3b44c1fcf32584f0918e",
+      "featureId": "histogis-v9:geometry:cfab3b44c1fcf32584f0918e",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "cfab3b44c1fcf32584f0918e488f986104043d9cccdccbad7bbc45f25983335f",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:d5bb6213dd1a2a354b375e10",
+      "featureId": "histogis-v9:geometry:d5bb6213dd1a2a354b375e10",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "d5bb6213dd1a2a354b375e1056958d0748acb74ed329e8fc1d4a6a78fb619fbc",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:df34355bffc02754a12a8b79",
+      "featureId": "histogis-v9:geometry:df34355bffc02754a12a8b79",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "df34355bffc02754a12a8b7916aa67f514b3b05a4553a0d21047c90b2faf71e2",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:f826ea699a49e59d6aaa194a",
+      "featureId": "histogis-v9:geometry:f826ea699a49e59d6aaa194a",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "f826ea699a49e59d6aaa194a86cfbf37175baa4adcf902ddec1823cce95b1d8a",
+      "sourceOnly": true
+    },
+    {
+      "id": "histogis-v9:geometry:fc06cb0f0302eda139d41a74",
+      "featureId": "histogis-v9:geometry:fc06cb0f0302eda139d41a74",
+      "shard": "histogis-v9-regional.geojson",
+      "canonicalHash": "fc06cb0f0302eda139d41a7487209d9f9da6cc212ecf51d1f58c48a9a8e918d8",
+      "sourceOnly": true
+    }
+  ],
+  "entries": [
+    {
+      "id": "histogis-v9:version:11361",
+      "entityId": "histogis-v9:entity:shape-11361",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Radautz",
+        "ro": "Radautz"
+      },
+      "sourcePeriod": {
+        "start": "1868-08-31",
+        "end": "1893-09-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:315f21dffce19e3abf091b35",
+      "featureId": "histogis-v9:geometry:315f21dffce19e3abf091b35",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/radautz__1868-08-31_1893-09-30.geojson",
+      "sourceFilename": "radautz__1868-08-31_1893-09-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11361",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/210/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11362",
+      "entityId": "histogis-v9:entity:shape-11362",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Czernowitz (Stadt)",
+        "ro": "Czernowitz (Stadt)"
+      },
+      "sourcePeriod": {
+        "start": "1864-03-08",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Statutory City",
+      "geometryId": "histogis-v9:geometry:8194c3ff8fc271c99db44500",
+      "featureId": "histogis-v9:geometry:8194c3ff8fc271c99db44500",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/czernowitz-stadt__1864-03-08_1918-10-31.geojson",
+      "sourceFilename": "czernowitz-stadt__1864-03-08_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11362",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11378",
+      "entityId": "histogis-v9:entity:shape-11378",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Suczawa",
+        "ro": "Suczawa"
+      },
+      "sourcePeriod": {
+        "start": "1868-08-31",
+        "end": "1893-09-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:481d1cb4c6bc91833811fb3c",
+      "featureId": "histogis-v9:geometry:481d1cb4c6bc91833811fb3c",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/suczawa__1868-08-31_1893-09-30.geojson",
+      "sourceFilename": "suczawa__1868-08-31_1893-09-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11378",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/210/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11383",
+      "entityId": "histogis-v9:entity:shape-11383",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Kimpolung",
+        "ro": "Kimpolung"
+      },
+      "sourcePeriod": {
+        "start": "1868-08-31",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:1e9f04409dcbd68f04f2ddfa",
+      "featureId": "histogis-v9:geometry:1e9f04409dcbd68f04f2ddfa",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/kimpolung__1868-08-31_1918-10-31.geojson",
+      "sourceFilename": "kimpolung__1868-08-31_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11383",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11415",
+      "entityId": "histogis-v9:entity:shape-11415",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Czernowitz",
+        "ro": "Czernowitz"
+      },
+      "sourcePeriod": {
+        "start": "1868-08-31",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:1fc55c7f17b5e843cbaf1f45",
+      "featureId": "histogis-v9:geometry:1fc55c7f17b5e843cbaf1f45",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/czernowitz__1868-08-31_1918-10-31.geojson",
+      "sourceFilename": "czernowitz__1868-08-31_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11415",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11416",
+      "entityId": "histogis-v9:entity:shape-11416",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Kotzman",
+        "ro": "Kotzman"
+      },
+      "sourcePeriod": {
+        "start": "1868-08-31",
+        "end": "1905-09-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:ae2c08226a1a4dd9a59de089",
+      "featureId": "histogis-v9:geometry:ae2c08226a1a4dd9a59de089",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/kotzman__1868-08-31_1905-09-30.geojson",
+      "sourceFilename": "kotzman__1868-08-31_1905-09-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11416",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/211/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11425",
+      "entityId": "histogis-v9:entity:shape-11425",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Storozynetz",
+        "ro": "Storozynetz"
+      },
+      "sourcePeriod": {
+        "start": "1868-08-31",
+        "end": "1903-09-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:0993febd9e174a8120216bef",
+      "featureId": "histogis-v9:geometry:0993febd9e174a8120216bef",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/storozynetz__1868-08-31_1903-09-30.geojson",
+      "sourceFilename": "storozynetz__1868-08-31_1903-09-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11425",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/211/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11426",
+      "entityId": "histogis-v9:entity:shape-11426",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Sereth",
+        "ro": "Sereth"
+      },
+      "sourcePeriod": {
+        "start": "1868-08-31",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:5f800f9c61a658e0edced595",
+      "featureId": "histogis-v9:geometry:5f800f9c61a658e0edced595",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/sereth__1868-08-31_1918-10-31.geojson",
+      "sourceFilename": "sereth__1868-08-31_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11426",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11494",
+      "entityId": "histogis-v9:entity:shape-11494",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Wiznitz",
+        "ro": "Wiznitz"
+      },
+      "sourcePeriod": {
+        "start": "1868-08-31",
+        "end": "1903-09-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:d5bb6213dd1a2a354b375e10",
+      "featureId": "histogis-v9:geometry:d5bb6213dd1a2a354b375e10",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/wiznitz__1868-08-31_1903-09-30.geojson",
+      "sourceFilename": "wiznitz__1868-08-31_1903-09-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11494",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/211/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11751",
+      "entityId": "histogis-v9:entity:shape-11751",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Radautz",
+        "ro": "Radautz"
+      },
+      "sourcePeriod": {
+        "start": "1893-10-01",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:cfab3b44c1fcf32584f0918e",
+      "featureId": "histogis-v9:geometry:cfab3b44c1fcf32584f0918e",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/radautz__1893-10-01_1918-10-31.geojson",
+      "sourceFilename": "radautz__1893-10-01_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11751",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11752",
+      "entityId": "histogis-v9:entity:shape-11752",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Gurahumora",
+        "ro": "Gurahumora"
+      },
+      "sourcePeriod": {
+        "start": "1893-10-01",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:86d8987dff2eae9299c49dac",
+      "featureId": "histogis-v9:geometry:86d8987dff2eae9299c49dac",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/gurahumora__1893-10-01_1918-10-31.geojson",
+      "sourceFilename": "gurahumora__1893-10-01_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11752",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11756",
+      "entityId": "histogis-v9:entity:shape-11756",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Suczawa",
+        "ro": "Suczawa"
+      },
+      "sourcePeriod": {
+        "start": "1893-10-01",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:1aa39d24da36d9e8c0ce7cff",
+      "featureId": "histogis-v9:geometry:1aa39d24da36d9e8c0ce7cff",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/suczawa__1893-10-01_1918-10-31.geojson",
+      "sourceFilename": "suczawa__1893-10-01_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11756",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11838",
+      "entityId": "histogis-v9:entity:shape-11838",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Zastawna",
+        "ro": "Zastawna"
+      },
+      "sourcePeriod": {
+        "start": "1905-10-01",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:279c00e8ff1f93ec24e9ca5a",
+      "featureId": "histogis-v9:geometry:279c00e8ff1f93ec24e9ca5a",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/zastawna__1905-10-01_1918-10-31.geojson",
+      "sourceFilename": "zastawna__1905-10-01_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11838",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11839",
+      "entityId": "histogis-v9:entity:shape-11839",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Storozynetz",
+        "ro": "Storozynetz"
+      },
+      "sourcePeriod": {
+        "start": "1903-10-01",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:58eb1d3d4117d80b3cd59cf9",
+      "featureId": "histogis-v9:geometry:58eb1d3d4117d80b3cd59cf9",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/storozynetz__1903-10-01_1918-10-31.geojson",
+      "sourceFilename": "storozynetz__1903-10-01_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11839",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11840",
+      "entityId": "histogis-v9:entity:shape-11840",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Wiznitz",
+        "ro": "Wiznitz"
+      },
+      "sourcePeriod": {
+        "start": "1903-10-01",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:7398bfe325cd009c193209cb",
+      "featureId": "histogis-v9:geometry:7398bfe325cd009c193209cb",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/wiznitz__1903-10-01_1918-10-31.geojson",
+      "sourceFilename": "wiznitz__1903-10-01_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11840",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11843",
+      "entityId": "histogis-v9:entity:shape-11843",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Waschkoutz am Czeremosch",
+        "ro": "Waschkoutz am Czeremosch"
+      },
+      "sourcePeriod": {
+        "start": "1903-10-01",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:9e5d8a80390abdcc3a6be739",
+      "featureId": "histogis-v9:geometry:9e5d8a80390abdcc3a6be739",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/waschkoutz-am-czeremosch__1903-10-01_1918-10-31.geojson",
+      "sourceFilename": "waschkoutz-am-czeremosch__1903-10-01_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11843",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:11844",
+      "entityId": "histogis-v9:entity:shape-11844",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Kotzman",
+        "ro": "Kotzman"
+      },
+      "sourcePeriod": {
+        "start": "1905-10-01",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District Captaincy",
+      "geometryId": "histogis-v9:geometry:1123a4323223850f2af0a17b",
+      "featureId": "histogis-v9:geometry:1123a4323223850f2af0a17b",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/kotzman__1905-10-01_1918-10-31.geojson",
+      "sourceFilename": "kotzman__1905-10-01_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "11844",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12272",
+      "entityId": "histogis-v9:entity:shape-12272",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Czernowitz",
+        "ro": "Czernowitz"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:0ba02b8bb790bb0bd9219a69",
+      "featureId": "histogis-v9:geometry:0ba02b8bb790bb0bd9219a69",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/czernowitz__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "czernowitz__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12272",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12319",
+      "entityId": "histogis-v9:entity:shape-12319",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Udvarhely",
+        "ro": "Udvarhely"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:c3d80b0224cb7d858d16fd0b",
+      "featureId": "histogis-v9:geometry:c3d80b0224cb7d858d16fd0b",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/udvarhely__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "udvarhely__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12319",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12320",
+      "entityId": "histogis-v9:entity:shape-12320",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Aranyos",
+        "ro": "Aranyos"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:910a504a4fa62c425a05731e",
+      "featureId": "histogis-v9:geometry:910a504a4fa62c425a05731e",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/aranyos__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "aranyos__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12320",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12321",
+      "entityId": "histogis-v9:entity:shape-12321",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Reps",
+        "ro": "Reps"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:aa1129a3b75f996d3b4d37d2",
+      "featureId": "histogis-v9:geometry:aa1129a3b75f996d3b4d37d2",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/reps__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "reps__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12321",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12322",
+      "entityId": "histogis-v9:entity:shape-12322",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Maros",
+        "ro": "Maros"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:27e2d0ab233adbc4ddbf043d",
+      "featureId": "histogis-v9:geometry:27e2d0ab233adbc4ddbf043d",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/maros__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "maros__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12322",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12323",
+      "entityId": "histogis-v9:entity:shape-12323",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Kockelburg",
+        "ro": "Kockelburg"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:2751a0031ad540db9d1a8842",
+      "featureId": "histogis-v9:geometry:2751a0031ad540db9d1a8842",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/kockelburg__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "kockelburg__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12323",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12324",
+      "entityId": "histogis-v9:entity:shape-12324",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Doboka",
+        "ro": "Doboka"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:5b0c0e897205fdc01dd8a934",
+      "featureId": "histogis-v9:geometry:5b0c0e897205fdc01dd8a934",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/doboka__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "doboka__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12324",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12325",
+      "entityId": "histogis-v9:entity:shape-12325",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Thorenburg",
+        "ro": "Thorenburg"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:a6fd67635a148ee7a7a6964a",
+      "featureId": "histogis-v9:geometry:a6fd67635a148ee7a7a6964a",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/thorenburg__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "thorenburg__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12325",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12326",
+      "entityId": "histogis-v9:entity:shape-12326",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Háromszék",
+        "ro": "Háromszék"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:435d561f5c2f7fef23bee385",
+      "featureId": "histogis-v9:geometry:435d561f5c2f7fef23bee385",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/haromszek__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "haromszek__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12326",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12328",
+      "entityId": "histogis-v9:entity:shape-12328",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Innere Szolnok",
+        "ro": "Innere Szolnok"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:730aa330bb421baf02328e81",
+      "featureId": "histogis-v9:geometry:730aa330bb421baf02328e81",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/innere-szolnok__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "innere-szolnok__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12328",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12330",
+      "entityId": "histogis-v9:entity:shape-12330",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Bistritz",
+        "ro": "Bistritz"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District",
+      "geometryId": "histogis-v9:geometry:7cbaaef6c423b51ae49495dd",
+      "featureId": "histogis-v9:geometry:7cbaaef6c423b51ae49495dd",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/bistritz__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "bistritz__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12330",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12382",
+      "entityId": "histogis-v9:entity:shape-12382",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Fagaras",
+        "ro": "Fagaras"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District",
+      "geometryId": "histogis-v9:geometry:8b6c918d1353685578bf78a7",
+      "featureId": "histogis-v9:geometry:8b6c918d1353685578bf78a7",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/fagaras__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "fagaras__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12382",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12383",
+      "entityId": "histogis-v9:entity:shape-12383",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Mühlbach",
+        "ro": "Mühlbach"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:0ba4deadbaece76d24a101fe",
+      "featureId": "histogis-v9:geometry:0ba4deadbaece76d24a101fe",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/muhlbach__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "muhlbach__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12383",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12391",
+      "entityId": "histogis-v9:entity:shape-12391",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Kövár",
+        "ro": "Kövár"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District",
+      "geometryId": "histogis-v9:geometry:f826ea699a49e59d6aaa194a",
+      "featureId": "histogis-v9:geometry:f826ea699a49e59d6aaa194a",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/kovar__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "kovar__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12391",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12392",
+      "entityId": "histogis-v9:entity:shape-12392",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Zărand",
+        "ro": "Zărand"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:2e864cee33a97cadc40fc558",
+      "featureId": "histogis-v9:geometry:2e864cee33a97cadc40fc558",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/zarand__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "zarand__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12392",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12395",
+      "entityId": "histogis-v9:entity:shape-12395",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Mediasch",
+        "ro": "Mediasch"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:a8d98fa766ab88d6f462ba54",
+      "featureId": "histogis-v9:geometry:a8d98fa766ab88d6f462ba54",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/mediasch__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "mediasch__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12395",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12396",
+      "entityId": "histogis-v9:entity:shape-12396",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Csík",
+        "ro": "Csík"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:116346f0dbd796c752d91148",
+      "featureId": "histogis-v9:geometry:116346f0dbd796c752d91148",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/csik__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "csik__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12396",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12397",
+      "entityId": "histogis-v9:entity:shape-12397",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Schäßburg",
+        "ro": "Schäßburg"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:366d2869414a6e1515a3bc44",
+      "featureId": "histogis-v9:geometry:366d2869414a6e1515a3bc44",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/schaburg__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "schaburg__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12397",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12398",
+      "entityId": "histogis-v9:entity:shape-12398",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Groß-Schenk",
+        "ro": "Groß-Schenk"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:5468a9a3a383b76164041c79",
+      "featureId": "histogis-v9:geometry:5468a9a3a383b76164041c79",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/gro-schenk__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "gro-schenk__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12398",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12399",
+      "entityId": "histogis-v9:entity:shape-12399",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Kronstadt",
+        "ro": "Kronstadt"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "District",
+      "geometryId": "histogis-v9:geometry:27fa3112b6e8777ccb8bcebc",
+      "featureId": "histogis-v9:geometry:27fa3112b6e8777ccb8bcebc",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/kronstadt__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "kronstadt__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12399",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12400",
+      "entityId": "histogis-v9:entity:shape-12400",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Broos",
+        "ro": "Broos"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:022ad50280d4ada6643792f2",
+      "featureId": "histogis-v9:geometry:022ad50280d4ada6643792f2",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/broos__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "broos__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12400",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12401",
+      "entityId": "histogis-v9:entity:shape-12401",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Hunyad",
+        "ro": "Hunyad"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:2e30a8437627dc41ceecac39",
+      "featureId": "histogis-v9:geometry:2e30a8437627dc41ceecac39",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/hunyad__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "hunyad__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12401",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12402",
+      "entityId": "histogis-v9:entity:shape-12402",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Reißmarkt",
+        "ro": "Reißmarkt"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:2b3d01bb368059c64336b3c5",
+      "featureId": "histogis-v9:geometry:2b3d01bb368059c64336b3c5",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/reimarkt__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "reimarkt__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12402",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12403",
+      "entityId": "histogis-v9:entity:shape-12403",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Leschkirch",
+        "ro": "Leschkirch"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:7bf97e1a58d9fdd2601d8951",
+      "featureId": "histogis-v9:geometry:7bf97e1a58d9fdd2601d8951",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/leschkirch__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "leschkirch__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12403",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12404",
+      "entityId": "histogis-v9:entity:shape-12404",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Kraszna",
+        "ro": "Kraszna"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:62783b069d289a4db6999abf",
+      "featureId": "histogis-v9:geometry:62783b069d289a4db6999abf",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/kraszna__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "kraszna__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12404",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12405",
+      "entityId": "histogis-v9:entity:shape-12405",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Mittlere Szolnok",
+        "ro": "Mittlere Szolnok"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:a709a9420c3d9870bcf24cc0",
+      "featureId": "histogis-v9:geometry:a709a9420c3d9870bcf24cc0",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/mittlere-szolnok__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "mittlere-szolnok__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12405",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12406",
+      "entityId": "histogis-v9:entity:shape-12406",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Unterweißenburg",
+        "ro": "Unterweißenburg"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:9f70f2618756defa14762662",
+      "featureId": "histogis-v9:geometry:9f70f2618756defa14762662",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/unterweienburg__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "unterweienburg__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12406",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12407",
+      "entityId": "histogis-v9:entity:shape-12407",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Klausenburg",
+        "ro": "Klausenburg"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:bc75fd940b13cc9af0da5777",
+      "featureId": "histogis-v9:geometry:bc75fd940b13cc9af0da5777",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/klausenburg__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "klausenburg__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12407",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12408",
+      "entityId": "histogis-v9:entity:shape-12408",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Hermanstadt",
+        "ro": "Hermanstadt"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Seat",
+      "geometryId": "histogis-v9:geometry:fc06cb0f0302eda139d41a74",
+      "featureId": "histogis-v9:geometry:fc06cb0f0302eda139d41a74",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/hermanstadt__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "hermanstadt__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12408",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12409",
+      "entityId": "histogis-v9:entity:shape-12409",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Oberweißenburg",
+        "ro": "Oberweißenburg"
+      },
+      "sourcePeriod": {
+        "start": "1815-09-06",
+        "end": "1849-12-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:5812009f77d84965e3cfb4b2",
+      "featureId": "histogis-v9:geometry:5812009f77d84965e3cfb4b2",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/oberweienburg__1815-09-06_1849-12-31.geojson",
+      "sourceFilename": "oberweienburg__1815-09-06_1849-12-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12409",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12657",
+      "entityId": "histogis-v9:entity:shape-12657",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Klausenburg",
+        "ro": "Klausenburg"
+      },
+      "sourcePeriod": {
+        "start": "1851-05-16",
+        "end": "1854-10-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:b6ba5148619a22c7b3d1d24a",
+      "featureId": "histogis-v9:geometry:b6ba5148619a22c7b3d1d24a",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/klausenburg__1851-05-16_1854-10-30.geojson",
+      "sourceFilename": "klausenburg__1851-05-16_1854-10-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12657",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/255/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12658",
+      "entityId": "histogis-v9:entity:shape-12658",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Maros-Vásárhely",
+        "ro": "Maros-Vásárhely"
+      },
+      "sourcePeriod": {
+        "start": "1851-05-16",
+        "end": "1854-10-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:aee82ab8d644e5f9da8e18eb",
+      "featureId": "histogis-v9:geometry:aee82ab8d644e5f9da8e18eb",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/maros-vasarhely__1851-05-16_1854-10-30.geojson",
+      "sourceFilename": "maros-vasarhely__1851-05-16_1854-10-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12658",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/255/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12659",
+      "entityId": "histogis-v9:entity:shape-12659",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Dées",
+        "ro": "Dées"
+      },
+      "sourcePeriod": {
+        "start": "1851-05-16",
+        "end": "1854-10-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:1c3138c5ae70397b9367b6aa",
+      "featureId": "histogis-v9:geometry:1c3138c5ae70397b9367b6aa",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/dees__1851-05-16_1854-10-30.geojson",
+      "sourceFilename": "dees__1851-05-16_1854-10-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12659",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/255/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:12660",
+      "entityId": "histogis-v9:entity:shape-12660",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Hermannstadt",
+        "ro": "Hermannstadt"
+      },
+      "sourcePeriod": {
+        "start": "1851-05-16",
+        "end": "1854-10-30",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "County",
+      "geometryId": "histogis-v9:geometry:6f7d229ffaba1db467cf14ac",
+      "featureId": "histogis-v9:geometry:6f7d229ffaba1db467cf14ac",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/hermannstadt__1851-05-16_1854-10-30.geojson",
+      "sourceFilename": "hermannstadt__1851-05-16_1854-10-30.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "12660",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/255/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:9915",
+      "entityId": "histogis-v9:entity:shape-9915",
+      "collectionId": "histogis-v9-regional",
+      "region": "transylvania",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Transilvania",
+      "displayName": {
+        "en": "Großfürstentum Siebenbürgen",
+        "ro": "Großfürstentum Siebenbürgen"
+      },
+      "sourcePeriod": {
+        "start": "1815-06-09",
+        "end": "1867-12-21",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Grand Principality",
+      "geometryId": "histogis-v9:geometry:df34355bffc02754a12a8b79",
+      "featureId": "histogis-v9:geometry:df34355bffc02754a12a8b79",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/grofurstentum-siebenburgen__1815-06-09_1867-12-21.geojson",
+      "sourceFilename": "grofurstentum-siebenburgen__1815-06-09_1867-12-21.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "9915",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/135/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:9936",
+      "entityId": "histogis-v9:entity:bukowina",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Herzogtum Bukowina",
+        "ro": "Herzogtum Bukowina"
+      },
+      "sourcePeriod": {
+        "start": "1849-03-05",
+        "end": "1867-12-21",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Kingdom",
+      "geometryId": "histogis-v9:geometry:1101b2e846ef34446961ae0c",
+      "featureId": "histogis-v9:geometry:1101b2e846ef34446961ae0c",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/herzogtum-bukowina__1849-03-05_1867-12-21.geojson",
+      "sourceFilename": "herzogtum-bukowina__1849-03-05_1867-12-21.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "9936",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/135/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    },
+    {
+      "id": "histogis-v9:version:9970",
+      "entityId": "histogis-v9:entity:bukowina",
+      "collectionId": "histogis-v9-regional",
+      "region": "bukovina",
+      "sourceAdapter": "supplemental",
+      "sourceFamily": "HISTOGIS",
+      "sourceGroup": "HistoGIS v9.0 / Bucovina",
+      "displayName": {
+        "en": "Herzogtum Bukowina",
+        "ro": "Herzogtum Bukowina"
+      },
+      "sourcePeriod": {
+        "start": "1867-12-22",
+        "end": "1918-10-31",
+        "sourceOnly": true,
+        "notes": "HistoGIS source interval, not independently qualified."
+      },
+      "sourceType": "Duchy",
+      "geometryId": "histogis-v9:geometry:1101b2e846ef34446961ae0c",
+      "featureId": "histogis-v9:geometry:1101b2e846ef34446961ae0c",
+      "geometryShard": "histogis-v9-regional.geojson",
+      "sourceDriveFileId": null,
+      "sourcePath": "acdh-oeaw-histogis-data-60c7453/single_files/herzogtum-bukowina__1867-12-22_1918-10-31.geojson",
+      "sourceFilename": "herzogtum-bukowina__1867-12-22_1918-10-31.geojson",
+      "sourceFileSha256": "1e108156d8d21f5e47dc91849050f1e12e5d642f13095407f70270883004a5cd",
+      "geometryValidSource": true,
+      "sourceRelationId": null,
+      "sourceExternalId": "9970",
+      "sourceCitation": {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": "ACDH-CH, Austrian Academy of Sciences",
+        "title": "HistoGIS Data v9.0 (2021)",
+        "url": "https://doi.org/10.5281/zenodo.4432081",
+        "basis": "Archive LICENSE; previously published pilot geometry, upstream sources not independently requalified",
+        "adaptation": "Subset extraction; exact coordinate geometry deduplication; version and source hierarchy projection",
+        "sourceUrls": [
+          "https://histogis.acdh.oeaw.ac.at/api/source/141/?format=json"
+        ]
+      },
+      "provenance": "Geodata GIS / HistoGIS v9.0; existing pilot source version; archive SHA-256",
+      "status": "source_candidate_not_certified",
+      "sourceTagWarnings": []
+    }
+  ],
+  "relations": [
+    {
+      "id": "histogis-v9:hierarchy:11361:9970:1868-08-31",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11361",
+      "start": "1868-08-31",
+      "end": "1893-09-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000049,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/210/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11362:9936:1864-03-08",
+      "parentId": "histogis-v9:version:9936",
+      "childId": "histogis-v9:version:11362",
+      "start": "1864-03-08",
+      "end": "1867-12-21",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11362:9970:1867-12-22",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11362",
+      "start": "1867-12-22",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11378:9970:1868-08-31",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11378",
+      "start": "1868-08-31",
+      "end": "1893-09-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/210/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11383:9970:1868-08-31",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11383",
+      "start": "1868-08-31",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000006,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11415:9970:1868-08-31",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11415",
+      "start": "1868-08-31",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11416:9970:1868-08-31",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11416",
+      "start": "1868-08-31",
+      "end": "1905-09-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/211/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11425:9970:1868-08-31",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11425",
+      "start": "1868-08-31",
+      "end": "1903-09-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/211/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11426:9970:1868-08-31",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11426",
+      "start": "1868-08-31",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11494:9970:1868-08-31",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11494",
+      "start": "1868-08-31",
+      "end": "1903-09-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000038,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/211/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11751:9970:1893-10-01",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11751",
+      "start": "1893-10-01",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000057,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11752:9970:1893-10-01",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11752",
+      "start": "1893-10-01",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11756:9970:1893-10-01",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11756",
+      "start": "1893-10-01",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11838:9970:1905-10-01",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11838",
+      "start": "1905-10-01",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11839:9970:1903-10-01",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11839",
+      "start": "1903-10-01",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11840:9970:1903-10-01",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11840",
+      "start": "1903-10-01",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000038,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11843:9970:1903-10-01",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11843",
+      "start": "1903-10-01",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000017,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:11844:9970:1905-10-01",
+      "parentId": "histogis-v9:version:9970",
+      "childId": "histogis-v9:version:11844",
+      "start": "1905-10-01",
+      "end": "1918-10-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/213/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12272:9936:1849-03-05",
+      "parentId": "histogis-v9:version:9936",
+      "childId": "histogis-v9:version:12272",
+      "start": "1849-03-05",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000017,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12319:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12319",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12320:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12320",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12321:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12321",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12322:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12322",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12323:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12323",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12324:12328:1815-09-06",
+      "parentId": "histogis-v9:version:12328",
+      "childId": "histogis-v9:version:12324",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": true,
+      "outsideParentPercent": 100,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12325:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12325",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12326:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12326",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12328:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12328",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12330:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12330",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": true,
+      "outsideParentPercent": 0.229521,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12382:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12382",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12383:12406:1815-09-06",
+      "parentId": "histogis-v9:version:12406",
+      "childId": "histogis-v9:version:12383",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": true,
+      "outsideParentPercent": 100,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12391:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12391",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": true,
+      "outsideParentPercent": 3.012162,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12392:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12392",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": true,
+      "outsideParentPercent": 0.400916,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12395:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12395",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12396:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12396",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000003,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12397:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12397",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12398:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12398",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12399:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12399",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12400:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12400",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12401:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12401",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": true,
+      "outsideParentPercent": 0.768664,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12402:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12402",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12403:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12403",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12404:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12404",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": true,
+      "outsideParentPercent": 2.035377,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12405:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12405",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": true,
+      "outsideParentPercent": 5.891318,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12406:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12406",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000803,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12407:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12407",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000668,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12408:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12408",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12409:9915:1815-09-06",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12409",
+      "start": "1815-09-06",
+      "end": "1849-12-31",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/224/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12657:9915:1851-05-16",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12657",
+      "start": "1851-05-16",
+      "end": "1854-10-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000374,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/255/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12658:9915:1851-05-16",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12658",
+      "start": "1851-05-16",
+      "end": "1854-10-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000001,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/255/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12659:9915:1851-05-16",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12659",
+      "start": "1851-05-16",
+      "end": "1854-10-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0.000481,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/255/?format=json"
+      ]
+    },
+    {
+      "id": "histogis-v9:hierarchy:12660:9915:1851-05-16",
+      "parentId": "histogis-v9:version:9915",
+      "childId": "histogis-v9:version:12660",
+      "start": "1851-05-16",
+      "end": "1854-10-30",
+      "sourceOnly": true,
+      "qualifiedHistoricalParentage": false,
+      "topologicalReviewRequired": false,
+      "outsideParentPercent": 0,
+      "sourceUrls": [
+        "https://histogis.acdh.oeaw.ac.at/api/source/255/?format=json"
+      ]
+    }
+  ]
+}

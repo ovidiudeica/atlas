@@ -9,6 +9,7 @@ import { EntityCardSection } from './components/EntityCardSection';
 import { HistoricalGeodataBrowser,HistoricalGeodataEntityCard,
   type HistoricalGeodataSelection,type HistoricalVisibilityChange } from './components/HistoricalGeodataBrowser';
 import {geodataSourceAtDate} from './data/historicalGeodata.mjs';
+import {supplementalEntryAtYear} from './data/historicalSupplemental.mjs';
 import { TerritorialSymbolImage } from './components/TerritorialSymbolImage';
 import { SymbolAuditSummary } from './components/SymbolAuditSummary';
 import { symbolAuditFor } from './data/symbolAudit.mjs';
@@ -850,8 +851,11 @@ export default function App() {
     if(!source)return;
     const at=String(historyYear).padStart(4,'0')+'-07-01';
     const chosen=Object.values(historyVisible).filter(record=>
-      !historyYearOnly||geodataSourceAtDate(record.entry,at));
-    if(selectedModule==='historical'&&historicalGeodataSelection)
+      !historyYearOnly||(record.entry.sourceAdapter==='supplemental'?
+        supplementalEntryAtYear(record.entry,historyYear):geodataSourceAtDate(record.entry,at)));
+    if(selectedModule==='historical'&&historicalGeodataSelection&&
+       (historicalGeodataSelection.entry.sourceAdapter!=='supplemental'||!historyYearOnly||
+        supplementalEntryAtYear(historicalGeodataSelection.entry,historyYear)))
       chosen.push(historicalGeodataSelection);
     // One map feature per exact shared geometry, regardless of source period.
     // The last entry is the selected Entity-card version when selected.

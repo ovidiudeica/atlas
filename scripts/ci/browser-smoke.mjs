@@ -2173,6 +2173,46 @@ async function rohgis1930Smoke(cdp){
  console.log('HIST-OHM-TREE.4 Chromium: 71 counties / 322 plasi / 172 urban units, Arad > Pecica and Arad urban unit, geometry checkbox, source card, CC BY 4.0, 1929 exclusion, desktop and mobile PASS');
 }
 
+/* HIST-OHM-TREE.12a — supplemental source catalog with unchanged OHM/RoHGIS. */
+async function historicalSupplementalSmoke(cdp){
+ for(const width of [1440,390]){
+  const mobile=width<700,p=await cdp.page(width,900,mobile,site+'?lang=ro');
+  const panel=mobile?'.drawer-tree':'.tree-sidebar';
+  const category=panel+' [data-supplemental-family=HISTOGIS]';
+  await p.wait("document.querySelector('.map-area')?.dataset.mapReady==='true'","Supplemental map ready "+width);
+  await p.eval("document.querySelector('.module-rail button:nth-child(2)').click()");
+  await p.wait("!!document.querySelector('"+category+"')","Supplemental source loaded "+width);
+  await p.eval("(()=>{const el=document.querySelector('"+panel+" .history-filter-year input');const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(el,'1869');el.dispatchEvent(new Event('input',{bubbles:true}));})()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1869'","1869 reference year "+width);
+  await p.eval("(()=>{const d=document.querySelector('"+category+"');if(!d.open)d.querySelector('summary').click();})()");
+  await p.wait("document.querySelector('"+category+"')?.open","Supplemental source expanded "+width);
+  const parent=category+' [data-supplemental-version="histogis-v9:version:9970"]';
+  await p.wait("!!document.querySelector("+JSON.stringify(parent)+")","Bukovina 1869 source version "+width);
+  await p.eval("document.querySelector("+JSON.stringify(parent+" > .history-tree-row .history-tree-expand") +").click()");
+  const child=parent+' [data-supplemental-version="histogis-v9:version:11361"]';
+  await p.wait("!!document.querySelector("+JSON.stringify(child)+")","Radautz candidate source child "+width);
+  await p.eval("document.querySelector("+JSON.stringify(child+" > .history-tree-row input[type=checkbox]") +").click()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='1'","Supplemental polygon checked "+width);
+  assert.equal(await p.eval("document.querySelector('.map-area')?.dataset.historyDistinctAssets"),'1');
+  if(!mobile){
+   await p.eval("document.querySelector("+JSON.stringify(child+" > .history-tree-row .history-tree-name") +").click()");
+   await p.wait("document.querySelector('.detail-sidebar .history-entity-detail .entity-title h3')?.textContent==='Radautz'","Radautz source card");
+   const card=await p.eval("document.querySelector('.detail-sidebar .history-entity-detail')?.textContent");
+   assert.match(card,/HistoGIS/);assert.match(card,/CC BY 4\.0/);
+   assert.match(card,/Relație-părinte candidată/);assert.match(card,/necertificată juridic/);
+  }
+  await p.snap((mobile?'mobile':'desktop')+'-histogis-bukovina-radautz.png');
+  await p.eval("document.querySelector("+JSON.stringify(child+" > .history-tree-row input[type=checkbox]") +").click()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyCheckedCount==='0'","Supplemental polygon unchecked "+width);
+  await p.eval("document.querySelector('"+panel+" .history-rohgis-jump').click()");
+  await p.wait("document.querySelector('.map-area')?.dataset.historyYear==='1930'","Switch from supplemental to RoHGIS "+width);
+  await p.wait("!document.querySelector('"+category+"')","Supplemental interval not extrapolated into 1930 "+width);
+  await p.wait("document.querySelectorAll('"+panel+" .history-rohgis-tree > .history-tree-node').length===71","1930 county hierarchy retained "+width);
+  await p.close();
+ }
+ console.log('HIST-OHM-TREE.12a Chromium: attributed HistoGIS candidate parent/child, polygon selection, temporal exclusion and RoHGIS 1930 retained desktop/mobile PASS');
+}
+
 try{
   await mkdir(screenshots,{recursive:true});
   profile=await mkdtemp(join(tmpdir(),'atlas-smoke-'));
@@ -2218,6 +2258,7 @@ try{
   await moduleScopedResets(client);
   await historicalOhmSmoke(client);
   await rohgis1930Smoke(client);
+  await historicalSupplementalSmoke(client);
   assert.deepEqual(runtimeErrors,[],'Uncaught browser exceptions');
   console.log('Browser smoke: WEB-R3.3 acceptance 1440/900/390/360, map controls, Escape/focus, modal Tab, exports, filters, geometry reset and permalink OK.');
 }catch(err){
