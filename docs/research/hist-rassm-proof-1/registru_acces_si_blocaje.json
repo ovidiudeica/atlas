@@ -1,0 +1,38 @@
+[
+  {
+    "source": "Eftodiev1929",
+    "result": "Official1280 raster recovered; original429 Retry-After120 respected",
+    "evidence": "acquisition_1929.json",
+    "next": "Obtain full original through normal Wikimedia availability, then verify stable railway/river crossing anchors"
+  },
+  {
+    "source": "IU L-35-48 Tiraspol1929",
+    "result": "Public DataCORE catalog and three file descriptions accessible; original download yielded cold-storage HTML. Automated retrieval without email rejected: too many retrieval requests running.",
+    "evidence": "https://datacore.iu.edu/concern/data_sets/bz60cx02x?locale=en",
+    "next": "Retry normal original-scan retrieval after queue availability; do not use repository georeferenced file as independent control"
+  },
+  {
+    "source": "Ananiev administrative1936",
+    "result": "R-2947 inv3 unit3 catalog description only; no facsimile obtained",
+    "evidence": "https://doc.arhiva.gov.md/inventare/Fondul%20R-2947/F.%20R-2947%20Inv.%203.pdf",
+    "next": "Public digitized facsimile of unit3; no institution contacted"
+  },
+  {
+    "source": "RASSM administrative1939 1:300000",
+    "result": "Bibliographic title, scale, 72x47cm, March1 administrative state found; no facsimile. Independent bibliography gives 1:3000000, a catalog scale contradiction kept unresolved.",
+    "evidence": "https://history.org.ua/LiberUA/978-966-02-5328-5/978-966-02-5328-5.pdf",
+    "next": "Recover full color sheet + legend + imprint; verify scale against physical dimensions and printed scale"
+  },
+  {
+    "source": "1939 pocket atlas RGO record10118",
+    "result": "Distinct primary general atlas map cataloged at1:6000000; viewer endpoints /iipview/16000 and16001 not retrieved; not mistaken for required1:300000 administrative sheet",
+    "evidence": "https://geoportal.rgo.ru/record/10118",
+    "next": "Only contextual if publicly retrievable; insufficient scale for council boundaries"
+  },
+  {
+    "source": "1924 territorial commissions",
+    "result": "Formation act art3 mandates mixed commission; Balta act art4 cites parity commission created1924-10-29. Commission signed decisions and cartographic annexes not obtained.",
+    "evidence": "LAW1924_page3.jpg / LAW1924_BALTA_page433.jpg",
+    "next": "Public finding aids for parity commission starting1924-10-29 and1926 submissions; no polygons from village names"
+  }
+]

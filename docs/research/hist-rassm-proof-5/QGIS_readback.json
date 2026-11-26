@@ -1,0 +1,146 @@
+{
+  "qgis_version": "3.44.13-Solothurn",
+  "project_reopened": true,
+  "relative_paths": true,
+  "all_layers_valid": true,
+  "display_crs": "EPSG:3857",
+  "temporal_reference_layers": 8,
+  "temporal_layers_are_reference_snapshots_not_proven_validity": true,
+  "layers": [
+    {
+      "name": "512 pilot historical candidates C - M2 M3 M4 M5",
+      "features": 512,
+      "valid": true
+    },
+    {
+      "name": "Absolute temporal and legal uncertainty - unknown",
+      "features": 512,
+      "valid": true
+    },
+    {
+      "name": "Administrative events - regional/unit context, not line proof",
+      "features": 12,
+      "valid": true
+    },
+    {
+      "name": "Arc to event context links - no geometric admission",
+      "features": 3072,
+      "valid": true
+    },
+    {
+      "name": "Dubasari historical water envelope C",
+      "features": 1,
+      "valid": true
+    },
+    {
+      "name": "Dubasari hydrography C - axis and envelopes, NOT legal frontier",
+      "features": 3,
+      "valid": true
+    },
+    {
+      "name": "Dubasari sheet - nominal unknown datum C",
+      "features": null,
+      "valid": true
+    },
+    {
+      "name": "Exact OSMB2026 source arcs - continuity unproved",
+      "features": 45,
+      "valid": true
+    },
+    {
+      "name": "Exterior A/B - zero admitted",
+      "features": 0,
+      "valid": true
+    },
+    {
+      "name": "HURI 1927-03-01 candidate districts C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1928-08-15 candidate districts C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1932-03-20 candidate districts C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1932-10-25 candidate districts C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1933-04-01 candidate districts C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1933-12-15 candidate districts C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1934-05-30 candidate districts C",
+      "features": 11,
+      "valid": true
+    },
+    {
+      "name": "HURI 1937-01-15 candidate districts C",
+      "features": 14,
+      "valid": true
+    },
+    {
+      "name": "Historical continuity unresolved -512C arcs",
+      "features": 512,
+      "valid": true
+    },
+    {
+      "name": "Interior A/B - zero admitted",
+      "features": 0,
+      "valid": true
+    },
+    {
+      "name": "M1 confirmed continuity - zero admitted",
+      "features": 0,
+      "valid": true
+    },
+    {
+      "name": "MSE1930 original - inherited nominal frame C, datum unknown",
+      "features": null,
+      "valid": true
+    },
+    {
+      "name": "MSE undated content -4retained and1new nominal C symbols",
+      "features": 5,
+      "valid": true
+    },
+    {
+      "name": "OSM Standard - \u00a9OpenStreetMapcontributors/ODbL",
+      "features": null,
+      "valid": true
+    },
+    {
+      "name": "Sources and3unlocated target documents D - no invented coordinates",
+      "features": 18,
+      "valid": true
+    }
+  ],
+  "geodesic_lengths_m": {
+    "EXTERNAL": 49980.077463588794,
+    "INTERNAL": 148198.2296404938,
+    "new_native_nominal_C": 7721.341082290515,
+    "Dubasari_axis": 4346.9498483056095
+  },
+  "visual_verified": true,
+  "extent_3857": [
+    3159900.6620170744,
+    5851272.009936736,
+    3357559.2163619865,
+    6155999.663015435
+  ],
+  "empty_admission_display_schemas": "Zero-feature memory schemas avoid this runtime GDALrelativeemptyextentfallback; actual empty canonical tables persist inGPKG and are validated independently.",
+  "visual_review": "Reviewed corridor overview, new native symbol, earlyHURI1927/1928diagnostic overlay andDubasari hydrography. Raster frame and traces remain C; no absolute accuracy or jurisdiction inferred. Separate process iterated every record from each portable layer."
+}

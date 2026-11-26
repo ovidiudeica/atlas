@@ -1,0 +1,291 @@
+{
+  "passed": true,
+  "independent_initially_empty_directory": true,
+  "network_used": false,
+  "original_binary_recovered": true,
+  "original_sha256": "c482fdf9cff8b28ae1e3df3fb85d9b32927f212b5aa0dba2a28dd0b38726a990",
+  "rebuilt_sha256": "3a4659affa57c25b1f8af36ebddfd7bab75cc948d2e58384f1487f47bb355191",
+  "rebuilt_binary_equal": false,
+  "WKB_identical": true,
+  "attributes_identical": true,
+  "schemas_identical": true,
+  "vector_features_compared": 2238,
+  "attribute_records_compared": 1071,
+  "byte_identical_csv_registers": [
+    "03_GRIGORIOPOL/GRIGORIOPOL_1971_1988_council_comparison.csv",
+    "04_MOLDOVA_UCRAINA/1999_scope_per_arc.csv",
+    "04_MOLDOVA_UCRAINA/1999_scope_per_corridor.csv",
+    "04_MOLDOVA_UCRAINA/MD_UA_1995_1999_scope_and_boundary_evidence.csv",
+    "05_UCRAINA/UKRAINE_KOATUU_KATOTTG_historical_crosswalk.csv",
+    "08_DUBASARI/GCP_nou_investigate.csv",
+    "08_DUBASARI/PROOF2_Dubasari_physical_GCP_candidates.csv",
+    "12_RAPORT_FINAL/per_corridor.csv",
+    "12_RAPORT_FINAL/per_raion.csv",
+    "12_RAPORT_FINAL/PROOF6_acte_1958_1971.csv",
+    "12_RAPORT_FINAL/PROOF6_comparatie_PROOF5_PROOF6.csv",
+    "12_RAPORT_FINAL/PROOF6_continuitate_per_arc.csv",
+    "12_RAPORT_FINAL/PROOF6_documente_delimitare.csv",
+    "12_RAPORT_FINAL/PROOF6_geometrii_AB.csv",
+    "12_RAPORT_FINAL/PROOF6_inherited_PROOF5_events.csv",
+    "12_RAPORT_FINAL/PROOF6_inherited_PROOF5_sources.csv",
+    "12_RAPORT_FINAL/PROOF6_M1_promovari.csv",
+    "12_RAPORT_FINAL/PROOF6_planuri_fonduri_satesti.csv",
+    "12_RAPORT_FINAL/PROOF6_restante_individuale.csv",
+    "12_RAPORT_FINAL/PROOF6_Ukraine_predecessor_units.csv"
+  ],
+  "tables": [
+    {
+      "file": "02_CAMENCA/CAMENCA_1959_1969_delimitare_si_continuitate.gpkg",
+      "table": "UNCHANGED_PILOT_CANDIDATES_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "02_CAMENCA/CAMENCA_1959_1969_delimitare_si_continuitate.gpkg",
+      "table": "HISTORICAL_BOUNDARIES_ADMITTED",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "02_CAMENCA/CAMENCA_1959_1969_delimitare_si_continuitate.gpkg",
+      "table": "ACT_TARGETS",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "02_CAMENCA/CAMENCA_1959_1969_delimitare_si_continuitate.gpkg",
+      "table": "COUNCILS_1988",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "02_CAMENCA/CAMENCA_1959_1969_delimitare_si_continuitate.gpkg",
+      "table": "CONTINUITY",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "03_GRIGORIOPOL/GRIGORIOPOL_1958_1971_delimitare_si_continuitate.gpkg",
+      "table": "UNCHANGED_PILOT_CANDIDATES_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "03_GRIGORIOPOL/GRIGORIOPOL_1958_1971_delimitare_si_continuitate.gpkg",
+      "table": "HISTORICAL_BOUNDARIES_ADMITTED",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "03_GRIGORIOPOL/GRIGORIOPOL_1958_1971_delimitare_si_continuitate.gpkg",
+      "table": "ACT_TARGETS",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "03_GRIGORIOPOL/GRIGORIOPOL_1958_1971_delimitare_si_continuitate.gpkg",
+      "table": "COUNCILS_1988",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "03_GRIGORIOPOL/GRIGORIOPOL_1958_1971_delimitare_si_continuitate.gpkg",
+      "table": "CONTINUITY",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "05_UCRAINA/UKRAINE_predecessor_councils_boundaries.gpkg",
+      "table": "HISTORICAL_COUNCIL_POLYGONS_NOT_RECOVERED",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "05_UCRAINA/UKRAINE_predecessor_councils_boundaries.gpkg",
+      "table": "PILOT_HISTORICAL_CANDIDATES_C_NOT_COUNCIL_POLYGONS",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "05_UCRAINA/UKRAINE_predecessor_councils_boundaries.gpkg",
+      "table": "CENTRE_CODE_CROSSWALK",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "05_UCRAINA/UKRAINE_predecessor_councils_boundaries.gpkg",
+      "table": "PREDECESSOR_TEXT",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "08_DUBASARI/HIST_RASSM_PROOF_1_C_unchanged.gpkg",
+      "table": "hidrografie_noua_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "08_DUBASARI/HIST_RASSM_PROOF_1_C_unchanged.gpkg",
+      "table": "apa_istorica_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "08_DUBASARI/HIST_RASSM_PROOF_1_C_unchanged.gpkg",
+      "table": "gcp_cadru_nominal",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "08_DUBASARI/HIST_RASSM_PROOF_1_C_unchanged.gpkg",
+      "table": "sector_studiu_MC",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "08_DUBASARI/HIST_RASSM_PROOF_1_C_unchanged.gpkg",
+      "table": "limite_sursa_decupate_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "08_DUBASARI/HIST_RASSM_PROOF_1_C_unchanged.gpkg",
+      "table": "vectori_distanta_HURI_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "08_DUBASARI/HIST_RASSM_PROOF_1_C_unchanged.gpkg",
+      "table": "diferente_locale_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "EXTERNAL_ADMITTED",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "INTERNAL_ADMITTED",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "RASSM_SOURCE_BOUNDARIES",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "UNRESOLVED_BOUNDARIES",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "C1_CAMENCA",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "C2_TIRASPOL",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "C3_GRIGORIOPOL",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "C4_UKRAINE",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "RETAINED_PROOF5_NOMINAL_C_TRACES",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "CURRENT_OSMB_REFERENCE_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "DISTRICT_REFERENCE_8_EPISODES_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "MD_UA_SHARED_LEVEL2_REFERENCE_C",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "BOUNDARY_CONTINUITY",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "ADMINISTRATIVE_EVENTS",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "SOURCES_AND_DECISIONS",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "COUNCILS_1988_PRIMARY_REFERENCE",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "UKRAINE_CENTRE_CODE_CROSSWALK",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "UKRAINE_PREDECESSOR_TEXT",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "MD_UA_TREATY_SCOPE",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "INHERITED_PROOF5_EVENT_CONTEXT",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    },
+    {
+      "file": "RASSM_PROOF_6_temporal_C.gpkg",
+      "table": "INHERITED_PROOF5_SOURCE_EVIDENCE",
+      "schema_identical": true,
+      "WKB_and_attributes_identical": true
+    }
+  ],
+  "note": "Original binary remains the delivered file. SQLite reproduction binary is not claimed identical; table schemas, all feature WKB and attributes are compared explicitly."
+}

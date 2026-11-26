@@ -1,0 +1,144 @@
+{
+  "all_passed": true,
+  "fresh_workspace": true,
+  "original_raw_archives_redownloaded": false,
+  "measurement_cache_reused_from_original_run": false,
+  "matching_and_noding_recomputed": true,
+  "deterministic_csv_files": 18,
+  "files": [
+    {
+      "file": "01_OSMB_RECONCILIERE/OSMB_context_comparison_per_parent.csv",
+      "sha256": "dce8be3c9e86daac6e94be6525627a851483fcb3f003d0f559191c4a5d759f8a",
+      "match": true
+    },
+    {
+      "file": "01_OSMB_RECONCILIERE/OSMB_excluded_noncurrent_or_other_semantics.csv",
+      "sha256": "5c4b8ae2c015e5645241e9e530da2997a63acfcb4922bc56f9c167d229b981a3",
+      "match": true
+    },
+    {
+      "file": "01_OSMB_RECONCILIERE/OSMB_historic_statistical_objects.csv",
+      "sha256": "a5a14cfb74f70b660de88e192eb067d094a040c774ae0ad00fb3a7fe6fc0df5f",
+      "match": true
+    },
+    {
+      "file": "01_OSMB_RECONCILIERE/RASSM_OSMB_contradictii.csv",
+      "sha256": "5658f9759a55fe7b086bd5c365f938031f89ce72d7ad8b14f23465b21fdbb184",
+      "match": true
+    },
+    {
+      "file": "01_OSMB_RECONCILIERE/RASSM_OSMB_corespondențe_segmente.csv",
+      "sha256": "0510851d808a6af6ad32b8679f1682886625b5c79275bee3bbe6f029db0e312b",
+      "match": true
+    },
+    {
+      "file": "01_OSMB_RECONCILIERE/registru_kilometric_per_episod.csv",
+      "sha256": "f3835d3cc7026de2ab269fbd5ee4b01a862fad9e801351e6a42ae9e857ae6ee1",
+      "match": true
+    },
+    {
+      "file": "01_OSMB_RECONCILIERE/sensibilitate_per_episod.csv",
+      "sha256": "be5ec2b139ce1d698a9fc27b86ae7f6a573ed4225261d8e586324f57f051c896",
+      "match": true
+    },
+    {
+      "file": "01_OSMB_RECONCILIERE/sensibilitate_toate_segmentele.csv",
+      "sha256": "8e51cc9ffa584c49b2e5f169b9d59d7c663fbc3729e794b102d1d843aa53dee0",
+      "match": true
+    },
+    {
+      "file": "02_HOTAR_EXTERIOR/Dubasari_historical_hydrography_vs_OSMB.csv",
+      "sha256": "cc817b2a375fa190a94ea1aecbe37f7b6cd21fa73f9442037e39129cde54fc3e",
+      "match": true
+    },
+    {
+      "file": "03_RAIOANE/asamblare_per_raion.csv",
+      "sha256": "927179f7c1e2b047683acb5526d5e5b5acee1d4ef0e01dddaead2f3b2e47dd1b",
+      "match": true
+    },
+    {
+      "file": "03_RAIOANE/tabel_per_pereche_raioane.csv",
+      "sha256": "774eb442b0a76d60d3fffbd8abdcbee4f07f793a8d102554cc648ece9b3ca6aa",
+      "match": true
+    },
+    {
+      "file": "03_RAIOANE/tabel_per_raion.csv",
+      "sha256": "76bc83d6b5759d733187b247c435216e3b5ed981bc075a4a8a04499585dc836d",
+      "match": true
+    },
+    {
+      "file": "04_CONSILII_SATESTI/1935_33_OSMB_historic_name_crosswalk.csv",
+      "sha256": "a984cb429bff242b0dd0d019fddea5aad9733b9eeeedcd8f9b291af825458ce6",
+      "match": true
+    },
+    {
+      "file": "04_CONSILII_SATESTI/Oleno_Korytske_Novoselivska_Smolianska.csv",
+      "sha256": "7d35b608500eca3f5da5343af57d0fdd373c53aa54f348fc126d7d1f799e7b5c",
+      "match": true
+    },
+    {
+      "file": "04_CONSILII_SATESTI/RASSM_1926_11_transferuri_si_Hrabariivka.csv",
+      "sha256": "47c5999b04ec456c541c22a9d0fd755a515a2a5acd2bc404004d1c0e45d9a739",
+      "match": true
+    },
+    {
+      "file": "04_CONSILII_SATESTI/RASSM_1935_33_consilii.csv",
+      "sha256": "d40a5607eb82128863416b327e84f2e7f9873f37fccbc965ed77c8af19c7f6e3",
+      "match": true
+    },
+    {
+      "file": "04_CONSILII_SATESTI/RASSM_1937_Tiraspol_21_consilii.csv",
+      "sha256": "0105fe9824c7658a5d669e559220c737a5eed62d00935f376ca3564b4a57f3a3",
+      "match": true
+    },
+    {
+      "file": "04_CONSILII_SATESTI/RASSM_evenimente_administrative.csv",
+      "sha256": "7af7773f65322b0feb0c8366f33fa3f65431bbc8842c958595bf9b844fc5742c",
+      "match": true
+    }
+  ],
+  "temporal_gpkg_layers": [
+    {
+      "layer": "RASSM_EXTERNAL_BOUNDARIES",
+      "features": 8,
+      "geometry_wkb_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "RASSM_DISTRICTS",
+      "features": 91,
+      "geometry_wkb_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "RASSM_BOUNDARY_ARCS",
+      "features": 32722,
+      "geometry_wkb_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "RASSM_OSMB_MATCHES",
+      "features": 32722,
+      "geometry_wkb_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "OSMB_MODERN_ARCS_C",
+      "features": 1402,
+      "geometry_wkb_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "RASSM_RECONSTRUCTED_ARCS",
+      "features": 3,
+      "geometry_wkb_identical": true,
+      "attributes_identical": true
+    },
+    {
+      "layer": "RASSM_UNCERTAINTY",
+      "features": 32722,
+      "geometry_wkb_identical": true,
+      "attributes_identical": true
+    }
+  ]
+}

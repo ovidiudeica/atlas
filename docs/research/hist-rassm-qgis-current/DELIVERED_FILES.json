@@ -1,0 +1,38 @@
+[
+  {
+    "name": "RASSM_LATEST_RESEARCH_C.gpkg",
+    "bytes": 25100288,
+    "sha256": "e7a90d7f68723f34fd3576353c5fe2a1bedc7ec0393c4a0aaf47ba143e1740f9",
+    "confirmed_by_Drive_API": true
+  },
+  {
+    "name": "RASSM_LATEST_RESEARCH_C.qgz",
+    "bytes": 60583,
+    "sha256": "ea2a29f89a6bdd6720c1b05cd7de3313343f3d66369517c21fee7cd431c54013",
+    "confirmed_by_Drive_API": true
+  },
+  {
+    "name": "README.md",
+    "bytes": 4883,
+    "sha256": "96f3c3ee890d6c94aa4a9f76f5ff2eecc8f6c0fc3c3055af2a0eece9a5b2b72c",
+    "confirmed_by_Drive_API": true
+  },
+  {
+    "name": "SOURCE_VERSION.json",
+    "bytes": 5089,
+    "sha256": "90fed3751aff82ee0868a758a8f388b87984766d23720ecd56529b51a558e770",
+    "confirmed_by_Drive_API": true
+  },
+  {
+    "name": "MANIFEST_SHA256.txt",
+    "bytes": 448,
+    "sha256": "2b2dcf2fd3cccac39e7d813ab099090727866ad6fd488bcbe5bbce8372ac2849",
+    "confirmed_by_Drive_API": true
+  },
+  {
+    "name": "RASSM_QGIS_PORTABLE_C.zip",
+    "bytes": 5414562,
+    "sha256": "e58a2bf56b85ad57044a3021db376aa604b1bb4abc07b2413f96f417487f31dc",
+    "confirmed_by_Drive_API": true
+  }
+]

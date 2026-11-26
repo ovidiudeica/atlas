@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "independent_empty_output": true,
+  "network_used": false,
+  "general_reconciliation_rerun": false,
+  "byte_identical_registers": {
+    "per_corridor.csv": true,
+    "per_raion.csv": true,
+    "PROOF5_comparatie_PROOF4_PROOF5.csv": true,
+    "PROOF5_continuitate_per_arc.csv": true,
+    "PROOF5_documente_primare.csv": true,
+    "PROOF5_evenimente_administrative_1940_2026.csv": true,
+    "PROOF5_istoric_limite_Moldova.csv": true,
+    "PROOF5_istoric_limite_Ucraina.csv": true,
+    "PROOF5_promovari_M1.csv": true,
+    "PROOF5_restante_individuale.csv": true,
+    "PROOF5_segmente_AB.csv": true
+  },
+  "vector_features_WKB_and_attributes_identical": 1165,
+  "attribute_records_identical": 4126,
+  "new_native_pixel_transform_recomputed": true,
+  "new_trace_WKB_identical": true
+}

@@ -1,0 +1,199 @@
+{
+  "passed": true,
+  "project_actually_opened_in_QGIS": true,
+  "all_layers_valid": true,
+  "all_features_actually_iterated": true,
+  "no_original_workspace_dependency": true,
+  "all_datasources_relative_to_extracted_central_GPKG": true,
+  "offline_no_network_layers": true,
+  "default_visibility_checked": true,
+  "district_labels_enabled": true,
+  "district_polygons": 14,
+  "layer_count": 36,
+  "integrity_check": "ok",
+  "render_errors": 0,
+  "nonbackground_sample_pixels": 2920,
+  "full_reference_extent_contains_external_boundary": true,
+  "layers": [
+    {
+      "name": "14 poligoane candidate — Tiraspol: contradicție temporală",
+      "features": 14,
+      "provider": "ogr"
+    },
+    {
+      "name": "512cazuri pilot PROOF.6 — C neschimbate",
+      "features": 512,
+      "provider": "ogr"
+    },
+    {
+      "name": "5trasări nominale moștenite — datum/pereche incerte",
+      "features": 5,
+      "provider": "ogr"
+    },
+    {
+      "name": "ADMINISTRATIVE_CONTRADICTIONS",
+      "features": 13,
+      "provider": "ogr"
+    },
+    {
+      "name": "ADMISSION_STATUS",
+      "features": 2,
+      "provider": "ogr"
+    },
+    {
+      "name": "COUNCILS_CONTEXT_PROOF2",
+      "features": 66,
+      "provider": "ogr"
+    },
+    {
+      "name": "Contururile celor8instantanee HURI",
+      "features": 8,
+      "provider": "ogr"
+    },
+    {
+      "name": "Dubăsari — axă/anvelope hidrografice C, fără hotar juridic",
+      "features": 3,
+      "provider": "ogr"
+    },
+    {
+      "name": "EPISODE_REGISTER",
+      "features": 8,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 19270301 — instantaneu-sursă C",
+      "features": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 19280815 — instantaneu-sursă C",
+      "features": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 19320320 — instantaneu-sursă C",
+      "features": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 19321025 — instantaneu-sursă C",
+      "features": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 19330401 — instantaneu-sursă C",
+      "features": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 19331215 — instantaneu-sursă C",
+      "features": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 19340530 — instantaneu-sursă C",
+      "features": 11,
+      "provider": "ogr"
+    },
+    {
+      "name": "HURI 19370115 — instantaneu-sursă C",
+      "features": 14,
+      "provider": "ogr"
+    },
+    {
+      "name": "Hotare interioare unice1937 — C",
+      "features": 1224,
+      "provider": "ogr"
+    },
+    {
+      "name": "ICR nedatat — contur separat C",
+      "features": 1,
+      "provider": "ogr"
+    },
+    {
+      "name": "OSMB MD/UA actual — corespondențe geometrice C",
+      "features": 1402,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_ADMINISTRATIVE_EVENTS",
+      "features": 4,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_BOUNDARY_CONTINUITY",
+      "features": 512,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_COUNCILS_1988_PRIMARY_REFERENCE",
+      "features": 38,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_INHERITED_PROOF5_EVENT_CONTEXT",
+      "features": 12,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_INHERITED_PROOF5_SOURCE_EVIDENCE",
+      "features": 18,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_MD_UA_TREATY_SCOPE",
+      "features": 1,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_SOURCES_AND_DECISIONS",
+      "features": 26,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_UKRAINE_CENTRE_CODE_CROSSWALK",
+      "features": 4,
+      "provider": "ogr"
+    },
+    {
+      "name": "PROOF6_UKRAINE_PREDECESSOR_TEXT",
+      "features": 110,
+      "provider": "ogr"
+    },
+    {
+      "name": "RASSM_EXTERNAL_ADMITTED_AB — 0km admise",
+      "features": 0,
+      "provider": "ogr"
+    },
+    {
+      "name": "RASSM_INTERNAL_ADMITTED_AB — 0km admise",
+      "features": 0,
+      "provider": "ogr"
+    },
+    {
+      "name": "RASSM exterior complet — HURI1937 candidat C",
+      "features": 1,
+      "provider": "ogr"
+    },
+    {
+      "name": "SOURCES_PROOF2",
+      "features": 12,
+      "provider": "ogr"
+    },
+    {
+      "name": "STABLE_PROOF2_ARC_REGISTER",
+      "features": 32722,
+      "provider": "ogr"
+    },
+    {
+      "name": "UNCERTAINTY_PILOT_512",
+      "features": 512,
+      "provider": "ogr"
+    },
+    {
+      "name": "VERSION_GEOMETRY_COMPARISON",
+      "features": 4,
+      "provider": "ogr"
+    }
+  ]
+}

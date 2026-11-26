@@ -1,0 +1,80 @@
+{
+  "selected": "affine",
+  "selection_reason": "Six parameters; projective fitted for comparison only; no interior absolute control can justify added freedom",
+  "normalization": {
+    "pixel_center": [
+      4000,
+      3800
+    ],
+    "pixel_scale": 3000,
+    "target_origin_m": [
+      660000,
+      5240000
+    ],
+    "target_crs": "EPSG:32635 NOMINAL ONLY"
+  },
+  "models": [
+    {
+      "model": "affine",
+      "parameters": [
+        [
+          332.7590656802257,
+          -4762.459949797336
+        ],
+        [
+          9524.065745436901,
+          288.7483017214711
+        ],
+        [
+          283.9491486535842,
+          -9521.642522176291
+        ]
+      ],
+      "fit_n": 14,
+      "holdout_n": 8,
+      "fit_RMSE_m": 7.868820046870444,
+      "holdout_RMSE_m": 4.61550414874049,
+      "holdout_max_m": 9.370723713714357,
+      "interpretation": "internal consistency with nominal printed frame; NOT absolute positional accuracy"
+    },
+    {
+      "model": "projective",
+      "parameters": [
+        327.3694034110242,
+        9523.29205302561,
+        283.52797960256333,
+        -4760.278139629995,
+        291.4981970886762,
+        -9518.881704904177,
+        -0.0005672220850101439,
+        -0.0005046746888694997
+      ],
+      "fit_n": 14,
+      "holdout_n": 8,
+      "fit_RMSE_m": 5.816373993887882,
+      "holdout_RMSE_m": 3.5422898826734732,
+      "holdout_max_m": 5.3055844333081446,
+      "interpretation": "internal consistency with nominal printed frame; NOT absolute positional accuracy"
+    }
+  ],
+  "jacobian": [
+    [
+      3.1746885818123003,
+      0.09464971621786139
+    ],
+    [
+      0.09624943390715703,
+      -3.17388084072543
+    ]
+  ],
+  "scale_singular_values_m_per_px": [
+    3.1766154926834416,
+    3.1748234150208208
+  ],
+  "jacobian_determinant": -10.08519324668929,
+  "affine_projective_max_disagreement_m": 8.435187392142238,
+  "absolute_positional_uncertainty_m": null,
+  "absolute_uncertainty_status": "UNBOUNDED_BY_AVAILABLE_EVIDENCE; no statistical confidence radius assigned",
+  "point_reading_allowance_m": 15.883077463417209,
+  "admissible_for_certified_boundary": false
+}

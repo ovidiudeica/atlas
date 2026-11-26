@@ -1,0 +1,402 @@
+[
+  {
+    "relative": "01_ACTE_SI_ANEXE/acquisition_1988.json",
+    "bytes": 955,
+    "sha256": "57a8b2d231bcb9fd265a727f7bbcbc9e46bd9402d89373ad5e1f8f33dcc4621b"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/acquisition_1988_native.json",
+    "bytes": 4216,
+    "sha256": "ecd4144c6e5f536ac8ce61bb1916253bfb87fa0c0a04aea16f1b0b6376e7deea"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/acquisition_Kokhivka.json",
+    "bytes": 323,
+    "sha256": "e60e78525f979827127058be8959732aa11a6a807b18cdebe8349bee608d7438"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/acquisition_Kokhivka_strictTLS.json",
+    "bytes": 418,
+    "sha256": "7f773dd7a82baa7b710bc4d4afe91383d5e01f4558e2ade9075fc6471dbbd8a9"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/acquisition_sources.json",
+    "bytes": 605,
+    "sha256": "8af11abd92dcf088064692b09c556a43a2ef027149010d10a33fd754a70c4d22"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/ANRM_R2848_inventory18.pdf",
+    "bytes": 3772298,
+    "sha256": "c26c58f343d9600a4a0d13057e9082ae09a832700dcd4025e876c17bdcbb0ce2"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/Camenca_2026_passport_extract.md",
+    "bytes": 160785,
+    "sha256": "d9495cdaa45bdd4d1b65a6ea22b25f7032320e1438f15f04d5c9f6710e53ac6e"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/Grigoriopol_1971_institutional.html",
+    "bytes": 27888,
+    "sha256": "ad4594bf75622ba999700de12b499f06ee63a8c77f06f0c8674333f73d708f16"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/moldavskaia_ssr_1988_god.pdf",
+    "bytes": 12015821,
+    "sha256": "2d00e3927cac3d7c0257551f38554d2363c8c8d104ea8c8d784fff59edfaba93"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSE5_native_nominal_C_RETAINED.tif",
+    "bytes": 9785137,
+    "sha256": "5663d434a136c4d7b5f2c03b56a7e31d8e8d9b9e1b81a1244658034252ddd4ca"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSE5_native_nominal_C_RETAINED.tif.aux.xml",
+    "bytes": 1170,
+    "sha256": "d89a986e5576c1913bc79f0188d2b93a35a1f469b0db30207432522c7b9a6ca6"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage1.jp2",
+    "bytes": 451484,
+    "sha256": "47cb903ad659b1e94eee9da608b6c8b11e8cdd1d44c9f9dadf48f24a64055610"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage100.jp2",
+    "bytes": 684969,
+    "sha256": "8c8cc97ed8384f05cbec6935c69f55819d623037bfeabd16cd0747c01010547e"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage101.jp2",
+    "bytes": 807784,
+    "sha256": "4f126c555d1058065f7fc2c83929db74d60450acad06b3eea11450670e832a8a"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage108.jp2",
+    "bytes": 810252,
+    "sha256": "4d9ef29369c09212ee2eb0453897422a8954ecea8a4991e0a0b3eaccdeae8a02"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage109.jp2",
+    "bytes": 797984,
+    "sha256": "6590a342f506bf744380d1f0edc7df090023bc475e9558b9e9b66d6760df71e7"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage180.jp2",
+    "bytes": 815548,
+    "sha256": "fbdcff684116763493625b609ae27b11bfb285be645374cbde7c8f31c61dbb13"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage181.jp2",
+    "bytes": 553012,
+    "sha256": "9ca3716aaa40e3d975ac73e74249d212fc419cd9ed1c742f70d218b38e257f19"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage182.jp2",
+    "bytes": 656406,
+    "sha256": "91ebc57790180d962f3d2f070f60c1985c61d91d5c5374c7a3a1aef594971028"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage2.jp2",
+    "bytes": 161230,
+    "sha256": "9649957ffb56fe6fb7cbbc36f4d3a2977dd5b1036c54ae116916b54d8d5e892c"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/MSSR1988_native_PDFpage3.jp2",
+    "bytes": 400695,
+    "sha256": "dfd54048be15132c295acf9191abbad10eea92804418cd8eaa2886d427a2b423"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/Ukraine_720_2020_annex_extract.md",
+    "bytes": 22946,
+    "sha256": "ac875d961bdec5a410d629eca6c6fef7de15929b09b32125ca142ce63d6d46e3"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/Ukraine_720_2025_annex_extract.md",
+    "bytes": 40131,
+    "sha256": "ed49e8aa25aaf81fd41585f59089eafe49cb11810480512514e656f0a65eab8b"
+  },
+  {
+    "relative": "01_ACTE_SI_ANEXE/Ukraine_Moldova_1999_treaty_extract.md",
+    "bytes": 15429,
+    "sha256": "f41b5ded0c5eb5eeeeb33aee47c87a1613c7624d7bdbc44548299b7ffa54fe78"
+  },
+  {
+    "relative": "02_CAMENCA/CAMENCA_1959_1969_delimitare_si_continuitate.gpkg",
+    "bytes": 413696,
+    "sha256": "f1d58348b1dd890b93d5e5cf5bd1066905db9e8744ae501479a9f62a8a8267e6"
+  },
+  {
+    "relative": "03_GRIGORIOPOL/GRIGORIOPOL_1958_1971_delimitare_si_continuitate.gpkg",
+    "bytes": 618496,
+    "sha256": "6547a03495b8126ec7f110545bd34cc56a53159c82a1f22182f22a1223acecd7"
+  },
+  {
+    "relative": "03_GRIGORIOPOL/GRIGORIOPOL_1971_1988_council_comparison.csv",
+    "bytes": 2261,
+    "sha256": "883bc39e392858a5e8101065b6ec2637d10ad04f9638e6cc1c19d395a171fa31"
+  },
+  {
+    "relative": "04_MOLDOVA_UCRAINA/1999_scope_per_arc.csv",
+    "bytes": 152926,
+    "sha256": "ae0f4e77f88470e8b0fe2e42d5807c7f54c76487adc1da231e1e999744eea704"
+  },
+  {
+    "relative": "04_MOLDOVA_UCRAINA/1999_scope_per_corridor.csv",
+    "bytes": 386,
+    "sha256": "83257a2b48fe73b7353e072407ebe5a2f486d61f205349384c55e99d9fc71593"
+  },
+  {
+    "relative": "04_MOLDOVA_UCRAINA/MD_UA_1995_1999_scope_and_boundary_evidence.csv",
+    "bytes": 767,
+    "sha256": "8922f6300c0025d4a9b938074af94803b5c82499232e30c68a1e9032ad3c0e51"
+  },
+  {
+    "relative": "05_UCRAINA/Ananiv_planning_catalog_extract.md",
+    "bytes": 27096,
+    "sha256": "800fc255f8749c7d980498de392db30992cd7ad9f70ea54a4da2d0844c6781a4"
+  },
+  {
+    "relative": "05_UCRAINA/Kokhivka_plan_text_extract.md",
+    "bytes": 4345,
+    "sha256": "a37a8cd82056ec20d1432b727f5cef0615ac2c13ba4cf8b3da60dcad22d72946"
+  },
+  {
+    "relative": "05_UCRAINA/UKRAINE_KOATUU_KATOTTG_historical_crosswalk.csv",
+    "bytes": 7485,
+    "sha256": "1a12d340efe695f3958f1dffede0de408daa85eb8e96af2ab126eabdcc8bc33c"
+  },
+  {
+    "relative": "05_UCRAINA/UKRAINE_predecessor_councils_boundaries.gpkg",
+    "bytes": 319488,
+    "sha256": "8410d7e523884106cfa8c484ed3a57e205b65cee6f52d0d682032bc2ec6cc464"
+  },
+  {
+    "relative": "06_HOTAR_EXTERIOR/pilot_candidates_C.geojson",
+    "bytes": 286775,
+    "sha256": "8541105df7a6fc26940839e99b4965794153e3851a94aa9abb9c5494352b31c2"
+  },
+  {
+    "relative": "07_HOTARE_RAIONALE/pilot_candidates_C.geojson",
+    "bytes": 633480,
+    "sha256": "b2e7d4d0e38834f4dc82481f938196045d4a4b8e9e62b1544aa5360ab51a19f6"
+  },
+  {
+    "relative": "08_DUBASARI/concluzie_datum.json",
+    "bytes": 850,
+    "sha256": "12ff67ff5cde22a559cae9d7b19dc9ea4ce6c19bfa74ba4fcbc71c4bebd9a686"
+  },
+  {
+    "relative": "08_DUBASARI/Dubasari_1936_diagnostic_NOMINAL_C.tif",
+    "bytes": 5790629,
+    "sha256": "bf5c898c1fd14a6162dd9e0203d1ababfba0b7178ae1f5256cbc43dacf35a824"
+  },
+  {
+    "relative": "08_DUBASARI/GCP_nou_investigate.csv",
+    "bytes": 658,
+    "sha256": "1555b48fc88b453a037de2b4ae05b192176e655e5200231826254c6b34f4b1ea"
+  },
+  {
+    "relative": "08_DUBASARI/HIST_RASSM_PROOF_1_C_unchanged.gpkg",
+    "bytes": 262144,
+    "sha256": "bb6aaa6c92bb6a936e83fd15802a1c2f4884c4cbd7db111a9f5f9f63b3c37b82"
+  },
+  {
+    "relative": "08_DUBASARI/PROOF2_Dubasari_datum_test.json",
+    "bytes": 1057,
+    "sha256": "f31417cfe2d25dc537e32961a0b9647a327a95e6fcbbb7d5099d70517cc26778"
+  },
+  {
+    "relative": "08_DUBASARI/PROOF2_Dubasari_physical_GCP_candidates.csv",
+    "bytes": 1401,
+    "sha256": "720d5de0f0027d465a457e1d41a6884ec9f5be358cd58ad4d245a01940fc476d"
+  },
+  {
+    "relative": "09_VALIDARE/build_atlas.log",
+    "bytes": 770,
+    "sha256": "9fd7163d716c13978724940a5ff2cbfa2dddfb93931b688ee399c4620367b2e5"
+  },
+  {
+    "relative": "09_VALIDARE/GIS_administrative_validation.json",
+    "bytes": 2613,
+    "sha256": "2e9db7a6a5eb220d45868a6401ae175f43bb5d76b0778c277f1386428d35dfdf"
+  },
+  {
+    "relative": "09_VALIDARE/local_checks.json",
+    "bytes": 412,
+    "sha256": "fc710f579748373eab678f1cfbc18eea700f05dddea86b0f82aaf5578583bf59"
+  },
+  {
+    "relative": "09_VALIDARE/QGIS_provider_iteration.json",
+    "bytes": 4467,
+    "sha256": "3eb0b5752cc694127a5d6cf2bc28ddc97f0ef7db35bc21aab88ef457e4ba4653"
+  },
+  {
+    "relative": "09_VALIDARE/QGIS_readback.json",
+    "bytes": 554,
+    "sha256": "1487f448d02b7db90d2836d746484ab91f71c0de3c574b4d0c5abc97f239a3e9"
+  },
+  {
+    "relative": "09_VALIDARE/reproduction.json",
+    "bytes": 1587,
+    "sha256": "bad03c599d6e62641bddd698f51c99e0d697c4e0633afb9cb58c055185c2a940"
+  },
+  {
+    "relative": "09_VALIDARE/tests.log",
+    "bytes": 30781,
+    "sha256": "3705b37100802feafc17101db604d1bcd0fb93397313e9ee4547e677aa992e83"
+  },
+  {
+    "relative": "10_QGIS/Dubasari_retained_C.png",
+    "bytes": 2696275,
+    "sha256": "c3f97e7c50bff8aabbdfedc0befdb470ef6e6fdc8dc8340c8564038d746b4157"
+  },
+  {
+    "relative": "10_QGIS/pilot_scope_overview.png",
+    "bytes": 134571,
+    "sha256": "ec59cf8927aa930f6610a6dff866504baeb0eb0cabcba8f7245a85ec7a951a47"
+  },
+  {
+    "relative": "10_QGIS/RASSM_PROOF_6_C.qgz",
+    "bytes": 61771,
+    "sha256": "3fcac55baf84bf387c5ccd7a99c3b7c9eb959be6a6ff5f82d40659e7841bfa56"
+  },
+  {
+    "relative": "11_COD/build_crosswalk.py",
+    "bytes": 2988,
+    "sha256": "4670f07bf1aaad6447001801f1537309c4a3c2861534d0c38296b1f0d4627c2b"
+  },
+  {
+    "relative": "11_COD/build_package.py",
+    "bytes": 18592,
+    "sha256": "9464f27738fd99993187e12b9e01be6496fce93508224c63220eba9ccf96fb56"
+  },
+  {
+    "relative": "11_COD/input_manifest.json",
+    "bytes": 301,
+    "sha256": "34a8ed97e94b0b099adc32973f990b8559ed468f0e9af333f1f1fa3494a8f396"
+  },
+  {
+    "relative": "11_COD/qgis_proof6.py",
+    "bytes": 5118,
+    "sha256": "4dbcbd99f773493c22a221950d33d1d199711b0dabc9e4f26a3cf7f513372657"
+  },
+  {
+    "relative": "11_COD/reproduce.py",
+    "bytes": 1861,
+    "sha256": "c4fee2c3c4cd3da6e6dcf62186c28c9341b8ec5d9daafecc358f805f0f88a523"
+  },
+  {
+    "relative": "11_COD/scope_1999.py",
+    "bytes": 2144,
+    "sha256": "78ffadc3fd25de65c551fd72bc93e9d252f443835b1dc7fc1de79c5616f1c3de"
+  },
+  {
+    "relative": "11_COD/verify_qgis_portable.py",
+    "bytes": 1189,
+    "sha256": "fdd1be544d678c0d3fca696b3580cdf1f3396a5043152eebf99ed69e489d650e"
+  },
+  {
+    "relative": "11_COD/write_report.py",
+    "bytes": 12161,
+    "sha256": "01760cf45af36dda0517a42b4a4812241756c3f74447237c8346f8a519ef4a99"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/DOSAR_C1.md",
+    "bytes": 566,
+    "sha256": "9daa7a0e57ede7f771c90a9f130af99245ad5687f12e93a2e7cd94a055419f00"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/DOSAR_C2.md",
+    "bytes": 608,
+    "sha256": "83eae64b5861896d23c78a1fbdb4c29ee0b021e7ea33853d2b482b42b89d9800"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/DOSAR_C3.md",
+    "bytes": 593,
+    "sha256": "6affcb50510e08cacbd36743dc8ba04d87df249af770a0166883cf467790501d"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/DOSAR_C4.md",
+    "bytes": 624,
+    "sha256": "1127c9db25996b1309148135db1e875558da2b8ccd14f1ba53734451e22e5697"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/per_corridor.csv",
+    "bytes": 1476,
+    "sha256": "95b8a30507aa726d1419270b8c2c2df1953e7effcf5275157b495259dfe939b0"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/per_raion.csv",
+    "bytes": 4709,
+    "sha256": "93ce604ce4e3a0575d91cfa60a370514644c9b5e5d12d3b64abadc8d1acf3401"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_acte_1958_1971.csv",
+    "bytes": 668,
+    "sha256": "3501c804a9ef7ce2d5c69f524c4dbe8a70e48fc5f7cbb244e59b12add40465fa"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_comparatie_PROOF5_PROOF6.csv",
+    "bytes": 227,
+    "sha256": "aff1aafa9bd438575f7b9d76a7c6e95e9a9c6e50b2640b8bc901ba9dfc7ff40c"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_continuitate_per_arc.csv",
+    "bytes": 1049063,
+    "sha256": "90046a5d4d404c0f4955cf8b85db02802157329a576fe951e4e5bd4e2907a2dc"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_documente_delimitare.csv",
+    "bytes": 8750,
+    "sha256": "20168481eeff4eff71d401c259b54fb0a4e0eb93b1cda4327001be049f7f812f"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_geometrii_AB.csv",
+    "bytes": 70,
+    "sha256": "44079d3d94c14c55a1982a54152f44ac6f58e570dd8415610f2e403afa302a19"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_inherited_PROOF5_events.csv",
+    "bytes": 5362,
+    "sha256": "b3fd16f65f625ff72bc419c5b6831a62da1c907f715fd9b9fd6508e2eb63f7f4"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_inherited_PROOF5_sources.csv",
+    "bytes": 10582,
+    "sha256": "05b2c1f7c836776457cfb0a688977128090c6fef36b15220d31c82715e009847"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_M1_promovari.csv",
+    "bytes": 49,
+    "sha256": "806ce44f8e4a3efd0a230e271d71d73539bf4041bad665ebbd46a1b067924900"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_planuri_fonduri_satesti.csv",
+    "bytes": 9369,
+    "sha256": "e375aa11eb80b3df34f51a82052a79d902b10ac71db95c842bedb1159674a4a7"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_restante_individuale.csv",
+    "bytes": 226955,
+    "sha256": "deb66c4687c5ab3d24bf75e68ed250b7f4678055cd393002b19067d411df8f76"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/PROOF6_Ukraine_predecessor_units.csv",
+    "bytes": 19131,
+    "sha256": "63ac4099f79b02ec4b8c8964d85ac25832f62ecf2152250f5f01fe2924a134fe"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/RAPORT_FINAL.md",
+    "bytes": 18300,
+    "sha256": "2f799384b9205073621ebe138d79beb023d3315c61d8f275b87293116df51c03"
+  },
+  {
+    "relative": "12_RAPORT_FINAL/summary.json",
+    "bytes": 3258,
+    "sha256": "1db030da4f69f98cdbd35c9ac538d305a538a3880a1ffa80e1b24092f7b85224"
+  },
+  {
+    "relative": "RASSM_PROOF_6_temporal_C.gpkg",
+    "bytes": 3919872,
+    "sha256": "c482fdf9cff8b28ae1e3df3fb85d9b32927f212b5aa0dba2a28dd0b38726a990"
+  }
+]

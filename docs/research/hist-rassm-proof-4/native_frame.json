@@ -1,0 +1,52 @@
+{
+  "source_id": "MSE5_leaf0168_native",
+  "source_sha256": "fd6a506c43a7bf23895c7f45059f644dee2986a06002965a737c2e0d22a78b5e",
+  "source_size": [
+    3820,
+    5831
+  ],
+  "method": "Diagnostic scale-constrained nominal AEQD frame; historical projection and datum unknown",
+  "printed_fit_controls": 2,
+  "printed_scale_constraints": 1,
+  "printed_holdout_controls": 0,
+  "physical_fit_controls": 0,
+  "physical_holdout_controls": 0,
+  "absolute_RMSE_m": null,
+  "absolute_accuracy_claimed": false,
+  "certainty": "C",
+  "historical_projection_authenticated": false,
+  "historical_datum_authenticated": false,
+  "publication_year": 1930,
+  "editorial_cutoff": "1930-01-01",
+  "administrative_content_date": null,
+  "scale_bar": {
+    "start_pixel": [
+      966,
+      5557
+    ],
+    "end_pixel": [
+      2025,
+      5560
+    ],
+    "length_m": 45000
+  },
+  "matrix": [
+    [
+      42.47517066493377,
+      -1.222069451479432
+    ],
+    [
+      -1.242680246910296,
+      -43.191535068287585
+    ]
+  ],
+  "offset": [
+    -129509.27252519011,
+    120894.16483071585
+  ],
+  "north_m_per_pixel": 43.209408185615985,
+  "east_m_per_pixel": 42.49274734304067,
+  "reading_allowance_pixels": 15,
+  "conditional_reading_allowance_m": 648.1411227842398,
+  "uncertainty": "Reading allowance is a scenario, not an absolute confidence bound; no physical holdouts and no authenticated datum. No small fitted residual claimed as validation."
+}
