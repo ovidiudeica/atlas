@@ -61,7 +61,7 @@
         "authorDate": "2026-11-08T14:39:29Z",
         "commitDate": "2026-11-08T14:39:29Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R1: audit all 4,283 Atlas identities for official territorial symbols and evidence gaps"
       },
       "protected": false,
@@ -140,7 +140,7 @@
         "authorDate": "2026-11-08T18:21:49Z",
         "commitDate": "2026-11-08T18:21:49Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R2b.1: audit 74 county and district identities with legal and graphic evidence gates"
       },
       "protected": false,
@@ -220,7 +220,7 @@
         "authorDate": "2026-11-07T09:28:49Z",
         "commitDate": "2026-11-07T09:28:49Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): verify both left-bank nodes and district/municipality aliases on desktop/mobile"
       },
       "protected": false,
@@ -310,7 +310,7 @@
         "authorDate": "2026-11-07T12:09:41Z",
         "commitDate": "2026-11-07T12:09:41Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): fix combined-role label selector syntax"
       },
       "protected": false,
@@ -404,7 +404,7 @@
         "authorDate": "2026-11-07T02:36:48Z",
         "commitDate": "2026-11-07T02:36:48Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): remove retired Administrative export selector"
       },
       "protected": false,
@@ -492,7 +492,7 @@
         "authorDate": "2026-11-07T01:38:40Z",
         "commitDate": "2026-11-07T01:38:40Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(visual): capture full mobile NTS1 border and visible legend in Chromium"
       },
       "protected": false,
@@ -587,7 +587,7 @@
         "authorDate": "2026-11-07T08:57:01Z",
         "commitDate": "2026-11-07T08:57:01Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): compare short name text without appended statistical role"
       },
       "protected": false,
@@ -673,7 +673,7 @@
         "authorDate": "2026-11-07T01:03:02Z",
         "commitDate": "2026-11-07T01:03:02Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): target Brețcu row after search reset"
       },
       "protected": false,
@@ -760,7 +760,7 @@
         "authorDate": "2026-11-08T15:08:33Z",
         "commitDate": "2026-11-08T15:08:33Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R2a CI: update legacy emoji-flag assertion for exact-ID heraldic fallback"
       },
       "protected": false,
@@ -862,7 +862,7 @@
         "authorDate": "2026-11-07T08:20:56Z",
         "commitDate": "2026-11-07T08:20:56Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "fix(ux): draw About icon with a font-safe CSS circle"
       },
       "protected": false,
@@ -948,7 +948,7 @@
         "authorDate": "2026-11-07T13:39:22Z",
         "commitDate": "2026-11-07T13:39:22Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs(audit): disclose three pre-existing published Căușeni versus OSMB Nistrenia parent conflicts"
       },
       "protected": false,
@@ -1041,7 +1041,7 @@
         "authorDate": "2026-11-07T14:25:14Z",
         "commitDate": "2026-11-07T14:25:14Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs(audit): preserve Chițcani display-only change and dual administration provenance"
       },
       "protected": false,
@@ -1128,7 +1128,7 @@
         "authorDate": "2026-11-07T14:52:35Z",
         "commitDate": "2026-11-07T14:52:35Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): assert CUATM official Popencu title, keep original OSMB search alias"
       },
       "protected": false,
@@ -1220,7 +1220,7 @@
         "authorDate": "2026-11-07T15:03:50Z",
         "commitDate": "2026-11-07T15:03:50Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): capture visible Hlinaia CUATM badges on desktop and mobile East tree"
       },
       "protected": false,
@@ -1316,7 +1316,7 @@
         "authorDate": "2026-11-07T15:38:30Z",
         "commitDate": "2026-11-07T15:38:30Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(tree): update exact RO/EN changed-name counts for new Transnistria statistical label"
       },
       "protected": false,
@@ -1414,7 +1414,7 @@
         "authorDate": "2026-11-07T16:04:44Z",
         "commitDate": "2026-11-07T16:04:44Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(regression): replace obsolete Nistrenia alphabetical assertion with accepted south-to-north rule"
       },
       "protected": false,
@@ -1513,7 +1513,7 @@
         "authorDate": "2026-11-07T16:40:48Z",
         "commitDate": "2026-11-07T16:40:48Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs(audit): record West Chișinău-first presentation with intact statistical and administrative parentage"
       },
       "protected": false,
@@ -1600,7 +1600,7 @@
         "authorDate": "2026-11-07T17:17:19Z",
         "commitDate": "2026-11-07T17:17:19Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs: record Moldova-only code-first sorting, 14 uncoded entities, four collisions and no reparenting"
       },
       "protected": false,
@@ -1705,7 +1705,7 @@
         "authorDate": "2026-11-07T17:43:56Z",
         "commitDate": "2026-11-07T17:43:56Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "fix(ts): declare PMR cadastral seat-code module contract for App.tsx"
       },
       "protected": false,
@@ -1818,7 +1818,7 @@
         "authorDate": "2026-11-07T11:16:16Z",
         "commitDate": "2026-11-07T11:16:16Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): restore mixed tree after Administrative-level mobile ordering checks"
       },
       "protected": false,
@@ -1916,7 +1916,7 @@
         "authorDate": "2026-11-07T08:31:05Z",
         "commitDate": "2026-11-07T08:31:05Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "fix(legend): shorten country reference label to Romania, Moldova"
       },
       "protected": false,
@@ -1995,7 +1995,7 @@
         "authorDate": "2026-11-07T09:55:02Z",
         "commitDate": "2026-11-07T09:55:02Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(chromium): verify Nistrenia children ordering in mixed/admin desktop and Romanian mobile tree"
       },
       "protected": false,
@@ -2086,7 +2086,7 @@
         "authorDate": "2026-11-08T11:51:26Z",
         "commitDate": "2026-11-08T11:51:26Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "EN-R2c: ensure WCAG AA 4.5:1 contrast for homonym context labels"
       },
       "protected": false,
@@ -2201,7 +2201,7 @@
         "authorDate": "2026-11-08T10:09:02Z",
         "commitDate": "2026-11-08T10:09:02Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(browser): assert ASCII EN display while retaining accented search aliases"
       },
       "protected": false,
@@ -2315,7 +2315,7 @@
         "authorDate": "2026-11-07T00:34:11Z",
         "commitDate": "2026-11-07T00:34:11Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "fix(map): align mobile scale bar with map bottom and guard attribution"
       },
       "protected": false,
@@ -2394,7 +2394,7 @@
         "authorDate": "2026-11-08T13:57:30Z",
         "commitDate": "2026-11-08T13:57:30Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-R4.8: replace emoji flags with bundled SVG and use de facto Pridnestrovie flag by exact ID"
       },
       "protected": false,
@@ -2481,7 +2481,7 @@
         "authorDate": "2026-11-07T19:55:07Z",
         "commitDate": "2026-11-07T19:55:07Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "INFRA: preserve evidence of Pages lock/duplicate artifact and exact certification gate"
       },
       "protected": false,
@@ -2565,7 +2565,7 @@
         "authorDate": "2026-11-10T15:36:36Z",
         "commitDate": "2026-11-10T15:36:36Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-MAINTENANCE-certified-baseline-and-operational-stabilization (#85)"
       },
       "protected": true,
@@ -2632,7 +2632,7 @@
         "authorDate": "2026-11-10T07:50:41Z",
         "commitDate": "2026-11-10T07:50:41Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-CLOSE-final-heraldic-audit-and-permanent-registers"
       },
       "protected": false,
@@ -2732,7 +2732,7 @@
         "authorDate": "2026-11-08T22:42:16Z",
         "commitDate": "2026-11-08T22:42:16Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R3: document and test 74-ID pragmatic symbol rollout"
       },
       "protected": false,
@@ -2828,7 +2828,7 @@
         "authorDate": "2026-11-09T00:36:55Z",
         "commitDate": "2026-11-09T00:36:55Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R4: label supplemental flags as preliminary candidates"
       },
       "protected": false,
@@ -2935,7 +2935,7 @@
         "authorDate": "2026-11-09T09:10:37Z",
         "commitDate": "2026-11-09T09:10:37Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R5: audit exact symbol identities and apply documented corrections"
       },
       "protected": false,
@@ -3068,7 +3068,7 @@
         "authorDate": "2026-11-09T15:41:25Z",
         "commitDate": "2026-11-09T15:41:25Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R6: resolve Briceni annexes and document priority heraldic exceptions"
       },
       "protected": false,
@@ -3189,7 +3189,7 @@
         "authorDate": "2026-11-09T18:14:26Z",
         "commitDate": "2026-11-09T18:14:26Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs: record GitHub runner failure and retry protected CI"
       },
       "protected": false,
@@ -3375,7 +3375,7 @@
         "authorDate": "2026-11-09T23:44:19Z",
         "commitDate": "2026-11-09T23:44:19Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R8-validate-latest-main-with-274-passing-tests"
       },
       "protected": false,
@@ -3521,7 +3521,7 @@
         "authorDate": "2026-11-08T23:12:47Z",
         "commitDate": "2026-11-08T23:12:47Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R3.1: document full media audit and multilingual Wikipedia discovery policy"
       },
       "protected": false,
@@ -3608,7 +3608,7 @@
         "authorDate": "2026-11-09T06:27:23Z",
         "commitDate": "2026-11-09T06:27:23Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R4.1: make inherited Chromium media assertions resilient to legitimate external image failures"
       },
       "protected": false,
@@ -3686,7 +3686,7 @@
         "authorDate": "2026-11-09T06:19:18Z",
         "commitDate": "2026-11-09T06:19:18Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "SIM-R4.1: retain historical symbol tests with new coat-only header contract"
       },
       "protected": false,
@@ -3790,7 +3790,7 @@
         "authorDate": "2026-11-08T13:22:05Z",
         "commitDate": "2026-11-08T13:22:05Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-R4.7: align source-heading regression checks with unique toolbar titles"
       },
       "protected": false,
@@ -3874,7 +3874,7 @@
         "authorDate": "2026-11-08T12:40:37Z",
         "commitDate": "2026-11-08T12:40:37Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-R4.6: align Map tools above zoom and desktop panel close X"
       },
       "protected": false,
@@ -3955,7 +3955,7 @@
         "authorDate": "2026-11-10T11:25:33Z",
         "commitDate": "2026-11-10T11:25:33Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-AUDIT.5a-defer-unselected-remote-tree-originals"
       },
       "protected": false,
@@ -4044,7 +4044,7 @@
         "authorDate": "2026-11-10T12:36:01Z",
         "commitDate": "2026-11-10T12:36:01Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-AUDIT.5b-accessibility-selective-recovery-and-map-controls"
       },
       "protected": false,
@@ -4151,7 +4151,7 @@
         "authorDate": "2026-11-10T14:22:46Z",
         "commitDate": "2026-11-10T14:22:46Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-AUDIT.5c-live-certification-and-regression-evidence"
       },
       "protected": false,
@@ -4258,7 +4258,7 @@
         "authorDate": "2026-11-09T23:08:58Z",
         "commitDate": "2026-11-09T23:08:58Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-EN: update exact-source test assertions for locale-aware official names"
       },
       "protected": false,
@@ -4361,7 +4361,7 @@
         "authorDate": "2026-11-09T22:44:05Z",
         "commitDate": "2026-11-09T22:44:05Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-HEADER: align 390px no-selection assertion with 11px mobile padding"
       },
       "protected": false,
@@ -4450,7 +4450,7 @@
         "authorDate": "2026-11-10T15:30:05Z",
         "commitDate": "2026-11-10T15:30:05Z",
         "author": "Ovidiu Deică",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-MAINTENANCE-certified-baseline-and-operational-stabilization"
       },
       "protected": false,
@@ -4545,7 +4545,7 @@
         "authorDate": "2026-11-07T19:22:17Z",
         "commitDate": "2026-11-07T19:22:17Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-R3.19a: add noncanonical role contract and assertions"
       },
       "protected": false,
@@ -4632,7 +4632,7 @@
         "authorDate": "2026-11-07T19:32:31Z",
         "commitDate": "2026-11-07T19:32:31Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-R3.19b: Chromium desktop/mobile evidence for Bucharest numeric SIRUTA ordering"
       },
       "protected": false,
@@ -4727,7 +4727,7 @@
         "authorDate": "2026-11-07T19:38:14Z",
         "commitDate": "2026-11-07T19:38:14Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-R3.20: document display-only capital nesting and access guarantees"
       },
       "protected": false,
@@ -4823,7 +4823,7 @@
         "authorDate": "2026-11-07T19:45:35Z",
         "commitDate": "2026-11-07T19:45:35Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "WEB-R3.21: assert OSM filters in responsible module, not App UI"
       },
       "protected": false,
@@ -4918,7 +4918,7 @@
         "authorDate": "2026-11-07T20:59:10Z",
         "commitDate": "2026-11-07T20:59:10Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs(WEB-R4.0): document entity card structure and semantic boundaries"
       },
       "protected": false,
@@ -5008,7 +5008,7 @@
         "authorDate": "2026-11-07T21:59:33Z",
         "commitDate": "2026-11-07T21:59:33Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs(WEB-R4.1): record Gagauzia ADM4/NTS3 dual role"
       },
       "protected": false,
@@ -5119,7 +5119,7 @@
         "authorDate": "2026-11-07T22:23:30Z",
         "commitDate": "2026-11-07T22:23:30Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs(WEB-R4.2): specify card interaction, focus, progressive children and CI gates"
       },
       "protected": false,
@@ -5231,7 +5231,7 @@
         "authorDate": "2026-11-07T22:31:08Z",
         "commitDate": "2026-11-07T22:31:08Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(WEB-R4.2): guard synchronous close and Escape focus restoration"
       },
       "protected": false,
@@ -5315,7 +5315,7 @@
         "authorDate": "2026-11-07T23:03:05Z",
         "commitDate": "2026-11-07T23:03:05Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "types(WEB-R4.3): declare contextual city card label for TypeScript"
       },
       "protected": false,
@@ -5435,7 +5435,7 @@
         "authorDate": "2026-11-07T23:28:03Z",
         "commitDate": "2026-11-07T23:28:03Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "docs(WEB-R4.3a): record narrowly scoped source-header dedup acceptance gates"
       },
       "protected": false,
@@ -5522,7 +5522,7 @@
         "authorDate": "2026-11-08T00:02:16Z",
         "commitDate": "2026-11-08T00:02:16Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(WEB-R4.4): update R4.2 regression boundary to the renamed camera-only comment"
       },
       "protected": false,
@@ -5626,7 +5626,7 @@
         "authorDate": "2026-11-08T00:18:47Z",
         "commitDate": "2026-11-08T00:18:47Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(WEB-R4.5): refresh counts after removing generic city-label override"
       },
       "protected": false,
@@ -5727,7 +5727,7 @@
         "authorDate": "2026-11-08T00:41:13Z",
         "commitDate": "2026-11-08T00:41:13Z",
         "author": "Ovidiu",
-        "email": "ovidiu.deica@yahoo.com",
+        "email": "EMAIL-001",
         "subject": "test(WEB-R4.6): keep public header free of internal phase while preserving brand and locale controls"
       },
       "protected": false,
